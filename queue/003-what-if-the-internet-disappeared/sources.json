@@ -1,0 +1,226 @@
+[
+  {
+    "text": "About 5.5 billion people used the internet in 2024",
+    "as_written": "about five and a half billion people were using the internet in 2024",
+    "source": "International Telecommunication Union, Facts and Figures 2024",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That is roughly two thirds of humanity",
+    "as_written": "That is roughly two thirds of humanity",
+    "source": "International Telecommunication Union, Facts and Figures 2024 (68 percent of the world population online)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 2.6 billion people were offline in 2024",
+    "as_written": "The other two point six billion or so were offline",
+    "source": "International Telecommunication Union, Facts and Figures 2024",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 99 percent of intercontinental data travels through submarine cables",
+    "as_written": "about ninety-nine percent of the data that crosses between continents travels through cables on the sea floor",
+    "source": "TeleGeography; International Cable Protection Committee",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "More than 500 submarine cables are in service",
+    "as_written": "There are more than five hundred of them in service",
+    "source": "TeleGeography Submarine Cable Map",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Light in optical fibre travels at about two thirds of its vacuum speed, roughly 200,000 km per second",
+    "as_written": "about two thirds of its speed in a vacuum, which is roughly two hundred thousand kilometres every second",
+    "source": "Standard optical fibre physics (refractive index about 1.47); speed of light defined by the BIPM/SI as 299,792,458 m/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Half of Earth's circumference is about 20,000 km",
+    "as_written": "about twenty thousand kilometres",
+    "source": "Earth circumference of about 40,075 km, IAU/NASA Earth fact sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A signal covering that distance in fibre needs around a tenth of a second",
+    "as_written": "that takes around a tenth of a second",
+    "source": "Derived from 20,000 km divided by about 200,000 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS satellites orbit more than 20,000 km up",
+    "as_written": "orbit more than twenty thousand kilometres above you",
+    "source": "GPS.gov, U.S. Space Force (orbital altitude about 20,200 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS satellites broadcast one way and do not receive from user devices",
+    "as_written": "they only broadcast. They never listen",
+    "source": "GPS.gov, U.S. Space Force",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The DNS root has 13 root server addresses run by 12 organisations",
+    "as_written": "thirteen root server addresses, run by twelve different organisations",
+    "source": "root-servers.org",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The root servers are replicated on well over a thousand machines worldwide",
+    "as_written": "copied onto well over a thousand machines around the world",
+    "source": "root-servers.org instance count",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "DNS answers are cached for a time set by the name's owner (TTL)",
+    "as_written": "Those saved copies expire after a time set by whoever owns the name",
+    "source": "IETF RFC 1035, Domain Names Implementation and Specification",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The internet comprises tens of thousands of independent networks",
+    "as_written": "tens of thousands of separate networks",
+    "source": "Regional Internet Registries / CIDR Report autonomous system counts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Facebook, Instagram and WhatsApp were down about six hours on 4 October 2021",
+    "as_written": "On the fourth of October 2021, Facebook, Instagram and WhatsApp disappeared from the internet for about six hours",
+    "source": "Facebook Engineering, More details about the October 4 outage; Cloudflare blog analysis",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The cause was a routine maintenance command that withdrew the routes to Facebook's servers",
+    "as_written": "A routine maintenance command went wrong, and the company's networks stopped telling the rest of the internet where its servers were",
+    "source": "Facebook Engineering, More details about the October 4 outage; Cloudflare blog analysis",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tools engineers use to respond were affected and physical access to data centres slowed the fix",
+    "as_written": "The tools its engineers normally used to respond to a problem like this were affected by the same fault",
+    "source": "Facebook Engineering, More details about the October 4 outage",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Data centres used about 415 terawatt hours in 2024, about 1.5 percent of global electricity",
+    "as_written": "roughly four hundred and fifteen terawatt hours of electricity in 2024, according to the International Energy Agency, about one and a half percent of the world's electricity",
+    "source": "International Energy Agency, Energy and AI (2025)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 80 percent of world trade by volume moves by sea",
+    "as_written": "Roughly eighty percent of world trade by volume moves by sea",
+    "source": "UNCTAD, Review of Maritime Transport",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A January 2022 eruption near Tonga broke the country's only submarine cable, leaving it largely offline about five weeks",
+    "as_written": "Tonga stayed largely cut off from the internet for about five weeks",
+    "source": "Tonga Cable Ltd; Southern Cross Cable Network reports; Hunga Tonga-Hunga Ha'apai eruption of 15 January 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Egypt's government shut the internet for about five days in 2011",
+    "as_written": "about five days",
+    "source": "Reporting by Renesys/Dyn and Arbor Networks on Egypt's shutdown, 28 January to 2 February 2011",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Andrew Tanenbaum's quip about the bandwidth of a station wagon full of tapes",
+    "as_written": "never to underestimate the bandwidth of a station wagon full of tapes",
+    "source": "Andrew S. Tanenbaum, Computer Networks",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A study had more than 2,000 people deactivate Facebook for four weeks before the 2018 US midterms, finding small wellbeing gains",
+    "as_written": "economists paid more than two thousand people to deactivate Facebook for four weeks",
+    "source": "Allcott, Braghieri, Eichmeyer and Gentzkow, The Welfare Effects of Social Media, American Economic Review, 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The first ARPANET message was sent in October 1969 from UCLA to SRI and crashed after two letters, 'lo'",
+    "as_written": "In October 1969, a computer at the University of California, Los Angeles tried to send the word login to a computer at the Stanford Research Institute",
+    "source": "UCLA Samueli School of Engineering history; Computer History Museum",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ARPANET had four computers by December 1969",
+    "as_written": "By December of that year the network had four computers",
+    "source": "Computer History Museum; Hafner and Lyon, Where Wizards Stay Up Late",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "ARPANET switched to TCP/IP on 1 January 1983",
+    "as_written": "On the first of January 1983, the ARPANET switched over to the protocols we still use today",
+    "source": "Internet Society, Brief History of the Internet; IETF RFC 801",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Paul Baran at RAND studied survivable communications in the early 1960s; whether ARPANET was built for nuclear survival is disputed",
+    "as_written": "the engineer Paul Baran at the RAND Corporation did study how to build communications that could survive an attack",
+    "source": "RAND Corporation, On Distributed Communications (1964); Hafner and Lyon, Where Wizards Stay Up Late",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "38 percent of webpages that existed in 2013 were no longer accessible in 2023",
+    "as_written": "thirty-eight percent of the pages that existed in 2013 could no longer be reached by 2023",
+    "source": "Pew Research Center, When Online Content Disappears (May 2024)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

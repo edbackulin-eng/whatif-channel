@@ -1,0 +1,570 @@
+[
+  {
+    "text": "Earth's equatorial surface moves at roughly 1,670 km/h due to rotation",
+    "as_written": "about 1,670 kilometres per hour",
+    "source": "NASA Goddard Space Flight Center, Earth Fact Sheet (equatorial rotation velocity about 1,674 km/h)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Angular momentum is conserved and cannot simply disappear",
+    "as_written": "angular momentum does not simply vanish",
+    "source": "Conservation of angular momentum, classical mechanics (Noether's theorem)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Foucault demonstrated Earth's rotation with a pendulum at the Panthéon in Paris in 1851",
+    "as_written": "In 1851, the French physicist Léon Foucault hung a heavy ball",
+    "source": "Foucault, Comptes Rendus de l'Académie des Sciences, 1851; Musée des Arts et Métiers",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At Paris's latitude a Foucault pendulum's swing plane turns about 11.3 degrees per hour",
+    "as_written": "about 11.3 degrees every hour",
+    "source": "Derived: sidereal rate 15.04 degrees per hour times sine of latitude 48.86 degrees",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A full turn of the swing plane at Paris takes about 32 hours",
+    "as_written": "about 32 hours",
+    "source": "Derived: 360 degrees divided by 11.3 degrees per hour",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's sidereal rotation period is 23 h 56 min 4 s",
+    "as_written": "23 hours, 56 minutes and 4 seconds",
+    "source": "IERS / US Naval Observatory (sidereal day 23 h 56 m 4.09 s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The sidereal day is about four minutes shorter than the 24-hour solar day",
+    "as_written": "about four minutes shorter than the 24 hours",
+    "source": "Derived from the sidereal day and the 24-hour mean solar day (IERS)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's equatorial circumference is about 40,075 km",
+    "as_written": "40,075 kilometres",
+    "source": "WGS 84 ellipsoid; NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "London's rotational speed is about 1,040 km/h",
+    "as_written": "about 1,040 kilometres per hour",
+    "source": "Derived: equatorial speed times cosine of London's latitude, 51.5 degrees north",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Equatorial rotation speed is about 465 m/s",
+    "as_written": "about 465 metres per second",
+    "source": "NASA Goddard Earth Fact Sheet (equatorial rotation velocity 465.1 m/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Speed of sound at 15 °C is about 340 m/s",
+    "as_written": "about 340 metres per second",
+    "source": "ISO 2533 / ICAO International Standard Atmosphere (340.3 m/s at 15 °C)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "465 m/s is about 1.4 times the speed of sound",
+    "as_written": "roughly 1.4 times the speed of sound",
+    "source": "Derived: 465 divided by 340.3",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Strongest surface wind gust recorded by a weather station is 408 km/h at Barrow Island during Tropical Cyclone Olivia in 1996",
+    "as_written": "408 kilometres per hour, on Barrow Island in Australia, during Tropical Cyclone Olivia in 1996",
+    "source": "World Meteorological Organization Weather and Climate Extremes Archive, 2010 ruling (113.3 m/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "1,670 km/h is about four times the record gust",
+    "as_written": "about four times faster than that",
+    "source": "Derived: 1,674 divided by 408",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Dynamic pressure of a 465 m/s wind at sea-level density is about 130 kPa",
+    "as_written": "about 130 kilopascals at sea level",
+    "source": "Derived: half times 1.225 kg/m3 (ICAO standard sea-level density) times 465 squared",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Standard sea-level air pressure is about 101 kPa",
+    "as_written": "101 kilopascals",
+    "source": "ICAO International Standard Atmosphere (101.325 kPa)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Half of the atmosphere's mass lies below about 5.5 km",
+    "as_written": "below about 5.5 kilometres",
+    "source": "NASA Glenn Research Center / US Standard Atmosphere 1976",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 45 degrees latitude the rotation speed is about 1,180 km/h",
+    "as_written": "about 1,180 kilometres per hour",
+    "source": "Derived: equatorial speed times cosine of 45 degrees",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Speed of sound at 15 °C is about 1,225 km/h",
+    "as_written": "about 1,225 kilometres per hour",
+    "source": "ICAO International Standard Atmosphere (340.3 m/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oceans cover about 71 percent of Earth's surface",
+    "as_written": "about 71 percent",
+    "source": "NOAA National Ocean Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average ocean depth is about 3,700 m",
+    "as_written": "about 3,700 metres deep on average",
+    "source": "NOAA National Centers for Environmental Information, ETOPO (mean depth about 3,688 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A tsunami crosses the deep ocean at roughly 800 km/h",
+    "as_written": "around 800 kilometres per hour",
+    "source": "NOAA Center for Tsunami Research / National Weather Service tsunami safety materials",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's rotational kinetic energy is about 2 x 10^29 joules",
+    "as_written": "about 2 times 10 to the 29 joules",
+    "source": "Derived: half times moment of inertia 8.04 x 10^37 kg m2 times angular velocity 7.292 x 10^-5 rad/s squared (IERS values)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "World primary energy use is roughly 6 x 10^20 joules per year",
+    "as_written": "about 6 times 10 to the 20 joules in a year",
+    "source": "Energy Institute Statistical Review of World Energy (about 600 exajoules per year)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Rotational energy equals more than 300 million years of present world energy use",
+    "as_written": "more than 300 million years",
+    "source": "Derived: 2.1 x 10^29 J divided by 6 x 10^20 J per year",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Normal apparent solar motion is 15 degrees per hour",
+    "as_written": "15 degrees per hour",
+    "source": "Derived: 360 degrees divided by 24 hours",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Without rotation the Sun shifts just under one degree per day",
+    "as_written": "just under one degree per day",
+    "source": "Derived: 360 degrees divided by 365.25 days",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun's angular diameter is about half a degree",
+    "as_written": "about half a degree wide",
+    "source": "NASA Sun Fact Sheet (mean angular diameter about 0.53 degrees)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun would take about 13 hours to move its own width",
+    "as_written": "about 13 hours",
+    "source": "Derived: 0.53 degrees divided by 0.986 degrees per day",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Daylight and night each last about half a year at the equator",
+    "as_written": "about six months",
+    "source": "Derived: half of a 365.25-day solar day",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus's sunrise-to-sunrise day is about 117 Earth days",
+    "as_written": "about 117 Earth days",
+    "source": "NASA Venus Fact Sheet (solar day 116.75 Earth days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mercury's solar day is 176 Earth days",
+    "as_written": "Mercury takes 176",
+    "source": "NASA Mercury Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's solar day is about 29.5 Earth days",
+    "as_written": "The Moon takes 29.5",
+    "source": "NASA Moon Fact Sheet (synodic period 29.53 days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lunar equatorial surface reaches about 127 °C by day and falls to about minus 173 °C at night",
+    "as_written": "about 127 degrees Celsius in the afternoon and falls to about minus 173 at night",
+    "source": "NASA Lunar Reconnaissance Orbiter Diviner instrument results; NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hurricanes almost never form within about 5 degrees latitude of the equator because the Coriolis effect is too weak",
+    "as_written": "within about 5 degrees of the equator",
+    "source": "NOAA Atlantic Oceanographic and Meteorological Laboratory, Hurricane Research Division FAQ",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Held and Hou's 1980 theory shows the Hadley circulation extends toward the poles on slowly rotating planets",
+    "as_written": "A classic 1980 calculation by Isaac Held and Arthur Hou",
+    "source": "Held and Hou, Journal of the Atmospheric Sciences, 1980",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Florida Current carries about 30 million cubic metres of water per second",
+    "as_written": "about 30 million cubic metres of water every second",
+    "source": "NOAA AOML Florida Current cable transport measurements (about 32 Sverdrups)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global river discharge is under 1.5 million cubic metres per second, so the Gulf Stream exceeds it more than twenty times",
+    "as_written": "more than twenty times the flow of every river on Earth combined",
+    "source": "Dai and Trenberth 2002, Journal of Hydrometeorology (about 37,000 cubic km per year)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Stommel explained western boundary currents as a consequence of Earth's rotation in 1948",
+    "as_written": "The oceanographer Henry Stommel showed in 1948",
+    "source": "Stommel, Transactions of the American Geophysical Union, 1948",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's equatorial radius is 6,378 km",
+    "as_written": "6,378 kilometres",
+    "source": "WGS 84 (6,378.137 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's polar radius is 6,357 km",
+    "as_written": "6,357 kilometres",
+    "source": "WGS 84 (6,356.752 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The equatorial bulge is about 21 km",
+    "as_written": "about 21 kilometres",
+    "source": "Derived from WGS 84 radii",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Removing rotation would shift sea level by kilometres; an order-of-magnitude estimate, not a precise value",
+    "as_written": "several kilometres",
+    "source": "Order-of-magnitude estimate derived from the roughly 21 km rotational flattening in WGS 84",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scandinavia is still rising from post-glacial rebound after ice melted roughly ten thousand years ago",
+    "as_written": "roughly ten thousand years ago",
+    "source": "Fennoscandian post-glacial rebound, e.g. BIFROST GPS project; Peltier glacial isostatic adjustment reviews",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A non-rotating Earth would see the Sun move eastward among the stars, so it would rise in the west",
+    "as_written": "It rises in the west and sets in the east, once a year",
+    "source": "Derived from the Sun's apparent eastward annual motion along the ecliptic",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus's retrograde spin makes the Sun rise in the west",
+    "as_written": "Venus already does something like this",
+    "source": "NASA Venus Fact Sheet (retrograde rotation, 243 days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The terminator moves about 110 km per day at the equator, about 4.6 km/h",
+    "as_written": "about 110 kilometres per day, which is about 4.6 kilometres per hour",
+    "source": "Derived: 111.3 km per degree times 0.986 degrees per day",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The outer core begins nearly 3,000 km down",
+    "as_written": "Nearly three thousand kilometres under your feet",
+    "source": "USGS; PREM, Dziewonski and Anderson 1981 (core-mantle boundary at about 2,890 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The outer core is about 2,260 km thick",
+    "as_written": "about 2,260 kilometres thick",
+    "source": "PREM, Dziewonski and Anderson 1981 (2,890 km to 5,150 km depth)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Surface magnetic field strength is about 25 to 65 microtesla",
+    "as_written": "between about 25 and 65 microtesla",
+    "source": "NOAA National Centers for Environmental Information, World Magnetic Model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars lost its global magnetic field billions of years ago",
+    "as_written": "Mars lost its global magnetic field billions of years ago",
+    "source": "Acuña et al. 1999, Science (Mars Global Surveyor magnetometer)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars's surface pressure is about 160 times lower than Earth's",
+    "as_written": "about 160 times lower than ours",
+    "source": "NASA Mars Fact Sheet (about 6.36 mbar vs 1,014 mbar)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "MAVEN has measured the solar wind stripping gas from Mars's upper atmosphere",
+    "as_written": "NASA's MAVEN spacecraft has measured the solar wind still stripping gas",
+    "source": "Jakosky et al. 2015, Science; NASA MAVEN mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The SI second is defined as 9,192,631,770 cycles of caesium-133 radiation",
+    "as_written": "9,192,631,770 cycles",
+    "source": "BIPM SI Brochure",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "27 leap seconds have been added since 1972",
+    "as_written": "27 leap seconds",
+    "source": "IERS Bulletin C",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In 2022 the General Conference on Weights and Measures resolved to stop leap seconds by 2035",
+    "as_written": "in 2022 the world's measurement authorities agreed to stop doing that by 2035",
+    "source": "27th CGPM, November 2022, Resolution 4",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Human intrinsic circadian period averages about 24 h 11 min",
+    "as_written": "about 24 hours and 11 minutes",
+    "source": "Czeisler et al. 1999, Science 284:2177",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At the North Pole the Sun stays above the horizon for about six months",
+    "as_written": "at the North Pole the sun stays up about six months each year",
+    "source": "US Naval Observatory; NOAA Global Monitoring Laboratory solar calculations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Joshi, Haberle and Reynolds found about 0.1 bar of atmosphere prevents atmospheric collapse on planets with a permanent night side",
+    "as_written": "a surface pressure of only about 0.1 bar",
+    "source": "Joshi, Haberle and Reynolds 1997, Icarus 129:450",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's surface pressure is about ten times 0.1 bar",
+    "as_written": "Earth's air is about ten times thicker than that",
+    "source": "Standard atmosphere, 1.013 bar",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cloud feedback on slowly rotating planets can extend habitability to higher sunlight levels",
+    "as_written": "In 2013, Jun Yang, Nicolas Cowan and Dorian Abbot",
+    "source": "Yang, Cowan and Abbot 2013, Astrophysical Journal Letters 771:L45",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The eyeball climate state is a patch of open ocean ringed by ice",
+    "as_written": "sometimes called an eyeball world",
+    "source": "Pierrehumbert 2011, Astrophysical Journal Letters 726:L8",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The twilight band of tide-locked planets is considered a promising habitat",
+    "as_written": "the twilight band between them is a promising place for life",
+    "source": "Pierrehumbert and Hammond 2019, Annual Review of Fluid Mechanics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal friction lengthens the day by about 1.8 ms per century",
+    "as_written": "about 1.8 milliseconds per century",
+    "source": "Stephenson, Morrison and Hohenkerk 2016, Proceedings of the Royal Society A",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon recedes at about 3.8 cm per year, measured by lunar laser ranging",
+    "as_written": "about 3.8 centimetres per year",
+    "source": "Apollo Lunar Laser Ranging retroreflectors; Williams and Boggs lunar laser ranging analyses",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Devonian corals record roughly 400 days per year about 380 million years ago",
+    "as_written": "roughly 400 days in a year",
+    "source": "Wells 1963, Nature 197:948",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The day was about 18.7 hours long 1.4 billion years ago",
+    "as_written": "about 18.7 hours long",
+    "source": "Meyers and Malinverno 2018, Proceedings of the National Academy of Sciences (Xiamaling Formation)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "After the Moon-forming impact the day may have been two to five hours",
+    "as_written": "somewhere between two and five hours",
+    "source": "Ćuk and Stewart 2012, Science; Canup 2012, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's sidereal orbital period is 27.3 days",
+    "as_written": "once every 27.3 days",
+    "source": "NASA Moon Fact Sheet (sidereal period 27.32 days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "High tides would come about half a sidereal month apart, around 13.7 days",
+    "as_written": "about 13.7 days apart",
+    "source": "Derived: half of 27.3 days",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal torque on a slowly spinning planet speeds its spin in the direction of the satellite's orbit and moves the satellite inward; the Sun's tides act the same way",
+    "as_written": "twists the Earth gently forward, in the same direction the Moon orbits",
+    "source": "Standard tidal evolution theory, e.g. Murray and Dermott, Solar System Dynamics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]
