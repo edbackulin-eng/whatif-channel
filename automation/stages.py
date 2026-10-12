@@ -108,11 +108,19 @@ def visual_check(work, scenes):
 
 def run(episode, work):
     """The whole build. Each stage is a no-op when its output already exists."""
+    from automation import episode_assets
     from automation import frames as frame_stage
+
+    # Approved material first: whatever this restores, the stages below skip.
+    restored = episode_assets.fetch(episode, work)
 
     narrate(work)
     subtitles(work)
     scenes = plan(work)
+    if restored:
+        scenes, bound = episode_assets.bind_frames(work, scenes)
+        if bound == len(scenes):
+            log.info("every frame came from the dataset; no generation needed")
     scenes = frame_stage.ensure(work, scenes)
     scenes = visual_check(work, scenes)
     (work / "scenes.json").write_text(

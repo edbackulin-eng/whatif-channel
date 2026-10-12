@@ -17,39 +17,86 @@ ROOT = Path(__file__).resolve().parent
 SLUG = "whatif-flux-weights"
 
 SOURCE = r'''
-import os, time, json, pathlib, shutil
-OUT = pathlib.Path("/kaggle/working/flux")
+import os, time, json, pathlib
+OUT = pathlib.Path("/kaggle/working/flux4bit")
 OUT.mkdir(parents=True, exist_ok=True)
 
-os.system("pip install -q -U huggingface_hub")
-from huggingface_hub import snapshot_download
+os.system("pip install -q -U diffusers torchao transformers accelerate "
+          "sentencepiece protobuf huggingface_hub bitsandbytes")
+import torch
+from diffusers import FluxTransformer2DModel
+from diffusers import BitsAndBytesConfig as DiffBnb
+from transformers import BitsAndBytesConfig as TfBnb
+from transformers import T5EncoderModel, CLIPTextModel, AutoTokenizer
+from diffusers import AutoencoderKL, FlowMatchEulerDiscreteScheduler
 
-# Pinned, not "main": a floating reference would let the mirror drift and
-# reintroduce exactly the dependency this removes.
 REPO = "black-forest-labs/FLUX.1-schnell"
-REVISION = JOB.get("revision") or "main"
+REV = JOB.get("revision") or "main"
+TOK = JOB.get("hf_token")
+DTYPE = torch.float16
+report = {"repo": REPO, "revision": REV, "parts": {}, "errors": []}
 
+# Mirroring the raw repository failed: it is over 30 GB once the duplicated
+# root checkpoint is counted, which is past what a kernel may emit. The 4-bit
+# build is what the generation kernels actually load anyway, so that is what
+# gets mirrored - roughly a third of the size and already in the right form.
 t0 = time.time()
-path = snapshot_download(
-    REPO, revision=REVISION, local_dir=str(OUT),
-    token=JOB.get("hf_token"),
-    allow_patterns=["*.json", "*.txt", "*.safetensors", "*.model",
-                    "tokenizer*/*", "scheduler/*"],
-    ignore_patterns=["*.bin", "*.onnx", "*.msgpack", "*.h5"],
-)
-took = time.time() - t0
+try:
+    te2 = T5EncoderModel.from_pretrained(
+        REPO, subfolder="text_encoder_2", revision=REV, token=TOK,
+        torch_dtype=DTYPE,
+        quantization_config=TfBnb(load_in_4bit=True, bnb_4bit_compute_dtype=DTYPE))
+    te2.save_pretrained(OUT / "text_encoder_2")
+    report["parts"]["text_encoder_2"] = "ok"
+    del te2
+except Exception as e:
+    report["errors"].append(f"text_encoder_2: {e}")
+
+try:
+    tr = FluxTransformer2DModel.from_pretrained(
+        REPO, subfolder="transformer", revision=REV, token=TOK,
+        torch_dtype=DTYPE,
+        quantization_config=DiffBnb(load_in_4bit=True, bnb_4bit_compute_dtype=DTYPE))
+    tr.save_pretrained(OUT / "transformer")
+    report["parts"]["transformer"] = "ok"
+    del tr
+except Exception as e:
+    report["errors"].append(f"transformer: {e}")
+
+# The small components stay unquantised; together they are well under a gigabyte.
+for name, loader, kwargs in (
+        ("text_encoder", CLIPTextModel, {"torch_dtype": DTYPE}),
+        ("vae", AutoencoderKL, {"torch_dtype": DTYPE})):
+    try:
+        m = loader.from_pretrained(REPO, subfolder=name, revision=REV,
+                                   token=TOK, **kwargs)
+        m.save_pretrained(OUT / name)
+        report["parts"][name] = "ok"
+        del m
+    except Exception as e:
+        report["errors"].append(f"{name}: {e}")
+
+for name in ("tokenizer", "tokenizer_2"):
+    try:
+        AutoTokenizer.from_pretrained(REPO, subfolder=name, revision=REV,
+                                      token=TOK).save_pretrained(OUT / name)
+        report["parts"][name] = "ok"
+    except Exception as e:
+        report["errors"].append(f"{name}: {e}")
+
+try:
+    FlowMatchEulerDiscreteScheduler.from_pretrained(
+        REPO, subfolder="scheduler", revision=REV,
+        token=TOK).save_pretrained(OUT / "scheduler")
+    report["parts"]["scheduler"] = "ok"
+except Exception as e:
+    report["errors"].append(f"scheduler: {e}")
 
 total = sum(f.stat().st_size for f in OUT.rglob("*") if f.is_file())
-manifest = {
-    "repo": REPO,
-    "revision": REVISION,
-    "downloaded_s": round(took),
-    "total_gb": round(total / 1e9, 2),
-    "files": sorted(str(f.relative_to(OUT)) for f in OUT.rglob("*") if f.is_file())[:200],
-}
-pathlib.Path("/kaggle/working/manifest.json").write_text(json.dumps(manifest, indent=2))
-print(json.dumps({k: v for k, v in manifest.items() if k != "files"}, indent=2))
-print("files:", len(manifest["files"]))
+report["total_gb"] = round(total / 1e9, 2)
+report["seconds"] = round(time.time() - t0)
+pathlib.Path("/kaggle/working/manifest.json").write_text(json.dumps(report, indent=2))
+print(json.dumps(report, indent=2))
 '''
 
 
@@ -81,7 +128,7 @@ def main():
         "language": "python",
         "kernel_type": "notebook",
         "is_private": True,
-        "enable_gpu": False,       # a download needs no GPU, and saves quota
+        "enable_gpu": True,        # quantisation needs the GPU present
         "enable_internet": True,
         "dataset_sources": [], "competition_sources": [], "kernel_sources": [],
     }, indent=2), encoding="utf-8")

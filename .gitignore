@@ -4,6 +4,7 @@
 kaggle.json
 
 # Generated media. The repository holds code and scripts, nothing heavy.
+dataset/
 output/
 ready/
 logs/

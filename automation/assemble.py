@@ -74,14 +74,20 @@ def assemble(work, episode):
     render.mux(silent, mixed, final)
     log.info("render took %.0f min", (time.monotonic() - t0) / 60)
 
-    # Thumbnail: the channel's fixed typography over the episode's best frame.
-    lines = episode.get("thumbnail_lines") or _headline(episode["title"])
-    bg = _thumbnail_background(work, scenes)
-    img, boxes = thumbnail.variant_b(bg, lines)
+    # An approved thumbnail is never regenerated. Episode one's was chosen by
+    # hand from three candidates; rebuilding it would quietly discard that
+    # choice on every re-render.
     thumb = work / "thumbnail.png"
-    img.save(thumb)
-    spread = thumbnail.text_legibility(img, boxes)
-    log.info("thumbnail text spread %d", round(spread))
+    if thumb.exists() and episode.get("approved", {}).get("thumbnail"):
+        log.info("using the approved thumbnail as-is (%s)",
+                 episode["approved"]["thumbnail"])
+    else:
+        lines = episode.get("thumbnail_lines") or _headline(episode["title"])
+        bg = _thumbnail_background(work, scenes)
+        img, boxes = thumbnail.variant_b(bg, lines)
+        img.save(thumb)
+        log.info("thumbnail text spread %d",
+                 round(thumbnail.text_legibility(img, boxes)))
 
     chapters = _chapters(work, render.probe_duration(final))
     credits_path = work / "credits.json"

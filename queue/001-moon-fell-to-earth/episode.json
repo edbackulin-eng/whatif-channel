@@ -8,14 +8,17 @@
   "approved": {
     "script": true,
     "narration": true,
-    "thumbnail": "option_2"
+    "thumbnail": "option_2",
+    "scenes": true,
+    "frames": true
   },
   "saved": "2026-10-12",
-  "note": "First episode of the channel. Narration and script are approved and must not be regenerated. Re-render only, so the pipeline fixes (cover-fill instead of blur plate, static animated cards, reshot frames) are applied to the finished video.",
+  "note": "First episode. Script, narration, frames and the chosen thumbnail are approved and travel in the Kaggle dataset named above. A build must reuse them verbatim and only re-render, so the pipeline fixes apply to the video without regenerating anything that was signed off.",
   "rerender_required": true,
   "fixes_pending_at_save": [
     "cover-fill for 16:9 sources (dark soft border)",
     "cards static with count-up reveal",
     "reshoot of frames with people facing camera"
-  ]
+  ],
+  "kaggle_dataset": "metberi/whatif-ep001-moon"
 }
