@@ -1,7 +1,7 @@
 {
   "slug": "001-moon-fell-to-earth",
   "title": "What If the Moon Fell to Earth?",
-  "status": "ready-to-render",
+  "status": "rendered",
   "position": 1,
   "voice": "bm_george",
   "thumbnail_variant": 2,
@@ -20,5 +20,7 @@
     "cards static with count-up reveal",
     "reshoot of frames with people facing camera"
   ],
-  "kaggle_dataset": "metberi/whatif-ep001-moon"
+  "kaggle_dataset": "metberi/whatif-ep001-moon",
+  "rendered_minutes": 215.5,
+  "updated": "2026-10-12T18:23:21+00:00"
 }
