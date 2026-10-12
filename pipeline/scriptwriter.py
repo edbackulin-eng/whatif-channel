@@ -56,10 +56,10 @@ Length: {min_words} to {max_words} words. This is a hard requirement.
 Then, after the narration, output a line containing only:
 ===CLAIMS===
 followed by a JSON array. One object per factual claim you made, each with:
-  {"text": "<the claim in plain words>",
+  {{"text": "<the claim in plain words>",
    "as_written": "<the phrase as it appears in the narration>",
    "source": "<the specific organisation, mission, dataset or publication that
-               establishes it>"}
+               establishes it>"}}
 
 List every number you used. If you could not source a figure, you should not
 have used it - remove it from the narration rather than listing it unsourced."""
