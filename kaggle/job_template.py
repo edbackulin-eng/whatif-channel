@@ -119,7 +119,13 @@ if JOB.get("image_prompts"):
         from transformers import BitsAndBytesConfig as TfBnb
         from transformers import T5EncoderModel
 
-        REPO = "black-forest-labs/FLUX.1-schnell"
+        # Prefer the mirror. The weights are Apache-2.0 so copying them is
+        # allowed outright; what this buys is that a gated repo, a revoked token
+        # or changed terms upstream cannot stop a build.
+        MIRROR = pathlib.Path("/kaggle/input/whatif-flux-weights/flux4bit")
+        REPO = str(MIRROR) if MIRROR.exists() else "black-forest-labs/FLUX.1-schnell"
+        report["weights_source"] = "kaggle-mirror" if MIRROR.exists() else "huggingface"
+        print("weights from:", report["weights_source"], REPO)
         t0 = time.time()
         text_encoder_2 = T5EncoderModel.from_pretrained(
             REPO, subfolder="text_encoder_2", torch_dtype=DTYPE,

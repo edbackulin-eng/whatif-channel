@@ -70,7 +70,10 @@ def _metadata(username, slug, title):
         "enable_internet": True,   # needed to pull model weights from Hugging Face
         "dataset_sources": [],
         "competition_sources": [],
-        "kernel_sources": [],
+        # The mirrored weights ride in as a kernel input, so a generation run
+        # never contacts huggingface.co.
+        "kernel_sources": ([f"{username}/whatif-flux-weights"]
+                           if os.environ.get("FLUX_MIRROR", "1") != "0" else []),
     }
 
 
@@ -82,13 +85,22 @@ def _run(args, check=True):
 
 
 def username():
+    # The environment comes first. A CI runner has no home full of dotfiles:
+    # credentials arrive as KAGGLE_USERNAME and KAGGLE_KEY. Reading only
+    # ~/.kaggle/kaggle.json made every cloud build die at the first GPU
+    # submission, after twenty minutes of useful work had already happened.
+    env_user = os.environ.get("KAGGLE_USERNAME")
+    if env_user:
+        return env_user
     cfg = Path.home() / ".kaggle" / "kaggle.json"
-    if not cfg.exists():
-        raise SystemExit(
-            "No Kaggle credentials.\n"
-            "  1. kaggle.com > your avatar > Settings > API > Create New Token\n"
-            f"  2. save the downloaded kaggle.json to {cfg}\n")
-    return json.loads(cfg.read_text())["username"]
+    if cfg.exists():
+        return json.loads(cfg.read_text())["username"]
+    # RuntimeError, not SystemExit: SystemExit derives from BaseException and
+    # slips straight through `except Exception`, so a caller that meant to
+    # degrade gracefully gets killed instead.
+    raise RuntimeError(
+        "No Kaggle credentials: set KAGGLE_USERNAME and KAGGLE_KEY, "
+        f"or save kaggle.json to {cfg}")
 
 
 def _slugify(title):
