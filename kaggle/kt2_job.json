@@ -1,0 +1,33 @@
+{
+  "_comment": "KT2 comparison job: Chatterbox on the same fragment Kokoro read, plus FLUX.1-schnell on the imagined shots NASA has no footage of.",
+  "tts_sentences": [
+    "Imagine at nine o'clock tomorrow morning, the Moon stops holding its orbit.",
+    "Not an explosion. Not a collision. It simply begins to fall.",
+    "For the first week, you would barely notice.",
+    "The Moon looks a little larger each night, the way a car in your mirror looks closer without seeming to move.",
+    "But the ocean notices first.",
+    "Tides are a tug of war, and the Moon is winning harder every hour.",
+    "By day nineteen, it is twice its normal size in the sky, and high tide is climbing six meters above the old line.",
+    "Coastal cities are not flooded yet.",
+    "They are simply wet, twice a day, a little deeper each time.",
+    "And here is the part almost nobody expects.",
+    "The Moon never actually reaches the ground.",
+    "Something tears it apart long before that, and what happens next lasts a million years."
+  ],
+  "exaggeration": 0.5,
+  "cfg_weight": 0.5,
+
+  "image_prompts": [
+    "an enormous moon filling half the sky above a quiet coastal city at dawn, people standing still in the street looking up",
+    "the moon breaking apart into a ring of debris around the earth, seen from high orbit",
+    "a flooded coastal highway at high tide, water halfway up the street signs, grey overcast light",
+    "the earth seen from space with a glowing ring of lunar debris encircling it",
+    "a vast tidal wave approaching a shoreline under a sky dominated by a fractured moon",
+    "rocky lunar fragments burning as they enter earth's atmosphere at night, seen from the ground"
+  ],
+  "style": "cinematic still, photorealistic, dramatic volumetric lighting, deep blue and amber palette, wide lens, high detail, no text, no watermark, no lettering",
+  "steps": 4,
+  "width": 1360,
+  "height": 768,
+  "seed": 1105
+}

@@ -1,0 +1,64 @@
+name: Write scripts into the queue
+
+# Runs once a week and tops the queue up to a fortnight of stock.
+#
+# This job also keeps the repository alive. GitHub disables scheduled workflows
+# on a public repository after 60 days without a commit, and the queue commit
+# this job makes is what resets that clock. If this workflow ever stops
+# committing, the whole schedule quietly dies two months later.
+on:
+  schedule:
+    - cron: "0 5 * * 0"        # Sundays 05:00 UTC, ahead of Monday's build
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many scripts to write"
+        default: "5"
+
+concurrency:
+  group: queue-writer
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Claude CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Write scripts
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python -X utf8 automation/write_scripts.py --count "${{ github.event.inputs.count || '5' }}"
+
+      - name: Commit the queue
+        run: |
+          git config user.name  "whatif-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          git add queue/
+          if git diff --cached --quiet; then
+            # Nothing new to say, but the schedule still needs a heartbeat.
+            date -u +"%Y-%m-%d %H:%M UTC" > queue/.heartbeat
+            git add queue/.heartbeat
+          fi
+          git commit -m "queue: weekly top-up $(date -u +%Y-%m-%d)" || exit 0
+          git push
+
+      - name: Queue health
+        run: python -X utf8 automation/queue_status.py --fail-on-empty false

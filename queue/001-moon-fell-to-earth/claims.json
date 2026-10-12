@@ -1,0 +1,122 @@
+[
+  {
+    "text": "The Moon is receding from Earth at about 3.8 cm per year.",
+    "as_written": "drifting away from us at about three point eight centimetres a year",
+    "source": "NASA Lunar Laser Ranging / NASA Lunar Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+  },
+  {
+    "text": "The Moon's mean distance from Earth is about 384,400 km.",
+    "as_written": "about three hundred and eighty four thousand kilometres away",
+    "source": "NASA Lunar Fact Sheet (semi-major axis 384,400 km)",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+  },
+  {
+    "text": "The Moon's mass is 7.35e22 kg, i.e. 7.35e19 tonnes = 73 billion billion tonnes (short scale).",
+    "as_written": "It weighs about seventy three billion billion tonnes",
+    "source": "NASA Lunar Fact Sheet (mass 7.346e22 kg)",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+  },
+  {
+    "text": "Tidal force scales as the inverse cube of distance, so halving the distance multiplies it by eight.",
+    "as_written": "Tidal force scales with the inverse cube of distance ... Cut the distance in half, and the pull that stretches our planet becomes eight times stronger",
+    "source": "Standard tidal theory: differential gravity across a body goes as 2GMr/d^3",
+    "url": "https://www.britannica.com/science/tide/Tidal-forces"
+  },
+  {
+    "text": "The Earth-Moon Roche limit is ~9,500 km (rigid) to ~18,400 km (fluid) from Earth's centre.",
+    "as_written": "somewhere between about nine and a half and eighteen thousand kilometres from Earth's centre",
+    "source": "Roche limit d = 1.26R(rho_E/rho_m)^(1/3) rigid, 2.44R fluid; Earth R=6371 km, densities 5514 and 3344 kg/m3",
+    "url": "https://en.wikipedia.org/wiki/Roche_limit"
+  },
+  {
+    "text": "The solid Earth body tide has a vertical amplitude of roughly 30-40 cm for the main lunar (M2) component.",
+    "as_written": "rises and falls by roughly thirty to forty centimetres twice a day",
+    "source": "Earth tide constituent table: M2 vertical amplitude 384.83 mm",
+    "url": "https://en.wikipedia.org/wiki/Earth_tide"
+  },
+  {
+    "text": "Io is the most volcanically active body in the Solar System, driven by tidal heating from Jupiter.",
+    "as_written": "Jupiter's moon Io is squeezed by exactly this kind of tidal kneading, and it is the most volcanically active object in the solar system",
+    "source": "NASA Galileo and Juno mission science; NASA Io overview",
+    "url": "https://science.nasa.gov/jupiter/moons/io/"
+  },
+  {
+    "text": "Oceans cover about 71% of Earth's surface.",
+    "as_written": "Seventy percent of this planet's surface is ocean",
+    "source": "NOAA: about 71 percent of the Earth's surface is water-covered",
+    "url": "https://oceanservice.noaa.gov/facts/oceanwater.html"
+  },
+  {
+    "text": "Roughly 38-40% of the world's population lives within 100 km of a coast.",
+    "as_written": "about forty percent of humanity lives within a hundred kilometres of a coastline. That is roughly three billion people",
+    "source": "UN environmental indicator methodology sheet (~40%); Small & Nicholls (2003) ~38%",
+    "url": "https://www.un.org/esa/sustdev/natlinfo/indicators/methodology_sheets/oceans_seas_coasts/pop_coastal_areas.pdf"
+  },
+  {
+    "text": "Geostationary orbit is 35,786 km above the surface, i.e. 42,164 km from Earth's centre.",
+    "as_written": "Geostationary satellites ... sit about thirty five thousand eight hundred kilometres up",
+    "source": "Standard orbital mechanics; ESA/NASA orbit definitions",
+    "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits"
+  },
+  {
+    "text": "GPS satellites orbit at about 20,200 km altitude.",
+    "as_written": "the navigation constellations at around twenty thousand kilometres",
+    "source": "US Space Force / GPS.gov: ~20,200 km MEO",
+    "url": "https://www.gps.gov/systems/gps/space/"
+  },
+  {
+    "text": "Saturn's main rings span roughly 280,000 km and are as little as ~10 m thick in places.",
+    "as_written": "they are over two hundred and eighty thousand kilometres across, and in places they are only about ten metres thick",
+    "source": "NASA Cassini mission ring science",
+    "url": "https://science.nasa.gov/saturn/facts/"
+  },
+  {
+    "text": "Earth's axial tilt is about 23.4 degrees.",
+    "as_written": "about twenty three and a half degrees",
+    "source": "NASA Earth Fact Sheet (obliquity 23.44 deg)",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+  },
+  {
+    "text": "Whether the Moon is REQUIRED to stabilise Earth's obliquity is contested. Laskar et al. (1993) found a moonless Earth could vary chaotically up to ~85 deg; Lissauer, Barnes & Chambers (2012) found variation typically confined to a ~20-25 deg range.",
+    "as_written": "presented as a genuine scientific disagreement rather than as settled fact",
+    "source": "Laskar, Joutel & Robutel, Nature 361 (1993); Lissauer, Barnes & Chambers, Icarus 217 (2012)",
+    "url": "https://barnesos.net/publications/papers/2012.01.Icarus.Barnes.Moonless.Earth.pdf"
+  },
+  {
+    "text": "Mars's obliquity varies far more widely than Earth's over millions of years.",
+    "as_written": "Mars, which has only two tiny moons, is thought to have wandered over a much wider range of tilt across its history",
+    "source": "Laskar & Robutel (1993); NASA Mars climate history",
+    "url": "https://science.nasa.gov/mars/facts/"
+  },
+  {
+    "text": "Earth's day is lengthening by roughly 1.7-2.3 ms per century from tidal friction.",
+    "as_written": "lengthening by roughly two milliseconds per century",
+    "source": "Stephenson & Morrison, eclipse records; IERS",
+    "url": "https://royalsocietypublishing.org/doi/10.1098/rspa.2016.0404"
+  },
+  {
+    "text": "Fossil growth bands indicate a day of roughly 21-22 hours several hundred million years ago.",
+    "as_written": "a day several hundred million years ago was around twenty two hours long",
+    "source": "Palaeontological rhythmite and coral banding studies (Wells 1963 and successors)",
+    "url": "https://www.nature.com/articles/197948a0"
+  },
+  {
+    "text": "Light takes about 0.04-0.06 s to travel 11,600-18,000 km.",
+    "as_written": "Light takes a few hundredths of a second to reach you from that distance",
+    "source": "c = 299,792 km/s",
+    "url": "https://physics.nist.gov/cgi-bin/cuu/Value?c"
+  },
+  {
+    "text": "Deep-sea hydrothermal vent ecosystems are chemosynthetic and do not depend on sunlight.",
+    "as_written": "Deep ocean ecosystems around hydrothermal vents do not care about sunlight at all",
+    "source": "NOAA Ocean Exploration: chemosynthesis at hydrothermal vents",
+    "url": "https://oceanexplorer.noaa.gov/facts/chemosynthesis.html"
+  },
+  {
+    "text": "Lunar mare volcanism largely ceased between about 3 and 2 billion years ago.",
+    "as_written": "a world whose great volcanic era ended two to three billion years ago",
+    "source": "Apollo sample dating; NASA Lunar Reconnaissance Orbiter results",
+    "url": "https://science.nasa.gov/moon/facts/"
+  }
+]

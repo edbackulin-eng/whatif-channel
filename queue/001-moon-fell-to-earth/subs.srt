@@ -1,0 +1,1324 @@
+1
+00:00:00,000 --> 00:00:06,010
+Imagine at 9 o'clock tomorrow morning, the
+moon stops holding its orbit.
+
+2
+00:00:06,010 --> 00:00:13,170
+There is no explosion, no collision, no warning on the news, because for the first
+few days
+
+3
+00:00:13,170 --> 00:00:15,090
+there is nothing to report.
+
+4
+00:00:15,090 --> 00:00:20,590
+The moon simply stops moving sideways fast enough to stay where it is, and begins
+very
+
+5
+00:00:20,590 --> 00:00:23,050
+slowly to fall.
+
+6
+00:00:23,050 --> 00:00:27,990
+You will not die in the impact, almost
+nobody will.
+
+7
+00:00:27,990 --> 00:00:30,940
+That is not how this ends.
+
+8
+00:00:30,940 --> 00:00:37,780
+What actually happens is stranger than a crash, and the last part of it lasts a
+million years.
+
+9
+00:00:37,780 --> 00:00:41,000
+Let's be honest about one thing first.
+
+10
+00:00:41,000 --> 00:00:43,680
+There is no mechanism for this.
+
+11
+00:00:43,680 --> 00:00:46,020
+The moon is not falling.
+
+12
+00:00:46,020 --> 00:00:52,380
+It is doing the opposite, drifting away from us, at about 3.8 cm a year, roughly
+the
+
+13
+00:00:52,380 --> 00:00:54,760
+rate your fingernails grow.
+
+14
+00:00:54,760 --> 00:00:59,820
+To make it fall, you would have to take away most of its orbital speed, and
+nothing in the
+
+15
+00:00:59,820 --> 00:01:03,040
+solar system can do that.
+
+16
+00:01:03,040 --> 00:01:08,320
+So treat the premise as a thought experiment with the physics left switched
+on.
+
+17
+00:01:08,320 --> 00:01:10,980
+The moon starts coming down.
+
+18
+00:01:10,980 --> 00:01:16,360
+Everything after that is just gravity doing exactly what gravity does, and the
+numbers
+
+19
+00:01:16,360 --> 00:01:18,800
+are not hard to follow.
+
+20
+00:01:18,800 --> 00:01:24,000
+The moon sits about 384,000 km away.
+
+21
+00:01:24,000 --> 00:01:27,840
+It weighs about 73 billion billion tons.
+
+22
+00:01:27,840 --> 00:01:31,640
+And the single most important thing to
+understand is this.
+
+23
+00:01:31,640 --> 00:01:36,560
+The force it exerts on you does not fade
+in a straight line as it approaches.
+
+24
+00:01:36,560 --> 00:01:40,440
+Tidal force scales with the inverse cube
+of distance.
+
+25
+00:01:40,440 --> 00:01:46,520
+Cut the distance in half, and the pool that stretches our planet becomes 8 times
+stronger.
+
+26
+00:01:46,520 --> 00:01:51,310
+Cut it to a tenth, and it is a thousand
+times stronger.
+
+27
+00:01:51,310 --> 00:01:53,030
+Look onto that number.
+
+28
+00:01:53,030 --> 00:01:56,010
+It is the whole story.
+
+29
+00:01:56,010 --> 00:01:58,120
+Nothing happens.
+
+30
+00:01:58,120 --> 00:02:01,240
+This is the part that would really get to
+people.
+
+31
+00:02:01,240 --> 00:02:06,640
+For the first several days, the moon looks slightly larger each night, and that is
+all.
+
+32
+00:02:06,640 --> 00:02:10,860
+The change is so gradual that you would
+argue about it.
+
+33
+00:02:10,860 --> 00:02:17,080
+Someone photographs it against the same chimney two nights running and posts the
+comparison.
+
+34
+00:02:17,080 --> 00:02:21,100
+Half the replies say it is a lens
+artifact.
+
+35
+00:02:21,140 --> 00:02:24,020
+Astronomers know within hours.
+
+36
+00:02:24,020 --> 00:02:30,340
+The orbital tracking data is unambiguous, and by the second day every observatory on
+Earth
+
+37
+00:02:30,340 --> 00:02:34,620
+is pointed at the same object, publishing
+the same curve.
+
+38
+00:02:34,620 --> 00:02:39,020
+But the public conversation stays stuck on
+whether the moon looks bigger, because at
+
+39
+00:02:39,020 --> 00:02:43,620
+this distance the honest answer is,
+barely.
+
+40
+00:02:43,620 --> 00:02:47,240
+Meanwhile the ocean already knows.
+
+41
+00:02:47,240 --> 00:02:49,920
+The tides are a tug of war.
+
+42
+00:02:49,920 --> 00:02:55,520
+The moon pulls hardest on the water nearest it and least on the water on the
+far side, and
+
+43
+00:02:55,520 --> 00:03:01,880
+the planet gets stretched into a slight rugby ball shape with a bulge of ocean on
+each side.
+
+44
+00:03:01,880 --> 00:03:05,200
+That is why you get two high tides a day,
+not one.
+
+45
+00:03:05,200 --> 00:03:11,200
+As the moon closes in, that stretch gets
+stronger in a hurry because of the cube.
+
+46
+00:03:11,200 --> 00:03:16,760
+By the end of week one, the moon is close enough that spring tides, the big ones,
+start
+
+47
+00:03:16,800 --> 00:03:20,360
+running measurably higher than the tide
+tables say.
+
+48
+00:03:20,360 --> 00:03:27,520
+Harbour masters notice before anyone else,
+not a disaster, a discrepancy.
+
+49
+00:03:27,520 --> 00:03:32,760
+Water arriving where the charts say it should not be twice a day every day, and
+the gap
+
+50
+00:03:32,760 --> 00:03:35,390
+widening each time.
+
+51
+00:03:35,390 --> 00:03:39,410
+And this is where the story stops being
+quiet.
+
+52
+00:03:39,410 --> 00:03:42,810
+The moon is now half its original
+distance.
+
+53
+00:03:42,810 --> 00:03:48,210
+It is twice the width it used to be in the
+sky, and it is bright enough to read by.
+
+54
+00:03:48,210 --> 00:03:52,560
+People stop arguing about whether it looks
+bigger.
+
+55
+00:03:52,560 --> 00:03:55,520
+Tides are eight times stronger.
+
+56
+00:03:55,520 --> 00:03:59,960
+That sounds survivable until you think
+about what a tide actually is.
+
+57
+00:03:59,960 --> 00:04:04,320
+A high tide of two metres becomes a high
+tide of sixteen.
+
+58
+00:04:04,320 --> 00:04:08,680
+The sea does not rise and stay risen,
+which is somehow worse.
+
+59
+00:04:08,680 --> 00:04:13,360
+It comes in, floods everything below that
+line, and goes back out.
+
+60
+00:04:13,360 --> 00:04:17,320
+And it does it again about twelve and a
+half hours later.
+
+61
+00:04:17,320 --> 00:04:20,960
+Coastal cities are not destroyed on day
+nineteen.
+
+62
+00:04:20,960 --> 00:04:26,260
+They are soaked, drained, and soaked
+again, and nothing ever dries.
+
+63
+00:04:26,260 --> 00:04:29,980
+Every low-lying river mouth in the world
+backs up.
+
+64
+00:04:29,980 --> 00:04:32,540
+Storm drains run in reverse.
+
+65
+00:04:32,540 --> 00:04:38,820
+The water coming into cities is salt water, so the first serious casualty is
+not buildings.
+
+66
+00:04:38,820 --> 00:04:41,900
+It is farmland and fresh water.
+
+67
+00:04:41,900 --> 00:04:48,660
+Rivers near any coast begin taking on salt, and once that happens, you cannot
+undo it.
+
+68
+00:04:48,660 --> 00:04:54,020
+Seventy percent of this planet's surface is ocean, and about forty percent of
+humanity
+
+69
+00:04:54,020 --> 00:04:57,860
+lives within a hundred kilometres of a
+coastline.
+
+70
+00:04:57,860 --> 00:05:02,940
+That is roughly three billion people, and
+a very large share of the world's ports,
+
+71
+00:05:02,940 --> 00:05:08,020
+refineries, power stations, and chip fabs,
+all of which were built at sea level on
+
+72
+00:05:08,020 --> 00:05:09,830
+purpose.
+
+73
+00:05:09,830 --> 00:05:16,610
+And somewhere above all this, we lose the machinery we would need to coordinate a
+response.
+
+74
+00:05:16,610 --> 00:05:21,450
+The moon, on its way down, sweeps through
+the region where our satellites live.
+
+75
+00:05:21,450 --> 00:05:28,050
+Geostationary satellites, the ones that carry a great deal of broadcasting and
+weather observation,
+
+76
+00:05:28,050 --> 00:05:31,650
+sit about thirty-five thousand eight
+hundred kilometres up.
+
+77
+00:05:31,650 --> 00:05:35,010
+The moon passes straight through that
+altitude.
+
+78
+00:05:35,010 --> 00:05:37,130
+It does not need to hit anything.
+
+79
+00:05:37,130 --> 00:05:42,970
+A mass that large moving through that volume wrecks the orbits of everything
+near it, and
+
+80
+00:05:42,970 --> 00:05:47,700
+the debris from the collisions it does
+cause finishes the rest.
+
+81
+00:05:47,700 --> 00:05:53,260
+Lower down, the navigation constellations at around twenty thousand kilometres go
+the
+
+82
+00:05:53,260 --> 00:05:55,220
+same way.
+
+83
+00:05:55,220 --> 00:06:00,860
+So in the middle of the largest coordinated evacuation in history,
+precision timing
+
+84
+00:06:00,860 --> 00:06:03,620
+and navigation stop working.
+
+85
+00:06:03,620 --> 00:06:10,140
+Not just maps on phones, those satellite clocks underpin power grid
+synchronisation, financial
+
+86
+00:06:10,140 --> 00:06:16,020
+transaction time stamps, aviation,
+shipping, and the mobile network itself.
+
+87
+00:06:16,020 --> 00:06:21,980
+The infrastructure we would use to organise and orderly retreat inland is
+tied to hardware
+
+88
+00:06:21,980 --> 00:06:26,620
+that is now being scattered by the thing
+we are retreating from.
+
+89
+00:06:26,620 --> 00:06:29,780
+But the ocean is not the dangerous part.
+
+90
+00:06:29,780 --> 00:06:35,220
+The dangerous part is quieter and it is
+happening underneath.
+
+91
+00:06:35,220 --> 00:06:40,820
+Tidal force does not only move water, it
+moves rock.
+
+92
+00:06:40,820 --> 00:06:46,460
+Right now, today, the solid ground under your feet rises and falls by roughly
+thirty to
+
+93
+00:06:46,460 --> 00:06:48,980
+forty centimetres twice a day.
+
+94
+00:06:48,980 --> 00:06:53,140
+You cannot feel it because everything
+around you moves with it.
+
+95
+00:06:53,140 --> 00:06:58,540
+This is called the earth tide and it is
+real, measurable and completely ignorable
+
+96
+00:06:58,580 --> 00:07:01,070
+under normal conditions.
+
+97
+00:07:01,070 --> 00:07:05,710
+Multiply it by eight, then keep going.
+
+98
+00:07:05,710 --> 00:07:09,070
+Rock is not elastic in a friendly way.
+
+99
+00:07:09,070 --> 00:07:11,910
+Flex it repeatedly and it does not bend.
+
+100
+00:07:11,910 --> 00:07:15,150
+It accumulates stress until something
+slips.
+
+101
+00:07:15,150 --> 00:07:20,590
+Every fault line on earth is now being worked twice a day by a force that is
+growing
+
+102
+00:07:20,590 --> 00:07:21,910
+week by week.
+
+103
+00:07:21,910 --> 00:07:26,190
+Faults that were due to go in ten thousand
+years go this month.
+
+104
+00:07:26,230 --> 00:07:29,400
+Faults that were locked go anyway.
+
+105
+00:07:29,400 --> 00:07:35,160
+This is the first stage that kills large numbers of people and it does it inland,
+far from
+
+106
+00:07:35,160 --> 00:07:41,060
+the water, in places that thought they were safe because they were nowhere near a
+coast.
+
+107
+00:07:41,060 --> 00:07:48,700
+The flexing also reaches the magma, volcanoes that have been dormant for
+centuries start venting.
+
+108
+00:07:48,700 --> 00:07:53,380
+We know this mechanism is real because we
+can watch it happen elsewhere.
+
+109
+00:07:53,380 --> 00:07:59,060
+Jupiter's moon Io is squeezed by exactly this kind of tidal kneading and it is the
+most
+
+110
+00:07:59,060 --> 00:08:05,260
+volcanically active object in the solar system with hundreds of active volcanoes
+and plumes
+
+111
+00:08:05,260 --> 00:08:09,020
+that throw material hundreds of kilometers
+into space.
+
+112
+00:08:09,020 --> 00:08:11,220
+Io is not a theory.
+
+113
+00:08:11,220 --> 00:08:17,740
+It is a worked example of what happens when something gets flexed hard enough,
+long enough.
+
+114
+00:08:17,740 --> 00:08:20,180
+Earth will not become Io.
+
+115
+00:08:20,180 --> 00:08:22,900
+It will not get the chance.
+
+116
+00:08:22,940 --> 00:08:28,940
+Now the moon is genuinely close and the sky is wrong in a way that no photograph
+has ever
+
+117
+00:08:28,940 --> 00:08:30,260
+shown.
+
+118
+00:08:30,260 --> 00:08:32,860
+Io is no longer a disk.
+
+119
+00:08:32,860 --> 00:08:35,220
+Io is a landscape overhead.
+
+120
+00:08:35,220 --> 00:08:39,900
+You can see craters with your eyes that
+previously needed a telescope.
+
+121
+00:08:39,900 --> 00:08:42,660
+It covers a visible fraction of the sky.
+
+122
+00:08:42,660 --> 00:08:48,300
+It moves perceptibly against the stars while you watch and at night it is bright
+enough
+
+123
+00:08:48,300 --> 00:08:54,430
+that there is no real darkness anywhere on
+the half of the planet facing it.
+
+124
+00:08:54,430 --> 00:08:57,870
+Tides are now hundreds of times their
+normal strength.
+
+125
+00:08:57,870 --> 00:09:01,510
+There is no coastline left in any
+meaningful sense.
+
+126
+00:09:01,510 --> 00:09:07,510
+The sea is sloshing across continental shelves twice a day in a way that has no
+modern
+
+127
+00:09:07,510 --> 00:09:12,510
+precedent, because the last time anything
+like this happened the continents were in
+
+128
+00:09:12,510 --> 00:09:14,760
+different places.
+
+129
+00:09:14,760 --> 00:09:17,800
+The atmosphere is being pulled too.
+
+130
+00:09:17,800 --> 00:09:24,240
+There is a fluid and it has tides exactly like the ocean does normally too small to
+notice.
+
+131
+00:09:24,240 --> 00:09:30,360
+Now there are atmospheric tides strong enough to drive continent scale whether on
+a 12-hour
+
+132
+00:09:30,360 --> 00:09:31,710
+cycle.
+
+133
+00:09:31,710 --> 00:09:35,600
+And everyone is waiting for the impact.
+
+134
+00:09:35,600 --> 00:09:38,700
+The impact never comes.
+
+135
+00:09:38,700 --> 00:09:41,220
+The moon does not hit the earth.
+
+136
+00:09:41,220 --> 00:09:42,660
+It cannot.
+
+137
+00:09:42,660 --> 00:09:47,940
+It is destroyed before it gets the chance
+by the same force that has been causing
+
+138
+00:09:47,940 --> 00:09:49,980
+all the trouble.
+
+139
+00:09:49,980 --> 00:09:52,820
+There is a distance called the Roche
+limit.
+
+140
+00:09:52,820 --> 00:09:57,860
+It is the point where the tidal stretching
+across an object becomes stronger than the
+
+141
+00:09:57,860 --> 00:10:01,260
+object's own gravity holding it together.
+
+142
+00:10:01,260 --> 00:10:06,380
+Inside that distance a body held together mainly by its own weight cannot stay in
+one
+
+143
+00:10:06,380 --> 00:10:07,380
+piece.
+
+144
+00:10:07,380 --> 00:10:13,060
+The near side is being pulled toward the planet harder than the far side and
+eventually
+
+145
+00:10:13,060 --> 00:10:15,350
+the difference wins.
+
+146
+00:10:15,350 --> 00:10:20,990
+For the moon approaching earth that boundary sits somewhere between about 9
+and a half thousand
+
+147
+00:10:20,990 --> 00:10:24,510
+and 18 thousand kilometers from earth's
+center.
+
+148
+00:10:24,510 --> 00:10:28,990
+Which end of that range applies depends on
+how much credit you give the moon's own
+
+149
+00:10:28,990 --> 00:10:30,470
+rock strength.
+
+150
+00:10:30,470 --> 00:10:36,150
+A rigid body holds together closer in, a
+body already cracking apart comes undone
+
+151
+00:10:36,150 --> 00:10:37,790
+further out.
+
+152
+00:10:37,790 --> 00:10:42,670
+Measured from the ground, even the near
+end is thousands of kilometers up.
+
+153
+00:10:42,670 --> 00:10:47,310
+Further than the navigation satellites it
+has already wrecked on the way down, far
+
+154
+00:10:47,310 --> 00:10:54,000
+higher than any mountain and crucially a
+long way from ever touching the surface.
+
+155
+00:10:54,000 --> 00:10:58,420
+So the moon arrives at that line and it
+comes apart.
+
+156
+00:10:58,420 --> 00:11:01,100
+Not instantly and not cleanly.
+
+157
+00:11:01,100 --> 00:11:06,100
+It elongates first stretching toward us
+its near side bulging.
+
+158
+00:11:06,100 --> 00:11:08,340
+Then the crust fails.
+
+159
+00:11:08,340 --> 00:11:14,140
+Earth's fractures open across a world whose great volcanic era ended two to
+three billion
+
+160
+00:11:14,140 --> 00:11:15,300
+years ago.
+
+161
+00:11:15,300 --> 00:11:21,020
+The whole body pulls into a stream of rock still moving at orbital speed still
+traveling
+
+162
+00:11:21,020 --> 00:11:24,740
+the same path but no longer a moon.
+
+163
+00:11:24,740 --> 00:11:28,370
+In a matter of days earth has a ring.
+
+164
+00:11:28,370 --> 00:11:35,090
+Let's slow down because the breakup itself
+is the part worth watching frame by frame.
+
+165
+00:11:35,090 --> 00:11:39,530
+In the first seconds from the ground
+almost nothing looks different.
+
+166
+00:11:39,530 --> 00:11:44,050
+Light takes a few hundredths of a second to reach you from that distance so you see
+it
+
+167
+00:11:44,050 --> 00:11:49,890
+essentially as it happens but what you see
+at first is only the shape going wrong.
+
+168
+00:11:49,890 --> 00:11:52,230
+The disk stops being round.
+
+169
+00:11:52,230 --> 00:11:55,290
+One edge pulls toward you.
+
+170
+00:11:55,290 --> 00:11:59,690
+Within the first minutes the fractures are
+visible as dark lines.
+
+171
+00:11:59,690 --> 00:12:04,690
+There is no sound and there will never be
+any sound because there is no air between
+
+172
+00:12:04,690 --> 00:12:06,050
+you and it.
+
+173
+00:12:06,050 --> 00:12:11,850
+This is a catastrophe happening in complete silence at a scale that fills the
+sky and
+
+174
+00:12:11,850 --> 00:12:16,180
+that silence is the detail people would
+remember.
+
+175
+00:12:16,180 --> 00:12:19,300
+Within the first hours the stream is
+obvious.
+
+176
+00:12:19,300 --> 00:12:24,380
+What was a single object is now a thickening band brighter along its length
+as fresh
+
+177
+00:12:24,380 --> 00:12:27,100
+surfaces catch the sunlight.
+
+178
+00:12:27,100 --> 00:12:31,420
+Lunar rock that has not seen the sun in
+four and a half billion years is now
+
+179
+00:12:31,460 --> 00:12:38,310
+exposed and the whole structure is noticeably brighter than the moon ever
+was.
+
+180
+00:12:38,310 --> 00:12:42,470
+Within the first day the leading edge of the debris has stretched far enough around
+the
+
+181
+00:12:42,470 --> 00:12:47,910
+planet that it rises in the east while the
+trailing material is still setting in the
+
+182
+00:12:47,910 --> 00:12:48,910
+west.
+
+183
+00:12:48,910 --> 00:12:53,550
+The sky now has a structure in it that was
+not there yesterday.
+
+184
+00:12:53,550 --> 00:12:59,650
+And the ground is still moving breaking
+the moon apart did not remove its mass.
+
+185
+00:12:59,650 --> 00:13:04,850
+The pieces are still there, still pulling, still stretching the planet twice a day
+and
+
+186
+00:13:04,850 --> 00:13:11,130
+they are now spread across a range of distances so the tidal forcing becomes
+messy and irregular
+
+187
+00:13:11,130 --> 00:13:14,590
+rather than a clean twice daily rhythm.
+
+188
+00:13:14,590 --> 00:13:17,610
+The debris does not fall straight down.
+
+189
+00:13:17,610 --> 00:13:22,570
+It keeps orbiting because it inherited the
+moon's motion and it spreads out along
+
+190
+00:13:22,570 --> 00:13:27,630
+that orbit until it forms a band
+encircling the planet.
+
+191
+00:13:27,630 --> 00:13:31,230
+If you have seen Saturn you already know
+the shape.
+
+192
+00:13:31,230 --> 00:13:38,510
+Saturn's rings are mostly water ice, they are over 280,000 km across and in places
+they
+
+193
+00:13:38,510 --> 00:13:40,950
+are only about 10 meters thick.
+
+194
+00:13:40,950 --> 00:13:45,990
+They are a demonstration that this is the natural end state for a lot of debris
+sharing
+
+195
+00:13:45,990 --> 00:13:50,760
+one orbit, not a cloud, not a shell, but a
+disk.
+
+196
+00:13:50,760 --> 00:13:56,280
+Earth's ring would be rock rather than
+ice, so darker but it would be close which
+
+197
+00:13:56,280 --> 00:13:58,640
+makes it enormous in the sky.
+
+198
+00:13:58,640 --> 00:14:03,240
+It would arch from horizon to horizon as a
+band of light.
+
+199
+00:14:03,240 --> 00:14:08,400
+Everyone on the planet would be able to see it day and night, although from high
+latitudes
+
+200
+00:14:08,400 --> 00:14:13,320
+you would see it at a low angle and from
+the equator it would pass almost directly
+
+201
+00:14:13,320 --> 00:14:15,150
+overhead.
+
+202
+00:14:15,150 --> 00:14:17,430
+It would also cast a shadow.
+
+203
+00:14:17,430 --> 00:14:23,470
+A band of shade would sweep across the planet's surface seasonally, cooling
+whatever it crossed
+
+204
+00:14:23,470 --> 00:14:25,470
+and it would do something uglier.
+
+205
+00:14:25,510 --> 00:14:30,510
+It would scatter sunlight into the night
+side so true darkness would become rare.
+
+206
+00:14:30,510 --> 00:14:36,350
+Every nocturnal ecosystem on Earth, which is most of them, runs on a cycle that no
+longer
+
+207
+00:14:36,350 --> 00:14:38,140
+exists.
+
+208
+00:14:38,140 --> 00:14:44,200
+A ring is not permanent, the inner edge is
+the problem.
+
+209
+00:14:44,200 --> 00:14:49,280
+Material at the inner edge is slowly dragged down by the last traces of
+atmosphere and
+
+210
+00:14:49,280 --> 00:14:52,680
+by collisions with its neighbors and it
+falls.
+
+211
+00:14:52,680 --> 00:14:58,100
+Not all at once, continuously for a very
+long time.
+
+212
+00:14:58,100 --> 00:15:01,700
+So Earth gets a bombardment that does not
+stop.
+
+213
+00:15:01,700 --> 00:15:06,560
+Not the single catastrophic impact everyone imagines when they think about
+things falling
+
+214
+00:15:06,560 --> 00:15:13,060
+from space, but a steady reign of lunar rock, ranging from dust to pieces the size
+of
+
+215
+00:15:13,060 --> 00:15:18,600
+buildings, arriving somewhere on the
+planet every day for thousands of years.
+
+216
+00:15:18,600 --> 00:15:21,920
+The dust matters more than the big pieces.
+
+217
+00:15:21,920 --> 00:15:27,960
+Even material entering the atmosphere at orbital speed does not reach the ground as
+rock.
+
+218
+00:15:27,960 --> 00:15:33,240
+It burns and that puts a persistent haze high in the atmosphere where weather
+cannot wash
+
+219
+00:15:33,240 --> 00:15:34,640
+it out.
+
+220
+00:15:34,640 --> 00:15:40,000
+Sunlight drops, temperatures drop,
+photosynthesis drops.
+
+221
+00:15:40,000 --> 00:15:45,080
+The planet cools and stays cool and the
+surface becomes a place where the sky is
+
+222
+00:15:45,080 --> 00:15:51,260
+permanently bright with a ring and permanently dimmed by what the ring is
+shedding.
+
+223
+00:15:51,260 --> 00:15:55,420
+This is the stage that actually decides
+what survives.
+
+224
+00:15:55,420 --> 00:15:58,740
+Not the tides, not the earthquakes, not
+the breakup.
+
+225
+00:15:58,740 --> 00:16:02,430
+The long grey centuries afterwards.
+
+226
+00:16:02,430 --> 00:16:08,030
+And it is worth being clear about who survives it because the answer is not the
+one disaster
+
+227
+00:16:08,030 --> 00:16:10,200
+films give you.
+
+228
+00:16:10,200 --> 00:16:15,480
+The ocean takes the coasts so the
+survivors are inland and at altitude.
+
+229
+00:16:15,480 --> 00:16:20,200
+The earthquakes take the cities so the
+survivors are in low buildings.
+
+230
+00:16:20,200 --> 00:16:25,480
+The haze takes the harvests so the survivors are wherever food can still be
+grown under
+
+231
+00:16:25,480 --> 00:16:29,920
+a dimmer sun or stored long enough to
+outlast the worst of it.
+
+232
+00:16:29,920 --> 00:16:35,160
+None of that favors the places where most of us currently live because most of us
+live
+
+233
+00:16:35,160 --> 00:16:42,370
+near water in dense construction eating
+food grown somewhere else and shipped in.
+
+234
+00:16:42,370 --> 00:16:45,890
+Life itself is never seriously at risk
+here.
+
+235
+00:16:45,890 --> 00:16:52,010
+Most ocean ecosystems around hydrothermal vents do not care about sunlight at all
+and they
+
+236
+00:16:52,010 --> 00:16:54,690
+would carry on exactly as before.
+
+237
+00:16:54,690 --> 00:16:58,850
+Plenty of microbial life would not
+register the event.
+
+238
+00:16:58,850 --> 00:17:05,250
+What is at risk is the specific fragile highly coordinated arrangement that lets 8
+billion
+
+239
+00:17:05,250 --> 00:17:07,940
+people eat every day.
+
+240
+00:17:07,940 --> 00:17:11,060
+Eventually, the ring thins out.
+
+241
+00:17:11,060 --> 00:17:16,460
+Most of it has either fallen or been flung outward and what is left is a faint band
+far
+
+242
+00:17:16,460 --> 00:17:19,190
+less dramatic than it was.
+
+243
+00:17:19,190 --> 00:17:23,190
+The days are shorter now and they stay
+shorter.
+
+244
+00:17:23,190 --> 00:17:28,190
+The moon has been slowing earth's rotation
+for billions of years.
+
+245
+00:17:28,190 --> 00:17:33,310
+Tidal friction drags on our spin and hands
+that energy to the moon's orbit which
+
+246
+00:17:33,310 --> 00:17:38,390
+is exactly why the moon is drifting away
+and why our day has been lengthening by
+
+247
+00:17:38,390 --> 00:17:41,390
+roughly 2 milliseconds per century.
+
+248
+00:17:41,390 --> 00:17:46,870
+Tidal coral growth bands suggest that a day several hundred million years ago was
+around
+
+249
+00:17:46,870 --> 00:17:49,710
+22 hours long.
+
+250
+00:17:49,710 --> 00:17:52,550
+Remove the brake and the lengthening
+stops.
+
+251
+00:17:52,550 --> 00:17:57,630
+The day freezes at whatever length it had
+reached and then the ring material falling
+
+252
+00:17:57,630 --> 00:18:00,230
+back in nudges it the other way.
+
+253
+00:18:00,230 --> 00:18:05,470
+A planet that had been slowly winding down
+stops winding down.
+
+254
+00:18:05,470 --> 00:18:10,830
+And earth without a large moon is a different planet in one specific way that
+matters
+
+255
+00:18:10,830 --> 00:18:13,250
+more than it sounds.
+
+256
+00:18:13,250 --> 00:18:17,090
+Our moon helps hold the tilt of earth's
+axis steady.
+
+257
+00:18:17,090 --> 00:18:22,460
+That tilt about 23.5 degrees is what gives
+us seasons.
+
+258
+00:18:22,460 --> 00:18:27,980
+Now how much the moon actually matters here is a genuine argument among people
+who model
+
+259
+00:18:27,980 --> 00:18:32,140
+this for a living and I am not going to
+pretend it is settled.
+
+260
+00:18:32,140 --> 00:18:37,580
+The classic result from the early 90s found that without the moon our tilt could
+swing
+
+261
+00:18:37,580 --> 00:18:40,340
+chaotically through tens of degrees.
+
+262
+00:18:40,340 --> 00:18:46,700
+A later generation of simulations came back with something much milder, a
+moonless earth
+
+263
+00:18:46,700 --> 00:18:52,740
+wandering within a range of perhaps 20 or
+25 degrees rather than running wild.
+
+264
+00:18:52,740 --> 00:18:58,820
+Mars with only two tiny captured moons really does swing widely which is part of
+why the
+
+265
+00:18:58,820 --> 00:19:02,540
+original result looked so convincing.
+
+266
+00:19:02,540 --> 00:19:09,420
+So the honest version is this, losing the moon does not instantly scramble the
+seasons.
+
+267
+00:19:09,420 --> 00:19:11,240
+It removes a break.
+
+268
+00:19:11,240 --> 00:19:16,780
+The tilt becomes freer to wander over millions of years and climate zones that
+have been roughly
+
+269
+00:19:16,780 --> 00:19:21,580
+where they are for the whole of human
+history stop being guaranteed.
+
+270
+00:19:21,580 --> 00:19:27,260
+Whether that is a slow drift or a wild ride is exactly the part the models still
+disagree
+
+271
+00:19:27,260 --> 00:19:28,820
+about.
+
+272
+00:19:28,820 --> 00:19:32,340
+So the moon falling does not end with a
+crater.
+
+273
+00:19:32,340 --> 00:19:38,020
+It ends with a planet that has a ring, a
+ruined coastline, a cooler sky and no
+
+274
+00:19:38,020 --> 00:19:41,380
+longer keeps time the way it used to.
+
+275
+00:19:41,380 --> 00:19:44,740
+The strangest part of all this is the
+first week.
+
+276
+00:19:44,740 --> 00:19:50,180
+The part where the data is already in, every scientist on earth agrees and the
+view out
+
+277
+00:19:50,180 --> 00:19:53,340
+of the window still looks completely
+normal.
+
+278
+00:19:53,340 --> 00:19:59,910
+That gap between knowing and seeing would
+be the most human part of the whole event.
+
+279
+00:19:59,910 --> 00:20:03,030
+Here is the question I want to leave you
+with.
+
+280
+00:20:03,030 --> 00:20:07,870
+Given that the first week looks like nothing at all and the last week is
+unsurvivable
+
+281
+00:20:07,870 --> 00:20:13,470
+near any coast, when exactly do you think
+people would actually start moving inland?
+
+282
+00:20:13,470 --> 00:20:20,460
+On the day the astronomers announce it, or on the day they can finally see it for
+themselves.
+
+283
+00:20:20,460 --> 00:20:21,900
+Tell me in the comments.

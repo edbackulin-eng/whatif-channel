@@ -1,0 +1,165 @@
+Imagine at nine o'clock tomorrow morning, the Moon stops holding its orbit.
+
+There is no explosion. No collision. No warning on the news, because for the first few days there is nothing to report. The Moon simply stops moving sideways fast enough to stay where it is, and begins, very slowly, to fall.
+
+You will not die in the impact. Almost nobody will. That is not how this ends.
+
+What actually happens is stranger than a crash, and the last part of it lasts a million years.
+
+Let's be honest about one thing first. There is no mechanism for this. The Moon is not falling. It is doing the opposite, drifting away from us at about three point eight centimetres a year, roughly the rate your fingernails grow. To make it fall you would have to take away most of its orbital speed, and nothing in the solar system can do that.
+
+So treat the premise as a thought experiment with the physics left switched on. The Moon starts coming down. Everything after that is just gravity doing exactly what gravity does, and the numbers are not hard to follow.
+
+The Moon sits about three hundred and eighty four thousand kilometres away. It weighs about seventy three billion billion tonnes. And the single most important thing to understand is this: the force it exerts on you does not fade in a straight line as it approaches. Tidal force scales with the inverse cube of distance. Cut the distance in half, and the pull that stretches our planet becomes eight times stronger. Cut it to a tenth, and it is a thousand times stronger.
+
+Hold onto that number. It is the whole story.
+
+WEEK ONE.
+
+Nothing happens.
+
+This is the part that would really get to people. For the first several days, the Moon looks slightly larger each night, and that is all. The change is so gradual that you would argue about it. Someone photographs it against the same chimney two nights running and posts the comparison. Half the replies say it is a lens artefact.
+
+Astronomers know within hours. The orbital tracking data is unambiguous, and by the second day every observatory on Earth is pointed at the same object, publishing the same curve. But the public conversation stays stuck on whether the Moon looks bigger, because at this distance the honest answer is: barely.
+
+Meanwhile the ocean already knows.
+
+The tides are a tug of war. The Moon pulls hardest on the water nearest it and least on the water on the far side, and the planet gets stretched into a slight rugby ball shape with a bulge of ocean on each side. That is why you get two high tides a day, not one. As the Moon closes in, that stretch gets stronger in a hurry, because of the cube.
+
+By the end of week one the Moon is close enough that spring tides, the big ones, start running measurably higher than the tide tables say. Harbour masters notice before anyone else. Not a disaster. A discrepancy. Water arriving where the charts say it should not be, twice a day, every day, and the gap widening each time.
+
+And this is where the story stops being quiet.
+
+DAY NINETEEN.
+
+The Moon is now half its original distance. It is twice the width it used to be in the sky, and it is bright enough to read by. People stop arguing about whether it looks bigger.
+
+Tides are eight times stronger.
+
+That sounds survivable until you think about what a tide actually is. A high tide of two metres becomes a high tide of sixteen. The sea does not rise and stay risen, which is somehow worse. It comes in, floods everything below that line, and goes back out. Then it does it again about twelve and a half hours later. Coastal cities are not destroyed on day nineteen. They are soaked, drained, and soaked again, and nothing ever dries.
+
+Every low-lying river mouth in the world backs up. Storm drains run in reverse. The water coming into cities is salt water, so the first serious casualty is not buildings, it is farmland and fresh water. Aquifers near any coast begin taking on salt, and once that happens you cannot undo it.
+
+Seventy percent of this planet's surface is ocean, and about forty percent of humanity lives within a hundred kilometres of a coastline. That is roughly three billion people, and a very large share of the world's ports, refineries, power stations and chip fabs, all of which were built at sea level on purpose.
+
+And somewhere above all this, we lose the machinery we would need to coordinate a response.
+
+The Moon on its way down sweeps through the region where our satellites live. Geostationary satellites, the ones that carry a great deal of broadcasting and weather observation, sit about thirty five thousand eight hundred kilometres up. The Moon passes straight through that altitude. It does not need to hit anything: a mass that large moving through that volume wrecks the orbits of everything near it, and the debris from the collisions it does cause finishes the rest.
+
+Lower down, the navigation constellations at around twenty thousand kilometres go the same way.
+
+So in the middle of the largest coordinated evacuation in history, precision timing and navigation stop working. Not just maps on phones. Those satellite clocks underpin power grid synchronisation, financial transaction timestamps, aviation, shipping and the mobile network itself. The infrastructure we would use to organise an orderly retreat inland is tied to hardware that is now being scattered by the thing we are retreating from.
+
+But the ocean is not the dangerous part. The dangerous part is quieter, and it is happening underneath.
+
+THE PLANET STARTS FLEXING.
+
+Tidal force does not only move water. It moves rock.
+
+Right now, today, the solid ground under your feet rises and falls by roughly thirty to forty centimetres twice a day. You cannot feel it because everything around you moves with it. This is called the Earth tide, and it is real, measurable, and completely ignorable under normal conditions.
+
+Multiply it by eight. Then keep going.
+
+Rock is not elastic in a friendly way. Flex it repeatedly and it does not bend, it accumulates stress until something slips. Every fault line on Earth is now being worked twice a day by a force that is growing week by week. Faults that were due to go in ten thousand years go this month. Faults that were locked go anyway.
+
+This is the first stage that kills large numbers of people, and it does it inland, far from the water, in places that thought they were safe because they were nowhere near a coast.
+
+The flexing also reaches the magma. Volcanoes that have been dormant for centuries start venting. We know this mechanism is real because we can watch it happen elsewhere: Jupiter's moon Io is squeezed by exactly this kind of tidal kneading, and it is the most volcanically active object in the solar system, with hundreds of active volcanoes and plumes that throw material hundreds of kilometres into space. Io is not a theory. It is a worked example of what happens when something gets flexed hard enough, long enough.
+
+Earth will not become Io. It will not get the chance.
+
+THE LAST WEEK.
+
+Now the Moon is genuinely close, and the sky is wrong in a way that no photograph has ever shown.
+
+It is no longer a disc. It is a landscape overhead. You can see craters with your eyes that previously needed a telescope. It covers a visible fraction of the sky, it moves perceptibly against the stars while you watch, and at night it is bright enough that there is no real darkness anywhere on the half of the planet facing it.
+
+Tides are now hundreds of times their normal strength. There is no coastline left in any meaningful sense. The sea is sloshing across continental shelves twice a day in a way that has no modern precedent, because the last time anything like this happened the continents were in different places.
+
+The atmosphere is being pulled too. Air is a fluid, and it has tides exactly like the ocean does, normally too small to notice. Now there are atmospheric tides strong enough to drive continent-scale weather on a twelve-hour cycle.
+
+And everyone is waiting for the impact.
+
+The impact never comes.
+
+HERE IS THE PART ALMOST NOBODY EXPECTS.
+
+The Moon does not hit the Earth. It cannot. It is destroyed before it gets the chance, by the same force that has been causing all the trouble.
+
+There is a distance called the Roche limit. It is the point where the tidal stretching across an object becomes stronger than the object's own gravity holding it together. Inside that distance, a body held together mainly by its own weight cannot stay in one piece. The near side is being pulled toward the planet harder than the far side, and eventually the difference wins.
+
+For the Moon approaching Earth, that boundary sits somewhere between about nine and a half thousand and eighteen thousand kilometres from Earth's centre. Which end of that range applies depends on how much credit you give the Moon's own rock strength: a rigid body holds together closer in, a body already cracking apart comes undone further out. Measured from the ground, even the near end is thousands of kilometres up. Lower than the navigation satellites it has already wrecked on the way down, far higher than any mountain, and crucially, a long way from ever touching the surface.
+
+So the Moon arrives at that line, and it comes apart.
+
+Not instantly, and not cleanly. It elongates first, stretching toward us, its near side bulging. Then the crust fails. Enormous fractures open across a world whose great volcanic era ended two to three billion years ago. The whole body pulls into a stream of rock, still moving at orbital speed, still travelling the same path, but no longer a moon.
+
+In a matter of days, Earth has a ring.
+
+THE FIRST SECONDS, AND THE FIRST HOURS.
+
+Let's slow down, because the breakup itself is the part worth watching frame by frame.
+
+In the first seconds, from the ground, almost nothing looks different. Light takes a few hundredths of a second to reach you from that distance, so you see it essentially as it happens, but what you see at first is only the shape going wrong. The disc stops being round. One edge pulls toward you.
+
+Within the first minutes, the fractures are visible as dark lines. There is no sound, and there will never be any sound, because there is no air between you and it. This is a catastrophe happening in complete silence, at a scale that fills the sky, and that silence is the detail people would remember.
+
+Within the first hours, the stream is obvious. What was a single object is now a thickening band, brighter along its length as fresh surfaces catch the sunlight. Lunar rock that has not seen the Sun in four and a half billion years is now exposed, and the whole structure is noticeably brighter than the Moon ever was.
+
+Within the first day, the leading edge of the debris has stretched far enough around the planet that it rises in the east while the trailing material is still setting in the west. The sky now has a structure in it that was not there yesterday.
+
+And the ground is still moving. Breaking the Moon apart did not remove its mass. The pieces are still there, still pulling, still stretching the planet twice a day, and they are now spread across a range of distances so the tidal forcing becomes messy and irregular rather than a clean twice-daily rhythm.
+
+WHAT THE RING LOOKS LIKE.
+
+The debris does not fall straight down. It keeps orbiting, because it inherited the Moon's motion, and it spreads out along that orbit until it forms a band encircling the planet.
+
+If you have seen Saturn, you already know the shape. Saturn's rings are mostly water ice, they are over two hundred and eighty thousand kilometres across, and in places they are only about ten metres thick. They are a demonstration that this is the natural end state for a lot of debris sharing one orbit: not a cloud, not a shell, but a disc.
+
+Earth's ring would be rock rather than ice, so darker, but it would be close, which makes it enormous in the sky. It would arch from horizon to horizon as a band of light. Everyone on the planet would be able to see it, day and night, although from high latitudes you would see it at a low angle and from the equator it would pass almost directly overhead.
+
+It would also cast a shadow. A band of shade would sweep across the planet's surface seasonally, cooling whatever it crossed. And it would do something uglier: it would scatter sunlight into the night side, so true darkness would become rare. Every nocturnal ecosystem on Earth, which is most of them, runs on a cycle that no longer exists.
+
+THE RAIN.
+
+A ring is not permanent. The inner edge is the problem.
+
+Material at the inner edge is slowly dragged down by the last traces of atmosphere and by collisions with its neighbours, and it falls. Not all at once. Continuously, for a very long time.
+
+So Earth gets a bombardment that does not stop. Not the single catastrophic impact everyone imagines when they think about things falling from space, but a steady rain of lunar rock, ranging from dust to pieces the size of buildings, arriving somewhere on the planet every day for thousands of years.
+
+The dust matters more than the big pieces. Fine material entering the atmosphere at orbital speed does not reach the ground as rock. It burns, and that puts a persistent haze high in the atmosphere where weather cannot wash it out. Sunlight drops. Temperatures drop. Photosynthesis drops. The planet cools and stays cool, and the surface becomes a place where the sky is permanently bright with a ring and permanently dimmed by what the ring is shedding.
+
+This is the stage that actually decides what survives. Not the tides, not the earthquakes, not the breakup. The long grey centuries afterwards.
+
+And it is worth being clear about who survives it, because the answer is not the one disaster films give you.
+
+The ocean takes the coasts, so the survivors are inland and at altitude. The earthquakes take the cities, so the survivors are in low buildings. The haze takes the harvests, so the survivors are wherever food can still be grown under a dimmer sun, or stored long enough to outlast the worst of it. None of that favours the places where most of us currently live, because most of us live near water, in dense construction, eating food grown somewhere else and shipped in.
+
+Life itself is never seriously at risk here. Deep ocean ecosystems around hydrothermal vents do not care about sunlight at all, and they would carry on exactly as before. Plenty of microbial life would not register the event. What is at risk is the specific, fragile, highly coordinated arrangement that lets eight billion people eat every day.
+
+A MILLION YEARS LATER.
+
+Eventually the ring thins out. Most of it has either fallen or been flung outward, and what is left is a faint band, far less dramatic than it was.
+
+The days are shorter now, and they stay shorter.
+
+The Moon has been slowing Earth's rotation for billions of years. Tidal friction drags on our spin and hands that energy to the Moon's orbit, which is exactly why the Moon is drifting away and why our day has been lengthening by roughly two milliseconds per century. Fossil coral growth bands suggest that a day several hundred million years ago was around twenty two hours long.
+
+Remove the brake, and the lengthening stops. The day freezes at whatever length it had reached, and then the ring material falling back in nudges it the other way. A planet that had been slowly winding down stops winding down.
+
+And Earth, without a large moon, is a different planet in one specific way that matters more than it sounds.
+
+Our Moon helps hold the tilt of Earth's axis steady. That tilt, about twenty three and a half degrees, is what gives us seasons.
+
+Now, how much the Moon actually matters here is a genuine argument among people who model this for a living, and I am not going to pretend it is settled. The classic result, from the early nineties, found that without the Moon our tilt could swing chaotically through tens of degrees. A later generation of simulations came back with something much milder: a moonless Earth wandering within a range of perhaps twenty or twenty five degrees rather than running wild. Mars, with only two tiny captured moons, really does swing widely, which is part of why the original result looked so convincing.
+
+So the honest version is this. Losing the Moon does not instantly scramble the seasons. It removes a brake. The tilt becomes freer to wander over millions of years, and climate zones that have been roughly where they are for the whole of human history stop being guaranteed. Whether that is a slow drift or a wild ride is exactly the part the models still disagree about.
+
+So the Moon falling does not end with a crater. It ends with a planet that has a ring, a ruined coastline, a cooler sky, and no longer keeps time the way it used to.
+
+The strangest part of all this is the first week. The part where the data is already in, every scientist on Earth agrees, and the view out of the window still looks completely normal. That gap, between knowing and seeing, would be the most human part of the whole event.
+
+Here is the question I want to leave you with. Given that the first week looks like nothing at all, and the last week is unsurvivable near any coast, when exactly do you think people would actually start moving inland? On the day the astronomers announce it, or on the day they can finally see it for themselves?
+
+Tell me in the comments.

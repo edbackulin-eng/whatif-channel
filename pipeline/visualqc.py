@@ -1,0 +1,165 @@
+"""Look at every frame before it reaches the render, with Gemini vision.
+
+The technical QC measures duration, loudness and black frames. It cannot see
+that a frame contains garbled AI text, a face staring down the lens, or a card
+reading "?" - and all three shipped in the first cut of episode one precisely
+because nothing was looking.
+
+A frame that fails is regenerated once. If it fails again it is replaced rather
+than argued with, because a second bad generation usually means the prompt is
+the problem and the pipeline should not stall on it.
+
+Runs on its own model so it cannot exhaust the fact-checker's daily quota.
+"""
+import base64
+import json
+import mimetypes
+import urllib.request
+from pathlib import Path
+
+from core import llm
+from core.logger import get_logger
+
+log = get_logger("visualqc")
+
+# A third quota bucket, separate from the fact-check and the scene planner.
+VISION_MODEL = "gemini-flash-lite-latest"
+BATCH = 6                 # frames per request; each image costs tokens
+# 512 was too small to see garbled lettering on a phone screen - the defect
+# that prompted this whole check went undetected at that size.
+MAX_SIDE = 768
+
+# Photographic frames and drawn cards fail in opposite directions: a photo must
+# contain no lettering at all, while a card is nothing but lettering. Judging
+# both with one rulebook flagged every clean card as a "text" defect.
+PHOTO_SYSTEM = """You inspect photographic frames from a science documentary.
+
+Report a defect ONLY when you can clearly see one of these:
+- text: ANY lettering, words, captions, signage, UI, or a screen displaying
+  characters - including text that is blurry, garbled or nonsensical. Garbled
+  lettering is the most important defect to catch.
+- face: a human face shown in close-up, or anyone looking into the camera
+- anatomy: malformed hands, extra or missing limbs, distorted bodies
+
+Distant figures, silhouettes and people seen from behind are FINE. A screen
+glowing with NO characters on it is FINE. Grain, darkness and blur are FINE.
+
+When unsure about faces or anatomy, pass. When unsure about lettering, FLAG it.
+Reply with valid JSON only."""
+
+CARD_SYSTEM = """You inspect drawn infographic cards from a science documentary.
+
+These cards are SUPPOSED to contain large text and numbers. Do not report that
+as a defect.
+
+Report a defect ONLY when:
+- card: the card shows "?" as its main figure, a word is cut off mid-way
+  (for example "8 billion people f" or "Inverse Cube (1/r^"), text runs past the
+  edge of the frame, or the card is effectively empty.
+
+Correct spelling, complete words and numbers are FINE however large.
+Reply with valid JSON only."""
+
+PROMPT = """For each image, in order, return:
+{"results":[{"i":<index>,"ok":true|false,"defect":"text|face|anatomy|card|none",
+"note":"<a few words, only when ok is false>"}]}"""
+
+
+def _encode(path, max_side=MAX_SIDE):
+    from PIL import Image
+    import io
+    with Image.open(path) as im:
+        im = im.convert("RGB")
+        scale = min(1.0, max_side / max(im.size))
+        if scale < 1.0:
+            im = im.resize((max(1, round(im.width * scale)),
+                            max(1, round(im.height * scale))), Image.LANCZOS)
+        buf = io.BytesIO()
+        im.save(buf, format="JPEG", quality=82)
+    return base64.b64encode(buf.getvalue()).decode("ascii")
+
+
+def _inspect_batch(paths, model=VISION_MODEL, kind="photo"):
+    key = llm.get_key("GEMINI_API_KEY")
+    if not key:
+        raise llm.LLMError("GEMINI_API_KEY is not set")
+    parts = [{"text": PROMPT}]
+    for i, p in enumerate(paths):
+        parts.append({"text": f"image {i}:"})
+        parts.append({"inline_data": {"mime_type": "image/jpeg",
+                                      "data": _encode(p)}})
+    payload = {
+        "contents": [{"role": "user", "parts": parts}],
+        "systemInstruction": {"parts": [
+            {"text": CARD_SYSTEM if kind == "card" else PHOTO_SYSTEM}]},
+        "generationConfig": {"maxOutputTokens": 2048, "temperature": 0.0,
+                             "responseMimeType": "application/json"},
+    }
+    url = llm.GEMINI_URL.format(model=model)
+    req = urllib.request.Request(
+        url, data=json.dumps(payload).encode(), method="POST",
+        headers={"Content-Type": "application/json", "x-goog-api-key": key})
+    with urllib.request.urlopen(req, timeout=180) as resp:
+        data = json.loads(resp.read().decode("utf-8", "replace"))
+    cand = (data.get("candidates") or [{}])[0]
+    text = "".join(p.get("text", "")
+                   for p in cand.get("content", {}).get("parts", [])
+                   if "text" in p)
+    return llm.extract_json(text).get("results", [])
+
+
+def inspect(paths, model=VISION_MODEL, kinds=None):
+    """Returns {path: {"ok": bool, "defect": str, "note": str}}.
+
+    `kinds` maps a path to "photo" or "card"; anything unlisted is a photo.
+    Batches never mix the two, because each is judged by its own rulebook.
+    """
+    paths = [Path(p) for p in paths]
+    kinds = {Path(k): v for k, v in (kinds or {}).items()}
+    verdicts = {}
+    groups = {"photo": [], "card": []}
+    for p in paths:
+        groups[kinds.get(p, "photo")].append(p)
+
+    done = 0
+    # Each kind is batched separately: mixing them in one request would need two
+    # rulebooks in one system prompt, and an earlier version that filtered a
+    # mixed batch down to one kind silently dropped the rest.
+    for kind, items in groups.items():
+        for start in range(0, len(items), BATCH):
+            batch = items[start:start + BATCH]
+            try:
+                results = _inspect_batch(batch, model, kind)
+            except Exception as e:
+                log.warning("vision batch (%s) failed (%s); passing those frames",
+                            kind, e)
+                for p in batch:
+                    verdicts[p] = {"ok": True, "defect": "unchecked",
+                                   "note": str(e)[:80]}
+                done += len(batch)
+                continue
+            by_i = {r.get("i"): r for r in results}
+            for i, p in enumerate(batch):
+                r = by_i.get(i, {})
+                verdicts[p] = {"ok": bool(r.get("ok", True)),
+                               "defect": (r.get("defect") or "none").lower(),
+                               "note": r.get("note", "") or ""}
+            done += len(batch)
+            log.info("inspected %d/%d frames", done, len(paths))
+
+    failed = [p for p, v in verdicts.items() if not v["ok"]]
+    log.info("visual QC: %d frames, %d flagged", len(verdicts), len(failed))
+    return verdicts
+
+
+def write_report(verdicts, path):
+    payload = {
+        "frames": len(verdicts),
+        "flagged": sum(1 for v in verdicts.values() if not v["ok"]),
+        "unchecked": sum(1 for v in verdicts.values() if v["defect"] == "unchecked"),
+        "details": [{"file": Path(p).name, **v}
+                    for p, v in verdicts.items() if not v["ok"]],
+    }
+    Path(path).write_text(json.dumps(payload, indent=2, ensure_ascii=False),
+                          encoding="utf-8")
+    return payload

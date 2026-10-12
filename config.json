@@ -1,0 +1,21 @@
+{
+  "channel_topic": "What If - science scenarios",
+  "language": "en",
+  "target_duration_min": 20,
+  "videos_per_week": 5,
+  "publish_time": "15:00",
+  "timezone": "Europe/Kiev",
+  "youtube_publish": false,
+  "privacy_status": "private",
+  "aspect": "16:9",
+  "voice": "bm_george",
+  "words_per_minute": 146,
+  "image_style": "see core/style.py",
+  "image_source": "auto",
+  "scene_min_s": 4.0,
+  "scene_max_s": 7.0,
+  "target_lufs": -14.0,
+  "script_source": "auto",
+  "visual_qc": true,
+  "visual_qc_retries": 1
+}

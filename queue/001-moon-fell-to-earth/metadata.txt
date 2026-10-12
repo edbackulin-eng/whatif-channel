@@ -1,0 +1,70 @@
+TITLE (31/60 chars)
+What If the Moon Fell to Earth?
+
+DESCRIPTION (2357 chars)
+What if the Moon stopped holding its orbit and began to fall? The real physics says it never reaches the ground - and what happens instead lasts a million years.
+
+CHAPTERS
+0:00 The morning it starts
+0:37 Why this cannot actually happen
+1:56 Week one: nothing happens
+2:47 The ocean notices first
+3:39 Day nineteen
+5:16 We lose the satellites
+6:35 The planet starts flexing
+8:22 The last week
+9:38 It never reaches the ground
+13:14 Earth gets a ring
+14:38 The rain that lasts millennia
+17:07 A million years later
+
+IMAGERY
+- NASA (NASA Image and Video Library)
+- NASA/JPL-Caltech/Space Science Institute (NASA Image and Video Library)
+- NASA/ESA/STScI (NASA Image and Video Library)
+- NASA/JPL-Caltech (NASA Image and Video Library)
+- NASA/JPL (NASA Image and Video Library)
+- NASA/JPL/USGS (NASA Image and Video Library)
+- NASA/JPL/NIMA (NASA Image and Video Library)
+- NASA/JPL/Space Science Institute (NASA Image and Video Library)
+- NASA/JPL-Caltech/MSSS (NASA Image and Video Library)
+- Imagined scenes generated with FLUX.1-schnell (Apache-2.0), styled to match the archive material.
+
+MUSIC
+Echoes of Time v2 by Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0
+https://creativecommons.org/licenses/by/4.0/
+
+SOURCES
+20 factual claims were verified against the sources below before recording.
+- NASA Lunar Laser Ranging / NASA Lunar Fact Sheet
+- NASA Lunar Fact Sheet (semi-major axis 384,400 km)
+- NASA Lunar Fact Sheet (mass 7.346e22 kg)
+- Standard tidal theory: differential gravity across a body goes as 2GMr/d^3
+- Roche limit d = 1.26R(rho_E/rho_m)^(1/3) rigid, 2.44R fluid; Earth R=6371 km, densities 5514 and 3344 kg/m3
+- Earth tide constituent table: M2 vertical amplitude 384.83 mm
+- NASA Galileo and Juno mission science; NASA Io overview
+- NOAA: about 71 percent of the Earth's surface is water-covered
+- UN environmental indicator methodology sheet (~40%); Small & Nicholls (2003) ~38%
+- Standard orbital mechanics; ESA/NASA orbit definitions
+- US Space Force / GPS.gov: ~20,200 km MEO
+- NASA Cassini mission ring science
+- NASA Earth Fact Sheet (obliquity 23.44 deg)
+- Laskar, Joutel & Robutel, Nature 361 (1993); Lissauer, Barnes & Chambers, Icarus 217 (2012)
+
+This video explores a hypothetical scenario. The physics around it is real;
+the premise is not. Parts of this video were produced with AI tools.
+
+TAGS (15)
+what if, what if the moon fell, moon, space, science, astronomy, hypothetical, roche limit, tidal forces, earth, nasa, space documentary, science explained, what if scenarios, physics
+
+HASHTAGS
+#WhatIf #Space #Science
+
+UPLOAD SETTINGS
+categoryId: 28 (Science & Technology)
+defaultLanguage: en
+defaultAudioLanguage: en
+privacyStatus: private
+containsSyntheticMedia: true   # AI-generated imagery and synthetic voice
+madeForKids: false

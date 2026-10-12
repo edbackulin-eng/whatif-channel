@@ -1,0 +1,21 @@
+{
+  "slug": "001-moon-fell-to-earth",
+  "title": "What If the Moon Fell to Earth?",
+  "status": "ready-to-render",
+  "position": 1,
+  "voice": "bm_george",
+  "thumbnail_variant": 2,
+  "approved": {
+    "script": true,
+    "narration": true,
+    "thumbnail": "option_2"
+  },
+  "saved": "2026-10-12",
+  "note": "First episode of the channel. Narration and script are approved and must not be regenerated. Re-render only, so the pipeline fixes (cover-fill instead of blur plate, static animated cards, reshot frames) are applied to the finished video.",
+  "rerender_required": true,
+  "fixes_pending_at_save": [
+    "cover-fill for 16:9 sources (dark soft border)",
+    "cards static with count-up reveal",
+    "reshoot of frames with people facing camera"
+  ]
+}
