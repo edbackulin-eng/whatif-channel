@@ -91,10 +91,17 @@ def visual_check(work, scenes):
         return scenes
 
     # One regeneration attempt, then fall back to a neighbouring frame rather
-    # than stalling the build arguing with the image model.
+    # than stalling the build arguing with the image model. A GPU that is
+    # unreachable must not sink a build that already has usable frames: the
+    # first cloud run died here, twenty minutes in, because submission failed.
     from automation import frames
-    retried = frames.regenerate(work, [s for s in scenes
-                                       if s.get("image") in failed])
+    try:
+        retried = frames.regenerate(work, [s for s in scenes
+                                           if s.get("image") in failed])
+    except Exception as e:
+        log.warning("could not regenerate flagged frames (%s); "
+                    "replacing them from neighbours instead", e)
+        retried = set()
     still_bad = [s for s in scenes
                  if s.get("image") in failed and s["index"] not in retried]
     for s in still_bad:

@@ -13,7 +13,8 @@ Runs on its own model so it cannot exhaust the fact-checker's daily quota.
 """
 import base64
 import json
-import mimetypes
+import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -25,6 +26,11 @@ log = get_logger("visualqc")
 # A third quota bucket, separate from the fact-check and the scene planner.
 VISION_MODEL = "gemini-flash-lite-latest"
 BATCH = 6                 # frames per request; each image costs tokens
+# A 223-frame video is ~38 requests. Fired back to back, a third of them came
+# back 429 and those frames went unchecked - which defeats the point of the
+# check. Pacing them and retrying on rejection costs a couple of minutes.
+MIN_INTERVAL_S = 2.0
+RETRIES = 3
 # 512 was too small to see garbled lettering on a phone screen - the defect
 # that prompted this whole check went undetected at that size.
 MAX_SIDE = 768
@@ -79,6 +85,16 @@ def _encode(path, max_side=MAX_SIDE):
     return base64.b64encode(buf.getvalue()).decode("ascii")
 
 
+_last_call = [0.0]
+
+
+def _throttle():
+    wait = MIN_INTERVAL_S - (time.monotonic() - _last_call[0])
+    if wait > 0:
+        time.sleep(wait)
+    _last_call[0] = time.monotonic()
+
+
 def _inspect_batch(paths, model=VISION_MODEL, kind="photo"):
     key = llm.get_key("GEMINI_API_KEY")
     if not key:
@@ -96,11 +112,28 @@ def _inspect_batch(paths, model=VISION_MODEL, kind="photo"):
                              "responseMimeType": "application/json"},
     }
     url = llm.GEMINI_URL.format(model=model)
-    req = urllib.request.Request(
-        url, data=json.dumps(payload).encode(), method="POST",
-        headers={"Content-Type": "application/json", "x-goog-api-key": key})
-    with urllib.request.urlopen(req, timeout=180) as resp:
-        data = json.loads(resp.read().decode("utf-8", "replace"))
+    last = None
+    for attempt in range(RETRIES):
+        _throttle()
+        req = urllib.request.Request(
+            url, data=json.dumps(payload).encode(), method="POST",
+            headers={"Content-Type": "application/json", "x-goog-api-key": key})
+        try:
+            with urllib.request.urlopen(req, timeout=180) as resp:
+                data = json.loads(resp.read().decode("utf-8", "replace"))
+            break
+        except urllib.error.HTTPError as e:
+            last = e
+            if e.code != 429:
+                raise
+            body = e.read().decode("utf-8", "replace")
+            if "PerDay" in body:          # a daily cap will not clear today
+                raise
+            backoff = 4 * (attempt + 1)
+            log.info("vision rate-limited, waiting %ds", backoff)
+            time.sleep(backoff)
+    else:
+        raise last
     cand = (data.get("candidates") or [{}])[0]
     text = "".join(p.get("text", "")
                    for p in cand.get("content", {}).get("parts", [])
