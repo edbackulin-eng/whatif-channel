@@ -230,7 +230,16 @@ TARGET_LUFS = -14.0
 # level_sc 1) the bed drops by 1.2 dB - effectively no ducking at all. Scaling the
 # key by 10 gives ~19.5 dB on normal speech, inside the -18 to -22 dB target, and
 # the bed returns to full level in every pause.
-DUCK = "threshold=0.01:ratio=20:level_sc=10:attack=8:release=320"
+# How far below the narration the music bed sits when nobody is speaking.
+# Measured, not guessed: at 13 LU the bed reads as atmosphere on laptop
+# speakers and is still there on headphones.
+MUSIC_BELOW_VOICE_LU = 13.0
+
+# A soft duck, measured at 6.7-7.8 dB on two segments of episode one. The
+# previous setting (ratio=20, level_sc=10) measured 26.2 dB: with narration
+# running almost continuously, that left the bed around -50 dB under speech,
+# audible only in the one-second gaps between paragraphs.
+DUCK = "threshold=0.05:ratio=3:level_sc=2:attack=20:release=400"
 
 
 def _measure_loudness(inputs, graph, out_label):
@@ -256,12 +265,45 @@ def _measure_loudness(inputs, graph, out_label):
     return json.loads(text[start:end + 1])
 
 
-def mix_audio(narration, music, out_path, music_gain_db=-19.0):
-    """Narration over a ducked music bed, normalised to broadcast loudness.
+def _integrated_lufs(path):
+    """Integrated loudness of a single file, for setting the bed relative to it."""
+    result = subprocess.run(
+        ["ffmpeg", "-hide_banner", "-nostats", "-i", str(path),
+         "-af", f"loudnorm=I={TARGET_LUFS}:TP=-1.5:LRA=11:print_format=json",
+         "-f", "null", "-"], capture_output=True, text=True)
+    text = result.stderr
+    start, end = text.rfind("{"), text.rfind("}")
+    if start == -1 or end <= start:
+        raise RuntimeError(
+            f"could not measure {path}:\n{text[-800:]}")
+    return float(json.loads(text[start:end + 1])["input_i"])
 
-    sidechaincompress pulls the music down whenever the narrator speaks, which is
-    what keeps a bed audible without ever fighting the voice.
+
+def bed_gain_db(narration, music, below=MUSIC_BELOW_VOICE_LU):
+    """How much to attenuate this music so it sits `below` LU under the voice.
+
+    A fixed -19 dB was tuned against one track and one narration, so any other
+    track would land at its own arbitrary level - which matters now that the
+    bed is chosen per episode by mood. Measuring both sides makes the result
+    the same for every track.
     """
+    voice, bed = _integrated_lufs(narration), _integrated_lufs(music)
+    gain = (voice - below) - bed
+    log.info("bed gain: voice %.1f LUFS, music %.1f LUFS -> %.1f dB "
+             "(bed %.0f LU under voice)", voice, bed, gain, below)
+    return gain
+
+
+def mix_audio(narration, music, out_path, music_gain_db=None):
+    """Narration over a gently ducked music bed, normalised to broadcast loudness.
+
+    The bed is set relative to the measured loudness of the narration, then
+    sidechaincompress eases it down a further ~7 dB while the narrator speaks.
+    The point is a bed that is continuously present rather than one that only
+    surfaces between paragraphs.
+    """
+    if music is not None and music_gain_db is None:
+        music_gain_db = bed_gain_db(narration, music)
     if music is None:
         inputs = [narration]
         graph = f"[0:a]aresample={SAMPLE_RATE},aformat=channel_layouts=stereo[pre]"

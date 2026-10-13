@@ -1,0 +1,37 @@
+{
+  "source_note": "Incompetech (Kevin MacLeod), CC BY 4.0. Cleared for commercial use including monetised YouTube; the attribution line must appear in the description of every video that uses the track. Chosen at KT2 over Pixabay and the YouTube Audio Library because a single author under one clear licence keeps the Content ID risk low.",
+  "attribution_required": true,
+  "tracks": [
+    {
+      "file": "echoes-of-time.mp3",
+      "title": "Echoes of Time v2",
+      "artist": "Kevin MacLeod",
+      "source": "incompetech.com",
+      "license": "CC BY 4.0",
+      "duration_s": 285,
+      "lufs": -15.7,
+      "moods": [
+        "tense",
+        "driving"
+      ],
+      "character": "a slow insistent pulse under sustained strings; it reads as something approaching",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Echoes%20of%20Time%20v2.mp3"
+    },
+    {
+      "file": "long-note-four.mp3",
+      "title": "Long Note Four",
+      "artist": "Kevin MacLeod",
+      "source": "incompetech.com",
+      "license": "CC BY 4.0",
+      "duration_s": 600,
+      "lufs": -27.4,
+      "moods": [
+        "wonder",
+        "curious"
+      ],
+      "character": "a sustained drone with almost no event in it; it sits under explanation without competing",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Long%20Note%20Four.mp3"
+    }
+  ],
+  "fetch_note": "The mp3s are not in the repository - it holds code only - so they are fetched from these URLs on the runner and cached. Each URL was checked to answer 200 before being written here."
+}

@@ -102,6 +102,36 @@ def repeat_report(scenes, window=REPEAT_WINDOW):
     return hits
 
 
+
+def _music_bed(work, narration_s):
+    """Build the mood-matched bed for this episode. Returns (path, credits).
+
+    Falls back to a single track, and then to no music at all, rather than
+    failing a render: a video with a flat bed is worth shipping, a video that
+    did not build is not.
+    """
+    from pipeline import music as music_mod
+
+    try:
+        library = music_mod.load_library()
+    except Exception as e:                                       # noqa: BLE001
+        log.warning("no music library (%s); rendering without a bed", e)
+        return None, []
+
+    script = work / "script.txt"
+    text = script.read_text(encoding="utf-8") if script.exists() else ""
+    try:
+        plan = music_mod.plan(text, narration_s, tracks=library,
+                              use_llm=bool(text))
+        bed = music_mod.build_bed(plan, work / "work" / "bed.wav")
+        return bed, music_mod.attribution(plan)
+    except Exception as e:                                       # noqa: BLE001
+        log.warning("could not build the mood bed (%s); using one track", e)
+        first = library[0]
+        return first["path"], music_mod.attribution(
+            [{"mood": "n/a", "track": first}])
+
+
 def assemble(work, episode):
     from pipeline import qc, render, seo, thumbnail, visuals
 
@@ -126,8 +156,8 @@ def assemble(work, episode):
     silent = work / "work" / "silent.mp4"
     render.crossfade(clips, silent, work_dir=work / "work")
     mixed = work / "work" / "mixed.m4a"
-    music = ROOT / "assets" / "music" / "echoes-of-time.mp3"
-    render.mix_audio(narration, music if music.exists() else None, mixed)
+    bed, bed_credits = _music_bed(work, render.probe_duration(narration))
+    render.mix_audio(narration, bed, mixed)
     final = work / "video.mp4"
     render.mux(silent, mixed, final)
     log.info("render took %.0f min", (time.monotonic() - t0) / 60)
@@ -155,9 +185,15 @@ def assemble(work, episode):
             json.loads(credits_path.read_text(encoding="utf-8")))
     credit_block += ("\n- Imagined scenes generated with FLUX.1-schnell "
                      "(Apache-2.0).")
-    music_credits = ("Echoes of Time v2 by Kevin MacLeod (incompetech.com)\n"
-                     "Licensed under Creative Commons: By Attribution 4.0\n"
-                     "https://creativecommons.org/licenses/by/4.0/")
+    # Every track the bed actually used, not a single hard-coded line: the
+    # bed is assembled by mood now, so which tracks appear varies by
+    # episode and CC BY requires each of them to be named.
+    music_credits = "\n".join(
+        bed_credits or ["(no music in this episode)"])
+    if bed_credits:
+        music_credits += (
+            "\nLicensed under Creative Commons: By Attribution 4.0"
+            "\nhttps://creativecommons.org/licenses/by/4.0/")
     sources_note = ""
     if (work / "sources.json").exists():
         try:

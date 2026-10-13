@@ -45,6 +45,17 @@ jobs:
         if: steps.queue.outputs.has_work == 'true'
         run: python -X utf8 automation/fetch_models.py
 
+      - name: Cache the music tracks
+        if: steps.queue.outputs.has_work == 'true'
+        uses: actions/cache@v4
+        with:
+          path: assets/music/*.mp3
+          key: music-${{ hashFiles('assets/music/library.json') }}
+
+      - name: Fetch the music tracks
+        if: steps.queue.outputs.has_work == 'true'
+        run: python -X utf8 automation/fetch_music.py
+
       - name: Build
         if: steps.queue.outputs.has_work == 'true'
         env:

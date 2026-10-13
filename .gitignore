@@ -11,7 +11,8 @@ output/
 ready/
 logs/
 assets/models/
-assets/music/
+assets/music/*
+!assets/music/library.json
 assets/sfx/
 kaggle/build/
 kaggle/results/
