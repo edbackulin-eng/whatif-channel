@@ -53,6 +53,23 @@ glowing with NO characters on it is FINE. Grain, darkness and blur are FINE.
 When unsure about faces or anatomy, pass. When unsure about lettering, FLAG it.
 Reply with valid JSON only."""
 
+ARCHIVE_SYSTEM = """You inspect real archive photographs from NASA and similar
+agencies, used in a science documentary.
+
+These are genuine photographs. Lettering that belongs to the real scene is FINE
+and must NOT be reported: mission patches, "NASA" on hardware, "Canada" on the
+ISS arm, instrument labels, map place names, colour-scale legends, timestamps
+and frame identifiers burned in by the agency.
+
+Report a defect ONLY when you see:
+- branding: a watermark, logo or caption belonging to someone who is not the
+  space agency - a broadcaster's bug, a stock-footage watermark, a documentary
+  lower-third, a production company name. This is the one that matters: it is
+  somebody else's trade mark in our frame.
+
+Everything else about an archive photograph is acceptable.
+Reply with valid JSON only."""
+
 CARD_SYSTEM = """You inspect drawn infographic cards from a science documentary.
 
 These cards are SUPPOSED to contain large text and numbers. Do not report that
@@ -107,7 +124,8 @@ def _inspect_batch(paths, model=VISION_MODEL, kind="photo"):
     payload = {
         "contents": [{"role": "user", "parts": parts}],
         "systemInstruction": {"parts": [
-            {"text": CARD_SYSTEM if kind == "card" else PHOTO_SYSTEM}]},
+            {"text": {"card": CARD_SYSTEM,
+                      "archive": ARCHIVE_SYSTEM}.get(kind, PHOTO_SYSTEM)}]},
         "generationConfig": {"maxOutputTokens": 2048, "temperature": 0.0,
                              "responseMimeType": "application/json"},
     }
@@ -144,15 +162,21 @@ def _inspect_batch(paths, model=VISION_MODEL, kind="photo"):
 def inspect(paths, model=VISION_MODEL, kinds=None):
     """Returns {path: {"ok": bool, "defect": str, "note": str}}.
 
-    `kinds` maps a path to "photo" or "card"; anything unlisted is a photo.
-    Batches never mix the two, because each is judged by its own rulebook.
+    `kinds` maps a path to "photo", "card" or "archive"; anything unlisted is a
+    photo. Batches never mix kinds, because each has its own rulebook.
+
+    Three rulebooks, not one, because the same pixel means different things by
+    provenance. Lettering in a generated frame is always a defect; lettering in
+    a NASA photograph is usually the label the agency put there; a card is
+    nothing but lettering. Judging all three as "photo" flagged 36 frames of
+    which 17 were perfectly good.
     """
     paths = [Path(p) for p in paths]
     kinds = {Path(k): v for k, v in (kinds or {}).items()}
     verdicts = {}
-    groups = {"photo": [], "card": []}
+    groups = {"photo": [], "card": [], "archive": []}
     for p in paths:
-        groups[kinds.get(p, "photo")].append(p)
+        groups.setdefault(kinds.get(p, "photo"), []).append(p)
 
     done = 0
     # Each kind is batched separately: mixing them in one request would need two

@@ -45,19 +45,30 @@ def _query_ladder(query):
 _HAS_DIGIT = re.compile(r"\d")
 # A headline is a figure or a short phrase. The card auto-shrinks the type to fit,
 # so this only needs to stop a whole sentence being promoted to 400pt.
-HEADLINE_MAX = 24
+HEADLINE_MAX = 32
 SUB_MAX = 46
 
 
+# Words that read as unfinished when a clip lands on them.
+_DANGLING = {"the", "a", "an", "of", "to", "in", "on", "for", "and", "or",
+             "per", "from", "with", "across", "at", "by", "is", "are"}
+
+
 def _clip_words(text, limit):
-    """Trim to `limit` characters on a word boundary, never mid-word."""
+    """Trim to `limit` characters on a word boundary, never mid-word.
+
+    Also drops a trailing preposition or article: "mechanisms across the" reads
+    as a sentence someone cut off, which is how it looked on screen.
+    """
     text = text.strip()
     if len(text) <= limit:
         return text
-    cut = text[:limit]
-    if " " in cut:
-        cut = cut.rsplit(" ", 1)[0]
-    return cut.rstrip(" ,;:-")
+    words = text[:limit].split(" ")
+    if len(words) > 1:
+        words = words[:-1]
+    while len(words) > 1 and words[-1].lower().strip(",;:-") in _DANGLING:
+        words = words[:-1]
+    return " ".join(words).rstrip(" ,;:-")
 
 
 def _normalise_card(card):
@@ -88,7 +99,7 @@ def _normalise_card(card):
     # Split on a sentence end, not on any full stop: "3.8 cm per year" must not
     # become "3".
     headline = _clip_words(re.split(r"\.\s", headline)[0].rstrip("."), HEADLINE_MAX)
-    sub = _clip_words(sub.rstrip("."), SUB_MAX)
+    sub = _clip_words(re.split(r"\.\s", sub)[0].rstrip("."), SUB_MAX)
     if not headline:
         return None
     return kind, headline, sub

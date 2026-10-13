@@ -64,6 +64,25 @@ def plan(work):
     return scenes
 
 
+def _frame_kind(scene, image_path):
+    """What rulebook this frame should be judged by.
+
+    Decided by what the file actually IS, not by what the scene is labelled.
+    Seven scenes whose cards had no content were relabelled "generated" and then
+    handed a neighbour's frame by the gap filler - a rendered card. Judged as
+    generated photographs, every one was flagged for containing text, which is
+    the entire purpose of a card.
+    """
+    name = str(image_path).replace("\\", "/").lower()
+    if "/cards/" in name or "/info_" in name:
+        return "card"
+    if scene.get("source") == "infographic":
+        return "card"
+    if scene.get("source") == "archive" or "/shots/" in name:
+        return "archive"
+    return "photo"
+
+
 def visual_check(work, scenes):
     """Inspect every frame before the render. Defects are regenerated once."""
     cfg = _cfg()
@@ -78,7 +97,7 @@ def visual_check(work, scenes):
         if not img or not Path(img).exists():
             continue
         paths.append(img)
-        kinds[img] = "card" if s["source"] == "infographic" else "photo"
+        kinds[img] = _frame_kind(s, img)
     if not paths:
         return scenes
 

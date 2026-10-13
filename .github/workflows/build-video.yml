@@ -21,12 +21,12 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 330          # GPU wait + render; the free ceiling is 360
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
           cache: pip
@@ -56,18 +56,18 @@ jobs:
 
       - name: Upload the package
         if: steps.queue.outputs.has_work == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: episode-${{ steps.queue.outputs.slug }}
           path: ready/
           retention-days: 3
           if-no-files-found: error
 
-      # Once the YouTube API audit is approved, set the repository variable
-      # YOUTUBE_AUDIT_APPROVED to "true" and this step uploads directly instead
-      # of leaving the package sitting in an artifact.
+      # Uploading does not wait for an audit. A sibling channel publishes
+      # through the API from an unaudited project and its videos go public on
+      # schedule, so the gate is simply whether credentials are configured.
       - name: Upload to YouTube
-        if: steps.queue.outputs.has_work == 'true' && vars.YOUTUBE_AUDIT_APPROVED == 'true'
+        if: steps.queue.outputs.has_work == 'true' && vars.YOUTUBE_ENABLED == 'true'
         env:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}

@@ -21,27 +21,85 @@ TAGS = ["what if", "science", "space", "astronomy", "hypothetical",
 HASHTAGS = ["#WhatIf", "#Space", "#Science"]
 
 
+# No frame may appear twice inside this many scenes. Borrowing from the
+# immediate neighbour produced "Roche Limit" four scenes running - over twenty
+# seconds of one motionless card.
+REPEAT_WINDOW = 10
+
+
 def fill_gaps(scenes):
-    """A scene without a picture borrows the nearest one that has one."""
-    filled = 0
+    """Give every scene a picture, without repeating one inside the window.
+
+    A gap is filled from the furthest usable frame rather than the nearest, so a
+    borrowed frame lands far from its original. Scenes that still cannot be
+    filled without a repeat are reported, not papered over - the caller should
+    generate a new frame for those.
+    """
     for s in scenes:
         if s.get("image") and not Path(s["image"]).exists():
             s.pop("image", None)
+
+    filled, unresolved = 0, []
     for i, s in enumerate(scenes):
         if s.get("image"):
             continue
-        for step in range(1, len(scenes)):
+        # What is already on screen near this scene.
+        lo, hi = max(0, i - REPEAT_WINDOW), min(len(scenes), i + REPEAT_WINDOW + 1)
+        nearby = {scenes[j].get("image") for j in range(lo, hi) if scenes[j].get("image")}
+        candidate = None
+        # Search outward from the far edge of the window inward, so the frame we
+        # borrow is one the viewer saw longest ago.
+        for step in range(len(scenes), 0, -1):
             for j in (i - step, i + step):
-                if 0 <= j < len(scenes) and scenes[j].get("image"):
-                    s["image"] = scenes[j]["image"]
-                    s["borrowed"] = True
-                    filled += 1
-                    break
-            if s.get("image"):
+                if 0 <= j < len(scenes):
+                    img = scenes[j].get("image")
+                    if img and img not in nearby:
+                        candidate = img
+                        break
+            if candidate:
                 break
+        if candidate:
+            s["image"] = candidate
+            s["borrowed"] = True
+            filled += 1
+        else:
+            unresolved.append(s["index"])
     if filled:
-        log.info("filled %d gap(s) from neighbours", filled)
+        log.info("filled %d gap(s), none repeating inside %d scenes",
+                 filled, REPEAT_WINDOW)
+    # Absolute last resort. An empty scene renders as nothing at all, which is
+    # worse than a repeat; but this only runs after generation has already been
+    # given its chance, so reaching it means something upstream failed.
+    if unresolved:
+        log.warning("%d scene(s) need a frame that generation did not supply: %s",
+                    len(unresolved), unresolved[:10])
+        pool = [x.get("image") for x in scenes if x.get("image")]
+        for s in scenes:
+            if s.get("image") or not pool:
+                continue
+            i = s["index"]
+            lo, hi = max(0, i - REPEAT_WINDOW), min(len(scenes), i + REPEAT_WINDOW + 1)
+            nearby = {scenes[j].get("image") for j in range(lo, hi)
+                      if 0 <= j < len(scenes) and scenes[j].get("image")}
+            choice = next((p for p in pool if p not in nearby), pool[0])
+            s["image"] = choice
+            s["borrowed"] = True
+            s["last_resort"] = True
+            filled += 1
     return filled
+
+
+def repeat_report(scenes, window=REPEAT_WINDOW):
+    """Frames that appear more than once inside `window` scenes."""
+    hits = []
+    for i, s in enumerate(scenes):
+        img = s.get("image")
+        if not img:
+            continue
+        for j in range(i + 1, min(len(scenes), i + window + 1)):
+            if scenes[j].get("image") == img:
+                hits.append((s["index"], scenes[j]["index"]))
+    return hits
 
 
 def assemble(work, episode):

@@ -17,5 +17,8 @@
   "target_lufs": -14.0,
   "script_source": "auto",
   "visual_qc": true,
-  "visual_qc_retries": 1
+  "visual_qc_retries": 1,
+  "youtube_upload": true,
+  "publish_time_utc": "15:00",
+  "verify_public_after_publish": true
 }

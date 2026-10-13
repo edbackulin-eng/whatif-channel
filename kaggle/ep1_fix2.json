@@ -1,0 +1,12 @@
+{
+  "_comment": "Two frames whose prompts still named a text-bearing object.",
+  "image_prompts": [
+    "a city pavement at morning rush seen from behind at waist height, only legs, bags and long shadows on wet stone, buildings cropped out of frame, people seen as distant silhouettes or from behind, faces not visible, small in frame for scale, photorealistic cinematic film still, shot on 35mm, natural volumetric light, single dominant light source, deep shadows with retained detail, restrained desaturated colour, cool blue-grey shadows and warm amber highlights, wide establishing composition, deep focus, fine film grain, high detail, no text, no letters, no captions, no watermark, no logo, no signature, no borders, no collage, no split screen, no cartoon, no anime, no illustration, no painting, no 3d render look, no oversaturated colour, no lens flare, no fisheye, no tilted horizon, no extra limbs, no deformed faces",
+    "an empty office floor at night, chairs pushed back from bare desks, overhead lights off, light only from the window wall, photorealistic cinematic film still, shot on 35mm, natural volumetric light, single dominant light source, deep shadows with retained detail, restrained desaturated colour, cool blue-grey shadows and warm amber highlights, wide establishing composition, deep focus, fine film grain, high detail, no text, no letters, no captions, no watermark, no logo, no signature, no borders, no collage, no split screen, no cartoon, no anime, no illustration, no painting, no 3d render look, no oversaturated colour, no lens flare, no fisheye, no tilted horizon, no extra limbs, no deformed faces"
+  ],
+  "style": "",
+  "steps": 4,
+  "width": 1360,
+  "height": 768,
+  "seed": 15500
+}

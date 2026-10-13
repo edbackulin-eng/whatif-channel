@@ -44,9 +44,14 @@ Rules:
 
 Rules for "generated" prompts, which exist because the image model cannot do
 these things convincingly and they mark a video as machine-made:
-- NEVER ask for readable text, screens showing words, phones displaying posts or
-  messages, headlines, code, charts with labels, or signage. A screen may appear
-  only at an angle, out of focus, or as abstract glow.
+- NEVER ask for an object whose whole purpose is to carry writing. The image
+  model renders all of them as unreadable letter-soup, and it is the single
+  clearest sign a video was machine-made. That means: shop fronts, signage,
+  billboards, monitors, screens, phones, tickers, departure boards, dashboards
+  with readouts, number plates, whiteboards, books, newspapers, documents,
+  posters, labels and packaging.
+  If a scene genuinely needs one, say so explicitly in the prompt as out of
+  focus, seen at a sharp angle, or far away - never legible, never centred.
 - NEVER ask for a close-up of a human face, a portrait, or a named expression
   such as "terrified". People appear as distant figures, silhouettes, from
   behind, or as hands only.
