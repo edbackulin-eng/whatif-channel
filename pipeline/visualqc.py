@@ -30,7 +30,7 @@ BATCH = 6                 # frames per request; each image costs tokens
 # back 429 and those frames went unchecked - which defeats the point of the
 # check. Pacing them and retrying on rejection costs a couple of minutes.
 MIN_INTERVAL_S = 2.0
-RETRIES = 3
+RETRIES = 5
 # 512 was too small to see garbled lettering on a phone screen - the defect
 # that prompted this whole check went undetected at that size.
 MAX_SIDE = 768
@@ -44,13 +44,20 @@ Report a defect ONLY when you can clearly see one of these:
 - text: ANY lettering, words, captions, signage, UI, or a screen displaying
   characters - including text that is blurry, garbled or nonsensical. Garbled
   lettering is the most important defect to catch.
-- face: a human face shown in close-up, or anyone looking into the camera
+- face: a person facing the camera with their features LIT AND VISIBLE - you
+  can make out eyes, nose and mouth and read an expression. Group shots count:
+  three people standing and facing the lens is the same defect as one.
 - anatomy: malformed hands, extra or missing limbs, distorted bodies
 
-Distant figures, silhouettes and people seen from behind are FINE. A screen
-glowing with NO characters on it is FINE. Grain, darkness and blur are FINE.
+FINE, and never a defect: anyone seen from behind or turned away; a figure
+backlit or silhouetted so the face reads as a dark shape, even in profile; a
+face too distant or too dark to make out features. A screen glowing with NO
+characters on it is FINE. Grain, darkness and blur are FINE.
 
-When unsure about faces or anatomy, pass. When unsure about lettering, FLAG it.
+The test is whether a viewer could describe the person's expression. If not, it
+is a silhouette and it passes. Two calibration points, both real: a lit group of
+three facing the lens IS a defect and was wrongly passed; a dark profile against
+mist is NOT a defect and was wrongly flagged.
 Reply with valid JSON only."""
 
 ARCHIVE_SYSTEM = """You inspect real archive photographs from NASA and similar
@@ -142,13 +149,17 @@ def _inspect_batch(paths, model=VISION_MODEL, kind="photo"):
             break
         except urllib.error.HTTPError as e:
             last = e
-            if e.code != 429:
+            # 503 is the service being unavailable, not us doing anything wrong,
+            # and it has been the common failure rather than rate limiting.
+            # Retrying it is the difference between a frame being inspected and
+            # a frame shipping unlooked-at.
+            if e.code not in (429, 500, 502, 503, 504):
                 raise
-            body = e.read().decode("utf-8", "replace")
+            body = e.read().decode("utf-8", "replace") if e.code == 429 else ""
             if "PerDay" in body:          # a daily cap will not clear today
                 raise
             backoff = 4 * (attempt + 1)
-            log.info("vision rate-limited, waiting %ds", backoff)
+            log.info("vision %s, waiting %ds", e.code, backoff)
             time.sleep(backoff)
     else:
         raise last
@@ -188,10 +199,13 @@ def inspect(paths, model=VISION_MODEL, kinds=None):
             try:
                 results = _inspect_batch(batch, model, kind)
             except Exception as e:
-                log.warning("vision batch (%s) failed (%s); passing those frames",
-                            kind, e)
+                # Not "ok". A frame nobody looked at is unknown, not clean, and
+                # recording it as clean is how a 503 turned into a shipped
+                # defect. The caller decides what to do with unknowns.
+                log.warning("vision batch (%s) failed (%s); %d frame(s) unchecked",
+                            kind, e, len(batch))
                 for p in batch:
-                    verdicts[p] = {"ok": True, "defect": "unchecked",
+                    verdicts[p] = {"ok": False, "defect": "unchecked",
                                    "note": str(e)[:80]}
                 done += len(batch)
                 continue

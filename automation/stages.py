@@ -105,7 +105,21 @@ def visual_check(work, scenes):
     report = visualqc.write_report(verdicts, work / "visual_qc.json")
     log.info("visual QC: %d frames, %d flagged", report["frames"], report["flagged"])
 
-    failed = {str(p) for p, v in verdicts.items() if not v["ok"]}
+    unchecked = {str(p) for p, v in verdicts.items() if v["defect"] == "unchecked"}
+    if unchecked:
+        log.warning("%d frame(s) could not be inspected; re-inspecting them",
+                    len(unchecked))
+        second = visualqc.inspect(sorted(unchecked),
+                                  kinds={p: kinds[p] for p in unchecked})
+        verdicts.update(second)
+        still = sum(1 for v in second.values() if v["defect"] == "unchecked")
+        if still:
+            log.warning("%d frame(s) remain uninspected and will ship unchecked",
+                        still)
+
+    # A frame that was never successfully looked at is not a defect to fix.
+    failed = {str(p) for p, v in verdicts.items()
+              if not v["ok"] and v["defect"] != "unchecked"}
     if not failed:
         return scenes
 
