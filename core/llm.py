@@ -17,7 +17,10 @@ ROOT = Path(__file__).resolve().parent.parent
 ENV_PATH = ROOT / ".env"
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.3-70b-versatile"
+# llama-3.3-70b-versatile is gone from the free tier: the key answers
+# model_not_found for it. gpt-oss-120b is what the account actually has,
+# and what the stoicism channel has been running on.
+GROQ_MODEL = "openai/gpt-oss-120b"
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 # "gemini-flash-lite" (inherited from yt-factory) is not a served id at all, and
 # the models listing is not a reliable guide either: it advertises
@@ -99,11 +102,19 @@ def _rate_limit():
 
 # --- http ------------------------------------------------------------------
 
+# Cloudflare in front of Groq answers urllib's default User-Agent with a 403
+# (its code 1010, a browser-signature ban), so every request carries an
+# explicit one. The same curl request succeeds, which is what made this look
+# like a bad key rather than a blocked client.
+USER_AGENT = "whatif-channel/1.0 (+https://github.com/edbackulin-eng/whatif-channel)"
+
+
 def _post(url, payload, headers, timeout=180):
     """POST JSON. Returns (status, body_text). HTTP errors come back as values, not exceptions."""
     data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(url, data=data, method="POST",
-                                 headers={"Content-Type": "application/json", **headers})
+                                 headers={"Content-Type": "application/json",
+                                          "User-Agent": USER_AGENT, **headers})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return resp.status, resp.read().decode("utf-8", "replace")
@@ -173,7 +184,17 @@ def _call_groq(prompt, system, max_tokens, temperature, json_mode):
         log.info("groq %s | %s tokens (%s in, %s out) | %.1fs", GROQ_MODEL,
                  usage.get("total_tokens", "?"), usage.get("prompt_tokens", "?"),
                  usage.get("completion_tokens", "?"), elapsed)
-        return data["choices"][0]["message"]["content"]
+        text = data["choices"][0]["message"]["content"]
+        if not (text or "").strip():
+            # gpt-oss-120b reasons before answering and the reasoning is
+            # charged to max_tokens, so a budget that is too tight comes back
+            # with a token count but no content. Returning that empty string
+            # would put it straight into a script.
+            raise LLMError(
+                f"groq returned empty content ({data.get('usage', {})}); "
+                f"max_tokens={max_tokens} is likely too tight for a model "
+                f"that reasons first")
+        return text
     raise LLMError(f"groq still rate-limited after {_MAX_429_WAITS} waits")
 
 
