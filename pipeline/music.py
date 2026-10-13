@@ -9,6 +9,7 @@ So the bed is assembled from the library by mood: the arc is read off the
 script once per episode, each stretch gets a track tagged for that mood, and
 the joins are crossfaded so nothing switches abruptly under the narration.
 """
+import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -116,14 +117,21 @@ def plan(script_text, total_s, tracks=None, use_llm=True):
             continue
         stretches.append((mood, end - start))
 
-    plan_out, previous = [], None
-    for mood, length in stretches:
+    # The choice is varied but deterministic: seeded from the script, so two
+    # episodes do not open on the same track while a re-render of one episode
+    # is identical to the first. Taking options[0] every time meant a library
+    # of eight tracks only ever played two.
+    seed = int(hashlib.sha256(script_text.encode("utf-8")).hexdigest()[:8], 16)
+    plan_out, previous, used = [], None, set()
+    for position, (mood, length) in enumerate(stretches):
         options = [t for t in tracks if mood in t["moods"]]
         if not options:
             options = tracks
             log.warning("no track tagged '%s'; using the whole library", mood)
-        pick = next((t for t in options if t["path"] != previous), options[0])
-        previous = pick["path"]
+        fresh = [t for t in options if t["file"] not in used] or options
+        fresh = [t for t in fresh if t["path"] != previous] or fresh
+        pick = fresh[(seed + position) % len(fresh)]
+        previous, _ = pick["path"], used.add(pick["file"])
         plan_out.append({"mood": mood, "seconds": round(length, 2),
                          "track": pick})
     for p in plan_out:
