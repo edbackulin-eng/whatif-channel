@@ -2,6 +2,8 @@
 .env
 *.pem
 kaggle.json
+client_secret.json
+youtube_token.json
 
 # Generated media. The repository holds code and scripts, nothing heavy.
 dataset/
