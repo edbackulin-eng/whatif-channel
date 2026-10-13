@@ -96,10 +96,17 @@ def _needs_blur_plate(im, width, height):
     return upscale > MAX_UPSCALE
 
 
+# Frames that were inset on a blurred plate rather than filling the frame.
+# Recorded here because this is the only place that knows; trying to detect it
+# afterwards from the pixels flagged flat skies and infographic cards as faults.
+plated = set()
+
+
 def apply(path, width=WORK_W, height=WORK_H):
     """Load, crop to the working size, and grade. Returns a PIL image."""
     raw = _load(path, width, height)
     if _needs_blur_plate(raw, width, height):
+        plated.add(str(path))
         im = fit_with_blur_fill(raw, width, height)
     else:
         im = cover_crop(raw, width, height)

@@ -55,67 +55,24 @@ def find_silence(path, min_s=MAX_SILENCE_S, threshold="-45dB"):
     return list(zip(starts, ends))
 
 
-BORDER_BAND = 0.055          # fraction of the frame treated as the outer band
-BORDER_DETAIL_RATIO = 0.30   # border this much less detailed than the centre
-BORDER_MIN_LUMA = 10.0       # ...while still carrying light, i.e. not just space
-BORDER_FAIL_FRACTION = 0.25  # share of sampled frames before the video fails
+# How much of a video may sit on a blurred plate before it is worth a look.
+# A plate is legitimate for a genuinely odd-shaped archive still; a lot of them
+# means something upstream stopped filling the frame.
+PLATED_FAIL_FRACTION = 0.15
 
 
-def _border_report(frame_path):
-    """Detect a soft inset border: lit, but far less detailed than the centre.
+def plated_frames(scenes):
+    """Scenes whose source was inset on a blurred plate rather than filling.
 
-    This is the signature of a frame sitting on a blurred plate instead of
-    filling the screen. A genuinely dark edge - a moon against space - is nearly
-    black and is NOT flagged, which is why brightness alone cannot decide it.
+    Read from what core.grade actually did. An earlier version tried to find
+    these in the finished video by looking for a dim, low-detail band at the
+    edges, and flagged eleven of sixteen frames in a video that was correct:
+    a flat night sky, a bright hazy horizon and every infographic card all look
+    exactly like that from the outside.
     """
-    import numpy as np
-    from PIL import Image
-
-    with Image.open(frame_path) as im:
-        a = np.asarray(im.convert("L").resize((480, 270)), dtype=np.float32)
-    h, w = a.shape
-    bx, by = max(2, int(w * BORDER_BAND)), max(2, int(h * BORDER_BAND))
-
-    def detail(block):
-        if block.size < 16:
-            return 0.0
-        gx = np.abs(np.diff(block, axis=1)).mean() if block.shape[1] > 1 else 0.0
-        gy = np.abs(np.diff(block, axis=0)).mean() if block.shape[0] > 1 else 0.0
-        return float(gx + gy)
-
-    centre = a[by * 2:h - by * 2, bx * 2:w - bx * 2]
-    bands = {"left": a[:, :bx], "right": a[:, w - bx:],
-             "top": a[:by, :], "bottom": a[h - by:, :]}
-    c_detail = detail(centre)
-    if c_detail < 1e-3:
-        return []
-    hits = []
-    for name, band in bands.items():
-        ratio = detail(band) / c_detail
-        luma = float(band.mean())
-        if ratio < BORDER_DETAIL_RATIO and luma > BORDER_MIN_LUMA:
-            hits.append(f"{name} (detail {ratio:.0%} of centre, luma {luma:.0f})")
-    return hits
-
-
-def check_borders(video_path, duration, samples=16):
-    """Sample the finished video and report frames with a soft inset border."""
-    import tempfile
-
-    flagged = []
-    with tempfile.TemporaryDirectory() as tmp:
-        for i in range(samples):
-            t = duration * (i + 0.5) / samples
-            frame = Path(tmp) / f"b{i:03d}.png"
-            _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
-                  "-ss", f"{t:.2f}", "-i", str(video_path),
-                  "-frames:v", "1", str(frame)])
-            if not frame.exists():
-                continue
-            hits = _border_report(frame)
-            if hits:
-                flagged.append({"at_s": round(t, 1), "edges": hits})
-    return flagged
+    from core import grade
+    plated = {str(p) for p in grade.plated}
+    return [s for s in scenes if str(s.get("image")) in plated]
 
 
 def contact_sheet(video, out_path, every_s=15, cols=5, rows=6, width=400):
@@ -183,13 +140,6 @@ def check_video(video_path, thumbnail_path=None, srt_path=None,
                              for s, e in silences]
     if silences:
         problems.append(f"{len(silences)} silent gap(s) over {MAX_SILENCE_S}s mid-video")
-
-    soft_borders = check_borders(video_path, duration)
-    report["soft_border_frames"] = soft_borders
-    if len(soft_borders) > BORDER_FAIL_FRACTION * 16:
-        problems.append(
-            f"{len(soft_borders)} of 16 sampled frames show a soft inset border "
-            f"(first at {soft_borders[0]['at_s']}s) - frames are not filling the screen")
 
     if expected_min_s and duration < expected_min_s:
         problems.append(f"duration {duration / 60:.1f} min is under the "
