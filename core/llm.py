@@ -199,16 +199,19 @@ def _call_gemini(prompt, system, max_tokens, temperature, json_mode,
             "temperature": temperature,
         },
     }
-    # Only the thinking models accept thinkingConfig at all; sending it to a lite
-    # model is a hard 400, so it goes in only when thinking is actually wanted.
-    if thinking_budget:
+    # A lite model rejects thinkingConfig outright with a 400, so it never
+    # goes there. Everywhere else it is sent even when the budget is zero:
+    # leaving it out does not mean no thinking, it means the model's own
+    # default. gemini-flash-latest spent 383 of a 400-token budget thinking
+    # and returned empty text, which read as a parse failure.
+    model = model or GEMINI_MODEL
+    if "lite" not in model:
         payload["generationConfig"]["thinkingConfig"] = {
             "thinkingBudget": thinking_budget}
     if system:
         payload["systemInstruction"] = {"parts": [{"text": system}]}
     if json_mode:
         payload["generationConfig"]["responseMimeType"] = "application/json"
-    model = model or GEMINI_MODEL
     url = GEMINI_URL.format(model=model)
 
     for attempt in range(_MAX_429_WAITS):

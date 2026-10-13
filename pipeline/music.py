@@ -80,9 +80,12 @@ def read_arc(script_text, use_llm=True):
         return list(DEFAULT_ARC)
     try:
         from core import llm
-        raw = llm.complete(ARC_PROMPT + script_text[:12000],
-                           max_tokens=400, temperature=0.2, json_mode=True)
-        segments = json.loads(raw)["segments"]
+        # The lite model, with room to spare: the thinking model spent 383 of a
+        # 400-token budget reasoning about a four-line answer and returned
+        # nothing at all.
+        segments = llm.complete_json(
+            ARC_PROMPT + script_text[:12000], max_tokens=800, temperature=0.2,
+            model=llm.GEMINI_BULK_MODEL)["segments"]
         arc = [(s["mood"], float(s["start_fraction"])) for s in segments
                if s.get("mood") in MOODS]
         if not arc or arc[0][1] > 0.001:
