@@ -42,4 +42,4 @@ words.
 
 ## Contact
 
-{{CONTACT_EMAIL}}
+edwardcatstory@gmail.com

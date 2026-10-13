@@ -62,4 +62,4 @@ If these terms change, the updated version appears on this page with a new date.
 
 ## Contact
 
-{{CONTACT_EMAIL}}
+edwardcatstory@gmail.com
