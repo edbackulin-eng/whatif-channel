@@ -10,7 +10,7 @@ artifact, and then failed at the very last step. The 13 October build of episode
 
 Rules, all of them there to stop a video being uploaded twice or lost:
   - the slot is the nearest free one of the channel's week (Mon, Tue, Thu, Fri,
-    Sat at 15:00 UTC) that is at least two hours away; "free" means no other
+    Sat at 15:00 UTC) that is at least thirty minutes away; "free" means no other
     episode of ours already holds that day;
   - the moment YouTube returns an id it is written to queue/<slug>/uploaded.json
     and to episode.json, before anything else can fail, and an episode with that
@@ -33,7 +33,10 @@ from pipeline import queue  # noqa: E402
 log = get_logger("upload-youtube")
 
 SLOT_HOUR_UTC = 15
-MIN_LEAD = timedelta(hours=2)
+# Thirty minutes, not two hours: a slot that a long build just missed is still worth
+# taking if YouTube has half an hour to process the file, and the alternative is a
+# channel with no video that day.
+MIN_LEAD = timedelta(minutes=30)
 
 
 def scheduled():
