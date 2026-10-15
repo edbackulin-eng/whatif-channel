@@ -1,0 +1,22 @@
+name: Check YouTube credentials
+
+# Proves the YT_TOKEN_JSON secret can refresh and reach the channel, in seconds,
+# so a broken token is found before a three-and-a-half hour build rather than after.
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Refresh the token and name the channel
+        env:
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+        run: python -X utf8 automation/upload_youtube.py --check

@@ -209,6 +209,22 @@ def assemble(work, episode):
     report, problems = qc.check_video(
         final, thumbnail_path=thumb, srt_path=work / "subs.srt",
         expected_min_s=16 * 60, expected_max_s=26 * 60)
+    # The border check reads what the grader actually did (which scenes were set
+    # on a blurred plate), not the pixels of the finished video: guessing from
+    # pixels flagged 10 of 16 frames of episode 002 that were filling the screen
+    # perfectly well, and the run was held for a defect it did not have.
+    plated = qc.plated_frames(scenes)
+    report["plated_frames"] = len(plated)
+    if scenes and len(plated) / len(scenes) > qc.PLATED_FAIL_FRACTION:
+        problems.append(f"{len(plated)} of {len(scenes)} scenes sit on a blurred plate "
+                        f"instead of filling the frame")
+    vq = work / "visual_qc.json"
+    if vq.exists():
+        left = json.loads(vq.read_text(encoding="utf-8")).get("unchecked", 0)
+        report["frames_uninspected"] = left
+        if left:
+            problems.append(f"{left} frame(s) could not be inspected by visual QC "
+                            f"after every retry")
     qc.contact_sheet(final, work / "contact_sheet.jpg", every_s=40)
     verdict = qc.write_report(work / "qc.json", report, problems)
     log.info("QC %s (%d problems)", verdict["verdict"], len(problems))
@@ -246,20 +262,65 @@ def _thumbnail_background(work, scenes):
     raise RuntimeError("no usable frame for the thumbnail")
 
 
+def _title_ok(title, span_text):
+    """2-5 words, short, no trailing punctuation, and not a slice of the narration."""
+    t = (title or "").strip().strip('"').strip()
+    n = len(t.split())
+    if not (2 <= n <= 5) or len(t) > 40 or t[-1:] in ".,;:!?":
+        return False
+    return t.lower() not in span_text.lower()
+
+
+CHAPTER_PROMPT = (
+    "Write a chapter title for each stretch of narration below, from a science video "
+    "about the question in its title. Rules: 2 to 5 words, Title Case, no punctuation "
+    "at the end, specific to that stretch, and never reveal the final answer. "
+    'Return JSON only: {"titles": ["...", "..."]} with exactly {n} titles, in order.')
+
+
 def _chapters(work, duration, wanted=10):
-    """Evenly spaced chapters anchored on real cue times."""
+    """Chapters anchored on real cue times, each with a short written title.
+
+    The anchors are evenly spaced cue times. The titles used to be the first 48
+    characters of the sentence at each anchor ("you are standing on the equator at
+    noon. The sky"), which are not titles. One model call now writes all of them
+    from the stretch of narration each chapter covers, and a title that comes back
+    too long, too short or lifted from the narration is replaced from the text.
+    """
     from pipeline.sceneplan import parse_srt
     cues = parse_srt(work / "subs.srt")
     if not cues:
         return [(0, "Start")]
     step = duration / wanted
-    out, used = [], set()
+    anchors, used = [], set()
     for i in range(wanted):
-        target = i * step
-        cue = min(cues, key=lambda c: abs(c[0] - target))
+        cue = min(cues, key=lambda c: abs(c[0] - i * step))
         if cue[0] in used:
             continue
         used.add(cue[0])
-        label = cue[2].strip().rstrip(".,")[:48] or "Continued"
-        out.append((0 if i == 0 else cue[0], label))
+        anchors.append(0 if i == 0 else cue[0])
+    spans = []
+    for k, start in enumerate(anchors):
+        end = anchors[k + 1] if k + 1 < len(anchors) else duration + 1
+        spans.append(" ".join(c[2].strip() for c in cues if start <= c[0] < end))
+
+    titles = [None] * len(anchors)
+    try:
+        from core import llm
+        listing = chr(10).join(f"{k}: {t[:700]}" for k, t in enumerate(spans))
+        answer = llm.complete_json(
+            CHAPTER_PROMPT.replace("{n}", str(len(spans))) + chr(10) + chr(10) + listing,
+            max_tokens=1200, temperature=0.4, model=llm.GEMINI_BULK_MODEL)
+        got = answer.get("titles", []) if isinstance(answer, dict) else answer
+        if isinstance(got, list) and len(got) == len(spans):
+            titles = [str(t) for t in got]
+    except Exception as e:                                       # noqa: BLE001
+        log.warning("chapter titles from the model failed (%s); writing them from the text", e)
+    # When no model can write a title the chapter is "Part N", which says nothing
+    # false. A first version built titles from the longest words of each span and
+    # produced "Kilometers Everything Kilopascals", which is worse than a number.
+    out = []
+    for k, (start, text, t) in enumerate(zip(anchors, spans, titles)):
+        out.append((start, t.strip().strip('"') if t and _title_ok(t, text)
+                    else ("Introduction" if k == 0 else f"Part {k + 1}")))
     return out

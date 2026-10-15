@@ -25,7 +25,10 @@ log = get_logger("visualqc")
 
 # A third quota bucket, separate from the fact-check and the scene planner.
 VISION_MODEL = "gemini-flash-lite-latest"
-BATCH = 6                 # frames per request; each image costs tokens
+# 16 frames a request, as on the Closed Tabs channel. About 250 frames an episode in
+# batches of 6 was 42 requests against roughly 20 a day per model on the free tier,
+# and 122 of 253 frames of episode 002 came back uninspected. 16 makes it 16.
+BATCH = 16
 # A 223-frame video is ~38 requests. Fired back to back, a third of them came
 # back 429 and those frames went unchecked - which defeats the point of the
 # check. Pacing them and retrying on rejection costs a couple of minutes.
@@ -234,3 +237,27 @@ def write_report(verdicts, path):
     Path(path).write_text(json.dumps(payload, indent=2, ensure_ascii=False),
                           encoding="utf-8")
     return payload
+
+
+# --- code-side checks ---------------------------------------------------------------
+
+# Calibrated on real frames, not guessed. The near-empty frame that put 2.8 seconds
+# of black on screen in episode 002 measures mean 17.2, p95 19.0, std 1.9: a dark
+# sky with one speck in it. The darkest genuine night frames of episode one measure
+# p95 31-72 and std 16-38, so there is a wide gap and the thresholds sit in it.
+EMPTY_MAX_STD = 8.0
+EMPTY_MAX_P95 = 25.0
+
+
+def is_empty(path):
+    """True for a frame with nothing in it: very dark AND flat. A night scene is
+    dark but has structure; a card is flat but bright with text."""
+    import numpy as np
+    from PIL import Image
+    try:
+        with Image.open(path) as im:
+            im.draft("L", (512, 512))
+            a = np.asarray(im.convert("L").resize((256, 256)), dtype=np.float32)
+    except Exception:                                            # noqa: BLE001
+        return False
+    return float(a.std()) < EMPTY_MAX_STD and float(np.percentile(a, 95)) < EMPTY_MAX_P95

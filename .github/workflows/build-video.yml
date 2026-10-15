@@ -1,11 +1,17 @@
 name: Build the next video
 
 # Mon, Tue, Thu, Fri, Sat. Takes the oldest ready script from the queue and
-# renders it. No language model is called here: the script is already written
+# renders it, uploads it private with a publishAt on the nearest free slot, and
+# keeps at least two episodes scheduled ahead (it builds the NEXT episode, never
+# "today's"). No language model is called here: the script is already written
 # and fact-checked, so a bad day at any provider cannot cost an upload.
 on:
   schedule:
-    - cron: "0 6 * * 1,2,4,5,6"
+    # 03:17, an early odd minute. GitHub starts scheduled runs late - up to eight
+    # hours on this repository - and a build takes about three and a half, so a
+    # 06:00 trigger regularly landed after the 15:00 slot it was meant to feed.
+    # The minute is odd because the top of the hour is where the queue is longest.
+    - cron: "17 3 * * 1,2,4,5,6"
   workflow_dispatch:
     inputs:
       slug:
@@ -18,7 +24,7 @@ concurrency:
 
 permissions:
   contents: write
-  actions: read
+  actions: write
 
 jobs:
   build:
@@ -97,6 +103,14 @@ jobs:
         id: queue
         run: python -X utf8 automation/queue_status.py --for-build
 
+      # Found broken after the fact once already: a build rendered for three and
+      # a half hours and then had nothing to upload with. Ten seconds up front.
+      - name: Prove the YouTube credentials
+        if: steps.queue.outputs.has_work == 'true' && vars.YOUTUBE_ENABLED == 'true'
+        env:
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+        run: python -X utf8 automation/upload_youtube.py --check
+
       - name: Fetch voice model
         if: steps.queue.outputs.has_work == 'true'
         run: python -X utf8 automation/fetch_models.py
@@ -135,6 +149,7 @@ jobs:
       # through the API from an unaudited project and its videos go public on
       # schedule, so the gate is simply whether credentials are configured.
       - name: Upload to YouTube
+        id: upload
         if: steps.queue.outputs.has_work == 'true' && vars.YOUTUBE_ENABLED == 'true'
         env:
           YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
@@ -157,3 +172,28 @@ jobs:
           done
           echo "::error::the build record could not be pushed; the next build may repeat this episode"
           exit 1
+
+      - name: Count what is scheduled ahead
+        id: stock
+        if: always()
+        run: |
+          git pull --rebase -q origin "${{ github.ref_name }}" || true
+          python -X utf8 automation/buffer.py --min 2
+
+      # At least two uploaded and scheduled at all times. A run that leaves fewer
+      # starts the next one itself, so the stock is rebuilt without waiting for
+      # the next cron. It only chains after a successful upload, so a failure
+      # cannot loop; with nothing ready to build, or an upload that failed, the
+      # shortfall is an error and the run goes red.
+      - name: Keep two scheduled ahead
+        if: always() && steps.stock.outputs.short == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ steps.upload.outcome }}" = "success" ] && [ "${{ steps.stock.outputs.ready }}" != "0" ]; then
+            echo "only ${{ steps.stock.outputs.ahead }} scheduled ahead; starting the next build"
+            gh workflow run build-video.yml --repo "${{ github.repository }}"
+          else
+            echo "::error::only ${{ steps.stock.outputs.ahead }} episode(s) scheduled ahead, and this run cannot build another (upload: ${{ steps.upload.outcome }}, scripts ready: ${{ steps.stock.outputs.ready }})"
+            exit 1
+          fi

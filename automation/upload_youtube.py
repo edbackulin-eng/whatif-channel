@@ -75,7 +75,19 @@ def package_for(slug):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--check", action="store_true",
+                    help="only prove the credentials work: refresh the token, name the channel")
     args = ap.parse_args()
+
+    if args.check:
+        from pipeline import youtube
+        try:
+            name, cid = youtube.channel_name()
+        except Exception as err:                                 # noqa: BLE001
+            print(f"YouTube credentials DO NOT work: {str(err)[:300]}")
+            return 1
+        print(f"YouTube credentials work: channel {name!r} ({cid})")
+        return 0 if name else 1
 
     todo = [e for e in queue.episodes()
             if e.get("status") == "rendered" and not e.get("youtube_id")]

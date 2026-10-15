@@ -83,6 +83,11 @@ def _frame_kind(scene, image_path):
     return "photo"
 
 
+# Waits between attempts to inspect what could not be inspected, in seconds. The free
+# tier's minute limit clears in one; a service-wide 503 usually in a few.
+UNCHECKED_WAITS = (90, 240, 600)
+
+
 def visual_check(work, scenes):
     """Inspect every frame before the render. Defects are regenerated once."""
     cfg = _cfg()
@@ -102,20 +107,33 @@ def visual_check(work, scenes):
         return scenes
 
     verdicts = visualqc.inspect(paths, kinds=kinds)
-    report = visualqc.write_report(verdicts, work / "visual_qc.json")
-    log.info("visual QC: %d frames, %d flagged", report["frames"], report["flagged"])
 
-    unchecked = {str(p) for p, v in verdicts.items() if v["defect"] == "unchecked"}
-    if unchecked:
-        log.warning("%d frame(s) could not be inspected; re-inspecting them",
-                    len(unchecked))
-        second = visualqc.inspect(sorted(unchecked),
-                                  kinds={p: kinds[p] for p in unchecked})
+    # A frame nobody could look at is looked at again, after a wait, until it is
+    # inspected or the attempts run out. It is never waved through: the build
+    # that shipped 122 of 253 frames unchecked had re-inspected them once, at
+    # once, into the same 503.
+    for attempt, wait in enumerate(UNCHECKED_WAITS, 1):
+        unchecked = {str(p) for p, v in verdicts.items() if v["defect"] == "unchecked"}
+        if not unchecked:
+            break
+        log.warning("%d frame(s) could not be inspected; waiting %ds, then re-inspecting "
+                    "(attempt %d/%d)", len(unchecked), wait, attempt, len(UNCHECKED_WAITS))
+        time.sleep(wait)
+        second = visualqc.inspect(sorted(unchecked), kinds={p: kinds[p] for p in unchecked})
         verdicts.update(second)
-        still = sum(1 for v in second.values() if v["defect"] == "unchecked")
-        if still:
-            log.warning("%d frame(s) remain uninspected and will ship unchecked",
-                        still)
+
+    # Code-side: a frame that is dark AND flat is empty, whatever Gemini says.
+    for p in list(verdicts):
+        if kinds.get(str(p), kinds.get(p)) != "card" and visualqc.is_empty(p):
+            verdicts[p] = {**verdicts[p], "ok": False, "defect": "empty",
+                           "note": "nearly black and featureless"}
+
+    report = visualqc.write_report(verdicts, work / "visual_qc.json")
+    log.info("visual QC: %d frames, %d flagged, %d uninspected", report["frames"],
+             report["flagged"], report["unchecked"])
+    if report["unchecked"]:
+        log.warning("%d frame(s) remain uninspected after every attempt; the package "
+                    "will be marked for review", report["unchecked"])
 
     # A frame that was never successfully looked at is not a defect to fix.
     failed = {str(p) for p, v in verdicts.items()
