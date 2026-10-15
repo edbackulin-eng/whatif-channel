@@ -90,15 +90,16 @@ def rewrite_chapters(pkg):
     return block
 
 
-def upload(pkg):
+def upload(pkg, keep_chapters=False):
     pkg = Path(pkg)
     slug = pkg.name
     d = ROOT / "queue" / slug
     marker = d / "uploaded.json"
     if marker.exists():
         raise SystemExit(f"{slug} already uploaded: {marker.read_text(encoding='utf-8')}")
-    print("chapters:")
-    print(rewrite_chapters(pkg))
+    if not keep_chapters:
+        print("chapters:")
+        print(rewrite_chapters(pkg))
     slot = today_slot()
     print(f"uploading {slug} for {slot:%Y-%m-%d %H:%M} UTC")
     video_id, when = youtube.upload(pkg, publish_at=slot)
@@ -108,12 +109,15 @@ def upload(pkg):
     m.update(stamp)
     (d / "episode.json").write_text(json.dumps(m, indent=2, ensure_ascii=False), encoding="utf-8")
     queue.set_status(d, "published")
-    queue.log_entry(f"Uploaded {slug} as {video_id} from the 13 October build, public at "
+    queue.log_entry(f"Uploaded {slug} as {video_id} from {pkg}, public at "
                     f"{stamp['publish_at']} (same-day slot).")
     return status(video_id)
 
 
 if __name__ == "__main__":
     cmd, arg = sys.argv[1], sys.argv[2]
-    out = {"fix": fix, "upload": upload, "status": status}[cmd](arg)
+    if cmd == "upload" and "--keep-chapters" in sys.argv:
+        out = upload(arg, keep_chapters=True)
+    else:
+        out = {"fix": fix, "upload": upload, "status": status}[cmd](arg)
     print(json.dumps(out, indent=1, ensure_ascii=False))

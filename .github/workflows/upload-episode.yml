@@ -1,0 +1,73 @@
+name: Upload an episode for today
+
+# Uploads a rendered episode from a build's artifact, scheduled for today's
+# 15:00 UTC slot (or thirty minutes out when that is closer), and records it in
+# the queue so no later build uploads it again. By hand, when a build's own
+# upload was held or missed the slot.
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_id:
+        description: artifact holding ready/<date>/<slug>/
+        required: true
+      slug:
+        description: episode slug
+        required: true
+      keep_chapters:
+        description: keep the package's chapter list as it is
+        default: "true"
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: video-upload
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -r requirements.txt
+      - name: Fetch the package
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/actions/artifacts/${{ inputs.artifact_id }}/zip" > pkg.zip
+          mkdir -p ready && unzip -q -o pkg.zip -d ready
+          ls -la ready/*/"${{ inputs.slug }}"/
+      - name: Where is the black segment
+        run: |
+          v=$(ls ready/*/"${{ inputs.slug }}"/video.mp4 | head -1)
+          ffmpeg -hide_banner -nostats -i "$v" -vf "blackdetect=d=0.5:pix_th=0.10" -an -f null - 2>&1 | grep black_start || echo "no black segment over 0.5 s"
+          cat ready/*/"${{ inputs.slug }}"/qc.json
+      - name: Upload for today
+        env:
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          pkg=$(ls -d ready/*/"${{ inputs.slug }}" | head -1)
+          flag=""
+          [ "${{ inputs.keep_chapters }}" = "true" ] && flag="--keep-chapters"
+          python -X utf8 tools/publish_today.py upload "$pkg" $flag
+      - name: Record it
+        run: |
+          git config user.name "whatif-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          git add queue/
+          git commit -m "upload: ${{ inputs.slug }} for today" || exit 0
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q origin "${{ github.ref_name }}" && git push && exit 0
+            sleep $((i * 8))
+          done
+          echo "::error::the upload record could not be pushed; a later build may upload this episode again"
+          exit 1
