@@ -1,7 +1,7 @@
 {
   "slug": "002-what-if-earth-stopped-spinning",
   "title": "What If Earth Stopped Spinning?",
-  "status": "rendered",
+  "status": "published",
   "position": 2,
   "script_source": "claude",
   "created": "2026-10-12T13:34:52+00:00",
@@ -9,5 +9,7 @@
   "sourced_claims": 71,
   "flagged_claims": 0,
   "rendered_minutes": 183.9,
-  "updated": "2026-10-15T12:21:03+00:00"
+  "updated": "2026-10-15T12:38:41+00:00",
+  "youtube_id": "sv1Syjc3NPc",
+  "publish_at": "2026-10-15T15:00:00Z"
 }
