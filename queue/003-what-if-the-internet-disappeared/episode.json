@@ -1,11 +1,15 @@
 {
   "slug": "003-what-if-the-internet-disappeared",
   "title": "What If the Internet Disappeared?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 3,
   "script_source": "claude",
   "created": "2026-10-12T13:37:41+00:00",
   "words": 3380,
   "sourced_claims": 28,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "rendered_minutes": 230.8,
+  "updated": "2026-10-15T20:02:38+00:00",
+  "youtube_id": "sw4p8avaswo",
+  "publish_at": "2026-10-16T15:00:00Z"
 }
