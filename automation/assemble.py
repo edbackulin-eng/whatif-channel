@@ -171,11 +171,8 @@ def assemble(work, episode):
                  episode["approved"]["thumbnail"])
     else:
         lines = episode.get("thumbnail_lines") or _headline(episode["title"])
-        bg = _thumbnail_background(work, scenes)
-        img, boxes = thumbnail.variant_b(bg, lines)
+        img = best_thumbnail(work, scenes, lines)
         img.save(thumb)
-        log.info("thumbnail text spread %d",
-                 round(thumbnail.text_legibility(img, boxes)))
 
     chapters = _chapters(work, render.probe_duration(final))
     credits_path = work / "credits.json"
@@ -248,6 +245,77 @@ def _headline(title):
         return [core.upper(), "WHAT IF?"]
     mid = (len(words) + 1) // 2
     return [" ".join(words[:mid]).upper(), " ".join(words[mid:]).upper()]
+
+
+THUMB_CANDIDATES = 6
+MIN_LEGIBILITY = 120          # text_legibility: under ~120 the words smear at browse size
+
+
+def _thumb_candidates(work, scenes, n=THUMB_CANDIDATES):
+    """Up to n stills spread across the episode, generated first: frames visual QC
+    flagged and frames with nothing in them are left out."""
+    from pipeline import visualqc
+    flagged = set()
+    vq = Path(work) / "visual_qc.json"
+    if vq.exists():
+        flagged = {d["file"] for d in json.loads(vq.read_text(encoding="utf-8")).get("details", [])}
+    pool = [s["image"] for s in scenes
+            if s.get("image") and Path(s["image"]).exists() and s.get("source") == "generated"
+            and Path(s["image"]).name not in flagged and not visualqc.is_empty(s["image"])]
+    if len(pool) < n:
+        pool += [s["image"] for s in scenes
+                 if s.get("image") and Path(s["image"]).exists() and s.get("source") == "archive"
+                 and s["image"] not in pool and Path(s["image"]).name not in flagged]
+    if not pool:
+        return []
+    step = max(1, len(pool) // n)
+    return list(dict.fromkeys(pool[::step]))[:n]
+
+
+def best_thumbnail(work, scenes, lines, out_dir=None):
+    """4-6 candidates, each judged by Gemini vision for anatomy (hands, fingers,
+    legs, faces), lettering and cards; the defective are dropped, and the best
+    survivor whose words still read at browse size wins.
+
+    The thumbnail used to be the first generated frame of the episode, unseen. A
+    six-fingered hand on the one image every viewer sees first is the most
+    expensive defect the channel can ship.
+    """
+    from pipeline import thumbnail, visualqc
+    work = Path(work)
+    cands = _thumb_candidates(work, scenes)
+    if not cands:
+        return thumbnail.variant_b(_thumbnail_background(work, scenes), lines)[0]
+    try:
+        verdicts = visualqc.judge_thumbnails(cands)
+    except Exception as e:                                       # noqa: BLE001
+        log.warning("thumbnail judge unavailable (%s); every candidate counts as unchecked", e)
+        verdicts = {Path(c): {"ok": False, "defect": "unchecked", "score": 0.0} for c in cands}
+    report, ranked = [], []
+    out_dir = Path(out_dir or work / "thumb_candidates")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for k, c in enumerate(cands):
+        v = verdicts.get(Path(c), {})
+        img, boxes = thumbnail.variant_b(c, lines)
+        legible = thumbnail.text_legibility(img, boxes)
+        img.save(out_dir / f"candidate_{k}.png")
+        report.append({"candidate": k, "source": Path(c).name, "ok": v.get("ok", False),
+                       "defect": v.get("defect"), "note": v.get("note", ""),
+                       "score": v.get("score", 0), "legibility": round(legible)})
+        if v.get("ok") and legible >= MIN_LEGIBILITY:
+            ranked.append((v.get("score", 0), legible, k, img))
+    (work / "thumbnail_report.json").write_text(json.dumps(report, indent=1), encoding="utf-8")
+    if ranked:
+        score, legible, k, img = max(ranked, key=lambda r: (r[0], r[1]))
+        log.info("thumbnail: candidate %d of %d (score %.0f, legibility %.0f); %d rejected",
+                 k, len(cands), score, legible, len(cands) - len(ranked))
+        return img
+    # Nothing passed. Never a judged anatomy defect; otherwise the most legible.
+    usable = [r for r in report if r["defect"] not in ("anatomy", "text", "card", "empty")]
+    pick = max(usable or report, key=lambda r: r["legibility"])
+    log.warning("no thumbnail candidate passed the judge; using candidate %d (%s)",
+                pick["candidate"], pick["defect"])
+    return thumbnail.variant_b(cands[pick["candidate"]], lines)[0]
 
 
 def _thumbnail_background(work, scenes):

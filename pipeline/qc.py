@@ -18,6 +18,7 @@ LUFS_TOLERANCE = 1.0
 MIN_W, MIN_H, FPS = 1920, 1080, 30
 MAX_SILENCE_S = 3.0          # longer than this mid-video means a gap in narration
 MAX_BLACK_S = 0.5
+MIN_VIDEO_BPS = 8_000_000      # YouTube's recommendation for 1080p30 uploads
 THUMB_W, THUMB_H = 1280, 720
 THUMB_MAX_BYTES = 2 * 1024 * 1024
 
@@ -109,6 +110,11 @@ def check_video(video_path, thumbnail_path=None, srt_path=None,
             problems.append(f"resolution is {w}x{h}, expected {MIN_W}x{MIN_H}")
         if abs(fps - FPS) > 0.1:
             problems.append(f"frame rate is {fps:.2f}, expected {FPS}")
+        vbr = int(v.get("bit_rate") or 0) or int(meta["format"].get("bit_rate") or 0)
+        report["video_mbps"] = round(vbr / 1e6, 2)
+        if vbr and vbr < MIN_VIDEO_BPS:
+            problems.append(f"video bitrate {vbr / 1e6:.1f} Mbit/s is under "
+                            f"{MIN_VIDEO_BPS / 1e6:.0f} Mbit/s")
 
     if not a:
         problems.append("no audio stream")

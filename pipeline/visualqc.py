@@ -261,3 +261,78 @@ def is_empty(path):
     except Exception:                                            # noqa: BLE001
         return False
     return float(a.std()) < EMPTY_MAX_STD and float(np.percentile(a, 95)) < EMPTY_MAX_P95
+
+
+# --- thumbnail backgrounds ------------------------------------------------------------
+
+THUMB_SYSTEM = """You judge candidate background photographs for a YouTube thumbnail of a
+science documentary. Text is added later on the left; the subject should own the right.
+
+Reject (ok=false) when ANY of these is clearly true:
+- anatomy: a hand without exactly five fingers, fused, extra or missing fingers; a
+  malformed or melted hand, arm, leg or foot; extra or missing limbs; a distorted,
+  melted or asymmetric face; a body bent in an impossible way.
+- text: any lettering, numbers, caption, interface or watermark in the image.
+- card: the image is a drawn infographic or title card rather than a photograph.
+- empty: the image is nearly black, blank or has no clear subject.
+- blend: two different pictures superimposed on each other (a frame caught in a
+  crossfade), or a picture inset on a blurred copy of itself.
+People are allowed only if their anatomy is flawless. Reply with valid JSON only."""
+
+THUMB_PROMPT = """For each image, in order, return:
+{"results":[{"i":<index>,"ok":true|false,"defect":"anatomy|text|card|empty|blend|none",
+"note":"<a few words>",
+"score":<1-10: how strongly this would stop a scroll as a thumbnail - one clear,
+dramatic subject, readable at a small size>}]}"""
+
+
+def judge_thumbnails(paths, model=VISION_MODEL):
+    """{path: {"ok", "defect", "note", "score"}} for candidate thumbnail backgrounds.
+
+    A candidate that is not judged (quota, outage) is not ok: a thumbnail with an
+    unseen six-fingered hand is worse than the second-best background.
+    """
+    key = llm.get_key("GEMINI_API_KEY")
+    if not key:
+        raise llm.LLMError("GEMINI_API_KEY is not set")
+    paths = [Path(p) for p in paths]
+    out = {}
+    for start in range(0, len(paths), 6):
+        batch = paths[start:start + 6]
+        parts = [{"text": THUMB_PROMPT}]
+        for i, p in enumerate(batch):
+            parts.append({"text": f"image {i}:"})
+            parts.append({"inline_data": {"mime_type": "image/jpeg", "data": _encode(p, 1024)}})
+        payload = {"contents": [{"role": "user", "parts": parts}],
+                   "systemInstruction": {"parts": [{"text": THUMB_SYSTEM}]},
+                   "generationConfig": {"maxOutputTokens": 2048, "temperature": 0.0,
+                                        "responseMimeType": "application/json"}}
+        results = []
+        for attempt in range(RETRIES):
+            _throttle()
+            req = urllib.request.Request(llm.GEMINI_URL.format(model=model),
+                                         data=json.dumps(payload).encode(), method="POST",
+                                         headers={"Content-Type": "application/json",
+                                                  "x-goog-api-key": key})
+            try:
+                with urllib.request.urlopen(req, timeout=180) as resp:
+                    data = json.loads(resp.read().decode("utf-8", "replace"))
+                cand = (data.get("candidates") or [{}])[0]
+                text = "".join(p.get("text", "") for p in cand.get("content", {}).get("parts", [])
+                               if "text" in p)
+                results = llm.extract_json(text).get("results", [])
+                break
+            except urllib.error.HTTPError as e:
+                if e.code not in (429, 500, 502, 503, 504):
+                    raise
+                time.sleep(4 * (attempt + 1))
+            except (urllib.error.URLError, TimeoutError, ValueError):
+                time.sleep(4 * (attempt + 1))
+        by_i = {r.get("i"): r for r in results}
+        for i, p in enumerate(batch):
+            r = by_i.get(i)
+            out[p] = ({"ok": False, "defect": "unchecked", "note": "no verdict", "score": 0.0}
+                      if r is None else
+                      {"ok": bool(r.get("ok", False)), "defect": (r.get("defect") or "none").lower(),
+                       "note": r.get("note", "") or "", "score": float(r.get("score") or 0)})
+    return out

@@ -164,8 +164,15 @@ def build_scene_clips(shots, work_dir):
 # groups and then fusing the groups keeps every single call small.
 CROSSFADE_GROUP = 16
 
+# The finished picture is encoded to a bitrate, not a quality factor. At crf 20
+# the slow Ken Burns moves compressed to 2.5 Mbit/s (episode 002), well under the
+# 8 Mbit/s YouTube recommends uploading 1080p30 at; YouTube re-encodes everything,
+# and the less it is given the softer the result. Asked for 10, x264 delivered 8.9 on
+# this footage (it undershoots on easy content), so the target is 12, capped at 16.
+FINAL_VIDEO_ARGS = ["-b:v", "12M", "-maxrate", "16M", "-bufsize", "24M"]
 
-def _crossfade_once(clips, out_path, xfade_s, crf):
+
+def _crossfade_once(clips, out_path, xfade_s, crf, final=False):
     """Chain a handful of clips with crossfades in a single ffmpeg call."""
     if len(clips) == 1:
         _ffmpeg(["-i", str(clips[0]), "-c", "copy", str(out_path)], "single clip")
@@ -181,8 +188,9 @@ def _crossfade_once(clips, out_path, xfade_s, crf):
         steps.append(f"{prev}[{i}:v]xfade=transition=fade:"
                      f"duration={xfade_s}:offset={offset:.3f}{label}")
         prev = label
+    quality = FINAL_VIDEO_ARGS if final else ["-crf", str(crf)]
     _ffmpeg([*inputs, "-filter_complex", ";".join(steps), "-map", prev,
-             "-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf),
+             "-c:v", "libx264", "-preset", "veryfast", *quality,
              "-pix_fmt", "yuv420p", "-r", str(FPS), str(out_path)], "crossfade")
     return out_path
 
@@ -195,7 +203,7 @@ def crossfade(clips, out_path, xfade_s=XFADE_S, work_dir=None, crf=20):
     """
     clips = [Path(c) for c in clips]
     if len(clips) <= CROSSFADE_GROUP:
-        _crossfade_once(clips, out_path, xfade_s, crf)
+        _crossfade_once(clips, out_path, xfade_s, crf, final=True)
         log.info("crossfaded %d clips -> %.1fs", len(clips), probe_duration(out_path))
         return out_path
 
@@ -215,7 +223,7 @@ def crossfade(clips, out_path, xfade_s=XFADE_S, work_dir=None, crf=20):
             merged.append(part)
         log.info("fuse level %d: %d -> %d", level, len(current), len(merged))
         current = merged
-    _crossfade_once(current, out_path, xfade_s, crf)
+    _crossfade_once(current, out_path, xfade_s, crf, final=True)
     log.info("crossfaded %d clips -> %.1fs", len(clips), probe_duration(out_path))
     return out_path
 
