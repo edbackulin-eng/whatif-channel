@@ -1,7 +1,7 @@
 {
   "slug": "001-moon-fell-to-earth",
   "title": "What If the Moon Fell to Earth?",
-  "status": "rendered",
+  "status": "published",
   "position": 1,
   "voice": "bm_george",
   "thumbnail_variant": 2,
@@ -22,5 +22,7 @@
   ],
   "kaggle_dataset": "metberi/whatif-ep001-moon",
   "rendered_minutes": 215.5,
-  "updated": "2026-10-12T18:23:21+00:00"
+  "updated": "2026-10-12T18:23:21+00:00",
+  "youtube_id": "jrxBcCVvzdM",
+  "publish_at": "2026-10-13T15:30:00Z"
 }

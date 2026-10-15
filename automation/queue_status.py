@@ -32,6 +32,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--for-build", action="store_true")
     ap.add_argument("--fail-on-empty", default="false")
+    ap.add_argument("--min-ready", type=int, default=0,
+                    help="emit needs_scripts=true when fewer than this many are ready")
     args = ap.parse_args()
 
     h = queue.health()
@@ -47,6 +49,10 @@ def main():
         notice("warning",
                f"Script queue is low: {h['ready']} episodes "
                f"({h['weeks_of_stock']} weeks). Top it up.")
+
+    if args.min_ready:
+        emit("needs_scripts", "true" if h["ready"] < args.min_ready else "false")
+        emit("ready", h["ready"])
 
     if args.for_build:
         nxt = queue.next_episode()

@@ -58,7 +58,12 @@ jobs:
             git add queue/.heartbeat
           fi
           git commit -m "queue: weekly top-up $(date -u +%Y-%m-%d)" || exit 0
-          git push
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q origin "${{ github.ref_name }}" && git push && exit 0
+            sleep $((i * 8))
+          done
+          echo "::error::the queue could not be pushed"
+          exit 1
 
       - name: Queue health
         run: python -X utf8 automation/queue_status.py --fail-on-empty false
