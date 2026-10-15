@@ -1,0 +1,394 @@
+[
+  {
+    "text": "Sunlight takes about 8 minutes and 20 seconds to reach Earth",
+    "as_written": "eight minutes and twenty seconds",
+    "source": "IAU 2012 Resolution B2 (astronomical unit = 149,597,870,700 m) divided by the speed of light, about 499 seconds; NASA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The sun is about 1.39 million km across",
+    "as_written": "about one point three nine million kilometres across",
+    "source": "IAU 2015 Resolution B3 nominal solar radius of 695,700 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The sun has been fusing hydrogen for about 4.6 billion years",
+    "as_written": "about four point six billion years",
+    "source": "Connelly et al. 2012, Science 338, dating of solar system solids; Bouvier and Wadhwa 2010, Nature Geoscience",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Energy from the solar core takes roughly 10,000 to a couple of hundred thousand years to reach the surface, with the figure model dependent",
+    "as_written": "from around ten thousand years to a couple of hundred thousand",
+    "source": "Mitalas and Sills 1992, Astrophysical Journal 401; Stix 2003, Astronomische Nachrichten",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The sun is about 149.6 million km from Earth",
+    "as_written": "one hundred and forty-nine point six million kilometres",
+    "source": "IAU 2012 Resolution B2, astronomical unit",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gravitational waves and gamma rays from the neutron star merger GW170817 arrived about 1.7 seconds apart",
+    "as_written": "about one point seven seconds apart",
+    "source": "LIGO, Virgo, Fermi GBM and INTEGRAL, 'Gravitational Waves and Gamma-rays from a Binary Neutron Star Merger', Astrophysical Journal Letters 848, L13, 2017",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GW170817 was roughly 130 million light-years away, so the signals travelled about 130 million years",
+    "as_written": "a journey of roughly one hundred and thirty million years",
+    "source": "LIGO and Virgo, Physical Review Letters 119, 161101, 2017 (distance about 40 megaparsecs)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mean orbital speed is about 29.8 km/s",
+    "as_written": "twenty-nine point eight kilometres every second",
+    "source": "NASA Goddard Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon reflects roughly 12 percent of the light that hits it",
+    "as_written": "about twelve percent of what hits it",
+    "source": "NASA Goddard Moon Fact Sheet (geometric albedo 0.12; Bond albedo about 0.11)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The sun and Moon each span about half a degree in the sky",
+    "as_written": "about half a degree wide",
+    "source": "NASA Goddard Sun and Moon Fact Sheets (angular diameters about 0.53 and 0.52 degrees)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The solar constant is about 1361 W per square metre",
+    "as_written": "thirteen hundred and sixty-one watts",
+    "source": "Kopp and Lean 2011, Geophysical Research Letters 38, L01706; NASA SORCE TIM",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Globally averaged incoming sunlight is about 340 W per square metre",
+    "as_written": "about three hundred and forty watts per square metre",
+    "source": "Trenberth, Fasullo and Kiehl 2009, Bulletin of the American Meteorological Society (340.4); NASA CERES",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth emits about 240 W per square metre of infrared to space",
+    "as_written": "roughly two hundred and forty watts per square metre",
+    "source": "Trenberth, Fasullo and Kiehl 2009 (239); NASA CERES",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The whole atmosphere holds about as much heat as the top few metres of the ocean",
+    "as_written": "about as much heat as the top few metres of the ocean",
+    "source": "NOAA Ocean Service and NASA Earth Observatory educational material on ocean heat capacity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Dry air is about 21 percent oxygen",
+    "as_written": "about twenty-one percent oxygen",
+    "source": "NASA Goddard Earth Fact Sheet; NOAA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Total living biomass holds a tiny fraction of the carbon-equivalent oxygen in the atmosphere, so respiration and burning of all life would use only a small fraction of atmospheric oxygen",
+    "as_written": "use only a small fraction of that oxygen",
+    "source": "Bar-On, Phillips and Milo 2018, PNAS (biomass about 550 Gt carbon); Broecker 1970, Science, on oxygen reserves; own order-of-magnitude comparison",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Marine phytoplankton turn over in days to weeks and account for roughly half of global photosynthesis",
+    "as_written": "live for only days to weeks, and they carry out a huge share of all the photosynthesis on Earth, perhaps half",
+    "source": "Field et al. 1998, Science 281 (ocean about 49 percent of net primary production); Behrenfeld and Falkowski 1997, Limnology and Oceanography",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global grain stocks cover a few months of use",
+    "as_written": "Global grain stocks cover a few months of use",
+    "source": "FAO Cereal Supply and Demand Brief (global cereal stocks-to-use ratio about 30 percent)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Humanity uses about 20 terawatts of primary energy",
+    "as_written": "about twenty terawatts",
+    "source": "Energy Institute Statistical Review of World Energy 2024 (about 620 exajoules in 2023, about 19.7 TW)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth intercepts about 174,000 terawatts of sunlight",
+    "as_written": "about one hundred and seventy-four thousand terawatts",
+    "source": "Derived: solar constant 1361 W per square metre times Earth's cross-section (NASA Earth Fact Sheet radius 6371 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Human energy use is well under 0.1 percent of the sunlight Earth intercepts",
+    "as_written": "well under a tenth of one percent",
+    "source": "Derived from the 20 TW and 174,000 TW figures above (about 0.011 percent)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fossil fuels supply about 80 percent of world primary energy",
+    "as_written": "about eighty percent of the world's primary energy",
+    "source": "Energy Institute Statistical Review of World Energy 2024",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Nuclear power produces about 9 percent of the world's electricity",
+    "as_written": "about nine percent of the world's electricity",
+    "source": "World Nuclear Association and IAEA PRIS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Reactors are refuelled on roughly 18 to 24 month cycles",
+    "as_written": "eighteen to twenty-four months at a time",
+    "source": "US Nuclear Regulatory Commission; World Nuclear Association",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At the South Pole the sun sets around March and stays below the horizon for roughly six months",
+    "as_written": "around March and does not rise again for roughly six months",
+    "source": "US National Science Foundation, US Antarctic Program",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 90 percent of Icelandic homes are heated with geothermal hot water",
+    "as_written": "about ninety percent of homes",
+    "source": "Orkustofnun (Iceland National Energy Authority)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The lowest surface air temperature ever measured was minus 89.2 degrees Celsius at Vostok Station in July 1983",
+    "as_written": "minus eighty-nine point two degrees Celsius, at Vostok Station in Antarctica, in July of 1983",
+    "source": "World Meteorological Organization World Weather and Climate Extremes Archive",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Large parts of the continents would reach record-cold temperatures within weeks to months of losing sunlight (estimate, explicitly flagged as uncertain)",
+    "as_written": "within weeks to months, large parts of the continents would fall into that range",
+    "source": "Energy-balance reasoning from the Trenberth et al. 2009 budget; flagged in the narration as an estimate, not a published model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ocean's average depth is about 3,700 metres",
+    "as_written": "about three thousand seven hundred metres deep",
+    "source": "NOAA National Centers for Environmental Information (mean depth about 3,688 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sea ice grows slowly and thickens by metres, not kilometres, in a year",
+    "as_written": "it thickens by metres, not kilometres",
+    "source": "Stefan ice-growth law applied with standard thermal constants; own order-of-magnitude estimate, not a published sunless-Earth model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The deep ocean sits only a few degrees above freezing",
+    "as_written": "only a few degrees above freezing",
+    "source": "NOAA Ocean Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's interior loses about 47 terawatts of heat",
+    "as_written": "about forty-seven terawatts",
+    "source": "Davies and Davies 2010, Solid Earth 1, 5-24",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average geothermal heat flux is roughly 0.09 W per square metre",
+    "as_written": "nine hundredths of a watt per square metre",
+    "source": "Davies and Davies 2010 (about 91 milliwatts per square metre); derived as 47 TW over Earth's surface area",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geothermal flux is nearly 4000 times weaker than average sunlight",
+    "as_written": "nearly four thousand times weaker than the sun",
+    "source": "Derived: 340 divided by about 0.09",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "No sunlight penetrates below about 1000 metres in the ocean",
+    "as_written": "Below about a thousand metres, there has never been any sunlight at all",
+    "source": "NOAA Ocean Exploration, ocean light zones (aphotic zone)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hydrothermal vent communities were found by Alvin on the Galápagos Rift in 1977, living on chemosynthesis",
+    "as_written": "In 1977, the submersible Alvin dived on the Galápagos Rift",
+    "source": "Corliss et al. 1979, Science 203, 1073-1083; Woods Hole Oceanographic Institution",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Vent tube worms (Riftia) can grow taller than a person",
+    "as_written": "tube worms taller than a person",
+    "source": "Woods Hole Oceanographic Institution (Riftia pachyptila up to about 2.4 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Deep subsurface life holds about 15 to 23 billion tonnes of carbon, hundreds of times the carbon mass of humans",
+    "as_written": "between fifteen and twenty-three billion tonnes of carbon. That is hundreds of times the carbon in all human beings",
+    "source": "Deep Carbon Observatory decadal report 2018; Magnabosco et al. 2018, Nature Geoscience 11, 707-717; Bar-On et al. 2018, PNAS (human biomass about 0.06 Gt carbon)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Nitrogen liquefies at about minus 196 degrees Celsius",
+    "as_written": "minus one hundred and ninety-six degrees Celsius",
+    "source": "NIST Chemistry WebBook (boiling point 77.36 K)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A bare planet radiating only 0.09 W per square metre would reach an equilibrium near 36 kelvin",
+    "as_written": "about thirty-six kelvin",
+    "source": "Own calculation from the Stefan-Boltzmann law and the Davies and Davies 2010 geothermal flux; flagged in the narration as a back-of-envelope estimate",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's orbital period is about 365.25 days",
+    "as_written": "three hundred and sixty-five and a quarter days",
+    "source": "NASA Goddard Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's axial tilt is about 23.4 degrees",
+    "as_written": "twenty-three point four degrees",
+    "source": "NASA Goddard Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The sun's tidal pull is a bit less than half the Moon's",
+    "as_written": "a bit less than half the strength of the Moon's",
+    "source": "NOAA National Ocean Service, tides and water levels (solar tide about 46 percent of lunar)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "After Tambora's 1815 eruption, 1816 was the Year Without a Summer, with global cooling of roughly half a degree Celsius and crop failures in Europe and North America",
+    "as_written": "Global temperatures dipped by only about half a degree Celsius",
+    "source": "Raible et al. 2016, WIREs Climate Change 7, 569-589; Stothers 1984, Science 224",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 60 billion solar neutrinos pass through each square centimetre every second",
+    "as_written": "About sixty billion solar neutrinos pass through every square centimetre",
+    "source": "Bahcall, Serenelli and Basu 2005, Astrophysical Journal Letters 621; Borexino Collaboration 2018, Nature 562, 505-510",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Solar neutrinos arrive in about the same 8 minutes and 20 seconds as light, and are detected by Borexino in Italy and Super-Kamiokande in Japan",
+    "as_written": "Detectors on Earth, like Borexino in Italy and Super-Kamiokande in Japan",
+    "source": "Borexino Collaboration 2018, Nature 562; Super-Kamiokande Collaboration, Physical Review D 94, 052010, 2016",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Snowball Earth glaciations occurred around 700 million years ago and ended with volcanic carbon dioxide build-up",
+    "as_written": "about seven hundred million years ago",
+    "source": "Hoffman et al. 1998, Science 281, 1342-1346; Hoffman et al. 2017, Science Advances 3, e1600983",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fresh snow reflects roughly 80 to 90 percent of incoming sunlight",
+    "as_written": "around eighty to ninety percent",
+    "source": "US National Snow and Ice Data Center, albedo",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Svalbard Global Seed Vault holds more than a million seed samples at about minus 18 degrees Celsius",
+    "as_written": "more than a million seed samples from around the world sit in a vault kept at about minus eighteen degrees Celsius",
+    "source": "Crop Trust and NordGen, Svalbard Global Seed Vault",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

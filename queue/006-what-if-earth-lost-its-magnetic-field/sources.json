@@ -1,0 +1,402 @@
+[
+  {
+    "text": "Earth's surface magnetic field is roughly 25 to 65 microtesla",
+    "as_written": "between about twenty-five and sixty-five microtesla",
+    "source": "NOAA National Centers for Environmental Information, World Magnetic Model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The liquid outer core begins roughly 2,900 km below the surface",
+    "as_written": "About twenty-nine hundred kilometres below your feet",
+    "source": "Preliminary Reference Earth Model, Dziewonski and Anderson 1981; USGS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The outer core is roughly 2,200 km thick",
+    "as_written": "roughly twenty-two hundred kilometres thick",
+    "source": "Preliminary Reference Earth Model, Dziewonski and Anderson 1981",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The inner core has a radius of about 1,200 km",
+    "as_written": "about twelve hundred kilometres in radius",
+    "source": "Preliminary Reference Earth Model, Dziewonski and Anderson 1981",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The inner core is about as hot as the Sun's surface",
+    "as_written": "close to that of the surface of the Sun",
+    "source": "Hirose, Labrosse and Hernlund, Annual Review of Earth and Planetary Sciences, 2013; Alfè et al. 2002",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Heat flow out of the core is on the order of 10 terawatts with a large uncertainty (roughly 5 to 15 TW)",
+    "as_written": "somewhere around ten terawatts, though estimates differ by a factor of about three",
+    "source": "Lay, Hernlund and Buffett, Nature Geoscience 2008, core-mantle boundary heat flow",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Typical solar wind speed is about 250 to 750 km/s, with about 400 km/s typical",
+    "as_written": "between about two hundred and fifty and seven hundred and fifty kilometres per second, and a typical value is around four hundred",
+    "source": "NASA Goddard Space Flight Center; NOAA Space Weather Prediction Center",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The sunward magnetopause sits near 10 Earth radii",
+    "as_written": "it sits at about ten Earth radii",
+    "source": "NASA Magnetospheric Multiscale mission; Shue et al. 1997 magnetopause model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mean radius is about 6,371 km",
+    "as_written": "about sixty-three hundred and seventy kilometres",
+    "source": "IAU 2015 nominal values; NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ten Earth radii is about 64,000 km",
+    "as_written": "around sixty-four thousand kilometres out",
+    "source": "Arithmetic from the Earth radius of 6,371 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Solar wind at 400 km/s covers 64,000 km in about 160 seconds",
+    "as_written": "about a hundred and sixty seconds",
+    "source": "Arithmetic from NASA typical solar wind speed and magnetopause distance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sunlight takes about 8 minutes to reach Earth",
+    "as_written": "about eight minutes to arrive",
+    "source": "NASA Sun Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The atmosphere above a square metre weighs about ten tonnes, equivalent to roughly ten metres of water",
+    "as_written": "about ten tonnes, which is equivalent to a column of water about ten metres deep",
+    "source": "NASA Earth Fact Sheet; standard atmospheric pressure of 101,325 Pa",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average natural background dose is about 2.4 millisieverts per year",
+    "as_written": "about two point four millisieverts of radiation a year",
+    "source": "UNSCEAR 2008 Report, Annex B",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cosmic rays contribute about 0.4 millisieverts per year to the average dose",
+    "as_written": "roughly four-tenths of a millisievert",
+    "source": "UNSCEAR 2008 Report, Annex B (0.39 mSv)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Magnetotactic bacteria were first described in the 1970s",
+    "as_written": "first described in the nineteen seventies",
+    "source": "Blakemore, Science 1975",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Explorer 1 discovered the Van Allen belts in 1958",
+    "as_written": "discovered in nineteen fifty-eight by Explorer One",
+    "source": "NASA; James Van Allen, University of Iowa",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The inner Van Allen belt spans about 1,000 to 6,000 km altitude",
+    "as_written": "from about a thousand to six thousand kilometres above the surface",
+    "source": "NASA Van Allen Probes mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The outer Van Allen belt spans about 13,000 to 60,000 km altitude",
+    "as_written": "from about thirteen thousand to sixty thousand kilometres",
+    "source": "NASA Van Allen Probes mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "There are well over 10,000 active satellites",
+    "as_written": "well over ten thousand active satellites",
+    "source": "Union of Concerned Scientists Satellite Database; Jonathan McDowell's satellite catalog",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS satellites orbit at about 20,200 km altitude",
+    "as_written": "about twenty thousand two hundred kilometres",
+    "source": "US Space Force / GPS.gov",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ISS orbits at about 400 km altitude",
+    "as_written": "about four hundred kilometres",
+    "source": "NASA International Space Station Facts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "ISS crew receive about 80 millisieverts over a six-month stay",
+    "as_written": "around eighty millisieverts over a six-month stay",
+    "source": "NASA Human Research Program, radiation exposure on the ISS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "80 millisieverts is roughly 30 years of average natural background on the ground",
+    "as_written": "roughly the dose you would collect from natural background on the ground over thirty years",
+    "source": "Arithmetic from UNSCEAR 2.4 mSv per year",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The March 1989 geomagnetic storm collapsed the Hydro-Québec grid in about 90 seconds",
+    "as_written": "collapsed the Hydro-Québec grid in about ninety seconds",
+    "source": "NASA Goddard; Hydro-Québec / NERC reports on the March 1989 storm",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The 1989 blackout left six million people without power for about nine hours",
+    "as_written": "Six million people lost power for around nine hours",
+    "source": "NASA Goddard; NOAA Space Weather Prediction Center",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The 1859 Carrington event disrupted telegraphs and pushed aurora to the Caribbean",
+    "as_written": "set telegraph offices sparking and pushed the aurora down to the Caribbean",
+    "source": "Carrington 1859, Monthly Notices of the Royal Astronomical Society; Green and Boardsen 2006",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The May 2024 storm was the strongest in about twenty years",
+    "as_written": "the strongest geomagnetic storm in about twenty years",
+    "source": "NOAA Space Weather Prediction Center, May 2024 Gannon storm",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus's induced magnetosphere boundary lies within a few hundred kilometres of the surface on the sunward side",
+    "as_written": "within a few hundred kilometres of the surface on the sunward side",
+    "source": "Pioneer Venus Orbiter ionopause measurements; Russell et al.",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars's global magnetic field died roughly four billion years ago",
+    "as_written": "roughly four billion years ago",
+    "source": "Acuña et al., Science 1999, Mars Global Surveyor magnetometer; Lillis et al. 2008",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars surface pressure is about 0.6 percent of Earth's",
+    "as_written": "about six-tenths of one percent of Earth's",
+    "source": "NASA Mars Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "MAVEN measured solar wind stripping about 100 grams of gas per second from Mars",
+    "as_written": "something like a hundred grams of gas every second",
+    "source": "NASA MAVEN mission; Jakosky et al., Science 2015",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars surface gravity is about a third of Earth's",
+    "as_written": "about a third of Earth's surface gravity",
+    "source": "NASA Mars Fact Sheet (3.71 m/s² versus 9.81 m/s²)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus surface pressure is about 92 times Earth's",
+    "as_written": "about ninety-two times Earth's",
+    "source": "NASA Venus Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus's hydrogen is enriched in deuterium by more than a hundred times relative to Earth",
+    "as_written": "enriched in the heavy form, deuterium, by more than a hundred times compared with Earth",
+    "source": "Donahue et al., Science 1982, Pioneer Venus Large Probe mass spectrometer",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "An intrinsic magnetic field does not simply protect a planet against atmospheric escape, and may in some conditions aid ion escape",
+    "as_written": "A study published in Science Advances in twenty eighteen argued",
+    "source": "Gunell et al., Science Advances 2018",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Swarm launched in 2013",
+    "as_written": "launched in twenty thirteen",
+    "source": "European Space Agency, Swarm mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The global field has weakened about 9 percent over the past 200 years",
+    "as_written": "weakened by about nine percent over the past two hundred years",
+    "source": "European Space Agency, Swarm mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The South Atlantic Anomaly is a region of weak field where satellites suffer more radiation hits",
+    "as_written": "a wide region where the field is especially weak, called the South Atlantic Anomaly",
+    "source": "European Space Agency, Swarm mission; NASA Goddard",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The last full reversal, Brunhes–Matuyama, was about 770,000 years ago",
+    "as_written": "about seven hundred and seventy thousand years ago",
+    "source": "IUGS ratification of the Chibanian stage GSSP, 2020; Suganuma et al.",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Cretaceous Normal Superchron lasted nearly 40 million years without a reversal",
+    "as_written": "nearly forty million years without flipping once",
+    "source": "Gradstein et al., The Geologic Time Scale 2012 (about 121 to 83 million years ago)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Laschamp excursion occurred about 41,000 years ago",
+    "as_written": "about forty-one thousand years ago",
+    "source": "Cooper et al., Science 2021; Laj et al.",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "During Laschamp the field dropped to as low as about 5 percent of today's strength",
+    "as_written": "as low as about five percent of today's strength",
+    "source": "Laj et al. 2014; Cooper et al., Science 2021",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The field was reversed for roughly 800 years during the Laschamp excursion",
+    "as_written": "for roughly eight hundred years, pointed the wrong way",
+    "source": "Cooper et al., Science 2021, Adams Event kauri tree-ring record",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cooper et al. used kauri trees preserved in a New Zealand bog, some more than 40,000 years old",
+    "as_written": "some more than forty thousand years old",
+    "source": "Cooper et al., Science 2021",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cooper et al. proposed links between the Laschamp excursion and climate shifts and extinctions, a proposal that is disputed",
+    "as_written": "That proposal is controversial",
+    "source": "Cooper et al., Science 2021; critical responses in the literature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 565 million years ago the field was about ten times weaker than today, the weakest known",
+    "as_written": "about ten times weaker than the field you have today",
+    "source": "Bono et al., Nature Geoscience 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Ediacaran biota and the following Cambrian explosion are when complex animals first appear",
+    "as_written": "the first large, complex animals appear",
+    "source": "Narbonne 2005, Annual Review of Earth and Planetary Sciences",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Bono et al. linked the recovery of the field to inner core nucleation, but the age of the inner core is disputed",
+    "as_written": "When exactly the inner core began is itself disputed",
+    "source": "Bono et al., Nature Geoscience 2019; Zhou et al., Nature Communications 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's dynamo was already running at least 3.45 billion years ago",
+    "as_written": "at least three point four five billion years ago",
+    "source": "Tarduno et al., Science 2010",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

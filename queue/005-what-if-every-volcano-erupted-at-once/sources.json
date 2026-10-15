@@ -1,0 +1,266 @@
+[
+  {
+    "text": "About 1,350 volcanoes have erupted in the Holocene, the period since the last ice age",
+    "as_written": "roughly thirteen hundred and fifty volcanoes",
+    "source": "Smithsonian Institution Global Volcanism Program, Volcanoes of the World database",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Holocene began about 11,700 years ago",
+    "as_written": "about eleven thousand seven hundred years ago",
+    "source": "International Commission on Stratigraphy, Holocene epoch definition",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Between 50 and 70 volcanoes erupt in a typical year",
+    "as_written": "somewhere between fifty and seventy of them erupt",
+    "source": "USGS Volcano Hazards Program and Smithsonian Global Volcanism Program",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The mid-ocean ridge system is roughly 65,000 km long",
+    "as_written": "roughly sixty five thousand kilometres long",
+    "source": "NOAA Ocean Exploration, mid-ocean ridge system",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Roughly three quarters of annual magma output comes from mid-ocean ridges",
+    "as_written": "Roughly three quarters of all the magma Earth erupts each year",
+    "source": "NOAA Ocean Exploration and USGS, volcanic output at mid-ocean ridges",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lava erupts at around 1,000 degrees Celsius",
+    "as_written": "around one thousand degrees Celsius",
+    "source": "USGS Volcano Hazards Program, lava temperatures",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 800 million people live within 100 km of a volcano that has erupted in the Holocene",
+    "as_written": "about eight hundred million people live within one hundred kilometres",
+    "source": "Global Volcano Model and IAVCEI, Brown et al. 2015, Global Volcanic Hazards and Risk, and Freire et al. 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mount St Helens in 1980 sent an ash column about 24 km high in about 15 minutes",
+    "as_written": "twenty four kilometres high in about fifteen minutes",
+    "source": "USGS Cascades Volcano Observatory, 1980 eruption of Mount St. Helens",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pyroclastic flows can reach up to 700 km/h and hundreds of degrees Celsius",
+    "as_written": "up to seven hundred kilometres an hour",
+    "source": "USGS Volcano Hazards Program, pyroclastic flows",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Mount St Helens lateral blast flattened forest across about 600 square kilometres",
+    "as_written": "about six hundred square kilometres",
+    "source": "USGS Cascades Volcano Observatory, May 18 1980 lateral blast",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "57 people died in the Mount St Helens eruption",
+    "as_written": "the death toll was fifty seven",
+    "source": "USGS Cascades Volcano Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Eyjafjallajökull in 2010 caused around 100,000 flight cancellations over eight days",
+    "as_written": "Around one hundred thousand flights were cancelled in eight days",
+    "source": "Eurocontrol, April 2010 volcanic ash crisis statistics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hunga Tonga plume reached about 57 km, the highest measured by modern instruments",
+    "as_written": "about fifty seven kilometres",
+    "source": "Carr et al. 2022, Geophysical Research Letters, Hunga Tonga plume height from satellite imagery",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Hunga Tonga atmospheric pressure wave circled the globe and was recorded on barometers",
+    "as_written": "sent a pressure wave around the entire planet",
+    "source": "Matoza et al. 2022, Science, atmospheric waves from the Hunga Tonga eruption",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pinatubo released about 20 million tonnes of sulphur dioxide",
+    "as_written": "about twenty million tonnes of sulphur dioxide",
+    "source": "USGS Fact Sheet 113-97, The Atmospheric Impact of the 1991 Mount Pinatubo Eruption",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Pinatubo aerosol cloud circled the globe in about three weeks",
+    "as_written": "Within about three weeks, the haze had circled the planet",
+    "source": "USGS Fact Sheet 113-97 and Self et al., Fire and Mud, 1996",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pinatubo cooled the globe by about half a degree Celsius for roughly two years",
+    "as_written": "the whole world cooled by about half a degree Celsius",
+    "source": "NASA Earth Observatory and USGS Fact Sheet 113-97",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pinatubo lahars kept causing damage for years after 1991",
+    "as_written": "lahars kept killing and burying towns for years",
+    "source": "USGS Volcano Hazards Program and PHIVOLCS, Pinatubo post-eruption lahars",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tambora erupted in 1815 and 1816 was the year without a summer",
+    "as_written": "the year without a summer",
+    "source": "Oppenheimer 2003, Progress in Physical Geography, Climatic, environmental and human consequences of the largest known historic eruption; Smithsonian GVP",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tambora cooled the global average by roughly half a degree",
+    "as_written": "fell by roughly half a degree",
+    "source": "Oppenheimer 2003, Progress in Physical Geography; Raible et al. 2016, WIREs Climate Change",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Laki in 1783 erupted for about eight months and produced about 14 cubic kilometres of lava",
+    "as_written": "around fourteen cubic kilometres of lava",
+    "source": "Thordarson and Self 1993, Bulletin of Volcanology, The Laki and Grimsvotn eruptions 1783-1785",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Iceland lost about a fifth of its population after Laki",
+    "as_written": "Iceland lost about a fifth of its population",
+    "source": "Smithsonian Global Volcanism Program, Laki; Thordarson and Self 2003, Journal of Geophysical Research",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 23,000 excess deaths in Britain from the Laki haze",
+    "as_written": "roughly twenty three thousand extra deaths in Britain",
+    "source": "Witham and Oppenheimer 2005, Bulletin of Volcanology, Mortality in England during the 1783-4 Laki Craters eruption",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Toba erupted about 74,000 years ago, and its role in a human population bottleneck is disputed",
+    "as_written": "About seventy four thousand years ago",
+    "source": "Smithsonian GVP; Petraglia et al. 2007, Science; Smith et al. 2018, Nature Communications, Toba and human survival in Africa",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Siberian Traps erupted about 252 million years ago, coinciding with the end-Permian extinction",
+    "as_written": "two hundred and fifty two million years ago",
+    "source": "Burgess, Bowring and Shen 2014, PNAS, High-precision timeline for Earth's most severe extinction",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The end-Permian extinction wiped out the great majority of marine species",
+    "as_written": "the great majority of marine species vanished",
+    "source": "Stanley 2016, PNAS, Estimates of the magnitudes of major marine mass extinctions; Burgess et al. 2017, Nature Communications",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Humans emit 60 to 100 times more CO2 each year than all volcanoes combined",
+    "as_written": "sixty to one hundred times more carbon dioxide",
+    "source": "USGS Volcano Hazards Program, Volcanoes Can Affect Climate; Gerlach 2011, Eos",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hunga Tonga injected about 146 million tonnes of water into the stratosphere, about 10 percent of its water content",
+    "as_written": "about one hundred and forty six million tonnes of water",
+    "source": "Millán et al. 2022, Geophysical Research Letters, using NASA Aura Microwave Limb Sounder data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hunga Tonga raised stratospheric water by around ten percent",
+    "as_written": "by around ten percent",
+    "source": "Millán et al. 2022, Geophysical Research Letters",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Kasatochi erupted in August 2008 in the Aleutians",
+    "as_written": "In August of 2008",
+    "source": "Smithsonian GVP; Waythomas et al. 2010, Journal of Geophysical Research",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fraser River sockeye returns in 2010 were the largest in nearly a century, far above forecast, possibly due to iron from Kasatochi ash; the link is debated",
+    "as_written": "more sockeye salmon came back to the Fraser River in Canada than in almost a century",
+    "source": "Parsons and Whitney 2012, Fisheries Oceanography; Pacific Salmon Commission 2010 return data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Volcanic ash is rich in iron and can fertilise iron-limited ocean regions",
+    "as_written": "Volcanic ash is rich in iron",
+    "source": "Langmann et al. 2010, Atmospheric Chemistry and Physics, Volcanic ash as fertiliser for the surface ocean",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Volcanic ash weathers into fertile soil",
+    "as_written": "some of the most fertile soil on Earth",
+    "source": "USDA Natural Resources Conservation Service, Andisols soil order",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

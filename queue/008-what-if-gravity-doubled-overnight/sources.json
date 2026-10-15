@@ -1,0 +1,354 @@
+[
+  {
+    "text": "Standard gravity is defined as 9.80665 metres per second squared.",
+    "as_written": "9.80665 metres per second squared",
+    "source": "BIPM SI Brochure; 3rd General Conference on Weights and Measures, 1901",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mass is about 5.97 x 10^24 kg, roughly six trillion trillion kilograms.",
+    "as_written": "about six trillion trillion kilograms",
+    "source": "NASA Goddard Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Doubling surface gravity gives roughly 19.6 metres per second squared.",
+    "as_written": "nearly 19.6",
+    "source": "Derived: 2 x 9.80665 m/s^2 (BIPM standard gravity)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 70 kg person has a weight of about 686 newtons, which is about 690.",
+    "as_written": "about 690 newtons",
+    "source": "Derived from F = mg with BIPM standard gravity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At doubled gravity the same person's weight is about 1,373 newtons.",
+    "as_written": "about 1,370",
+    "source": "Derived from F = mg with doubled standard gravity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fall time from 1 m at standard gravity is about 0.45 seconds.",
+    "as_written": "about 0.45 seconds",
+    "source": "Derived from t = sqrt(2h/g), with BIPM standard gravity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fall time from 1 m at doubled gravity is about 0.32 seconds.",
+    "as_written": "about 0.32",
+    "source": "Derived from t = sqrt(2h/g) with g doubled",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Impact speed rises by a factor of the square root of two, about 1.4.",
+    "as_written": "about 1.4 times",
+    "source": "Derived from v = sqrt(2gh)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A half-metre jump becomes a quarter-metre jump at the same take-off speed.",
+    "as_written": "now lifts you a quarter",
+    "source": "Derived from h = v^2/2g",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fighter pilots with training and suits can sustain about nine g.",
+    "as_written": "nine times normal gravity",
+    "source": "US Air Force and NASA centrifuge and aircraft g-tolerance literature; F-16 9 g design limit",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Untrained people typically lose vision or consciousness at around four to six g.",
+    "as_written": "around four to six times",
+    "source": "NASA and US Air Force aerospace physiology references on g-induced loss of consciousness",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A fall from 3 m at doubled gravity has the energy of a fall from 6 m at normal gravity.",
+    "as_written": "A fall from three metres tonight hits like a fall from six metres yesterday",
+    "source": "Derived from E = mgh",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 1.7 m person's head would hit the floor at about 8.2 m/s at doubled gravity versus 5.8 m/s normally.",
+    "as_written": "about 8.2 metres per second instead of 5.8",
+    "source": "Derived from v = sqrt(2gh) with h = 1.7 m",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "More than one in four adults aged 65 and older falls each year.",
+    "as_written": "more than one in four adults aged sixty-five and older falls every year",
+    "source": "US Centers for Disease Control and Prevention, STEADI older adult fall prevention",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The tallest known tree, the coast redwood Hyperion, is about 116 metres.",
+    "as_written": "about 116 metres",
+    "source": "US National Park Service, Redwood National and State Parks; Earle, Gymnosperm Database",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Koch et al. estimated the maximum height of redwoods at about 122 to 130 metres.",
+    "as_written": "122 to 130 metres",
+    "source": "Koch, Sillett, Jennings and Davis, The limits to tree height, Nature, 2004",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Standard sea-level atmospheric pressure is 101,325 pascals.",
+    "as_written": "101,325 pascals",
+    "source": "ISO 2533 / ICAO International Standard Atmosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ten metres of seawater adds about one atmosphere of pressure, so doubling surface pressure matches about ten metres depth.",
+    "as_written": "about ten metres below the surface of the sea",
+    "source": "NOAA Diving Manual; US Navy Diving Manual",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The speed of sound near the surface is about 340 m/s.",
+    "as_written": "around 340 metres per second",
+    "source": "ISO 2533 standard atmosphere (340.3 m/s at sea level, 15 C)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's atmospheric scale height is about 8.5 km, and halves if gravity doubles.",
+    "as_written": "from about 8.5 kilometres to about four",
+    "source": "NASA Goddard Earth Fact Sheet (scale height 8.5 km); halving derived from H = kT/mg",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oxygen is about 21 percent of air by volume.",
+    "as_written": "about 21 percent of the air",
+    "source": "NOAA / NASA atmospheric composition data (20.95 percent)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At two atmospheres of air the oxygen partial pressure is about 0.42 atmospheres.",
+    "as_written": "about 0.42 atmospheres",
+    "source": "Derived: 0.21 x 2 atm",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Divers keep oxygen partial pressure below 1.4 atmospheres during working dives.",
+    "as_written": "below 1.4 atmospheres",
+    "source": "NOAA Diving Manual; US Navy Diving Manual oxygen exposure limits",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ISS orbits about 400 km up at about 7.66 km/s, with a period of about 92 minutes.",
+    "as_written": "about 400 kilometres above the ground, at about 7.66 kilometres per second, and completes an orbit in about 92 minutes",
+    "source": "NASA International Space Station facts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Circular orbital speed at doubled mass is about 10.8 km/s.",
+    "as_written": "about 10.8 kilometres per second",
+    "source": "Derived: 7.66 km/s x sqrt(2), vis-viva equation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "After the change, the perigee of a formerly circular orbit lies at one third of its radius.",
+    "as_written": "one third of the station's current distance",
+    "source": "Derived from the vis-viva equation with doubled mu",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ISS is about 6,770 km from Earth's centre; a third is about 2,300 km.",
+    "as_written": "roughly 2,300 kilometres",
+    "source": "Derived from NASA ISS altitude and Earth mean radius",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mean radius is about 6,371 km.",
+    "as_written": "6,371 kilometres",
+    "source": "NASA Goddard Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The station reaches the bottom of its new orbit in under twenty minutes, half of a roughly 36-minute new period.",
+    "as_written": "less than twenty minutes",
+    "source": "Derived from Kepler's third law with doubled mu and semi-major axis two thirds of r",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "There are more than ten thousand active satellites in orbit.",
+    "as_written": "more than ten thousand working satellites",
+    "source": "Union of Concerned Scientists Satellite Database; Jonathan McDowell, Jonathan's Space Report",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geostationary orbit is about 35,786 km above the equator.",
+    "as_written": "about 35,786 kilometres",
+    "source": "ESA and NASA geostationary orbit reference values",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's mean distance is about 384,400 km and its orbital speed is about 1.02 km/s.",
+    "as_written": "about 384,400 kilometres, moving at a little over one kilometre per second",
+    "source": "NASA Goddard Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's new perigee would be one third of the current distance, about 128,000 km.",
+    "as_written": "about 128,000 kilometres",
+    "source": "Derived from the vis-viva equation: 384,400 / 3",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's sidereal period is 27.3 days, falling to about 10.5 days.",
+    "as_written": "from 27.3 days to about ten and a half days",
+    "source": "NASA Goddard Moon Fact Sheet (27.3 days); new value derived from Kepler's third law with a = 2r/3 and doubled mu",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal force scales as the inverse cube of distance, so one third the distance gives 27 times the force.",
+    "as_written": "27 times stronger",
+    "source": "Newtonian tidal theory; derived 3 cubed = 27",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun is about 333,000 times Earth's mass.",
+    "as_written": "about 333,000 times more massive than the Earth",
+    "source": "NASA Goddard Sun Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The year is about 365.25 days.",
+    "as_written": "about 365 and a quarter days",
+    "source": "IAU / Julian year definition, 365.25 days",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The average ocean depth is about 3,700 metres.",
+    "as_written": "about 3,700 metres deep",
+    "source": "NOAA National Centers for Environmental Information, ETOPO global relief (mean depth about 3,688 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Long-wave speed is sqrt(g x depth): about 690 km/h at normal gravity and about 970 km/h at doubled gravity for 3,700 m depth.",
+    "as_written": "roughly 690 kilometres per hour",
+    "source": "NOAA Tsunami Program shallow-water wave speed formula; values derived",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Doubled gravity gives roughly 970 km/h for the same depth.",
+    "as_written": "roughly 970",
+    "source": "Derived from sqrt(2 x 9.80665 x 3,700 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's escape velocity is 11.2 km/s, rising by root two to about 15.8 km/s.",
+    "as_written": "from 11.2 to about 15.8 kilometres per second",
+    "source": "NASA Goddard Earth Fact Sheet (11.186 km/s); new value derived",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Astronauts lose roughly 1 to 1.5 percent of bone mineral density per month in the hips and spine in orbit.",
+    "as_written": "one to one and a half percent per month",
+    "source": "NASA Human Research Program, bone loss in spaceflight",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ingenuity flew in Martian air about one percent as dense as Earth's, in 2021.",
+    "as_written": "about one percent as dense as ours",
+    "source": "NASA Jet Propulsion Laboratory, Mars Helicopter Ingenuity mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Required level-flight power rises roughly in proportion to weight to the 1.5 over the square root of density, giving about double at doubled weight and density.",
+    "as_written": "roughly double",
+    "source": "Derived from actuator-disc and induced-power theory, e.g. Pennycuick, Modelling the Flying Bird",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

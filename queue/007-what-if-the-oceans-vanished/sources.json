@@ -1,0 +1,378 @@
+[
+  {
+    "text": "Oceans hold about 1.3 billion cubic kilometres of water",
+    "as_written": "about 1.3 billion cubic kilometres of water",
+    "source": "USGS Water Science School, 'How much water is there on Earth?'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oceans hold 96.5 percent of Earth's water",
+    "as_written": "96.5 percent of all the water on Earth",
+    "source": "USGS Water Science School",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oceans cover about 71 percent of Earth's surface",
+    "as_written": "71 percent of the planet",
+    "source": "NOAA National Ocean Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The continental shelf edge lies at roughly 130 metres depth on average",
+    "as_written": "around 130 metres",
+    "source": "NOAA National Ocean Service, continental shelf; global shelf-break compilations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average ocean depth is about 3.7 kilometres",
+    "as_written": "about 3.7 kilometres",
+    "source": "NOAA / NCEI ETOPO global relief model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Grand Canyon is about 1.8 kilometres deep at its deepest",
+    "as_written": "about 1.8 kilometres",
+    "source": "US National Park Service, Grand Canyon (about 6,000 feet maximum depth)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mauna Kea measured from its seafloor base is over 10 kilometres tall",
+    "as_written": "rises more than ten kilometres",
+    "source": "USGS Hawaiian Volcano Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Everest is 8,849 metres tall",
+    "as_written": "8,849 metres",
+    "source": "2020 joint Nepal and China survey",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The mid-ocean ridge is about 65,000 km long",
+    "as_written": "about 65,000 kilometres long",
+    "source": "NOAA Ocean Exploration",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Mariana Trench floor is nearly 11 km below sea level",
+    "as_written": "nearly 11 kilometres below the old sea surface",
+    "source": "Center for Coastal and Ocean Mapping, University of New Hampshire; Five Deeps Expedition 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Everest's summit would sit over 2 km below sea level if placed in the trench (11 km minus 8.849 km)",
+    "as_written": "over two kilometres below where the waves used to be",
+    "source": "Arithmetic from the trench depth and Everest height cited above",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "With the oceans removed, atmospheric pressure at the old coastline would fall by roughly a quarter, equal to about 2.5 km altitude. This is a rough hydrostatic estimate, not a published result.",
+    "as_written": "it drops by roughly a quarter, to about what you would find on a mountain two and a half kilometres high",
+    "source": "Own back-of-envelope calculation: conservation of atmospheric mass, US Standard Atmosphere scale height, ETOPO bathymetry. Flagged in the narration as a sketch.",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric water vapour totals about 12,900 cubic kilometres",
+    "as_written": "about 12,900 cubic kilometres",
+    "source": "USGS Water Science School, water distribution table",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Water stays in the atmosphere about nine days on average",
+    "as_written": "after about nine days",
+    "source": "USGS Water Science School, water cycle: atmosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 86 percent of global evaporation comes from the ocean",
+    "as_written": "about 86 percent of all evaporation on Earth",
+    "source": "USGS Water Science School, evaporation and the water cycle (about 434,000 of 505,000 cubic km per year)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Water vapour and clouds account for about three quarters of the greenhouse effect",
+    "as_written": "about three quarters of it",
+    "source": "Schmidt et al. 2010, Journal of Geophysical Research, NASA GISS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth without a greenhouse effect would average about minus 18 C",
+    "as_written": "about minus 18 degrees Celsius",
+    "source": "NASA Climate, 'The Causes of Climate Change' and Earth Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The top few metres of ocean hold as much heat as the whole atmosphere",
+    "as_written": "The top few metres of the sea hold as much heat as the entire atmosphere above it",
+    "source": "NOAA National Ocean Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lunar surface reaches about 127 C by day",
+    "as_written": "about 127 degrees Celsius",
+    "source": "NASA Lunar Reconnaissance Orbiter Diviner instrument",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lunar surface falls to about minus 173 C at night",
+    "as_written": "about minus 173 at night",
+    "source": "NASA Lunar Reconnaissance Orbiter Diviner instrument",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Record air temperature on Earth is 56.7 C at Death Valley",
+    "as_written": "56.7 degrees Celsius, in Death Valley",
+    "source": "World Meteorological Organization Archive of Weather and Climate Extremes (1913)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Coldest reliably measured air temperature is minus 89.2 C at Vostok",
+    "as_written": "minus 89.2, at Vostok station",
+    "source": "World Meteorological Organization Archive of Weather and Climate Extremes (1983)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "World population exceeds eight billion",
+    "as_written": "more than eight billion of us",
+    "source": "United Nations Population Division, World Population Prospects (8 billion reached November 2022)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 40 percent of people live within 100 km of a coast",
+    "as_written": "About 40 percent live within 100 kilometres of a coast",
+    "source": "United Nations Atlas of the Oceans",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 80 percent of world trade by volume goes by sea",
+    "as_written": "about 80 percent of world trade by volume",
+    "source": "UNCTAD Review of Maritime Transport",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Aquatic foods supply about 17 percent of animal protein consumed",
+    "as_written": "about 17 percent of the animal protein",
+    "source": "FAO, The State of World Fisheries and Aquaculture 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Glaciers and ice caps hold about 1.7 percent of Earth's water",
+    "as_written": "about 1.7 percent of all Earth's water",
+    "source": "USGS Water Science School (1.74 percent)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Total living biomass is around 550 gigatonnes of carbon",
+    "as_written": "around 550 gigatonnes of carbon",
+    "source": "Bar-On, Phillips and Milo 2018, PNAS, 'The biomass distribution on Earth'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Plants account for roughly 450 gigatonnes of carbon",
+    "as_written": "roughly 450 of those",
+    "source": "Bar-On, Phillips and Milo 2018, PNAS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Marine biomass is about 6 gigatonnes of carbon, about one percent of the total",
+    "as_written": "only about 6 gigatonnes. That is about one percent",
+    "source": "Bar-On, Phillips and Milo 2018, PNAS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ocean produces at least half of atmospheric oxygen, per NOAA; higher figures circulate and are contested",
+    "as_written": "at least half of the oxygen in the air is produced by the ocean",
+    "source": "NOAA National Ocean Service, 'How much oxygen comes from the ocean?'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Air is about 21 percent oxygen",
+    "as_written": "about 21 percent oxygen",
+    "source": "NOAA / NASA atmospheric composition (20.95 percent)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ocean salt spread over land would be roughly 150 m (500 ft) thick",
+    "as_written": "about 150 metres thick",
+    "source": "NOAA National Ocean Service and USGS, 'Why is the ocean salty' (about 500 feet)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Messinian salinity crisis ran from about 5.97 to 5.33 million years ago",
+    "as_written": "Between about 5.97 and 5.33 million years ago",
+    "source": "Manzi et al. 2013 and Krijgsman et al. 1999, Nature, astronomical dating of the Messinian",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Messinian salt deposits are up to about two kilometres thick",
+    "as_written": "up to about two kilometres thick",
+    "source": "Hsu et al. 1973, Deep Sea Drilling Project Leg 13; Ryan 2009",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Peak Zanclean flood discharge was about 100 million cubic metres per second, hundreds of times the Amazon",
+    "as_written": "about 100 million cubic metres per second, hundreds of times the flow of the Amazon",
+    "source": "Garcia-Castellanos et al. 2009, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Mediterranean refilled in between a few months and two years",
+    "as_written": "somewhere between a few months and two years",
+    "source": "Garcia-Castellanos et al. 2009, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ground around Hudson Bay rises about one centimetre per year",
+    "as_written": "about one centimetre a year",
+    "source": "Sella et al. 2007, Geophysical Research Letters, GPS observations of glacial isostatic adjustment",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Water is about a third as dense as mantle rock, so removing 3.7 km of water implies about a kilometre of rebound (seawater about 1,025 kg per cubic metre, upper mantle about 3,300)",
+    "as_written": "The floor should rise by roughly a kilometre, over thousands of years",
+    "source": "Standard Airy isostasy calculation from seawater and upper mantle densities (PREM). Own calculation, flagged as a simple estimate.",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tectonic plates move a few centimetres a year",
+    "as_written": "a few centimetres a year",
+    "source": "USGS, 'Plate tectonics and people'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ringwoodite in a Brazilian diamond contained water, reported in 2014",
+    "as_written": "reported in Nature in 2014",
+    "source": "Pearson et al. 2014, Nature; see also Schmandt et al. 2014, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon recedes about 3.8 cm per year",
+    "as_written": "about 3.8 centimetres every year",
+    "source": "Apollo and Lunokhod retroreflector Lunar Laser Ranging; NASA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's day lengthens by roughly two milliseconds per century",
+    "as_written": "roughly two milliseconds every century",
+    "source": "Stephenson, Morrison and Hohenkerk 2016, Proceedings of the Royal Society A; IERS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Total lunar tidal dissipation is about 3.7 terawatts",
+    "as_written": "around 3.7 terawatts",
+    "source": "Egbert and Ray 2000, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Solid Earth tides move the ground by tens of centimetres",
+    "as_written": "by tens of centimetres",
+    "source": "NOAA National Ocean Service, 'Do tides affect the solid Earth?'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oceans are expected to be lost in roughly a billion years or more as the Sun brightens; timing is debated",
+    "as_written": "in roughly a billion years or more",
+    "source": "Wolf and Toon 2015, Science Advances; Ozaki and Reinhard 2021, Nature Geoscience",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars's atmosphere is about 0.6 percent as dense as Earth's",
+    "as_written": "about 0.6 percent as dense as ours",
+    "source": "NASA Mars Fact Sheet (mean surface pressure about 636 pascals versus 101,325)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]
