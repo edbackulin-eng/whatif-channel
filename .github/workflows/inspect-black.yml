@@ -1,0 +1,44 @@
+name: Inspect black segments
+
+# Pulls a built episode from its artifact and reports, frame by frame, what is on
+# screen around every black/flat stretch. The episode files are large; the
+# report and a few frames are small enough to look at anywhere.
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_id:
+        required: true
+      slug:
+        required: true
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q numpy pillow
+      - name: Fetch and inspect
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/actions/artifacts/${{ inputs.artifact_id }}/zip" > pkg.zip
+          unzip -q pkg.zip -d pkg
+          v=$(ls pkg/*/"${{ inputs.slug }}"/video.mp4 | head -1)
+          cp pkg/*/"${{ inputs.slug }}"/qc.json black/ 2>/dev/null || true
+          python tools/inspect_black.py "$v" black
+          cp pkg/*/"${{ inputs.slug }}"/qc.json black/ || true
+          cp pkg/*/"${{ inputs.slug }}"/visual_qc.json black/ || true
+          cp pkg/*/"${{ inputs.slug }}"/contact_sheet.jpg black/ || true
+      - uses: actions/upload-artifact@v5
+        with:
+          name: black-${{ inputs.slug }}
+          path: black/
+          retention-days: 3
