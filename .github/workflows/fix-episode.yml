@@ -1,0 +1,67 @@
+name: Repair and upload a held episode
+
+# For an episode a build held for review because of a black stretch: pull its
+# package, cover the stretch with the neighbouring shot, re-run QC, and upload it
+# to the nearest free slot only if it now passes.
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_id:
+        required: true
+      slug:
+        required: true
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: video-upload
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -r requirements.txt
+      - name: Fetch the package
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/actions/artifacts/${{ inputs.artifact_id }}/zip" > pkg.zip
+          mkdir -p ready && unzip -q -o pkg.zip -d ready && rm pkg.zip
+          ls -la ready/*/"${{ inputs.slug }}"/
+      - name: Repair and check
+        run: python -X utf8 tools/fix_episode.py "$(ls -d ready/*/${{ inputs.slug }} | head -1)"
+      - name: Upload to the nearest free slot
+        env:
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+        run: python -X utf8 automation/upload_youtube.py
+      - name: Record it
+        if: always()
+        run: |
+          git config user.name "whatif-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          git add queue/
+          git commit -m "repair and upload: ${{ inputs.slug }}" || exit 0
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q origin "${{ github.ref_name }}" && git push && exit 0
+            sleep $((i * 8))
+          done
+          echo "::error::the upload record could not be pushed"
+          exit 1
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: fixed-${{ inputs.slug }}
+          retention-days: 3
+          path: |
+            ready/*/${{ inputs.slug }}/qc.json
+            ready/*/${{ inputs.slug }}/autofix.json

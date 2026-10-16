@@ -146,13 +146,37 @@ def visual_check(work, scenes):
     # unreachable must not sink a build that already has usable frames: the
     # first cloud run died here, twenty minutes in, because submission failed.
     from automation import frames
+    # A frame rejected for being empty is redrawn with light asked for. Redrawn
+    # from the same prompt it came back as dark as before: for an episode about
+    # the Sun going out the prompt itself describes darkness (episode 004).
+    empty = {str(p) for p, v in verdicts.items() if v.get("defect") == "empty"}
+    to_redo = [s for s in scenes if s.get("image") in failed]
+    for s in to_redo:
+        if s.get("image") in empty:
+            base = s.get("prompt") or s.get("text", "")[:160]
+            s["prompt"] = (f"{base}, one clear light source picks out the subject, "
+                           f"visible detail and texture, not pitch black")
     try:
-        retried = frames.regenerate(work, [s for s in scenes
-                                           if s.get("image") in failed])
+        retried = frames.regenerate(work, to_redo)
     except Exception as e:
         log.warning("could not regenerate flagged frames (%s); "
                     "replacing them from neighbours instead", e)
         retried = set()
+
+    # A redrawn frame is looked at again. regenerate() used to count a frame as
+    # fixed the moment one came back, and the second, equally black attempt at
+    # episode 004's frame went straight into the video as 6.2 s of nothing.
+    redrawn = [s for s in scenes if s["index"] in retried and s.get("image")]
+    if redrawn:
+        again = visualqc.inspect([s["image"] for s in redrawn],
+                                 kinds={s["image"]: _frame_kind(s, s["image"]) for s in redrawn})
+        for s in redrawn:
+            v = again.get(s["image"]) or again.get(Path(s["image"])) or {}
+            if visualqc.is_empty(s["image"]) or (not v.get("ok", False)
+                                                  and v.get("defect") != "unchecked"):
+                log.warning("scene %d: the redrawn frame fails too (%s); borrowing a neighbour",
+                            s["index"], v.get("defect") or "empty")
+                retried.discard(s["index"])
     still_bad = [s for s in scenes
                  if s.get("image") in failed and s["index"] not in retried]
     for s in still_bad:

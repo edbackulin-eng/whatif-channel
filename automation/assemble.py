@@ -203,6 +203,18 @@ def assemble(work, episode):
     seo.write_metadata(work / "metadata.txt", episode["title"], description,
                        seo.build_tags(TAGS), HASHTAGS)
 
+    # A black or flat stretch that got past every frame check is covered by the
+    # neighbouring shot held a little longer, and the video is checked again.
+    # Only what is still there afterwards holds the upload.
+    from pipeline import autofix
+    if qc.find_black(final):
+        fixed = work / "video_fixed.mp4"
+        fix = autofix.repair(final, fixed, work / "autofix")
+        autofix.write(fix, work / "autofix.json")
+        if fix["covered"] and fixed.exists() and                 abs(fix["duration_out"] - fix["duration_in"]) < 0.1:
+            shutil.move(str(fixed), str(final))
+            log.info("covered %d black stretch(es); %d left", len(fix["covered"]), len(fix["left"]))
+
     report, problems = qc.check_video(
         final, thumbnail_path=thumb, srt_path=work / "subs.srt",
         expected_min_s=16 * 60, expected_max_s=26 * 60)
@@ -230,7 +242,8 @@ def assemble(work, episode):
     day.mkdir(parents=True, exist_ok=True)
     for name in ("video.mp4", "thumbnail.png", "metadata.txt", "subs.srt",
                  "credits.json", "sources.json", "factcheck-log.md",
-                 "qc.json", "visual_qc.json", "contact_sheet.jpg", "script.txt"):
+                 "qc.json", "visual_qc.json", "contact_sheet.jpg", "script.txt",
+                 "autofix.json", "thumbnail_report.json"):
         src = work / name
         if src.exists():
             shutil.copy2(src, day / name)
