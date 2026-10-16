@@ -1,11 +1,15 @@
 {
   "slug": "005-what-if-every-volcano-erupted-at-once",
   "title": "What If Every Volcano Erupted at Once?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 5,
   "script_source": "claude",
   "created": "2026-10-15T08:42:24+00:00",
   "words": 3373,
   "sourced_claims": 33,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "rendered_minutes": 184.5,
+  "updated": "2026-10-16T01:48:02+00:00",
+  "youtube_id": "gVGYUmMfRB0",
+  "publish_at": "2026-10-17T15:00:00Z"
 }

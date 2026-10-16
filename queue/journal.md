@@ -10,3 +10,5 @@
 - **2026-10-15 20:02 UTC** - Uploaded 003-what-if-the-internet-disappeared as sw4p8avaswo, public at 2026-10-16T15:00:00Z.
 - **2026-10-15 22:39 UTC** - Built 004-what-if-the-sun-went-out-for-a-year in 156 min.
 - **2026-10-15 22:40 UTC** - 004-what-if-the-sun-went-out-for-a-year held for review, QC says ATTENTION: 1 black segment(s) over 0.5s
+- **2026-10-16 01:45 UTC** - Built 005-what-if-every-volcano-erupted-at-once in 185 min.
+- **2026-10-16 01:48 UTC** - Uploaded 005-what-if-every-volcano-erupted-at-once as gVGYUmMfRB0, public at 2026-10-17T15:00:00Z.
