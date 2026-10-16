@@ -1,7 +1,7 @@
 {
   "slug": "004-what-if-the-sun-went-out-for-a-year",
   "title": "What If the Sun Went Out for a Year?",
-  "status": "rendered",
+  "status": "published",
   "position": 4,
   "script_source": "claude",
   "created": "2026-10-15T08:40:02+00:00",
@@ -9,5 +9,7 @@
   "sourced_claims": 49,
   "flagged_claims": 0,
   "rendered_minutes": 155.9,
-  "updated": "2026-10-15T22:39:33+00:00"
+  "updated": "2026-10-16T10:33:32+00:00",
+  "youtube_id": "gxejVO27l1U",
+  "publish_at": "2026-10-19T15:00:00Z"
 }

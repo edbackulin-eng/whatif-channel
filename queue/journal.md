@@ -12,3 +12,4 @@
 - **2026-10-15 22:40 UTC** - 004-what-if-the-sun-went-out-for-a-year held for review, QC says ATTENTION: 1 black segment(s) over 0.5s
 - **2026-10-16 01:45 UTC** - Built 005-what-if-every-volcano-erupted-at-once in 185 min.
 - **2026-10-16 01:48 UTC** - Uploaded 005-what-if-every-volcano-erupted-at-once as gVGYUmMfRB0, public at 2026-10-17T15:00:00Z.
+- **2026-10-16 10:33 UTC** - Uploaded 004-what-if-the-sun-went-out-for-a-year as gxejVO27l1U, public at 2026-10-19T15:00:00Z.
