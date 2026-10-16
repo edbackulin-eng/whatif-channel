@@ -27,7 +27,24 @@ permissions:
   actions: write
 
 jobs:
+  # What If does not start after 18:00 UTC: from 20:00 the shared Kaggle account
+  # belongs to Closed Tabs, and a five-hour build started late would run into it.
+  # A run that would start late (a cron delayed by GitHub, or a chained build)
+  # stops here, green, and the 03:17 cron carries on.
+  gate:
+    runs-on: ubuntu-24.04
+    outputs:
+      go: ${{ steps.clock.outputs.go }}
+    steps:
+      - id: clock
+        run: |
+          h=$((10#$(date -u +%H)))
+          if [ "$h" -lt 18 ]; then echo "go=true" >> "$GITHUB_OUTPUT"
+          else echo "go=false" >> "$GITHUB_OUTPUT"; echo "it is ${h}:xx UTC, after 18:00; the 03:17 run builds instead"; fi
+
   build:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
     runs-on: ubuntu-24.04
     timeout-minutes: 330          # GPU wait + render; the free ceiling is 360
     steps:
@@ -191,6 +208,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if [ "${{ steps.upload.outcome }}" = "success" ] && [ "${{ steps.stock.outputs.ready }}" != "0" ]; then
+            if [ "$((10#$(date -u +%H)))" -ge 18 ]; then
+              echo "only ${{ steps.stock.outputs.ahead }} scheduled ahead, but it is after 18:00 UTC; the 03:17 run builds the next one"
+              exit 0
+            fi
             echo "only ${{ steps.stock.outputs.ahead }} scheduled ahead; starting the next build"
             gh workflow run build-video.yml --repo "${{ github.repository }}"
           else
