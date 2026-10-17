@@ -1,0 +1,266 @@
+[
+  {
+    "text": "There are more than ten thousand active satellites in orbit",
+    "as_written": "More than ten thousand active satellites circle the Earth",
+    "source": "Jonathan McDowell's satellite catalogue and the Union of Concerned Scientists Satellite Database",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A low orbit satellite at about 550 km travels at about 7.6 km/s",
+    "as_written": "At around five hundred and fifty kilometres up, a typical low orbit satellite is travelling at about seven and a half kilometres per second",
+    "source": "Circular orbital velocity from Newtonian mechanics, v = sqrt(GM/r), with Earth's standard gravitational parameter (IERS/IAU)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Low orbit satellites circle the Earth roughly every ninety minutes",
+    "as_written": "roughly every ninety minutes",
+    "source": "Kepler's third law applied to a ~550 km orbit; NASA orbital mechanics references",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The GPS constellation has about thirty operational satellites",
+    "as_written": "number about thirty",
+    "source": "GPS.gov constellation status, US Space Force / National Coordination Office for Space-Based PNT",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS satellites orbit at about 20,200 km",
+    "as_written": "roughly twenty thousand two hundred kilometres",
+    "source": "GPS.gov, Space Segment description",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Each GPS satellite orbits the Earth twice a day",
+    "as_written": "each one circles the Earth twice a day",
+    "source": "GPS.gov, Space Segment description (orbital period about 11 h 58 min)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS satellites carry atomic clocks and broadcast time stamps",
+    "as_written": "Each carries atomic clocks and broadcasts a time stamp",
+    "source": "GPS.gov; GPS Interface Specification IS-GPS-200",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A receiver needs four or more satellites to solve position and time",
+    "as_written": "Your phone listens to four or more of them",
+    "source": "GPS.gov, How GPS Works",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Light travels about 30 cm in one nanosecond",
+    "as_written": "light covers about thirty centimetres in one nanosecond",
+    "source": "SI definition of the speed of light, 299,792,458 m/s (BIPM)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A one microsecond timing error corresponds to about 300 m of range error",
+    "as_written": "an error of one microsecond ... becomes an error of about three hundred metres",
+    "source": "Speed of light, 299,792,458 m/s (BIPM)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geostationary orbit is 35,786 km above the equator",
+    "as_written": "thirty five thousand seven hundred and eighty six kilometres above the equator",
+    "source": "NASA and ESA orbital reference data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Many cellular systems require base station phase synchronisation within about 1.5 microseconds",
+    "as_written": "within about one and a half microseconds of each other",
+    "source": "ITU-T Recommendation G.8271 (time and phase synchronisation for packet networks)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "European rules require high frequency trading timestamps accurate to within 100 microseconds of UTC",
+    "as_written": "accurate to within one hundred microseconds of Coordinated Universal Time",
+    "source": "MiFID II, Commission Delegated Regulation (EU) 2017/574 (RTS 25)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2019 study for NIST estimated a GPS outage would cost the US economy about $1 billion per day on average, more in planting season",
+    "as_written": "about one billion dollars per day on average, and more during planting season",
+    "source": "RTI International, Economic Benefits of the Global Positioning System to the U.S. Private Sector, prepared for NIST, 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A UK study estimated a GPS outage would cost around one billion pounds per day",
+    "as_written": "around one billion pounds per day",
+    "source": "London Economics, The Economic Impact on the UK of a Disruption to GNSS, 2017",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "ECMWF relies mostly on satellite observations",
+    "as_written": "the great majority of the observations it uses come from satellites",
+    "source": "ECMWF, Observations and data assimilation documentation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GOES satellites are American geostationary weather satellites",
+    "as_written": "the American GOES series",
+    "source": "NOAA GOES-R Series Program",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "SpaceX reported well over 100,000 collision avoidance manoeuvres in a six month period",
+    "as_written": "well over one hundred thousand avoidance manoeuvres in a single six month period",
+    "source": "SpaceX Starlink semiannual constellation reports to the FCC (December 2024 to May 2025)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Iridium 33 and Cosmos 2251 collision occurred in February 2009 at about 790 km altitude",
+    "as_written": "In February two thousand nine ... at about seven hundred and ninety kilometres up",
+    "source": "NASA Orbital Debris Program Office, Orbital Debris Quarterly News",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The closing speed of the 2009 collision was about 11.7 km/s",
+    "as_written": "roughly eleven point seven kilometres per second",
+    "source": "NASA Orbital Debris Program Office",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The 2009 collision produced thousands of tracked fragments",
+    "as_written": "thousands of tracked fragments",
+    "source": "NASA Orbital Debris Program Office; US Space Surveillance Network",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Kessler and Cour-Palais published the collision cascade concept in 1978",
+    "as_written": "first described in nineteen seventy eight by two NASA scientists, Donald Kessler and Burton Cour-Palais",
+    "source": "Kessler and Cour-Palais, Collision Frequency of Artificial Satellites, Journal of Geophysical Research, 1978",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About a million debris pieces between 1 and 10 cm exist",
+    "as_written": "about a million pieces larger than one centimetre but smaller than ten",
+    "source": "ESA Space Debris Office, Space Environment Report",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 130 million debris pieces between 1 mm and 1 cm exist",
+    "as_written": "about one hundred and thirty million pieces between one millimetre and one centimetre",
+    "source": "ESA Space Debris Office, Space Environment Report",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "China's 2007 anti-satellite test on Fengyun-1C created more than 3,000 trackable pieces",
+    "as_written": "more than three thousand trackable pieces",
+    "source": "NASA Orbital Debris Program Office",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The November 2021 Russian test on Cosmos 1408 produced about 1,500 trackable fragments and ISS crew sheltered",
+    "as_written": "about fifteen hundred trackable fragments, and the crew of the International Space Station had to shelter",
+    "source": "US Space Command statement and NASA, November 2021",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Coordinated Universal Time is computed by the BIPM from atomic clocks in national laboratories",
+    "as_written": "calculated by the International Bureau of Weights and Measures in France, using hundreds of atomic clocks held in dozens of national laboratories",
+    "source": "BIPM Time Department, Circular T",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 99 percent of intercontinental data travels via undersea cables",
+    "as_written": "Roughly ninety nine percent of intercontinental data travels through undersea cables",
+    "source": "TeleGeography; International Cable Protection Committee",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Uncontrolled geostationary satellites drift to about 15 degrees inclination over roughly 26 years",
+    "as_written": "about fifteen degrees over roughly a quarter of a century",
+    "source": "ESA Space Debris Office; Soop and others, Handbook of Geostationary Orbits",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "SpaceX says dead Starlink satellites at operating altitude reenter within a few years",
+    "as_written": "burns up within a few years",
+    "source": "SpaceX Starlink Gen2 orbital debris mitigation filings to the FCC",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In February 2022 a geomagnetic storm caused 38 of 49 newly launched Starlink satellites to be lost",
+    "as_written": "a batch of forty nine Starlink satellites ... Thirty eight of them fell and burned up",
+    "source": "SpaceX Updates, 'Geomagnetic Storm' post, February 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The May 2024 storm was rated G5, the strongest in about two decades",
+    "as_written": "the strongest geomagnetic storm in two decades, rated G5",
+    "source": "NOAA Space Weather Prediction Center, May 2024 storm assessment",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "An international guideline says low orbit satellites should be removed within 25 years of mission end",
+    "as_written": "within twenty five years of the end of their mission",
+    "source": "Inter-Agency Space Debris Coordination Committee (IADC) Space Debris Mitigation Guidelines",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

@@ -1,0 +1,474 @@
+[
+  {
+    "text": "Ice at the South Pole is nearly three kilometres thick",
+    "as_written": "the ice is nearly three kilometres thick",
+    "source": "US Antarctic Program / National Science Foundation, South Pole Station facts (surface elevation about 2,835 m, ice roughly 2,700-2,850 m thick)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctic ice has existed for millions of years",
+    "as_written": "has not seen open sky for millions of years",
+    "source": "Zachos et al. 2001, Science, 'Trends, Rhythms, and Aberrations in Global Climate'; Antarctic glaciation began about 34 million years ago",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Antarctic ice sheet holds more than 26 million cubic kilometres of ice",
+    "as_written": "more than twenty-six million cubic kilometres of ice",
+    "source": "Fretwell et al. 2013, The Cryosphere (Bedmap2); Morlighem et al. 2020, Nature Geoscience (BedMachine Antarctica)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctica holds about 90 percent of Earth's ice",
+    "as_written": "about ninety percent of all the ice on Earth",
+    "source": "US National Snow and Ice Data Center (NSIDC), All About Glaciers / Antarctic ice sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctic ice is around 70 percent of Earth's fresh water",
+    "as_written": "around seventy percent of all its fresh water",
+    "source": "US Geological Survey, Water Science School; NSIDC",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Latent heat of fusion of ice is about 334 kJ per kg",
+    "as_written": "about three hundred and thirty-four kilojoules for every kilogram",
+    "source": "Standard physical constant, NIST / CRC Handbook of Chemistry and Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Melting the sheet requires roughly 8 times 10 to the 24 joules, derived from volume, ice density 917 kg per cubic metre, and latent heat",
+    "as_written": "roughly eight trillion trillion joules",
+    "source": "Derived calculation from Morlighem et al. 2020 / Fretwell et al. 2013 ice volume, ice density, and NIST latent heat",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global primary energy use is roughly 600 exajoules per year",
+    "as_written": "roughly six hundred exajoules of energy in a year",
+    "source": "Energy Institute, Statistical Review of World Energy",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Melting the sheet would take more than ten thousand years of global energy use, derived by dividing the energy needed by annual consumption",
+    "as_written": "more than ten thousand years of that",
+    "source": "Derived from Energy Institute Statistical Review and the latent heat calculation above",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ten thousand years of human energy use is the figure borrowed in the thought experiment",
+    "as_written": "borrowing ten thousand years of human energy use",
+    "source": "Derived, same calculation as above",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctica covers about 14 million square kilometres, larger than Europe",
+    "as_written": "about fourteen million square kilometres, which is larger than Europe",
+    "source": "British Antarctic Survey; NSIDC",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average ice thickness is more than 2 kilometres",
+    "as_written": "more than two kilometres thick",
+    "source": "NSIDC; Fretwell et al. 2013 (Bedmap2)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Full melt would raise global sea level by nearly 58 metres",
+    "as_written": "nearly fifty-eight metres",
+    "source": "Morlighem et al. 2020, Nature Geoscience (BedMachine Antarctica), 57.9 m sea-level equivalent",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "West Antarctica holds a little over 4 metres of sea level equivalent",
+    "as_written": "a little over four metres of sea level",
+    "source": "Fretwell et al. 2013, The Cryosphere (Bedmap2), about 4.3 m",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A canyon under Denman Glacier reaches about 3.5 km below sea level, the deepest known point on land",
+    "as_written": "about three and a half kilometres below sea level",
+    "source": "Morlighem et al. 2020, Nature Geoscience (BedMachine Antarctica)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ice shrinks about 8 percent on melting, since ice density is about 917 kg per cubic metre against 1000 for water",
+    "as_written": "a loss of about eight percent",
+    "source": "Standard physical constants for ice and water density, NIST",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 24 million cubic kilometres of liquid water results",
+    "as_written": "about twenty-four million cubic kilometres of liquid",
+    "source": "Derived from ice volume and density ratio, Fretwell et al. 2013 / Morlighem et al. 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Spread evenly over the continent, the water would be more than 1.5 km deep",
+    "as_written": "more than one and a half kilometres deep",
+    "source": "Derived: roughly 24 million cubic km divided by about 14 million square km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Coldest ground-level thermometer air temperature recorded is minus 89.2 C at Vostok, 1983",
+    "as_written": "minus eighty-nine point two degrees Celsius, recorded at Vostok Station in Antarctica in 1983",
+    "source": "World Meteorological Organization, Weather and Climate Extremes Archive",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ice sheet's mass is more than 20 million billion tonnes",
+    "as_written": "more than twenty million billion tonnes of it",
+    "source": "Derived from ice volume times density, Fretwell et al. 2013 / Morlighem et al. 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sea surface near a large ice sheet is raised by some tens of metres by gravitational attraction",
+    "as_written": "by some tens of metres",
+    "source": "Clark and Lingle 1977; Mitrovica et al. 2001, Nature, 'Recent mass balance of polar ice sheets inferred from patterns of global sea-level change'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Changes in gravity propagate at the speed of light",
+    "as_written": "changes in gravity travel at the speed of light",
+    "source": "General relativity; confirmed by LIGO/Virgo GW170817 observations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Amazon discharges roughly 200,000 cubic metres per second",
+    "as_written": "roughly two hundred thousand cubic metres every second",
+    "source": "NASA Earth Observatory / Brazilian National Water Agency (ANA) discharge records, about 209,000 m3/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At that rate, 24 million cubic km would take nearly 4,000 years",
+    "as_written": "would take nearly four thousand years",
+    "source": "Derived from Amazon discharge and meltwater volume",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Deep-ocean tsunamis travel up to about 800 km per hour",
+    "as_written": "up to roughly eight hundred kilometres an hour",
+    "source": "NOAA National Tsunami Warning Center / NOAA Tsunami FAQ",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The South Pole is about 10,000 km from the equator",
+    "as_written": "about ten thousand kilometres from the equator",
+    "source": "Original metre definition (one ten-millionth of the pole to equator quadrant); geodesy",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 800 km/h, 10,000 km takes about 12 hours",
+    "as_written": "takes about twelve hours",
+    "source": "Derived arithmetic",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "West Antarctic collapse would give North American coasts about 25 percent more rise than the global average",
+    "as_written": "roughly a quarter more rise than the global average",
+    "source": "Mitrovica, Gomez and Clark 2009, Science, 'The Sea-Level Fingerprint of West Antarctic Collapse'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fifty-eight metres is about the height of a twenty-storey building",
+    "as_written": "the height of a twenty-storey building",
+    "source": "Approximate building-height arithmetic at about 3 m per storey",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "More than 600 million people live on land less than 10 metres above sea level",
+    "as_written": "More than six hundred million people already live on land less than ten metres above sea level",
+    "source": "McGranahan, Balk and Anderson 2007, Environment and Urbanization; Neumann et al. 2015, PLOS ONE",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The highest natural point in the Maldives is about 2.4 metres",
+    "as_written": "only about two and a half metres above the sea",
+    "source": "CIA World Factbook, Maldives elevation extremes (2.4 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About a quarter of the Netherlands lies below sea level",
+    "as_written": "About a quarter of the Netherlands already lies below sea level",
+    "source": "Government of the Netherlands / Statistics Netherlands (CBS), about 26 percent",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Florida's highest natural point is about 105 metres",
+    "as_written": "about one hundred and five metres",
+    "source": "US Geological Survey, Britton Hill (345 ft)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Florida's average elevation is about 30 metres",
+    "as_written": "only about thirty metres",
+    "source": "US Geological Survey, elevations and distances in the United States",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The oceans hold about 1.3 billion cubic kilometres of water",
+    "as_written": "about one point three billion cubic kilometres of water",
+    "source": "NOAA National Geophysical Data Center; USGS Water Science School",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "24 million cubic km added to the oceans is an increase of about 1.8 percent",
+    "as_written": "an increase of about one point eight percent",
+    "source": "Derived from NOAA ocean volume and meltwater volume",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2023 Nature study projected Antarctic bottom water overturning slowing about 40 percent by 2050 under high emissions",
+    "as_written": "could slow by around forty percent by 2050",
+    "source": "Li, England et al. 2023, Nature, 'Abyssal ocean overturning slowdown and warming driven by Antarctic meltwater'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fresh snow reflects 80 to 90 percent of sunlight",
+    "as_written": "reflects eighty to ninety percent of the sunlight",
+    "source": "NSIDC, Albedo and sea ice",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctica lost about 2,720 billion tonnes of ice between 1992 and 2017",
+    "as_written": "about two thousand seven hundred and twenty billion tonnes of ice between 1992 and 2017",
+    "source": "IMBIE team 2018, Nature, 'Mass balance of the Antarctic Ice Sheet from 1992 to 2017'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That loss raised sea level by 7.6 millimetres",
+    "as_written": "seven point six millimetres",
+    "source": "IMBIE team 2018, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Loss rate in 2012-2017 was about 219 billion tonnes per year",
+    "as_written": "about two hundred and nineteen billion tonnes a year",
+    "source": "IMBIE team 2018, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At that rate, melting the full sheet would take over 100,000 years",
+    "as_written": "more than a hundred thousand years",
+    "source": "Derived: ice mass of roughly 24 million gigatonnes divided by 219 gigatonnes per year",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Thwaites Glacier is about the size of Florida",
+    "as_written": "about the size of Florida",
+    "source": "International Thwaites Glacier Collaboration (ITGC)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Thwaites holds enough ice for about 65 centimetres of sea level rise",
+    "as_written": "roughly sixty-five centimetres",
+    "source": "International Thwaites Glacier Collaboration (ITGC) / British Antarctic Survey",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Thwaites collapse could destabilise neighbours for a total approaching 3 metres",
+    "as_written": "a total approaching three metres",
+    "source": "International Thwaites Glacier Collaboration (ITGC)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "DeConto and Pollard 2016 projected over a metre of Antarctic sea level contribution by 2100 under highest emissions",
+    "as_written": "more than a metre of sea level by 2100",
+    "source": "DeConto and Pollard 2016, Nature, 'Contribution of Antarctica to past and future sea-level rise'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The same paper projected about 15 metres by 2500",
+    "as_written": "about fifteen metres by 2500",
+    "source": "DeConto and Pollard 2016, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2019 paper found the cliff collapse mechanism was not needed to match the past and gave lower projections",
+    "as_written": "A later paper in 2019",
+    "source": "Edwards et al. 2019, Nature, 'Revisiting Antarctic ice loss due to marine ice-cliff instability'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Meltwater pulse 1A about 14,600 years ago raised sea level roughly 14 to 18 metres in under 500 years; the source is debated",
+    "as_written": "About fourteen thousand six hundred years ago, sea level rose roughly fourteen to eighteen metres in under five hundred years",
+    "source": "Deschamps et al. 2012, Nature, 'Ice-sheet collapse and sea-level rise at the Bolling warming 14,600 years ago'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Burning all fossil fuel reserves could nearly eliminate the Antarctic ice sheet over thousands of years",
+    "as_written": "could be nearly eliminated, over thousands of years",
+    "source": "Winkelmann et al. 2015, Science Advances, 'Combustion of available fossil fuel resources sufficient to eliminate the Antarctic Ice Sheet'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctica glaciated about 34 million years ago at the Eocene-Oligocene transition",
+    "as_written": "Around thirty-four million years ago",
+    "source": "Zachos et al. 2001, Science; DeConto and Pollard 2003, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Palm pollen found in Antarctic seabed cores dates to around 50 million years ago",
+    "as_written": "dated to around fifty million years ago",
+    "source": "Pross et al. 2012, Nature, 'Persistent near-tropical warmth on the Antarctic continent during the early Eocene epoch'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 3 million years ago, in the Pliocene, CO2 was similar to today's and sea level was many metres higher, with estimates ranging from a few to over twenty metres",
+    "as_written": "around three million years ago in the Pliocene",
+    "source": "Dutton et al. 2015, Science, 'Sea-level rise due to polar ice-sheet mass loss during past warm periods'; Miller et al. 2012, Geology",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Bedrock in the Amundsen Sea region is rising at up to 41 mm per year",
+    "as_written": "up to forty-one millimetres a year",
+    "source": "Barletta et al. 2018, Science, 'Observed rapid bedrock uplift in Amundsen Sea Embayment promotes ice-sheet stability'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Models suggest post-melt rebound of hundreds of metres, depending heavily on mantle viscosity",
+    "as_written": "could rise by hundreds of metres over thousands of years",
+    "source": "Whitehouse et al. 2019, Nature Communications, 'Solid Earth change and the evolution of the Antarctic Ice Sheet'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Redistributing polar ice mass toward the oceans slows Earth's rotation and lengthens the day; full melt would lengthen it by a fraction of a second",
+    "as_written": "lengthen the day by a fraction of a second",
+    "source": "Derived moment-of-inertia estimate; see Agnew 2024, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Polar ice melt delayed the possible need for a negative leap second by about three years, to 2029",
+    "as_written": "by about three years, to 2029",
+    "source": "Agnew 2024, Nature, 'A global timekeeping problem postponed by global warming'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "More than 400 subglacial lakes lie beneath the Antarctic ice",
+    "as_written": "more than four hundred lakes",
+    "source": "Siegert et al. 2016, Journal of Glaciology, 'Advances in the inventory and understanding of Antarctic subglacial lakes'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Gamburtsev Mountains are comparable in size and shape to the European Alps and were revealed by radar in the late 2000s",
+    "as_written": "about the size and shape of the European Alps",
+    "source": "Bo et al. 2009, Nature, 'The Gamburtsev mountains revealed by airborne radar'; AGAP / International Polar Year survey 2008-2009",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

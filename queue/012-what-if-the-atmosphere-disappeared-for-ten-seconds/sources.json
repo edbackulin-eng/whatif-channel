@@ -1,0 +1,298 @@
+[
+  {
+    "text": "The atmosphere has a mass of a little over five quadrillion tonnes, about 5.15e18 kg.",
+    "as_written": "a little over five quadrillion tonnes",
+    "source": "Trenberth and Smith 2005, 'The Mass of the Atmosphere', Journal of Climate; NCAR Climate Data Guide",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The atmosphere's mass is under one millionth of Earth's mass (about 5.15e18 kg versus 5.97e24 kg).",
+    "as_written": "less than one millionth of the mass of the Earth",
+    "source": "NASA Earth Fact Sheet (Earth mass 5.97e24 kg); Trenberth and Smith 2005",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars lost most of its atmosphere over billions of years, as found by MAVEN.",
+    "as_written": "took billions of years to do it, according to NASA's MAVEN mission",
+    "source": "NASA MAVEN mission results (Jakosky et al., Science 2017)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sea-level air pressure is about 101,325 pascals, equivalent to about ten tonnes of weight per square metre.",
+    "as_written": "about ten tonnes on every square metre",
+    "source": "International Standard Atmosphere (ISO 2533 / ICAO Doc 7488)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ten tonnes of force per square metre acts on walls, windows and roofs when outside pressure is zero and inside is one atmosphere.",
+    "as_written": "ten tonnes of force pushing outward",
+    "source": "International Standard Atmosphere (ISO 2533); simple pressure-times-area calculation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Solar irradiance above the atmosphere is about 1361 watts per square metre.",
+    "as_written": "about thirteen hundred and sixty one watts on every square metre",
+    "source": "Kopp and Lean 2011, SORCE Total Irradiance Monitor",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Clear-sky sea-level sunlight on a surface facing the sun is roughly 1000 watts per square metre.",
+    "as_written": "roughly a thousand",
+    "source": "ASTM G173 / NREL standard solar spectrum, AM1.5",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ozone layer absorbs the shortest, most damaging ultraviolet radiation.",
+    "as_written": "The ozone layer normally absorbs the shortest ultraviolet",
+    "source": "WMO/UNEP Scientific Assessment of Ozone Depletion",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Divers can suffer lung overpressure injury from ascents of only a metre or two while holding their breath.",
+    "as_written": "a metre or two of ascent",
+    "source": "US Navy Diving Manual, pulmonary barotrauma section; Divers Alert Network",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "Pulmonary barotrauma generally requires an ascent of several feet to tens of feet with a closed glottis, but standard diving physiology and safety guidelines typically cite a risk threshold starting around 4 feet (about 1.2 metres) under specific conditions; however, a strict 1-to-2 metre limit without caveats is slightly exaggerated as a general rule for lung overpressure.",
+    "needs_human": true
+  },
+  {
+    "text": "The vapour pressure of water at body temperature is about 6.3 kilopascals.",
+    "as_written": "about six point three kilopascals",
+    "source": "NIST Chemistry WebBook / standard steam tables; Armstrong limit definition",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "6.3 kilopascals is about six percent of standard sea-level pressure of 101.3 kilopascals.",
+    "as_written": "about six percent of normal sea level pressure",
+    "source": "Arithmetic from ISO 2533 and NIST water vapour pressure data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Air pressure falls to the Armstrong limit at an altitude of roughly 19 kilometres.",
+    "as_written": "roughly nineteen kilometres",
+    "source": "Ernsting's Aviation and Space Medicine; NASA/FAA descriptions of the Armstrong limit",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In 1965 at NASA Johnson Space Center, Jim LeBlanc was exposed to near vacuum in a suit failure and stayed conscious about 14 seconds.",
+    "as_written": "In 1965, at NASA's Johnson Space Center",
+    "source": "NASA Johnson Space Center accounts of the 1965 vacuum chamber accident; Landis 2007, 'Human Exposure to Vacuum'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "LeBlanc remained conscious for about 14 seconds.",
+    "as_written": "about fourteen seconds",
+    "source": "NASA Johnson Space Center accounts of the 1965 vacuum chamber accident",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Time of useful consciousness above about 15 km (50,000 ft) is roughly 9 to 12 seconds.",
+    "as_written": "roughly nine to twelve seconds",
+    "source": "FAA Civil Aerospace Medical Institute, time of useful consciousness table",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The altitude above which that consciousness time applies is about 15 kilometres (50,000 feet).",
+    "as_written": "above about fifteen kilometres",
+    "source": "FAA Civil Aerospace Medical Institute",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Airliners cruise at about 11 kilometres altitude (around 35,000 feet).",
+    "as_written": "about eleven kilometres",
+    "source": "FAA / ICAO typical cruise altitudes",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Free fall for 10 seconds covers about 490 metres (0.5 x 9.81 x 100).",
+    "as_written": "about four hundred and ninety metres",
+    "source": "Standard gravity 9.80665 m/s2, kinematics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "After 10 seconds of free fall, speed is about 98 metres per second.",
+    "as_written": "about ninety-eight metres per second",
+    "source": "Standard gravity 9.80665 m/s2, kinematics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "98 metres per second is about 350 kilometres per hour.",
+    "as_written": "close to three hundred and fifty kilometres per hour",
+    "source": "Unit conversion of 98 m/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The atmosphere's weight equals about 10 metres of seawater, and pressure doubles at about 10 metres depth.",
+    "as_written": "roughly ten metres deep",
+    "source": "NOAA Ocean Service; US Navy Diving Manual",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pressure doubles when you dive about ten metres.",
+    "as_written": "pressure doubles when you dive ten metres",
+    "source": "NOAA Ocean Service; US Navy Diving Manual",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Water at ordinary sea temperatures has a vapour pressure of roughly 1.7 kPa, which is matched by about 17 centimetres of water depth, so boiling is suppressed below roughly a quarter of a metre.",
+    "as_written": "less than a quarter of a metre",
+    "source": "NIST water vapour pressure data; hydrostatic pressure calculation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A diver ten metres down experiences about one atmosphere of absolute pressure when the atmosphere is absent, equal to normal sea level now.",
+    "as_written": "under about the pressure of an ordinary day on land",
+    "source": "Hydrostatic pressure calculation; US Navy Diving Manual",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth without its greenhouse effect would have an effective temperature of about minus 18 degrees Celsius.",
+    "as_written": "about minus eighteen degrees Celsius",
+    "source": "NASA Earth Observatory; IPCC AR4 Working Group 1 FAQ 1.1",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That is about 33 degrees colder than the actual average surface temperature of about 15 degrees Celsius.",
+    "as_written": "around thirty-three degrees colder than today",
+    "source": "NASA Earth Observatory; IPCC AR4 Working Group 1 FAQ 1.1",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The heat capacity of the whole atmosphere equals that of only the top few metres of the ocean.",
+    "as_written": "The top few metres of the ocean hold as much heat as the whole atmosphere above them",
+    "source": "Calculation from atmospheric mass per area (about 10,300 kg/m2, Trenberth and Smith 2005) and specific heats from NIST; standard textbook result",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Three Soyuz 11 cosmonauts died in 1971 when their capsule depressurised in space.",
+    "as_written": "Soyuz 11 in 1971, when three cosmonauts died",
+    "source": "NASA NSSDCA Soyuz 11 mission record; Roscosmos history",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "World population is about eight billion.",
+    "as_written": "Eight billion people",
+    "source": "United Nations World Population Prospects 2022; UN announcement of 15 November 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A car at 100 km/h covers about 278 metres in ten seconds.",
+    "as_written": "two hundred and seventy-eight metres",
+    "source": "Arithmetic: 100 km/h = 27.8 m/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fossil fuels supply well over half of global electricity (about 60 percent in 2023).",
+    "as_written": "well over half of the world's electricity",
+    "source": "Ember Global Electricity Review 2024; IEA Electricity 2024",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tardigrades were exposed to open space for ten days in 2007 and many survived.",
+    "as_written": "exposed to the vacuum of open space for ten days",
+    "source": "Jonsson et al. 2008, Current Biology, FOTON-M3 mission, ESA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lichens on the outside of the ISS spent about 1.5 years in space and recovered.",
+    "as_written": "about a year and a half in space",
+    "source": "ESA EXPOSE-E experiment on the ISS, 2008 to 2009",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Plants account for about 450 gigatonnes of carbon out of roughly 550 gigatonnes in all living things.",
+    "as_written": "about four hundred and fifty billion tonnes out of roughly five hundred and fifty billion tonnes",
+    "source": "Bar-On, Phillips and Milo 2018, PNAS, 'The biomass distribution on Earth'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Bacteria account for about 70 gigatonnes of carbon.",
+    "as_written": "Bacteria come in at about seventy billion",
+    "source": "Bar-On, Phillips and Milo 2018, PNAS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "All animals total about 2 gigatonnes of carbon, under half a percent of global biomass.",
+    "as_written": "about two billion tonnes, less than half a percent of the living mass of the planet",
+    "source": "Bar-On, Phillips and Milo 2018, PNAS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The census of life by carbon mass was published in 2018.",
+    "as_written": "A 2018 census of life on Earth",
+    "source": "Bar-On, Phillips and Milo 2018, PNAS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

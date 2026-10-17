@@ -1,0 +1,450 @@
+[
+  {
+    "text": "The Moon's average distance from Earth is about 384,400 kilometres.",
+    "as_written": "about 384,400 kilometres away",
+    "source": "NASA Moon Fact Sheet (NSSDCA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon is about 3,500 kilometres in diameter (3,474.8 km).",
+    "as_written": "about 3,500 kilometres across",
+    "source": "NASA Moon Fact Sheet (NSSDCA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scenario assumption: the second Moon orbits at about 700,000 kilometres, nearly twice the Moon's distance (700,000 / 384,400 is about 1.8).",
+    "as_written": "about 700,000 kilometres",
+    "source": "Scenario choice by the script; ratio computed from NASA Moon Fact Sheet distance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon has about one eighty-first of Earth's mass.",
+    "as_written": "about one eighty-first of the mass of Earth",
+    "source": "NASA Moon Fact Sheet (mass ratio 0.0123)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Moonlight takes about 1.3 seconds to reach Earth.",
+    "as_written": "about 1.3 seconds",
+    "source": "Distance 384,400 km divided by speed of light 299,792 km/s (NIST/SI definition; NASA Moon Fact Sheet)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Light from a body at 700,000 km takes about 2.3 seconds to arrive.",
+    "as_written": "about 2.3 seconds",
+    "source": "700,000 km divided by speed of light 299,792 km/s (SI defined value)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The full Moon is roughly 400,000 times dimmer than the Sun (apparent magnitudes about -12.7 versus -26.7).",
+    "as_written": "roughly 400,000 times dimmer than the Sun",
+    "source": "NASA Moon Fact Sheet and Sun Fact Sheet apparent magnitudes",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 700,000 km the second Moon's apparent area, and so its light, is about a quarter of the Moon's (inverse-square on angular size).",
+    "as_written": "about a quarter of the first",
+    "source": "Geometry using NASA Moon Fact Sheet distance and diameter",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon spans about half a degree of sky.",
+    "as_written": "about half a degree",
+    "source": "NASA Moon Fact Sheet (mean angular diameter about 0.52 degrees)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 3,475 km body at 700,000 km spans about 0.28 degrees.",
+    "as_written": "about 0.28 degrees across",
+    "source": "Geometry from NASA Moon Fact Sheet diameter",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon moves against the stars by about 13 degrees per day (360 degrees over 27.3 days).",
+    "as_written": "about 13 degrees a day",
+    "source": "NASA Moon Fact Sheet sidereal period 27.32 days",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A body orbiting at 700,000 km moves about 5 degrees per day (360 degrees over about 67 days).",
+    "as_written": "only about 5 degrees",
+    "source": "Kepler's third law applied to NASA Moon Fact Sheet orbit values",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun is about 400 times wider than the Moon and about 400 times farther away, so they look about the same size.",
+    "as_written": "about 400 times wider than the Moon, and about 400 times farther away",
+    "source": "NASA Sun Fact Sheet and Moon Fact Sheet; NASA eclipse explanations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun's apparent diameter is about half a degree, larger than 0.28 degrees, so the second Moon could not cause total eclipses.",
+    "as_written": "The Sun and Moon both span about half a degree",
+    "source": "NASA Sun Fact Sheet (about 0.53 degrees)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The lunar tidal cycle is about 12 hours and 25 minutes.",
+    "as_written": "12 hours and 25 minutes",
+    "source": "NOAA Tides and Currents (tidal day 24h50m, semidiurnal period)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal force falls as the cube of distance.",
+    "as_written": "falls off with the cube of distance",
+    "source": "NOAA / standard tidal theory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Doubling distance cuts tidal force by a factor of eight.",
+    "as_written": "a factor of eight",
+    "source": "Inverse-cube law, standard tidal theory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 700,000 km the second Moon's tide is about 17 percent of the Moon's ((384,400/700,000)^3 = 0.166).",
+    "as_written": "about 17 percent as strong",
+    "source": "Inverse-cube tidal scaling with NASA Moon Fact Sheet distance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun's tide is a little under half the Moon's, about 46 percent.",
+    "as_written": "a little under half as strong",
+    "source": "NOAA Tides and Currents (Sun's tidal force about 46% of Moon's)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun adds roughly 46 percent to the lunar tide at spring tide.",
+    "as_written": "roughly 46 percent",
+    "source": "NOAA Tides and Currents",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Biggest tides would be about 11 to 12 percent higher (1.63 versus 1.46).",
+    "as_written": "about 11 or 12 percent higher",
+    "source": "Computed from NOAA tidal ratios and inverse-cube scaling",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Open-ocean tides are less than a metre.",
+    "as_written": "less than a metre",
+    "source": "NOAA National Ocean Service tides education",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Bay of Fundy tidal range exceeds 15 metres (16.3 m at Burntcoat Head).",
+    "as_written": "more than 15 metres",
+    "source": "Canadian Hydrographic Service / Parks Canada",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "An 11 percent increase on about 16 metres is nearly two extra metres.",
+    "as_written": "nearly two extra metres",
+    "source": "Computed from Canadian Hydrographic Service range and the tidal ratios above",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Great Barrier Reef corals mass spawn a few nights after a full Moon in late spring.",
+    "as_written": "a few nights after a full Moon in late spring",
+    "source": "Harrison et al. 1984, Science; Great Barrier Reef Marine Park Authority",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's sidereal orbital period is 27.3 days.",
+    "as_written": "27.3 days",
+    "source": "NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The synodic month (phase cycle) is 29.5 days.",
+    "as_written": "29.5 days",
+    "source": "NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "By Kepler's third law an orbit at 700,000 km takes about 67 days.",
+    "as_written": "about 67 days",
+    "source": "Kepler's third law applied to NASA Moon Fact Sheet orbit values",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Two moons with 27.3 and 67 day periods align about every 46 days.",
+    "as_written": "every six or seven weeks",
+    "source": "Synodic period computed from Kepler's third law",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon rises about 50 minutes later each day.",
+    "as_written": "about 50 minutes later each day",
+    "source": "NASA / US Naval Observatory moonrise data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A body with a 67-day period would rise about 22 minutes later each day.",
+    "as_written": "only about 22 minutes later",
+    "source": "Computed from Kepler's third law and Earth's rotation rate",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon recedes at about 3.8 centimetres per year.",
+    "as_written": "about 3.8 centimetres a year",
+    "source": "Apollo Lunar Laser Ranging experiments; NASA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's day lengthens by about 1.7 milliseconds per century due to tidal friction.",
+    "as_written": "about 1.7 milliseconds per century",
+    "source": "Stephenson, Morrison and Hohenkerk 2016, Proc. Royal Society A; IERS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Devonian fossil corals show about 400 days per year around 400 million years ago.",
+    "as_written": "roughly 400 days in a year",
+    "source": "Wells 1963, Nature; Scrutton 1964",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Devonian period was about 400 million years ago.",
+    "as_written": "about 400 million years ago",
+    "source": "International Commission on Stratigraphy",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Days then were about 22 hours long.",
+    "as_written": "about 22 hours",
+    "source": "Wells 1963 (400 days per year implies about 22 hours); Williams 2000, Reviews of Geophysics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal braking torque scales with the inverse sixth power of distance.",
+    "as_written": "the sixth power of distance",
+    "source": "Standard tidal friction theory, e.g. Murray and Dermott, Solar System Dynamics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 1.8 times the distance the torque is about 3 percent of the Moon's ((384,400/700,000)^6 = 0.027).",
+    "as_written": "only about 3 percent",
+    "source": "Computed from sixth-power scaling and NASA Moon Fact Sheet distance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's axial tilt is about 23.4 degrees.",
+    "as_written": "about 23.4 degrees",
+    "source": "NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The tilt varies between about 22 and 24.5 degrees over about 41,000 years.",
+    "as_written": "between about 22 and 24.5 degrees over a cycle of about 41,000 years",
+    "source": "Milankovitch cycle values, NASA Earth Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Laskar 1993 found that without the Moon Earth's tilt could wander chaotically from near zero to about 85 degrees.",
+    "as_written": "anywhere from nearly zero to about 85 degrees",
+    "source": "Laskar, Joutel and Robutel 1993, Nature, 'Stabilization of the Earth's obliquity by the Moon'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Laskar published this in 1993.",
+    "as_written": "In 1993",
+    "source": "Laskar, Joutel and Robutel 1993, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2012 study by Lissauer and colleagues found tilt variations without the Moon are much milder.",
+    "as_written": "a 2012 study by Jack Lissauer and colleagues",
+    "source": "Lissauer, Barnes and Chambers 2012, Icarus, 'Obliquity variations of a moonless Earth'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's Hill sphere reaches about 1.5 million kilometres.",
+    "as_written": "about 1.5 million kilometres",
+    "source": "NASA / standard Hill sphere calculation (Earth Fact Sheet values)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Prograde orbits are stable out to about half the Hill radius, roughly 730,000 km.",
+    "as_written": "roughly 730,000 kilometres",
+    "source": "Domingos, Winter and Yokoyama 2006, Astronomy and Astrophysics (0.4895 Hill radii)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gladman 1993 gave a stability criterion of about three and a half mutual Hill radii of separation (2 root 3).",
+    "as_written": "about three and a half of their mutual Hill radii",
+    "source": "Gladman 1993, Icarus, 'Dynamics of systems of two close planets'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gladman's criterion was published in 1993.",
+    "as_written": "Brett Gladman in 1993",
+    "source": "Gladman 1993, Icarus",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Applying the criterion to two Moon-mass bodies puts the outer one at about 800,000 km or more.",
+    "as_written": "about 800,000 kilometres or more",
+    "source": "Computed from Gladman 1993 criterion with NASA Moon and Earth masses and distance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "L4 and L5 sit 60 degrees ahead of and behind the Moon.",
+    "as_written": "60 degrees ahead of and behind the Moon",
+    "source": "Standard Lagrange point geometry; NASA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Stability at L4 and L5 requires the primary to be at least about 25 times the secondary's mass (24.96).",
+    "as_written": "at least about 25 times the mass",
+    "source": "Routh stability criterion, Murray and Dermott, Solar System Dynamics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth is about 81 times the mass of the Moon.",
+    "as_written": "about 81 times the Moon",
+    "source": "NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Kordylewski reported dust cloud candidates at the Earth-Moon Lagrange points in 1961.",
+    "as_written": "In 1961",
+    "source": "Kordylewski 1961, Acta Astronomica / Astronomical Society publications",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A Hungarian team reported polarised light from dust clouds at those points in 2018; this is still debated.",
+    "as_written": "In 2018, a Hungarian team",
+    "source": "Slíz-Balogh, Barta and Horváth 2018, Monthly Notices of the Royal Astronomical Society",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jutzi and Asphaug proposed in 2011 that a companion moon formed the far side highlands.",
+    "as_written": "In 2011, Martin Jutzi and Erik Asphaug",
+    "source": "Jutzi and Asphaug 2011, Nature, 'Forming the lunar farside highlands by accretion of a companion moon'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon formed about 4.5 billion years ago.",
+    "as_written": "about 4.5 billion years ago",
+    "source": "NASA Lunar and Planetary Institute; Barboni et al. 2017, Science Advances",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The proposed impact speed was about 2.5 kilometres per second.",
+    "as_written": "about two and a half kilometres per second",
+    "source": "Jutzi and Asphaug 2011, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

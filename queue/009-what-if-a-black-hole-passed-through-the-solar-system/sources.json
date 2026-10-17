@@ -1,0 +1,618 @@
+[
+  {
+    "text": "Observer is about 1.4 AU from the black hole when Earth is a quarter orbit away from it (scenario geometry: sqrt of 2 AU).",
+    "as_written": "about one point four times the distance from you to the Sun",
+    "source": "Scenario geometry (Earth and black hole each 1 AU from the Sun at right angles); AU defined by IAU 2012 Resolution B2",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scenario black hole has about ten solar masses, similar to Gaia BH1.",
+    "as_written": "roughly ten times the mass of the Sun",
+    "source": "Scenario assumption, chosen near the mass of Gaia BH1 (El-Badry et al. 2023, MNRAS 518, 1057)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scenario speed of the black hole is 30 km/s.",
+    "as_written": "moving at thirty kilometres every second",
+    "source": "Scenario assumption",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 10 solar mass black hole has an event horizon about 59 km across (Schwarzschild diameter 4GM/c^2).",
+    "as_written": "only about sixty kilometres across",
+    "source": "Schwarzschild solution; solar GM from IAU 2015 Resolution B3; speed of light from CODATA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 30 km/s the hole crosses its own ~59 km width in about two seconds.",
+    "as_written": "every two seconds",
+    "source": "Arithmetic: 59 km divided by 30 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gaia BH1 is about 1,560 light years away.",
+    "as_written": "about fifteen hundred and sixty light years away",
+    "source": "El-Badry et al. 2023, MNRAS 518, 1057, Gaia astrometry",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gaia BH1 has a mass of about 9.6 solar masses.",
+    "as_written": "about nine point six Suns",
+    "source": "El-Badry et al. 2023, MNRAS 518, 1057",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gaia BH3 was announced in 2024.",
+    "as_written": "announced in 2024",
+    "source": "Gaia Collaboration 2024, A&A 686, L2",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gaia BH3 is about 1,900 light years away.",
+    "as_written": "about nineteen hundred light years away",
+    "source": "Gaia Collaboration 2024, A&A 686, L2 (about 590 parsecs)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gaia BH3 has a mass of about 33 solar masses.",
+    "as_written": "about thirty three Suns",
+    "source": "Gaia Collaboration 2024, A&A 686, L2 (32.7 solar masses)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Milky Way is estimated to hold on the order of 100 million stellar-remnant black holes, with large uncertainty.",
+    "as_written": "something like a hundred million black holes",
+    "source": "Elbert, Bullock & Kaplinghat 2018, MNRAS 473, 1186",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scholz's star passed the Sun roughly 70,000 years ago.",
+    "as_written": "roughly seventy thousand years ago",
+    "source": "Mamajek et al. 2015, ApJ Letters 800, L17",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scholz's star passed at about 0.8 light years (about 52,000 AU).",
+    "as_written": "about eight tenths of a light year",
+    "source": "Mamajek et al. 2015, ApJ Letters 800, L17",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That distance is around 50,000 AU.",
+    "as_written": "around fifty thousand times the distance from Earth to the Sun",
+    "source": "Mamajek et al. 2015, ApJ Letters 800, L17 (52,000 AU)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Stars in the Sun's neighbourhood move relative to one another at tens of km/s.",
+    "as_written": "tens of kilometres per second",
+    "source": "Schonrich, Binney & Dehnen 2010, MNRAS 403, 1829; Gaia Collaboration stellar kinematics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Closest approach to the Sun is one astronomical unit.",
+    "as_written": "one astronomical unit from the Sun",
+    "source": "Scenario assumption; AU defined by IAU 2012 Resolution B2",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "One AU is about 150 million km.",
+    "as_written": "a hundred and fifty million kilometres",
+    "source": "IAU 2012 Resolution B2 (149,597,870,700 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Schwarzschild radius is about 2.95 km per solar mass.",
+    "as_written": "about two point nine five kilometres for every solar mass",
+    "source": "Schwarzschild radius 2GM/c^2 with IAU 2015 Resolution B3 solar GM",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A ten solar mass hole has a horizon radius of about 30 km.",
+    "as_written": "about thirty kilometres in radius",
+    "source": "Schwarzschild radius 2GM/c^2",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 1.4 AU a 10 solar mass hole pulls Earth about five times as hard as the Sun does.",
+    "as_written": "about five times harder than the Sun does",
+    "source": "Newtonian gravity, mass ratio 10 and distance ratio 1.41 squared, IAU 2015 B3 solar GM",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gravity on the space station is about 90 percent of surface gravity.",
+    "as_written": "about ninety percent",
+    "source": "NASA, microgravity explainer",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The tide from the hole at this distance is only somewhat stronger than the Moon's.",
+    "as_written": "only somewhat stronger than the Moon's",
+    "source": "Newtonian tidal acceleration 2GMR/r^3 for the hole at 1.4 AU versus the Moon at 384,400 km (NASA Moon Fact Sheet); about 1.6 times",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gravitational lensing was first measured at the 1919 solar eclipse.",
+    "as_written": "solar eclipse of 1919",
+    "source": "Dyson, Eddington & Davidson 1920, Phil. Trans. R. Soc. A 220, 291",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Einstein ring for this lens would be a few arcminutes across, about one seventh of the Moon's roughly 31 arcminute width.",
+    "as_written": "a few arcminutes across, about a seventh the width of the full Moon",
+    "source": "Einstein ring formula for a 10 solar mass lens at 1.4 AU; Moon angular size from NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sunlight takes about 8 minutes 20 seconds to reach Earth.",
+    "as_written": "eight minutes and twenty seconds",
+    "source": "NASA; 499 seconds light travel time for 1 AU",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun's radius is about 696,000 km.",
+    "as_written": "six hundred and ninety six thousand kilometres",
+    "source": "IAU 2015 Resolution B3 nominal solar radius, 695,700 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "One AU is more than 200 solar radii.",
+    "as_written": "more than two hundred times farther away",
+    "source": "IAU 2012 B2 and IAU 2015 B3; ratio is about 215",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At equal distance, a ten solar mass hole pulls the Sun ten times harder than the Sun pulls Earth.",
+    "as_written": "ten times harder than the Sun pulls Earth",
+    "source": "Newton's law of gravitation, mass ratio",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Measured from the Sun, Earth's extra acceleration in this geometry is about eight times the Sun's usual pull.",
+    "as_written": "about eight times as strong as the Sun's usual pull",
+    "source": "Vector sum of Newtonian accelerations in the scenario geometry, about 0.047 against 0.0059 metres per second squared; IAU 2015 B3 solar GM",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Neptune's orbital period is about 165 years.",
+    "as_written": "one hundred and sixty five years",
+    "source": "NASA Neptune Fact Sheet (164.8 years)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 30 km/s the hole travels 108,000 km per hour.",
+    "as_written": "one hundred and eight thousand kilometres every hour",
+    "source": "Arithmetic: 30 km/s times 3600 s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "With a constant 0.047 m/s^2 relative push, Earth is displaced about 300 km after one hour.",
+    "as_written": "about three hundred kilometres off its old path",
+    "source": "Kinematics, half a t squared, using the Newtonian estimate above",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "After six hours the displacement is about 11,000 km, near Earth's diameter of about 12,700 km.",
+    "as_written": "roughly eleven thousand kilometres, close to the width of the planet",
+    "source": "Kinematics using the same estimate; Earth diameter from NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In one day the hole moves about 2.6 million km, nearly seven Moon distances.",
+    "as_written": "about two point six million kilometres, nearly seven times the distance to the Moon",
+    "source": "Arithmetic: 30 km/s times 86,400 s; Moon mean distance 384,400 km from NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The extra push would change Earth's velocity by about 4 km/s in a day.",
+    "as_written": "about four kilometres per second",
+    "source": "Newtonian estimate, 0.047 m/s^2 times 86,400 s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth orbits the Sun at about 30 km/s.",
+    "as_written": "Earth circles the Sun at about thirty kilometres per second",
+    "source": "NASA Earth Fact Sheet (29.78 km/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Solar escape speed at Earth's distance is about 42 km/s.",
+    "as_written": "is about forty two",
+    "source": "Square root of two times Earth's orbital speed, NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth is about 12,700 km wide.",
+    "as_written": "about twelve thousand seven hundred kilometres wide",
+    "source": "NASA Earth Fact Sheet (12,742 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon orbits at about 384,000 km.",
+    "as_written": "about three hundred and eighty four thousand kilometres out",
+    "source": "NASA Moon Fact Sheet (384,400 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The relative path of the Sun and hole bends by about 165 degrees in this encounter.",
+    "as_written": "about a hundred and sixty five degrees",
+    "source": "Two-body hyperbolic deflection, eccentricity about 1.009 for periapsis 1 AU, 30 km/s, 11 solar masses; deflection equals 2 arcsin of 1 over e",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The close approach lasts about two months (1 AU at 30 km/s is about 58 days).",
+    "as_written": "about two months",
+    "source": "Arithmetic: 1.496e8 km divided by 30 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mercury's orbital period is about 88 days.",
+    "as_written": "eighty eight days",
+    "source": "NASA Mercury Fact Sheet (87.97 days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter's orbital period is nearly 12 years.",
+    "as_written": "nearly twelve years",
+    "source": "NASA Jupiter Fact Sheet (11.86 years)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Flyby simulations find that planets well outside the closest approach distance are the most exposed, and that flybys within a few times a planet's orbital distance eject or strongly perturb it.",
+    "as_written": "a flyby that comes within a few times a planet's orbital distance tends to throw it onto a stretched orbit or out of the system entirely",
+    "source": "Heggie & Rasio 1996, MNRAS 282, 1064; Spurzem et al. 2009, ApJ 697, 458",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun orbits the galaxy about once every 230 million years.",
+    "as_written": "two hundred and thirty million years or so",
+    "source": "Binney & Tremaine, Galactic Dynamics (2008); literature values range from about 210 to 250 million years",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun's galactic orbital speed is about 220 km/s.",
+    "as_written": "about two hundred and twenty kilometres per second",
+    "source": "Binney & Tremaine, Galactic Dynamics (2008); other measurements give up to about 240 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Galactic escape speed at the Sun's position exceeds 500 km/s.",
+    "as_written": "more than five hundred kilometres per second",
+    "source": "Piffl et al. 2014, A&A 562, A91 (about 533 km/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 30 km/s the hole is about 6 AU away after one year.",
+    "as_written": "about six astronomical units away",
+    "source": "Arithmetic: 30 km/s times 3.156e7 s is about 6.3 AU",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "After a decade it is about 63 AU away.",
+    "as_written": "about sixty three",
+    "source": "Arithmetic: 6.3 AU per year times 10",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "After about 16 years it is around 100 AU, beyond Neptune at about 30 AU.",
+    "as_written": "After about sixteen years",
+    "source": "Arithmetic; Neptune distance from NASA Neptune Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "An Earth flung out at about 30 km/s is about 7 AU from the Sun after a year, where sunlight is less than one fiftieth as strong.",
+    "as_written": "less than a fiftieth of what it was",
+    "source": "Inverse-square law",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At about 64 AU the Sun would be about 100 times brighter than the full Moon.",
+    "as_written": "about a hundred times brighter than the full Moon",
+    "source": "Inverse-square law from the Sun's apparent magnitude of minus 26.74 and the full Moon at about minus 12.7 (NASA fact sheets)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At roughly 64 AU after a decade of 30 km/s travel.",
+    "as_written": "roughly sixty four astronomical units",
+    "source": "Arithmetic: 1 AU plus 63 AU",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The average ocean depth is about 3.7 km.",
+    "as_written": "about three point seven kilometres deep",
+    "source": "NOAA (mean ocean depth 3,688 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's internal heat flow is about 47 terawatts.",
+    "as_written": "about forty seven trillion watts",
+    "source": "Davies & Davies 2010, Solid Earth 1, 5-24",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That is under a thousandth of the sunlight Earth intercepts, about 170,000 terawatts.",
+    "as_written": "less than a thousandth of what sunlight used to deliver",
+    "source": "Solar constant of about 1361 W per square metre (Kopp & Lean 2011, Geophys. Res. Lett.) times Earth's cross-section",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Radiating 47 TW from Earth's surface gives an equilibrium temperature near 35 K, about minus 238 Celsius.",
+    "as_written": "near thirty five kelvin",
+    "source": "Stefan-Boltzmann law with Davies & Davies 2010 heat flow, emissivity 1",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "35 K is about minus 238 degrees Celsius.",
+    "as_written": "about two hundred and thirty eight degrees below zero Celsius",
+    "source": "Unit conversion",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Nitrogen freezes at about 63 kelvin.",
+    "as_written": "about sixty three kelvin",
+    "source": "NIST Chemistry WebBook (triple point 63.15 K)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Frozen atmosphere spread evenly would be roughly ten metres deep.",
+    "as_written": "roughly ten metres deep",
+    "source": "Atmospheric mass about 5.15e18 kg (Trenberth & Smith 2005, J. Climate) over Earth's area of about 5.1e14 square metres, at solid-air density near 1000 kg per cubic metre",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hydrothermal vent communities were found at the Galapagos Rift in 1977.",
+    "as_written": "In 1977",
+    "source": "Corliss et al. 1979, Science 203, 1073",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Microbes live in coal beds about 2.5 km below the seafloor.",
+    "as_written": "about two and a half kilometres below the seafloor",
+    "source": "Inagaki et al. 2015, Science 349, 420 (IODP Expedition 337)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Oort cloud may hold about a trillion icy bodies.",
+    "as_written": "perhaps a trillion of them",
+    "source": "NASA Solar System Exploration, Oort Cloud",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Oort cloud's outer edge is perhaps 100,000 AU.",
+    "as_written": "perhaps a hundred thousand astronomical units",
+    "source": "NASA Solar System Exploration, Oort Cloud",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 30 km/s, crossing about 100,000 AU takes roughly 16,000 years.",
+    "as_written": "about sixteen thousand years",
+    "source": "Arithmetic: 100,000 AU times 58 days per AU",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A body falling from 50,000 AU takes about two million years to reach the Sun.",
+    "as_written": "fifty thousand astronomical units takes about two million years",
+    "source": "Kepler's third law: half the period of an orbit with semi-major axis 25,000 AU",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Batygin and Brown proposed Planet Nine in 2016.",
+    "as_written": "In 2016",
+    "source": "Batygin & Brown 2016, Astronomical Journal 151, 22",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Planet Nine was proposed as about ten Earth masses.",
+    "as_written": "perhaps ten times the mass of Earth",
+    "source": "Batygin & Brown 2016, Astronomical Journal 151, 22",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Some analyses argue the clustering of distant objects is an observational bias.",
+    "as_written": "Some analyses argue the clustering is just a trick of where telescopes have happened to look",
+    "source": "Napier et al. 2021, Planetary Science Journal 2, 59",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scholtz and Unwin proposed the primordial black hole idea in 2019.",
+    "as_written": "Then in 2019",
+    "source": "Scholtz & Unwin, arXiv 1909.11090, published in Phys. Rev. Lett. 125, 051103 (2020)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The proposed black hole has about five Earth masses.",
+    "as_written": "about five times the mass of Earth",
+    "source": "Scholtz & Unwin 2020, Phys. Rev. Lett. 125, 051103",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A five Earth mass black hole has a Schwarzschild radius of about 4.4 cm.",
+    "as_written": "about four and a half centimetres",
+    "source": "Schwarzschild radius 2GM/c^2 with Earth's GM of 3.986e14 m^3/s^2, about 8.87 mm per Earth mass",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That corresponds to a diameter under ten centimetres.",
+    "as_written": "under ten centimetres across",
+    "source": "Same calculation, diameter about 8.9 cm",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "OGLE reported very short microlensing events hinting at Earth-mass objects; their nature is debated.",
+    "as_written": "a handful of odd, very short microlensing events, seen by a survey called OGLE",
+    "source": "Mroz et al. 2017, Nature 548, 183; Niikura et al. 2019, Phys. Rev. D 99, 083503",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Rubin Observatory's Legacy Survey of Space and Time is a ten year survey.",
+    "as_written": "ten year survey",
+    "source": "Ivezic et al. 2019, ApJ 873, 111; Vera C. Rubin Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 30 km/s a light year takes roughly ten thousand years to cross.",
+    "as_written": "roughly ten thousand years",
+    "source": "Arithmetic: speed of light divided by 30 km/s is about 9,990",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The first isolated black hole candidate was detected by microlensing in 2022, with differing mass estimates between teams.",
+    "as_written": "by microlensing in 2022",
+    "source": "Sahu et al. 2022, ApJ 933, 83; Lam et al. 2022, ApJ Letters 933, L23",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]
