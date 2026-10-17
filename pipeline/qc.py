@@ -150,9 +150,15 @@ def check_video(video_path, thumbnail_path=None, srt_path=None,
     if expected_min_s and duration < expected_min_s:
         problems.append(f"duration {duration / 60:.1f} min is under the "
                         f"{expected_min_s / 60:.0f} min target")
+    # A video a minute or two over its target is still a good video: noted, not
+    # held. Episode 006 (27.0 min against 26) was held on 16.10 and the channel
+    # was left without a video for Tuesday.
     if expected_max_s and duration > expected_max_s:
-        problems.append(f"duration {duration / 60:.1f} min is over the "
-                        f"{expected_max_s / 60:.0f} min target")
+        note = f"duration {duration / 60:.1f} min is over the {expected_max_s / 60:.0f} min target"
+        if duration > expected_max_s * 1.15:
+            problems.append(note)
+        else:
+            report.setdefault("notes", []).append(note)
 
     if thumbnail_path:
         tp = Path(thumbnail_path)

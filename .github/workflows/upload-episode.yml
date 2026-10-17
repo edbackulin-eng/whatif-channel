@@ -16,6 +16,9 @@ on:
       keep_chapters:
         description: keep the package's chapter list as it is
         default: "true"
+      when:
+        description: "today (today's 15:00 slot) or next (the nearest free slot)"
+        default: "today"
 
 permissions:
   contents: write
@@ -50,6 +53,7 @@ jobs:
           ffmpeg -hide_banner -nostats -i "$v" -vf "blackdetect=d=0.5:pix_th=0.10" -an -f null - 2>&1 | grep black_start || echo "no black segment over 0.5 s"
           cat ready/*/"${{ inputs.slug }}"/qc.json
       - name: Upload for today
+        if: inputs.when != 'next'
         env:
           YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -59,6 +63,12 @@ jobs:
           flag=""
           [ "${{ inputs.keep_chapters }}" = "true" ] && flag="--keep-chapters"
           python -X utf8 tools/publish_today.py upload "$pkg" $flag
+      - name: Upload on the nearest free slot
+        if: inputs.when == 'next'
+        env:
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+          UPLOAD_ATTENTION: "1"
+        run: python -X utf8 automation/upload_youtube.py
       - name: Record it
         run: |
           git config user.name "whatif-bot"

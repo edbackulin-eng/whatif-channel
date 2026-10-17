@@ -1,0 +1,3 @@
+
+# Two runs that both append to the journal must not conflict.
+queue/journal.md merge=union
