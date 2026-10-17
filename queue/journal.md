@@ -13,3 +13,4 @@
 - **2026-10-16 01:45 UTC** - Built 005-what-if-every-volcano-erupted-at-once in 185 min.
 - **2026-10-16 01:48 UTC** - Uploaded 005-what-if-every-volcano-erupted-at-once as gVGYUmMfRB0, public at 2026-10-17T15:00:00Z.
 - **2026-10-16 10:33 UTC** - Uploaded 004-what-if-the-sun-went-out-for-a-year as gxejVO27l1U, public at 2026-10-19T15:00:00Z.
+- **2026-10-17 07:32 UTC** - Uploaded 006-what-if-earth-lost-its-magnetic-field as eN24rIKRn_o, public at 2026-10-20T15:00:00Z.
