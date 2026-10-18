@@ -1,0 +1,89 @@
+You are standing on a beach at noon. The Sun is high, the sand is warm, and a wave slides up around your ankles. Then, with no sound and no flash, everything changes. Not the beach. Not the ocean. The whole planet, with you on it, has been lifted and set down about seventy eight million kilometres farther from the Sun.
+
+Look up. The Sun is still there, still a hard white disc. But it is smaller. And the warmth on your face is already wrong.
+
+This is what happens if Earth's orbit shifts outward to the distance of Mars. Not a nudge. A full leap. Over the next few hours, years and millions of years, the story goes somewhere you probably do not expect. Stay until the end, because the most surprising part is not that Earth freezes. It is what happens after it does.
+
+First, a plain statement. This cannot happen. Nothing in nature can move a planet to a new orbit in an instant. To lift Earth from its orbit to the orbit of Mars, you would have to add energy, and a lot of it. Work it out from the Sun's gravity and Earth's mass, and the bill comes to roughly a month of everything the Sun radiates. Every watt, in every direction, for about four weeks, all of it delivered to one small planet. No asteroid, no passing star and no machine comes close. So we are not asking whether it could happen. We are asking what the physics does if we cheat once, and then let every law run as normal.
+
+The cheat needs a second cheat, so let us be honest about both. Today Earth is about one hundred and fifty million kilometres from the Sun. Mars is about two hundred and twenty eight million, which is one and a half times as far. At the new distance the Sun's pull is weaker. But Earth is still moving at nearly thirty kilometres per second, the speed that suits its old distance. A circular orbit at the new distance needs a little over twenty four.
+
+Leave the extra speed alone and Earth does not settle down. It swings outward on a long stretched ellipse that carries it almost as far as Jupiter, before slowly falling back. That is a different and worse video. So we cheat twice. Earth arrives at the new distance with exactly the right speed for a circular orbit. Then the clock starts.
+
+Second one. Nothing breaks. The gravity under your feet is Earth's own, and Earth has not changed. The ground holds. The air holds. The Moon came along, and it is still about three hundred and eighty four thousand kilometres away.
+
+That is worth a moment, because it is the first thing people worry about. A planet can only keep a moon inside a region where its own gravity beats the Sun's. For Earth today, that region reaches about one and a half million kilometres. Farther out, the Sun's tug is weaker, so the region grows by about half. The Moon sits deep inside it either way. You keep your Moon.
+
+What changes in the first seconds is the light. Sunlight spreads out as it travels, so the energy crossing each square metre falls with the square of the distance. Above the atmosphere at Earth's old distance, the Sun delivers one thousand three hundred and sixty one watts to every square metre that faces it. At the new distance, it delivers about five hundred and ninety. That is about forty three percent of what you had a moment ago. In your sky, the Sun's disc has shrunk to about two thirds of its old width.
+
+Here is a detail that feels like a trick. Sunlight takes just over eight minutes to reach Earth today. At the new distance, it takes nearly thirteen. You might expect the sky to stay bright for several minutes, running on light already in flight. It does not. The space around the new orbit is already full of sunlight, and that sunlight is already thinned out. The dimming is immediate.
+
+And yet nothing dramatic seems to happen to you. Your eyes adapt. Your pupils open. The sky overhead is still blue, because blue light scatters off air whatever the brightness of the Sun. You could stand there and think this was just a hazy afternoon. That is the trap.
+
+Now the first minutes. Why does the world not freeze at once? Because heat has memory. The air is thin and gives up its warmth quickly. The ocean does not. The top three metres or so of the sea hold as much heat as the entire atmosphere above it. And the sea is thousands of metres deep.
+
+So in the first minutes, the sand under your feet starts shedding heat, the air above it cools a little, and the ocean barely notices. The planet is like a house where someone has turned off the furnace on a warm day. The rooms are comfortable. The walls are still warm. But the bill has changed forever.
+
+Let me give you that bill in numbers. Earth reflects close to thirty percent of the sunlight that hits it and absorbs the rest. Averaged over the whole globe, day and night, that absorbed energy balances the heat Earth radiates to space, which is roughly two hundred and forty watts per square metre. At the new distance, the absorbed sunlight drops to about one hundred. The planet is still radiating at the old rate, because it is still warm. So it is losing more than a hundred watts per square metre that nothing replaces.
+
+For comparison, the imbalance driving today's global warming is a watt or two. We are not nudging the thermostat. We have kicked the door off the house.
+
+Hold on to that number, because in a few minutes of narration it will explain something that sounds impossible. First, the hours.
+
+Evening comes at the usual time. Day length depends on how fast Earth spins, and the spin did not change. The planet still turns once in about twenty four hours, and its axis is still tilted about twenty three and a half degrees. So you still get dawn, dusk and, in time, seasons. Nothing about the clock has moved. Only the heat.
+
+Walk down to the water at sunset and you notice the tide is different. Tides come mostly from the Moon, but the Sun contributes. At the old distance, the Sun's tidal pull is a bit under half the Moon's. Tidal force falls with the cube of distance, so at the new distance the Sun's share falls to just over a quarter of what it was. The twice monthly surge of the biggest tides, when Sun and Moon line up, becomes a gentler event. Coastlines notice. Estuaries notice. Nothing else yet.
+
+The night is cold. Not frightening, just colder than it should be. Clear nights cool faster, and with less daytime heat stored, the cold reaches deeper. By morning there is frost on grass in places that have never seen it. The sunrise is smaller and paler. It does not warm the ground back to where it was.
+
+Here is the reason to keep watching. The next effect is not about the Sun at all. It is about water. And it turns a cold planet into a much colder one without any help from the sky.
+
+Air holds water vapour, and water vapour is a greenhouse gas, the strongest one the atmosphere has. How much the air can hold depends on temperature. For every degree Celsius of cooling, air can hold about seven percent less water vapour. As the planet cools, vapour rains out or freezes out, and the greenhouse blanket gets thinner. A thinner blanket means more cooling. More cooling means less vapour. This is a feedback, and the physics is not in doubt.
+
+Now we can say something about where all this is heading. Take Earth with no atmosphere at all, and its surface would settle near minus eighteen degrees Celsius. Our air and oceans warm that by about thirty three degrees, which is how we get an average near fifteen. Put that bare Earth at the new distance and its temperature falls to about minus sixty six. Add back a greenhouse, even a weakened one, and you still end up far below freezing everywhere, on average, and for good.
+
+The first days bring that into your life. Frost reaches the tropics at night. Rivers stall. In the middle of continents, where there is no ocean to hold the warmth, the cold arrives in days rather than weeks. The oceans lose heat more slowly, so coastal cities hold on a little longer. But no one is fooled. Every thermometer is falling, and none of them is coming back.
+
+Weather itself starts to behave differently. Storms are driven by the contrast between warm tropics and cold poles. Both regions go dark, but the tropics were absorbing the most sunlight, so they lose the most in absolute terms. The contrast shrinks, and the great engines that move heat around the planet should weaken. How much, and how quickly, is something only a full climate simulation can tell us. The honest answer is that nobody has watched a planet do this.
+
+Next come the months. This is where the new orbit shows its other face. At the new distance, a year is not three hundred and sixty five days. It is about six hundred and eighty seven days, almost twice as long. Each season lasts close to six months.
+
+Think about what that means for a farmer. Spring does not come and then give way to a summer you can plan around. Spring itself might be a half year of grey light and frost. A growing season is a delicate thing, measured in warm days between the last frost and the first. Cut the Sun by more than half and stretch the calendar, and those warm days simply do not occur in most of the world. Wheat, rice and maize do not wait. They fail. Eight billion people depend on harvests that, within a single year, mostly do not happen.
+
+The oceans begin to change too. Seawater freezes at about minus one point eight degrees Celsius, a little below fresh water because of the salt. As the surface cools, sea ice forms first near the poles and then creeps toward the middle latitudes. And sea ice does something a dark ocean never does. It reflects. Fresh snow can send back more than eighty percent of the sunlight that lands on it. Open water sends back very little.
+
+That is the second feedback, and it is the one that finishes the job. Ice reflects sunlight, so less is absorbed. Less absorbed means colder. Colder means more ice. Scientists call it the ice albedo feedback, and it has been understood since simple climate models of the nineteen sixties. Starting from today's climate, models suggest a drop of only a few percent in sunlight could be enough to push Earth into a spiral. Our drop is more than half. There is no serious dispute that the surface freezes. The dispute is about how completely, and for how long.
+
+Stay with me, because we are about to meet the one time Earth really did this, and the evidence for it is carved into rocks you can touch.
+
+Between about seven hundred and twenty and six hundred and thirty five million years ago, geologists find glacial deposits, scraped and dropped by ice, in rocks that were then at tropical latitudes. The Sun at that time was about six percent dimmer than it is now. Many researchers conclude that ice reached the equator, and they call it Snowball Earth. Others argue for a slushball, with open water or thin ice near the tropics. This is still genuinely contested, and I will not pretend it is settled. But both camps agree on the main point. A modest dimming was enough to cover most of the planet in ice. We have taken away more than half.
+
+So the surface of our Earth, at the new distance, ends up in a state no human has seen. The coldest air temperature ever measured on Earth is minus eighty nine point two degrees Celsius, at Vostok Station in Antarctica in nineteen eighty three. Our whole planet would learn to be like that. The tropics would look like Antarctica. The Antarctic would look like something else entirely.
+
+And yet the ocean under the ice stays liquid. This surprises people. The seafloor leaks heat from the planet's interior, and a lid of ice is a good blanket. Beneath Antarctica today, at Lake Vostok, there is liquid water under nearly four kilometres of ice. A frozen Earth would have a lid like that over the sea. How thick, models disagree. But the sea beneath is very likely to stay liquid, dark, and cold.
+
+Life continues down there. Volcanic vents on the seafloor do not need sunlight. Microbes that live on the chemistry of hot rock do not know the Sun has moved. Whatever survived the old snowball episodes was the ancestor of everything that came after, including us. So a frozen Earth is not an empty Earth. It is an Earth that has gone underground and under the ice.
+
+Humans are a different matter. A species that evolved to harvest sunlight would struggle. Some people might hold on near volcanic heat, or with energy sources that do not need the Sun. Billions would not. I will not put a number on it, because no one honestly can. But the planet that supported them is gone.
+
+So that is the grim part. The cold is real, the ice is real, the harvests fail. If the video ended here you might think Earth, at the distance of Mars, is simply too far from its star. That is the part most people expect. Now for the part they do not.
+
+Mars is cold. Mars is dead, or close to it. So surely the distance of Mars is a death sentence. But distance is not what is wrong with Mars. Climate scientists have calculated where the habitable zone around the Sun begins and ends, the band where a planet could hold liquid water on its surface. In a well known set of calculations published in twenty thirteen, the outer edge, for a planet with a thick carbon dioxide atmosphere, comes out at about one point six seven times Earth's distance from the Sun. Mars sits at about one point five two. Mars, on paper, is inside the zone.
+
+Mars is cold because it is small, and it lost its air. Its atmosphere today has a pressure of less than one percent of Earth's. There is almost no blanket. Give Mars the right atmosphere and the distance would not stop it. The real obstacle is not how far the planet is from the Sun. It is how much greenhouse gas it holds.
+
+And Earth has something Mars lost. Earth has a thermostat, and it works on a schedule of millions of years.
+
+Volcanoes release carbon dioxide into the air all the time. Normally, rain and chemical weathering of rock pull it back out again, locking it into the seafloor as carbonate rock. Weathering needs liquid water and warmth. So when the planet cools, weathering slows down. When the planet freezes over, it nearly stops. But the volcanoes do not care. They keep erupting under the ice, and the gas has nowhere to go but up.
+
+Carbon dioxide builds up in the air year after year, for millions of years. Models of the old snowball episodes suggest it takes hundreds of times today's level before the greenhouse effect is strong enough to melt the ice. When that threshold is reached, the thaw is fast, a geological blink. The ice retreats, the oceans open, and the planet swings into a hot, wet aftermath before the weathering catches up and things settle.
+
+How long does the freeze last? For the old snowball episodes, estimates run from a few million years to tens of millions. For comparison, our species is about three hundred thousand years old. The ice would outlast us by a factor of tens to hundreds.
+
+Now the final twist. This thermostat does not just rescue Earth from a snowball. It also keeps Earth habitable when the Sun is dim. Early in its life, the Sun was about thirty percent dimmer than it is today. Yet Earth had liquid water for most of that time. Exactly how is still debated, and the answers involve more carbon dioxide, perhaps methane, perhaps clouds. But the broad idea is that a planet with active volcanoes and weathering can compensate for a faint star by growing a thicker blanket.
+
+So take the long view. Earth at the distance of Mars is not a permanently dead world. After the freeze, after the slow build up of gas, the planet could settle into a warm and wet state again, under a sky rich in carbon dioxide, with a year of six hundred and eighty seven days and a Sun a third smaller than the one we know. A different Earth. Possibly a living one. It would take millions of years to get there, and no one now alive, and no species now alive, would see it. But the old rule that a planet that far out is doomed turns out to be wrong. The planet is not too far. We would just be too fragile.
+
+And that may be the strangest result of all. We tend to think of Earth's position as a delicate accident, a Goldilocks spot with no room for error. The truth is more generous and less comforting. The planet has a lot of room. It is the life on the surface, and the civilisation built on top of it, that has almost none.
+
+That is what happens if Earth's orbit shifts outward. Now I want to hear from you. If the Earth had to move, would you choose a dimmer, slower world farther out, or a brighter, faster one closer in, and why?

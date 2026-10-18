@@ -1,0 +1,514 @@
+[
+  {
+    "text": "Jupiter's mass is about 318 times Earth's",
+    "as_written": "about three hundred and eighteen times the mass of Earth",
+    "source": "NASA Planetary Fact Sheet, Jupiter",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Converting Jupiter's mass to energy via E=mc^2 gives roughly 1.7e44 joules, about 14 billion years of the Sun's luminosity",
+    "as_written": "you would release about as much energy as the Sun puts out in fourteen billion years",
+    "source": "Derived from Jupiter mass 1.898e27 kg (NASA Planetary Fact Sheet) and nominal solar luminosity 3.828e26 W (IAU 2015 Resolution B3)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter is about 11 times wider than Earth",
+    "as_written": "Jupiter is about eleven times wider than Earth",
+    "source": "NASA Jupiter facts and Planetary Fact Sheet (equatorial diameter about 142,984 km vs 12,756 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter has more than 2.5 times the mass of all other planets combined",
+    "as_written": "It has more than two and a half times the mass of all the other planets put together",
+    "source": "NASA Solar System Exploration, Jupiter overview",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Great Red Spot is wider than Earth",
+    "as_written": "is wider than our entire planet",
+    "source": "NASA Juno and Hubble observations of the Great Red Spot",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter has about one thousandth of the Sun's mass",
+    "as_written": "about one thousandth of the Sun's mass",
+    "source": "NASA Planetary Fact Sheet; IAU nominal GM values (Jupiter/Sun mass ratio about 1/1047)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter orbits about 778 million km from the Sun, 5.2 AU",
+    "as_written": "about seven hundred and seventy eight million kilometres from the Sun, which is five point two times farther out than Earth",
+    "source": "NASA Planetary Fact Sheet, Jupiter",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Changes in gravity propagate at light speed; GW170817 gravitational waves and gamma rays arrived about 1.7 s apart after about 130 million light years",
+    "as_written": "about a hundred and thirty million light years away",
+    "source": "Abbott et al. 2017, Gravitational Waves and Gamma-rays from a Binary Neutron Star Merger, Astrophysical Journal Letters 848, L13 (LIGO, Virgo, Fermi GBM, INTEGRAL)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gamma rays arrived about 1.7 seconds after the gravitational wave signal",
+    "as_written": "about one point seven seconds later",
+    "source": "Abbott et al. 2017, ApJL 848, L13",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gravity changes travel at the speed of light",
+    "as_written": "Changes in gravity travel at the speed of light",
+    "source": "Abbott et al. 2017, ApJL 848, L13 (speed of gravity equals c within a few parts in 10^15)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Closest Earth-Jupiter distance is about 588 million km",
+    "as_written": "about five hundred and eighty eight million kilometres away",
+    "source": "NASA Solar System Exploration, Jupiter facts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Farthest Earth-Jupiter distance is about 968 million km",
+    "as_written": "about nine hundred and sixty eight million",
+    "source": "NASA Solar System Exploration, Jupiter facts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Light takes about 33 to 54 minutes to cross the Earth-Jupiter distance",
+    "as_written": "between roughly thirty three and fifty four minutes",
+    "source": "Derived: NASA distances of 588 and 968 million km divided by c = 299,792 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth orbits at about 30 km/s",
+    "as_written": "Earth keeps moving at about thirty kilometres per second",
+    "source": "NASA Planetary Fact Sheet, Earth (mean orbital velocity 29.78 km/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At closest approach Jupiter's pull on Earth is about 16,000 times weaker than the Sun's",
+    "as_written": "roughly sixteen thousand times more weakly than the Sun does",
+    "source": "Derived from Newtonian gravity with NASA/IAU GM values and the 588 million km closest distance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ganymede is the largest moon in the solar system and bigger than Mercury",
+    "as_written": "it is bigger than the planet Mercury",
+    "source": "NASA Solar System Exploration, Ganymede (diameter about 5,268 km vs Mercury 4,879 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Io's orbital speed is about 17 km/s",
+    "as_written": "Io was moving at about seventeen kilometres per second",
+    "source": "NASA JPL Planetary Satellite Physical Parameters (about 17.3 km/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 17 km/s an object covers about 1.5 million km per day",
+    "as_written": "it covers about one and a half million kilometres",
+    "source": "Derived: 17.3 km/s times 86,400 s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter's orbital speed is about 13 km/s",
+    "as_written": "at about thirteen kilometres per second",
+    "source": "NASA Planetary Fact Sheet, Jupiter (about 13.06 km/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Solar escape speed at Jupiter's distance is about 18.5 km/s",
+    "as_written": "about eighteen and a half kilometres per second",
+    "source": "Derived: square root of 2 times Jupiter's circular speed of about 13.07 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Best-case heliocentric speed of Io after vanishing is about 30 km/s (13.07 + 17.3)",
+    "as_written": "Io, in the best case, would be moving at around thirty kilometres per second",
+    "source": "Derived from NASA/JPL orbital speeds",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ganymede's orbital speed is about 10.9 km/s and in the worst case would leave about 2 km/s heliocentric speed (13.07 minus 10.88)",
+    "as_written": "Ganymede, at about ten point nine kilometres per second",
+    "source": "NASA JPL Planetary Satellite Physical Parameters; derived subtraction",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Leftover heliocentric speed of a backward-moving Ganymede is just over 2 km/s",
+    "as_written": "just over two kilometres per second around the Sun",
+    "source": "Derived: 13.07 km/s minus 10.88 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter Trojans lie 60 degrees ahead of and behind Jupiter at the L4 and L5 points",
+    "as_written": "Sixty degrees ahead of it in its orbit, and sixty degrees behind",
+    "source": "NASA Lucy mission; Lagrange point theory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "More than 10,000 Jupiter Trojans are known",
+    "as_written": "More than ten thousand are known",
+    "source": "IAU Minor Planet Center Trojan asteroid listings",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lucy launched in 2021 to study Trojan asteroids as remnants of planet formation",
+    "as_written": "NASA's Lucy spacecraft, launched in 2021",
+    "source": "NASA Lucy mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Europa Clipper launched October 2024 and arrives at Jupiter in 2030",
+    "as_written": "Europa Clipper launched in October 2024 and is due at Jupiter in 2030",
+    "source": "NASA Europa Clipper mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "ESA's Juice launched April 2023 and arrives at Jupiter in 2031",
+    "as_written": "Europe's Juice mission launched in April 2023 and is due in 2031",
+    "source": "European Space Agency, Juice mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "New Horizons' 2007 Jupiter flyby shortened the trip to Pluto by about three years",
+    "as_written": "shaved about three years off its trip to Pluto",
+    "source": "NASA New Horizons mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun-Jupiter barycentre is about 1.07 solar radii from the Sun's centre",
+    "as_written": "about one point oh seven solar radii from its centre",
+    "source": "Derived from NASA mass ratio and semimajor axis; consistent with JPL Horizons barycentre data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter's orbital period is about 11.86 years",
+    "as_written": "every twelve years or so",
+    "source": "NASA Planetary Fact Sheet, Jupiter",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sun-Saturn barycentre lies about 0.6 solar radii from the Sun's centre",
+    "as_written": "only about sixty percent of the way from the Sun's centre to its surface",
+    "source": "Derived: Saturn at 9.58 AU, Sun/Saturn mass ratio about 3498, solar radius 695,700 km (NASA Planetary Fact Sheet; IAU)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter is usually outshone only by the Sun, Moon and Venus",
+    "as_written": "Jupiter is usually outshone only by the Sun, the Moon and Venus",
+    "source": "NASA Planetary Fact Sheet apparent magnitudes; Astronomical Almanac",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Babylonian astronomers tracked Jupiter's motion more than 2,000 years ago",
+    "as_written": "more than two thousand years ago",
+    "source": "Ossendrijver 2016, Science 351, 482 (Babylonian tablets dated 350 to 50 BCE)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jovian electrons reach Earth's vicinity with a modulation of about 13 months, the Earth-Jupiter synodic period of about 399 days",
+    "as_written": "roughly every thirteen months",
+    "source": "Teegarden et al. 1974, Journal of Geophysical Research 79, 3615; Ulysses and SOHO electron observations; NASA synodic period data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter contributes about 154 arcseconds per century to Mercury's perihelion precession, second only to Venus",
+    "as_written": "about one hundred and fifty arcseconds per century, second only to Venus",
+    "source": "Clemence 1947, Reviews of Modern Physics 19, 361",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Relativistic precession of Mercury is about 43 arcseconds per century",
+    "as_written": "about forty three arcseconds per century",
+    "source": "Einstein 1915; Clemence 1947, Reviews of Modern Physics 19, 361",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter's contribution (about 154) is more than three times the relativistic part (about 43)",
+    "as_written": "more than three times bigger",
+    "source": "Derived from Clemence 1947",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The total mass of the asteroid belt is less than Earth's Moon",
+    "as_written": "All of it together weighs less than our Moon",
+    "source": "NASA Solar System Exploration, Asteroids",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Daniel Kirkwood identified gaps in the asteroid belt in 1866",
+    "as_written": "In 1866, an astronomer named Daniel Kirkwood noticed",
+    "source": "Kirkwood 1866 (announced) and 1867, Meteoric Astronomy",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The 3:1 Kirkwood gap lies at about 2.5 AU",
+    "as_written": "about two and a half times Earth's distance from the Sun",
+    "source": "Bottke et al. 2002, Icarus 156, 399",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The 3:1 resonance with Jupiter is a major source of near-Earth asteroids",
+    "as_written": "A study led by William Bottke found that the three to one gap is one of the main routes into the inner solar system",
+    "source": "Bottke et al. 2002, Debiased Orbital and Absolute Magnitude Distribution of the Near-Earth Objects, Icarus 156, 399",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Near-Earth asteroids survive a few million years before impact, solar plunge or ejection",
+    "as_written": "lasts only a few million years",
+    "source": "Gladman et al. 1997, Science 277, 197",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Comet Shoemaker-Levy 9 impacted Jupiter in July 1994 as more than 20 fragments over six days",
+    "as_written": "In July 1994, a comet called Shoemaker Levy 9, which Jupiter had torn into more than twenty pieces, slammed into the planet over six days",
+    "source": "NASA/JPL Comet Shoemaker-Levy 9 impact records",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Amateur astronomers have recorded multiple impact flashes on Jupiter since 2010",
+    "as_written": "Since 2010, amateur astronomers have caught several more flashes from smaller impacts",
+    "source": "Hueso et al. 2010, Astrophysical Journal Letters 721, L129 and later reports",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter and Saturn are near a 5:2 resonance (five Jupiter orbits roughly equal two Saturn orbits)",
+    "as_written": "Five Jupiter orbits take almost exactly as long as two Saturn orbits",
+    "source": "NASA Planetary Fact Sheet orbital periods (11.86 and 29.46 years); Murray and Dermott, Solar System Dynamics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Great Inequality has a period of roughly 900 years",
+    "as_written": "The beat repeats about every nine hundred years",
+    "source": "Laplace, Mecanique Celeste; Murray and Dermott, Solar System Dynamics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's present orbital eccentricity is about 0.017 and varies from near 0 to about 0.06",
+    "as_written": "off circular by about one point seven percent",
+    "source": "Berger and Loutre 1991, Quaternary Science Reviews; Laskar et al. 2004, A&A 428, 261",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's eccentricity ranges from almost zero to about six percent",
+    "as_written": "from almost zero to about six percent",
+    "source": "Berger and Loutre 1991; Laskar et al. 2004, A&A 428, 261",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A roughly 405,000-year eccentricity cycle arises from Venus-Jupiter interaction",
+    "as_written": "about every four hundred and five thousand years",
+    "source": "Laskar et al. 2004, A Long-term Numerical Solution for the Insolation Quantities of the Earth, Astronomy and Astrophysics 428, 261",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's axial tilt is stabilised mainly by the Moon",
+    "as_written": "steadied mainly by the Moon",
+    "source": "Laskar, Joutel and Robutel 1993, Nature 361, 615",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Laskar 1989 showed chaos in the inner solar system with errors growing about tenfold every ten million years",
+    "as_written": "multiply by about ten every ten million years",
+    "source": "Laskar 1989, Nature 338, 237",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Laskar published the inner solar system chaos result in 1989",
+    "as_written": "In 1989, the French astronomer Jacques Laskar",
+    "source": "Laskar 1989, Nature 338, 237",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Wetherill suggested in 1994 that a Jupiter-less system would suffer more comet impacts on Earth",
+    "as_written": "In 1994, the planetary scientist George Wetherill published calculations",
+    "source": "Wetherill 1994, Astrophysics and Space Science 212, 23",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Simulations show Jupiter helps against long-period comets but may increase asteroid impacts; effect on in-between bodies is mixed",
+    "as_written": "For long period comets, Jupiter does help.",
+    "source": "Horner and Jones 2008, 2009 and Horner, Jones and Chambers 2010, Jupiter - friend or foe? series I to III, International Journal of Astrobiology",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Some simulations suggest Earth would be hit less often by asteroids without Jupiter",
+    "as_written": "some of their simulations suggest Earth would be hit less often without Jupiter",
+    "source": "Horner and Jones 2008, Jupiter - friend or foe? I: the asteroids, International Journal of Astrobiology 7, 251",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "51 Pegasi b was the first planet found around a Sun-like star, in 1995, by Mayor and Queloz",
+    "as_written": "in 1995, by Michel Mayor and Didier Queloz",
+    "source": "Mayor and Queloz 1995, Nature 378, 355",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "51 Pegasi b orbits in about 4.2 days",
+    "as_written": "orbits its star every four days or so",
+    "source": "Mayor and Queloz 1995, Nature 378, 355",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Exoplanet searches have been running about three decades since 1995",
+    "as_written": "Astronomers have spent three decades counting",
+    "source": "Derived from Mayor and Queloz 1995",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter analogues occur around roughly 6 to 14 percent of Sun-like stars",
+    "as_written": "roughly six to fourteen percent of Sun-like stars",
+    "source": "Wittenmyer et al. 2016, ApJ 819, 28 (about 6 percent); Fernandes et al. 2019, ApJ 874, 81 (about 14 percent)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 26 percent of Sun-like stars host a 1 to 2 Earth-radius planet on a 5 to 100 day orbit",
+    "as_written": "about one in four Sun-like stars hosts a planet one to two times Earth's width on a close orbit",
+    "source": "Petigura, Howard and Marcy 2013, PNAS 110, 19273 (Kepler)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter induces a Sun velocity wobble of about 12.5 m/s",
+    "as_written": "about twelve and a half metres per second",
+    "source": "Fischer et al. 2016, State of the Field: Extreme Precision Radial Velocities, PASP 128, 066001",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn induces a Sun velocity wobble of about 2.8 m/s",
+    "as_written": "about two point eight",
+    "source": "Fischer et al. 2016, PASP 128, 066001",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth induces a Sun velocity wobble of about 9 cm/s",
+    "as_written": "about nine centimetres per second",
+    "source": "Fischer et al. 2016, PASP 128, 066001",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

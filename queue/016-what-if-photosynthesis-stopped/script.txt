@@ -1,0 +1,93 @@
+It is noon on a bright summer day, and you are standing in a forest. Sunlight falls through the canopy in long bars. The leaves are green and still. A bird sings somewhere above you.
+
+Now, in this exact instant, every leaf on Earth stops turning light into sugar. Every blade of grass. Every drifting speck of plankton in every ocean. All of it, at once.
+
+Look around. Nothing happens. No leaf droops. The bird keeps singing. The forest looks exactly the way it looked a second ago. But the oldest engine in the living world has just gone cold, and a set of countdowns has begun.
+
+Here is the strange part. The countdown most people fear, the one where the air runs out, is one of the slowest of them all. The one that should worry you is much closer to your dinner table. Stay with me, because by the end you will see exactly why, and you will meet a place on Earth where life would carry on regardless, powered by something you would never guess.
+
+First, a plain statement. This cannot happen. Photosynthesis is not a switch that anyone can flip. It is chemistry that runs by itself whenever a chlorophyll molecule catches a particle of light. To stop it, you would have to remove the light, or rewrite the molecular machinery inside every plant, alga and bacterium on the planet in the same instant. No known physics offers a way to do either.
+
+So we cheat, and we cheat carefully. The Sun keeps shining. Its light still crosses the gap to Earth in about eight minutes. Every plant is still there, still green, still alive. They simply can no longer turn carbon dioxide and water into sugar and oxygen. Everything else stays switched on. The chemistry, the weather, the hunger of every animal. Let us see what the physics does.
+
+Start with the first few seconds. A leaf is packed with chlorophyll, and chlorophyll still absorbs sunlight. But the energy now has nowhere to go. Normally it is passed down a chain of proteins and used to split water and build sugar. With that chain jammed, the energy has to leave some other way. Some of it becomes heat. Some of it is thrown back out as light.
+
+That second part is real, and we can describe it. Even in a healthy leaf, one to two percent of the absorbed light is re-emitted as a faint red glow called chlorophyll fluorescence. When the chain is blocked, as certain weedkillers block it, that glow becomes several times brighter. Satellites already measure the faint glow of healthy vegetation from orbit, and use it to track how busy the world's plants are. In our scenario, that signal would very likely spike, and then fade as the chlorophyll itself broke down. To the right instrument, the planet would look like it was shouting. To your eyes, it looks like nothing at all.
+
+Now the minutes, and then the hours. You might expect alarm bells. There are none, and here is the first piece of evidence for why. Photosynthesis already stops every night. Roughly half the planet is always in darkness, and the plants there are making no sugar. The air does not notice. You do not wake at three in the morning gasping for breath.
+
+The atmosphere is a vast buffer. Carbon dioxide is currently above four hundred and twenty parts per million, and you can watch the living world breathing in that number. At the Mauna Loa Observatory in Hawaii, carbon dioxide rises and falls by about six parts per million every year, as northern forests grow in summer and shed their leaves in autumn. The entire plant kingdom, working flat out for months, nudges the air by a sliver. Keep that in mind. Switching the engine off will nudge the air by a sliver too, at first.
+
+So let us do the sum that almost everyone skips. How much oxygen is there, and how fast could anything use it up?
+
+The air is about twenty-one percent oxygen. In weight, that is roughly one point two quadrillion tonnes. A quadrillion is a one followed by fifteen zeros. That is a heap too big to feel, so compare it with us.
+
+A person at rest needs a little under a kilogram of oxygen per day. NASA plans crewed missions around eighty-four hundredths of a kilogram. Multiply that by eight billion people and you get nearly seven million tonnes of oxygen every day. That sounds enormous. Now run it for a hundred years. All of humanity, breathing for a century, uses about two hundredths of one percent of the oxygen in the sky. We could keep breathing, all of us, and the atmosphere would barely register it.
+
+But breathing is not the only thing that burns oxygen. Dead things rot, and rotting is slow burning. Dead forests also burn fast. So the honest question is, how much stuff is there to burn?
+
+In 2018, a team of researchers added up every living thing on Earth, measured in tonnes of carbon. The total came to roughly five hundred and fifty billion tonnes. Plants made up about four hundred and fifty billion tonnes of that. Animals, every insect, fish, cow and human together, made up about two billion. That is less than half of one percent of all living carbon. The living world is overwhelmingly green.
+
+Now imagine all of it rotted or burned back into carbon dioxide. Every tree, every leaf, every beetle. Each carbon atom takes two oxygen atoms, and oxygen atoms are heavier than carbon atoms, so the oxygen needed weighs about two and two thirds times as much as the carbon. That comes to roughly one and a half trillion tonnes of oxygen. Set that against one point two quadrillion, and you have used about a tenth of one percent. Add the carbon stored in soils, which is several times larger than all the plants combined, and you are still under one percent.
+
+So the air goes from about twenty-one percent oxygen to something like twenty point nine. You cannot feel that.
+
+You can breathe. Your children can breathe. So can their children. Oxygen is not the problem. Something else runs out far sooner, and the first place it happens is the sea.
+
+Out of the roughly one hundred and five billion tonnes of carbon that the whole planet fixes in a year, about half is fixed by phytoplankton, the microscopic drifters at the ocean surface. Those figures come from a landmark study published in Science in 1998. They have been refined since, but not overturned.
+
+Here is the catch. At any moment, all the phytoplankton in the ocean add up to only about one billion tonnes of carbon. That is a fraction of one percent of the plant mass on land. They stay small because they are eaten and replaced constantly. The standing crop turns over in days, about a week at the outside. The ocean food web lives hand to mouth. Tiny animals called zooplankton graze on the phytoplankton. Small fish graze on those. Then larger fish, seabirds, seals and whales.
+
+Cut the supply, and within days the grazers are short of food. Some phytoplankton, especially diatoms, can sit in a dark resting state for months, and that may buy parts of the surface ocean a little time. But resting is not feeding. How fast a particular marine food web would crash is genuinely uncertain, and anyone who gives you an exact date is guessing. The direction is not uncertain. Over weeks to months, the base of the marine food web empties, and the animals above it starve, from the smallest upward. That matters to us, because aquatic foods supply about a sixth of the animal protein humans eat.
+
+But the sea is only the opening act. The real shock is on land, and to understand its timing, you need one fact about plants that most people never learn.
+
+Plants breathe too. A plant spends roughly half of the carbon it fixes simply staying alive. That figure comes from a 1998 analysis of forests and other ecosystems. So when the income stops, the plant lives off its savings, which are stored sugar and starch. The size of those savings decides everything.
+
+A lettuce or a wheat plant has small savings. Crops would wilt and fail within days to weeks. Grassland would yellow. A large tree is different. Trees already survive months every winter without making any sugar, living on stored starch, and many could last far longer than that. How much longer is poorly measured, and I would not trust a confident number from anyone. Picture it as a wave. The fields go first. Then the shrubs. Then the forests, over many months, and perhaps longer for the very largest trees.
+
+Now to the part that matters most to you. You do not eat oxygen. You eat photosynthesis. Every grain of rice, every apple, every steak is stored sunlight that a plant captured. Three crops alone, rice, wheat and maize, supply roughly half of the calories people eat. The chain that feeds eight billion people has no backup generator.
+
+How long do we have? Look at the pantry. The Food and Agriculture Organization tracks world cereal stocks, and in recent years they have hovered near thirty percent of a year's use. That is under four months of cereal for everyone, if it could be shared perfectly. It cannot, because the grain sits in particular warehouses in particular countries. Add livestock, which we could eat, although they would soon run out of feed themselves. A person can survive weeks without food, though not well.
+
+Put it together and the picture is hard but clear. For some months, the shelves are full. Then they are not. The deep famine arrives inside the first year.
+
+For scale, a 2022 study in Nature Food modelled a full nuclear war between the United States and Russia, in which soot blocks sunlight, and estimated that more than five billion people could die of hunger. In that scenario, crops still grow, just badly. In ours, crop output is not reduced. It is zero.
+
+And yet, there is a quiet surprise about what keeps working. About four fifths of the world's primary energy comes from fossil fuels. Coal, oil and gas are ancient photosynthesis, buried and finished. They do not care that today's plants have stopped. Nuclear plants, hydroelectric dams, wind turbines and solar panels need no leaves at all. A solar panel is, in a loose sense, a photosynthesis replacement that already exists. Civilisation could keep its lights on long after it could no longer feed itself.
+
+There is a twist coming about what survives, and it is stranger than any tree. But first, back to the forest where we began, months into the scenario.
+
+The leaves have fallen or browned. The forest is dead, standing, and dry. For the organisms that eat dead things, this is the biggest feast in the history of the planet. Fungi and bacteria would boom. They breathe in oxygen and breathe out carbon dioxide. And dry, dead forests and grasslands would very likely burn, in fires larger than anything in recorded history, because there is nothing living to green the land and slow them down.
+
+Now return to the carbon. One part per million of carbon dioxide in the air corresponds to about two billion tonnes of carbon. Divide five hundred and fifty billion by two, and you get roughly two hundred and fifty parts per million. If all the living carbon went back into the air, you would add a couple of hundred parts per million to the roughly four hundred and twenty already there, before the ocean takes its share. The ocean would take a large share, so the real increase would be smaller. But it would be a big push, delivered over years instead of the centuries it took us.
+
+So does the world get hotter or colder? Honestly, the science does not give one clean answer, and I will not pick the dramatic version.
+
+Here is what pulls toward warming. The best estimate from the Intergovernmental Panel on Climate Change is that doubling carbon dioxide warms the planet by about three degrees Celsius. A couple of hundred extra parts per million is more than half a doubling. That points to warming on the order of a degree or two, with large uncertainty, and the ocean absorbing some of it would trim that.
+
+Here is another effect. Plants cool the land by pulling water from the soil and releasing it as vapour. That process is called transpiration, and depending on the study, it makes up somewhere between about sixty and ninety percent of all the water that evaporates from land. As the plants die, that flow stops. Land interiors would likely get drier and hotter, with less rain falling inland.
+
+And a third effect pulls the other way. Dark forests soak up sunlight. Bare ground, snow and desert are brighter and reflect more of it. Work on forests and climate shows that these effects trade off differently by latitude. In the tropics, losing forest tends to warm the planet. At high latitudes, the brightening can cool it. Which effect wins, and where, depends on timing and details nobody can pin down. So the planet gets stranger and more extreme. Whether its average goes up or down is, truthfully, not settled.
+
+Years in, a smaller human population is still here. The ones who remain are those who found food that does not come from photosynthesis. Is that possible? In principle, yes. Researchers who study food catastrophes have proposed growing bacteria on natural gas, or on hydrogen and carbon dioxide, using electricity. A few companies already make small amounts of food this way. Whether it could be scaled up to feed billions, in months, is unproven. It would take factories, power and chemical feedstock on a scale that does not exist. Some people might make it. Far fewer than today.
+
+Now stretch your view to centuries, and then to millions of years. By now the living carbon is gone, rotted or burned. What happens to the oxygen?
+
+Slowly, it drains. Fresh rock exposed to air reacts with oxygen. Volcanoes release gases that react with oxygen. Without photosynthesis to replace it, those geological processes eat the supply. Estimates put the lifetime of atmospheric oxygen against those processes at a few million years. Sources differ on the exact number, but the scale is clear. For comparison, our own species is only about three hundred thousand years old. The air would stay breathable for far longer than humans have existed.
+
+After a few million years, the oxygen would be nearly gone. The planet would resemble the Earth of about two point four billion years ago, just before the event in which photosynthesis first filled the sky with oxygen. We would have run the Great Oxidation Event backward.
+
+Now the turn I promised. Where does life go on?
+
+Go down. About two point eight kilometres beneath the surface, in the Mponeng gold mine near Johannesburg, South Africa, scientists found a community of bacteria living in water that had been sealed inside rock fractures for millions of years. The community was almost entirely one species, named Desulforudis audaxviator, which means bold traveller. Its food was not sunlight. It was radioactivity.
+
+Uranium and other radioactive elements in the surrounding rock constantly split water molecules apart. That makes hydrogen, which is fuel, and it makes oxidised minerals, which produce sulfate. The bacteria run on those. Their genome shows that they can fix their own carbon and even their own nitrogen. They need no light, and no oxygen from the surface. They are a complete ecosystem, in one species, running on the decay of atoms.
+
+Estimates suggest, with wide error bars, that most of Earth's microbes live underground, not at the surface. So a large share of the biosphere's headcount would barely notice that photosynthesis had stopped.
+
+And here is the part that surprises people most. The deep-sea hydrothermal vents, famous as ecosystems that need no sunlight, are only half independent of it. The microbes there make food from chemicals in the hot water. But most of the vent animals, like the giant tubeworms and the clams, still need dissolved oxygen to breathe. That oxygen exists because of photosynthesis. Their food runs on Earth's heat. Their breathing runs on the Sun. When the oxygen fades, the vent animals fade with it.
+
+So the last living thing on a world without photosynthesis is not a tree. It is not an animal. It is a microbe in the dark, eating hydrogen made by radioactivity. The story of life would not be over. The story of the world you know would be.
+
+Here is my question for you. Suppose you had exactly one week of warning before photosynthesis stopped. You cannot prevent it, but you can prepare. What is the first thing you would do with that week? Tell me in the comments.

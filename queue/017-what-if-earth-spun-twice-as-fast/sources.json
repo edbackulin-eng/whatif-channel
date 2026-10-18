@@ -1,0 +1,442 @@
+[
+  {
+    "text": "Equatorial surface speed of Earth's rotation is about 1,670 km/h",
+    "as_written": "about 1,670 kilometres per hour",
+    "source": "IERS sidereal day (23h 56m 4s) and WGS84 equatorial circumference of about 40,075 km, NGA/NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Speed of sound at sea level in the standard atmosphere is about 1,225 km/h (340 m/s)",
+    "as_written": "about 1,225 kilometres per hour at sea level",
+    "source": "ISO 2533 / ICAO International Standard Atmosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Doubling the equatorial speed gives about 3,340 km/h, about 2.7 times the speed of sound",
+    "as_written": "about 3,340 kilometres per hour, more than two and a half times the speed of sound",
+    "source": "Derived from 1,670 km/h (IERS, WGS84) and ISO 2533 speed of sound",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sun rises and sets in about six hours and night lasts six hours on a 12-hour day at the equator",
+    "as_written": "the sun climbs and sets in about six hours, and the night is over in six more",
+    "source": "Derived from a 12-hour rotation period; equatorial day and night are equal at the equinoxes (US Naval Observatory)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's rotational kinetic energy is about 2 x 10^29 joules",
+    "as_written": "roughly two hundred thousand trillion trillion joules",
+    "source": "NASA Planetary Fact Sheet moment-of-inertia coefficient 0.3307, Earth mass and radius, IERS rotation rate",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Rotational energy scales with the square of spin rate, so doubling quadruples it and requires adding three times the current energy",
+    "as_written": "Double the spin and that figure quadruples, so you would need to add three times as much again",
+    "source": "Classical mechanics, E = 1/2 I omega^2",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The added energy (about 6.4 x 10^29 J) equals roughly half an hour of the Sun's total luminosity of 3.828 x 10^26 W",
+    "as_written": "about half an hour of the entire output of the Sun",
+    "source": "IAU 2015 Resolution B3 nominal solar luminosity; derived",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Centrifugal acceleration at the equator is about 1/289 of gravity",
+    "as_written": "about one part in 289 of your weight",
+    "source": "Heiskanen and Moritz, Physical Geodesy (1967); WGS84 constants",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Centrifugal effect is a little over a third of one percent of weight today",
+    "as_written": "a little over a third of one percent",
+    "source": "Derived from 1/289, Heiskanen and Moritz, Physical Geodesy",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Centrifugal effect scales with the square of spin, giving about 1/72, about 1.4 percent, at double spin",
+    "as_written": "to about one part in 72, which is a bit under one and a half percent",
+    "source": "Derived from 1/289 times four; Heiskanen and Moritz, Physical Geodesy",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Equatorial weight would drop by roughly one percent relative to today",
+    "as_written": "you would weigh roughly one percent less than you do now",
+    "source": "Derived: (4 - 1)/289, about 1.0 percent",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Normal gravity is 9.78 m/s^2 at the equator and 9.83 m/s^2 at the poles",
+    "as_written": "9.78 metres per second squared, against 9.83 at the poles",
+    "source": "WGS84 normal gravity, US National Geospatial-Intelligence Agency",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Equatorial radius is about 6,378 km and polar radius about 6,357 km",
+    "as_written": "about 6,378 kilometres, and at the poles about 6,357",
+    "source": "WGS84 ellipsoid, US National Geospatial-Intelligence Agency",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Equatorial radius exceeds polar radius by about 21 km",
+    "as_written": "roughly 21 kilometres further from the centre",
+    "source": "WGS84 ellipsoid (6,378.137 km minus 6,356.752 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "To first order the rotational bulge scales with the square of the spin rate, giving a bulge about four times larger, on the order of 80 km",
+    "as_written": "about four times bigger. That is on the order of eighty kilometres",
+    "source": "Clairaut's theory of the figure of the Earth, Heiskanen and Moritz, Physical Geodesy (first-order estimate)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "With the old sea floor held fixed, the new equilibrium sea surface would be kilometres higher at the equator and kilometres lower near the poles",
+    "as_written": "kilometres higher than today at the equator, and kilometres lower than today near the poles",
+    "source": "First-order centrifugal potential calculation, Heiskanen and Moritz, Physical Geodesy (author's estimate, not a published simulation)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average ocean depth is about 3,700 m",
+    "as_written": "about 3,700 metres deep",
+    "source": "Charette and Smith 2010, Oceanography 23(2), ETOPO1-based; NOAA NCEI",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Coriolis effect doubles when spin doubles and turns moving water to the right in the northern hemisphere and left in the southern",
+    "as_written": "the sideways push doubles with it",
+    "source": "Coriolis parameter f = 2 Omega sin(latitude); Gill, Atmosphere-Ocean Dynamics (1982)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geostrophic balance lets ocean currents flow along a sea surface slope",
+    "as_written": "Oceanographers call this geostrophic balance",
+    "source": "Gill, Atmosphere-Ocean Dynamics (1982); Rossby 1938 on geostrophic adjustment",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Bering Strait is shallow and was dry land during the last ice age, joining Asia and North America",
+    "as_written": "as they were during the last ice age",
+    "source": "NOAA Ocean Exploration and USGS, Beringia land bridge",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's sidereal rotation period is 23 hours 56 minutes 4 seconds",
+    "as_written": "23 hours, 56 minutes and 4 seconds",
+    "source": "International Earth Rotation and Reference Systems Service (IERS)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The tropical year is about 365.24 days, so about 731 days of 12 hours",
+    "as_written": "about 365 and a quarter of today's days. That works out to roughly 731",
+    "source": "IERS; derived (365.24 sidereal-adjusted days doubled)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's axial tilt is about 23.4 degrees",
+    "as_written": "about 23.4 degrees",
+    "source": "NASA Planetary Fact Sheet / IAU obliquity of the ecliptic",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "With a 12-hour rotation, the interval between lunar tides would be about six hours instead of about 12 hours 25 minutes",
+    "as_written": "roughly every six hours instead of every twelve and a bit",
+    "source": "Derived from the sidereal month of 27.32 days (NASA Moon Fact Sheet) and a 11h 58m rotation period",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Human circadian period averages about 24.18 hours",
+    "as_written": "about 24 and a fifth hours",
+    "source": "Czeisler et al. 1999, Science 284, 2177-2181",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Volunteers on 28-hour artificial days did not entrain their body clocks",
+    "as_written": "such as 28 hours, their body clocks did not follow",
+    "source": "Czeisler et al. 1999, Science 284, 2177-2181 (forced desynchrony protocol)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Arabidopsis grew and survived better when its clock period matched the light-dark cycle",
+    "as_written": "grew better and survived better when the period of its internal clock matched the cycle of light and dark",
+    "source": "Dodd et al. 2005, Science 309, 630-633",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tropical cyclones do not form within about five degrees of the equator because the Coriolis force is too weak",
+    "as_written": "within about five degrees of the equator",
+    "source": "NOAA Atlantic Oceanographic and Meteorological Laboratory, Hurricane Research Division FAQ",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Because the Coriolis parameter doubles, the same threshold is reached at roughly half the latitude, about 2.5 degrees",
+    "as_written": "about two and a half degrees",
+    "source": "Derived from f = 2 Omega sin(latitude)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Today's Hadley circulation reaches about 30 degrees latitude, which is where the subtropical deserts lie",
+    "as_written": "toward about 30 degrees of latitude",
+    "source": "NOAA / NASA climate education on Hadley circulation and subtropical deserts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Climate model experiments show faster rotation gives narrower Hadley cells and more jets",
+    "as_written": "The faster the spin, the narrower the tropical overturning cell",
+    "source": "Navarra and Boccaletti 2002, Climate Dynamics 19; Kaspi and Showman 2015, Astrophysical Journal 804",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Navarra and Boccaletti study of rotation-rate sensitivity was published in 2002",
+    "as_written": "Navarra and Boccaletti in 2002",
+    "source": "Navarra and Boccaletti 2002, Climate Dynamics 19, 467-481",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Eastward equatorial launches gain about 465 m/s from Earth's rotation",
+    "as_written": "about 465 metres per second",
+    "source": "NASA; derived from equatorial rotation speed",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Low Earth orbit requires about 7.8 km/s",
+    "as_written": "about 7.8 kilometres per second",
+    "source": "NASA orbital velocity reference",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "465 m/s is about six percent of 7.8 km/s",
+    "as_written": "about six percent of the job",
+    "source": "Derived",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Doubling gives about 930 m/s, nearly twelve percent of orbital speed",
+    "as_written": "about 930 metres per second, nearly twelve percent",
+    "source": "Derived",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The 1960 Chile earthquake was magnitude 9.5, the largest recorded",
+    "as_written": "magnitude 9.5",
+    "source": "United States Geological Survey, Largest Earthquakes in the World",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The 1960 Chile earthquake occurred in 1960",
+    "as_written": "in Chile in 1960",
+    "source": "United States Geological Survey",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Postglacial rebound continues in Scandinavia and Canada thousands of years after ice sheet melt, showing the mantle relaxes over thousands of years",
+    "as_written": "thousands of years after their ice sheets melted",
+    "source": "Peltier 2004, Annual Review of Earth and Planetary Sciences 32; Fennoscandian and Laurentide rebound studies",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At double spin the equatorial bulge is about four times today's",
+    "as_written": "an equator nearly four times as swollen as now",
+    "source": "Clairaut's theory, Heiskanen and Moritz, Physical Geodesy (first-order)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Christensen and Aubert 2006 found dynamo field strength in fast-rotating regimes depends on heat flux, not directly on rotation rate",
+    "as_written": "A well-known scaling study by Christensen and Aubert in 2006",
+    "source": "Christensen and Aubert 2006, Geophysical Journal International 166, 97-114",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal friction lengthens the day by about two milliseconds per century",
+    "as_written": "about two milliseconds per century",
+    "source": "Stephenson, Morrison and Hohenkerk 2016, Proceedings of the Royal Society A 472",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon recedes at about 3.8 cm per year, measured by lunar laser ranging off Apollo reflectors",
+    "as_written": "about 3.8 centimetres every year",
+    "source": "NASA Apollo lunar laser ranging retroreflector experiment; Dickey et al. 1994, Science 265",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 2 ms per century, adding 12 hours would take about 2.2 billion years",
+    "as_written": "more than two billion years",
+    "source": "Derived: 43,200 s divided by 2 ms per century",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Devonian corals about 400 million years ago show roughly 400 days per year, implying a day of about 22 hours",
+    "as_written": "about 400 million years ago record daily growth lines, and the lines per year add up to roughly 400 days, which means a day of about 22 hours",
+    "source": "Wells 1963, Nature 197, 948-950",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Wells published in 1963",
+    "as_written": "John Wells in 1963",
+    "source": "Wells 1963, Nature 197, 948-950",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Some models of the Moon-forming impact give the young Earth a day of only a few hours, a topic still debated",
+    "as_written": "a day of only a few hours",
+    "source": "Cuk and Stewart 2012, Science 338, 1047-1052; Canup 2012, Science 338, 1052-1055",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geostationary orbit altitude is 35,786 km and the period is one sidereal day",
+    "as_written": "35,786 kilometres above the equator",
+    "source": "NASA; International Telecommunication Union",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A geostationary satellite completes one orbit in about 24 hours",
+    "as_written": "about 24 hours",
+    "source": "NASA; sidereal day of 23h 56m (IERS)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A satellite with half the orbital period would be at an altitude of about 20,200 km (orbital radius scales with period to the two-thirds power)",
+    "as_written": "to about 20,200 kilometres",
+    "source": "Kepler's third law; GPS Interface Specification IS-GPS-200 (orbital radius about 26,560 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS satellites orbit at about 20,200 km altitude",
+    "as_written": "the altitude of the GPS satellites",
+    "source": "GPS.gov, US Space Force; IS-GPS-200",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS satellites orbit about twice per sidereal day with a period of about 11 hours 58 minutes",
+    "as_written": "about 11 hours and 58 minutes",
+    "source": "GPS.gov; IS-GPS-200",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Relative to a rotating ground, a satellite with a 24-hour period would move westward at about 15 degrees per hour",
+    "as_written": "about 15 degrees every hour",
+    "source": "Derived: 360 degrees per sidereal day is 15.04 degrees per hour; kinematic difference of 2 rev and 1 rev per sidereal day",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS orbits are inclined about 55 degrees to the equator",
+    "as_written": "tilted about 55 degrees",
+    "source": "GPS.gov; IS-GPS-200",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The equator would stay on the surface unless Earth spun about 17 times faster, giving an orbital period at the surface of about 84 minutes",
+    "as_written": "about 84 minutes, which is a spin about seventeen times faster than today",
+    "source": "Derived from WGS84 GM and equatorial radius (low circular orbit period about 84 minutes); IERS rotation period",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

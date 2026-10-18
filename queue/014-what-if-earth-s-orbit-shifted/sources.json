@@ -1,0 +1,386 @@
+[
+  {
+    "text": "Earth to Mars orbit change is about 78 million km (Mars mean distance about 227.9 million km minus Earth about 149.6 million km)",
+    "as_written": "about seventy eight million kilometres farther from the Sun",
+    "source": "NASA Goddard Space Flight Center Planetary Fact Sheets (Earth and Mars)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Raising Earth to Mars's orbit requires about a month of the Sun's total luminosity in energy, from the difference in orbital energy using the Sun's GM, Earth's mass and a luminosity of 3.83e26 W (about 9e32 J)",
+    "as_written": "roughly a month of everything the Sun radiates",
+    "source": "Derived from IAU 2015 Resolution B3 nominal solar luminosity and GM_sun, with Earth's mass from the NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mean distance from the Sun is about 150 million km",
+    "as_written": "about one hundred and fifty million kilometres from the Sun",
+    "source": "NASA Planetary Fact Sheet, Earth",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars's mean distance from the Sun is about 228 million km",
+    "as_written": "about two hundred and twenty eight million",
+    "source": "NASA Planetary Fact Sheet, Mars",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars's orbital distance is about 1.52 times Earth's",
+    "as_written": "one and a half times as far",
+    "source": "NASA Planetary Fact Sheet, Mars",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mean orbital speed is about 29.8 km/s",
+    "as_written": "nearly thirty kilometres per second",
+    "source": "NASA Planetary Fact Sheet, Earth",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars's mean orbital speed is about 24.1 km/s, which approximates a circular orbit speed at that distance",
+    "as_written": "a little over twenty four",
+    "source": "NASA Planetary Fact Sheet, Mars",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth keeping its present speed at Mars's distance would be on an ellipse with aphelion near 5 AU, close to Jupiter's distance of about 5.2 AU",
+    "as_written": "almost as far as Jupiter",
+    "source": "Derived from the vis-viva equation with NASA Planetary Fact Sheet values",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's mean distance from Earth is about 384,400 km",
+    "as_written": "about three hundred and eighty four thousand kilometres away",
+    "source": "NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's Hill sphere radius is about 1.5 million km",
+    "as_written": "about one and a half million kilometres",
+    "source": "NASA Earth Fact Sheet and standard Hill sphere calculation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hill radius scales linearly with orbital distance, so it grows by about half at 1.52 AU",
+    "as_written": "grows by about half",
+    "source": "Hill sphere formula, derived from Kepler orbital scaling",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Total solar irradiance at Earth is about 1361 W per square metre",
+    "as_written": "one thousand three hundred and sixty one watts",
+    "source": "NASA SORCE/TIM and TSIS-1 measurements; Kopp and Lean 2011",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Irradiance at Mars's mean distance is about 590 W per square metre",
+    "as_written": "about five hundred and ninety",
+    "source": "NASA Planetary Fact Sheet, Mars (about 586 W/m2)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Irradiance at Mars distance is about 43 percent of Earth's, by inverse square law",
+    "as_written": "about forty three percent",
+    "source": "NASA Planetary Fact Sheet; inverse square law",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun's apparent diameter falls to about two thirds at 1.52 AU",
+    "as_written": "about two thirds of its old width",
+    "source": "Geometry; Sun's angular size from NASA Sun Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sunlight takes just over 8 minutes to reach Earth",
+    "as_written": "just over eight minutes",
+    "source": "NASA Solar System Exploration",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sunlight takes nearly 13 minutes to reach Mars's distance (about 12.7 minutes)",
+    "as_written": "nearly thirteen",
+    "source": "NASA Planetary Fact Sheet, Mars; light travel time calculation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The top ~3 m of the ocean holds as much heat as the whole atmosphere",
+    "as_written": "The top three metres or so of the sea hold as much heat as the entire atmosphere",
+    "source": "NOAA National Ocean Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth reflects close to 30 percent of incoming sunlight (Bond albedo about 0.29 to 0.30)",
+    "as_written": "close to thirty percent",
+    "source": "NASA Earth Fact Sheet; NASA CERES",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's outgoing longwave radiation is roughly 240 W per square metre",
+    "as_written": "roughly two hundred and forty watts per square metre",
+    "source": "NASA CERES; Stephens et al. 2012, Nature Geoscience",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Absorbed sunlight at Mars distance is about 100 W per square metre (1361 x 0.43 x 0.70 / 4 is about 102)",
+    "as_written": "drops to about one hundred",
+    "source": "Derived from TSIS-1 irradiance, inverse square law, and NASA albedo",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's present energy imbalance is of order one to two W per square metre",
+    "as_written": "a watt or two",
+    "source": "NASA CERES; Loeb et al. 2021, Geophysical Research Letters",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's day length is about 24 hours",
+    "as_written": "about twenty four hours",
+    "source": "NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's axial tilt is about 23.4 degrees",
+    "as_written": "about twenty three and a half degrees",
+    "source": "NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun's tidal effect is a bit under half the Moon's (about 46 percent)",
+    "as_written": "a bit under half the Moon's",
+    "source": "NOAA National Ocean Service, Tides and Water Levels",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal force scales as the inverse cube of distance, so solar tides fall to about 28 percent of the present value at 1.52 AU",
+    "as_written": "just over a quarter",
+    "source": "Newtonian tidal theory; derived",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturation water vapour in air rises about 7 percent per degree Celsius (Clausius-Clapeyron)",
+    "as_written": "about seven percent less water vapour",
+    "source": "IPCC AR6 WG1 Chapter 8; Clausius-Clapeyron relation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth without an atmosphere would average about minus 18 C (255 K)",
+    "as_written": "minus eighteen degrees Celsius",
+    "source": "NASA Earth Observatory and NASA Climate; standard radiative equilibrium",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Natural greenhouse effect warms Earth by about 33 C, giving a mean near 15 C",
+    "as_written": "about thirty three degrees",
+    "source": "NASA Earth Observatory; IPCC AR6 WG1",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Equilibrium temperature with no greenhouse at 43 percent sunlight and albedo 0.30 is about 207 K, or minus 66 C",
+    "as_written": "about minus sixty six",
+    "source": "Derived from Stefan-Boltzmann law with TSIS-1 irradiance and NASA Earth albedo",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A year at Mars's distance is about 687 days (Kepler's third law)",
+    "as_written": "about six hundred and eighty seven days",
+    "source": "NASA Planetary Fact Sheet, Mars (686.98 days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Each season lasts close to six months, about 172 days",
+    "as_written": "close to six months",
+    "source": "Derived from a 687 day orbital period",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "World population is about eight billion",
+    "as_written": "Eight billion people",
+    "source": "United Nations World Population Prospects 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Seawater freezes at about minus 1.8 C",
+    "as_written": "about minus one point eight degrees Celsius",
+    "source": "NOAA National Ocean Service; NSIDC",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fresh snow reflects more than 80 percent of sunlight",
+    "as_written": "more than eighty percent",
+    "source": "National Snow and Ice Data Center (NSIDC)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cryogenian glaciations occurred roughly 720 to 635 million years ago",
+    "as_written": "seven hundred and twenty and six hundred and thirty five million years ago",
+    "source": "Hoffman et al. 2017, Science Advances; Rooney et al. 2015",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun was about 6 percent dimmer around 700 million years ago",
+    "as_written": "about six percent dimmer",
+    "source": "Gough 1981, Solar Physics; standard solar evolution models",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Whether the Cryogenian Earth was a hard snowball or a slushball remains debated",
+    "as_written": "This is still genuinely contested",
+    "source": "Hoffman et al. 2017, Science Advances; Abbot, Voigt and Koll 2011",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Coldest air temperature ever measured on Earth is minus 89.2 C at Vostok on 21 July 1983",
+    "as_written": "minus eighty nine point two degrees Celsius",
+    "source": "World Meteorological Organization Weather and Climate Extremes Archive",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lake Vostok lies under nearly 4 km of ice",
+    "as_written": "nearly four kilometres of ice",
+    "source": "Siegert et al. 2001, Nature; British Antarctic Survey",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Outer edge of the habitable zone with a CO2 atmosphere is about 1.67 AU",
+    "as_written": "about one point six seven times Earth's distance",
+    "source": "Kopparapu et al. 2013, The Astrophysical Journal 765, 131",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars is at about 1.52 AU",
+    "as_written": "about one point five two",
+    "source": "NASA Planetary Fact Sheet, Mars",
+    "second_opinion": "status",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars's surface pressure is under 1 percent of Earth's (about 0.6 percent)",
+    "as_written": "less than one percent of Earth's",
+    "source": "NASA Planetary Fact Sheet, Mars",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Escape from snowball Earth requires CO2 hundreds of times the present level",
+    "as_written": "hundreds of times today's level",
+    "source": "Caldeira and Kasting 1992, Nature; Pierrehumbert 2004, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Snowball episodes lasted a few million to tens of millions of years",
+    "as_written": "from a few million years to tens of millions",
+    "source": "Rooney et al. 2015, PNAS; Macdonald et al. 2010, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Homo sapiens is about 300,000 years old",
+    "as_written": "about three hundred thousand years old",
+    "source": "Hublin et al. 2017, Nature (Jebel Irhoud)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The early Sun was about 30 percent dimmer than today",
+    "as_written": "about thirty percent dimmer",
+    "source": "NASA Astrobiology; Sagan and Mullen 1972, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "How Earth stayed warm under the faint young Sun is still debated",
+    "as_written": "Exactly how is still debated",
+    "source": "Feulner 2012, Reviews of Geophysics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

@@ -1,0 +1,354 @@
+[
+  {
+    "text": "Sunlight takes about eight minutes to travel from the Sun to Earth.",
+    "as_written": "Its light still crosses the gap to Earth in about eight minutes.",
+    "source": "IAU nominal astronomical unit (149,597,870,700 m) divided by the speed of light gives about 499 seconds; NASA Sun fact sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A healthy leaf re-emits about one to two percent of absorbed light as chlorophyll fluorescence.",
+    "as_written": "one to two percent of the absorbed light is re-emitted as a faint red glow called chlorophyll fluorescence",
+    "source": "Baker, N.R. 2008, Chlorophyll fluorescence: a probe of photosynthesis in vivo, Annual Review of Plant Biology 59",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fluorescence rises several-fold when photosynthetic electron transport is blocked, for example by the herbicide DCMU.",
+    "as_written": "that glow becomes several times brighter",
+    "source": "Maxwell and Johnson 2000, Chlorophyll fluorescence: a practical guide, Journal of Experimental Botany 51; Baker 2008",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Satellites measure solar-induced chlorophyll fluorescence from orbit to track vegetation activity.",
+    "as_written": "Satellites already measure the faint glow of healthy vegetation from orbit",
+    "source": "Frankenberg et al. 2011, Geophysical Research Letters (GOSAT); NASA Orbiting Carbon Observatory-2 solar-induced fluorescence product",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At any moment about half of Earth is in night.",
+    "as_written": "Roughly half the planet is always in darkness",
+    "source": "Basic geometry of the day-night terminator for a sphere lit by the Sun",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric carbon dioxide is above 420 parts per million.",
+    "as_written": "above four hundred and twenty parts per million",
+    "source": "NOAA Global Monitoring Laboratory, Mauna Loa CO2 record",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The seasonal swing in carbon dioxide at Mauna Loa is about six parts per million.",
+    "as_written": "rises and falls by about six parts per million every year",
+    "source": "NOAA Global Monitoring Laboratory and Scripps Institution of Oceanography, Keeling Curve",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Dry air is about 21 percent oxygen by volume.",
+    "as_written": "about twenty-one percent oxygen",
+    "source": "NOAA and NASA atmospheric composition references; US Standard Atmosphere 1976",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The atmosphere holds roughly 1.2 quadrillion tonnes of oxygen.",
+    "as_written": "roughly one point two quadrillion tonnes",
+    "source": "Derived: atmospheric mass of about 5.15 x 10^18 kg (Trenberth and Smith 2005, Journal of Climate) times an oxygen mass fraction of about 23 percent (US Standard Atmosphere 1976)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "NASA's design value for human oxygen consumption is 0.84 kilograms per person per day.",
+    "as_written": "eighty-four hundredths of a kilogram",
+    "source": "NASA Life Support Baseline Values and Assumptions Document, NASA/TP-2015-218570",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "World population is about eight billion.",
+    "as_written": "eight billion people",
+    "source": "United Nations, World Population Prospects 2024",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Eight billion people at 0.84 kg per day use nearly seven million tonnes of oxygen daily.",
+    "as_written": "nearly seven million tonnes of oxygen every day",
+    "source": "Derived from NASA BVAD 0.84 kg/day and UN population of about 8 billion",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A century of human breathing uses about 0.02 percent of atmospheric oxygen.",
+    "as_written": "about two hundredths of one percent of the oxygen in the sky",
+    "source": "Derived: about 6.7 million tonnes per day over 100 years, about 2.4 x 10^11 tonnes, divided by about 1.2 x 10^15 tonnes",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global biomass is about 550 billion tonnes of carbon, of which plants are about 450 billion and animals about 2 billion.",
+    "as_written": "roughly five hundred and fifty billion tonnes. Plants made up about four hundred and fifty billion tonnes of that. Animals, every insect, fish, cow and human together, made up about two billion.",
+    "source": "Bar-On, Phillips and Milo 2018, The biomass distribution on Earth, PNAS 115",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Animals are less than half of one percent of living carbon.",
+    "as_written": "less than half of one percent of all living carbon",
+    "source": "Derived from Bar-On, Phillips and Milo 2018 (about 2 of about 550 billion tonnes)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oxidising carbon to carbon dioxide takes 32/12, about 2.67, times its mass in oxygen.",
+    "as_written": "about two and two thirds times as much as the carbon",
+    "source": "Stoichiometry of C + O2 -> CO2 (atomic masses 12 and 32)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oxidising all living biomass would use roughly 1.5 trillion tonnes of oxygen.",
+    "as_written": "roughly one and a half trillion tonnes of oxygen",
+    "source": "Derived: 550 billion tonnes of carbon times 32/12, from Bar-On et al. 2018",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That is about a tenth of one percent of atmospheric oxygen.",
+    "as_written": "you have used about a tenth of one percent",
+    "source": "Derived: about 1.5 x 10^12 tonnes divided by about 1.2 x 10^15 tonnes",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Soil organic carbon is several times plant biomass, and oxidising it too would still use under one percent of atmospheric oxygen.",
+    "as_written": "Add the carbon stored in soils, which is several times larger than all the plants combined, and you are still under one percent.",
+    "source": "Jobbagy and Jackson 2000, Ecological Applications 10 (about 1,500 billion tonnes of carbon in the top metre of soil); derived oxygen fraction",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric oxygen would fall from about 20.95 to about 20.9 percent.",
+    "as_written": "something like twenty point nine",
+    "source": "Derived from a drop of about 0.1 percent of the oxygen inventory, from 20.95 percent (US Standard Atmosphere 1976)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The biosphere fixes about 105 billion tonnes of carbon a year, about half of it in the oceans.",
+    "as_written": "Out of the roughly one hundred and five billion tonnes of carbon that the whole planet fixes in a year, about half is fixed by phytoplankton",
+    "source": "Field et al. 1998, Primary production of the biosphere, Science 281 (about 105 Pg C per year; about 48.5 Pg C in the ocean)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Marine phytoplankton biomass is about one billion tonnes of carbon.",
+    "as_written": "only about one billion tonnes of carbon",
+    "source": "Bar-On, Phillips and Milo 2018, PNAS 115 (marine protists and algae, about 1 Gt C)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Phytoplankton biomass turns over in days.",
+    "as_written": "The standing crop turns over in days, about a week at the outside.",
+    "source": "Field et al. 1998, Science 281 (turnover of about 2 to 6 days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Many diatoms can survive months of darkness in a resting state.",
+    "as_written": "can sit in a dark resting state for months",
+    "source": "McMinn and Martin 2013, Dark survival in a warming world, Proceedings of the Royal Society B 280",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Aquatic foods supply about a sixth of animal protein eaten by people.",
+    "as_written": "about a sixth of the animal protein humans eat",
+    "source": "FAO, The State of World Fisheries and Aquaculture 2022 (about 17 percent of animal protein)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Plants use roughly half of the carbon they fix in their own respiration.",
+    "as_written": "A plant spends roughly half of the carbon it fixes simply staying alive.",
+    "source": "Waring, Landsberg and Williams 1998, Net primary production of forests: a constant fraction of gross primary production? Tree Physiology 18 (NPP/GPP about 0.47)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Temperate trees survive months each winter on stored carbohydrate reserves.",
+    "as_written": "Trees already survive months every winter without making any sugar, living on stored starch",
+    "source": "Hoch, Richter and Korner 2003, Plant, Cell and Environment 26; Hartmann and Trumbore 2016, New Phytologist 211",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Rice, wheat and maize supply roughly half of human calories.",
+    "as_written": "supply roughly half of the calories people eat",
+    "source": "FAO, Dimensions of Need: An Atlas of Food and Agriculture; FAO food balance sheets",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "World cereal stocks hover near thirty percent of annual use, under four months of consumption.",
+    "as_written": "hovered near thirty percent of a year's use. That is under four months of cereal",
+    "source": "FAO Cereal Supply and Demand Brief (stocks-to-use ratio about 30 percent); 30 percent of 12 months is 3.6 months",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2022 study estimated more than five billion deaths from famine after a full US-Russia nuclear war.",
+    "as_written": "more than five billion people could die of hunger",
+    "source": "Xia et al. 2022, Nature Food 3, Global food insecurity and famine from reduced crop, marine fishery and livestock production due to climate disruption from nuclear war soot injection",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fossil fuels supply about four fifths of world primary energy.",
+    "as_written": "About four fifths of the world's primary energy comes from fossil fuels.",
+    "source": "Energy Institute, Statistical Review of World Energy 2024 (about 81 percent in 2023)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "One part per million of atmospheric CO2 corresponds to about 2.1 billion tonnes of carbon, so 550 billion tonnes of carbon would add roughly 250 ppm if all stayed airborne.",
+    "as_written": "One part per million of carbon dioxide in the air corresponds to about two billion tonnes of carbon.",
+    "source": "Global Carbon Project Global Carbon Budget (2.124 Gt C per ppm); derived 550 / 2.1 = about 260 ppm",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The IPCC best estimate of equilibrium climate sensitivity is about three degrees Celsius per doubling of CO2.",
+    "as_written": "doubling carbon dioxide warms the planet by about three degrees Celsius",
+    "source": "IPCC Sixth Assessment Report, Working Group I, 2021 (best estimate 3 C, likely range 2.5 to 4 C)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A couple of hundred ppm added to about 420 ppm is more than half a doubling, implying roughly a degree or two of warming before ocean uptake.",
+    "as_written": "more than half a doubling. That points to warming on the order of a degree or two",
+    "source": "Derived: log2((420+250)/420) is about 0.67, or about 0.57 for 200 ppm, times 3 C; IPCC AR6 WG1",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Transpiration is roughly 60 to 90 percent of land evapotranspiration depending on the study.",
+    "as_written": "somewhere between about sixty and ninety percent of all the water that evaporates from land",
+    "source": "Schlesinger and Jasechko 2014, Agricultural and Forest Meteorology 189 (about 61 percent); Jasechko et al. 2013, Nature 496 (80 to 90 percent)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Forest loss warms the tropics and can cool high latitudes through albedo changes.",
+    "as_written": "In the tropics, losing forest tends to warm the planet. At high latitudes, the brightening can cool it.",
+    "source": "Bonan 2008, Forests and climate change, Science 320",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Food can be made from bacteria grown on hydrogen and carbon dioxide or natural gas; a few companies do this at small scale, and scalability for catastrophe is unproven.",
+    "as_written": "A few companies already make small amounts of food this way.",
+    "source": "Denkenberger and Pearce 2014, Feeding Everyone No Matter What; Solar Foods (Finland), Solein production",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric oxygen has a geological lifetime of a few million years against weathering and volcanic-gas sinks.",
+    "as_written": "Estimates put the lifetime of atmospheric oxygen against those processes at a few million years.",
+    "source": "Holland 2006, Philosophical Transactions of the Royal Society B 361; Catling and Kasting 2017, Atmospheric Evolution on Inhabited and Lifeless Worlds",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Homo sapiens is about 300,000 years old.",
+    "as_written": "about three hundred thousand years old",
+    "source": "Hublin et al. 2017, Nature 546, Jebel Irhoud fossils",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Great Oxidation Event occurred about 2.4 billion years ago.",
+    "as_written": "about two point four billion years ago",
+    "source": "Bekker et al. 2004, Nature 427; Lyons, Reinhard and Planavsky 2014, Nature 506",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A microbial community lives about 2.8 kilometres deep in the Mponeng gold mine, in water sealed in rock for millions of years.",
+    "as_written": "About two point eight kilometres beneath the surface, in the Mponeng gold mine near Johannesburg, South Africa",
+    "source": "Chivian et al. 2008, Environmental genomics reveals a single-species ecosystem deep within Earth, Science 322; Lin et al. 2006, Science 314 (fracture water ages of millions of years)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Desulforudis audaxviator lives on hydrogen and sulfate produced by radiolysis of water by radioactive decay, and can fix carbon and nitrogen.",
+    "as_written": "Uranium and other radioactive elements in the surrounding rock constantly split water molecules apart.",
+    "source": "Chivian et al. 2008, Science 322; Lin et al. 2006, Science 314",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Most of Earth's microbes are estimated to live in the subsurface, with wide uncertainty.",
+    "as_written": "most of Earth's microbes live underground, not at the surface",
+    "source": "Magnabosco et al. 2018, Nature Geoscience 11; Bar-On, Phillips and Milo 2018, PNAS 115",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Most hydrothermal vent animals such as tubeworms and clams depend on dissolved oxygen derived from photosynthesis.",
+    "as_written": "most of the vent animals, like the giant tubeworms and the clams, still need dissolved oxygen to breathe",
+    "source": "Van Dover 2000, The Ecology of Deep-Sea Hydrothermal Vents, Princeton University Press",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

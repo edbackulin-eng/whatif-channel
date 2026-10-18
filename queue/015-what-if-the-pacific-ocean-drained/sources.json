@@ -1,0 +1,378 @@
+[
+  {
+    "text": "The Pacific Ocean covers about 165 million square kilometres",
+    "as_written": "The Pacific covers about 165 million square kilometres",
+    "source": "NOAA National Ocean Service / Encyclopaedia Britannica, Pacific Ocean",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That area is almost a third of Earth's surface (Earth's total surface is about 510 million square kilometres)",
+    "as_written": "almost a third of the whole surface of the planet",
+    "source": "NOAA National Ocean Service; Earth surface area from standard geophysical references",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Pacific holds roughly 670 million cubic kilometres of water",
+    "as_written": "roughly 670 million cubic kilometres of water",
+    "source": "Charette and Smith 2010, 'The Volume of Earth's Ocean', Oceanography 23(2)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That is about half of all ocean water",
+    "as_written": "about half of all the ocean water on Earth",
+    "source": "Charette and Smith 2010, Oceanography 23(2)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Pacific's average depth is around four kilometres",
+    "as_written": "Its average depth is around four kilometres",
+    "source": "Charette and Smith 2010, Oceanography 23(2); NOAA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Challenger Deep is nearly eleven kilometres deep",
+    "as_written": "nearly eleven kilometres down",
+    "source": "NOAA Ocean Exploration, Mariana Trench; Gardner et al. bathymetric surveys",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mount Everest is about 8.8 kilometres tall",
+    "as_written": "about 8.8 kilometres tall",
+    "source": "2020 China-Nepal survey, 8,848.86 m",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Everest's summit would sit more than two kilometres below the surface if placed in the trench (10.9 minus 8.8)",
+    "as_written": "its summit would still sit more than two kilometres below the old surface",
+    "source": "Derived from NOAA Challenger Deep depth and the 2020 Everest survey",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The continental shelf typically ends at a depth of a little over a hundred metres",
+    "as_written": "typically ends at a depth of a little over a hundred metres",
+    "source": "NOAA National Ocean Service, continental shelf; Harris et al. 2014, Marine Geology",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Standard atmosphere pressure about 1.5 times sea-level at 4 km below sea level, a little over 3 times at about 10.9 km below",
+    "as_written": "about one and a half times what you feel on the beach ... a little over three times",
+    "source": "International Standard Atmosphere (ICAO / US Standard Atmosphere 1976) barometric formula extrapolated below sea level",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Filling the lost water's volume with air would draw down roughly a fifth of the atmosphere's mass (rough estimate)",
+    "as_written": "something like a fifth of the entire atmosphere",
+    "source": "Back-of-envelope: ISA air density, Charette and Smith 2010 volume, atmospheric mass 5.148e18 kg from Trenberth and Smith 2005, J. Climate",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pressure at the old sea level would be roughly three quarters of the former value, similar to about two kilometres altitude",
+    "as_written": "perhaps three quarters of what it was ... an altitude of around two kilometres",
+    "source": "Derived from the same estimate and the International Standard Atmosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Long-wave speed in water is the square root of gravity times depth, about 700 km/h at 4 km depth",
+    "as_written": "roughly 700 kilometres an hour",
+    "source": "NOAA Center for Tsunami Research, tsunami speed; shallow-water wave theory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The 1960 Chile tsunami reached Japan after about a day",
+    "as_written": "it reached Japan after about a day",
+    "source": "NOAA National Centers for Environmental Information tsunami event records, 1960 Valdivia",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Antarctic Circumpolar Current carries more than 100 million cubic metres per second",
+    "as_written": "more than 100 million cubic metres of water every second",
+    "source": "Cunningham, Alderson and King 2003, Journal of Geophysical Research (Drake Passage transport about 134 Sv)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ocean remaining after loss would average roughly 1.8 km deep over the basin area, so sea level falls roughly 1.5 to 2 km (rough estimate)",
+    "as_written": "roughly half of today's average ... something like one and a half to two kilometres",
+    "source": "Derived from Charette and Smith 2010 (total ocean volume about 1,335 million km3, mean depth about 3.7 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Today's mean ocean depth is about 3.7 kilometres",
+    "as_written": "about 3.7 kilometres",
+    "source": "Charette and Smith 2010, Oceanography 23(2)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 80 percent of world trade by volume goes by sea",
+    "as_written": "About 80 percent of world trade by volume travels by sea",
+    "source": "UNCTAD Review of Maritime Transport",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "During the last ice age sea level was around 120 metres lower",
+    "as_written": "around 120 metres lower than today",
+    "source": "Lambeck et al. 2014, PNAS, 'Sea level and global ice volumes from the Last Glacial Maximum to the Holocene'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Temperature rises about 6.5 degrees Celsius per kilometre of descent in the standard atmosphere, giving about 40 C at 4 km below and above 80 C at the bottom of the trenches",
+    "as_written": "about 6.5 degrees Celsius for every kilometre ... around 40 degrees Celsius ... above 80 degrees",
+    "source": "International Standard Atmosphere lapse rate (ICAO Doc 7488), extrapolated",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The top few metres of the ocean hold as much heat as the entire atmosphere",
+    "as_written": "The top few metres of the ocean hold as much heat as the entire atmosphere above it",
+    "source": "NOAA / Woods Hole Oceanographic Institution",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oceans have taken up about 90 percent of the extra heat from greenhouse gases",
+    "as_written": "about 90 percent of the extra heat",
+    "source": "IPCC AR6 WG1 Chapter 7; von Schuckmann et al. 2020, Earth System Science Data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oceans supply about 90 percent of evaporated water in the water cycle",
+    "as_written": "about 90 percent of the water that evaporates",
+    "source": "US Geological Survey Water Science School, The Water Cycle",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At least half of the oxygen produced each year comes from the ocean, mostly plankton",
+    "as_written": "at least half of the oxygen produced each year comes from the ocean",
+    "source": "NOAA National Ocean Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The net oxygen contribution of the ocean is contested because most is consumed by respiration",
+    "as_written": "whether it matters for the oxygen you breathe is contested",
+    "source": "Field et al. 1998, Science; Broecker 'Keeping Global Change Honest'; NOAA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The atmosphere holds a very large stock of oxygen relative to annual production",
+    "as_written": "the atmosphere holds an enormous stock of oxygen already",
+    "source": "Catling and Kasting 2017, Atmospheric Evolution on Inhabitable and Lifeless Worlds",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ocean takes up about a quarter of annual CO2 emissions",
+    "as_written": "about a quarter of the carbon dioxide we emit each year",
+    "source": "Global Carbon Project, Global Carbon Budget (Friedlingstein et al.)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hudson Bay land is still rising by roughly a centimetre a year",
+    "as_written": "roughly a centimetre a year",
+    "source": "Sella et al. 2007, Geophysical Research Letters; Canadian Geodetic Survey GPS data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Isostatic rebound from removing 4 km of water would eventually be on the order of a kilometre (water density about a third of mantle rock; rough estimate)",
+    "as_written": "something on the order of a kilometre",
+    "source": "Derived from Airy isostasy using seawater density about 1,030 kg/m3 and mantle density about 3,300 kg/m3; Turcotte and Schubert, Geodynamics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ring of Fire hosts about 75 percent of active volcanoes and about 90 percent of earthquakes",
+    "as_written": "about 75 percent of the world's active volcanoes and about 90 percent of its earthquakes",
+    "source": "US Geological Survey, Ring of Fire",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Volcanic activity appears to have increased after the end of the last ice age (debated)",
+    "as_written": "Some studies find that volcanic activity increased after the ice melted",
+    "source": "Huybers and Langmuir 2009, Earth and Planetary Science Letters",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon recedes at about 3.8 centimetres per year, measured by lunar laser ranging",
+    "as_written": "about 3.8 centimetres a year",
+    "source": "NASA Lunar Laser Ranging experiment (Apollo retroreflectors)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 300 million cubic kilometres of water would need to move into the Pacific basin (rough estimate)",
+    "as_written": "roughly 300 million cubic kilometres of water",
+    "source": "Derived from Charette and Smith 2010 volumes and the Pacific's share of ocean area",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 1 billion cubic metres per second refilling would take about ten years, at a tenth of that about a century",
+    "as_written": "about ten years ... a century",
+    "source": "Arithmetic from the 300 million km3 estimate",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Messinian Salinity Crisis lasted from about 5.96 to 5.33 million years ago",
+    "as_written": "from about 5.96 to 5.33 million years ago",
+    "source": "Krijgsman et al. 1999, Nature; CIESM 2008 Messinian Salinity Crisis workshop report",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Messinian salt deposits are up to about two kilometres thick",
+    "as_written": "up to two kilometres thick",
+    "source": "Hsu et al. 1973 (DSDP Leg 13); Lofi et al. 2011 seismic studies",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The extent of Mediterranean desiccation, with drawdown of 1.5 km or more, is contested",
+    "as_written": "a kilometre and a half or more ... Others think it was only partly drained",
+    "source": "CIESM 2008; Garcia-Castellanos and Villaseñor 2011, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Zanclean flood peaked around 100 million cubic metres per second and refilled the basin in months to two years",
+    "as_written": "around 100 million cubic metres per second ... between a few months and two years",
+    "source": "Garcia-Castellanos et al. 2009, Nature 462",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Zanclean flood occurred about 5.33 million years ago",
+    "as_written": "About 5.33 million years ago",
+    "source": "Garcia-Castellanos et al. 2009, Nature 462",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Amazon discharges about 200 thousand cubic metres per second",
+    "as_written": "about 200 thousand cubic metres per second",
+    "source": "Molinier et al. 1996; NASA Earth Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Atlantic is widening at roughly two and a half centimetres a year while the Pacific shrinks",
+    "as_written": "roughly two and a half centimetres a year",
+    "source": "US Geological Survey, This Dynamic Earth",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The oldest ocean floor is about 180 million years old, largely in the western Pacific",
+    "as_written": "about 180 million years old",
+    "source": "Müller et al. 2008, Geochemistry Geophysics Geosystems; NOAA age of oceanic lithosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Amasia hypothesis: Pacific closes in 50 to 200 million years",
+    "as_written": "between 50 and 200 million years from now",
+    "source": "Mitchell, Kilian and Evans 2012, Nature 482",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Alternative Pangaea Ultima hypothesis in which the Atlantic closes first",
+    "as_written": "the Atlantic will close first ... Pangaea Ultima",
+    "source": "Scotese, PALEOMAP Project; Nield 2007 'Supercontinent'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The mantle transition zone lies between about 410 and 660 kilometres depth",
+    "as_written": "between about 410 and 660 kilometres below the surface",
+    "source": "Standard seismological Earth models (PREM, Dziewonski and Anderson 1981)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A Brazilian diamond inclusion of ringwoodite held about 1.5 percent water by weight",
+    "as_written": "about one and a half percent water by weight",
+    "source": "Pearson et al. 2014, Nature 507",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Whether the deep mantle holds several oceans' worth of water is disputed",
+    "as_written": "could hold several times as much water as all of the oceans combined ... Others suspect it holds far less",
+    "source": "Pearson et al. 2014, Nature; Schmandt et al. 2014, Science; Bercovici and Karato 2003, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]
