@@ -1,0 +1,61 @@
+name: smoke
+
+# Code reaches main only through here. Work is pushed to dev; this runs the
+# chain on ten seconds of a real script (scripts/smoke.py) and, if it passes,
+# merges dev into main - where the builds run it. A failure leaves main as it
+# was and emails the owner.
+on:
+  push:
+    branches: [dev]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: smoke
+  cancel-in-progress: false
+
+jobs:
+  smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      PYTHONUTF8: 1
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: dev
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -q -r requirements.txt
+      - run: python -X utf8 automation/fetch_music.py
+      - name: Smoke test
+        run: python -X utf8 scripts/smoke.py
+      - name: Promote dev to main
+        run: |
+          git config user.name "whatif-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          git fetch -q origin main dev
+          git checkout -q -B main origin/main
+          git merge --no-edit origin/dev
+          for i in 1 2 3 4 5; do
+            git push origin main && break
+            sleep $((i * 8)); git fetch -q origin main && git merge --no-edit origin/main
+          done
+          git push origin main:dev || echo "dev moved on meanwhile; it is merged next time"
+      - name: Email on failure
+        if: failure()
+        run: |
+          n=$(gh issue list -R ${{ github.repository }} --label run-log --state open --json number --jq '.[0].number // empty')
+          if [ -z "$n" ]; then
+            gh label create run-log -R ${{ github.repository }} --color b60205 2>/dev/null || true
+            n=$(gh issue create -R ${{ github.repository }} --title "Build failures" --label run-log --body "A comment here mentioning the owner arrives as an email." | grep -o '[0-9]*$')
+          fi
+          gh issue comment "$n" -R ${{ github.repository }} --body "@${{ github.repository_owner }} **smoke test failed - the change was NOT moved to main**: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
