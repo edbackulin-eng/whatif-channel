@@ -7,7 +7,7 @@ name: watchdog
 # See automation/watchdog.py.
 on:
   schedule:
-    - cron: "41 * * * *"
+    - cron: "11,41 * * * *"       # twice an hour: GitHub drops many scheduled runs
   workflow_dispatch:
 
 permissions:
