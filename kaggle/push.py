@@ -115,7 +115,33 @@ def _slugify(title):
     return re.sub(r"-{2,}", "-", cleaned)
 
 
+# What If has the GPU first: it waits for another channel's kernel already on the
+# GPU, but never for long and never fails a build over it.
+SHARED_WAIT_S = 90 * 60
+
+
+def _wait_shared():
+    """See every channel's kernels before submitting (kaggle/gpu_shared.py, the
+    same file in What If, Closed Tabs and the prehistoric channel)."""
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import gpu_shared
+        if not gpu_shared.wait_for_free(idle_s=0, poll_s=60, max_wait_s=SHARED_WAIT_S,
+                                        log=lambda m: print(m, flush=True)):
+            print(f"GPU still busy after {SHARED_WAIT_S // 60} min; What If submits anyway "
+                  "(it has priority) and Kaggle will queue it", flush=True)
+        from datetime import datetime, timedelta, timezone
+        since = datetime.now(timezone.utc) - timedelta(days=7)
+        others = {c: gpu_shared._ledger_hours(u, since) for c, u in gpu_shared.LEDGERS.items()}
+        print("GPU week of the other channels: " +
+              ", ".join(f"{c} {h:.1f} h" if h is not None else f"{c} unknown" for c, h in others.items()),
+              flush=True)
+    except Exception as e:                                       # noqa: BLE001
+        print(f"shared GPU check skipped ({e})", flush=True)
+
+
 def push(job, slug, title):
+    _wait_shared()
     BUILD.mkdir(parents=True, exist_ok=True)
     derived = _slugify(title)
     if derived != slug:

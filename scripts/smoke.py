@@ -38,6 +38,19 @@ def check(name, ok, detail=""):
         failures.append(f"{name}: {detail}")
 
 
+def shared_gpu():
+    """The shared GPU lock reads every channel's kernels the same way."""
+    sys.path.insert(0, str(ROOT / "kaggle"))
+    import gpu_shared
+    import push  # noqa: F401  - push.py must still import with the lock in it
+    ok = (gpu_shared.channel_of("u/whatif-main") == "whatif"
+          and gpu_shared.channel_of("u/closedtabs-stills-a") == "closedtabs"
+          and gpu_shared.channel_of("u/prehistoric-recon") == "prehistoric"
+          and gpu_shared.channel_of("u/other") is None
+          and gpu_shared.CHANNELS["whatif"] == 0)
+    check("shared GPU lock", ok)
+
+
 def imports():
     for pkg in ("pipeline", "automation"):
         for m in pkgutil.iter_modules([str(ROOT / pkg)]):
@@ -129,6 +142,7 @@ def main():
         shutil.rmtree(W)
     W.mkdir(parents=True)
     imports()
+    shared_gpu()
     if failures:
         print("SMOKE FAILED:", failures)
         return 1
