@@ -1,11 +1,15 @@
 {
   "slug": "010-what-if-antarctica-melted-completely",
   "title": "What If Antarctica Melted Completely?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 10,
   "script_source": "claude",
   "created": "2026-10-17T07:57:28+00:00",
   "words": 3229,
   "sourced_claims": 59,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "rendered_minutes": 213.2,
+  "updated": "2026-10-20T12:04:15+00:00",
+  "youtube_id": "WgFSjQZejUo",
+  "publish_at": "2026-10-24T15:00:00Z"
 }
