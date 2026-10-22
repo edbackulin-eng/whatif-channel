@@ -368,6 +368,7 @@ def _entry(c, legibility=None, used=False):
             "note": v.get("note", ""), "score": v.get("score", 0),
             "emotion": v.get("emotion", 0), "corner": v.get("corner", True),
             "matches": v.get("matches", True), "match_note": v.get("match_note", ""),
+            "event_seen": v.get("event_seen", ""),
             "face_side": v.get("face_side", ""), "event_side": v.get("event_side", ""),
             "legibility": None if legibility is None else round(legibility),
             "used": used}
