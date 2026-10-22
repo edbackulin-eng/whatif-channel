@@ -1,11 +1,15 @@
 {
   "slug": "011-what-if-earth-had-two-moons",
   "title": "What If Earth Had Two Moons?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 11,
   "script_source": "claude",
   "created": "2026-10-17T08:00:02+00:00",
   "words": 2808,
   "sourced_claims": 56,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "rendered_minutes": 143.1,
+  "updated": "2026-10-22T10:58:11+00:00",
+  "youtube_id": "BbogWi7X0W0",
+  "publish_at": "2026-10-26T15:00:00Z"
 }

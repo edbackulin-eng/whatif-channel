@@ -23,3 +23,5 @@
 - **2026-10-19 14:10 UTC** - Uploaded 009-what-if-a-black-hole-passed-through-the-solar-system as K87M_IaqYCY, public at 2026-10-23T15:00:00Z.
 - **2026-10-20 12:02 UTC** - Built 010-what-if-antarctica-melted-completely in 213 min.
 - **2026-10-20 12:04 UTC** - Uploaded 010-what-if-antarctica-melted-completely as WgFSjQZejUo, public at 2026-10-24T15:00:00Z.
+- **2026-10-22 10:56 UTC** - Built 011-what-if-earth-had-two-moons in 143 min.
+- **2026-10-22 10:58 UTC** - Uploaded 011-what-if-earth-had-two-moons as BbogWi7X0W0, public at 2026-10-26T15:00:00Z.
