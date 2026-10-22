@@ -286,7 +286,11 @@ Reject (ok=false) when ANY of these is clearly true:
 - anatomy: extra or missing limbs or heads, a shoulder growing from the wrong
   place, a body bent in an impossible way.
 - text: ANY lettering, numbers, caption, interface or watermark anywhere in the
-  image, including blurry or nonsensical lettering.
+  image, including blurry or nonsensical lettering. Look at the BACKGROUND on
+  purpose, not only at the person: shop signs, storefronts, billboards, street
+  signs, posters, licence plates, flags with letters. A street scene almost
+  always has some, and garbled shop signs are the most common way this check
+  has been fooled - one passed with "CNTY TIK" over a shop door.
 - gore: ANY blood, wound, cut, scratch, bruise or injury on a person, and ANY
   red streak, smear or drip on skin that a viewer could read as blood - even a
   thin one, even if it might be paint or reflected light. The channel shows
@@ -305,8 +309,13 @@ You are also told the episode's title. Judge separately whether the event in the
 picture is recognisably THAT subject and not a generic catastrophe: a black hole
 is a dark circle with a bright disc of matter around it, not a sun and not an
 explosion; two moons means two moons are visible; melting ice means ice and
-water. This does not reject a picture on its own - it decides which of several
-clean pictures is the right one.
+water; doubled gravity means buildings or ground visibly collapsing or crushed.
+First write down in "event_seen" what event you can actually SEE, then decide.
+If the subject's key object is not in the picture at all - no moons in the sky
+for "two moons", an ordinary intact street for "gravity doubled" - "matches" is
+false, however good the face is. A person reacting to something out of frame
+does not show the subject. This does not reject a picture on its own - it
+decides which of several clean pictures is the right one.
 Reply with valid JSON only."""
 
 THUMB_PROMPT = """For each image, in order, return:
@@ -321,14 +330,24 @@ could sit over it; false when something that matters is there>,
 "face_side":"left|right|centre - which half of the frame the face occupies",
 "event_side":"left|right - which half holds the event rather than the face;
 the words are drawn there, so it must be the half with no face in it",
-"matches":true|false,<true when the event shown is recognisably the episode's
+"event_seen":"<the event you can actually see in the picture, a few words;
+'nothing' when there is none>",
+"matches":true|false,<true only when event_seen is recognisably the episode's
 own subject, as described above>
 "match_note":"<a few words, only when matches is false>",
 "score":<1-10: how strongly this would stop a scroll - one clear dramatic
 subject, a readable emotion, bright saturated colour, no clutter>}]}"""
 
 
-def judge_thumbnails(paths, model=VISION_MODEL, topic=None, setting=None):
+# The thumbnail judge gets the full Flash model, not the lite one the frame QC
+# uses. Frame QC is ~250 images an episode and needs the lite quota; this is six,
+# and on 22.10 the lite model passed a street with "CNTY TIK" on a shop sign and
+# a rooftop with no moons in the sky as "Earth had two moons". One or two
+# requests an episode on the bigger model is the cheapest fix there is.
+THUMB_MODEL = llm.GEMINI_MODEL
+
+
+def judge_thumbnails(paths, model=THUMB_MODEL, topic=None, setting=None):
     """Verdicts for candidate thumbnails, keyed by path.
 
     {"ok", "defect", "note", "score", "emotion", "corner", "face_side",
@@ -365,9 +384,15 @@ def judge_thumbnails(paths, model=VISION_MODEL, topic=None, setting=None):
                    "generationConfig": {"maxOutputTokens": 2048, "temperature": 0.0,
                                         "responseMimeType": "application/json"}}
         results = []
-        for attempt in range(RETRIES):
+        # The full model first; if it will not answer at all (its free quota is
+        # smaller), the lite one, rather than leaving every candidate unjudged.
+        tries = [(m, a) for m in dict.fromkeys((model, VISION_MODEL))
+                 for a in range(RETRIES)]
+        for attempt_model, attempt in tries:
+            if results:
+                break
             _throttle()
-            req = urllib.request.Request(llm.GEMINI_URL.format(model=model),
+            req = urllib.request.Request(llm.GEMINI_URL.format(model=attempt_model),
                                          data=json.dumps(payload).encode(), method="POST",
                                          headers={"Content-Type": "application/json",
                                                   "x-goog-api-key": key})
@@ -381,7 +406,9 @@ def judge_thumbnails(paths, model=VISION_MODEL, topic=None, setting=None):
                 break
             except urllib.error.HTTPError as e:
                 if e.code not in (429, 500, 502, 503, 504):
-                    raise
+                    if attempt_model == VISION_MODEL:
+                        raise
+                    continue                 # this model is unusable: on to the lite one
                 time.sleep(4 * (attempt + 1))
             except (urllib.error.URLError, TimeoutError, ValueError):
                 time.sleep(4 * (attempt + 1))
@@ -404,7 +431,8 @@ def judge_thumbnails(paths, model=VISION_MODEL, topic=None, setting=None):
                        # Absent means not asked (no topic given), which must not
                        # read as "the picture is wrong".
                        "matches": bool(r.get("matches", True)),
-                       "match_note": r.get("match_note", "") or ""})
+                       "match_note": r.get("match_note", "") or "",
+                       "event_seen": r.get("event_seen", "") or ""})
     return out
 
 
