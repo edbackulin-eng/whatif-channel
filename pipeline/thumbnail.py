@@ -141,6 +141,9 @@ MAX_BLOCK_FRACTION = 0.50
 # How much of the width one side's block may use. Slightly over half, because
 # the two halves of a thumbnail are rarely split exactly down the middle.
 HALF = 0.54
+# How much busier than the quietest corner another corner may be and still be
+# considered, when it would carry much bigger type.
+DETAIL_TOLERANCE = 1.35
 START_SIZE = 260
 FLOOR_SIZE = 56
 LINE_GAP = 0.12               # of the tallest line's ink
@@ -264,7 +267,14 @@ def _choose_position(im, draw, lines, stroke_w, side=None):
                 scored.append((_region_detail(energy, fit[2]), position, fit))
     if not scored:
         return "bottom-left", None
-    _, position, fit = min(scored, key=lambda s: s[0])
+    # Quiet is not the only thing that matters. A bottom-right block is squeezed
+    # between its own half and YouTube's duration pill - about 317px of usable
+    # width against 637px top right - so picking on quietness alone made "BLACK
+    # HOLE" half the size of "2X GRAVITY" on the same batch. Among the corners
+    # that are quiet enough, the biggest type wins.
+    quietest = min(s[0] for s in scored)
+    roomy = [s for s in scored if s[0] <= quietest * DETAIL_TOLERANCE + 1e-6]
+    _, position, fit = max(roomy, key=lambda s: s[2][0].size)
     return position, fit
 
 
