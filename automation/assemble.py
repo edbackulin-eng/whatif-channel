@@ -170,9 +170,7 @@ def assemble(work, episode):
         log.info("using the approved thumbnail as-is (%s)",
                  episode["approved"]["thumbnail"])
     else:
-        lines = episode.get("thumbnail_lines") or _headline(episode["title"])
-        img = best_thumbnail(work, scenes, lines)
-        img.save(thumb)
+        thumbnail.save(best_thumbnail(work, scenes, episode), thumb)
 
     chapters = _chapters(work, render.probe_duration(final))
     credits_path = work / "credits.json"
@@ -260,8 +258,185 @@ def _headline(title):
     return [" ".join(words[:mid]).upper(), " ".join(words[mid:]).upper()]
 
 
+# text_legibility measured at 336x189. Under this the words smear into their own
+# outline on a browse card. Recalibrated with the browse size and the layout:
+# the old 120 was measured at 168x94, where the same type scores far lower.
+MIN_LEGIBILITY = 150
+# Defects that disqualify a candidate even when nothing better is left. A melted
+# face or a six-fingered hand on the one image every viewer sees first is worse
+# than a dull thumbnail.
+FATAL = ("face", "hands", "anatomy", "text", "empty", "blend", "card")
+
+
+def best_thumbnail(work, scenes, episode, out_dir=None):
+    """The episode's own thumbnail, from its own generations.
+
+    4-6 FLUX candidates of a face against the event (automation/frames.py put
+    them on the end of the scene batch), each judged by Gemini vision for faces,
+    hands, lettering and blends; the defective are dropped, and the best survivor
+    is composed with the episode's one to three words.
+
+    Two layouts, chosen by the brief: one face against the event, or a split with
+    a label over each half when the episode weighs two things against each other.
+
+    Falls back to the old behaviour - a still lifted out of the episode - when
+    there are no candidates at all, because a plain thumbnail ships and a build
+    that stopped for one does not.
+    """
+    from pipeline import thumbnail, thumbplan, visualqc
+    work = Path(work)
+    out_dir = Path(out_dir or work / "thumb_candidates")
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    brief, cands = {}, []
+    sources = work / "thumbnail_sources.json"
+    if sources.exists():
+        data = json.loads(sources.read_text(encoding="utf-8"))
+        brief = data.get("brief") or {}
+        cands = [c for c in data.get("candidates") or []
+                 if c.get("image") and Path(c["image"]).exists()]
+    if not brief:
+        brief = thumbplan.brief(episode, work, use_llm=False)
+    if not cands:
+        log.warning("no generated thumbnail candidate for this episode; falling back "
+                    "to an episode frame")
+        return _frame_thumbnail(work, scenes, episode)
+
+    try:
+        verdicts = visualqc.judge_thumbnails([c["image"] for c in cands])
+    except Exception as e:                                       # noqa: BLE001
+        log.warning("thumbnail judge unavailable (%s); every candidate counts as "
+                    "unchecked", e)
+        verdicts = {}
+    for c in cands:
+        v = verdicts.get(Path(c["image"])) or {
+            "ok": False, "defect": "unchecked", "note": "no verdict",
+            "score": 0.0, "emotion": 0.0, "corner": True}
+        c["verdict"] = v
+
+    words = brief.get("words") or []
+    if brief.get("comparison") and any(c["role"] in ("left", "right") for c in cands):
+        img, report = _compose_split(cands, brief, words, out_dir)
+    else:
+        img, report = _compose_single(cands, words, out_dir)
+    (work / "thumbnail_report.json").write_text(
+        json.dumps({"brief": brief, "min_legibility": MIN_LEGIBILITY,
+                    "candidates": report}, indent=1, ensure_ascii=False),
+        encoding="utf-8")
+    return img
+
+
+def _rank(c):
+    """How good a surviving candidate is: the judge's score, then the emotion it
+    reads, then a clear bottom-right corner."""
+    v = c["verdict"]
+    return (v.get("score", 0), v.get("emotion", 0), bool(v.get("corner", True)))
+
+
+def _entry(c, legibility=None, used=False):
+    v = c["verdict"]
+    return {"source": Path(c["image"]).name, "role": c.get("role", "single"),
+            "ok": v.get("ok", False), "defect": v.get("defect"),
+            "note": v.get("note", ""), "score": v.get("score", 0),
+            "emotion": v.get("emotion", 0), "corner": v.get("corner", True),
+            "legibility": None if legibility is None else round(legibility),
+            "used": used}
+
+
+def _compose_single(cands, words, out_dir):
+    """One face against the event: compose every candidate, keep the best that the
+    judge passed and whose words still read at browse size."""
+    from pipeline import thumbnail
+    report, ranked, composed = [], [], {}
+    for k, c in enumerate(cands):
+        img, boxes = thumbnail.compose(c["image"], words)
+        img.save(out_dir / f"candidate_{k}.png")
+        img.resize((thumbnail.BROWSE_W, thumbnail.BROWSE_H)).save(
+            out_dir / f"candidate_{k}_browse.png")
+        legible = thumbnail.text_legibility(img, boxes)
+        composed[k] = (img, boxes, legible)
+        if not thumbnail.safe_corner_clear(boxes):
+            # A layout bug, not a picture problem: the words must never reach the
+            # duration pill. Reported rather than silently shipped.
+            log.error("candidate %d draws into YouTube's corner; layout is wrong", k)
+        if c["verdict"].get("ok") and legible >= MIN_LEGIBILITY:
+            ranked.append((_rank(c), k))
+        report.append(_entry(c, legible))
+    if ranked:
+        _, k = max(ranked, key=lambda r: r[0])
+        img, _, legible = composed[k]
+        log.info("thumbnail: candidate %d of %d (score %.0f, emotion %.0f, "
+                 "legibility %.0f); %d rejected", k, len(cands),
+                 cands[k]["verdict"].get("score", 0),
+                 cands[k]["verdict"].get("emotion", 0), legible,
+                 len(cands) - len(ranked))
+        report[k]["used"] = True
+        return img, report
+    k = _least_bad(cands, composed)
+    log.warning("no thumbnail candidate passed the judge; using candidate %d (%s)",
+                k, cands[k]["verdict"].get("defect"))
+    report[k]["used"] = True
+    return composed[k][0], report
+
+
+def _least_bad(cands, composed):
+    """Nothing passed. Prefer a candidate the judge did not reject outright, and
+    among those the one whose words read best."""
+    usable = [k for k, c in enumerate(cands)
+              if c["verdict"].get("defect") not in FATAL]
+    return max(usable or list(range(len(cands))), key=lambda k: composed[k][2])
+
+
+def _compose_split(cands, brief, words, out_dir):
+    """A comparison: the best surviving face on each side, labelled, side by side."""
+    from pipeline import thumbnail
+    report = []
+    picked = {}
+    for side in ("left", "right"):
+        side_cands = [c for c in cands if c.get("role") == side]
+        passed = [c for c in side_cands if c["verdict"].get("ok")]
+        pool = passed or [c for c in side_cands
+                          if c["verdict"].get("defect") not in FATAL] or side_cands
+        if pool:
+            picked[side] = max(pool, key=_rank)
+    if len(picked) < 2:
+        log.warning("a comparison thumbnail needs a usable face on both sides and has "
+                    "%d; composing a single instead", len(picked))
+        return _compose_single(cands, words, out_dir)
+    labels = [brief["comparison"][side]["label"] for side in ("left", "right")]
+    img, boxes = thumbnail.compose_split(picked["left"]["image"],
+                                         picked["right"]["image"], labels, words)
+    img.save(out_dir / "candidate_split.png")
+    img.resize((thumbnail.BROWSE_W, thumbnail.BROWSE_H)).save(
+        out_dir / "candidate_split_browse.png")
+    legible = thumbnail.text_legibility(img, boxes)
+    if not thumbnail.safe_corner_clear(boxes):
+        log.error("the split layout draws into YouTube's corner; layout is wrong")
+    log.info("thumbnail: split %s / %s, legibility %.0f", labels[0], labels[1], legible)
+    for c in cands:
+        report.append(_entry(c, used=c in picked.values()))
+    report.append({"source": "candidate_split.png", "role": "split",
+                   "labels": labels, "legibility": round(legible), "used": True})
+    if legible < MIN_LEGIBILITY:
+        log.warning("the split labels measure %.0f at browse size, under %d",
+                    legible, MIN_LEGIBILITY)
+    return img, report
+
+
+def _frame_thumbnail(work, scenes, episode):
+    """The old thumbnail: a still from the episode with the title over it.
+
+    Only reached when no candidate was generated at all - no GPU, or an
+    archive-only build.
+    """
+    from pipeline import thumbnail
+    lines = episode.get("thumbnail_lines") or _headline(episode["title"])
+    pool = _thumb_candidates(work, scenes)
+    source = pool[0] if pool else _thumbnail_background(work, scenes)
+    return thumbnail.variant_b(source, lines)[0]
+
+
 THUMB_CANDIDATES = 6
-MIN_LEGIBILITY = 120          # text_legibility: under ~120 the words smear at browse size
 
 
 def _thumb_candidates(work, scenes, n=THUMB_CANDIDATES):
@@ -283,52 +458,6 @@ def _thumb_candidates(work, scenes, n=THUMB_CANDIDATES):
         return []
     step = max(1, len(pool) // n)
     return list(dict.fromkeys(pool[::step]))[:n]
-
-
-def best_thumbnail(work, scenes, lines, out_dir=None):
-    """4-6 candidates, each judged by Gemini vision for anatomy (hands, fingers,
-    legs, faces), lettering and cards; the defective are dropped, and the best
-    survivor whose words still read at browse size wins.
-
-    The thumbnail used to be the first generated frame of the episode, unseen. A
-    six-fingered hand on the one image every viewer sees first is the most
-    expensive defect the channel can ship.
-    """
-    from pipeline import thumbnail, visualqc
-    work = Path(work)
-    cands = _thumb_candidates(work, scenes)
-    if not cands:
-        return thumbnail.variant_b(_thumbnail_background(work, scenes), lines)[0]
-    try:
-        verdicts = visualqc.judge_thumbnails(cands)
-    except Exception as e:                                       # noqa: BLE001
-        log.warning("thumbnail judge unavailable (%s); every candidate counts as unchecked", e)
-        verdicts = {Path(c): {"ok": False, "defect": "unchecked", "score": 0.0} for c in cands}
-    report, ranked = [], []
-    out_dir = Path(out_dir or work / "thumb_candidates")
-    out_dir.mkdir(parents=True, exist_ok=True)
-    for k, c in enumerate(cands):
-        v = verdicts.get(Path(c), {})
-        img, boxes = thumbnail.variant_b(c, lines)
-        legible = thumbnail.text_legibility(img, boxes)
-        img.save(out_dir / f"candidate_{k}.png")
-        report.append({"candidate": k, "source": Path(c).name, "ok": v.get("ok", False),
-                       "defect": v.get("defect"), "note": v.get("note", ""),
-                       "score": v.get("score", 0), "legibility": round(legible)})
-        if v.get("ok") and legible >= MIN_LEGIBILITY:
-            ranked.append((v.get("score", 0), legible, k, img))
-    (work / "thumbnail_report.json").write_text(json.dumps(report, indent=1), encoding="utf-8")
-    if ranked:
-        score, legible, k, img = max(ranked, key=lambda r: (r[0], r[1]))
-        log.info("thumbnail: candidate %d of %d (score %.0f, legibility %.0f); %d rejected",
-                 k, len(cands), score, legible, len(cands) - len(ranked))
-        return img
-    # Nothing passed. Never a judged anatomy defect; otherwise the most legible.
-    usable = [r for r in report if r["defect"] not in ("anatomy", "text", "card", "empty")]
-    pick = max(usable or report, key=lambda r: r["legibility"])
-    log.warning("no thumbnail candidate passed the judge; using candidate %d (%s)",
-                pick["candidate"], pick["defect"])
-    return thumbnail.variant_b(cands[pick["candidate"]], lines)[0]
 
 
 def _thumbnail_background(work, scenes):

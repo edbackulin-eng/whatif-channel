@@ -265,32 +265,56 @@ def is_empty(path):
 
 # --- thumbnail backgrounds ------------------------------------------------------------
 
-THUMB_SYSTEM = """You judge candidate background photographs for a YouTube thumbnail of a
-science documentary. Text is added later on the left; the subject should own the right.
+THUMB_SYSTEM = """You judge candidate images for a YouTube thumbnail on a science
+channel about what-if scenarios.
+
+What the image is MEANT to be: a close human or astronaut face in the foreground
+in one strong emotion - screaming, terrified, shocked - looking slightly past the
+camera, with the event of the episode filling the rest of the frame in bright
+saturated colour. A lit face looking almost at the lens is the POINT here and is
+never a defect. Words are added afterwards, over the lower left.
 
 Reject (ok=false) when ANY of these is clearly true:
-- anatomy: a hand without exactly five fingers, fused, extra or missing fingers; a
-  malformed or melted hand, arm, leg or foot; extra or missing limbs; a distorted,
-  melted or asymmetric face; a body bent in an impossible way.
-- text: any lettering, numbers, caption, interface or watermark in the image.
-- card: the image is a drawn infographic or title card rather than a photograph.
-- empty: the image is nearly black, blank or has no clear subject.
-- blend: two different pictures superimposed on each other (a frame caught in a
-  crossfade), or a picture inset on a blurred copy of itself.
-People are allowed only if their anatomy is flawless. Reply with valid JSON only."""
+- face: the face is deformed, melted, asymmetric or smeared; eyes mismatched,
+  misplaced or pointing different ways; an extra or missing eye, ear or nostril;
+  teeth fused into a block or a mouth that is not a mouth; skin like plastic or
+  a doll. This is the most important defect to catch - it is the one image every
+  viewer sees first.
+- hands: any visible hand or finger that is wrong - a hand with more or fewer
+  than five fingers, fused, bent or extra fingers, a melted palm, a wrist that
+  joins nothing.
+- anatomy: extra or missing limbs or heads, a shoulder growing from the wrong
+  place, a body bent in an impossible way.
+- text: ANY lettering, numbers, caption, interface or watermark anywhere in the
+  image, including blurry or nonsensical lettering.
+- empty: nearly black, washed out, or no clear subject at all.
+- blend: two pictures superimposed, or a picture inset on a blurred copy of
+  itself.
+
+A clean, well formed face in a strong emotion passes even if it is unusual or
+extreme. Grain and shallow depth of field are fine.
+Reply with valid JSON only."""
 
 THUMB_PROMPT = """For each image, in order, return:
-{"results":[{"i":<index>,"ok":true|false,"defect":"anatomy|text|card|empty|blend|none",
-"note":"<a few words>",
-"score":<1-10: how strongly this would stop a scroll as a thumbnail - one clear,
-dramatic subject, readable at a small size>}]}"""
+{"results":[{"i":<index>,"ok":true|false,
+"defect":"face|hands|anatomy|text|empty|blend|none",
+"note":"<a few words, only when ok is false>",
+"emotion":<0-10: how clearly a strong human emotion reads on the face at the
+size of a postage stamp; 0 if there is no face>,
+"corner":<true when the BOTTOM RIGHT corner of the image - the last quarter
+across and the last fifth down - holds nothing important, so a duration badge
+could sit over it; false when something that matters is there>,
+"score":<1-10: how strongly this would stop a scroll - one clear dramatic
+subject, a readable emotion, bright saturated colour, no clutter>}]}"""
 
 
 def judge_thumbnails(paths, model=VISION_MODEL):
-    """{path: {"ok", "defect", "note", "score"}} for candidate thumbnail backgrounds.
+    """{path: {"ok", "defect", "note", "score", "emotion", "corner"}} for candidates.
 
     A candidate that is not judged (quota, outage) is not ok: a thumbnail with an
-    unseen six-fingered hand is worse than the second-best background.
+    unseen six-fingered hand or a melted face is worse than the second-best
+    picture. `emotion` and `corner` are advisory and only order the survivors -
+    a face is what this style is for, so the one that reads most clearly wins.
     """
     key = llm.get_key("GEMINI_API_KEY")
     if not key:
@@ -331,8 +355,13 @@ def judge_thumbnails(paths, model=VISION_MODEL):
         by_i = {r.get("i"): r for r in results}
         for i, p in enumerate(batch):
             r = by_i.get(i)
-            out[p] = ({"ok": False, "defect": "unchecked", "note": "no verdict", "score": 0.0}
+            out[p] = ({"ok": False, "defect": "unchecked", "note": "no verdict",
+                       "score": 0.0, "emotion": 0.0, "corner": False}
                       if r is None else
-                      {"ok": bool(r.get("ok", False)), "defect": (r.get("defect") or "none").lower(),
-                       "note": r.get("note", "") or "", "score": float(r.get("score") or 0)})
+                      {"ok": bool(r.get("ok", False)),
+                       "defect": (r.get("defect") or "none").lower(),
+                       "note": r.get("note", "") or "",
+                       "score": float(r.get("score") or 0),
+                       "emotion": float(r.get("emotion") or 0),
+                       "corner": bool(r.get("corner", True))})
     return out

@@ -203,7 +203,7 @@ def run(episode, work):
         scenes, bound = episode_assets.bind_frames(work, scenes)
         if bound == len(scenes):
             log.info("every frame came from the dataset; no generation needed")
-    scenes = frame_stage.ensure(work, scenes)
+    scenes = frame_stage.ensure(work, scenes, episode)
     scenes = visual_check(work, scenes)
     (work / "scenes.json").write_text(
         json.dumps(scenes, indent=2, ensure_ascii=False), encoding="utf-8")

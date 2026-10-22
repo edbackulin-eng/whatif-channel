@@ -80,17 +80,72 @@ STYLE_TEST_SCENES = [
      "sunlight catching the ring", False),
 ]
 
-# Three thumbnail backgrounds. The channel's type block sits on the LEFT, so the
-# subject must own the RIGHT of the frame - the flaw in the KT2 variant B frame
-# was a dead black right half and a Moon too small to read at browse size.
-THUMBNAIL_BACKGROUNDS = [
-    ("an enormous cracked moon dominating the right side of the frame, looming "
-     "low over a city skyline at dusk, glowing orange fissures across its "
-     "surface, dust haze, dramatic rim light", False),
-    ("a colossal moon filling the right half of the sky above a coastal city, "
-     "surface splitting apart with molten light in the cracks, debris falling "
-     "toward the horizon, turbulent clouds", False),
-    ("a vast shattered moon hanging over a mountain valley on the right of frame, "
-     "fragments breaking away trailing dust, low sun casting long shadows across "
-     "the landscape", False),
-]
+# --- thumbnails -------------------------------------------------------------------
+#
+# A thumbnail is the one image that has to work at the size of a postage stamp
+# against fifty others, and everything above is tuned for the opposite job. The
+# preset for frames asks for restraint, distance and faces deliberately hidden;
+# a thumbnail needs a lit human face in close up carrying one readable emotion,
+# with the event behind it in full colour. So it gets its own preset, not a
+# tweak of the one above, and nothing here is appended to a scene prompt.
+
+THUMB_BASE = (
+    "photorealistic photograph, 85mm portrait lens, face in sharp focus with "
+    "visible skin texture and catchlights in the eyes, strong cinematic key light "
+    "on the face and hard rim light from behind, bright punchy saturated colour, "
+    "high contrast, high dynamic range, clean well exposed image"
+)
+
+# Written as things to avoid rather than as "no x" clauses for the defects that
+# matter most: hands and faces are what the vision judge rejects candidates for,
+# and the cheapest place to fix that is the prompt.
+THUMB_NEGATIVE = (
+    "no text, no letters, no words, no caption, no subtitle, no watermark, "
+    "no logo, no signature, no border, no collage, no split screen, "
+    "no hands, no fingers, no arms raised, "
+    "no deformed face, no melted face, no asymmetric eyes, no extra eyes, "
+    "no extra limbs, no extra heads, no plastic skin, no doll face, "
+    "no cartoon, no anime, no illustration, no painting, no 3d render, "
+    "no dark underexposed murky image, no blurry face, no motion blur"
+)
+
+# Hands are left out of every prompt on purpose. A six-fingered hand is the
+# defect the judge rejects most often, and the foreground of a thumbnail does not
+# need hands to carry a scream.
+THUMB_FACES = (
+    "extreme close up of a man's face filling the left half of the frame, mouth "
+    "wide open screaming in terror, eyes wide, looking just past the camera, "
+    "head and shoulders only",
+    "extreme close up of an astronaut's face behind a raised helmet visor filling "
+    "the left half of the frame, screaming in horror, eyes wide, the event "
+    "reflected in the glass, looking just past the camera, head and shoulders only",
+    "extreme close up of a woman's face filling the left half of the frame, frozen "
+    "in shock, mouth open, eyebrows raised, eyes wide, looking just past the "
+    "camera, head and shoulders only",
+    "close up of an astronaut in a white spacesuit turned three quarters towards "
+    "the left of the frame, helmet visor up, face lit, jaw dropped in disbelief, "
+    "staring just past the camera, head and shoulders only",
+    "extreme close up of a young man's face in the left third of the frame, eyes "
+    "squeezed shut in horror, shouting, head tilted back, head and shoulders only",
+    "extreme close up of a woman's face in the left half of the frame, terrified, "
+    "mouth open mid scream, looking just off camera, head and shoulders only",
+)
+
+
+def thumbnail_prompt(event, index=0, centred=False):
+    """One FLUX prompt for a thumbnail candidate: a face, then the event behind it.
+
+    `index` picks the face, so a batch of candidates differs in more than its
+    seed. `centred` is for a half of a split comparison, where the face has to
+    sit in the middle of its own half rather than in the left of a full frame.
+    """
+    face = THUMB_FACES[index % len(THUMB_FACES)]
+    if centred:
+        face = (face.replace("filling the left half of the frame", "centred in the frame")
+                    .replace("in the left third of the frame", "centred in the frame")
+                    .replace("towards the left of the frame", "towards the camera"))
+        behind = f"behind the figure, {event.strip().rstrip('.')}, filling the background"
+    else:
+        behind = (f"behind and to the right of the figure, {event.strip().rstrip('.')}, "
+                  f"filling the right half of the frame")
+    return ", ".join([face, behind, THUMB_BASE, THUMB_NEGATIVE])

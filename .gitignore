@@ -32,3 +32,6 @@ queue/*/assets/
 __pycache__/
 *.pyc
 .venv/
+
+# The smoke test builds here.
+work/
