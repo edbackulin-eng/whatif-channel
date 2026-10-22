@@ -30,7 +30,24 @@ permissions:
   contents: write
 
 jobs:
+  # The shared Kaggle account belongs to Closed Tabs from 20:00 UTC. A restyle
+  # may wait up to 90 minutes for a busy GPU before it submits, so one that
+  # starts after 17:30 could still be on the GPU at 20:00. It stops here, green,
+  # and is run again in the next window.
+  gate:
+    runs-on: ubuntu-24.04
+    outputs:
+      go: ${{ steps.clock.outputs.go }}
+    steps:
+      - id: clock
+        run: |
+          m=$((10#$(date -u +%H) * 60 + 10#$(date -u +%M)))
+          if [ "$m" -lt $((17 * 60 + 30)) ]; then echo "go=true" >> "$GITHUB_OUTPUT"
+          else echo "go=false" >> "$GITHUB_OUTPUT"; echo "it is $(date -u +%H:%M) UTC, past 17:30; outside What If's GPU window"; fi
+
   restyle:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
     runs-on: ubuntu-24.04
     timeout-minutes: 180          # the GPU queue is the whole of this wait
     steps:

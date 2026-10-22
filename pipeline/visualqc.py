@@ -287,6 +287,13 @@ Reject (ok=false) when ANY of these is clearly true:
   place, a body bent in an impossible way.
 - text: ANY lettering, numbers, caption, interface or watermark anywhere in the
   image, including blurry or nonsensical lettering.
+- gore: ANY blood, wound, cut, scratch, bruise or injury on a person, and ANY
+  red streak, smear or drip on skin that a viewer could read as blood - even a
+  thin one, even if it might be paint or reflected light. The channel shows
+  consequences, never injuries.
+- costume: a spacesuit, space helmet or visor when you are told the story
+  happens on Earth. An ordinary person in ordinary clothes is what belongs
+  there; a spacesuit is right only when you are told the setting is space.
 - empty: nearly black, washed out, or no clear subject at all.
 - blend: two pictures superimposed, or a picture inset on a blurred copy of
   itself.
@@ -304,7 +311,7 @@ Reply with valid JSON only."""
 
 THUMB_PROMPT = """For each image, in order, return:
 {"results":[{"i":<index>,"ok":true|false,
-"defect":"face|hands|anatomy|text|empty|blend|none",
+"defect":"face|hands|anatomy|gore|costume|text|empty|blend|none",
 "note":"<a few words, only when ok is false>",
 "emotion":<0-10: how clearly a strong human emotion reads on the face at the
 size of a postage stamp; 0 if there is no face>,
@@ -321,7 +328,7 @@ own subject, as described above>
 subject, a readable emotion, bright saturated colour, no clutter>}]}"""
 
 
-def judge_thumbnails(paths, model=VISION_MODEL, topic=None):
+def judge_thumbnails(paths, model=VISION_MODEL, topic=None, setting=None):
     """Verdicts for candidate thumbnails, keyed by path.
 
     {"ok", "defect", "note", "score", "emotion", "corner", "face_side",
@@ -344,6 +351,12 @@ def judge_thumbnails(paths, model=VISION_MODEL, topic=None):
         parts = [{"text": THUMB_PROMPT}]
         if topic:
             parts.append({"text": f'The episode is titled: "{topic}"'})
+        if setting:
+            parts.append({"text": (
+                "The story happens in SPACE: a spacesuit is right here."
+                if setting == "space" else
+                "The story happens on EARTH: anyone in a spacesuit, space helmet "
+                "or visor is a costume defect.")})
         for i, p in enumerate(batch):
             parts.append({"text": f"image {i}:"})
             parts.append({"inline_data": {"mime_type": "image/jpeg", "data": _encode(p, 1024)}})

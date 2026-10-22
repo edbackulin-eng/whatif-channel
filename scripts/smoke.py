@@ -17,6 +17,7 @@ moves the code to main, where the builds run it.
      loudness, black stretches, silence.
 """
 import importlib
+import json
 import pkgutil
 import re
 import shutil
@@ -137,6 +138,40 @@ def thumbnails():
                                "What If the Oceans Vanished?")
     taken = thumbplan._clean({"event": brief["event"], "words": ["NO WATER"]},
                              "What If the Oceans Vanished?", avoid={"nowater"})
+    # Who is in the picture: no spacesuit on Earth, one in space, never blood,
+    # and the cast alternates and does not repeat a type.
+    from core import style
+    earth = thumbplan.fallback_brief("What If Earth Had Two Moons?")
+    space = thumbplan.fallback_brief("What If a Black Hole Passed Through the Solar System?")
+    people = thumbplan.cast({"slug": "smoke", "position": 99}, root=W)
+    on_earth = thumbplan.candidates(earth, people)
+    in_space = thumbplan.candidates(space, people)
+    check("thumbnail setting", earth["setting"] == "earth" and space["setting"] == "space"
+          and thumbplan._clean({"event": earth["event"], "setting": "space"},
+                               "What If Earth Had Two Moons?")["setting"] == "earth",
+          f"two moons -> {earth['setting']}/{earth['place']}, black hole -> {space['setting']}")
+    check("thumbnail costume",
+          all("spacesuit" not in c["prompt"].split(", behind")[0] and "no spacesuit" in c["prompt"]
+              for c in on_earth)
+          and all("spacesuit" in c["prompt"].split(", behind")[0] for c in in_space))
+    check("thumbnail never shows blood",
+          all("no blood" in c["prompt"] and "no red streaks" in c["prompt"]
+              for c in on_earth + in_space))
+    queue_dir = W / "queue"
+    for pos, person in ((1, {"gender": "man", "age": 42, "look": "white", "angle": "x"}),
+                        (2, None)):
+        d = queue_dir / f"{pos:03d}-ep"
+        d.mkdir(parents=True, exist_ok=True)
+        entry = {"slug": d.name, "position": pos, "title": "t"}
+        if person:
+            entry["thumbnail_person"] = person
+        (d / "episode.json").write_text(json.dumps(entry), encoding="utf-8")
+    second = thumbplan.cast({"slug": "002-ep", "position": 2}, root=W)
+    check("thumbnail cast alternates and varies",
+          all(p["gender"] == "woman" for p in second)
+          and len({style.person_type(p) for p in second}) == len(second)
+          and len({p["look"] for p in second}) == len(second),
+          f"after a white man in his 40s: {[(p['look'], p['age']) for p in second]}")
     restated = thumbplan.restate({**brief, "topic": "What If Jupiter Vanished?"},
                                  ["looks like a generic explosion"], use_llm=False)
     check("thumbnail restates an off-topic event",

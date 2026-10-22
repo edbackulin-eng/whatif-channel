@@ -155,7 +155,7 @@ def _thumbnail_plan(work, episode):
     from pipeline import thumbplan
     try:
         brief = thumbplan.brief(episode, work)
-        return brief, thumbplan.candidates(brief)
+        return brief, thumbplan.candidates(brief, thumbplan.cast(episode))
     except Exception as e:                                       # noqa: BLE001
         log.warning("could not plan the thumbnail (%s); it will fall back to an "
                     "episode frame", e)

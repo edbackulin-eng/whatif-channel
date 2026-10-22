@@ -266,7 +266,8 @@ MIN_LEGIBILITY = 150
 # Defects that disqualify a candidate even when nothing better is left. A melted
 # face or a six-fingered hand on the one image every viewer sees first is worse
 # than a dull thumbnail.
-FATAL = ("face", "hands", "anatomy", "text", "empty", "blend", "card")
+FATAL = ("face", "hands", "anatomy", "gore", "costume", "text", "empty", "blend",
+         "card")
 
 
 def best_thumbnail(work, scenes, episode, out_dir=None):
@@ -311,7 +312,8 @@ def best_thumbnail(work, scenes, episode, out_dir=None):
 
     try:
         verdicts = visualqc.judge_thumbnails([c["image"] for c in cands],
-                                             topic=brief.get("topic") or episode.get("title"))
+                                             topic=brief.get("topic") or episode.get("title"),
+                                             setting=brief.get("setting"))
     except Exception as e:                                       # noqa: BLE001
         log.warning("thumbnail judge unavailable (%s); every candidate counts as "
                     "unchecked", e)
@@ -328,7 +330,17 @@ def best_thumbnail(work, scenes, episode, out_dir=None):
         json.dumps({"brief": brief, "min_legibility": MIN_LEGIBILITY,
                     "candidates": report}, indent=1, ensure_ascii=False),
         encoding="utf-8")
+    thumbplan.remember_person(episode, used_person(cands, report))
     return img
+
+
+def used_person(cands, report):
+    """Who is on the thumbnail that was chosen, for the next one to avoid."""
+    used = {r["source"] for r in report if r.get("used")}
+    for c in cands:
+        if Path(c["image"]).name in used and c.get("person"):
+            return c["person"]
+    return None
 
 
 UNJUDGED = {"ok": False, "defect": "unchecked", "note": "no verdict",

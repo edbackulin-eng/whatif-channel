@@ -14,5 +14,12 @@
   "publish_at": "2026-10-23T15:00:00Z",
   "thumbnail_words": [
     "BLACK HOLE"
-  ]
+  ],
+  "thumbnail_person": {
+    "gender": "man",
+    "age": 42,
+    "look": "white",
+    "angle": "almost straight on, eyes fixed just past the lens",
+    "setting": "space"
+  }
 }

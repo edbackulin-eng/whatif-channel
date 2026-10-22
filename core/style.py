@@ -109,43 +109,109 @@ THUMB_NEGATIVE = (
     "no dark underexposed murky image, no blurry face, no motion blur"
 )
 
+# Never on a face. The first published batch had a red streak across the cheek
+# of the man on 008 - read by the judge as fine and by a viewer as blood. The
+# channel is about consequences, not injuries, and a wound on a thumbnail is
+# what gets a video age-restricted or quietly not recommended.
+THUMB_NO_GORE = (
+    "no blood, no wounds, no cuts, no scratches, no bruises, no injuries, "
+    "no red streaks or smears or drips on the skin, clean unmarked skin"
+)
+
+# On Earth nobody is wearing a spacesuit. Two of the first four Earth-bound
+# thumbnails put an astronaut in front of a flooded coast and a collapsing city,
+# which reads as "this video is about space" when it is not.
+THUMB_NO_SUIT = "no spacesuit, no space helmet, no astronaut, no visor"
+
+# --- the cast -----------------------------------------------------------------------
+#
+# One person per thumbnail, and not the same person every time: a feed of five
+# videos with the same screaming man in the same helmet looks like one video
+# uploaded five times. Each candidate is drawn from these, and thumbplan.py keeps
+# the record of who appeared on the last five so the next one is someone else.
+#
 # Hands are left out of every prompt on purpose. A six-fingered hand is the
 # defect the judge rejects most often, and the foreground of a thumbnail does not
 # need hands to carry a scream.
-THUMB_FACES = (
-    "extreme close up of a man's face filling the left half of the frame, mouth "
-    "wide open screaming in terror, eyes wide, looking just past the camera, "
-    "head and shoulders only",
-    "extreme close up of an astronaut's face behind a raised helmet visor filling "
-    "the left half of the frame, screaming in horror, eyes wide, the event "
-    "reflected in the glass, looking just past the camera, head and shoulders only",
-    "extreme close up of a woman's face filling the left half of the frame, frozen "
-    "in shock, mouth open, eyebrows raised, eyes wide, looking just past the "
-    "camera, head and shoulders only",
-    "close up of an astronaut in a white spacesuit turned three quarters towards "
-    "the left of the frame, helmet visor up, face lit, jaw dropped in disbelief, "
-    "staring just past the camera, head and shoulders only",
-    "extreme close up of a young man's face in the left third of the frame, eyes "
-    "squeezed shut in horror, shouting, head tilted back, head and shoulders only",
-    "extreme close up of a woman's face in the left half of the frame, terrified, "
-    "mouth open mid scream, looking just off camera, head and shoulders only",
+
+CAST_GENDERS = ("woman", "man")
+CAST_AGES = (24, 33, 42, 51, 58)          # 20-60, one per decade-ish
+CAST_LOOKS = ("East Asian", "Black", "South Asian", "white", "Latina/Latino",
+              "Middle Eastern")
+CAST_ANGLES = (
+    "three-quarter view, turned towards the event, looking just past the camera",
+    "almost straight on, eyes fixed just past the lens",
+    "slightly low angle looking up at the face, staring up and past the camera",
+    "near profile, head turned towards the event, one eye catching the light",
+    "slightly high angle looking down, face tilted up towards the sky",
 )
+CAST_EXPRESSIONS = (
+    "screaming in terror, mouth wide open, eyes wide",
+    "frozen in shock, jaw dropped, eyebrows raised, eyes wide",
+    "horrified, mouth open, brow furrowed, eyes wide",
+    "gasping in disbelief, mouth open, eyes wide",
+)
+# Ordinary clothes for ordinary people. Kept plain so none of them reads as a
+# uniform or a costume.
+CAST_CLOTHES = ("a grey hoodie", "a denim jacket", "a plain white t-shirt",
+                "a dark wool coat", "a canvas work jacket", "a checked flannel shirt",
+                "a knitted jumper", "a rain jacket")
+# Where an Earth-bound story happens to the person, as the brief may name it.
+CAST_PLACES = {
+    "street": "standing in a city street",
+    "coast": "standing on a coastline by the sea",
+    "rooftop": "standing on a city rooftop",
+    "home": "at the open window of their home",
+    "field": "standing in an open field",
+}
 
 
-def thumbnail_prompt(event, index=0, centred=False):
-    """One FLUX prompt for a thumbnail candidate: a face, then the event behind it.
+def age_band(age):
+    """20s, 30s, 40s, 50s: what "the same type" means for age."""
+    return f"{(int(age) // 10) * 10}s"
 
-    `index` picks the face, so a batch of candidates differs in more than its
-    seed. `centred` is for a half of a split comparison, where the face has to
-    sit in the middle of its own half rather than in the left of a full frame.
-    """
-    face = THUMB_FACES[index % len(THUMB_FACES)]
-    if centred:
-        face = (face.replace("filling the left half of the frame", "centred in the frame")
-                    .replace("in the left third of the frame", "centred in the frame")
-                    .replace("towards the left of the frame", "towards the camera"))
-        behind = f"behind the figure, {event.strip().rstrip('.')}, filling the background"
+
+def person_type(person):
+    """What counts as the same person for the no-repeat rule."""
+    return (person.get("gender"), age_band(person.get("age", 0)), person.get("look"))
+
+
+def describe_person(person, setting="earth", place="street", centred=False):
+    """The foreground of a thumbnail prompt, from a cast entry."""
+    noun = "woman" if person["gender"] == "woman" else "man"
+    look = person["look"]
+    if look == "Latina/Latino":
+        look = "Latina" if noun == "woman" else "Latino"
+    frame = ("centred in the frame" if centred
+             else "filling the left half of the frame")
+    if setting == "space":
+        who = (f"extreme close up of a {person['age']}-year-old {look} {noun} "
+               f"astronaut in a white spacesuit, helmet visor raised so the whole "
+               f"face is clearly visible, {frame}")
     else:
-        behind = (f"behind and to the right of the figure, {event.strip().rstrip('.')}, "
+        where = CAST_PLACES.get(place, CAST_PLACES["street"])
+        who = (f"extreme close up of a {person['age']}-year-old {look} {noun} "
+               f"wearing {person['clothes']}, {where}, {frame}")
+    return ", ".join([who, person["expression"], person["angle"],
+                      "head and shoulders only"])
+
+
+def thumbnail_prompt(event, person, setting="earth", place="street", centred=False):
+    """One FLUX prompt for a thumbnail candidate: a person, then the event behind.
+
+    `setting` decides the costume and nothing else: a spacesuit only when the
+    story happens in space, ordinary clothes and a real place everywhere else.
+    `centred` is for a half of a split comparison, where the face sits in the
+    middle of its own half rather than in the left of a full frame.
+    """
+    face = describe_person(person, setting, place, centred)
+    event = event.strip().rstrip(".")
+    if centred:
+        behind = f"behind them, {event}, filling the background"
+    else:
+        behind = (f"behind and to the right of them, {event}, "
                   f"filling the right half of the frame")
-    return ", ".join([face, behind, THUMB_BASE, THUMB_NEGATIVE])
+    negative = [THUMB_NEGATIVE, THUMB_NO_GORE]
+    if setting != "space":
+        negative.append(THUMB_NO_SUIT)
+    return ", ".join([face, behind, THUMB_BASE, *negative])

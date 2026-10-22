@@ -68,7 +68,18 @@ GAME OVER, YOU DIE, WE DIE, THE TRUTH, WHAT HAPPENS, FOREVER. Do not use a
 synonym of these either. An empty list is better than a generic one.
 
 Set "comparison" only when the episode genuinely weighs two named things against
-each other; otherwise null."""
+each other; otherwise null.
+
+Also return where the PERSON in the foreground is when it happens to them:
+ "setting":"earth" or "space",
+ "place":"street" | "coast" | "rooftop" | "home" | "field"
+"space" ONLY when the story itself takes place in space - a black hole passing
+through the solar system, a trip to another planet, life on a space station.
+Everything experienced from the ground is "earth", even when the cause is up
+in the sky: two moons, a vanished Jupiter, failing satellites, a shifted orbit
+are all seen by an ordinary person on Earth. "place" is the real location on
+Earth that suits the event best (a coast for oceans and melting ice, a street
+for collapsing cities, a rooftop for something in the sky); ignored for space."""
 
 # Lines already on another episode's thumbnail are passed to the model to avoid,
 # and dropped if it uses one anyway: two cards side by side in a feed reading the
@@ -135,9 +146,37 @@ def _imagery(text):
     return next((img for key, img in IMAGERY if key in low), None)
 
 
+# Stories that happen in space rather than to someone standing on Earth. Only
+# these get a spacesuit; checked as substrings of the title.
+SPACE_STORIES = ("black hole", "solar system", "another planet", "on mars",
+                 "on venus", "on the moon", "every planet", "space station",
+                 "in space", "lost in space", "neptune", "astronaut")
+# The real place an Earth-bound story most naturally happens to someone.
+PLACE_HINTS = (
+    (("ocean", "pacific", "sea level", "antarctica", "ice", "melted", "tsunami",
+      "flood"), "coast"),
+    (("moon", "jupiter", "satellite", "sky", "orbit", "sun", "star", "aurora",
+      "magnetic"), "rooftop"),
+    (("photosynthesis", "forest", "crops"), "field"),
+    (("internet", "power", "electricity"), "home"),
+)
+
+
+def setting_for(title):
+    """("earth" | "space", place) from the title alone."""
+    low = (title or "").lower()
+    if any(k in low for k in SPACE_STORIES):
+        return "space", "street"
+    for keys, place in PLACE_HINTS:
+        if any(k in low for k in keys):
+            return "earth", place
+    return "earth", "street"
+
+
 def fallback_brief(title, avoid=()):
     """A brief from the title alone, for when no model answers."""
     core = _core(title)
+    setting, place = setting_for(title)
     event = _imagery(core) or (
         f"{core}, filling the frame, vivid saturated colour, hard dramatic light")
     comparison = None
@@ -152,7 +191,7 @@ def fallback_brief(title, avoid=()):
     # three pieces of type on one card and none of them is read.
     words = [] if comparison else _fallback_words(core, avoid)
     return {"event": event, "words": words, "comparison": comparison,
-            "source": "title"}
+            "setting": setting, "place": place, "source": "title"}
 
 
 def _fallback_words(core, avoid=()):
@@ -269,14 +308,42 @@ def _clean(raw, title, avoid=()):
         comparison = sides or None
     else:
         comparison = None
+    setting = str(raw.get("setting") or "").lower()
+    # The model may say "space" for anything with the sky in it. The rule is
+    # that a spacesuit belongs only to a story that happens in space, so an
+    # Earth-bound subject overrules it: two moons are watched from a rooftop.
+    if setting not in ("earth", "space") or (setting == "space" and _earth_bound(title)):
+        setting = fb["setting"]
+    place = str(raw.get("place") or "").lower()
+    if place not in style_places():
+        place = fb["place"]
     # A model that answered only with banned or already-used lines has said
     # nothing usable; the title's own words are specific by construction.
     return {"event": event if 4 <= len(event.split()) <= 30 else fb["event"],
             "words": words or fb["words"],
+            "setting": setting, "place": place,
             # "model", not "gemini": core/llm.py falls back to Groq, and on the
             # first real run Gemini answered 503 and Groq wrote all four briefs.
             # A field that names the wrong provider is worse than a vague one.
             "comparison": comparison, "source": "model"}
+
+
+# Subjects that happen to people standing on Earth, whatever the model thinks.
+EARTH_STORIES = ("gravity", "volcano", "erupt", "ocean", "pacific", "ice",
+                 "antarctica", "melted", "moons", "spun", "spinning", "internet",
+                 "photosynthesis", "atmosphere", "magnetic", "satellite", "orbit",
+                 "jupiter", "sun went out")
+
+
+def _earth_bound(title):
+    low = (title or "").lower()
+    return (any(k in low for k in EARTH_STORIES)
+            and not any(k in low for k in SPACE_STORIES))
+
+
+def style_places():
+    from core import style
+    return tuple(style.CAST_PLACES)
 
 
 def brief(episode, work=None, use_llm=True):
@@ -403,24 +470,190 @@ def restate(brief_, notes=(), use_llm=True):
     return out
 
 
-def candidates(brief_, n=CANDIDATES):
-    """The FLUX prompts for one episode's thumbnail, as a list of
-    {"role": "single"|"left"|"right", "label": str, "prompt": str}.
+# --- who is in the picture ---------------------------------------------------------
+#
+# A feed of five thumbnails with the same screaming man in the same helmet looks
+# like one video uploaded five times, and that was where the first published
+# batch was heading: three of four were men in spacesuits, two of them in front
+# of things happening on Earth. So the person is cast, not fixed. Each thumbnail
+# records who it used, in its queue entry next to the words, and the next is
+# cast against that record:
+#
+#   - the gender alternates with the thumbnail before it in the feed;
+#   - no one of the same type - gender, age band, appearance - as anyone on the
+#     last five thumbnails, or on the next one when a thumbnail is replaced out
+#     of order;
+#   - not the same camera angle twice in a row.
+#
+# All the candidates for one thumbnail share a gender, so the rule holds
+# whichever of them the judge picks.
 
-    A comparison brief spends its budget on both halves, alternating, so the
-    split can be assembled from the best surviving face on each side.
+CAST_WINDOW = 5
+ROOT = Path(__file__).resolve().parent.parent
+
+
+def _entries(root=None):
+    out = []
+    for path in sorted(Path(root or ROOT).joinpath("queue").glob("*/episode.json")):
+        try:
+            entry = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        entry.setdefault("slug", path.parent.name)
+        out.append(entry)
+    return sorted(out, key=lambda e: e.get("position") or 0)
+
+
+def neighbours(episode, planned=(), root=None, window=CAST_WINDOW):
+    """(previous person, next person, everyone in the window) around this episode.
+
+    Recorded people come from the queue; `planned` adds episodes cast earlier in
+    the same run, which have a gender and candidate types but no winner yet.
+    """
+    pos = (episode or {}).get("position")
+    if pos is None:
+        return None, None, []
+    slug = episode.get("slug")
+    planned_slugs = {p.get("slug") for p in planned}
+    known = [(e.get("position") or 0, e["thumbnail_person"]) for e in _entries(root)
+             if e.get("thumbnail_person") and e.get("slug") != slug
+             and e.get("slug") not in planned_slugs]
+    known += [(p["position"], p) for p in planned if p.get("slug") != slug]
+    before = sorted([k for k in known if k[0] < pos], key=lambda k: -k[0])
+    after = sorted([k for k in known if k[0] > pos], key=lambda k: k[0])
+    previous = before[0][1] if before else None
+    following = after[0][1] if after else None
+    near = [k[1] for k in before[:window]] + [k[1] for k in after[:1]]
+    return previous, following, near
+
+
+def _types_of(person):
+    """Every type a person entry stands for: one for a recorded winner, all the
+    candidates' for an episode planned earlier in this run."""
+    from core import style
+    if person.get("types"):
+        return {tuple(t) for t in person["types"]}
+    return {style.person_type(person)}
+
+
+def cast(episode, n=CANDIDATES, planned=(), root=None):
+    """n people for this episode's candidates, cast against the recent record."""
+    import random
+    from core import style
+    episode = episode or {}
+    previous, following, near = neighbours(episode, planned, root)
+    anchor = previous or following
+    if anchor and anchor.get("gender") in style.CAST_GENDERS:
+        gender = next(g for g in style.CAST_GENDERS if g != anchor["gender"])
+    else:
+        gender = style.CAST_GENDERS[(episode.get("position") or 0) % 2]
+    avoid = set()
+    for person in near:
+        avoid |= _types_of(person)
+    rng = random.Random(episode.get("slug") or "whatif")
+    pool = [(age, look) for age in style.CAST_AGES for look in style.CAST_LOOKS
+            if (gender, style.age_band(age), look) not in avoid]
+    if len(pool) < n:
+        # Not enough unused types left: relax to "not the one right next to it".
+        nearest = set()
+        for person in (previous, following):
+            if person:
+                nearest |= _types_of(person)
+        pool = [(age, look) for age in style.CAST_AGES for look in style.CAST_LOOKS
+                if (gender, style.age_band(age), look) not in nearest]
+    rng.shuffle(pool)
+    # Spread the candidates across looks first and ages second, so the judge is
+    # choosing between different people rather than six near-twins.
+    picked, looks, ages = [], set(), set()
+    for strict in (True, False):
+        for age, look in pool:
+            if len(picked) == n:
+                break
+            if (age, look) in picked:
+                continue
+            if strict and (look in looks or
+                           (age in ages and len(ages) < len(style.CAST_AGES))):
+                continue
+            picked.append((age, look))
+            looks.add(look)
+            ages.add(age)
+    # Both neighbours, not just the one before: a thumbnail replaced out of order
+    # sits next to the one after it in the feed just the same.
+    taken = {(p or {}).get("angle") for p in (previous, following)}
+    angles = [a for a in style.CAST_ANGLES if a not in taken] or list(style.CAST_ANGLES)
+    rng.shuffle(angles)
+    clothes = list(style.CAST_CLOTHES)
+    rng.shuffle(clothes)
+    people = []
+    for i, (age, look) in enumerate(picked):
+        people.append({"gender": gender, "age": age, "look": look,
+                       "angle": angles[i % len(angles)],
+                       "expression": style.CAST_EXPRESSIONS[i % len(style.CAST_EXPRESSIONS)],
+                       "clothes": clothes[i % len(clothes)]})
+    log.info("cast: %d %s candidate(s), %d type(s) avoided (previous: %s)", len(people),
+             gender, len(avoid), (previous or {}).get("gender", "none on record"))
+    return people
+
+
+def as_planned(episode, people):
+    """How an episode cast earlier in this run is seen by the ones after it."""
+    from core import style
+    return {"slug": episode.get("slug"), "position": episode.get("position") or 0,
+            "gender": people[0]["gender"] if people else None,
+            "types": [list(style.person_type(p)) for p in people]}
+
+
+def remember_person(episode, person, root=None):
+    """Record who is on this episode's thumbnail, for the next one to avoid."""
+    slug = (episode or {}).get("slug")
+    if not slug or not person:
+        return
+    path = Path(root or ROOT) / "queue" / slug / "episode.json"
+    if not path.exists():
+        return
+    try:
+        entry = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return
+    keep = {k: person[k] for k in ("gender", "age", "look", "angle", "setting")
+            if k in person}
+    if entry.get("thumbnail_person") == keep:
+        return
+    entry["thumbnail_person"] = keep
+    path.write_text(json.dumps(entry, indent=2, ensure_ascii=False) + "\n",
+                    encoding="utf-8")
+    log.info("recorded this episode's thumbnail person: %s %s, %s", keep.get("look"),
+             keep.get("gender"), keep.get("age"))
+
+
+def candidates(brief_, people=None, n=CANDIDATES):
+    """The FLUX prompts for one episode's thumbnail, as a list of
+    {"role": "single"|"left"|"right", "label", "prompt", "person"}.
+
+    One person per candidate, from `people` (see cast()); without it a cast is
+    made with no history. A comparison brief spends its budget on both halves,
+    alternating, so the split can be assembled from the best face on each side.
     """
     from core import style
+    people = list(people or cast({}, n))
+    setting = brief_.get("setting") or "earth"
+    place = brief_.get("place") or "street"
     comparison = brief_.get("comparison")
     out = []
     if comparison:
         for i in range(max(2, n // 2)):
             for side in ("left", "right"):
+                person = people[len(out) % len(people)]
                 out.append({"role": side, "label": comparison[side]["label"],
+                            "person": {**person, "setting": setting},
                             "prompt": style.thumbnail_prompt(
-                                comparison[side]["event"], i, centred=True)})
+                                comparison[side]["event"], person, setting, place,
+                                centred=True)})
     else:
         for i in range(n):
+            person = people[i % len(people)]
             out.append({"role": "single", "label": "",
-                        "prompt": style.thumbnail_prompt(brief_["event"], i)})
+                        "person": {**person, "setting": setting},
+                        "prompt": style.thumbnail_prompt(brief_["event"], person,
+                                                         setting, place)})
     return out[:n]

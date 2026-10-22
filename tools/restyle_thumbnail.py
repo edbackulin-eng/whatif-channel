@@ -47,18 +47,29 @@ def _episode(slug):
 
 
 def plan(slugs, use_llm=True):
-    """A brief and a set of prompts per slug."""
+    """A brief, a cast and a set of prompts per slug.
+
+    In feed order, not the order they were named: each episode is cast against
+    the one before it, including one cast earlier in this same run, so the
+    genders alternate down the feed whichever candidates the judge goes on to
+    pick.
+    """
     from pipeline import thumbplan
-    jobs = []
-    for slug in slugs:
-        episode = _episode(slug)
+    episodes = sorted((_episode(s) for s in slugs), key=lambda e: e.get("position") or 0)
+    jobs, planned = [], []
+    for episode in episodes:
+        slug = episode["slug"]
         work = OUT / slug
         work.mkdir(parents=True, exist_ok=True)
         brief = thumbplan.brief(episode, work, use_llm=use_llm)
-        jobs.append({"slug": slug, "episode": episode, "work": work,
-                     "brief": brief, "candidates": thumbplan.candidates(brief)})
-        log.info("%s: words=%s comparison=%s", slug, brief["words"],
-                 bool(brief["comparison"]))
+        people = thumbplan.cast(episode, planned=planned)
+        planned.append(thumbplan.as_planned(episode, people))
+        jobs.append({"slug": slug, "episode": episode, "work": work, "brief": brief,
+                     "people": people,
+                     "candidates": thumbplan.candidates(brief, people)})
+        log.info("%s: words=%s setting=%s/%s, cast %s", slug, brief["words"],
+                 brief.get("setting"), brief.get("place"),
+                 ", ".join(f"{p['look']} {p['gender']} {p['age']}" for p in people))
     return jobs
 
 
@@ -99,7 +110,8 @@ def judge(jobs):
         cands = [c for c in job["candidates"] if c.get("image")]
         try:
             verdicts = visualqc.judge_thumbnails(
-                [c["image"] for c in cands], topic=job["episode"].get("title"))
+                [c["image"] for c in cands], topic=job["episode"].get("title"),
+                setting=job["brief"].get("setting"))
         except Exception as e:                                   # noqa: BLE001
             log.warning("%s: no vision judge (%s); every candidate counts as "
                         "unchecked", job["slug"], e)
@@ -143,7 +155,7 @@ def retry_off_topic(jobs, use_llm=True):
         notes = [c["verdict"].get("match_note", "") for c in job["candidates"]]
         job["first_pass"] = job["candidates"]
         job["brief"] = thumbplan.restate(job["brief"], notes, use_llm=use_llm)
-        job["candidates"] = thumbplan.candidates(job["brief"])
+        job["candidates"] = thumbplan.candidates(job["brief"], job["people"])
         (job["work"] / thumbplan.BRIEF_FILE).write_text(
             json.dumps(job["brief"], indent=2, ensure_ascii=False), encoding="utf-8")
     generate(again)
@@ -189,6 +201,8 @@ def compose(jobs):
         log.info("%s -> %s (%.2f MB, legibility %s)", job["slug"], out,
                  out.stat().st_size / 1e6, legible)
         job["thumbnail"] = out
+        from pipeline import thumbplan
+        thumbplan.remember_person(job["episode"], assemble.used_person(cands, report))
         written.append(out)
     return written
 
