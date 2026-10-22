@@ -1,0 +1,77 @@
+name: Restyle a thumbnail
+
+# Gives an episode that already exists a thumbnail in the new house style: a face
+# in the foreground carrying the emotion, the event behind it, one to three
+# enormous words. New episodes get one from the build itself - the candidates
+# ride along on the scene batch - so this is only for episodes built before the
+# style changed.
+#
+# Every slug in one run shares a single GPU kernel, so restyling five episodes
+# costs about what one costs. Replacing the thumbnail on the live video is opt-in
+# and off by default: without it the run only produces files.
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: "Queue slugs, space separated"
+        required: true
+      set_youtube:
+        description: "Also replace the thumbnail on the live video"
+        type: boolean
+        default: false
+
+concurrency:
+  group: thumbnails
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  restyle:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180          # the GPU queue is the whole of this wait
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restyle
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # Only read when the input below asks for it, but the step needs it in
+          # scope either way.
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+        run: |
+          args=""
+          for s in ${{ github.event.inputs.slugs }}; do args="$args --slug $s"; done
+          if [ "${{ github.event.inputs.set_youtube }}" = "true" ]; then
+            args="$args --set-youtube"
+          fi
+          python -X utf8 tools/restyle_thumbnail.py $args
+
+      # The thumbnails themselves are not committed: queue/*/*.png is ignored,
+      # because this repository holds code and text and nothing heavy.
+      - name: Upload the thumbnails
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: thumbnails
+          path: |
+            output/thumbnails/*/thumbnail.png
+            output/thumbnails/*/thumbnail_browse.png
+            output/thumbnails/*/thumbnail_report.json
+            output/thumbnails/*/thumbnail_brief.json
+            output/thumbnails/*/candidate_*.png
+          retention-days: 14
+          if-no-files-found: error

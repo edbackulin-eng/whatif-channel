@@ -9,9 +9,11 @@ moves the code to main, where the builds run it.
   2. a real script is cut into subtitle cues and grouped into scenes the way
      a build does it (narration timing stands in for the voice, which needs
      the GPU);
-  3. placeholder stills are graded, moved, crossfaded and mixed with a music
+  3. both thumbnail layouts are composed and measured: the words fit, they
+     still read at browse size, and nothing enters YouTube's duration corner;
+  4. placeholder stills are graded, moved, crossfaded and mixed with a music
      bed from the library over a stand-in narration, then muxed;
-  4. the result is checked by the channel's own QC: length, resolution,
+  5. the result is checked by the channel's own QC: length, resolution,
      loudness, black stretches, silence.
 """
 import importlib
@@ -108,6 +110,55 @@ def stills(n=3):
     return paths
 
 
+def thumbnails():
+    """Both thumbnail layouts, on bright synthetic stills.
+
+    What this proves: the brief produces usable words, the type fits without
+    running off the frame, it survives the downscale to a browse card, and
+    nothing is drawn into the corner YouTube paints its duration pill on.
+
+    What it cannot prove: that the picture underneath is any good. That is the
+    vision judge in pipeline/visualqc.py, and it needs a key and real
+    candidates, so it runs in the build and not here.
+    """
+    from automation import assemble
+    from pipeline import thumbnail, thumbplan
+
+    brief = thumbplan.fallback_brief("What If the Oceans Vanished?")
+    check("thumbnail brief", 1 <= len(brief["words"]) <= 3 and len(brief["event"].split()) >= 4,
+          f"words={brief['words']}")
+    split = thumbplan.fallback_brief("What If Venus vs Neptune?")
+    check("thumbnail comparison brief", bool(split["comparison"]) and not split["words"],
+          f"labels={[s['label'] for s in (split['comparison'] or {}).values()]}")
+    check("thumbnail prompts", len(thumbplan.candidates(brief)) == thumbplan.CANDIDATES
+          and all("no text" in c["prompt"] for c in thumbplan.candidates(brief)))
+
+    srcs = stills(2)
+    worst = 255.0
+    for words in ([], brief["words"], ["NO", "OXYGEN", "LEFT"], ["8 MINUTES", "TO LIVE"]):
+        img, boxes = thumbnail.compose(srcs[0], words)
+        legible = thumbnail.text_legibility(img, boxes)
+        worst = min(worst, legible)
+        check(f"thumbnail {len(words)} line(s)",
+              img.size == (thumbnail.W, thumbnail.H)
+              and thumbnail.safe_corner_clear(boxes)
+              and legible >= assemble.MIN_LEGIBILITY,
+              f"{img.size}, legibility {legible:.0f} "
+              f"(floor {assemble.MIN_LEGIBILITY}), safe corner "
+              f"{thumbnail.safe_corner_clear(boxes)}")
+    img, boxes = thumbnail.compose_split(srcs[0], srcs[1], ["VENUS", "NEPTUNE"], [])
+    legible = thumbnail.text_legibility(img, boxes)
+    check("thumbnail split layout",
+          img.size == (thumbnail.W, thumbnail.H)
+          and thumbnail.safe_corner_clear(boxes)
+          and legible >= assemble.MIN_LEGIBILITY,
+          f"legibility {legible:.0f}")
+    out = thumbnail.save(img, W / "thumbnail.png")
+    size = out.stat().st_size
+    check("thumbnail under YouTube's 2 MB", size <= thumbnail.MAX_BYTES,
+          f"{size / 1e6:.2f} MB, worst legibility this run {worst:.0f}")
+
+
 def render():
     from pipeline import music, render as r
     shots = r.plan_scenes(stills(), SECONDS, min_s=2.0, max_s=5.0)
@@ -147,6 +198,7 @@ def main():
         print("SMOKE FAILED:", failures)
         return 1
     planning()
+    thumbnails()
     out = render()
     checks(out)
     print("\nSMOKE", "PASSED" if not failures else f"FAILED: {failures}")

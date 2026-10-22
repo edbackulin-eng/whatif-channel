@@ -1,10 +1,35 @@
 """Thumbnails in the channel's house style, with a legibility check at browse size.
 
-The style rules come from what the leaders in this niche actually do: one dramatic
-focal image, two to four enormous words, a heavy dark outline so the type survives
-any background, and a warm accent colour against a cold space-blue frame. Nothing
-small, nothing centred-and-timid, no logo.
+The style came from the leaders in this niche and is now copied from the single
+best-performing example of it: "What If You DIED on Every Planet" (16.9 M views).
+Two things carry that image, and neither was in the old house style.
+
+  A human face, close, lit, in one unmistakable emotion. It sits in the
+  foreground looking slightly past the lens, not at it.
+
+  The event itself, bright and saturated, filling the rest of the frame. Fire,
+  lava, ice, deep space - never a darkened picture. The old preset dimmed the
+  background to 52% brightness so white type would survive on top of it, which
+  is what made every thumbnail a blue-grey rectangle at browse size. Type
+  survives here on its outline and its dark halo instead, so the picture keeps
+  its colour.
+
+Two layouts: one face against the event, or - when the episode weighs two things
+against each other - a split down the middle with a label over each half.
+One to three enormous words, or none at all when the picture says it alone.
+
+Two hard constraints:
+  - the bottom right corner is YouTube's, not ours: the duration pill sits in
+    roughly the last quarter across and the last fifth down, so nothing we draw
+    goes in there (`safe_corner_clear`);
+  - the words have to survive the downscale to a browse card, measured at
+    336x189 rather than the old 168x94, which is the size a home-feed card is
+    actually served at today (`text_legibility`).
+
+The old layouts are kept at the bottom of this file: the KT2 and KT3 record
+scripts reproduce what was shipped at the time and must keep working.
 """
+import io
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
@@ -14,12 +39,25 @@ from core.logger import get_logger
 log = get_logger("thumbnail")
 
 W, H = 1280, 720
-# YouTube's smallest common browse size. Type has to read here or it does not work.
-BROWSE_W, BROWSE_H = 168, 94
+# A home-feed card, where the decision is actually made. The old 168x94 was a
+# sidebar thumbnail and flattered type that then smeared in the feed.
+BROWSE_W, BROWSE_H = 336, 189
+
+# YouTube paints the duration pill over the bottom right of every card. Nothing
+# we draw may enter it, as a fraction of the frame.
+SAFE_X, SAFE_Y = 0.75, 0.80
 
 ACCENT = (255, 184, 28)      # warm amber, the channel's one accent
 WHITE = (255, 255, 255)
 STROKE = (8, 10, 18)         # near-black outline, never pure black
+
+# Thumbnails are bright on purpose, so a picture that comes back dark is lifted
+# rather than used as it is. Measured as mean luminance over the whole frame.
+TARGET_MEAN = 112
+MAX_LIFT = 1.7
+
+# YouTube rejects a thumbnail over 2 MB, and qc.py fails a build for it.
+MAX_BYTES = 2 * 1024 * 1024
 
 FONTS = Path(__file__).resolve().parent.parent / "assets" / "fonts"
 
@@ -28,51 +66,51 @@ def _font(name, size):
     return ImageFont.truetype(str(FONTS / name), size)
 
 
-def _fit_lines(draw, lines, font_name, max_width, start_size):
-    """Largest font size at which every line fits the usable width."""
-    size = start_size
-    while size > 24:
-        font = _font(font_name, size)
-        if all(draw.textlength(l, font=font) <= max_width for l in lines):
-            return font
-        size -= 4
-    return _font(font_name, 24)
+def _cover(im, w, h):
+    """Scale to cover w x h and crop the middle."""
+    scale = max(w / im.width, h / im.height)
+    im = im.resize((max(w, round(im.width * scale)), max(h, round(im.height * scale))),
+                   Image.LANCZOS)
+    left, top = (im.width - w) // 2, (im.height - h) // 2
+    return im.crop((left, top, left + w, top + h))
 
 
-def _base_image(source, darken=0.55, blur=0):
-    """Cover-crop the source to 16:9 and push it back so type sits on top of it."""
-    im = Image.open(source).convert("RGB")
-    scale = max(W / im.width, H / im.height)
-    im = im.resize((round(im.width * scale), round(im.height * scale)), Image.LANCZOS)
-    left, top = (im.width - W) // 2, (im.height - H) // 2
-    im = im.crop((left, top, left + W, top + H))
-    if blur:
-        im = im.filter(ImageFilter.GaussianBlur(blur))
-    im = ImageEnhance.Brightness(im).enhance(darken)
-    # A touch more saturation and contrast: space photos are flat out of the archive.
-    im = ImageEnhance.Color(im).enhance(1.25)
-    im = ImageEnhance.Contrast(im).enhance(1.15)
+def _lift(im):
+    """Raise a dark picture toward TARGET_MEAN. Returns (image, factor applied)."""
+    import numpy as np
+    mean = float(np.asarray(im.convert("L"), dtype=np.float32).mean())
+    if mean >= TARGET_MEAN:
+        return im, 1.0
+    factor = min(MAX_LIFT, TARGET_MEAN / max(mean, 1.0))
+    return ImageEnhance.Brightness(im).enhance(factor), factor
+
+
+def _punch(source, w=W, h=H):
+    """Cover-crop the source and push the colour, without darkening it.
+
+    FLUX frames arrive flat, and `core/grade.py` is not in the path here - a
+    thumbnail is not a frame of the video and is never graded with it.
+    """
+    with Image.open(source) as raw:
+        im = _cover(raw.convert("RGB"), w, h)
+    im, factor = _lift(im)
+    if factor > 1.0:
+        log.info("thumbnail source was dark; lifted by x%.2f", factor)
+    im = ImageEnhance.Color(im).enhance(1.32)
+    im = ImageEnhance.Contrast(im).enhance(1.14)
     return im
 
 
-def _vignette(im, strength=0.75):
-    """Darken the edges so the centre reads first."""
-    mask = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(mask).ellipse((-W * 0.25, -H * 0.45, W * 1.25, H * 1.45), fill=255)
-    mask = mask.filter(ImageFilter.GaussianBlur(160))
-    dark = ImageEnhance.Brightness(im).enhance(1 - strength)
-    return Image.composite(im, dark, mask)
-
-
 def _glow_text(im, xy, text, font, fill, stroke_w, anchor="la", glow=18, boxes=None):
-    """Draw text with a soft dark glow behind it, then a hard outline on top.
+    """Text with a soft dark glow behind it, then a hard outline on top.
 
-    Appends the drawn bounding box to `boxes`, which the legibility check needs in
-    order to measure the type itself rather than the picture behind it.
+    Appends the drawn bounding box to `boxes`, which the legibility check and the
+    safe-corner check both need in order to measure the type rather than the
+    picture behind it.
     """
     halo = Image.new("RGBA", im.size, (0, 0, 0, 0))
-    ImageDraw.Draw(halo).text(xy, text, font=font, fill=(0, 0, 0, 215), anchor=anchor,
-                              stroke_width=stroke_w + 6, stroke_fill=(0, 0, 0, 215))
+    ImageDraw.Draw(halo).text(xy, text, font=font, fill=(0, 0, 0, 225), anchor=anchor,
+                              stroke_width=stroke_w + 7, stroke_fill=(0, 0, 0, 225))
     im.alpha_composite(halo.filter(ImageFilter.GaussianBlur(glow)))
     draw = ImageDraw.Draw(im)
     draw.text(xy, text, font=font, fill=fill, anchor=anchor,
@@ -88,16 +126,249 @@ def _bar(im, box, color, alpha=235):
     im.alpha_composite(layer)
 
 
+# --- the house style ----------------------------------------------------------------
+
+WORD_FONT = "Anton-Regular.ttf"
+MARGIN = 54
+BOTTOM = H - 40               # where the ink of the last line ends
+MAX_WORDS = 3
+# The words are half the thumbnail at most. Any more and they bury the face they
+# are supposed to be shouting about.
+MAX_BLOCK_FRACTION = 0.50
+START_SIZE = 260
+FLOOR_SIZE = 56
+LINE_GAP = 0.12               # of the tallest line's ink
+
+
+def _line_width_limit(ink_bottom, margin=MARGIN):
+    """How wide a line may be, given where its ink ends vertically.
+
+    A line that reaches into the bottom fifth of the frame has to stop short of
+    YouTube's duration pill; a line above it may use the full width.
+    """
+    if ink_bottom > H * SAFE_Y:
+        return int(W * SAFE_X) - 2 * margin
+    return W - 2 * margin
+
+
+def _layout_words(draw, lines, stroke_w):
+    """Place the word block by its ink, not by the font's em size.
+
+    Measuring with the em size overflowed the frame: Anton's ascent and descent
+    together run to about 1.25 em, so a three-line block sized that way ran off
+    the bottom edge and the last word was cut in half. Every position here comes
+    from the drawn bounding box instead.
+
+    Returns (font, [(x, y) per line]) - the draw positions, already offset so
+    the ink starts at the margin and ends at BOTTOM.
+    """
+    for size in range(START_SIZE, FLOOR_SIZE - 1, -4):
+        font = _font(WORD_FONT, size)
+        ink = [draw.textbbox((0, 0), l, font=font, stroke_width=stroke_w) for l in lines]
+        heights = [b[3] - b[1] for b in ink]
+        gap = LINE_GAP * max(heights)
+        total = sum(heights) + gap * (len(lines) - 1)
+        if total > H * MAX_BLOCK_FRACTION:
+            continue
+        y, places, fits = BOTTOM - total, [], True
+        for box, h in zip(ink, heights):
+            if (box[2] - box[0]) > _line_width_limit(y + h):
+                fits = False
+                break
+            places.append((MARGIN - box[0], y - box[1]))
+            y += h + gap
+        if fits:
+            return font, places
+    font = _font(WORD_FONT, FLOOR_SIZE)
+    step = FLOOR_SIZE * 1.15
+    return font, [(MARGIN, BOTTOM - step * (len(lines) - i)) for i in range(len(lines))]
+
+
+def _draw_words(im, lines, boxes, stroke_w=10, glow=20):
+    """The word block, bottom left, as big as the frame and the safe corner allow."""
+    draw = ImageDraw.Draw(im)
+    font, places = _layout_words(draw, lines, stroke_w)
+    for line, xy in zip(lines, places):
+        _glow_text(im, xy, line, font, WHITE, stroke_w=stroke_w, glow=glow, boxes=boxes)
+    return font.size
+
+
+def _clean_words(words):
+    return [str(w).strip().upper() for w in (words or []) if str(w).strip()][:MAX_WORDS]
+
+
+def compose(source, words=()):
+    """One face against the event: the workhorse layout. Returns (image, text boxes)."""
+    im = _punch(source).convert("RGBA")
+    boxes = []
+    words = _clean_words(words)
+    if words:
+        size = _draw_words(im, words, boxes)
+        log.info("thumbnail: %d word line(s) at %dpx", len(words), size)
+    else:
+        log.info("thumbnail: no text, the picture carries it")
+    return im.convert("RGB"), boxes
+
+
+LABEL_FONT = "BebasNeue-Regular.ttf"
+LABEL_MARGIN = 26
+LABEL_SIZE = 118
+
+
+def compose_split(left_source, right_source, labels, words=()):
+    """Two halves with a label over each: the comparison layout.
+
+    Which is how the reference does a two-sided question - VENUS on the left
+    half, NEPTUNE on the right, one face in each.
+    """
+    half = W // 2
+    im = Image.new("RGB", (W, H))
+    with Image.open(left_source) as raw:
+        im.paste(_lift(_cover(raw.convert("RGB"), half, H))[0], (0, 0))
+    with Image.open(right_source) as raw:
+        im.paste(_lift(_cover(raw.convert("RGB"), W - half, H))[0], (half, 0))
+    im = ImageEnhance.Contrast(ImageEnhance.Color(im).enhance(1.32)).enhance(1.14)
+    im = im.convert("RGBA")
+    boxes = []
+
+    left_label, right_label = (list(labels) + ["", ""])[:2]
+    draw = ImageDraw.Draw(im)
+    usable = half - 2 * LABEL_MARGIN
+    shown = [l for l in (left_label, right_label) if l] or [" "]
+    size, font = LABEL_SIZE, _font(LABEL_FONT, LABEL_SIZE)
+    while size > 40:
+        font = _font(LABEL_FONT, size)
+        if max(draw.textlength(l, font=font) for l in shown) <= usable:
+            break
+        size -= 4
+    ink = max(draw.textbbox((0, 0), l, font=font, stroke_width=6)[3] for l in shown)
+    bar_h = int(ink + 2 * LABEL_MARGIN)
+    _bar(im, (0, 0, W, bar_h), (6, 9, 20), alpha=170)
+    for i, label in enumerate((left_label, right_label)):
+        if label:
+            _glow_text(im, (half * 0.5 + i * half, bar_h * 0.5), label, font, WHITE,
+                       stroke_w=6, anchor="mm", glow=12, boxes=boxes)
+    # A hard seam, so the two halves read as a comparison and not as one picture.
+    ImageDraw.Draw(im).rectangle((half - 3, 0, half + 2, H), fill=WHITE)
+
+    words = _clean_words(words)
+    if words:
+        _draw_words(im, words, boxes, stroke_w=9, glow=18)
+    log.info("thumbnail: split %s / %s, label %dpx, %d word line(s)",
+             left_label or "-", right_label or "-", size, len(words))
+    return im.convert("RGB"), boxes
+
+
+# --- the checks ---------------------------------------------------------------------
+
+SAFE_BOX = (W * SAFE_X, H * SAFE_Y, W, H)
+
+
+def safe_corner_clear(boxes):
+    """True when nothing we drew reaches into YouTube's duration pill."""
+    x0, y0, x1, y1 = SAFE_BOX
+    return all(not (b[2] > x0 and b[3] > y0 and b[0] < x1 and b[1] < y1) for b in boxes)
+
+
+def text_legibility(img, boxes):
+    """Luminance separation inside the type, measured at browse size.
+
+    This measures ONLY whether the words survive the downscale. It says nothing
+    about whether the composition is any good - that still needs human eyes, or
+    the vision judge in pipeline/visualqc.py.
+
+    Shrinks to BROWSE_W x BROWSE_H, then inside each text box takes the 90th
+    percentile luminance (the letter faces) minus the 10th (their dark outline).
+    Letters that stay crisp separate widely; once the downscale smears face into
+    outline the gap collapses. A thumbnail with no text at all is not illegible,
+    so it scores the maximum.
+    """
+    import numpy as np
+    if not boxes:
+        return 255.0
+    small = img.convert("L").resize((BROWSE_W, BROWSE_H), Image.LANCZOS)
+    a = np.asarray(small, dtype=np.float32)
+    sx, sy = BROWSE_W / img.width, BROWSE_H / img.height
+    spreads = []
+    for (x0, y0, x1, y1) in boxes:
+        bx0, by0 = max(0, int(x0 * sx)), max(0, int(y0 * sy))
+        bx1, by1 = min(BROWSE_W, int(x1 * sx) + 1), min(BROWSE_H, int(y1 * sy) + 1)
+        region = a[by0:by1, bx0:bx1]
+        if region.size < 12:
+            continue
+        spreads.append(float(np.percentile(region, 90) - np.percentile(region, 10)))
+    return min(spreads) if spreads else 0.0
+
+
+def save(img, path, max_bytes=MAX_BYTES):
+    """Write the thumbnail as a PNG that YouTube will accept.
+
+    A bright, detailed 1280x720 photograph can compress to more than 2 MB as a
+    PNG, which qc.py fails the build for. Rather than change the format every
+    other stage expects, the picture is passed through a JPEG encode to shed the
+    high-frequency noise and written out as a PNG again - the same pixels, minus
+    the grain nothing can see at browse size.
+    """
+    path = Path(path)
+    img.save(path, optimize=True)
+    for quality in (88, 78, 68):
+        size = path.stat().st_size
+        if size <= max_bytes:
+            return path
+        buf = io.BytesIO()
+        img.save(buf, "JPEG", quality=quality, subsampling=0)
+        buf.seek(0)
+        with Image.open(buf) as reduced:
+            reduced.convert("RGB").save(path, optimize=True)
+        log.info("thumbnail was %.2f MB; re-encoded at q%d -> %.2f MB",
+                 size / 1e6, quality, path.stat().st_size / 1e6)
+    return path
+
+
+# --- the old house style ------------------------------------------------------------
+#
+# Superseded by compose()/compose_split() above. Kept because kt2_thumbnails.py
+# and kt3_build.py reproduce what those milestones actually shipped, and a record
+# that no longer runs is not a record.
+
+def _fit_lines(draw, lines, font_name, max_width, start_size):
+    size = start_size
+    while size > 24:
+        font = _font(font_name, size)
+        if all(draw.textlength(l, font=font) <= max_width for l in lines):
+            return font
+        size -= 4
+    return _font(font_name, 24)
+
+
+def _base_image(source, darken=0.55, blur=0):
+    im = Image.open(source).convert("RGB")
+    im = _cover(im, W, H)
+    if blur:
+        im = im.filter(ImageFilter.GaussianBlur(blur))
+    im = ImageEnhance.Brightness(im).enhance(darken)
+    im = ImageEnhance.Color(im).enhance(1.25)
+    im = ImageEnhance.Contrast(im).enhance(1.15)
+    return im
+
+
+def _vignette(im, strength=0.75):
+    mask = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(mask).ellipse((-W * 0.25, -H * 0.45, W * 1.25, H * 1.45), fill=255)
+    mask = mask.filter(ImageFilter.GaussianBlur(160))
+    dark = ImageEnhance.Brightness(im).enhance(1 - strength)
+    return Image.composite(im, dark, mask)
+
+
 def variant_a(source, lines, accent_line=-1):
-    """Bottom-left stack, the workhorse: biggest type, most contrast."""
+    """Bottom-left stack."""
     im = _vignette(_base_image(source, darken=0.52)).convert("RGBA")
     draw = ImageDraw.Draw(im)
     boxes = []
     margin = 54
     font = _fit_lines(draw, lines, "Anton-Regular.ttf", W - 2 * margin, 168)
     line_h = font.size * 1.02
-    total = line_h * len(lines)
-    y = H - margin - total
+    y = H - margin - line_h * len(lines)
     for i, line in enumerate(lines):
         fill = ACCENT if i == accent_line % len(lines) else WHITE
         _glow_text(im, (margin, y + i * line_h), line, font, fill, stroke_w=9, boxes=boxes)
@@ -105,14 +376,11 @@ def variant_a(source, lines, accent_line=-1):
 
 
 def variant_b(source, lines, accent_line=-1):
-    """Type left, subject right: a scrim that fades out instead of a solid band, so
-    the focal point of the photo stays visible next to the words."""
+    """Type left, subject right, behind a scrim that fades out."""
     im = _base_image(source, darken=0.74).convert("RGBA")
-    # Push the crop left so the subject sits in the right half, clear of the type.
     scrim = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     px = scrim.load()
     for x in range(W):
-        # Opaque at the left edge, gone by about two thirds across.
         a = int(max(0.0, 1.0 - (x / (W * 0.66))) ** 1.4 * 232)
         for y_ in range(H):
             px[x, y_] = (5, 8, 20, a)
@@ -120,8 +388,7 @@ def variant_b(source, lines, accent_line=-1):
     draw = ImageDraw.Draw(im)
     boxes = []
     margin = 52
-    usable = int(W * 0.56)
-    font = _fit_lines(draw, lines, "BebasNeue-Regular.ttf", usable, 180)
+    font = _fit_lines(draw, lines, "BebasNeue-Regular.ttf", int(W * 0.56), 180)
     line_h = font.size * 0.9
     total = line_h * len(lines)
     y = (H - total) / 2
@@ -134,15 +401,14 @@ def variant_b(source, lines, accent_line=-1):
 
 
 def variant_c(source, lines, accent_line=-1):
-    """Centred over a blurred plate: the dramatic one, fewest words."""
+    """Centred over a blurred plate."""
     im = _vignette(_base_image(source, darken=0.48, blur=3), strength=0.85).convert("RGBA")
     draw = ImageDraw.Draw(im)
     boxes = []
     margin = 70
     font = _fit_lines(draw, lines, "Anton-Regular.ttf", W - 2 * margin, 200)
     line_h = font.size * 1.0
-    total = line_h * len(lines)
-    y = (H - total) / 2
+    y = (H - line_h * len(lines)) / 2
     for i, line in enumerate(lines):
         fill = ACCENT if i == accent_line % len(lines) else WHITE
         _glow_text(im, (W / 2, y + i * line_h), line, font, fill,
@@ -153,34 +419,8 @@ def variant_c(source, lines, accent_line=-1):
 VARIANTS = {"a": variant_a, "b": variant_b, "c": variant_c}
 
 
-def text_legibility(img, boxes):
-    """Luminance separation inside the type, measured at browse size.
-
-    This measures ONLY whether the words survive the downscale. It says nothing
-    about whether the composition is any good - that still needs human eyes.
-
-    Shrinks to 168x94, then inside each text box takes the 90th percentile
-    luminance (the letter faces) minus the 10th (their dark outline). Letters that
-    stay crisp separate by roughly 180+; once the downscale smears face into
-    outline the gap collapses, and under ~120 the words read as a grey smudge.
-    """
-    import numpy as np
-    small = img.convert("L").resize((BROWSE_W, BROWSE_H), Image.LANCZOS)
-    a = np.asarray(small, dtype=np.float32)
-    sx, sy = BROWSE_W / W, BROWSE_H / H
-    spreads = []
-    for (x0, y0, x1, y1) in boxes:
-        bx0, by0 = max(0, int(x0 * sx)), max(0, int(y0 * sy))
-        bx1, by1 = min(BROWSE_W, int(x1 * sx) + 1), min(BROWSE_H, int(y1 * sy) + 1)
-        region = a[by0:by1, bx0:bx1]
-        if region.size < 12:
-            continue
-        spreads.append(float(np.percentile(region, 90) - np.percentile(region, 10)))
-    return min(spreads) if spreads else 0.0
-
-
 def render(source, lines, out_dir, stem="thumb"):
-    """Write all three variants plus their browse-size previews."""
+    """Write all three old variants plus their browse-size previews."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     results = []
