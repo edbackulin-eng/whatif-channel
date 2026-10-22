@@ -23,11 +23,19 @@ more than shipping the best picture there is.
 --set-youtube replaces the thumbnail on the live video too, and is the only part
 of this that is visible outside the repository. Without it the run writes files
 and nothing else.
+
+A restyle can also be booked for later, in state/thumbnail_restyles.json, when
+the GPU is not to be spent today. The workflow's schedule claims whatever is
+due (--claim), runs it, and records how it went (--settle). A claimed entry is
+never picked up again, even when its run fails: each one is exactly one kernel,
+which is the point of booking it rather than running it now.
 """
 import argparse
 import json
+import os
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -37,6 +45,7 @@ from core.logger import get_logger  # noqa: E402
 
 log = get_logger("restyle")
 OUT = ROOT / "output" / "thumbnails"
+BOOKINGS = ROOT / "state" / "thumbnail_restyles.json"
 
 
 def _episode(slug):
@@ -225,9 +234,75 @@ def publish(jobs):
         log.info("%s: thumbnail replaced on https://youtu.be/%s", job["slug"], video_id)
 
 
+def _bookings():
+    if not BOOKINGS.exists():
+        return []
+    return json.loads(BOOKINGS.read_text(encoding="utf-8"))
+
+
+def _save_bookings(entries):
+    BOOKINGS.parent.mkdir(parents=True, exist_ok=True)
+    BOOKINGS.write_text(json.dumps(entries, indent=2, ensure_ascii=False) + "\n",
+                        encoding="utf-8")
+
+
+def _now():
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+def _output(**values):
+    """Hand values to the next workflow step, or print them when run by hand."""
+    path = os.environ.get("GITHUB_OUTPUT")
+    lines = [f"{k}={v}" for k, v in values.items()]
+    if path:
+        with open(path, "a", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+    print("\n".join(lines))
+
+
+def claim(today=None):
+    """Mark the bookings that are due as running, and say which they are.
+
+    One kernel per run: bookings due on the same day that also share their flags
+    go together, the rest wait for the next scheduled run.
+    """
+    entries = _bookings()
+    today = today or datetime.now(timezone.utc).date().isoformat()
+    due = [e for e in entries
+           if e.get("status", "pending") == "pending" and e["not_before"] <= today]
+    if not due:
+        _output(slugs="", set_youtube="false", retry="false")
+        log.info("no thumbnail restyle due on %s", today)
+        return []
+    flags = (bool(due[0].get("set_youtube")), bool(due[0].get("retry", True)))
+    batch = [e for e in due
+             if (bool(e.get("set_youtube")), bool(e.get("retry", True))) == flags]
+    for e in batch:
+        e["status"] = "running"
+        e["claimed"] = _now()
+    _save_bookings(entries)
+    _output(slugs=" ".join(e["slug"] for e in batch),
+            set_youtube=str(flags[0]).lower(), retry=str(flags[1]).lower())
+    log.info("claimed %d booked restyle(s): %s", len(batch),
+             ", ".join(e["slug"] for e in batch))
+    return batch
+
+
+def settle(outcome, run_url=""):
+    """Record how the claimed bookings went. Never puts one back to pending."""
+    entries = _bookings()
+    for e in entries:
+        if e.get("status") == "running":
+            e["status"] = "done" if outcome == "success" else "failed"
+            e["finished"] = _now()
+            if run_url:
+                e["run"] = run_url
+    _save_bookings(entries)
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--slug", action="append", required=True,
+    ap.add_argument("--slug", action="append",
                     help="queue slug; repeat for several in one GPU run")
     ap.add_argument("--no-llm", action="store_true",
                     help="derive the brief from the title instead of asking Gemini")
@@ -235,7 +310,21 @@ def main():
                     help="do not spend a second kernel when nothing matched the topic")
     ap.add_argument("--set-youtube", action="store_true",
                     help="also replace the thumbnail on the live video")
+    ap.add_argument("--claim", action="store_true",
+                    help="mark the booked restyles that are due as running")
+    ap.add_argument("--settle", choices=("success", "failure"),
+                    help="record how the claimed restyles went")
+    ap.add_argument("--run-url", default="")
     args = ap.parse_args()
+
+    if args.claim:
+        claim()
+        return 0
+    if args.settle:
+        settle(args.settle, args.run_url)
+        return 0
+    if not args.slug:
+        ap.error("--slug is required unless --claim or --settle is given")
 
     jobs = plan(args.slug, use_llm=not args.no_llm)
     if not generate(jobs):

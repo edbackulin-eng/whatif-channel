@@ -169,6 +169,8 @@ def thumbnails():
     second = thumbplan.cast({"slug": "002-ep", "position": 2}, root=W)
     check("thumbnail cast alternates and varies",
           all(p["gender"] == "woman" for p in second)
+          # the type ignores gender: no white woman in her 40s after a white man in his
+          and ("40s", "white") not in {style.person_type(p) for p in second}
           and len({style.person_type(p) for p in second}) == len(second)
           and len({p["look"] for p in second}) == len(second),
           f"after a white man in his 40s: {[(p['look'], p['age']) for p in second]}")

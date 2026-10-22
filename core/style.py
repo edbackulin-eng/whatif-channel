@@ -172,8 +172,11 @@ def age_band(age):
 
 
 def person_type(person):
-    """What counts as the same person for the no-repeat rule."""
-    return (person.get("gender"), age_band(person.get("age", 0)), person.get("look"))
+    """What counts as the same person for the no-repeat rule: age band and
+    appearance, whatever the gender. With gender in it, a Black woman of 58 on
+    008 and a Black man of 58 on 011 counted as different people; in a feed they
+    read as the same face twice."""
+    return (age_band(person.get("age", 0)), person.get("look"))
 
 
 def describe_person(person, setting="earth", place="street", centred=False):

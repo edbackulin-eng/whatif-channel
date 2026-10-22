@@ -480,9 +480,9 @@ def restate(brief_, notes=(), use_llm=True):
 # cast against that record:
 #
 #   - the gender alternates with the thumbnail before it in the feed;
-#   - no one of the same type - gender, age band, appearance - as anyone on the
-#     last five thumbnails, or on the next one when a thumbnail is replaced out
-#     of order;
+#   - no one of the same type - age band and appearance, whatever the gender -
+#     as anyone on the last five thumbnails, or on the next one when a
+#     thumbnail is replaced out of order;
 #   - not the same camera angle twice in a row.
 #
 # All the candidates for one thumbnail share a gender, so the rule holds
@@ -552,7 +552,7 @@ def cast(episode, n=CANDIDATES, planned=(), root=None):
         avoid |= _types_of(person)
     rng = random.Random(episode.get("slug") or "whatif")
     pool = [(age, look) for age in style.CAST_AGES for look in style.CAST_LOOKS
-            if (gender, style.age_band(age), look) not in avoid]
+            if (style.age_band(age), look) not in avoid]
     if len(pool) < n:
         # Not enough unused types left: relax to "not the one right next to it".
         nearest = set()
@@ -560,7 +560,7 @@ def cast(episode, n=CANDIDATES, planned=(), root=None):
             if person:
                 nearest |= _types_of(person)
         pool = [(age, look) for age in style.CAST_AGES for look in style.CAST_LOOKS
-                if (gender, style.age_band(age), look) not in nearest]
+                if (style.age_band(age), look) not in nearest]
     rng.shuffle(pool)
     # Spread the candidates across looks first and ages second, so the judge is
     # choosing between different people rather than six near-twins.

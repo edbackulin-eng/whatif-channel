@@ -1,14 +1,21 @@
 name: Restyle a thumbnail
 
-# Gives an episode that already exists a thumbnail in the new house style: a face
-# in the foreground carrying the emotion, the event behind it, one to three
-# enormous words. New episodes get one from the build itself - the candidates
-# ride along on the scene batch - so this is only for episodes built before the
-# style changed.
+# Gives an episode that already exists a thumbnail in the new house style: a
+# person in the foreground carrying the emotion, the event behind them, one or
+# two enormous words. New episodes get one from the build itself - the
+# candidates ride along on the scene batch - so this is for episodes built
+# before the style changed, or whose thumbnail came out wrong.
 #
-# Every slug in one run shares a single GPU kernel, so restyling five episodes
-# costs about what one costs. Replacing the thumbnail on the live video is opt-in
-# and off by default: without it the run only produces files.
+# Two ways in:
+#   - by hand (workflow_dispatch), for the slugs named;
+#   - on a schedule, for whatever is booked and due in
+#     state/thumbnail_restyles.json. A booking is claimed and pushed BEFORE the
+#     GPU is touched, and never goes back to pending, even when its run fails:
+#     each booking is exactly one kernel, which is the reason to book one
+#     instead of running it now.
+#
+# Every slug in one run shares a single GPU kernel. Replacing the thumbnail on
+# the live video is opt-in.
 on:
   workflow_dispatch:
     inputs:
@@ -19,15 +26,28 @@ on:
         description: "Also replace the thumbnail on the live video"
         type: boolean
         default: false
+      no_retry:
+        description: "Never spend a second kernel when nothing matched the topic"
+        type: boolean
+        default: false
+  # Several times through What If's GPU window, at odd minutes. GitHub starts
+  # scheduled runs late - by hours on this repository - and a run that finds
+  # nothing due, a build on the GPU, or the window closed, stops green and
+  # costs nothing; the next slot picks the booking up.
+  schedule:
+    - cron: "23 8,11,14,16 * * *"
 
 concurrency:
   group: thumbnails
   cancel-in-progress: false
 
-# Write, because the lines a thumbnail used are recorded in its queue entry so
-# that the next episode does not repeat them. Nothing else here is committed.
+# Write, because the lines and the person a thumbnail used are recorded in its
+# queue entry, and a booking's state in state/. Actions read, to see whether a
+# build holds the GPU; issues write, to email the owner when a booked run fails.
 permissions:
   contents: write
+  actions: read
+  issues: write
 
 jobs:
   # The shared Kaggle account belongs to Closed Tabs from 20:00 UTC. A restyle
@@ -40,10 +60,28 @@ jobs:
       go: ${{ steps.clock.outputs.go }}
     steps:
       - id: clock
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
         run: |
           m=$((10#$(date -u +%H) * 60 + 10#$(date -u +%M)))
-          if [ "$m" -lt $((17 * 60 + 30)) ]; then echo "go=true" >> "$GITHUB_OUTPUT"
-          else echo "go=false" >> "$GITHUB_OUTPUT"; echo "it is $(date -u +%H:%M) UTC, past 17:30; outside What If's GPU window"; fi
+          if [ "$m" -ge $((17 * 60 + 30)) ]; then
+            echo "go=false" >> "$GITHUB_OUTPUT"
+            echo "it is $(date -u +%H:%M) UTC, past 17:30; outside What If's GPU window"
+            exit 0
+          fi
+          # A booked run never queues behind a build: the build is the channel's
+          # day, and this slot will come round again.
+          if [ "$EVENT" = "schedule" ]; then
+            n=$(gh run list -R "${{ github.repository }}" --workflow build-video.yml \
+                  --status in_progress --json databaseId --jq length)
+            if [ "$n" != "0" ]; then
+              echo "go=false" >> "$GITHUB_OUTPUT"
+              echo "a build holds the GPU; the next slot takes the booking"
+              exit 0
+            fi
+          fi
+          echo "go=true" >> "$GITHUB_OUTPUT"
 
   restyle:
     needs: gate
@@ -61,45 +99,73 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - run: |
+          git config user.name  "whatif-bot"
+          git config user.email "noreply@users.noreply.github.com"
+
+      # Pushed before the GPU is touched. If the runner dies mid-kernel, the
+      # booking stays claimed and is not run a second time by the next slot.
+      - name: Claim what is booked and due
+        id: booked
+        if: github.event_name == 'schedule'
+        run: |
+          python -X utf8 tools/restyle_thumbnail.py --claim
+          git add state/thumbnail_restyles.json
+          git commit -q -m "thumbnails: claimed $(date -u +%Y-%m-%d)" || exit 0
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q origin "${{ github.ref_name }}" && git push -q && exit 0
+            sleep $((i * 8))
+          done
+          echo "::error::the claim could not be pushed; not running, so nothing runs twice"
+          exit 1
+
       - name: Restyle
+        id: restyle
+        if: github.event_name != 'schedule' || steps.booked.outputs.slugs != ''
         env:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          # Only read when the input below asks for it, but the step needs it in
-          # scope either way.
+          # Only read when asked to set the live thumbnail, but the step needs it
+          # in scope either way.
           YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
           # Through the environment, not interpolated into the script: an input
           # pasted straight into a shell line is a command the runner would run.
-          SLUGS: ${{ github.event.inputs.slugs }}
-          SET_YOUTUBE: ${{ github.event.inputs.set_youtube }}
+          SLUGS: ${{ github.event_name == 'schedule' && steps.booked.outputs.slugs || github.event.inputs.slugs }}
+          SET_YOUTUBE: ${{ github.event_name == 'schedule' && steps.booked.outputs.set_youtube || github.event.inputs.set_youtube }}
+          RETRY: ${{ github.event_name == 'schedule' && steps.booked.outputs.retry || (github.event.inputs.no_retry == 'true' && 'false' || 'true') }}
         run: |
           args=""
           for s in $SLUGS; do args="$args --slug $s"; done
           if [ "$SET_YOUTUBE" = "true" ]; then args="$args --set-youtube"; fi
+          if [ "$RETRY" != "true" ]; then args="$args --no-retry"; fi
+          echo "restyle:$args"
           python -X utf8 tools/restyle_thumbnail.py $args
 
-      # Only the lines each thumbnail used, so the next episode does not repeat
-      # them. Lost otherwise: the runner is thrown away.
-      - name: Record the lines used
-        if: always()
+      # The lines and person each thumbnail used, so the next does not repeat
+      # them, and how a booking went. Lost otherwise: the runner is thrown away.
+      - name: Record what was used
+        if: always() && steps.restyle.outcome != 'skipped'
         run: |
-          git config user.name  "whatif-bot"
-          git config user.email "noreply@users.noreply.github.com"
-          git add queue/
-          git commit -m "thumbnails: lines used by $(date -u +%Y-%m-%d)" || exit 0
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            outcome=$([ "${{ steps.restyle.outcome }}" = "success" ] && echo success || echo failure)
+            python -X utf8 tools/restyle_thumbnail.py --settle "$outcome" \
+              --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          fi
+          git add queue/ state/thumbnail_restyles.json
+          git commit -q -m "thumbnails: used by $(date -u +%Y-%m-%d)" || exit 0
           for i in 1 2 3 4 5; do
-            git pull --rebase -q origin "${{ github.ref_name }}" && git push && exit 0
+            git pull --rebase -q origin "${{ github.ref_name }}" && git push -q && exit 0
             sleep $((i * 8))
           done
-          echo "::warning::the lines used could not be pushed; a later thumbnail may repeat them"
+          echo "::warning::the record could not be pushed; a later thumbnail may repeat this one"
 
       # The thumbnails themselves are not committed: queue/*/*.png is ignored,
       # because this repository holds code and text and nothing heavy.
       - name: Upload the thumbnails
-        if: always()
+        if: always() && steps.restyle.outcome != 'skipped'
         uses: actions/upload-artifact@v5
         with:
           name: thumbnails
@@ -110,4 +176,18 @@ jobs:
             output/thumbnails/*/thumbnail_brief.json
             output/thumbnails/*/candidate_*.png
           retention-days: 14
-          if-no-files-found: error
+          if-no-files-found: warn
+
+      # Nobody is watching a scheduled run. A comment mentioning the owner on the
+      # run-log issue arrives as an email, as it does for a failed build.
+      - name: Email on failure
+        if: failure() && github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh issue list -R ${{ github.repository }} --label run-log --state open --json number --jq '.[0].number // empty')
+          if [ -z "$n" ]; then
+            gh label create run-log -R ${{ github.repository }} --color b60205 2>/dev/null || true
+            n=$(gh issue create -R ${{ github.repository }} --title "Build failures" --label run-log --body "A comment here mentioning the owner arrives as an email." | grep -o '[0-9]*$')
+          fi
+          gh issue comment "$n" -R ${{ github.repository }} --body "@${{ github.repository_owner }} **booked thumbnail restyle failed** (${{ steps.booked.outputs.slugs }}); it is marked failed and will not run again by itself: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
