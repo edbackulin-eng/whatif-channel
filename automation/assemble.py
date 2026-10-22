@@ -259,8 +259,9 @@ def _headline(title):
 
 
 # text_legibility measured at 336x189. Under this the words smear into their own
-# outline on a browse card. Recalibrated with the browse size and the layout:
-# the old 120 was measured at 168x94, where the same type scores far lower.
+# outline on a browse card. A floor, not a target: the 24 real candidates of the
+# first run measured 249-254 with this layout, so it only catches a composite
+# that has gone wrong rather than ranking the good ones.
 MIN_LEGIBILITY = 150
 # Defects that disqualify a candidate even when nothing better is left. A melted
 # face or a six-fingered hand on the one image every viewer sees first is worse
@@ -315,7 +316,7 @@ def best_thumbnail(work, scenes, episode, out_dir=None):
         c["verdict"] = v
 
     words = brief.get("words") or []
-    if brief.get("comparison") and any(c["role"] in ("left", "right") for c in cands):
+    if brief.get("comparison") and any(c.get("role") in ("left", "right") for c in cands):
         img, report = _compose_split(cands, brief, words, out_dir)
     else:
         img, report = _compose_single(cands, words, out_dir)

@@ -179,7 +179,10 @@ def _clean(raw, title):
         comparison = None
     return {"event": event if 4 <= len(event.split()) <= 30 else fb["event"],
             "words": words,            # an empty list is a legitimate answer
-            "comparison": comparison, "source": "gemini"}
+            # "model", not "gemini": core/llm.py falls back to Groq, and on the
+            # first real run Gemini answered 503 and Groq wrote all four briefs.
+            # A field that names the wrong provider is worse than a vague one.
+            "comparison": comparison, "source": "model"}
 
 
 def brief(episode, work=None, use_llm=True):

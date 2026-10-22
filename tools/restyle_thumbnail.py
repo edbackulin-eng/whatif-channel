@@ -109,7 +109,7 @@ def compose(jobs):
             continue
         brief, work = job["brief"], job["work"]
         words = brief.get("words") or []
-        if brief.get("comparison") and any(c["role"] in ("left", "right") for c in cands):
+        if brief.get("comparison") and any(c.get("role") in ("left", "right") for c in cands):
             img, report = assemble._compose_split(cands, brief, words, work)
         else:
             img, report = assemble._compose_single(cands, words, work)
