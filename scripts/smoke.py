@@ -137,6 +137,12 @@ def thumbnails():
                                "What If the Oceans Vanished?")
     taken = thumbplan._clean({"event": brief["event"], "words": ["NO WATER"]},
                              "What If the Oceans Vanished?", avoid={"nowater"})
+    restated = thumbplan.restate({**brief, "topic": "What If Jupiter Vanished?"},
+                                 ["looks like a generic explosion"], use_llm=False)
+    check("thumbnail restates an off-topic event",
+          "gas giant" in restated["event"] and restated["event"] != brief["event"]
+          and restated["event_first_pass"] == brief["event"],
+          f"-> {restated['event'][:60]}...")
     check("thumbnail refuses generic lines",
           not {"CHAOS", "NO ESCAPE"} & set(generic["words"])
           and "NO WATER" not in taken["words"],

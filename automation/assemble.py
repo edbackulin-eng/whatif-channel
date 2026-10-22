@@ -283,6 +283,12 @@ def best_thumbnail(work, scenes, episode, out_dir=None):
     Falls back to the old behaviour - a still lifted out of the episode - when
     there are no candidates at all, because a plain thumbnail ships and a build
     that stopped for one does not.
+
+    No retry here. When nothing shows the episode's own subject the build says
+    so and uses the best picture it has: a second batch would be a second GPU
+    kernel in the middle of a render that is already holding one, and the
+    thumbnail can be replaced afterwards with tools/restyle_thumbnail.py, which
+    does retry once.
     """
     from pipeline import thumbnail, thumbplan, visualqc
     work = Path(work)

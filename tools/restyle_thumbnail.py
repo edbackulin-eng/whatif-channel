@@ -13,6 +13,13 @@ Every slug named in one run shares a single GPU kernel: the cost of a Kaggle job
 is the FLUX load and the turn of the shared GPU lock, not the six images, so
 restyling five episodes at once costs about what one costs.
 
+When the judge says not one candidate shows the episode's own subject - a black
+hole drawn as a sun, one moon where there should be two - there is ONE more
+generation with a blunter event description, sharing a kernel again, and then
+the best of both batches is used. One retry and no more: a second kernel is
+already the expensive part of this, and a third that still missed would cost
+more than shipping the best picture there is.
+
 --set-youtube replaces the thumbnail on the live video too, and is the only part
 of this that is visible outside the repository. Without it the run writes files
 and nothing else.
@@ -105,6 +112,54 @@ def judge(jobs):
                      job["slug"], len(off), len(cands))
 
 
+def off_topic(job):
+    """True when not one usable candidate shows the episode's own subject.
+
+    Candidates the judge rejected outright do not count either way: a melted
+    face that happens to sit in front of the right event is not a thumbnail.
+    """
+    from automation import assemble
+    cands = [c for c in job["candidates"] if c.get("image")]
+    usable = [c for c in cands if c["verdict"].get("defect") not in assemble.FATAL]
+    return bool(cands) and not any(c["verdict"].get("matches", True)
+                                   for c in (usable or cands))
+
+
+def retry_off_topic(jobs, use_llm=True):
+    """One more generation, with a blunter event description, for the slugs where
+    nothing showed the subject. One only - a kernel is not cheap.
+
+    The first pass is kept rather than thrown away: the ranking already puts a
+    matching picture ahead of a non-matching one, so the second batch wins only
+    where it deserves to.
+    """
+    from pipeline import thumbplan
+    again = [job for job in jobs if off_topic(job)]
+    if not again:
+        return []
+    log.info("%d slug(s) had no candidate showing the subject; one more generation "
+             "with a blunter description", len(again))
+    for job in again:
+        notes = [c["verdict"].get("match_note", "") for c in job["candidates"]]
+        job["first_pass"] = job["candidates"]
+        job["brief"] = thumbplan.restate(job["brief"], notes, use_llm=use_llm)
+        job["candidates"] = thumbplan.candidates(job["brief"])
+        (job["work"] / thumbplan.BRIEF_FILE).write_text(
+            json.dumps(job["brief"], indent=2, ensure_ascii=False), encoding="utf-8")
+    generate(again)
+    judge(again)
+    for job in again:
+        job["candidates"] = job.pop("first_pass") + [c for c in job["candidates"]
+                                                     if c.get("image")]
+        matched = sum(1 for c in job["candidates"] if c["verdict"].get("matches"))
+        log.info("%s: %d of %d candidates now show the subject", job["slug"],
+                 matched, len(job["candidates"]))
+        if not matched:
+            log.warning("%s: still nothing on the subject after the retry; the best "
+                        "available picture is used", job["slug"])
+    return again
+
+
 def compose(jobs):
     """Pick and draw, exactly as a build does, and write the result beside the queue."""
     from automation import assemble
@@ -162,6 +217,8 @@ def main():
                     help="queue slug; repeat for several in one GPU run")
     ap.add_argument("--no-llm", action="store_true",
                     help="derive the brief from the title instead of asking Gemini")
+    ap.add_argument("--no-retry", action="store_true",
+                    help="do not spend a second kernel when nothing matched the topic")
     ap.add_argument("--set-youtube", action="store_true",
                     help="also replace the thumbnail on the live video")
     args = ap.parse_args()
@@ -170,6 +227,8 @@ def main():
     if not generate(jobs):
         raise SystemExit("no candidate came back from the GPU")
     judge(jobs)
+    if not args.no_retry:
+        retry_off_topic(jobs, use_llm=not args.no_llm)
     written = compose(jobs)
     if args.set_youtube:
         publish(jobs)

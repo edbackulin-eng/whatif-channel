@@ -323,6 +323,86 @@ def brief(episode, work=None, use_llm=True):
     return out
 
 
+RESTATE_SYSTEM = """You are rewriting the EVENT description for a YouTube
+thumbnail because the pictures it produced did not show the episode's subject.
+A vision model looked at them and said what was wrong.
+
+Rewrite it blunter and more literal. Name the object, say what shape and colour
+it is, and make it the single unmistakable thing in the frame. Drop metaphor,
+drop mood words, drop anything the first description was vague about. A viewer
+who knows the subject must be able to name it from the picture alone.
+
+Return JSON only: {"event":"<one visual phrase, 8-20 words>"}"""
+
+# What the first description of each subject failed to make literal. Used when
+# no model answers, and appended to whatever one does: it is the specific detail
+# the judge kept missing, not a general instruction.
+LITERAL = (
+    ("black hole", "a perfectly black circle at the centre with a thin blazing "
+                   "orange ring of matter around it and stars smeared around its edge"),
+    ("two moons", "two separate round moons in the same sky, both clearly visible, "
+                  "one larger and one smaller"),
+    ("moons", "two separate round moons in the same sky, both clearly visible"),
+    ("antarctica", "a white ice cliff breaking apart into turquoise meltwater, "
+                   "icebergs tipping into the sea"),
+    ("gravity", "a street of buildings folded and flattened downward, roofs "
+                "collapsed into themselves, concrete dust blasting sideways"),
+    ("jupiter", "a vast banded orange and cream gas giant with a red oval storm, "
+                "filling most of the sky"),
+    ("satellite", "hundreds of broken metal satellites and panels tumbling in low "
+                  "orbit above the curve of the earth"),
+    ("ocean", "a bare ocean floor of cracked mud with ships lying on their sides, "
+              "no water anywhere"),
+    ("sun", "a black disc where the sun was, in a dim sky over a city under thick "
+            "blue ice"),
+    ("atmosphere", "a city under an utterly black star-filled sky with no blue in "
+                   "it at all"),
+    ("magnetic field", "curtains of green and red aurora over the whole sky, the "
+                       "air visibly streaming away into space"),
+    ("volcano", "a single enormous volcano throwing a column of orange lava and "
+                "black ash straight upward"),
+    ("photosynthesis", "a forest of bare grey dead trees with not one green leaf"),
+)
+
+
+def restate(brief_, notes=(), use_llm=True):
+    """A blunter event description, after the judge said the pictures were not
+    the episode's subject.
+
+    One rewrite, never a loop: another description is a GPU kernel, and a second
+    one that still misses costs more than shipping the best picture there is.
+    """
+    topic = brief_.get("topic") or ""
+    literal = next((text for key, text in LITERAL if key in topic.lower()), "")
+    out = dict(brief_)
+    out["event_first_pass"] = brief_.get("event", "")
+    event = None
+    if use_llm:
+        from core import llm
+        try:
+            prompt = (f'Episode title: "{topic}"\n'
+                      f'The description that failed: "{brief_.get("event", "")}"\n'
+                      f'What the vision model said was wrong: '
+                      f'{"; ".join(n for n in notes if n) or "it was not the subject"}\n\n'
+                      "Rewrite the event description.")
+            answer = llm.complete_json(prompt, system=RESTATE_SYSTEM, max_tokens=300,
+                                       temperature=0.4)
+            candidate = str(answer.get("event") or "").strip()
+            if 4 <= len(candidate.split()) <= 36:
+                event = candidate
+        except Exception as e:                                   # noqa: BLE001
+            log.warning("could not restate the event (%s); using the literal "
+                        "description", e)
+    if not event:
+        event = literal or brief_.get("event", "")
+    if literal and literal not in event:
+        event = f"{event}, {literal}"
+    out["event"] = f"{event}, the single unmistakable subject of the picture"
+    out["source"] = f"{brief_.get('source', '?')}+restated"
+    log.info("restated event: %s", out["event"][:120])
+    return out
+
+
 def candidates(brief_, n=CANDIDATES):
     """The FLUX prompts for one episode's thumbnail, as a list of
     {"role": "single"|"left"|"right", "label": str, "prompt": str}.
