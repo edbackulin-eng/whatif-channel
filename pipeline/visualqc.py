@@ -293,6 +293,13 @@ Reject (ok=false) when ANY of these is clearly true:
 
 A clean, well formed face in a strong emotion passes even if it is unusual or
 extreme. Grain and shallow depth of field are fine.
+
+You are also told the episode's title. Judge separately whether the event in the
+picture is recognisably THAT subject and not a generic catastrophe: a black hole
+is a dark circle with a bright disc of matter around it, not a sun and not an
+explosion; two moons means two moons are visible; melting ice means ice and
+water. This does not reject a picture on its own - it decides which of several
+clean pictures is the right one.
 Reply with valid JSON only."""
 
 THUMB_PROMPT = """For each image, in order, return:
@@ -304,17 +311,28 @@ size of a postage stamp; 0 if there is no face>,
 "corner":<true when the BOTTOM RIGHT corner of the image - the last quarter
 across and the last fifth down - holds nothing important, so a duration badge
 could sit over it; false when something that matters is there>,
+"face_side":"left|right|centre - which half of the frame the face occupies",
+"event_side":"left|right - which half holds the event rather than the face;
+the words are drawn there, so it must be the half with no face in it",
+"matches":true|false,<true when the event shown is recognisably the episode's
+own subject, as described above>
+"match_note":"<a few words, only when matches is false>",
 "score":<1-10: how strongly this would stop a scroll - one clear dramatic
 subject, a readable emotion, bright saturated colour, no clutter>}]}"""
 
 
-def judge_thumbnails(paths, model=VISION_MODEL):
-    """{path: {"ok", "defect", "note", "score", "emotion", "corner"}} for candidates.
+def judge_thumbnails(paths, model=VISION_MODEL, topic=None):
+    """Verdicts for candidate thumbnails, keyed by path.
+
+    {"ok", "defect", "note", "score", "emotion", "corner", "face_side",
+     "event_side", "matches", "match_note"}
 
     A candidate that is not judged (quota, outage) is not ok: a thumbnail with an
     unseen six-fingered hand or a melted face is worse than the second-best
-    picture. `emotion` and `corner` are advisory and only order the survivors -
-    a face is what this style is for, so the one that reads most clearly wins.
+    picture. The rest order the survivors rather than reject them - `matches`
+    says the picture is this episode's subject and not a generic catastrophe,
+    `event_side` says which half the words may be drawn over, and `emotion` and
+    `corner` break the remaining ties.
     """
     key = llm.get_key("GEMINI_API_KEY")
     if not key:
@@ -324,6 +342,8 @@ def judge_thumbnails(paths, model=VISION_MODEL):
     for start in range(0, len(paths), 6):
         batch = paths[start:start + 6]
         parts = [{"text": THUMB_PROMPT}]
+        if topic:
+            parts.append({"text": f'The episode is titled: "{topic}"'})
         for i, p in enumerate(batch):
             parts.append({"text": f"image {i}:"})
             parts.append({"inline_data": {"mime_type": "image/jpeg", "data": _encode(p, 1024)}})
@@ -356,12 +376,30 @@ def judge_thumbnails(paths, model=VISION_MODEL):
         for i, p in enumerate(batch):
             r = by_i.get(i)
             out[p] = ({"ok": False, "defect": "unchecked", "note": "no verdict",
-                       "score": 0.0, "emotion": 0.0, "corner": False}
+                       "score": 0.0, "emotion": 0.0, "corner": False,
+                       "face_side": "", "event_side": "", "matches": False,
+                       "match_note": "not judged"}
                       if r is None else
                       {"ok": bool(r.get("ok", False)),
                        "defect": (r.get("defect") or "none").lower(),
                        "note": r.get("note", "") or "",
                        "score": float(r.get("score") or 0),
                        "emotion": float(r.get("emotion") or 0),
-                       "corner": bool(r.get("corner", True))})
+                       "corner": bool(r.get("corner", True)),
+                       "face_side": str(r.get("face_side") or "").lower(),
+                       "event_side": _event_side(r),
+                       # Absent means not asked (no topic given), which must not
+                       # read as "the picture is wrong".
+                       "matches": bool(r.get("matches", True)),
+                       "match_note": r.get("match_note", "") or ""})
     return out
+
+
+def _event_side(result):
+    """Which half the words may go over: what the judge said, or the half the
+    face is not in."""
+    side = str(result.get("event_side") or "").lower()
+    if side in ("left", "right"):
+        return side
+    face = str(result.get("face_side") or "").lower()
+    return {"left": "right", "right": "left"}.get(face, "")

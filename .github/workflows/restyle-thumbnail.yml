@@ -24,8 +24,10 @@ concurrency:
   group: thumbnails
   cancel-in-progress: false
 
+# Write, because the lines a thumbnail used are recorded in its queue entry so
+# that the next episode does not repeat them. Nothing else here is committed.
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   restyle:
@@ -61,6 +63,21 @@ jobs:
           for s in $SLUGS; do args="$args --slug $s"; done
           if [ "$SET_YOUTUBE" = "true" ]; then args="$args --set-youtube"; fi
           python -X utf8 tools/restyle_thumbnail.py $args
+
+      # Only the lines each thumbnail used, so the next episode does not repeat
+      # them. Lost otherwise: the runner is thrown away.
+      - name: Record the lines used
+        if: always()
+        run: |
+          git config user.name  "whatif-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          git add queue/
+          git commit -m "thumbnails: lines used by $(date -u +%Y-%m-%d)" || exit 0
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q origin "${{ github.ref_name }}" && git push && exit 0
+            sleep $((i * 8))
+          done
+          echo "::warning::the lines used could not be pushed; a later thumbnail may repeat them"
 
       # The thumbnails themselves are not committed: queue/*/*.png is ignored,
       # because this repository holds code and text and nothing heavy.

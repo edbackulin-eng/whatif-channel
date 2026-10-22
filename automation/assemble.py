@@ -304,16 +304,14 @@ def best_thumbnail(work, scenes, episode, out_dir=None):
         return _frame_thumbnail(work, scenes, episode)
 
     try:
-        verdicts = visualqc.judge_thumbnails([c["image"] for c in cands])
+        verdicts = visualqc.judge_thumbnails([c["image"] for c in cands],
+                                             topic=brief.get("topic") or episode.get("title"))
     except Exception as e:                                       # noqa: BLE001
         log.warning("thumbnail judge unavailable (%s); every candidate counts as "
                     "unchecked", e)
         verdicts = {}
     for c in cands:
-        v = verdicts.get(Path(c["image"])) or {
-            "ok": False, "defect": "unchecked", "note": "no verdict",
-            "score": 0.0, "emotion": 0.0, "corner": True}
-        c["verdict"] = v
+        c["verdict"] = verdicts.get(Path(c["image"])) or dict(UNJUDGED)
 
     words = brief.get("words") or []
     if brief.get("comparison") and any(c.get("role") in ("left", "right") for c in cands):
@@ -327,11 +325,22 @@ def best_thumbnail(work, scenes, episode, out_dir=None):
     return img
 
 
+UNJUDGED = {"ok": False, "defect": "unchecked", "note": "no verdict",
+            "score": 0.0, "emotion": 0.0, "corner": True,
+            "face_side": "", "event_side": "", "matches": True, "match_note": ""}
+
+
 def _rank(c):
-    """How good a surviving candidate is: the judge's score, then the emotion it
-    reads, then a clear bottom-right corner."""
+    """How good a surviving candidate is.
+
+    Whether the picture is actually this episode's subject comes first: a clean,
+    dramatic face in front of the wrong event is the wrong thumbnail however
+    well it is made. Then the judge's score, the emotion it reads, and a clear
+    bottom-right corner.
+    """
     v = c["verdict"]
-    return (v.get("score", 0), v.get("emotion", 0), bool(v.get("corner", True)))
+    return (bool(v.get("matches", True)), v.get("score", 0), v.get("emotion", 0),
+            bool(v.get("corner", True)))
 
 
 def _entry(c, legibility=None, used=False):
@@ -340,6 +349,8 @@ def _entry(c, legibility=None, used=False):
             "ok": v.get("ok", False), "defect": v.get("defect"),
             "note": v.get("note", ""), "score": v.get("score", 0),
             "emotion": v.get("emotion", 0), "corner": v.get("corner", True),
+            "matches": v.get("matches", True), "match_note": v.get("match_note", ""),
+            "face_side": v.get("face_side", ""), "event_side": v.get("event_side", ""),
             "legibility": None if legibility is None else round(legibility),
             "used": used}
 
@@ -350,7 +361,8 @@ def _compose_single(cands, words, out_dir):
     from pipeline import thumbnail
     report, ranked, composed = [], [], {}
     for k, c in enumerate(cands):
-        img, boxes = thumbnail.compose(c["image"], words)
+        img, boxes = thumbnail.compose(c["image"], words,
+                                       side=c["verdict"].get("event_side") or None)
         img.save(out_dir / f"candidate_{k}.png")
         img.resize((thumbnail.BROWSE_W, thumbnail.BROWSE_H)).save(
             out_dir / f"candidate_{k}_browse.png")
@@ -366,11 +378,14 @@ def _compose_single(cands, words, out_dir):
     if ranked:
         _, k = max(ranked, key=lambda r: r[0])
         img, _, legible = composed[k]
-        log.info("thumbnail: candidate %d of %d (score %.0f, emotion %.0f, "
+        v = cands[k]["verdict"]
+        log.info("thumbnail: candidate %d of %d (matches %s, score %.0f, emotion %.0f, "
                  "legibility %.0f); %d rejected", k, len(cands),
-                 cands[k]["verdict"].get("score", 0),
-                 cands[k]["verdict"].get("emotion", 0), legible,
-                 len(cands) - len(ranked))
+                 v.get("matches", True), v.get("score", 0), v.get("emotion", 0),
+                 legible, len(cands) - len(ranked))
+        if not v.get("matches", True):
+            log.warning("no candidate showed the episode's own subject; the best "
+                        "available is off-topic (%s)", v.get("match_note", ""))
         report[k]["used"] = True
         return img, report
     k = _least_bad(cands, composed)

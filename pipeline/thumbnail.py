@@ -130,11 +130,17 @@ def _bar(im, box, color, alpha=235):
 
 WORD_FONT = "Anton-Regular.ttf"
 MARGIN = 54
-BOTTOM = H - 40               # where the ink of the last line ends
-MAX_WORDS = 3
+TOP = 44                      # where the ink of the first line starts, high up
+BOTTOM = H - 40               # and where the last line ends, low down
+# Two lines, never three. Three read as a sentence and a sentence is not read
+# at the size of a postage stamp.
+MAX_WORDS = 2
 # The words are half the thumbnail at most. Any more and they bury the face they
 # are supposed to be shouting about.
 MAX_BLOCK_FRACTION = 0.50
+# How much of the width one side's block may use. Slightly over half, because
+# the two halves of a thumbnail are rarely split exactly down the middle.
+HALF = 0.54
 START_SIZE = 260
 FLOOR_SIZE = 56
 LINE_GAP = 0.12               # of the tallest line's ink
@@ -151,7 +157,24 @@ def _line_width_limit(ink_bottom, margin=MARGIN):
     return W - 2 * margin
 
 
-def _layout_words(draw, lines, stroke_w):
+POSITIONS = ("bottom-left", "top-left", "bottom-right", "top-right")
+SIDES = {"left": ("bottom-left", "top-left"),
+         "right": ("bottom-right", "top-right"),
+         # The split layout's own label bar owns the top of the frame.
+         "bottom": ("bottom-left", "bottom-right")}
+
+
+def _x_bounds(ink_bottom):
+    """The leftmost and rightmost edge a line's ink may occupy at this height.
+
+    A line whose ink reaches into the bottom fifth has to stop short of
+    YouTube's duration pill, which is what keeps a right-aligned block out of
+    the corner instead of merely narrowing a left-aligned one.
+    """
+    return MARGIN, _line_width_limit(ink_bottom) + MARGIN
+
+
+def _layout_words(draw, lines, stroke_w, position="bottom-left"):
     """Place the word block by its ink, not by the font's em size.
 
     Measuring with the em size overflowed the frame: Anton's ascent and descent
@@ -159,9 +182,10 @@ def _layout_words(draw, lines, stroke_w):
     the bottom edge and the last word was cut in half. Every position here comes
     from the drawn bounding box instead.
 
-    Returns (font, [(x, y) per line]) - the draw positions, already offset so
-    the ink starts at the margin and ends at BOTTOM.
+    Returns (font, [(x, y) draw position per line], block ink box), or None when
+    the lines cannot be made to fit in this corner at any size.
     """
+    vertical, _, horizontal = position.partition("-")
     for size in range(START_SIZE, FLOOR_SIZE - 1, -4):
         font = _font(WORD_FONT, size)
         ink = [draw.textbbox((0, 0), l, font=font, stroke_width=stroke_w) for l in lines]
@@ -170,41 +194,113 @@ def _layout_words(draw, lines, stroke_w):
         total = sum(heights) + gap * (len(lines) - 1)
         if total > H * MAX_BLOCK_FRACTION:
             continue
-        y, places, fits = BOTTOM - total, [], True
+        top = TOP if vertical == "top" else BOTTOM - total
+        y, places, edges, fits = top, [], [], True
         for box, h in zip(ink, heights):
-            if (box[2] - box[0]) > _line_width_limit(y + h):
+            left, right = _x_bounds(y + h)
+            # Keep the block inside its own half, with a little overlap at the
+            # centre. Without this a long line simply spans the whole frame and
+            # "which side" means nothing - which is how "DOUBLE MOON" ended up
+            # lying across a face that was nowhere near the left edge.
+            if horizontal == "left":
+                right = min(right, int(W * HALF))
+            else:
+                left = max(left, int(W * (1 - HALF)))
+            width = box[2] - box[0]
+            if width > right - left:
                 fits = False
                 break
-            places.append((MARGIN - box[0], y - box[1]))
+            x = left if horizontal == "left" else right - width
+            places.append((x - box[0], y - box[1]))
+            edges.append((x, x + width))
             y += h + gap
         if fits:
-            return font, places
-    font = _font(WORD_FONT, FLOOR_SIZE)
-    step = FLOOR_SIZE * 1.15
-    return font, [(MARGIN, BOTTOM - step * (len(lines) - i)) for i in range(len(lines))]
+            return font, places, (min(e[0] for e in edges), top,
+                                  max(e[1] for e in edges), top + total)
+    return None
 
 
-def _draw_words(im, lines, boxes, stroke_w=10, glow=20):
-    """The word block, bottom left, as big as the frame and the safe corner allow."""
+def _detail(im):
+    """A low-resolution map of how busy each part of the picture is.
+
+    Faces, debris and type score high; sky, haze, ice and deep space score low.
+    It is a stand-in for "where is the face", good enough to keep the words off
+    it without carrying a face detector into the build.
+    """
+    import numpy as np
+    small = np.asarray(im.convert("L").resize((160, 90), Image.LANCZOS),
+                       dtype=np.float32)
+    gy, gx = np.gradient(small)
+    return np.hypot(gx, gy)
+
+
+def _region_detail(energy, box):
+    x0, y0, x1, y1 = box
+    sx, sy = 160 / W, 90 / H
+    region = energy[max(0, int(y0 * sy)):max(1, int(y1 * sy)),
+                    max(0, int(x0 * sx)):max(1, int(x1 * sx))]
+    return float(region.mean()) if region.size else 0.0
+
+
+def _choose_position(im, draw, lines, stroke_w, side=None):
+    """Put the words over the event, never over the face.
+
+    The words used to go bottom left always, which is where the face is: on two
+    of the first four thumbnails the block landed across an open screaming
+    mouth. `side` is the judge's reading of which half holds the event; without
+    it the quietest corner wins, which comes to much the same thing.
+    """
+    wanted = SIDES.get(side, POSITIONS)
+    energy = _detail(im)
+    scored = []
+    for position in wanted:
+        fit = _layout_words(draw, lines, stroke_w, position)
+        if fit:
+            scored.append((_region_detail(energy, fit[2]), position, fit))
+    if not scored:
+        for position in POSITIONS:
+            fit = _layout_words(draw, lines, stroke_w, position)
+            if fit:
+                scored.append((_region_detail(energy, fit[2]), position, fit))
+    if not scored:
+        return "bottom-left", None
+    _, position, fit = min(scored, key=lambda s: s[0])
+    return position, fit
+
+
+def _draw_words(im, lines, boxes, stroke_w=10, glow=20, side=None):
+    """The word block, over the event and as big as the safe corner allows."""
     draw = ImageDraw.Draw(im)
-    font, places = _layout_words(draw, lines, stroke_w)
+    position, fit = _choose_position(im, draw, lines, stroke_w, side)
+    if fit is None:
+        # Nothing fits anywhere: draw at the floor size rather than drop the words.
+        font = _font(WORD_FONT, FLOOR_SIZE)
+        step = FLOOR_SIZE * 1.15
+        places = [(MARGIN, BOTTOM - step * (len(lines) - i)) for i in range(len(lines))]
+    else:
+        font, places, _ = fit
     for line, xy in zip(lines, places):
         _glow_text(im, xy, line, font, WHITE, stroke_w=stroke_w, glow=glow, boxes=boxes)
-    return font.size
+    return font.size, position
 
 
 def _clean_words(words):
     return [str(w).strip().upper() for w in (words or []) if str(w).strip()][:MAX_WORDS]
 
 
-def compose(source, words=()):
-    """One face against the event: the workhorse layout. Returns (image, text boxes)."""
+def compose(source, words=(), side=None):
+    """One face against the event: the workhorse layout. Returns (image, text boxes).
+
+    `side` is which half of the frame holds the event rather than the face, as
+    the vision judge read it; the words go there.
+    """
     im = _punch(source).convert("RGBA")
     boxes = []
     words = _clean_words(words)
     if words:
-        size = _draw_words(im, words, boxes)
-        log.info("thumbnail: %d word line(s) at %dpx", len(words), size)
+        size, position = _draw_words(im, words, boxes, side=side)
+        log.info("thumbnail: %d word line(s) at %dpx, %s (event side: %s)",
+                 len(words), size, position, side or "unknown")
     else:
         log.info("thumbnail: no text, the picture carries it")
     return im.convert("RGB"), boxes
@@ -253,7 +349,8 @@ def compose_split(left_source, right_source, labels, words=()):
 
     words = _clean_words(words)
     if words:
-        _draw_words(im, words, boxes, stroke_w=9, glow=18)
+        # The label bar owns the top of both halves, so the words stay low.
+        _draw_words(im, words, boxes, stroke_w=9, glow=18, side="bottom")
     log.info("thumbnail: split %s / %s, label %dpx, %d word line(s)",
              left_label or "-", right_label or "-", size, len(words))
     return im.convert("RGB"), boxes

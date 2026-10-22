@@ -125,27 +125,48 @@ def thumbnails():
     from pipeline import thumbnail, thumbplan
 
     brief = thumbplan.fallback_brief("What If the Oceans Vanished?")
-    check("thumbnail brief", 1 <= len(brief["words"]) <= 3 and len(brief["event"].split()) >= 4,
-          f"words={brief['words']}")
+    check("thumbnail brief", 1 <= len(brief["words"]) <= thumbplan.MAX_LINES
+          and len(brief["event"].split()) >= 4, f"words={brief['words']}")
     split = thumbplan.fallback_brief("What If Venus vs Neptune?")
     check("thumbnail comparison brief", bool(split["comparison"]) and not split["words"],
           f"labels={[s['label'] for s in (split['comparison'] or {}).values()]}")
     check("thumbnail prompts", len(thumbplan.candidates(brief)) == thumbplan.CANDIDATES
           and all("no text" in c["prompt"] for c in thumbplan.candidates(brief)))
+    # A generic line, and a line another episode already used, are both refused.
+    generic = thumbplan._clean({"event": brief["event"], "words": ["CHAOS", "NO ESCAPE"]},
+                               "What If the Oceans Vanished?")
+    taken = thumbplan._clean({"event": brief["event"], "words": ["NO WATER"]},
+                             "What If the Oceans Vanished?", avoid={"nowater"})
+    check("thumbnail refuses generic lines",
+          not {"CHAOS", "NO ESCAPE"} & set(generic["words"])
+          and "NO WATER" not in taken["words"],
+          f"generic -> {generic['words']}, already used -> {taken['words']}")
 
     srcs = stills(2)
     worst = 255.0
-    for words in ([], brief["words"], ["NO", "OXYGEN", "LEFT"], ["8 MINUTES", "TO LIVE"]):
-        img, boxes = thumbnail.compose(srcs[0], words)
-        legible = thumbnail.text_legibility(img, boxes)
-        worst = min(worst, legible)
-        check(f"thumbnail {len(words)} line(s)",
-              img.size == (thumbnail.W, thumbnail.H)
-              and thumbnail.safe_corner_clear(boxes)
-              and legible >= assemble.MIN_LEGIBILITY,
-              f"{img.size}, legibility {legible:.0f} "
-              f"(floor {assemble.MIN_LEGIBILITY}), safe corner "
-              f"{thumbnail.safe_corner_clear(boxes)}")
+    for words in ([], brief["words"], ["2X GRAVITY"], ["NO MORE ICE", "TWO MOONS?"]):
+        for side in (None, "left", "right"):
+            img, boxes = thumbnail.compose(srcs[0], words, side=side)
+            legible = thumbnail.text_legibility(img, boxes)
+            worst = min(worst, legible)
+            check(f"thumbnail {len(words)} line(s), event side {side or 'unknown'}",
+                  img.size == (thumbnail.W, thumbnail.H)
+                  and thumbnail.safe_corner_clear(boxes)
+                  and legible >= assemble.MIN_LEGIBILITY,
+                  f"legibility {legible:.0f} (floor {assemble.MIN_LEGIBILITY}), "
+                  f"safe corner {thumbnail.safe_corner_clear(boxes)}")
+    # The words go where the event is. A picture that is busy on the left and
+    # flat on the right must put them on the right, and the other way round.
+    busy = Image.new("RGB", (1360, 768), (20, 30, 60))
+    d = ImageDraw.Draw(busy)
+    for i in range(0, 768, 7):
+        d.line((0, i, 680, i + 40), fill=(240, 230, 210), width=3)
+    p = W / "half_busy.png"
+    busy.save(p)
+    img, boxes = thumbnail.compose(p, ["TWO MOONS?"])
+    on_right = all(b[0] >= thumbnail.W * 0.4 for b in boxes)
+    check("thumbnail words avoid the busy half", on_right and boxes,
+          f"text starts at x={min(b[0] for b in boxes) if boxes else '-'}")
     img, boxes = thumbnail.compose_split(srcs[0], srcs[1], ["VENUS", "NEPTUNE"], [])
     legible = thumbnail.text_legibility(img, boxes)
     check("thumbnail split layout",

@@ -81,20 +81,28 @@ def generate(jobs):
 
 
 def judge(jobs):
-    """Gemini vision over every candidate, in one pass per slug."""
+    """Gemini vision over every candidate, in one pass per slug.
+
+    Per slug and not all at once, because the judge is told the episode's title
+    and asked whether the picture shows that subject.
+    """
+    from automation import assemble
     from pipeline import visualqc
     for job in jobs:
         cands = [c for c in job["candidates"] if c.get("image")]
         try:
-            verdicts = visualqc.judge_thumbnails([c["image"] for c in cands])
+            verdicts = visualqc.judge_thumbnails(
+                [c["image"] for c in cands], topic=job["episode"].get("title"))
         except Exception as e:                                   # noqa: BLE001
             log.warning("%s: no vision judge (%s); every candidate counts as "
                         "unchecked", job["slug"], e)
             verdicts = {}
         for c in cands:
-            c["verdict"] = verdicts.get(Path(c["image"])) or {
-                "ok": False, "defect": "unchecked", "note": "no verdict",
-                "score": 0.0, "emotion": 0.0, "corner": True}
+            c["verdict"] = verdicts.get(Path(c["image"])) or dict(assemble.UNJUDGED)
+        off = [c for c in cands if not c["verdict"].get("matches", True)]
+        if off:
+            log.info("%s: %d/%d candidate(s) do not show the episode's subject",
+                     job["slug"], len(off), len(cands))
 
 
 def compose(jobs):
