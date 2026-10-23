@@ -5,8 +5,10 @@
     "set_youtube": true,
     "retry": false,
     "why": "garbled shop signs behind the woman and no visible gravity; already public, so tomorrow, on one kernel and no retry while the GPU is limited until 24.10",
-    "status": "running",
-    "claimed": "2026-10-23T13:37:41+00:00"
+    "status": "done",
+    "claimed": "2026-10-23T13:37:41+00:00",
+    "finished": "2026-10-23T13:51:29+00:00",
+    "run": "https://github.com/edbackulin-eng/whatif-channel/actions/runs/39962709911"
   },
   {
     "slug": "011-what-if-earth-had-two-moons",
