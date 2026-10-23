@@ -1,11 +1,26 @@
 {
   "slug": "012-what-if-the-atmosphere-disappeared-for-ten-seconds",
   "title": "What If the Atmosphere Disappeared for Ten Seconds?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 12,
   "script_source": "claude",
   "created": "2026-10-17T08:04:28+00:00",
   "words": 2836,
   "sourced_claims": 37,
-  "flagged_claims": 1
+  "flagged_claims": 1,
+  "thumbnail_words": [
+    "NO AIR",
+    "10 SECONDS"
+  ],
+  "thumbnail_person": {
+    "gender": "woman",
+    "age": 24,
+    "look": "Black",
+    "angle": "almost straight on, eyes fixed just past the lens",
+    "setting": "earth"
+  },
+  "rendered_minutes": 154.7,
+  "updated": "2026-10-23T11:07:00+00:00",
+  "youtube_id": "AbeKzl1vgxY",
+  "publish_at": "2026-10-27T15:00:00Z"
 }
