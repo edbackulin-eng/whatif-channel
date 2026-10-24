@@ -115,14 +115,14 @@ def _slugify(title):
     return re.sub(r"-{2,}", "-", cleaned)
 
 
-# What If has the GPU first: it waits for another channel's kernel already on the
+# What If has the GPU first: it waits for Closed Tabs' kernel already on the
 # GPU, but never for long and never fails a build over it.
 SHARED_WAIT_S = 90 * 60
 
 
 def _wait_shared():
     """See every channel's kernels before submitting (kaggle/gpu_shared.py, the
-    same file in What If, Closed Tabs and the prehistoric channel)."""
+    same file in What If and Closed Tabs)."""
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         import gpu_shared
