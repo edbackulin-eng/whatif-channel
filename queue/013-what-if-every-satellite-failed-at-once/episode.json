@@ -1,11 +1,26 @@
 {
   "slug": "013-what-if-every-satellite-failed-at-once",
   "title": "What If Every Satellite Failed at Once?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 13,
   "script_source": "claude",
   "created": "2026-10-17T08:07:17+00:00",
   "words": 3478,
   "sourced_claims": 33,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "thumbnail_words": [
+    "NO SIGNAL",
+    "BLACKOUT"
+  ],
+  "thumbnail_person": {
+    "gender": "man",
+    "age": 33,
+    "look": "Black",
+    "angle": "slightly low angle looking up at the face, staring up and past the camera",
+    "setting": "earth"
+  },
+  "rendered_minutes": 211.6,
+  "updated": "2026-10-24T11:38:03+00:00",
+  "youtube_id": "2AZh5ZyQGtM",
+  "publish_at": "2026-10-29T15:00:00Z"
 }
