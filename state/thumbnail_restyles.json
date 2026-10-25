@@ -16,6 +16,7 @@
     "set_youtube": true,
     "retry": true,
     "why": "no moons in the sky; publishes 2026-10-26 15:00 UTC, so after the GPU quota renews on 24.10",
-    "status": "pending"
+    "status": "running",
+    "claimed": "2026-10-25T13:15:18+00:00"
   }
 ]
