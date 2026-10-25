@@ -1,0 +1,402 @@
+[
+  {
+    "text": "London noon solar elevation at the June solstice is about 62 degrees (90 minus latitude 51.5 plus obliquity 23.44)",
+    "as_written": "about sixty-two degrees above the horizon",
+    "source": "Computed from London's latitude and Earth's obliquity (NASA Earth Fact Sheet); standard solar-geometry formula as in the Astronomical Almanac",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "London daylight at the June solstice lasts about 16.5 hours",
+    "as_written": "about sixteen and a half hours",
+    "source": "HM Nautical Almanac Office / Royal Observatory Greenwich sunrise and sunset tables for London",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "London noon solar elevation at the December solstice is about 15 degrees (90 minus 51.5 minus 23.44)",
+    "as_written": "about fifteen degrees above the rooftops",
+    "source": "Computed from London's latitude and Earth's obliquity (NASA Earth Fact Sheet)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's axial tilt is about 23.4 degrees",
+    "as_written": "about twenty-three and a half degrees",
+    "source": "NASA Earth Fact Sheet (obliquity 23.44 degrees)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Moving the tilt to the opposite side requires turning the axis by twice the tilt, about 47 degrees",
+    "as_written": "about forty-seven degrees",
+    "source": "Derived: 2 x 23.44 degrees, using the NASA Earth Fact Sheet obliquity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's rotational kinetic energy is about 2 x 10^29 joules",
+    "as_written": "two times ten to the twenty-ninth joules",
+    "source": "Computed from Earth's moment of inertia (about 8.04 x 10^37 kg m^2) and angular velocity (7.292 x 10^-5 rad/s); values from the IERS Conventions and NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sunlight intercepted by Earth is about 174 petawatts",
+    "as_written": "one hundred seventy-four petawatts",
+    "source": "NASA Earth Energy Budget; solar constant of about 1361 W/m^2 times Earth's cross-section (Kopp and Lean 2011, SORCE/TIM)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's rotational energy equals roughly 39,000 years of total incident sunlight",
+    "as_written": "nearly forty thousand years of every ray of sunlight",
+    "source": "Derived: 2.1 x 10^29 J divided by 1.74 x 10^17 W, using the IERS and NASA values above",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At the equator on the June solstice the noon Sun is about 66.5 degrees above the horizon (90 minus 23.44)",
+    "as_written": "about sixty-six and a half degrees up",
+    "source": "Computed from obliquity, NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Arctic Circle lies at about 66.5 degrees north",
+    "as_written": "about sixty-six and a half degrees north",
+    "source": "IERS / Astronomical Almanac; complement of the obliquity, 90 minus 23.44",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sine of 62 degrees is about 0.88; sine of 15 degrees is about 0.26",
+    "as_written": "about point eight eight",
+    "source": "Trigonometry; standard Lambert cosine law for insolation on a horizontal surface",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sine of 15 degrees is about 0.26, so ground receives less than a third as much energy per square meter",
+    "as_written": "less than a third of what it did a minute ago",
+    "source": "Trigonometry; Lambert cosine law (0.26/0.88 is about 0.29)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "London winter-solstice daylight is just under 8 hours, so night exceeds 16 hours",
+    "as_written": "just under eight",
+    "source": "HM Nautical Almanac Office / Royal Observatory Greenwich sunrise and sunset tables for London",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The top ~3 meters of ocean hold as much heat as the whole atmosphere",
+    "as_written": "top three meters of the ocean hold as much heat as the entire atmosphere",
+    "source": "NOAA National Ocean Service / NOAA Climate.gov, ocean heat capacity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Land temperatures typically peak about a month after the solstice",
+    "as_written": "about a month after the solstice",
+    "source": "NOAA/NWS climatology on seasonal temperature lag",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fresh snow reflects roughly 80 to 90 percent of incoming sunlight",
+    "as_written": "eighty to ninety percent of the sunlight",
+    "source": "NSIDC, All About Sea Ice: albedo of snow and ice",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctica holds about 90 percent of Earth's ice",
+    "as_written": "about ninety percent of all the ice on Earth",
+    "source": "NSIDC, Quick Facts on Ice Sheets",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's perihelion distance is about 147 million km",
+    "as_written": "about one hundred forty-seven million kilometers",
+    "source": "NASA Earth Fact Sheet (147.09 million km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's aphelion distance is about 152 million km",
+    "as_written": "about one hundred fifty-two million kilometers",
+    "source": "NASA Earth Fact Sheet (152.10 million km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Perihelion is in early January and aphelion in early July",
+    "as_written": "In early January, Earth is at its closest",
+    "source": "U.S. Naval Observatory, Earth's Seasons and Apsides table",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The aphelion-perihelion difference is about 5 million km",
+    "as_written": "five million kilometer difference",
+    "source": "NASA Earth Fact Sheet (152.10 minus 147.09 million km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth receives about 7 percent more sunlight at perihelion than aphelion",
+    "as_written": "about seven percent more sunshine in January than in July",
+    "source": "NASA Earth Fact Sheet; inverse-square derivation (152.10/147.09 squared is about 1.069)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The June solstice is a couple of weeks before aphelion",
+    "as_written": "a couple of weeks before Earth reaches its farthest point",
+    "source": "U.S. Naval Observatory, Earth's Seasons and Apsides table",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 40 percent of the Northern Hemisphere is land",
+    "as_written": "About forty percent of the northern hemisphere is land",
+    "source": "NOAA / CIA World Factbook land-ocean hemisphere statistics (about 39 percent)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 19 percent of the Southern Hemisphere is land",
+    "as_written": "about nineteen percent",
+    "source": "NOAA / CIA World Factbook land-ocean hemisphere statistics (about 19 percent)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Southern Hemisphere is over 80 percent ocean",
+    "as_written": "over eighty percent ocean",
+    "source": "Derived from the 19 percent land figure above",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global mean surface temperature is nearly 4 C warmer in July than January",
+    "as_written": "nearly four degrees Celsius over January",
+    "source": "Berkeley Earth monthly absolute-temperature climatology (about 12.0 C in January versus about 15.9 C in July)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Annual mean insolation depends on eccentricity and not on precession",
+    "as_written": "hardly changes, because that total depends on the shape of the orbit",
+    "source": "Berger 1978, Journal of the Atmospheric Sciences; Milankovitch insolation theory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Verkhoyansk's record low is about minus 68 C",
+    "as_written": "about minus sixty-eight degrees Celsius",
+    "source": "WMO Archive of Weather and Climate Extremes (minus 67.8 C, February 1892)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Verkhoyansk reached 38 C in June 2020",
+    "as_written": "in June of twenty twenty it reached thirty-eight",
+    "source": "WMO Archive of Weather and Climate Extremes (38.0 C, 20 June 2020)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Verkhoyansk record range exceeds 100 degrees",
+    "as_written": "a swing of more than a hundred degrees",
+    "source": "Derived from the WMO extremes (38.0 minus minus 67.8 is about 106 C)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Milankovitch theory emphasises northern summer insolation for ice ages",
+    "as_written": "points at northern summer sunshine and not winter cold",
+    "source": "Milankovitch 1941; Hays, Imbrie and Shackleton 1976, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Greenland ice holds about 7 meters of sea-level equivalent",
+    "as_written": "about seven meters",
+    "source": "NASA / IMBIE; Morlighem et al. 2017, Geophysical Research Letters (7.4 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Arctic terns migrate about 70,000 km per year",
+    "as_written": "about seventy thousand kilometers",
+    "source": "Egevang et al. 2010, PNAS, tracking Arctic tern migration (mean about 70,900 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Climatic precession cycle lasts roughly 21,000 years",
+    "as_written": "roughly twenty-one thousand years",
+    "source": "Berger and Loutre 1991; NASA Earth Observatory, Milankovitch Cycles",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The tropical year is about 365.2422 days",
+    "as_written": "three hundred sixty-five point two four two two days",
+    "source": "IERS Conventions / Astronomical Almanac",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The anomalistic year is about 365.2596 days",
+    "as_written": "three hundred sixty-five point two five nine six days",
+    "source": "Astronomical Almanac, Explanatory Supplement",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The anomalistic year exceeds the tropical year by about 25 minutes",
+    "as_written": "The gap is about twenty-five minutes",
+    "source": "Derived: 0.0174 days is about 25 minutes, from the two values above",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Perihelion fell in northern summer about 10 to 11 thousand years ago",
+    "as_written": "about ten or eleven thousand years back",
+    "source": "Berger and Loutre 1991, Quaternary Science Reviews insolation solution; half of the roughly 21,000-year precession cycle",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "African Humid Period lasted from about 14,800 to about 5,500 years ago",
+    "as_written": "from nearly fifteen thousand years ago until about five and a half thousand years ago",
+    "source": "deMenocal et al. 2000, Quaternary Science Reviews",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Dust record off Mauritania shows an abrupt end of the African Humid Period within centuries",
+    "as_written": "within a few centuries",
+    "source": "deMenocal et al. 2000, Quaternary Science Reviews",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Other records indicate regionally gradual or patchy drying",
+    "as_written": "a patchwork, with some regions drying gradually",
+    "source": "Kröpelin et al. 2008, Science (Lake Yoa, gradual); Shanahan et al. 2015, Nature Geoscience",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 27.7 million tons of Saharan dust deposit on the Amazon yearly",
+    "as_written": "about twenty-eight million tons",
+    "source": "Yu et al. 2015, Geophysical Research Letters (NASA CALIPSO satellite data)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That dust carries about 22,000 tons of phosphorus, comparable to Amazon losses",
+    "as_written": "about twenty-two thousand tons of phosphorus",
+    "source": "Yu et al. 2015, Geophysical Research Letters (NASA CALIPSO satellite data)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ice-age cycles shifted to roughly 100,000-year periodicity over the last million years or so",
+    "as_written": "roughly one hundred thousand years",
+    "source": "Lisiecki and Raymo 2005, Paleoceanography (LR04 benchmark); Mid-Pleistocene Transition literature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Obliquity cycle lasts about 41,000 years",
+    "as_written": "roughly forty-one thousand years",
+    "source": "NASA Earth Observatory, Milankovitch Cycles",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's tilt varies between about 22.1 and 24.5 degrees",
+    "as_written": "between about twenty-two point one and twenty-four point five degrees",
+    "source": "NASA Earth Observatory, Milankovitch Cycles",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Uranus is tilted about 98 degrees",
+    "as_written": "tipped about ninety-eight degrees",
+    "source": "NASA Uranus Fact Sheet (97.77 degrees)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Uranus's tilt is probably from a giant collision, though debated",
+    "as_written": "probably by a giant collision long ago, though even that is still debated",
+    "source": "Kegerreis et al. 2018, The Astrophysical Journal; Rogoszinski and Hamilton 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Perihelion will fall in northern summer again in about ten thousand years",
+    "as_written": "in about ten thousand years",
+    "source": "Berger and Loutre 1991 insolation solution; half of the roughly 21,000-year cycle",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

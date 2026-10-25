@@ -1,0 +1,113 @@
+It is noon on a clear day. You are standing in a car park with your phone in your hand, waiting for a friend who is late. The sky is blue. Nothing is wrong.
+
+A hundred and fifty million kilometres away, a tangle of magnetic field on the Sun, bigger than the whole Earth, has just snapped. In a few minutes it will release energy on a scale no machine humans have built could approach. And it is facing straight at you.
+
+Here is the strange part. You feel nothing. The light on your face is the same light you had a moment ago, because news of the event has not reached you yet. It will take eight minutes and twenty seconds to arrive. When it does, your skin will not warm. The car park will not flicker. The sky will not change colour.
+
+But a clock has started. Inside your phone, in the sky above you, and in a vast network of copper and steel that stretches across the continent, things are about to go wrong. In this video we follow that clock through seconds, minutes, hours, days and years. Near the end, I will show you something locked inside ancient trees. It suggests that the event in this story is not even close to the worst the Sun has done. First, though, we need to ask whether any of this can happen at all.
+
+It can. This is not an impossible premise, and I will not pretend it is. Flares happen all the time. Near the peak of the Sun's eleven-year cycle, there are several a day. Most are small and harmless. The real questions are how big, and what we mean by the word hit.
+
+A flare is not an object. It is a flash. Stored magnetic energy is suddenly released, heating gas to tens of millions of degrees and pouring out light of every kind, from radio waves to X-rays. That light travels in straight lines at the speed of light, so there is nothing to aim. If the flare erupts on the half of the Sun facing us, Earth is inside the beam. That is all it takes.
+
+Often, though, a big flare comes with a second thing. It is called a coronal mass ejection, and it is a cloud of magnetised gas with a mass of billions of tonnes, thrown outward into space. That cloud is slower than light. It can be aimed, and it can miss. In our scenario, it does not miss.
+
+Flares are ranked by the peak X-ray power that satellites measure at Earth. The letters run A, B, C, M and X, and each step is ten times stronger than the one before. The X class begins at one ten-thousandth of a watt per square metre. The strongest flare ever measured with modern instruments came in November 2003. It overloaded the detectors, and it was later estimated at about X28. Even that figure is uncertain, because the sensors saturated.
+
+For this video we will imagine something the size of the Carrington event, the great storm of September 1859. Nobody had an X-ray detector then, so how large that flare really was is a matter of debate. One careful analysis put it near X45. We will treat that as a ceiling, not a fact.
+
+Here is a number to hold on to. The largest flares release something like ten trillion trillion joules. That sounds apocalyptic. But Earth is small and far away, and it intercepts less than one billionth of that energy. If that sounds reassuring, wait. It is not the quantity of energy that matters. It is where it lands, and what it does there.
+
+Let us start the clock. At zero, the flare erupts. For the next eight minutes and twenty seconds, you have no idea. Then X-rays and extreme ultraviolet light arrive together, and they strike the upper atmosphere. Only the sunlit side of the planet gets this. The night side is shielded by the Earth itself.
+
+The X-rays punch down to a layer of air called the D region, roughly sixty to ninety kilometres up. There they strip electrons off air molecules. Suddenly that layer is crowded with free electrons, and it behaves like a sponge for radio waves.
+
+This matters because long-distance shortwave radio, the band between three and thirty megahertz, normally works by bouncing off higher layers of the ionosphere. Now the signals must pass through the electron-thick layer, and they are absorbed. The American space weather agency, NOAA, defines its most extreme radio blackout category as a flare of X20 or above. It describes the result as a complete loss of high frequency radio across the entire sunlit side of Earth, lasting hours.
+
+Think about who still uses that band. Aircraft on remote ocean routes, as a backup. Ships. Militaries. Aid workers and emergency teams when other things fail. Amateur radio operators, who are often the last voice in a disaster. All of it goes quiet, at once, across half a planet. And the silence moves with the daylight.
+
+The flare also produces a burst of radio noise of its own. In December 2006, a flare of about X6 produced radio emission so intense that it knocked out GPS receivers across the sunlit side of Earth. The satellites were fine. It was the receivers on the ground that were swamped, drowned out by static at their own frequency.
+
+So in the first few minutes, you lose shortwave radio, and perhaps your phone's sense of where it is. You would barely notice. That is the cheap part of the bill. The expensive part is already on its way, and it is not travelling at the speed of light. It is travelling at nearly that speed, and it is made of matter.
+
+Somewhere during the flare, and especially in the shock wave driven ahead of the ejected cloud, atomic particles are being flung outward. Mostly protons. They are accelerated to enormous energies, some to a large fraction of the speed of light. The fastest arrive within tens of minutes. The bulk of them follow over the next several hours.
+
+This is what NOAA calls a solar radiation storm. For a satellite, for an astronaut, or for a passenger on a polar flight, it is serious. For you, standing in a car park, it is almost nothing. And the reason is the sky above your head.
+
+Every square metre of ground has about ten tonnes of air stacked above it. That is the same mass as a column of water ten metres deep. A proton, even a very fast one, hits an air nucleus and shatters into a shower of lesser particles long before it reaches you. Add Earth's magnetic field, which steers away many of the weaker particles, especially near the equator, and the ground is remarkably well protected.
+
+Occasionally the most energetic protons do produce a surge in secondary particles at ground level. Neutron monitors around the world record them. These are called ground level enhancements, and only a few dozen have been recorded since the 1940s. The largest, in February 1956, pushed counts up by well over a thousand percent at some stations. Nobody on the ground was harmed.
+
+Above the clouds, it is a different story. Airlines reroute flights away from the poles, where Earth's field offers less protection, and descend to lower altitudes when a storm is forecast. In orbit, astronauts on the International Space Station retreat to the most heavily shielded modules.
+
+The astronauts who really worry the planners are the ones outside the field altogether. In August 1972, between the Apollo 16 and Apollo 17 missions, a major solar particle event occurred. Nobody was on the Moon. NASA analyses afterwards concluded that a crew caught on the surface in thin suits could have received a dangerous, possibly life-threatening dose. That is the one thing the Apollo programme was simply lucky about.
+
+And satellites? Their electronics get hit by single particles that flip memory bits. Solar panels slowly degrade. Most are designed to take a beating. But geostationary satellites sit about six and a half Earth radii from the planet, and the boundary of Earth's magnetic bubble normally lies around ten Earth radii out. In the worst storms, that boundary is crushed inward, sometimes past the orbit of those satellites, leaving them exposed to the raw solar wind. We will come back to that.
+
+For now, notice something odd about this disaster. At this point, a few hours in, you have lost some radio and the sky has had a bad afternoon. Yet the worst has not even arrived. The cloud is still crossing space. And it carries the one property that decides how bad this gets, a property that cannot be known in advance.
+
+A typical coronal mass ejection moves at somewhere between a few hundred and about a thousand kilometres per second. That means a journey of about a day to several days. The fastest ever recorded, in July 2012, was clocked at around two and a half thousand kilometres per second. In 1859, the cloud that followed Carrington's flare crossed the gap in just seventeen hours or so.
+
+Speed is not the key danger, though. The key is the magnetic field carried inside the cloud. If that field points the same way as Earth's, the two slide past one another and not much happens. If it points the opposite way, which space scientists call southward, the two connect, like opposite poles of a magnet snapping together. Energy pours into our magnetic bubble. And here is the problem. Nobody can measure that direction until the cloud arrives at spacecraft stationed about one and a half million kilometres sunward of Earth. That gives forecasters between fifteen and sixty minutes of warning, depending on speed. In a fast event, it may be the shortest warning you will ever get.
+
+There is a second complication. In July 2012, the cloud that raced out of the Sun was probably so fast partly because an earlier eruption just days before had swept the path clear. Researchers who studied it concluded that the first cloud cleared the way, so the second met little resistance. The Sun can load the dice.
+
+That 2012 storm missed us. It crossed the point in space where Earth had been about a week earlier. A week. That is how close the modern world came to finding out what this video is about. Keep that in mind, because we will return to the odds.
+
+Now the cloud arrives. First comes the shock front, a wall of compressed particles. Earth's magnetic bubble is squeezed. Then the magnetic field inside the cloud connects with ours, and over the next hours, the geomagnetic storm builds.
+
+We measure these storms with an index called Dst, in units of nanotesla. The more negative the number, the stronger the storm. The storm that blacked out Quebec in March 1989 reached about minus five hundred and eighty-nine. The Carrington storm is estimated between about minus eight hundred and fifty and minus seventeen hundred and sixty. That spread tells you how uncertain we are, and which direction the error leans, because there were no magnetometers fit to record it properly.
+
+What people saw in 1859 gives us a feel. Auroras, the northern and southern lights, blazed as far south as the Caribbean. Accounts describe the sky glowing so brightly that people could read by it. Telegraph systems failed across Europe and North America. Operators received electric shocks. Some paper at the stations caught fire. And on one line between Boston and Portland, operators disconnected their batteries and kept sending messages for about two hours using only the current induced from the sky.
+
+Read that again. For two hours, the sky itself was powering the telegraph. That is the clue to what happens next, because those long wires were the Victorian version of our power grid.
+
+Here is the mechanism. When Earth's magnetic field changes quickly, it induces voltages in the ground itself. These are measured in volts per kilometre, which sounds small. But a power line is hundreds of kilometres long, and it is grounded at both ends. So the ground voltage drives a slow, nearly direct current through the line, down through the grounding point of each big transformer, and into the earth.
+
+Grid transformers are designed for alternating current, which swings back and forth sixty or fifty times a second. A steady direct current pushes the iron core off to one side, until it saturates for part of every cycle. The transformer then overheats, distorts the current with harmonics, and starts to gulp reactive power that the grid cannot spare. Protective relays see the distortion and trip. Lines drop. Others pick up the load, and they trip too.
+
+This is not theory. At 2:44 in the morning on the thirteenth of March, 1989, a storm hit. In about ninety seconds, the entire Hydro-Québec grid collapsed. Six million people lost power. It took about nine hours to restore most of it. Elsewhere in the same storm, a large transformer at a nuclear plant in New Jersey was damaged. Not a Carrington. Just a fraction of one.
+
+In October 2003, the so-called Halloween storms caused a power outage in Malmö, Sweden, affecting about fifty thousand customers for under an hour. Small, but it proved the mechanism is not limited to Canada.
+
+Now scale it up. In 2013, the insurer Lloyd's and a research group published an assessment of a Carrington-class storm hitting North America. They estimated that between twenty and forty million people could lose power, for periods ranging from sixteen days to one or two years. They put the economic cost between six hundred billion and two point six trillion dollars. An earlier report from the American National Academies, in 2008, gave a different picture, one to two trillion dollars in the first year, and a recovery of four to ten years.
+
+Those numbers disagree, and I want to be honest about that. Others argue that modern grids have monitoring and operating procedures that would shed load and limit damage, and that the worst case is much less likely than these headlines suggest. Nobody has tested a real Carrington on a modern grid. The ground matters too. Regions built on old, resistive rock, such as parts of Canada and Scandinavia, develop much larger ground voltages than regions on sedimentary basins. So the risk is not spread evenly.
+
+What decides the length of the outage is not the lines. It is the transformers. A giant high-voltage transformer is not on a shelf somewhere. It is custom built, weighs hundreds of tonnes, and can take more than a year to deliver. If dozens were damaged at once, the queue would stretch into years. And that brings us to what happens next. But first, the sky.
+
+Remember those satellites? In February 2022, SpaceX launched forty-nine Starlink satellites into a low parking orbit, about two hundred and ten kilometres up. A small geomagnetic storm, nothing remotely like Carrington, struck the next day. The storm heated and puffed up the upper atmosphere. SpaceX reported the air density at that altitude was up to fifty percent higher than on earlier launches. The extra drag was too much for the satellites. Thirty-eight of them fell out of the sky.
+
+That was a small storm hitting a fresh launch. Now picture a vastly stronger one hitting a sky that holds more than ten thousand working satellites. Drag climbs. Orbits decay. Operators must burn fuel to hold altitude. And during the storm, tracking becomes less accurate, because the atmosphere is churning in ways models do not predict. A satellite you thought was there is not quite where you thought. Whether that could trigger a cascade of collisions is a matter of real debate among orbital scientists, and I will not pretend it is settled.
+
+Even the satellites that survive may not be working well. Ionospheric disturbances degrade GPS accuracy over wide areas. During the strong storm of May 2024, the biggest in more than twenty years, reports came from American farmers that precision guidance in their tractors drifted during planting season. GPS also provides timing for cell networks, banks and the power grid itself. When timing falters, those quietly stop working.
+
+So now, a day or two in, picture the world. The lights are out across large regions, mostly at high latitudes. Cell towers run on batteries that last hours, not days. Water pumps stop. Fuel pumps stop. Hospital generators run, but only as long as the diesel does. Navigation is flaky. Radio is partly dead.
+
+But here is something comforting, and it is true. A storm like this is global in its reach but patchy in its damage. Many of the outages would be protective trips, grid operators and relays shutting things down to save the equipment. Much of a tripped grid can be restarted within days. The long outages come from the transformers that actually burn out. How many that would be is the central unknown, and the honest answer is that nobody knows.
+
+Over the following days, the storm fades. Auroras retreat toward the poles. The radio comes back. The satellites that are alive are reboosted. By the end of the first week, the sky is normal. The damage is not.
+
+Over months, the question becomes industrial. Where do you find replacement transformers? Most are made abroad, in a handful of factories. Who gets them first? Hospitals, or cities? If you have followed global supply chains lately, you know how a single shortage can ripple. Over years, you rebuild. Some regions bounce back in weeks. Some may take far longer. That range, from weeks to years, is the real answer to what happens if a flare hits Earth. We do not know where in that range we would land.
+
+There is also a possible slow effect in the air. Energetic protons create nitrogen oxides in the stratosphere, and these destroy ozone. After the big events of 1989 and 2003, satellites saw measurable but modest ozone losses over the poles. Models of far larger events suggest more, but that is projection, not observation.
+
+And now the odds. One widely cited statistical analysis, published in 2012 by Pete Riley, put the chance of a Carrington-class storm at about twelve percent per decade. That number is an extrapolation from very few events, and it is disputed. Some analyses give lower figures, some higher. What nobody disputes is that it is not zero.
+
+Now, the turn I promised.
+
+Everything so far assumed that Carrington was the worst the Sun can do. We built our scenario around it. We called it the benchmark. It is not.
+
+In 2012, a Japanese physicist named Fusa Miyake was measuring carbon-14 in the annual rings of Japanese cedar trees. Carbon-14 is made when cosmic rays strike the atmosphere, and trees lock it in, one year at a time. It normally varies slowly. But in the ring for the year 774 to 775 of the common era, she found a jump of about one point two percent. In a single year. That is roughly twenty times larger than the normal year-to-year change.
+
+Other teams checked trees on other continents. They saw the same spike. Ice cores from Antarctica and Greenland showed matching signatures in beryllium-10 and chlorine-36, isotopes made by the same kind of particles. Whatever happened in the eighth century, it hit the whole planet at once.
+
+The leading explanation is a giant burst of solar energetic particles, far larger than anything in our instrumental record, certainly many times bigger than the 1956 event. But I should be honest. The cause is not fully settled. A few researchers proposed that a short gamma-ray burst from far away could have done it. Most of the evidence now points to the Sun. Researchers have since found more of these spikes, in the years 993, in 660 before the common era, and around 5259 before the common era. Roughly a dozen are now known across the last twelve thousand years or so.
+
+That means the Sun has done this, many times, in the time since our species built cities. And here is what you will not expect. Human history barely noticed. There is one oddity, an Anglo-Saxon chronicle entry for the year 774 about a red crucifix in the sky after sunset. Some have wondered if it was an aurora. It is a stretch, and I will leave it as one. But there was no collapse, no famine recorded, no mark in writing of a planetary disaster. Of course there was no grid to cook, no satellite to drop, no GPS clock to lose. A civilisation without electricity is almost immune to a space storm. Ours is the first that is not.
+
+There is one more twist. Astronomers using the Kepler and Gaia telescopes watched thousands of Sun-like stars. A 2024 study in the journal Science concluded that such stars produce superflares, a hundred times the energy of our largest, about once per century on average. Whether our own Sun is typical, or unusually quiet, is an open question. If it is typical, we have been lucky. If it is not, we do not yet know why.
+
+So go back to the car park. The sky is blue. Your phone is in your hand. The light left the Sun eight minutes ago, and it landed on you without a sound. The next day or two will decide whether your world is dark for a week, or a decade. Most of that, the transformers, the spare parts, the warning systems, the rules for shutting down a grid before it breaks, is decided years before the Sun ever flares.
+
+So here is my question for you. If you had seventeen hours of warning, what is the first thing you would do? And what do you think your city should have done years earlier? Tell me in the comments. I read every one.

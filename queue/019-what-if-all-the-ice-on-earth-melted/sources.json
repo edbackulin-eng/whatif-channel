@@ -1,0 +1,394 @@
+[
+  {
+    "text": "Melting ice requires about 334 kilojoules per kilogram (latent heat of fusion)",
+    "as_written": "Ice needs about 334 kilojoules to melt each kilogram",
+    "source": "Standard physical constant for water, e.g. NIST Chemistry WebBook / CRC Handbook of Chemistry and Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's ice totals roughly 30 million cubic kilometers (Antarctica about 27 million, Greenland about 2.9 million, glaciers about 0.16 million)",
+    "as_written": "roughly 30 million cubic kilometers",
+    "source": "Bedmap2 (Fretwell et al. 2013, The Cryosphere); BedMachine Greenland (Morlighem et al. 2017, Geophysical Research Letters); Farinotti et al. 2019, Nature Geoscience",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Melting that ice needs about nine trillion trillion joules (derived: volume x ice density 917 kg/m3 x 334 kJ/kg)",
+    "as_written": "around nine trillion trillion joules",
+    "source": "Author's calculation from the volume sources above and the latent heat of fusion",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth intercepts about 170 quadrillion watts of sunlight (solar constant 1361 W/m2 times Earth's cross-section)",
+    "as_written": "about 170 quadrillion watts",
+    "source": "NASA / SORCE Total Irradiance Monitor solar constant; calculation with Earth's radius",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Melting all the ice would take about a year and a half of all sunlight striking Earth (derived)",
+    "as_written": "for a year and a half",
+    "source": "Author's calculation from the two figures above",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctic ice is about two kilometers thick on average and over four kilometers thick in places",
+    "as_written": "about two kilometers thick on average, and more than four kilometers thick in places",
+    "source": "Bedmap2, Fretwell et al. 2013, The Cryosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctica holds about 90 percent of the planet's ice",
+    "as_written": "around ninety percent of all the ice on the planet",
+    "source": "US National Snow and Ice Data Center (NSIDC)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Long shallow wave speed equals the square root of gravity times depth; for 2 km depth this is about 140 m/s, about 500 km/h (derived)",
+    "as_written": "about 140 meters per second ... roughly 500 kilometers an hour",
+    "source": "Shallow-water wave theory, standard fluid dynamics; calculation with g = 9.8 m/s2",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Coldest air temperature measured on Earth is minus 89.2 C at Vostok Station",
+    "as_written": "minus 89.2 degrees Celsius, at Vostok Station",
+    "source": "World Meteorological Organization Archive of Weather and Climate Extremes",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Seawater density about 1,025 kg per cubic meter; fresh water about 1,000",
+    "as_written": "about 1,025 kilograms per cubic meter, and fresh water about 1,000",
+    "source": "NOAA / UNESCO seawater equation of state (TEOS-10)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average ocean depth is about 3,700 meters",
+    "as_written": "about 3,700 meters",
+    "source": "NOAA National Centers for Environmental Information, ETOPO global relief model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A long wave in 3,700 m of water travels about 700 km/h (derived)",
+    "as_written": "roughly 700 kilometers an hour",
+    "source": "Shallow-water wave theory; NOAA tsunami speed explanation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Melting ice sheets cause sea level to fall near the ice sheet and rise more than average far away (gravitational fingerprint)",
+    "as_written": "near a melting ice sheet, the sea level can actually fall",
+    "source": "Mitrovica et al. 2001, Nature, 'Recent mass balance of polar ice sheets inferred from patterns of global sea-level change'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Melting floating ice barely changes sea level",
+    "as_written": "When it melts, the level barely changes",
+    "source": "Archimedes' principle; Noerdlinger and Brower 2007, Geophysical Journal International",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctic ice sheet sea-level equivalent is about 58 meters",
+    "as_written": "about 58 meters",
+    "source": "Bedmap2, Fretwell et al. 2013, The Cryosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Greenland ice sheet sea-level equivalent is about 7 meters",
+    "as_written": "Greenland holds about 7 meters",
+    "source": "BedMachine Greenland, Morlighem et al. 2017, Geophysical Research Letters (7.42 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mountain glaciers hold roughly a third of a meter of sea-level equivalent",
+    "as_written": "roughly a third of a meter",
+    "source": "Farinotti et al. 2019, Nature Geoscience (about 0.32 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Total is about 66 meters; USGS rounds to about 70 meters",
+    "as_written": "about 66 meters ... about 70",
+    "source": "Sum of the sources above; US Geological Survey Water Science School",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Dividing ice water by present ocean area gives slightly over 70 meters (derived)",
+    "as_written": "a bit over 70 meters",
+    "source": "Author's calculation using ocean area of about 361 million km2 (NOAA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About four in ten people live within 100 km of a coast",
+    "as_written": "About four in ten people on Earth live within 100 kilometers of a coast",
+    "source": "United Nations Atlas of the Oceans",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "More than 600 million people live on land less than ten meters above sea level",
+    "as_written": "More than 600 million live on land less than ten meters above the sea",
+    "source": "McGranahan, Balk and Anderson 2007, Environment and Urbanization; IPCC AR6",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About a quarter of the Netherlands lies below sea level",
+    "as_written": "about a quarter of the country already sits below sea level",
+    "source": "Statistics Netherlands (CBS) / Dutch government",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Britton Hill, the highest point in Florida, is 105 meters",
+    "as_written": "Britton Hill, the highest point in the state at 105 meters",
+    "source": "US Geological Survey",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ice melt would add roughly two percent to ocean volume (derived: about 27 million km3 of water versus about 1.335 billion km3 ocean)",
+    "as_written": "About two percent more water",
+    "source": "NOAA ocean volume; ice volumes from sources above; author's calculation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Seawater is about 3.5 percent salt",
+    "as_written": "about 3.5 percent salt",
+    "source": "NOAA National Ocean Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "AMOC carries heat north and moderates Western Europe's climate",
+    "as_written": "helps keep Western Europe milder",
+    "source": "NOAA / Woods Hole Oceanographic Institution; IPCC AR6 WGI Chapter 9",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "IPCC judges an abrupt AMOC collapse before 2100 unlikely, with low confidence beyond 2100; other studies suggest collapse could come sooner",
+    "as_written": "an abrupt collapse before the year 2100 is unlikely",
+    "source": "IPCC AR6 Working Group I (2021) Chapter 9; contrasting view in Ditlevsen and Ditlevsen 2023, Nature Communications",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Younger Dryas began about 12,900 years ago and is often linked to a meltwater pulse, a link still debated",
+    "as_written": "about 12,900 years ago, called the Younger Dryas",
+    "source": "Broecker et al. 1989, Nature; Carlson 2013 review, Quaternary Science Reviews",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Glaciers and ice sheets cover about ten percent of Earth's land",
+    "as_written": "Ice covers about ten percent of the land on Earth",
+    "source": "US Geological Survey",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fresh snow reflects 80 to 90 percent of sunlight; open ocean reflects about 6 percent",
+    "as_written": "eighty or ninety percent ... about six percent",
+    "source": "US National Snow and Ice Data Center (NSIDC), albedo explanation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Greenland lost about 270 billion tonnes of ice per year since 2002, Antarctica about 150 billion tonnes per year",
+    "as_written": "about 270 billion tonnes ... about 150 billion tonnes a year",
+    "source": "NASA GRACE and GRACE-FO, NASA Global Climate Change Ice Sheets page",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Greenland ice holds more than two quadrillion tonnes (about 2.9 million km3 x 917 kg/m3)",
+    "as_written": "more than two quadrillion tonnes",
+    "source": "BedMachine Greenland volume; author's calculation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 270 billion tonnes per year, Greenland would take about ten thousand years to melt (derived)",
+    "as_written": "about ten thousand years",
+    "source": "Author's calculation from the figures above",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Greenland runaway-loss threshold estimated between 0.8 and 3.2 C, best estimate 1.6 C above pre-industrial",
+    "as_written": "between 0.8 and 3.2 degrees Celsius ... best guess of 1.6",
+    "source": "Robinson, Calov and Ganopolski 2012, Nature Climate Change",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Burning all reachable fossil fuels could eliminate the Antarctic ice sheet over millennia",
+    "as_written": "burning all the fossil fuels we can reach could eliminate the whole ice sheet",
+    "source": "Winkelmann et al. 2015, Science Advances",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Thwaites Glacier is about the size of Florida and holds about 65 cm of sea-level equivalent",
+    "as_written": "about the size of Florida ... about 65 centimeters",
+    "source": "International Thwaites Glacier Collaboration (ITGC); NASA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sea level during the last interglacial about 125,000 years ago was roughly five to ten meters higher; sources of the water are debated",
+    "as_written": "about 125,000 years ago ... between five and ten meters higher",
+    "source": "IPCC AR6 WGI Chapter 2 and Chapter 9; Dutton et al. 2015, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mid-Pliocene about three million years ago had CO2 near modern levels and higher seas; estimates range widely",
+    "as_written": "About three million years ago, in the mid-Pliocene",
+    "source": "IPCC AR6 WGI Chapter 2; Dumitru et al. 2019, Nature; PRISM project, USGS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctic ice sheet first formed about 34 million years ago",
+    "as_written": "about 34 million years ago",
+    "source": "Zachos et al. 2001, Science; Eocene-Oligocene transition",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Arctic Ocean surface was around 23 C about 55 million years ago during the PETM",
+    "as_written": "About 55 million years ago ... around 23 degrees Celsius",
+    "source": "Sluijs et al. 2006, Nature (IODP Expedition 302, ACEX cores)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Eocene Arctic held swamp forests and alligator relatives on Ellesmere Island",
+    "as_written": "swamp forests and relatives of alligators, on Ellesmere Island",
+    "source": "Eberle and Greenwood 2012, Geological Society of America Bulletin; Canadian Museum of Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric CO2 is above 420 parts per million",
+    "as_written": "above 420 parts per million",
+    "source": "NOAA Global Monitoring Laboratory, Mauna Loa record",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Deep ocean takes about a thousand years to turn over",
+    "as_written": "about a thousand years to turn over",
+    "source": "NOAA National Ocean Service / Woods Hole Oceanographic Institution",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scandinavia is still rising at close to a centimeter a year after the last ice age",
+    "as_written": "close to a centimeter a year",
+    "source": "BIFROST GPS network, Milne et al. 2001, Science; Finnish Geospatial Research Institute",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "West Antarctic bedrock is rising up to 41 mm per year",
+    "as_written": "up to 41 millimeters a year",
+    "source": "Barletta et al. 2018, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Iceland's eruption rates were 30 to 50 times higher after deglaciation about 12,000 years ago",
+    "as_written": "somewhere between 30 and 50 times higher",
+    "source": "Maclennan et al. 2002, Geochemistry Geophysics Geosystems; Sigmundsson et al. 2010, Philosophical Transactions of the Royal Society",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global eruption rates were two to six times higher after the last ice age",
+    "as_written": "two to six times more frequent",
+    "source": "Huybers and Langmuir 2009, Earth and Planetary Science Letters",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "University of Edinburgh team found 91 new volcanoes under West Antarctica, bringing the total to 138",
+    "as_written": "91 previously unknown volcanoes ... 138",
+    "source": "van Wyk de Vries et al. 2017, Geological Society of London Special Publications",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ice melt has delayed the next negative leap second by about three years",
+    "as_written": "delayed the next negative leap second by about three years",
+    "source": "Agnew 2024, Nature, 'A global timekeeping problem postponed by global warming'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

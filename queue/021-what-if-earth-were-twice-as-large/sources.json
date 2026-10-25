@@ -1,0 +1,538 @@
+[
+  {
+    "text": "Earth's mean diameter is 12,742 kilometres",
+    "as_written": "Earth is 12,742 kilometres across",
+    "source": "NASA Goddard Space Flight Center, Earth Fact Sheet (volumetric mean radius 6,371 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Doubling Earth's radius gives a diameter of about 25,500 kilometres",
+    "as_written": "about 25,500 kilometres across",
+    "source": "Arithmetic from NASA Earth Fact Sheet radius of 6,371 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mean density is about 5.5 times that of water",
+    "as_written": "about five and a half times that of water",
+    "source": "NASA Goddard Earth Fact Sheet (5,514 kg per cubic metre)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Seven additional Earths of material are needed to double radius at constant density, since mass scales as radius cubed",
+    "as_written": "you would need seven more Earths of material",
+    "source": "Arithmetic: volume scales with radius cubed, 2 cubed is 8",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A rocky planet of eight Earth masses has a radius of about 1.8 Earth radii for Earth-like composition",
+    "as_written": "around 1.8 times Earth's width by the usual models",
+    "source": "Zeng, Sasselov and Jacobsen 2016, Astrophysical Journal, mass-radius relation for Earth-like rocky planets (R roughly proportional to M^0.27); Seager et al. 2007, Astrophysical Journal",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's surface area is about 510 million square kilometres",
+    "as_written": "about 510 million square kilometres",
+    "source": "NOAA / USGS Earth surface area figure (510.1 million square km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Surface area grows four times when radius doubles, to over two billion square kilometres",
+    "as_written": "more than two billion",
+    "source": "Arithmetic: 4 times 510 million is about 2.04 billion square km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Volume and mass grow eight times at constant density; surface gravity scales as mass over radius squared, giving a factor of two",
+    "as_written": "eight divided by four. Exactly double",
+    "source": "Newton's law of gravitation, g = GM/R squared",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's surface gravity is about 9.8 metres per second squared",
+    "as_written": "about 9.8 metres per second, every second",
+    "source": "NASA Goddard Earth Fact Sheet (9.80 m/s2); CGPM standard gravity 9.80665 m/s2",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Doubled gravity gives 19.6 metres per second squared",
+    "as_written": "Here it is 19.6",
+    "source": "Arithmetic from NASA Earth Fact Sheet value",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fighter pilots with anti-g suits train for about nine g",
+    "as_written": "nine times Earth gravity",
+    "source": "US Air Force / NASA aerospace physiology literature on high-G training (9 g centrifuge standard)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Untrained people typically lose vision or consciousness between about four and six g",
+    "as_written": "between about four and six",
+    "source": "NASA and USAF aerospace medicine references on G-induced loss of consciousness",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fall time from one metre is about 0.45 seconds on Earth and 0.32 seconds at double gravity",
+    "as_written": "about 0.45 seconds",
+    "source": "Kinematics, t = sqrt(2h/g), using g = 9.8 and 19.6 m/s2",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Impact speed from a one metre fall is 4.4 metres per second on Earth and 6.3 at double gravity",
+    "as_written": "4.4 metres per second",
+    "source": "Kinematics, v = sqrt(2gh)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Impact energy per kilogram doubles at double gravity from the same height",
+    "as_written": "twice what it was",
+    "source": "Energy per unit mass = g times h",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jump height with the same take-off speed halves at double gravity",
+    "as_written": "rises only half as high",
+    "source": "Kinematics, h = v squared over 2g",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Horizon distance for eye height 1.7 m is about 4.7 km on Earth and about 6.6 km at double radius",
+    "as_written": "about 4.7 kilometres",
+    "source": "Geometry, d = sqrt(2Rh), using R = 6,371 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric mass scaled by eight over four times the area under twice gravity gives four atmospheres",
+    "as_written": "about four atmospheres",
+    "source": "Hydrostatic balance, P = M_atm g / (4 pi R squared); arithmetic 8 x 2 / 4",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Every ten metres of seawater adds roughly one atmosphere, so four atmospheres corresponds to about thirty metres depth",
+    "as_written": "about thirty metres under the surface",
+    "source": "NOAA Diving Manual; US Navy Diving Manual (33 feet of seawater per atmosphere)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Nitrogen narcosis typically begins around 30 metres depth",
+    "as_written": "about the depth at which many divers start to report nitrogen narcosis",
+    "source": "US Navy Diving Manual; Divers Alert Network",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Air is about 21 percent oxygen",
+    "as_written": "about 21 percent oxygen",
+    "source": "NASA Earth Fact Sheet / standard atmosphere composition",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At four atmospheres, oxygen partial pressure is about 0.84 atmospheres, equivalent to 84 percent oxygen at sea level",
+    "as_written": "about 0.84 atmospheres",
+    "source": "Dalton's law; arithmetic 0.21 x 4",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Prolonged exposure to oxygen above roughly 0.5 atmospheres risks pulmonary oxygen toxicity",
+    "as_written": "above roughly half an atmosphere",
+    "source": "NOAA Diving Manual, pulmonary oxygen toxicity and OTU model; Clark and Lambertsen",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sea-level air density is about 1.2 kilograms per cubic metre",
+    "as_written": "about 1.2 kilograms per cubic metre",
+    "source": "International Standard Atmosphere (1.225 kg/m3), ICAO",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Wind force on an object scales with air density, so four times denser air gives four times the force at the same speed",
+    "as_written": "hits four times as hard",
+    "source": "Aerodynamic drag equation, F = 0.5 rho v squared C A",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric scale height on Earth is about 8.5 kilometres and halves at double gravity to about 4.2",
+    "as_written": "about 8.5 kilometres",
+    "source": "NASA Earth Fact Sheet (scale height 8.5 km); scale height H = kT/mg",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Solar irradiance at Earth's distance is about 1,361 watts per square metre",
+    "as_written": "about 1,361 watts",
+    "source": "NASA SORCE / Total Irradiance Monitor, total solar irradiance 1361 W/m2 (Kopp and Lean 2011)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth rotates once in about 24 hours",
+    "as_written": "about 24 hours",
+    "source": "IERS; NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's orbital period is about 365 days",
+    "as_written": "it takes 365 days",
+    "source": "NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mean orbital speed is about 29.8 kilometres per second",
+    "as_written": "about 29.8 kilometres per second",
+    "source": "NASA Earth Fact Sheet (29.78 km/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun outweighs eight Earth masses by more than forty thousand times",
+    "as_written": "more than forty thousand times",
+    "source": "NASA Sun Fact Sheet (Sun about 333,000 Earth masses); 333,000 divided by 8 is about 41,600",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's equatorial rotation speed is about 1,670 kilometres per hour",
+    "as_written": "about 1,670 kilometres per hour",
+    "source": "Computed from NASA Earth Fact Sheet equatorial radius 6,378 km and sidereal rotation period 23.93 h",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At double radius with the same rotation, equatorial speed is about 3,350 kilometres per hour",
+    "as_written": "about 3,350",
+    "source": "Arithmetic: 2 x 1,674 km/h",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's mean distance is 384,400 kilometres",
+    "as_written": "384,400 kilometres",
+    "source": "NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's orbital period is 27.3 days",
+    "as_written": "27.3 days",
+    "source": "NASA Moon Fact Sheet (sidereal period 27.32 days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "With eight times the central mass the Moon's period at the same distance falls to a little under ten days",
+    "as_written": "a little under ten days",
+    "source": "Kepler's third law, period proportional to 1 over sqrt(mass); 27.3 / 2.8 is about 9.7",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geostationary altitude is 35,786 kilometres",
+    "as_written": "35,786 kilometres",
+    "source": "NASA / ESA geostationary orbit specification",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "With eight times the mass, geostationary orbital radius doubles, giving an altitude of about 71,600 km above a planet of radius 12,742 km",
+    "as_written": "about 71,600 kilometres",
+    "source": "Kepler's third law, r proportional to (M T squared) to the one third; 2 x 42,164 km minus 12,742 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A ground-skimming circular orbit takes about 84 minutes on Earth and the same on the doubled planet",
+    "as_written": "about 84 minutes",
+    "source": "Kepler's third law, T = 2 pi sqrt(R cubed / GM); about 84.4 minutes using NASA Earth Fact Sheet values",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Circular orbital speed at the surface is about 7.9 km/s on Earth and about 15.8 km/s on the doubled planet",
+    "as_written": "about 7.9 kilometres per second",
+    "source": "Orbital mechanics, v = sqrt(GM/R); NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At four atmospheres water boils at about 144 degrees Celsius",
+    "as_written": "about 144",
+    "source": "IAPWS-IF97 steam tables, saturation temperature at 405 kPa about 143.6 C",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The tallest known living tree, Hyperion, is about 116 metres tall",
+    "as_written": "about 116 metres tall",
+    "source": "US National Park Service / Redwood National Park; Hyperion measured 115.92 m",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The hydraulic limit to tree height on Earth is around 120 to 130 metres",
+    "as_written": "around 120 to 130 metres",
+    "source": "Koch et al. 2004, Nature, The limits to tree height",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Four times density at the same speed gives four times lift; stall speed scales with sqrt(weight over density), so it falls by about 30 percent at double weight and four times density",
+    "as_written": "about 30 percent lower",
+    "source": "Standard aerodynamic lift equation and stall speed relation; sqrt(2/4) = 0.71",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth loses about 47 terawatts of heat through its surface",
+    "as_written": "about 47 terawatts",
+    "source": "Davies and Davies 2010, Solid Earth, Earth's surface heat flux",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Interior heat production scales with volume (eight times) while surface area scales four times",
+    "as_written": "eight times while the second goes up four",
+    "source": "Geometry: volume scales with radius cubed, area with radius squared",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Researchers disagree on whether super-Earths have plate tectonics",
+    "as_written": "One group of researchers in 2007 argued",
+    "source": "Valencia, O'Connell and Sasselov 2007, Icarus; O'Neill and Lenardic 2007, Geophysical Research Letters",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's escape velocity is about 11.2 kilometres per second, doubling to about 22.4 at double radius and eight times mass",
+    "as_written": "about 11.2 kilometres per second",
+    "source": "NASA Goddard Earth Fact Sheet (11.186 km/s); v_esc proportional to sqrt(M/R)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hydrogen-oxygen rocket engines have exhaust speed of about 4.4 kilometres per second",
+    "as_written": "about 4.4 kilometres per second",
+    "source": "Aerojet Rocketdyne RS-25 specific impulse about 452 s in vacuum; v_e = Isp x g0",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Each additional exhaust velocity of delta-v multiplies propellant mass ratio by e, about 2.7",
+    "as_written": "by about 2.7",
+    "source": "Tsiolkovsky rocket equation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Reaching low Earth orbit needs a delta-v of about 9.4 kilometres per second including losses",
+    "as_written": "about 9.4 kilometres per second",
+    "source": "NASA launch vehicle performance references; Wertz and Larson, Space Mission Analysis and Design",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Orbital speed on the doubled planet is about 16 km/s before losses",
+    "as_written": "about 16",
+    "source": "Orbital mechanics, 2 x 7.9 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ideal single-stage mass ratios are about 8 for Earth and about 37 for the doubled planet",
+    "as_written": "about eight, and one of around thirty-seven",
+    "source": "Tsiolkovsky rocket equation with delta-v 9.4 and 16 km/s and exhaust speed 4.4 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2018 study found spaceflight from super-Earths is sharply harder",
+    "as_written": "A 2018 study by the astronomer Michael Hippke",
+    "source": "Hippke 2018, Spaceflight from Super-Earths is difficult, arXiv:1804.04886; International Journal of Astrobiology 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Everest is 8,849 metres high",
+    "as_written": "8,849 metres",
+    "source": "Nepal and China joint survey announced December 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars surface gravity is about 3.7 metres per second squared",
+    "as_written": "about 3.7 metres per second squared",
+    "source": "NASA Mars Fact Sheet (3.73 m/s2)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Olympus Mons rises about 21.9 kilometres",
+    "as_written": "about 21.9 kilometres",
+    "source": "NASA / USGS Mars MOLA topography (Olympus Mons about 21.9 km above datum)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ratio of Olympus Mons to Everest height is about 2.5 and ratio of Earth to Mars gravity is about 2.6",
+    "as_written": "about two and a half",
+    "source": "Arithmetic from the figures above: 21.9 / 8.85; 9.8 / 3.73",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Maximum mountain height scales inversely with gravity, giving roughly half of Earth's height, about four and a half kilometres, at double gravity",
+    "as_written": "perhaps four and a half kilometres",
+    "source": "Isostatic and rock-strength limits on relief; Melosh, Planetary Surface Processes (2011)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's oceans hold about 1.3 billion cubic kilometres",
+    "as_written": "about 1.3 billion cubic kilometres",
+    "source": "USGS Water Science School; NOAA (about 1.335 billion cubic km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Spread over a smooth Earth, the oceans would be about 2.6 kilometres deep",
+    "as_written": "about 2.6 kilometres",
+    "source": "Arithmetic: 1.335 billion cubic km divided by 510 million square km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Eight times the water over four times the area gives twice the depth, about 5.2 km",
+    "as_written": "about 5.2 kilometres deep",
+    "source": "Arithmetic: 2 x 2.6 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's oceans are about 0.02 percent of its mass",
+    "as_written": "about 0.02 percent of its mass",
+    "source": "Ocean mass about 1.4e21 kg (NOAA / USGS) divided by Earth mass 5.97e24 kg (NASA Earth Fact Sheet)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Planet sizes show a gap between about 1.5 and 2 Earth radii",
+    "as_written": "common below about 1.5 times Earth's radius and common above about 2",
+    "source": "Fulton et al. 2017, Astronomical Journal, California-Kepler Survey radius gap",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Most planets larger than about 1.6 Earth radii are not rocky",
+    "as_written": "larger than about 1.6 times Earth's radius",
+    "source": "Rogers 2015, Astrophysical Journal, Most 1.6 Earth-radius planets are not rocky",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "55 Cancri e has a radius about 1.9 Earth radii and a mass about eight Earth masses",
+    "as_written": "a radius about 1.9 times Earth's and a mass about eight times Earth's",
+    "source": "Bourrier et al. 2018, Astronomy and Astrophysics (7.99 Earth masses, 1.88 Earth radii)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "55 Cancri e orbits its star in less than a day",
+    "as_written": "in less than a day",
+    "source": "Winn et al. 2011, Astrophysical Journal Letters (orbital period 0.74 days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

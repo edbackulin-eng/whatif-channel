@@ -1,0 +1,474 @@
+[
+  {
+    "text": "The Sun is about 150 million km from Earth (1 astronomical unit)",
+    "as_written": "A hundred and fifty million kilometres away",
+    "source": "NASA Sun and Earth fact sheets; IAU 2012 definition of the astronomical unit (149,597,870,700 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sunlight takes about 8 minutes 20 seconds to reach Earth",
+    "as_written": "eight minutes and twenty seconds",
+    "source": "NASA Solar System Exploration, Sun facts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Active regions on the Sun can be larger than Earth",
+    "as_written": "bigger than the whole Earth",
+    "source": "NASA Solar Dynamics Observatory sunspot and active region imagery",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Near solar maximum flares occur several times a day, over an eleven-year cycle",
+    "as_written": "there are several a day",
+    "source": "NOAA Space Weather Prediction Center, solar cycle and flare statistics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The solar cycle lasts about 11 years",
+    "as_written": "eleven-year cycle",
+    "source": "NASA/NOAA Solar Cycle Prediction Panel",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Flares heat gas to tens of millions of degrees",
+    "as_written": "tens of millions of degrees",
+    "source": "NASA Goddard, solar flare explainer",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Coronal mass ejections carry billions of tonnes of plasma",
+    "as_written": "a mass of billions of tonnes",
+    "source": "NASA Heliophysics, coronal mass ejection fact sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Flare classes A, B, C, M, X are each ten times stronger than the previous; X starts at 1e-4 W/m2 in GOES 1-8 angstrom X-rays",
+    "as_written": "The X class begins at one ten-thousandth of a watt per square metre",
+    "source": "NOAA SWPC, GOES X-ray flux flare classification",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The November 2003 flare saturated GOES detectors and was estimated at about X28",
+    "as_written": "about X28",
+    "source": "NOAA SWPC; Thomson et al. 2004, Geophysical Research Letters",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "One analysis estimated the 1859 Carrington flare near X45",
+    "as_written": "near X45",
+    "source": "Cliver and Dietrich 2013, Journal of Space Weather and Space Climate",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The largest flares release up to about 1e32 erg, roughly 1e25 joules",
+    "as_written": "ten trillion trillion joules",
+    "source": "NASA Goddard, solar flare facts (up to 10^32 erg)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth intercepts less than one billionth of the energy emitted by a flare, from cross-section over a sphere at 1 AU",
+    "as_written": "less than one billionth of that energy",
+    "source": "Geometric calculation using NASA Earth fact sheet radius and 1 AU; fraction is about 4.5e-10",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The D region of the ionosphere lies roughly 60 to 90 km up",
+    "as_written": "roughly sixty to ninety kilometres up",
+    "source": "NOAA SWPC, D-region absorption and HF radio",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "HF radio spans 3 to 30 megahertz",
+    "as_written": "between three and thirty megahertz",
+    "source": "ITU Radio Regulations frequency band designations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "NOAA R5 extreme radio blackout corresponds to X20 or above and means complete HF blackout across the sunlit side for hours",
+    "as_written": "X20 or above",
+    "source": "NOAA Space Weather Scales, Radio Blackouts R5",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "December 2006 flare of about X6 disrupted GPS receivers",
+    "as_written": "a flare of about X6",
+    "source": "Cerruti et al. 2008, Space Weather, Effect of intense December 2006 solar radio bursts on GPS receivers",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The fastest solar protons arrive within tens of minutes",
+    "as_written": "within tens of minutes",
+    "source": "NOAA SWPC, Solar Radiation Storms",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Standard atmosphere mass above one square metre is about 10 tonnes, equal to about 10 m of water",
+    "as_written": "about ten tonnes of air",
+    "source": "International Standard Atmosphere, 101,325 Pa sea-level pressure",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Only a few dozen ground level enhancements have been recorded since the 1940s",
+    "as_written": "only a few dozen have been recorded since the 1940s",
+    "source": "University of Oulu GLE database (neutron monitor network)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The February 1956 ground level enhancement raised neutron counts by well over 1,000 percent at some stations",
+    "as_written": "well over a thousand percent at some stations",
+    "source": "University of Oulu GLE database; Usoskin et al. on GLE 5",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A major solar particle event occurred in August 1972 between Apollo 16 and 17, with potentially dangerous doses for crew on the Moon",
+    "as_written": "In August 1972, between the Apollo 16 and Apollo 17 missions",
+    "source": "NASA Science, Apollo-era solar particle event analyses",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geostationary orbit is about 6.6 Earth radii out; magnetopause is normally about 10 Earth radii and can be compressed inside it in extreme storms",
+    "as_written": "about six and a half Earth radii",
+    "source": "NOAA SWPC magnetosphere description; standard geostationary orbit radius",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Typical CME speeds are a few hundred to about a thousand km/s",
+    "as_written": "between a few hundred and about a thousand kilometres per second",
+    "source": "NASA Heliophysics, CME fact sheet; SOHO LASCO CME catalog",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The July 2012 CME travelled at around 2,500 km/s",
+    "as_written": "around two and a half thousand kilometres per second",
+    "source": "Baker et al. 2013, Space Weather, A major solar eruptive event in July 2012",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Carrington CME took about 17 hours",
+    "as_written": "just seventeen hours or so",
+    "source": "Cliver and Svalgaard 2004, Solar Physics (17.6 hours)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Spacecraft at L1 are about 1.5 million km sunward and give 15 to 60 minutes warning",
+    "as_written": "between fifteen and sixty minutes",
+    "source": "NOAA SWPC, DSCOVR and ACE at L1",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Distance to L1 about 1.5 million km",
+    "as_written": "one and a half million kilometres",
+    "source": "NASA, Lagrange Point 1 mission pages (SOHO, DSCOVR)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "An earlier CME in July 2012 likely cleared the path for the second",
+    "as_written": "the first cloud cleared the way",
+    "source": "Liu et al. 2014, Nature Communications",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The July 2012 eruption missed Earth by about a week",
+    "as_written": "about a week earlier",
+    "source": "NASA Science news, Near Miss: The Solar Superstorm of July 2012",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Dst of the March 1989 storm reached about -589 nT",
+    "as_written": "about minus five hundred and eighty-nine",
+    "source": "WDC for Geomagnetism, Kyoto, Dst index",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Carrington storm Dst estimated between about -850 and -1760 nT",
+    "as_written": "between about minus eight hundred and fifty and minus seventeen hundred and sixty",
+    "source": "Siscoe et al. 2006 (about -850 nT); Tsurutani et al. 2003 (about -1760 nT), Journal of Geophysical Research",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "During the 1859 storm operators on the Boston to Portland line worked about two hours without batteries",
+    "as_written": "for about two hours",
+    "source": "Loomis 1861, American Journal of Science; Boteler 2006, Advances in Space Research",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Auroras in 1859 reached the Caribbean",
+    "as_written": "as far south as the Caribbean",
+    "source": "Green and Boardsen 2006, Advances in Space Research; Kimball 1960 aurora catalogue",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hydro-Quebec grid collapsed in about 90 seconds on 13 March 1989 at 2:44 am",
+    "as_written": "In about ninety seconds",
+    "source": "NERC, March 13 1989 Geomagnetic Disturbance report; Hydro-Quebec",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Six million people lost power in the 1989 Quebec blackout",
+    "as_written": "Six million people lost power",
+    "source": "NASA Science, Quebec blackout; Hydro-Quebec",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Restoration of most of the Quebec grid took about nine hours",
+    "as_written": "about nine hours",
+    "source": "NERC 1990 report on the March 1989 GMD",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A transformer at the Salem nuclear plant in New Jersey was damaged in March 1989",
+    "as_written": "a large transformer at a nuclear plant in New Jersey was damaged",
+    "source": "NERC 1990 report on the March 1989 GMD",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Malmo, Sweden lost power for under an hour affecting about 50,000 customers in October 2003",
+    "as_written": "about fifty thousand customers for under an hour",
+    "source": "Pulkkinen et al. 2005, Space Weather, Halloween storm impacts on power systems",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lloyd's 2013 estimated 20 to 40 million people at risk of outage lasting 16 days to 1 to 2 years, costing $0.6 to $2.6 trillion",
+    "as_written": "between twenty and forty million people could lose power",
+    "source": "Lloyd's and Atmospheric and Environmental Research, Solar Storm Risk to the North American Electric Grid, 2013",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lloyd's cost range of 0.6 to 2.6 trillion dollars",
+    "as_written": "between six hundred billion and two point six trillion dollars",
+    "source": "Lloyd's and AER 2013",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lloyd's outage duration range of 16 days to 1 to 2 years",
+    "as_written": "from sixteen days to one or two years",
+    "source": "Lloyd's and AER 2013",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "US National Research Council 2008 estimated $1 to 2 trillion in the first year and 4 to 10 years recovery",
+    "as_written": "one to two trillion dollars in the first year, and a recovery of four to ten years",
+    "source": "National Research Council 2008, Severe Space Weather Events: Understanding Societal and Economic Impacts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Large power transformers can take more than a year to deliver",
+    "as_written": "can take more than a year to deliver",
+    "source": "US Department of Energy, Large Power Transformer Resilience reports",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "SpaceX launched 49 Starlink satellites in February 2022 and 38 were lost",
+    "as_written": "forty-nine Starlink satellites",
+    "source": "SpaceX Starlink update, 8 February 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "38 of the satellites fell out of the sky",
+    "as_written": "Thirty-eight of them fell out of the sky",
+    "source": "SpaceX Starlink update, 8 February 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Parking orbit at about 210 km altitude",
+    "as_written": "about two hundred and ten kilometres up",
+    "source": "SpaceX Starlink update, 8 February 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Air density at that altitude up to 50 percent higher than earlier launches",
+    "as_written": "up to fifty percent higher",
+    "source": "SpaceX Starlink update, 8 February 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "More than 10,000 working satellites are in orbit",
+    "as_written": "more than ten thousand working satellites",
+    "source": "Jonathan McDowell satellite catalog; Union of Concerned Scientists satellite database",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "May 2024 storm was the strongest in more than twenty years and disrupted precision farming GPS",
+    "as_written": "the biggest in more than twenty years",
+    "source": "NOAA SWPC, May 2024 Geomagnetic Storm assessment (G5, first since October 2003)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ozone losses after the 1989 and 2003 solar particle events were measurable but modest",
+    "as_written": "measurable but modest ozone losses",
+    "source": "Jackman et al. 2005 and Seppala et al. 2006, solar proton event ozone studies",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Riley estimated about a 12 percent chance per decade of a Carrington-class storm",
+    "as_written": "about twelve percent per decade",
+    "source": "Riley 2012, Space Weather, On the probability of occurrence of extreme space weather events",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Miyake found a roughly 1.2 percent carbon-14 jump in 774 to 775 CE tree rings, about 20 times normal variation",
+    "as_written": "a jump of about one point two percent",
+    "source": "Miyake et al. 2012, Nature, A signature of cosmic-ray increase in AD 774-775 from tree rings in Japan",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The jump was roughly twenty times larger than normal yearly change",
+    "as_written": "roughly twenty times larger than the normal year-to-year change",
+    "source": "Miyake et al. 2012, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Beryllium-10 and chlorine-36 in polar ice cores corroborate the event",
+    "as_written": "beryllium-10 and chlorine-36",
+    "source": "Mekhaldi et al. 2015, Nature Communications",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A short gamma-ray burst was proposed as an alternative cause",
+    "as_written": "a short gamma-ray burst from far away",
+    "source": "Hambaryan and Neuhauser 2013, Monthly Notices of the Royal Astronomical Society",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Further spikes found in 993 CE, 660 BCE and about 5259 BCE",
+    "as_written": "993, in 660 before the common era, and around 5259 before the common era",
+    "source": "Miyake et al. 2013 (993 CE); Park et al. 2017 (660 BCE); Miyake et al. 2017 (5259 BCE)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Roughly a dozen such events are known over the last twelve thousand years or so",
+    "as_written": "Roughly a dozen are now known",
+    "source": "Usoskin 2023, Living Reviews in Solar Physics, A history of solar activity over millennia",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Anglo-Saxon Chronicle entry for 774 describes a red crucifix in the sky after sunset, possibly an aurora",
+    "as_written": "a red crucifix in the sky after sunset",
+    "source": "Anglo-Saxon Chronicle, entry for 774; discussed in Usoskin et al. 2013, Astronomy and Astrophysics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sun-like stars produce superflares about once per century on average",
+    "as_written": "about once per century on average",
+    "source": "Vasilyev et al. 2024, Science, Sun-like stars produce superflares roughly once per century",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

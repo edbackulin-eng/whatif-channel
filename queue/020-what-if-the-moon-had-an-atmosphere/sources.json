@@ -1,0 +1,410 @@
+[
+  {
+    "text": "The Moon's surface gravity is 1.62 metres per second squared, about one sixth of Earth's",
+    "as_written": "one point six two metres per second squared, about one sixth of ours",
+    "source": "NASA NSSDCA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's atmosphere is about 78% nitrogen, 21% oxygen and a little under 1% argon",
+    "as_written": "about seventy eight percent nitrogen, twenty one percent oxygen, and a little under one percent argon",
+    "source": "NASA Earth Fact Sheet (NSSDCA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon is about 3,500 km across (diameter about 3,475 km)",
+    "as_written": "about three and a half thousand kilometres across",
+    "source": "NASA NSSDCA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Standard sea-level pressure is about 101,325 pascals",
+    "as_written": "about one hundred and one thousand pascals",
+    "source": "International Standard Atmosphere (ICAO / ISO 2533)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Giving the Moon sea-level pressure requires about 2.4e18 kg of gas, from p = M g / (4 pi R^2) using lunar gravity and radius",
+    "as_written": "roughly two point four quintillion kilograms of gas",
+    "source": "Derived calculation using NASA NSSDCA Moon Fact Sheet values for gravity and radius",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's atmosphere has a mass of about 5.1e18 kg",
+    "as_written": "about five point one quintillion kilograms",
+    "source": "Trenberth and Smith 2005, Journal of Climate, The Mass of the Atmosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's surface area is about one thirteenth of Earth's",
+    "as_written": "about one thirteenth of the surface area of Earth",
+    "source": "NASA NSSDCA Moon and Earth Fact Sheets (radius 1,737 km vs 6,371 km, area ratio about 0.074)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's atmospheric scale height is about 8.5 km",
+    "as_written": "a characteristic height of about eight and a half kilometres",
+    "source": "NASA Earth Fact Sheet (scale height 8.5 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "With one sixth of the gravity, the same air would have a scale height about six times larger, near 50 km (H = kT/mg)",
+    "as_written": "a characteristic height near fifty kilometres",
+    "source": "Derived from hydrostatic equilibrium, scale height H = kT/(mg), with Moon fact sheet gravity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Column mass of air above a square metre is p/g, so six times larger on the Moon at equal pressure",
+    "as_written": "about six times as many air molecules",
+    "source": "Derived from hydrostatic balance, using NASA Moon Fact Sheet gravity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The lunar atmosphere is more than a hundred trillion times thinner than Earth's sea-level air, as measured by the Apollo 17 Lunar Atmospheric Composition Experiment",
+    "as_written": "more than a hundred trillion times thinner than the air you are breathing",
+    "source": "Apollo 17 LACE (Hoffman et al., 1973); NASA LADEE mission results",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apollo suits operated at about 3.7 psi of pure oxygen",
+    "as_written": "about three point seven pounds per square inch of pure oxygen",
+    "source": "NASA Apollo Experience Report, Apollo space suit assembly",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sea-level atmospheric pressure is about 14.7 psi",
+    "as_written": "fourteen point seven",
+    "source": "International Standard Atmosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Outside pressure of 14.7 psi would be about four times the suit's 3.7 psi",
+    "as_written": "about four times harder",
+    "source": "Derived from 14.7 / 3.7 using NASA Apollo suit figures",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Standard sea-level air temperature is 15 degrees Celsius",
+    "as_written": "at a pleasant fifteen degrees",
+    "source": "International Standard Atmosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sound travels at about 340 m/s in 15 degree air",
+    "as_written": "about three hundred and forty metres per second",
+    "source": "International Standard Atmosphere (speed of sound 340.3 m/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Astronauts described the smell of lunar dust as like spent gunpowder",
+    "as_written": "spent gunpowder",
+    "source": "Apollo 11, 12 and 17 crew post-mission debriefs and NASA accounts (e.g. NASA, Dirty Dust Issue)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon turns once in a little over 29 days relative to the Sun (synodic period 29.53 days), so the Sun moves about half a degree per hour",
+    "as_written": "about half a degree per hour",
+    "source": "Derived from lunar synodic period 29.53 days, NASA NSSDCA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A lunar day is about 29.5 Earth days",
+    "as_written": "about twenty nine and a half Earth days long",
+    "source": "NASA NSSDCA Moon Fact Sheet (synodic period 29.53 days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth is about 3.7 times wider in the lunar sky than the Moon appears from Earth (diameters 12,742 km vs 3,475 km at similar distance)",
+    "as_written": "almost four times wider than the Moon looks from here",
+    "source": "NASA NSSDCA Earth and Moon Fact Sheets",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apollo 15 astronaut David Scott dropped a hammer and a falcon feather on the Moon in 1971 and they landed together",
+    "as_written": "In nineteen seventy one, on Apollo fifteen, David Scott",
+    "source": "NASA Apollo 15 Mission Report and surface film footage",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Terminal speed scales with the square root of gravity, so a feather at one sixth gravity would settle at about 0.41 of its Earth speed",
+    "as_written": "about two fifths of the speed it falls at on Earth",
+    "source": "Derived from quadratic drag terminal velocity v = sqrt(2mg/(rho Cd A))",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Equatorial lunar noon temperature reaches about 127 degrees Celsius",
+    "as_written": "about one hundred and twenty seven degrees Celsius",
+    "source": "NASA Moon facts; LRO Diviner Lunar Radiometer",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Threshold wind speed for lifting grains scales with the square root of gravity",
+    "as_written": "scales with the square root of gravity",
+    "source": "Bagnold 1941, The Physics of Blown Sand and Desert Dunes; Shao and Lu 2000, J. Geophysical Research",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apollo 17 astronaut Harrison Schmitt reported lunar hay fever from dust",
+    "as_written": "Harrison Schmitt, on Apollo seventeen, developed what he called lunar hay fever",
+    "source": "NASA Apollo 17 Technical Crew Debriefing; NASA Science, The Moon Dust Problem",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Estimates of cosmic dust entering Earth's atmosphere range from about 5 to 300 tonnes per day",
+    "as_written": "range from about five to three hundred tonnes",
+    "source": "Plane 2012, Chemical Society Reviews, Cosmic dust in the earth's atmosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Chelyabinsk meteor of 2013 was about 20 metres wide and broke windows across the city",
+    "as_written": "about twenty metres wide",
+    "source": "NASA/JPL Near Earth Object Program; Popova et al. 2013, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's surface falls to about minus 173 degrees Celsius at night",
+    "as_written": "about minus one hundred and seventy three degrees Celsius",
+    "source": "NASA Moon facts; LRO Diviner Lunar Radiometer",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The noon to midnight temperature swing is about 300 degrees (127 to minus 173)",
+    "as_written": "the difference of three hundred degrees between noon and midnight",
+    "source": "NASA Moon facts; LRO Diviner Lunar Radiometer",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus rotates once in about 243 Earth days",
+    "as_written": "turns once every two hundred and forty three Earth days",
+    "source": "NASA NSSDCA Venus Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus surface temperature is about 465 degrees Celsius (737 K)",
+    "as_written": "about four hundred and sixty five degrees Celsius",
+    "source": "NASA NSSDCA Venus Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus surface pressure is about 92 bar, about 92 times Earth's",
+    "as_written": "about ninety two times the surface pressure of Earth",
+    "source": "NASA NSSDCA Venus Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 1997 study found thin atmospheres can transport enough heat to the night side of tidally locked planets to prevent atmospheric collapse",
+    "as_written": "a well known study in nineteen ninety seven",
+    "source": "Joshi, Haberle and Reynolds 1997, Icarus, Simulations of the atmospheres of synchronously rotating terrestrial planets orbiting M dwarfs",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's Bond albedo is about 0.11, reflecting about eleven percent of sunlight",
+    "as_written": "only about eleven percent of the sunlight",
+    "source": "NASA NSSDCA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's black-body temperature is about 270.7 K",
+    "as_written": "about two hundred and seventy kelvin",
+    "source": "NASA NSSDCA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lunar escape velocity is 2.38 km/s and Earth's is 11.2 km/s",
+    "as_written": "two point three eight kilometres per second",
+    "source": "NASA NSSDCA Moon and Earth Fact Sheets",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's escape velocity is 11.2 km/s",
+    "as_written": "eleven point two",
+    "source": "NASA NSSDCA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars's escape velocity is about 5.03 km/s, more than twice the Moon's",
+    "as_written": "about five kilometres per second, more than twice the Moon's",
+    "source": "NASA NSSDCA Mars Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "MAVEN found solar wind stripping removed a large share of Mars's atmosphere",
+    "as_written": "stripped away a large share of the Martian atmosphere",
+    "source": "NASA MAVEN mission; Jakosky et al. 2015 and 2018, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon passes through Earth's magnetotail for about six days each month around full Moon",
+    "as_written": "for about six days around full Moon",
+    "source": "NASA ARTEMIS mission; NASA Science, The Moon and Earth's magnetotail",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Volcanic outgassing about 3.5 billion years ago may have given the Moon a transient atmosphere lasting about 70 million years",
+    "as_written": "about seventy million years",
+    "source": "Needham and Kring 2017, Earth and Planetary Science Letters, Lunar volcanism produced a transient atmosphere around the ancient Moon",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon is about 4.5 billion years old",
+    "as_written": "about four and a half billion years old",
+    "source": "NASA Science, Moon formation; Barboni et al. 2017, Science Advances",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Titan's escape velocity is about 2.64 km/s",
+    "as_written": "about two point six four kilometres per second",
+    "source": "NASA NSSDCA Saturn Satellite Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Titan's surface gravity (1.35 m/s2) is lower than the Moon's (1.62 m/s2)",
+    "as_written": "a surface gravity lower than the Moon's",
+    "source": "NASA NSSDCA Saturn Satellite Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Titan's surface pressure is about 1.5 bar, about one and a half times Earth's",
+    "as_written": "about one and a half times as thick as ours at the surface",
+    "source": "ESA Huygens probe results; NASA Titan fact sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Titan's surface temperature is about 94 K, about minus 179 degrees Celsius",
+    "as_written": "about minus one hundred and seventy nine degrees Celsius",
+    "source": "ESA Huygens probe results; NASA Titan fact sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Air density at sea level and 15 degrees is about 1.2 kg per cubic metre",
+    "as_written": "about one point two kilograms per cubic metre",
+    "source": "International Standard Atmosphere (1.225 kg/m3)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Induced power for flight scales with weight to the power 3/2, so one sixth weight needs about 6^1.5, roughly 15 times less power",
+    "as_written": "about fifteen times less power",
+    "source": "Derived from lifting-line / actuator disc theory, e.g. Anderson, Fundamentals of Aerodynamics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Six to the power of one and a half is about fifteen",
+    "as_written": "Six raised to the power of one and a half is about fifteen",
+    "source": "Arithmetic (6^1.5 = 14.7)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Gossamer Albatross, pedalled by Bryan Allen, crossed the English Channel in 1979, covering 35.8 km in 2 hours 49 minutes",
+    "as_written": "thirty five point eight kilometres in two hours and forty nine minutes",
+    "source": "Smithsonian National Air and Space Museum, Gossamer Albatross; MacCready et al.",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lunar jumps carry about six times higher than on Earth because gravity is a sixth",
+    "as_written": "which already carries you six times higher than on Earth",
+    "source": "Derived from ballistic motion h = v^2/2g with NASA Moon Fact Sheet gravity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]
