@@ -16,7 +16,9 @@
     "set_youtube": true,
     "retry": true,
     "why": "no moons in the sky; publishes 2026-10-26 15:00 UTC, so after the GPU quota renews on 24.10",
-    "status": "running",
-    "claimed": "2026-10-25T13:15:18+00:00"
+    "status": "done",
+    "claimed": "2026-10-25T13:15:18+00:00",
+    "finished": "2026-10-25T13:32:56+00:00",
+    "run": "https://github.com/edbackulin-eng/whatif-channel/actions/runs/40196734072"
   }
 ]
