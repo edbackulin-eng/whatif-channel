@@ -30,3 +30,5 @@
 - **2026-10-24 11:36 UTC** - Built 013-what-if-every-satellite-failed-at-once in 212 min.
 - **2026-10-24 11:38 UTC** - Uploaded 013-what-if-every-satellite-failed-at-once as 2AZh5ZyQGtM, public at 2026-10-29T15:00:00Z.
 - **2026-10-25 09:49 UTC** - Wrote 5 script(s). Queue now 10 (2.0 weeks).
+- **2026-10-26 11:32 UTC** - Built 014-what-if-earth-s-orbit-shifted in 162 min.
+- **2026-10-26 11:34 UTC** - Uploaded 014-what-if-earth-s-orbit-shifted as oRdy3HzgoKk, public at 2026-10-30T15:00:00Z.

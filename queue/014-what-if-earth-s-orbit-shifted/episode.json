@@ -1,11 +1,26 @@
 {
   "slug": "014-what-if-earth-s-orbit-shifted",
   "title": "What If Earth's Orbit Shifted?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 14,
   "script_source": "claude",
   "created": "2026-10-18T09:14:18+00:00",
   "words": 3031,
   "sourced_claims": 48,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "thumbnail_words": [
+    "ORBIT",
+    "SHIFT"
+  ],
+  "thumbnail_person": {
+    "gender": "woman",
+    "age": 58,
+    "look": "Black",
+    "angle": "slightly high angle looking down, face tilted up towards the sky",
+    "setting": "earth"
+  },
+  "rendered_minutes": 161.8,
+  "updated": "2026-10-26T11:34:28+00:00",
+  "youtube_id": "oRdy3HzgoKk",
+  "publish_at": "2026-10-30T15:00:00Z"
 }
