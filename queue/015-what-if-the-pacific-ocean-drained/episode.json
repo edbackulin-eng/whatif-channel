@@ -1,11 +1,25 @@
 {
   "slug": "015-what-if-the-pacific-ocean-drained",
   "title": "What If the Pacific Ocean Drained?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 15,
   "script_source": "claude",
   "created": "2026-10-18T09:17:53+00:00",
   "words": 3676,
   "sourced_claims": 47,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "thumbnail_words": [
+    "DRAINED"
+  ],
+  "thumbnail_person": {
+    "gender": "man",
+    "age": 33,
+    "look": "Latina/Latino",
+    "angle": "three-quarter view, turned towards the event, looking just past the camera",
+    "setting": "earth"
+  },
+  "rendered_minutes": 227.7,
+  "updated": "2026-10-27T12:46:01+00:00",
+  "youtube_id": "ClxzUdrCOvQ",
+  "publish_at": "2026-10-31T15:00:00Z"
 }
