@@ -1,11 +1,26 @@
 {
   "slug": "016-what-if-photosynthesis-stopped",
   "title": "What If Photosynthesis Stopped?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 16,
   "script_source": "claude",
   "created": "2026-10-18T09:23:07+00:00",
   "words": 2850,
   "sourced_claims": 44,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "thumbnail_words": [
+    "PLANTS DIE",
+    "NO OXYGEN?"
+  ],
+  "thumbnail_person": {
+    "gender": "woman",
+    "age": 58,
+    "look": "South Asian",
+    "angle": "slightly high angle looking down, face tilted up towards the sky",
+    "setting": "earth"
+  },
+  "rendered_minutes": 189.3,
+  "updated": "2026-10-29T13:06:02+00:00",
+  "youtube_id": "-GElqQJOglo",
+  "publish_at": "2026-11-02T15:00:00Z"
 }
