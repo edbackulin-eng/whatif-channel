@@ -36,3 +36,5 @@
 - **2026-10-27 12:46 UTC** - Uploaded 015-what-if-the-pacific-ocean-drained as ClxzUdrCOvQ, public at 2026-10-31T15:00:00Z.
 - **2026-10-29 13:03 UTC** - Built 016-what-if-photosynthesis-stopped in 189 min.
 - **2026-10-29 13:06 UTC** - Uploaded 016-what-if-photosynthesis-stopped as -GElqQJOglo, public at 2026-11-02T15:00:00Z.
+- **2026-10-30 12:46 UTC** - Built 017-what-if-earth-spun-twice-as-fast in 168 min.
+- **2026-10-30 12:48 UTC** - Uploaded 017-what-if-earth-spun-twice-as-fast as 1XTLqtDEKsI, public at 2026-11-03T15:00:00Z.
