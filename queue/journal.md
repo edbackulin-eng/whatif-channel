@@ -38,3 +38,5 @@
 - **2026-10-29 13:06 UTC** - Uploaded 016-what-if-photosynthesis-stopped as -GElqQJOglo, public at 2026-11-02T15:00:00Z.
 - **2026-10-30 12:46 UTC** - Built 017-what-if-earth-spun-twice-as-fast in 168 min.
 - **2026-10-30 12:48 UTC** - Uploaded 017-what-if-earth-spun-twice-as-fast as 1XTLqtDEKsI, public at 2026-11-03T15:00:00Z.
+- **2026-10-31 11:52 UTC** - Built 018-what-if-jupiter-vanished in 137 min.
+- **2026-10-31 11:53 UTC** - 018-what-if-jupiter-vanished held for review, QC says ATTENTION: 36 of 214 scenes sit on a blurred plate instead of filling the frame
