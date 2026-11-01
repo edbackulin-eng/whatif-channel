@@ -1,0 +1,442 @@
+[
+  {
+    "text": "Earth is about 4.5 billion years old, so the core has been hot since formation",
+    "as_written": "blazing hot for four and a half billion years",
+    "source": "Dalrymple 1991; USGS age of the Earth, about 4.54 billion years",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The core-mantle boundary lies about 2,890 km below the surface",
+    "as_written": "Almost two thousand nine hundred kilometres beneath your boots",
+    "source": "Preliminary Reference Earth Model (Dziewonski and Anderson 1981)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The core is about a third of Earth's mass (about 32 percent)",
+    "as_written": "The core holds about a third of the planet's mass",
+    "source": "Preliminary Reference Earth Model (Dziewonski and Anderson 1981)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Core radius is about 3,480 km versus Earth's 6,371 km, about 55 percent, and about 16 percent by volume",
+    "as_written": "roughly sixteen percent of the planet's volume",
+    "source": "Preliminary Reference Earth Model (Dziewonski and Anderson 1981)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The inner core radius is about 1,220 km",
+    "as_written": "about twelve hundred and twenty kilometres",
+    "source": "Preliminary Reference Earth Model; first identified by Lehmann 1936",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Moon radius is about 1,737 km, so the inner core is about 70 percent of it",
+    "as_written": "around seventy percent of the radius of the Moon",
+    "source": "NASA Lunar Reconnaissance Orbiter / NASA Moon fact sheet",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The liquid outer core is about 2,260 km thick (2,890 km to 5,150 km depth)",
+    "as_written": "about twenty-two hundred and sixty kilometres thick",
+    "source": "Preliminary Reference Earth Model (Dziewonski and Anderson 1981)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Inner core boundary temperature is about 6,000 K with several hundred kelvin uncertainty",
+    "as_written": "about six thousand kelvin, give or take several hundred",
+    "source": "Anzellini et al. 2013, Science 340, 464 (about 6,230 K plus or minus 500 K)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun's surface temperature is about 5,772 K, comparable to the inner core boundary",
+    "as_written": "comparable to the surface of the Sun",
+    "source": "IAU 2015 Resolution B3, nominal solar effective temperature 5,772 K",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pressure at Earth's centre is about 360 gigapascals, over 3 million atmospheres",
+    "as_written": "about three hundred and sixty gigapascals",
+    "source": "Preliminary Reference Earth Model (about 364 GPa)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "360 GPa is more than three million times atmospheric pressure of about 101 kPa",
+    "as_written": "more than three million times the pressure of the air around you",
+    "source": "Preliminary Reference Earth Model; standard atmosphere 101,325 Pa",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The inner core grows by roughly a millimetre per year in most thermal evolution models",
+    "as_written": "by about a millimetre a year in most models",
+    "source": "Labrosse 2015, Physics of the Earth and Planetary Interiors 247, 36-55",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Inner core age estimates range from roughly 0.5 to over 1 billion years",
+    "as_written": "from about half a billion years to a bit over a billion",
+    "source": "Bono et al. 2019, Nature Geoscience (about 565 million years); Biggin et al. 2015, Nature Geoscience (1.0 to 1.5 billion years)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth had a magnetic field at least about 3.4 to 3.5 billion years ago",
+    "as_written": "about three and a half billion years ago",
+    "source": "Tarduno et al. 2010, Science 327, 1238 (3.4 to 3.45 billion years)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Shear waves cannot travel through liquid; Oldham identified the core in 1906",
+    "as_written": "In 1906 the geologist Richard Oldham spotted",
+    "source": "Oldham 1906, Quarterly Journal of the Geological Society 62, 456",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jeffreys showed in 1926 the core is liquid",
+    "as_written": "In 1926 the physicist Harold Jeffreys showed",
+    "source": "Jeffreys 1926, Geophysical Supplement to the Monthly Notices of the Royal Astronomical Society",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lehmann discovered the inner core in 1936",
+    "as_written": "Then in 1936 the seismologist Inge Lehmann",
+    "source": "Lehmann 1936, Bureau Central Seismologique International",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A P wave takes about 20 minutes to cross to the antipode",
+    "as_written": "roughly twenty minutes to cross the whole Earth",
+    "source": "IASP91 / PREM travel-time tables, IRIS",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Decadal variations in length of day are of order a millisecond, attributed partly to core-mantle angular momentum exchange",
+    "as_written": "wanders by roughly a millisecond over the course of decades",
+    "source": "International Earth Rotation and Reference Systems Service; Gross 2015, Treatise on Geophysics",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The dipole free decay time of the core field is of order 20,000 years, depending on iron conductivity",
+    "as_written": "a leak time of roughly twenty thousand years",
+    "source": "Gubbins and Herrero-Bervera, Encyclopedia of Geomagnetism and Paleomagnetism; Pozzo et al. 2012, Nature 485, 355 on conductivity uncertainty",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The north magnetic pole has moved tens of km per year in recent decades from Canada toward Siberia",
+    "as_written": "at tens of kilometres a year",
+    "source": "NOAA NCEI and British Geological Survey World Magnetic Model",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's field has weakened about 9 percent over the last 200 years",
+    "as_written": "about nine percent over the last two hundred years",
+    "source": "ESA Swarm mission",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Exponential decay with a 20,000 year time constant gives about 1 percent loss in 200 years",
+    "as_written": "only about one percent over the same two centuries",
+    "source": "Arithmetic from exp(-200/20000), using the dipole free decay time above",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Exponential decay gives about 5 percent loss after 1,000 years",
+    "as_written": "has lost about five percent",
+    "source": "Arithmetic from exp(-1000/20000)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Exponential decay gives about 61 percent remaining after 10,000 years",
+    "as_written": "about sixty percent of today's",
+    "source": "Arithmetic from exp(-10000/20000)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 37 percent remains after 20,000 years",
+    "as_written": "After twenty thousand, about a third",
+    "source": "Arithmetic from exp(-1)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 13.5 percent remains after 40,000 years",
+    "as_written": "roughly a seventh",
+    "source": "Arithmetic from exp(-2)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Surface geomagnetic field strength ranges from about 25 to 65 microtesla",
+    "as_written": "between about twenty-five and sixty-five microtesla",
+    "source": "NOAA NCEI World Magnetic Model; International Geomagnetic Reference Field",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Loggerhead hatchlings change swimming direction when the magnetic field is rotated",
+    "as_written": "change their swimming direction when the field around them is rotated",
+    "source": "Lohmann 1991, Journal of Experimental Biology 155, 37-49",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Auroras were reported in the Caribbean during the 1859 storm",
+    "as_written": "when aurora was reported in the Caribbean",
+    "source": "Carrington event records; Green and Boardsen 2006, Advances in Space Research",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's total surface heat loss is about 46 terawatts",
+    "as_written": "about forty-six terawatts of heat",
+    "source": "Davies and Davies 2010, Solid Earth 1, 5-24",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Core-mantle boundary heat flow is estimated at about 5 to 15 terawatts",
+    "as_written": "between about five and fifteen terawatts",
+    "source": "Lay, Hernlund and Buffett 2008, Nature Geoscience 1, 25-32",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The March 13, 1989 geomagnetic storm collapsed the Hydro-Quebec grid in about 90 seconds",
+    "as_written": "the grid collapsed in about ninety seconds",
+    "source": "North American Electric Reliability Corporation report on the March 1989 geomagnetic disturbance",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About six million people lost power for roughly nine hours",
+    "as_written": "some six million people without power for roughly nine hours",
+    "source": "NASA and NOAA Space Weather Prediction Center accounts of the 1989 Quebec blackout",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Explorer 1 discovered the radiation belts in 1958",
+    "as_written": "In 1958 Explorer One discovered the radiation belts",
+    "source": "Van Allen and Frank 1959, Nature; NASA",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Magnetopause standoff distance scales as the cube root of the dipole moment",
+    "as_written": "scales as the cube root of the field strength",
+    "source": "Chapman-Ferraro pressure balance; Kivelson and Russell, Introduction to Space Physics",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The typical sunward magnetopause distance is about 10 Earth radii",
+    "as_written": "about ten Earth radii on the sunward side",
+    "source": "Shue et al. 1997, Journal of Geophysical Research",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cube root of 1/7 gives about 0.5, so about 5 Earth radii",
+    "as_written": "that falls to about five",
+    "source": "Arithmetic from the cube-root scaling",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geostationary orbit is about 42,164 km from Earth's centre, about 6.6 Earth radii",
+    "as_written": "about six and a half Earth radii",
+    "source": "Standard orbital mechanics; Earth equatorial radius 6,378 km",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The last full reversal, Brunhes-Matuyama, was about 770,000 years ago",
+    "as_written": "about seven hundred and seventy thousand years ago",
+    "source": "Singer 2014, Quaternary Science Reviews (773,000 years)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Laschamp excursion about 41,000 years ago, field about 5 percent of present, named for lava flows in France",
+    "as_written": "roughly five percent of today's",
+    "source": "Laj et al. 2014; Cooper et al. 2021, Science 371, 811",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cooper, Turney and colleagues proposed the Adams Event about 42,000 years ago coincided with a global environmental crisis; this is disputed",
+    "as_written": "around forty-two thousand years ago",
+    "source": "Cooper et al. 2021, Science 371, 811-818",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The atmosphere above each square centimetre weighs about 1 kg, equivalent to about 10 m of water",
+    "as_written": "weighs about one kilogram, which stops radiation about as well as ten metres of water",
+    "source": "Standard atmosphere, 101,325 Pa / g; water-equivalent shielding of about 10 m",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cosmic rays contribute about 0.39 mSv per year of a roughly 2.4 mSv natural background",
+    "as_written": "about four tenths of a millisievert a year, out of roughly two point four",
+    "source": "UNSCEAR 2008 Report, Annex B",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Past field collapses are not clearly linked to large ground-level radiation increases",
+    "as_written": "reviews of past field collapses find the rise at ground level modest",
+    "source": "Glassmeier and Vogt 2010, Space Science Reviews 155, 387-410",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Typical solar wind speed is about 400 km/s",
+    "as_written": "typically around four hundred kilometres per second",
+    "source": "NASA Solar Wind fact sheet; NOAA SWPC",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars lost its global dynamo roughly 4 billion years ago",
+    "as_written": "roughly four billion years ago",
+    "source": "Acuna et al. 1999, Science 284, 790; Lillis et al. 2008",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars surface pressure is about 600 pascals, under 1 percent of Earth's",
+    "as_written": "under one percent of Earth's",
+    "source": "NASA Mars fact sheet",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "MAVEN measured Mars losing gas at about 100 grams per second",
+    "as_written": "about a hundred grams every second",
+    "source": "Jakosky et al. 2015, Science 350, aaa0210; NASA MAVEN",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars Global Surveyor found strongly magnetised crustal patches in the late 1990s",
+    "as_written": "In the late 1990s, Mars Global Surveyor found patches",
+    "source": "Acuna et al. 1999, Science 284, 790",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Magnetite Curie temperature is about 580 degrees Celsius",
+    "as_written": "about five hundred and eighty degrees Celsius",
+    "source": "Dunlop and Ozdemir, Rock Magnetism (1997)",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus surface pressure is about 92 times Earth's",
+    "as_written": "about ninety times ours",
+    "source": "NASA Venus fact sheet",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ion escape rates at Earth, Mars and Venus are broadly similar",
+    "as_written": "broadly similar",
+    "source": "Gunell et al. 2018, Astronomy and Astrophysics 614, L3",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth loses about 3 kg/s of hydrogen and 50 g/s of helium",
+    "as_written": "about three kilograms of hydrogen and fifty grams of helium every second",
+    "source": "Catling and Zahnle 2009, Scientific American, The Planetary Air Leak",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's oxygenated atmosphere is expected to last about 1.08 billion more years, plus or minus about 0.14",
+    "as_written": "about one point oh eight billion years",
+    "source": "Ozaki and Reinhard 2021, Nature Geoscience 14, 138-142",
+    "second_opinion": "unreviewed",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

@@ -1,0 +1,466 @@
+[
+  {
+    "text": "From 35 degrees north, the outer edge of a Saturn-proportioned Earth ring would peak roughly 33 degrees above the horizon, about a third of the way to the zenith (geometric calculation).",
+    "as_written": "At its highest it climbs about a third of the way up the sky",
+    "source": "Geometric calculation using Saturn ring radii from NASA/JPL Cassini and Earth's equatorial radius from the NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn's main rings are more than 95 percent water ice.",
+    "as_written": "more than 95 percent water ice",
+    "source": "NASA/JPL Cassini mission; Cuzzi et al. 2010, Science, Saturn's rings review",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ring particles range from dust-sized grains to house-sized boulders.",
+    "as_written": "from grains of dust to boulders as big as houses",
+    "source": "NASA/JPL Cassini mission ring science pages",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn's main rings are often only about 10 metres thick.",
+    "as_written": "often only about 10 metres thick",
+    "source": "NASA/JPL Cassini mission ring science pages",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The rings are far thinner relative to their width than paper (about 10 m over roughly 62,000 km, versus roughly 0.1 mm over tens of centimetres for paper).",
+    "as_written": "far thinner, relative to its width, than a sheet of paper",
+    "source": "Calculation from NASA/JPL ring thickness and ring radii (C ring inner edge 74,658 km to A ring outer edge 136,775 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cassini's final orbits in 2017 flew between the rings and the planet and were used to measure ring mass.",
+    "as_written": "Cassini answered the question in 2017",
+    "source": "NASA/JPL Cassini Grand Finale; Iess et al. 2019, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn's ring mass was measured at about 1.5 times 10 to the 19 kilograms, which is 15 billion billion kilograms.",
+    "as_written": "about 15 billion billion kilograms",
+    "source": "Iess et al. 2019, Science, Measurement and implications of Saturn's gravity field and ring mass",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The result was published in 2019.",
+    "as_written": "published in 2019",
+    "source": "Iess et al. 2019, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ring mass is roughly 40 percent of the mass of Mimas.",
+    "as_written": "roughly 40 percent of the mass of Saturn's small moon Mimas",
+    "source": "Iess et al. 2019, Science (about 0.41 Mimas masses)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's mass, about 7.35 times 10 to the 22 kg, is about 4,800 times the ring mass.",
+    "as_written": "about 4,800 times more",
+    "source": "NASA Moon Fact Sheet compared with Iess et al. 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mass, about 5.97 times 10 to the 24 kg, is close to 400,000 times the ring mass.",
+    "as_written": "close to 400,000 times",
+    "source": "NASA Earth Fact Sheet compared with Iess et al. 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn's equatorial radius is about 60,000 km (60,268 km).",
+    "as_written": "about 60,000 kilometres from its centre",
+    "source": "NASA Saturn Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's equatorial radius is about 6,400 km (6,378 km).",
+    "as_written": "Earth's sits about 6,400",
+    "source": "NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn's C ring begins at about 74,658 km, which is more than 11 Earth radii.",
+    "as_written": "more than 11 Earth radii out",
+    "source": "NASA/JPL Saturn ring dimensions; NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Roche limit for icy rubble around Earth falls between roughly 2 and 4.5 Earth radii.",
+    "as_written": "between about 2 and 4.5 Earth radii",
+    "source": "Standard Roche limit formulas (rigid and fluid bodies) with Earth mean density 5.51 g/cm3 from NASA Earth Fact Sheet and ice density about 0.92 g/cm3",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn's main rings run from about 1.24 to 2.27 Saturn radii (C ring inner edge to A ring outer edge).",
+    "as_written": "from 1.24 to 2.27 times the planet's radius",
+    "source": "NASA/JPL Saturn ring dimensions (74,658 km to 136,775 km) divided by 60,268 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scaled to Earth, the ring spans about 1,500 km to 8,100 km altitude and is about 6,600 km wide.",
+    "as_written": "about 1,500 kilometres above the surface and ends about 8,100 kilometres up",
+    "source": "Calculation scaling Saturn ring radii by Earth's radius of 6,378 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scaled ring width is about 6,600 km.",
+    "as_written": "It is about 6,600 kilometres wide",
+    "source": "Calculation scaling Saturn ring radii by Earth's radius",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Keeping the same opacity, a ring scaled to Earth has about 90 times less area and needs about one hundredth of the material.",
+    "as_written": "Its area is about 90 times smaller",
+    "source": "Calculation: ratio of Saturn to Earth equatorial radius squared is about 89",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Removing that mass from the oceans would lower sea level by about half a metre.",
+    "as_written": "sea level drops by about half a metre",
+    "source": "Calculation: about 1.7 times 10 to the 17 kg of water over an ocean area of about 361 million square kilometres (NOAA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Antarctic ice sheet holds ice equivalent to about 58 metres of sea level rise.",
+    "as_written": "enough to raise the sea by about 58 metres",
+    "source": "Fretwell et al. 2013, Bedmap2, The Cryosphere; IPCC AR6",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ring material needed is under 1 percent of Antarctic ice.",
+    "as_written": "you have used less than 1 percent",
+    "source": "Calculation from the half-metre sea level equivalent and 58 metres for Antarctica",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Cassini Division is close to 5,000 km wide and is maintained in part by an orbital resonance with Mimas.",
+    "as_written": "close to 5,000 kilometres wide, and Mimas helps hold it open through an orbital resonance",
+    "source": "NASA/JPL Cassini mission, Cassini Division (about 4,700 to 4,800 km wide)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scaled to Earth, the Cassini Division would be about 500 km wide.",
+    "as_written": "about 500 kilometres wide",
+    "source": "Calculation: roughly 4,700 km times the Earth to Saturn radius ratio of about 0.106",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon is more than 25 times farther out than the ring's outer edge (about 384,400 km versus about 14,500 km from Earth's centre).",
+    "as_written": "more than 25 times farther out than the ring's outer edge",
+    "source": "NASA Moon Fact Sheet; calculation from scaled ring radius",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Circular orbital speed at the inner edge is about 7 km/s and at the outer edge about 5 km/s.",
+    "as_written": "about 7 kilometres per second. At the outer edge, about 5",
+    "source": "Calculation from Earth's gravitational parameter GM of 3.986 times 10 to the 14 cubic metres per second squared",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "North of about 64 degrees latitude, the ring's outer edge stays below the horizon.",
+    "as_written": "North of about 64 degrees",
+    "source": "Geometric calculation: the ring is visible only where cosine of latitude exceeds the reciprocal of the ring radius in Earth radii",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon reflects about 12 percent of the light that strikes it.",
+    "as_written": "about 12 percent of the light that hits it",
+    "source": "NASA Moon Fact Sheet, geometric albedo 0.12",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Clean water ice reflects substantially more light than lunar rock.",
+    "as_written": "Clean water ice reflects several times more",
+    "source": "NASA/JPL Cassini ring photometry",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn is well over a billion kilometres from Earth.",
+    "as_written": "from well over a billion kilometres away",
+    "source": "NASA Saturn Fact Sheet (closest approach to Earth about 1.2 billion km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's axial tilt is 23.4 degrees, so the June Sun is that far north of the equatorial plane.",
+    "as_written": "the Sun is 23.4 degrees north of that plane",
+    "source": "NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's shadow is roughly as wide as Earth at ring distances.",
+    "as_written": "roughly as wide as the planet itself",
+    "source": "Geometry of the Sun's angular size of about 0.53 degrees over distances of about 10,000 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The International Space Station orbits at about 400 km.",
+    "as_written": "at about 400 kilometres",
+    "source": "NASA International Space Station facts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS satellites orbit at about 20,200 km.",
+    "as_written": "orbit at about 20,200 kilometres",
+    "source": "GPS.gov, U.S. Space Force",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geostationary orbit is at 35,786 km altitude.",
+    "as_written": "35,786 kilometres",
+    "source": "NASA and ESA reference values for geostationary orbit",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "One gram at 5 km/s carries 12,500 joules (half mass times speed squared), about three grams of TNT at 4.184 kilojoules per gram.",
+    "as_written": "delivers about 12,500 joules, roughly the energy of three grams of TNT",
+    "source": "Calculation using kinetic energy and the standard TNT equivalent of 4.184 kJ per gram",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pioneer 11 was the first spacecraft to cross Saturn's ring plane, in 1979.",
+    "as_written": "In 1979, Pioneer 11 became the first spacecraft to cross the plane of Saturn's rings",
+    "source": "NASA Ames Pioneer 11 mission history",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cassini made 22 dives between the rings and Saturn in 2017.",
+    "as_written": "Cassini dived between the rings and the planet 22 times",
+    "source": "NASA/JPL Cassini Grand Finale",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Molniya orbits are inclined at about 63 degrees (63.4 degrees, the critical inclination).",
+    "as_written": "tilted at about 63 degrees",
+    "source": "ESA and NASA references on Molniya orbits",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A Molniya orbit crosses the equatorial plane at about 12,000 km from Earth's centre, within the ring's 7,900 to 14,500 km span.",
+    "as_written": "about 12,000 kilometres from the centre of the Earth",
+    "source": "Calculation from Molniya orbital elements (semi-major axis about 26,560 km, eccentricity about 0.74, argument of perigee 270 degrees)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Standard geostationary transfer orbits have apsides near the equatorial plane, so they cross it at perigee and apogee.",
+    "as_written": "crosses the equatorial plane at its lowest point and its highest point",
+    "source": "Standard geostationary transfer orbit design, ESA and NASA mission design references",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At the June solstice, noon Sun is behind the ring for latitudes about 6 to 41 degrees south.",
+    "as_written": "from about 6 degrees south to about 41 degrees south",
+    "source": "Geometric calculation using Saturn-proportioned ring radii of 1.24 to 2.27 Earth radii and solar declination of 23.4 degrees",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The city latitudes lie in that belt: Johannesburg about 26 S, Sydney about 34 S, Cape Town about 34 S, Buenos Aires about 35 S, Santiago about 33 S.",
+    "as_written": "Johannesburg, Sydney, Cape Town, Buenos Aires and Santiago",
+    "source": "USGS/GeoNames city coordinates compared with the calculated shade belt",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The B ring (1.53 to 1.95 Saturn radii) would shade about 14 to 27 degrees south at noon at the June solstice, and it is nearly opaque.",
+    "as_written": "from roughly 14 to 27 degrees south",
+    "source": "Geometric calculation using NASA/JPL B ring radii (92,000 to 117,580 km); ring opacity from Cassini occultation measurements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The inner Van Allen belt spans roughly 1,000 to 6,000 km altitude.",
+    "as_written": "from about 1,000 to about 6,000 kilometres",
+    "source": "NASA Van Allen Probes mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pioneer 11 in 1979 found that Saturn's rings and moons absorb trapped radiation particles; its instrument came from James Van Allen's team.",
+    "as_written": "it found that Saturn's rings and moons soak up trapped particles",
+    "source": "Van Allen et al. 1980, Science, Saturn's magnetosphere, rings, and inner satellites",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth passed through Saturn's ring plane in March 2025, making the rings appear to vanish.",
+    "as_written": "In March 2025, observers on Earth watched its rings seem to vanish",
+    "source": "NASA and ESA reports on the 2025 Saturn ring-plane crossing",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cassini imaged the unlit side of the rings, where dense rings look dark and sparse ones glow.",
+    "as_written": "The densest ring turns dark. The thin, translucent parts glow",
+    "source": "NASA/JPL Cassini unlit-side ring imaging",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cairo and Houston lie at about 30 degrees north, inside the shaded latitude band.",
+    "as_written": "over places like Cairo and Houston",
+    "source": "USGS/GeoNames city coordinates compared with the calculated shade belt",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn's ring rain drains between 432 and 2,870 kg of water per second, measured with the Keck telescope.",
+    "as_written": "between 432 and 2,870 kilograms of water every second",
+    "source": "O'Donoghue et al. 2019, Icarus, Observations of the chemical and thermal response of ring rain on Saturn's ionosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2023 analysis of Cassini dust data argued the rings are no older than a few hundred million years.",
+    "as_written": "cannot be older than a few hundred million years",
+    "source": "Kempf et al. 2023, Science Advances, Micrometeoroid infall onto Saturn's rings constrains their age",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2024 study argued micrometeoroid impacts can vaporise rather than stain ice, so the rings may be billions of years old.",
+    "as_written": "which would let clean-looking rings be billions of years old",
+    "source": "Hyodo, Genda and Madeira 2024, Nature Geoscience",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tomkins and colleagues published in 2024 in Earth and Planetary Science Letters that Earth had a ring in the Ordovician, about 466 million years ago.",
+    "as_written": "about 466 million years ago",
+    "source": "Tomkins et al. 2024, Earth and Planetary Science Letters, Evidence suggesting that Earth had a ring in the Ordovician",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The study used 21 Ordovician impact craters, all within 30 degrees of the equator when reconstructed.",
+    "as_written": "They took 21 impact craters from that period",
+    "source": "Tomkins et al. 2024, Earth and Planetary Science Letters",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "All 21 craters lay within 30 degrees of the paleo-equator, although most continental crust lay farther away.",
+    "as_written": "All 21 lay within 30 degrees of the equator",
+    "source": "Tomkins et al. 2024, Earth and Planetary Science Letters",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The authors suggest the ring lasted for tens of millions of years and its shadow may have contributed to the Hirnantian glaciation.",
+    "as_written": "may have lasted for tens of millions of years",
+    "source": "Tomkins et al. 2024, Earth and Planetary Science Letters; Monash University release",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Hirnantian ice age occurred about 445 million years ago and was one of the coldest intervals of the last half billion years.",
+    "as_written": "about 445 million years ago, one of the coldest stretches of the last half billion years",
+    "source": "Palaeoclimate literature on the Late Ordovician glaciation, e.g. Finnegan et al. 2011, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ordovician rock layers contain unusual amounts of meteorite debris from a large space break-up.",
+    "as_written": "hold an unusual amount of meteorite debris",
+    "source": "Schmitz et al. 2019, Science Advances, L-chondrite asteroid breakup in the Middle Ordovician",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

@@ -1,0 +1,89 @@
+The first line you see after the narration is the separator, then the claims.
+
+You are standing on a hillside at 35 degrees north, on a warm evening in late June. The sun has just set. The sky is turning the colour of a bruise. And then, without a sound, something lights up in the south.
+
+It is an arch. A wide, pale band of light rises out of the eastern horizon, curves across the southern sky, and sinks into the west. At its highest it climbs about a third of the way up the sky. It is brighter than any star you have ever seen. Its edges are razor sharp. And a few thin dark gaps cut through it, like the grooves on a vinyl record.
+
+Earth has rings.
+
+This is not going to happen. Earth has no rings, it cannot grow them overnight, and there is nothing nearby to make them from. But for the next few minutes we are going to switch the impossibility off and leave everything else running. Gravity, sunlight, orbits, radiation, ice. The first surprise is how little changes under your feet. The second is how much changes in places you have never thought to look. And near the end, we will reach a piece of evidence, locked inside ancient rock, which suggests Earth may have worn a ring once before. But first, we need to build the thing.
+
+Which rings? Saturn's, because they are the ones we understand best. Saturn's main rings are more than 95 percent water ice. The pieces run from grains of dust to boulders as big as houses, and together they form a sheet that is often only about 10 metres thick. Spread across a disc tens of thousands of kilometres wide, that makes the ring far thinner, relative to its width, than a sheet of paper.
+
+How much stuff is that? Cassini answered the question in 2017, flying between the rings and the planet and measuring how gravity tugged on the spacecraft. The result, published in 2019, was about 15 billion billion kilograms. That is roughly 40 percent of the mass of Saturn's small moon Mimas. It sounds enormous. It is not. Our Moon weighs about 4,800 times more. Earth outweighs it by close to 400,000 times. The most spectacular structure in the solar system is, in weight, a rounding error.
+
+Now we hit a problem. Saturn is huge. Its equator sits about 60,000 kilometres from its centre. Earth's sits about 6,400. If we dropped Saturn's rings around Earth at their real size, they would start more than 11 Earth radii out. And that is too far, because rings only survive close to a planet.
+
+There is a boundary called the Roche limit. Inside it, the planet pulls harder on the near side of a clump of ice than on the far side, and that difference tears the clump apart faster than its own gravity can hold it together. Outside it, ice sticks together and grows into moons. For icy rubble around Earth, the standard formula puts that boundary somewhere between about 2 and 4.5 Earth radii, depending on how strongly the pieces cling to each other. Saturn's rings at full size would sit far outside it. They would not stay rings. They would turn into a small family of moons.
+
+So we shrink them. We keep Saturn's proportions. The main rings run from 1.24 to 2.27 times the planet's radius. Around Earth, that is a band that starts about 1,500 kilometres above the surface and ends about 8,100 kilometres up. It is about 6,600 kilometres wide. All of it inside the Roche limit. All of it in the equatorial plane, flat as a plate.
+
+A shrunken ring also needs far less material. Its area is about 90 times smaller, so if you want it just as opaque, you need only about a hundredth of the ice. Take that ice from the oceans and sea level drops by about half a metre. Take it from Antarctica, which holds enough ice to raise the sea by about 58 metres, and you have used less than 1 percent. Cheap, by planetary standards. Still impossible, but cheap.
+
+One more confession. The dark gaps in your first glimpse were generous. At Saturn, gaps are carved by moons. The biggest, the Cassini Division, is close to 5,000 kilometres wide, and Mimas helps hold it open through an orbital resonance. Scaled to Earth, it would be about 500 kilometres wide. But Earth's only large moon is more than 25 times farther out than the ring's outer edge, so it cannot sculpt gaps the way Saturn's inner moons do. Earth's ring would be smoother and simpler than the one you saw. Unless it grew moons of its own.
+
+Now start the clock. And the first thing to know about the first few seconds is that your body notices nothing at all. The ring's gravity is far too small to register on a bathroom scale. The tides do not change. The Moon does not wobble. The ring is simply there, thousands of kilometres overhead, and every piece of it is falling around the planet and missing. Out at the inner edge, a piece of ice moves at about 7 kilometres per second. At the outer edge, about 5.
+
+What changes is the sky, and it changes differently depending on where you stand. At the equator, the ring plane runs straight over your head, and you see it edge on, a single thin line from horizon to horizon. At 35 degrees north you get the full arch. Walk further north and the arch sinks toward the horizon, because Earth itself starts to get in the way. North of about 64 degrees, the rings never rise above the horizon at all. From the Arctic, Earth has no rings. From Singapore, they are a razor. From Texas, they are a monument.
+
+How bright is it? The Moon reflects only about 12 percent of the light that hits it, because lunar rock is dark. Clean water ice reflects several times more. That is why Saturn's rings are easy to pick out in a small telescope, from well over a billion kilometres away. How the whole arch compares with the full Moon, nobody has measured, so the honest answer is only that it is bright.
+
+But the strangest thing about the arch arrives a few minutes after sunset, when you notice that the ring is still lit and the ground is not.
+
+Look again after ten minutes. The streetlights are on. The hillside is dark. Yet the ring is glowing, because it hangs thousands of kilometres up, and from that height the Sun has not set yet. Sunlight keeps reaching it long after your own horizon has swallowed the Sun. Then you watch a shadow arrive.
+
+Earth casts a long dark column behind it, roughly as wide as the planet itself, pointing away from the Sun. The ring lies in the plane of the equator, and in late June the Sun is 23.4 degrees north of that plane. So the shadow does not slide along the ring. It cuts across it. A dark notch opens in the middle of your arch and widens, while the two ends of the arch, far to the east and the west, keep glowing. The ring becomes a bridge with a missing span.
+
+You might expect the ring to light up the night. In the dead of night, the best part of the arch is the part that has gone dark. But something else is moving in that dark, and it is about to matter a great deal.
+
+Dots. Moving dots, crossing the sky beneath the arch. The International Space Station, at about 400 kilometres, passes under the ring entirely. So does every satellite in low orbit. They are on the safe side of a wall.
+
+The satellites on the other side are the ones that run your life. Navigation satellites orbit at about 20,200 kilometres. Satellites that hover over one spot on the ground sit at 35,786 kilometres. Everything between is now ring. To reach the upper orbits, a rocket has to cross the plane of the ring.
+
+Think about what that means. A pebble of ice weighing one gram, meeting a spacecraft at 5 kilometres per second, delivers about 12,500 joules, roughly the energy of three grams of TNT. And ring particles are often much bigger than pebbles. Crossing a plane full of ice at those speeds is not a small thing.
+
+Spaceflight has met a version of this problem before. In 1979, Pioneer 11 became the first spacecraft to cross the plane of Saturn's rings, and its controllers were not certain it would survive. In 2017, Cassini dived between the rings and the planet 22 times, and every dive worked, but only because the gap was chosen with great care.
+
+Around Earth, engineers would manage. The standard route to geostationary orbit crosses the equatorial plane at its lowest point and its highest point, and both are well clear of the ring. Launches would get through. But a satellite on Russia's Molniya orbit, a stretched ellipse tilted at about 63 degrees, would not be so lucky. It crosses the equatorial plane about 12,000 kilometres from the centre of the Earth, which is inside the ring. Some orbits we rely on would simply stop being usable.
+
+Now sleep, wake up, and look at the Sun at noon, because that is when the ring does its biggest work.
+
+A ring thousands of kilometres up casts a shadow on the planet. Where it falls depends on the season. In June the Sun stands north of the equator, so the shadow lands on the other side of the world. If you work through the geometry, the noon Sun on the June solstice would sit behind the ring for a belt of the southern hemisphere running from about 6 degrees south to about 41 degrees south.
+
+That belt contains Johannesburg, Sydney, Cape Town, Buenos Aires and Santiago. And the shade is not even. The densest part of the ring, the B ring, would stand in front of the Sun for latitudes from roughly 14 to 27 degrees south, and it is thick enough to block most direct sunlight. Johannesburg sits inside that band. Sydney sits under the outer ring, where the ice is thinner and the light leaks through.
+
+It is winter there, and winter just got darker. How much colder it would be is a real open question. It depends on how opaque the ring is, how long the shadow sits on one place, and how much sunlight the ice bounces back down toward the night side. No one has run a model good enough to settle it, so be suspicious of anyone who gives you a temperature.
+
+And while the south sits in shade, something quieter is happening in the space around the planet, something Saturn's explorers discovered by accident.
+
+A few days in, astronomers have a new problem and a new gift. Once a month, from the northern hemisphere, the Moon dips low enough in the south to slide behind the arch, dimmed by the ice in front of it. But the ring also costs astronomers a swath of sky. Anything behind it is dimmed or hidden, and the observatories that lose the most are the ones in the tropics and the mid-latitudes, where the ring is highest.
+
+The bigger story is invisible. The ring runs from about 1,500 to about 8,100 kilometres up. NASA places the inner Van Allen belt, a doughnut of fast protons trapped by Earth's magnetic field, from about 1,000 to about 6,000 kilometres. They overlap. Those trapped particles spiral along the magnetic field, bouncing between north and south, and every bounce carries them through the equatorial plane. At Saturn, that crossing is a death sentence for them. In 1979, Pioneer 11 carried an instrument from the team of James Van Allen, the man the belts are named for, and it found that Saturn's rings and moons soak up trapped particles, leaving gaps in the radiation.
+
+So around Earth, the ring would most likely begin eating the inner belt from the day it appeared. How much, and how fast, nobody has modelled in detail. Treat it as a likely direction, not a forecast. If it is right, the ring would be a radiation shield made of ice, and a region of space we now avoid might one day be worth using.
+
+To see the ring's real personality, though, you have to wait for the seasons.
+
+A year in, you have watched the arch change. Twice a year, at the equinoxes, the Sun sits in the plane of the ring, and the ring turns edge on to its light. The shadow shrinks to a thin line on the equator. The arch fades to almost nothing. Saturn does the same trick on a longer schedule. In March 2025, observers on Earth watched its rings seem to vanish, because Earth was passing through their plane.
+
+Then the Sun moves south, and a new picture arrives. By December, the Sun lights the southern face of the ring, and from the north you see only the unlit side. The densest ring turns dark. The thin, translucent parts glow. It looks like a photographic negative of June's bright arch. The shadow flips to the northern hemisphere, over places like Cairo and Houston, and the southern world gets its light back.
+
+There is also the question of how long your ring would last. Saturn's rings are slowly losing material. Charged ice grains drift along magnetic field lines and fall into the planet, a process called ring rain. Measurements from the Keck telescope put it at between 432 and 2,870 kilograms of water every second. Earth's magnetic field is messier than Saturn's, so we cannot say how a ring here would drain.
+
+How old Saturn's rings are is contested. In 2023, a team analysing Cassini's dust measurements argued that the rings are being polluted so quickly that they cannot be older than a few hundred million years. In 2024, another team argued that incoming dust can vaporise instead of staining the ice, which would let clean-looking rings be billions of years old. Both camps use the same kind of spacecraft data. The question is open.
+
+Meanwhile, think about the people living under it. Every culture that ever looked up would have named that bridge of light. Navigators would have used it as a fixed line across the sky. Astronomers would have had a harder time seeing the stars behind it. I suspect we would have reached for space sooner, and found it harder once we did. That part is a guess. The next part is not.
+
+So far, all of this has been a thought experiment. Now for the part I promised.
+
+In 2024, a team led by Andy Tomkins, a geologist at Monash University in Australia, published a paper in the journal Earth and Planetary Science Letters, arguing that Earth had a ring in the Ordovician period, about 466 million years ago.
+
+Their evidence is a pattern. They took 21 impact craters from that period and wound back the clock on plate tectonics to see where each one sat when it formed. All 21 lay within 30 degrees of the equator. Yet most of the continental crust of that age sat farther from the equator than that. Asteroids do not aim for the tropics. If space rocks were falling at random, the craters should have been scattered over the globe.
+
+Their explanation is a ring. A large asteroid strays inside Earth's Roche limit and is pulled to pieces. The debris spreads into a flat band above the equator, and over millions of years chunks fall out of it onto the ground below, building a belt of craters. Around the same time, rock layers laid down on ancient sea floors hold an unusual amount of meteorite debris, which fits a large break-up in space.
+
+The authors go one step further. They suggest the ring may have lasted for tens of millions of years, and that its shadow could have cooled the planet, contributing to the Hirnantian ice age about 445 million years ago, one of the coldest stretches of the last half billion years.
+
+Is it right? That is contested. The sample of craters is small. Their ages are uncertain. Many craters from that era have been eroded or buried, so what we see may not be what fell. Plenty of researchers are not convinced. But the idea was serious enough to pass peer review, and it changes the question. What if Earth had rings may not be a question about an imaginary future. It may be a question about a planet that has already lived it.
+
+So here is mine. If the sky had always held a ring like this, what do you think humans would have built, or believed, or invented first? Tell me in the comments.
