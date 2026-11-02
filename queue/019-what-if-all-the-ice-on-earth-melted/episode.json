@@ -1,11 +1,16 @@
 {
   "slug": "019-what-if-all-the-ice-on-earth-melted",
   "title": "What If All the Ice on Earth Melted?",
-  "status": "ready-to-render",
+  "status": "failed",
   "position": 19,
   "script_source": "claude",
   "created": "2026-10-25T09:32:09+00:00",
   "words": 3103,
   "sourced_claims": 49,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "thumbnail_words": [
+    "NO ICE"
+  ],
+  "error": "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python -m kaggle kernels push -p /home/runner/work/whatif-channel/whatif-channel/kaggle/build failed:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 189, in _run_module_as_main\n  File \"<frozen runpy>\", line 148, in _get_module_details\n  ",
+  "updated": "2026-11-02T12:51:31+00:00"
 }
