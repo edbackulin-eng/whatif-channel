@@ -1,11 +1,17 @@
 {
   "slug": "020-what-if-the-moon-had-an-atmosphere",
   "title": "What If the Moon Had an Atmosphere?",
-  "status": "ready-to-render",
+  "status": "failed",
   "position": 20,
   "script_source": "claude",
   "created": "2026-10-25T09:36:00+00:00",
   "words": 3503,
   "sourced_claims": 51,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "thumbnail_words": [
+    "MOON",
+    "ATMOS"
+  ],
+  "error": "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python -m kaggle kernels push -p /home/runner/work/whatif-channel/whatif-channel/kaggle/build failed:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 189, in _run_module_as_main\n  File \"<frozen runpy>\", line 148, in _get_module_details\n  ",
+  "updated": "2026-11-03T08:33:04+00:00"
 }
