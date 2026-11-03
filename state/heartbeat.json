@@ -1,13 +1,8 @@
 {
  "date": "2026-11-03",
- "checked_at": "2026-11-03T06:41:56Z",
- "scheduled_ahead": [
-  [
-   "2026-11-03T15:00:00Z",
-   "1XTLqtDEKsI"
-  ]
- ],
+ "checked_at": "2026-11-03T15:04:11Z",
+ "scheduled_ahead": [],
  "actions": [
-  "only 1 scheduled ahead; build started"
+  "only 0 scheduled ahead; build started"
  ]
 }
