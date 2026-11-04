@@ -1,11 +1,16 @@
 {
   "slug": "023-what-if-a-solar-flare-hit-earth-directly",
   "title": "What If a Solar Flare Hit Earth Directly?",
-  "status": "ready-to-render",
+  "status": "failed",
   "position": 23,
   "script_source": "claude",
   "created": "2026-10-25T09:49:11+00:00",
   "words": 3693,
   "sourced_claims": 59,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "thumbnail_words": [
+    "SOLAR FLARE"
+  ],
+  "error": "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python -m kaggle kernels push -p /home/runner/work/whatif-channel/whatif-channel/kaggle/build failed:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 189, in _run_module_as_main\n  File \"<frozen runpy>\", line 148, in _get_module_details\n  ",
+  "updated": "2026-11-04T03:24:28+00:00"
 }
