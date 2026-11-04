@@ -1,7 +1,7 @@
 {
   "slug": "024-what-if-earth-had-rings",
   "title": "What If Earth Had Rings?",
-  "status": "failed",
+  "status": "ready-to-render",
   "position": 24,
   "script_source": "claude",
   "created": "2026-11-01T11:39:18+00:00",
@@ -12,6 +12,6 @@
     "EARTH",
     "RINGS"
   ],
-  "error": "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python -m kaggle kernels push -p /home/runner/work/whatif-channel/whatif-channel/kaggle/build failed:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 189, in _run_module_as_main\n  File \"<frozen runpy>\", line 148, in _get_module_details\n  ",
-  "updated": "2026-11-04T09:46:41+00:00"
+  "updated": "2026-11-04T09:46:41+00:00",
+  "requeued": "2026-11-04: failed only on the kaggle CLI (no six), fixed in 7366338"
 }
