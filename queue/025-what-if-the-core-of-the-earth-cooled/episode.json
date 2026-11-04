@@ -1,11 +1,26 @@
 {
   "slug": "025-what-if-the-core-of-the-earth-cooled",
   "title": "What If the Core of the Earth Cooled?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 25,
   "script_source": "claude",
   "created": "2026-11-01T11:45:29+00:00",
   "words": 3217,
   "sourced_claims": 55,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "thumbnail_words": [
+    "FROZEN",
+    "CORE"
+  ],
+  "thumbnail_person": {
+    "gender": "man",
+    "age": 24,
+    "look": "Middle Eastern",
+    "angle": "slightly low angle looking up at the face, staring up and past the camera",
+    "setting": "earth"
+  },
+  "rendered_minutes": 193.6,
+  "updated": "2026-11-04T14:41:42+00:00",
+  "youtube_id": "tSThYV896-U",
+  "publish_at": "2026-11-05T15:00:00Z"
 }
