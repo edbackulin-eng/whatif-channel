@@ -1,0 +1,615 @@
+{
+ "made": "2026-11-04",
+ "ours": [
+  {
+   "id": "sw4p8avaswo",
+   "title": "What If the Internet Disappeared?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-16",
+   "views": 19,
+   "minutes": 22.7
+  },
+  {
+   "id": "AbeKzl1vgxY",
+   "title": "What If the Atmosphere Disappeared for Ten Seconds?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-27",
+   "views": 17,
+   "minutes": 18.7
+  },
+  {
+   "id": "gxejVO27l1U",
+   "title": "What If the Sun Went Out for a Year?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-19",
+   "views": 16,
+   "minutes": 20.4
+  },
+  {
+   "id": "sv1Syjc3NPc",
+   "title": "What If Earth Stopped Spinning?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-15",
+   "views": 13,
+   "minutes": 24.0
+  },
+  {
+   "id": "gVGYUmMfRB0",
+   "title": "What If Every Volcano Erupted at Once?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-17",
+   "views": 12,
+   "minutes": 23.4
+  },
+  {
+   "id": "eN24rIKRn_o",
+   "title": "What If Earth Lost Its Magnetic Field?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-20",
+   "views": 11,
+   "minutes": 27.1
+  },
+  {
+   "id": "gCuKxaoU2YM",
+   "title": "What If Gravity Doubled Overnight?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-22",
+   "views": 10,
+   "minutes": 21.5
+  },
+  {
+   "id": "jrxBcCVvzdM",
+   "title": "What If the Moon Fell to Earth?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-13",
+   "views": 9,
+   "minutes": 20.4
+  },
+  {
+   "id": "2AZh5ZyQGtM",
+   "title": "What If Every Satellite Failed at Once?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-29",
+   "views": 9,
+   "minutes": 23.9
+  },
+  {
+   "id": "WgFSjQZejUo",
+   "title": "What If Antarctica Melted Completely?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-24",
+   "views": 7,
+   "minutes": 21.2
+  },
+  {
+   "id": "ClxzUdrCOvQ",
+   "title": "What If the Pacific Ocean Drained?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-31",
+   "views": 7,
+   "minutes": 23.7
+  },
+  {
+   "id": "oRdy3HzgoKk",
+   "title": "What If Earth's Orbit Shifted?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-30",
+   "views": 3,
+   "minutes": 19.9
+  },
+  {
+   "id": "-GElqQJOglo",
+   "title": "What If Photosynthesis Stopped?",
+   "channel": "@TheHypothetica",
+   "published": "2026-11-02",
+   "views": 2,
+   "minutes": 20.0
+  },
+  {
+   "id": "BbogWi7X0W0",
+   "title": "What If Earth Had Two Moons?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-26",
+   "views": 1,
+   "minutes": 18.3
+  },
+  {
+   "id": "1XTLqtDEKsI",
+   "title": "What If Earth Spun Twice as Fast?",
+   "channel": "@TheHypothetica",
+   "published": "2026-11-03",
+   "views": 1,
+   "minutes": 19.1
+  },
+  {
+   "id": "K87M_IaqYCY",
+   "title": "What If a Black Hole Passed Through the Solar System?",
+   "channel": "@TheHypothetica",
+   "published": "2026-10-23",
+   "views": 0,
+   "minutes": 20.8
+  }
+ ],
+ "niche": [
+  {
+   "id": "N0-ZZ9pLyWw",
+   "title": "What If You Just Keep Digging?",
+   "channel": "Cleo Abram",
+   "published": "2024-11-18",
+   "views": 13669379,
+   "minutes": 10.5
+  },
+  {
+   "id": "CLDfBTGPRmk",
+   "title": "What if Earth became Half-Pluto? + more videos | #aumsum #kids #children #space",
+   "channel": "AumSum's What-If",
+   "published": "2024-11-19",
+   "views": 7483603,
+   "minutes": 8.4
+  },
+  {
+   "id": "lHyNpI6ei18",
+   "title": "Drilling Hole in Earth? | What if We Dug a Hole Through The Earth? | Journey to the Earth’s Core",
+   "channel": "Peekaboo Kidz",
+   "published": "2024-11-05",
+   "views": 6912872,
+   "minutes": 6.7
+  },
+  {
+   "id": "JqFSGkFPipM",
+   "title": "What if everyone pointed a laser at the moon?",
+   "channel": "xkcd's What If?",
+   "published": "2024-11-05",
+   "views": 6087575,
+   "minutes": 5.6
+  },
+  {
+   "id": "r81xnyQM5w4",
+   "title": "What If Tallest Statues came to life - Alive and moving Statues Size Comparison |First Person view",
+   "channel": "WorldTV Studio",
+   "published": "2025-02-21",
+   "views": 5836712,
+   "minutes": 11.2
+  },
+  {
+   "id": "tRXy-b6_lBc",
+   "title": "What If It Rains Bananas For A Single Day? (Spoiler: It's Bad)",
+   "channel": "Kurzgesagt – In a Nutshell",
+   "published": "2025-05-06",
+   "views": 5720066,
+   "minutes": 11.3
+  },
+  {
+   "id": "0iBYMwGDin0",
+   "title": "What If Asteroid Apophis Hit Earth? Scientists Mapped Where It Lands",
+   "channel": "Tracer Project",
+   "published": "2026-10-16",
+   "views": 5457834,
+   "minutes": 13.5
+  },
+  {
+   "id": "etYvgvJvWiE",
+   "title": "What If The Sun Disappeared in Minecraft?",
+   "channel": "Milo and Chip",
+   "published": "2025-07-18",
+   "views": 5062590,
+   "minutes": 18.8
+  },
+  {
+   "id": "L4TiApQTz18",
+   "title": "What if Earth became Half-Uranus? + more videos | #aumsum #kids #children #space",
+   "channel": "AumSum's What-If",
+   "published": "2024-11-23",
+   "views": 4727688,
+   "minutes": 8.6
+  },
+  {
+   "id": "BKIkTKqWMfg",
+   "title": "What If I Fell Into A Black Hole?",
+   "channel": "Cleo Abram",
+   "published": "2025-04-15",
+   "views": 4246108,
+   "minutes": 19.6
+  },
+  {
+   "id": "a9RiFKg5Oqg",
+   "title": "What if Saturn became a Black Hole? + more videos | #aumsum #kids #whatif",
+   "channel": "AumSum's Science",
+   "published": "2026-04-16",
+   "views": 4133794,
+   "minutes": 15.3
+  },
+  {
+   "id": "mU08GKYvPHE",
+   "title": "What If You Became SCARIER Every Day!?",
+   "channel": "Luke Davidson",
+   "published": "2025-11-30",
+   "views": 4012132,
+   "minutes": 9.5
+  },
+  {
+   "id": "242ADhlRDjA",
+   "title": "Dangerous Encounters | What if a Snapping Turtle Bites You? | Alligator Snapping Turtle Bite Force",
+   "channel": "Peekaboo Kidz",
+   "published": "2026-05-19",
+   "views": 3383400,
+   "minutes": 6.0
+  },
+  {
+   "id": "zsjHqzZhYZU",
+   "title": "What if Earth was Made of Gold? + more videos | #aumsum #kids #children #space",
+   "channel": "AumSum's What-If",
+   "published": "2024-11-20",
+   "views": 3343212,
+   "minutes": 8.1
+  },
+  {
+   "id": "WH4g1ptJ-70",
+   "title": "What if the Earth rotated 90 degrees?",
+   "channel": "xkcd's What If?",
+   "published": "2025-04-01",
+   "views": 3201095,
+   "minutes": 6.8
+  },
+  {
+   "id": "33gVLelf8HM",
+   "title": "What if Earth Swallowed the Sun? + more videos | #aumsum #kids #cartoon #whatif",
+   "channel": "It's AumSum Time",
+   "published": "2024-12-31",
+   "views": 3181895,
+   "minutes": 8.1
+  },
+  {
+   "id": "uolfjWPSTMU",
+   "title": "What If Earth Was the Only Planet in the Solar System? | Importance of Other Planets | Dr. Binocs",
+   "channel": "Peekaboo Kidz",
+   "published": "2024-12-27",
+   "views": 3151687,
+   "minutes": 6.5
+  },
+  {
+   "id": "hjNf2XiIZDY",
+   "title": "What If No One Ever Died? | #aumsum #kids #cartoon #science",
+   "channel": "AumSum's Science",
+   "published": "2025-04-17",
+   "views": 3050379,
+   "minutes": 4.9
+  },
+  {
+   "id": "u8rWjkdUIAU",
+   "title": "What Happens If You Swallow a Tooth 🦷 | What if We Swallow Teeth? | Digestion System | Dr. Binocs",
+   "channel": "Peekaboo Kidz",
+   "published": "2025-09-02",
+   "views": 2754872,
+   "minutes": 6.0
+  },
+  {
+   "id": "Kl_FAL9i6EA",
+   "title": "What if You Drink Expired Milk? | What Happens If You Drink Spoiled Milk? | The Dr. Binocs Show",
+   "channel": "Peekaboo Kidz",
+   "published": "2025-08-12",
+   "views": 2647116,
+   "minutes": 6.2
+  },
+  {
+   "id": "4v_ybv_U-Dg",
+   "title": "Spending Too Much Time On Your Phone? | What If You Stopped Going Outside? | Dr. Binocs Show",
+   "channel": "Peekaboo Kidz",
+   "published": "2024-12-10",
+   "views": 2475549,
+   "minutes": 6.0
+  },
+  {
+   "id": "wLGkQ5zdNv0",
+   "title": "What if Earth had extremely Long Legs? + more videos | #aumsum #kids #whatif",
+   "channel": "AumSum's What-If",
+   "published": "2026-04-23",
+   "views": 2442156,
+   "minutes": 8.3
+  },
+  {
+   "id": "FXTm-mSqPMg",
+   "title": "What if You Stopped Blinking? | Protective Layers of the Eye | Why Blinking Is Important? | Binocs",
+   "channel": "Peekaboo Kidz",
+   "published": "2026-04-21",
+   "views": 2354568,
+   "minutes": 6.7
+  },
+  {
+   "id": "WZUZG-pBLYQ",
+   "title": "What if Earth converted into Jupiter? + more videos | #aumsum #kids #whatif",
+   "channel": "AumSum's What-If",
+   "published": "2026-04-04",
+   "views": 2344530,
+   "minutes": 8.6
+  },
+  {
+   "id": "g9IGgUNk_x8",
+   "title": "What if we Stopped Sleeping? | #aumsum #kids #cartoon #science",
+   "channel": "AumSum's Science",
+   "published": "2025-04-22",
+   "views": 2229138,
+   "minutes": 4.1
+  },
+  {
+   "id": "JqXVCe3NHS8",
+   "title": "What If We Swapped Our Sun With Extreme Space Objects?",
+   "channel": "Gravipull",
+   "published": "2025-04-26",
+   "views": 2103929,
+   "minutes": 12.3
+  },
+  {
+   "id": "dRwkhu2ebLY",
+   "title": "What if Earth started Dancing? + more videos | #aumsum #kids #children #space",
+   "channel": "AumSum's What-If",
+   "published": "2024-11-22",
+   "views": 2100845,
+   "minutes": 6.9
+  },
+  {
+   "id": "cvjaeQ7mV6M",
+   "title": "What If a Porcupine Pricks You? 🦔 Porcupine Quills Explained | Prickly Porcupine Facts | Dr. Binocs",
+   "channel": "Peekaboo Kidz",
+   "published": "2026-07-14",
+   "views": 2076504,
+   "minutes": 6.1
+  },
+  {
+   "id": "jgafb8G7i4o",
+   "title": "But what if we tried MORE power?",
+   "channel": "xkcd's What If?",
+   "published": "2024-12-03",
+   "views": 2058366,
+   "minutes": 4.0
+  },
+  {
+   "id": "L1-QuMJAzFw",
+   "title": "What If You Lived on Mars 1 Billion Years Ago?",
+   "channel": "What If",
+   "published": "2025-11-07",
+   "views": 2056866,
+   "minutes": 18.9
+  },
+  {
+   "id": "cqlYG1S1oL0",
+   "title": "What if Sun had extremely Long Hands? + more videos | #aumsum #kids #whatif",
+   "channel": "AumSum's Science",
+   "published": "2026-04-21",
+   "views": 2040571,
+   "minutes": 15.6
+  },
+  {
+   "id": "347OLCu7ro8",
+   "title": "What if Sun became a Black Hole? | #aumsum #kids #science",
+   "channel": "It's AumSum Time",
+   "published": "2026-09-20",
+   "views": 2015307,
+   "minutes": 8.1
+  },
+  {
+   "id": "hNzQXn4ujm0",
+   "title": "What If You Accidentally Swallowed a Maggot? 🐛 | Maggots Inside Human Body | Learn with Dr. Binocs",
+   "channel": "Peekaboo Kidz",
+   "published": "2026-09-15",
+   "views": 1889615,
+   "minutes": 6.1
+  },
+  {
+   "id": "6oyoWRNXsH0",
+   "title": "What If We Destroyed a Black Hole?",
+   "channel": "What If",
+   "published": "2024-12-30",
+   "views": 1859425,
+   "minutes": 13.4
+  },
+  {
+   "id": "GwxOavvgqA0",
+   "title": "What Would Happen If You Chewed ONE Clove Daily",
+   "channel": "Dr. Eric Berg DC",
+   "published": "2024-12-21",
+   "views": 1846705,
+   "minutes": 5.7
+  },
+  {
+   "id": "1WFfZL581Yw",
+   "title": "What If You Spent a Nanosecond in a Black Hole?",
+   "channel": "What If",
+   "published": "2024-11-23",
+   "views": 1842475,
+   "minutes": 17.3
+  },
+  {
+   "id": "zuxu5x5hqrM",
+   "title": "What If Gojo Was Reborn With His Memories?",
+   "channel": "Sukunists",
+   "published": "2026-01-08",
+   "views": 1824900,
+   "minutes": 14.8
+  },
+  {
+   "id": "0jYvfrLo1DE",
+   "title": "Timeline: What If You Got Rabies?",
+   "channel": "WatchData",
+   "published": "2025-06-20",
+   "views": 1762809,
+   "minutes": 4.8
+  },
+  {
+   "id": "qkBoH5l-6EY",
+   "title": "What If a Star Exploded Near Earth? (Simulation)",
+   "channel": "Stargaze",
+   "published": "2026-01-30",
+   "views": 1734109,
+   "minutes": 9.6
+  },
+  {
+   "id": "qxulvDDCwKk",
+   "title": "What if the Sun Revolved around the Earth? | When can Sun Orbit Around Earth? | The Dr. Binocs Show",
+   "channel": "Peekaboo Kidz",
+   "published": "2025-07-15",
+   "views": 1728206,
+   "minutes": 5.9
+  },
+  {
+   "id": "JUNH3mfW28U",
+   "title": "What If Oxygen Doubled in Earth's Atmosphere? | Oxygen Toxicity Effects | The Dr. Binocs Show",
+   "channel": "Peekaboo Kidz",
+   "published": "2026-04-14",
+   "views": 1691813,
+   "minutes": 6.1
+  },
+  {
+   "id": "mcIfTD-gsrg",
+   "title": "If Earth had Shark-like Teeth, what would happen? + more videos | #aumsum #kids #children #space",
+   "channel": "AumSum's What-If",
+   "published": "2025-02-15",
+   "views": 1619657,
+   "minutes": 4.7
+  },
+  {
+   "id": "LuTxnkwh8Is",
+   "title": "If Earth was made of Electricity, what would happen? + more videos | #aumsum #kids #children #space",
+   "channel": "AumSum's What-If",
+   "published": "2025-02-20",
+   "views": 1580222,
+   "minutes": 5.2
+  },
+  {
+   "id": "z-d-m83u-b8",
+   "title": "What if Moon became a Black Hole? + more videos | #aumsum #kids #space",
+   "channel": "AumSum's Science",
+   "published": "2026-03-25",
+   "views": 1468237,
+   "minutes": 16.1
+  },
+  {
+   "id": "j0S6vcmKn90",
+   "title": "What if King Kong was Real? | #aumsum #kids #cartoon #science",
+   "channel": "It's AumSum Time",
+   "published": "2025-04-26",
+   "views": 1390407,
+   "minutes": 4.2
+  },
+  {
+   "id": "i-C8P9H86Ps",
+   "title": "Stinkiest Animal Facts | What if a Skunk Sprays On You? | Skunk Defense Mechanisms | Dr. Binocs",
+   "channel": "Peekaboo Kidz",
+   "published": "2026-10-13",
+   "views": 1383274,
+   "minutes": 6.0
+  },
+  {
+   "id": "ljDNLF9nqfM",
+   "title": "What if Godzilla was Real? | #aumsum #kids #cartoon #science",
+   "channel": "It's AumSum Time",
+   "published": "2025-04-15",
+   "views": 1354245,
+   "minutes": 6.7
+  },
+  {
+   "id": "A1uLVK9Cx8A",
+   "title": "If Diamonds Grew out of Earth's Head, what would happen? + more videos | #aumsum #kids #space",
+   "channel": "AumSum's What-If",
+   "published": "2025-02-25",
+   "views": 1325153,
+   "minutes": 5.5
+  },
+  {
+   "id": "PJwXVdrhAdU",
+   "title": "What if the Earth left the Solar System? - Part 2",
+   "channel": "SolarBalls",
+   "published": "2025-03-08",
+   "views": 1249365,
+   "minutes": 8.2
+  },
+  {
+   "id": "NXLRiSbed9s",
+   "title": "What if Saturn and the Sun Collided? + more videos | #aumsum #kids #space",
+   "channel": "AumSum's What-If",
+   "published": "2026-03-25",
+   "views": 1204189,
+   "minutes": 13.8
+  },
+  {
+   "id": "YtxkzQRrFVk",
+   "title": "What if the Earth left the Solar System? - Part 1",
+   "channel": "SolarBalls",
+   "published": "2025-03-01",
+   "views": 1179705,
+   "minutes": 8.8
+  },
+  {
+   "id": "BOSe_24nGgU",
+   "title": "What Would Happen If We Just Kept Digging?",
+   "channel": "SciShow",
+   "published": "2025-01-03",
+   "views": 1155659,
+   "minutes": 16.5
+  },
+  {
+   "id": "Fzi39NMYWO4",
+   "title": "What If a Needle Hit The Earth At The Speed Of Light?",
+   "channel": "What If",
+   "published": "2025-09-12",
+   "views": 1100526,
+   "minutes": 19.3
+  },
+  {
+   "id": "8qG7ETIhfkQ",
+   "title": "What If the Secret to Life Is Something Deadly? | BBC Earth Science",
+   "channel": "BBC Earth Science",
+   "published": "2026-10-20",
+   "views": 1088519,
+   "minutes": 4.1
+  },
+  {
+   "id": "TziiIaFM5qA",
+   "title": "What if Earth became a Black Hole? + more videos | #aumsum #kids #space",
+   "channel": "It's AumSum Time",
+   "published": "2026-04-01",
+   "views": 1032555,
+   "minutes": 18.5
+  },
+  {
+   "id": "fWK0MMPTms0",
+   "title": "What If the Sun Starts Eating Planets? (Sun Dying)",
+   "channel": "Ultra Space Balls",
+   "published": "2026-07-25",
+   "views": 1024544,
+   "minutes": 14.1
+  },
+  {
+   "id": "iLsTV8R6zDo",
+   "title": "What If the Whole World Had Rain for 1 Year?",
+   "channel": "FactZaara",
+   "published": "2026-10-22",
+   "views": 1004162,
+   "minutes": 16.0
+  },
+  {
+   "id": "liY3Lii_o1c",
+   "title": "What If Earth got Kicked Out of the Solar System? (Simulation)",
+   "channel": "Stargaze",
+   "published": "2025-06-06",
+   "views": 993657,
+   "minutes": 8.7
+  },
+  {
+   "id": "Y92l5G6IlNs",
+   "title": "What if the Earth left the Solar System? - Part 3",
+   "channel": "SolarBalls",
+   "published": "2025-03-15",
+   "views": 988866,
+   "minutes": 9.3
+  },
+  {
+   "id": "uJ29b_6ROUo",
+   "title": "What if Sun started Crying? + more videos | #aumsum #kids #whatif",
+   "channel": "AumSum's Science",
+   "published": "2026-04-18",
+   "views": 950363,
+   "minutes": 16.5
+  }
+ ]
+}

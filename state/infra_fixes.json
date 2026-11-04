@@ -1,0 +1,14 @@
+[
+ {
+  "what": "kaggle 2.2.5 imports six without declaring it; the CLI died on import at every Kaggle push",
+  "match": ["-m kaggle kernels push", "_get_module_details"],
+  "fixed_at": "2026-11-04T11:20:00Z",
+  "fix": "7366338 kaggle==2.2.5 and six in requirements"
+ },
+ {
+  "what": "the scene plan took an object for a string (Gemini answered a prompt as {subject, style})",
+  "match": ["'dict' object has no attribute 'strip'"],
+  "fixed_at": "2026-11-04T19:40:00Z",
+  "fix": "pipeline/sceneplan.py _text"
+ }
+]

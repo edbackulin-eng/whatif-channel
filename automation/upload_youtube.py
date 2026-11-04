@@ -115,7 +115,8 @@ def main():
         # report says what to look at, and "fix it, do not ship it" is the rule.
         # Set UPLOAD_ATTENTION=1 to publish one anyway after looking at it.
         verdict, problems = qc_verdict(pkg)
-        if verdict != "PASS" and os.environ.get("UPLOAD_ATTENTION") != "1":
+        # an episode the owner cleared by name ("owner_upload_despite_qc") goes up on an ATTENTION
+        if verdict != "PASS" and os.environ.get("UPLOAD_ATTENTION") != "1"                 and not (verdict == "ATTENTION" and e.get("owner_upload_despite_qc")):
             note = f"{slug} held for review, QC says {verdict}: {'; '.join(problems)[:240]}"
             log.warning(note)
             queue.log_entry(note)

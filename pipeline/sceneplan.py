@@ -164,6 +164,19 @@ def _valid_source(result, scene):
     return "generated"
 
 
+def _text(v):
+    """A field as text. The model now and then answers with an object or a list
+    ({"subject": ..., "style": ...}) where a string was asked for; 021 died on it
+    ("'dict' object has no attribute 'strip'", 03.11)."""
+    if v is None:
+        return ""
+    if isinstance(v, dict):
+        return ", ".join(_text(x) for x in v.values() if _text(x))
+    if isinstance(v, (list, tuple)):
+        return ", ".join(_text(x) for x in v if _text(x))
+    return str(v).strip()
+
+
 def plan(scenes, batch_size=27):
     """Ask Gemini for a source and a query/prompt per scene."""
     for start in range(0, len(scenes), batch_size):
@@ -182,8 +195,8 @@ def plan(scenes, batch_size=27):
         for s in batch:
             r = by_id.get(s["index"], {})
             s["source"] = _valid_source(r, s)
-            s["query"] = (r.get("query") or "").strip()
-            s["prompt"] = (r.get("prompt") or "").strip()
+            s["query"] = _text(r.get("query"))
+            s["prompt"] = _text(r.get("prompt"))
             s["card"] = r.get("card")
         log.info("planned %d/%d scenes", min(start + batch_size, len(scenes)),
                  len(scenes))

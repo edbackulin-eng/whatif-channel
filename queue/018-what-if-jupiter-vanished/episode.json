@@ -1,7 +1,7 @@
 {
   "slug": "018-what-if-jupiter-vanished",
   "title": "What If Jupiter Vanished?",
-  "status": "rendered",
+  "status": "ready-to-render",
   "position": 18,
   "script_source": "claude",
   "created": "2026-10-18T09:34:33+00:00",
@@ -19,5 +19,7 @@
     "setting": "earth"
   },
   "rendered_minutes": 137.5,
-  "updated": "2026-10-31T11:52:16+00:00"
+  "updated": "2026-11-04T19:45:00+00:00",
+  "priority": 1,
+  "owner_upload_despite_qc": "owner 04.11: upload 018 for 06.11 15:00 UTC; its 31.10 render was held on an ATTENTION (36 of 214 scenes on a blurred plate) and its artifact has expired, so it is built again"
 }

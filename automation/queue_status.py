@@ -36,6 +36,9 @@ def main():
                     help="emit needs_scripts=true when fewer than this many are ready")
     args = ap.parse_args()
 
+    if args.for_build:
+        for slug in queue.requeue_fixed():
+            print(f"requeued {slug}: its failure has been fixed")
     h = queue.health()
     print(f"ready episodes : {h['ready']}")
     print(f"weeks of stock : {h['weeks_of_stock']}")

@@ -53,7 +53,9 @@ def episodes():
 
 
 def pending():
-    return [e for e in episodes() if e.get("status") == "ready-to-render"]
+    """Ready episodes, a "priority" one first (the owner moved it up), then by position."""
+    ready = [e for e in episodes() if e.get("status") == "ready-to-render"]
+    return sorted(ready, key=lambda e: (-int(e.get("priority") or 0), e.get("position", 9999)))
 
 
 def next_episode():
@@ -87,6 +89,41 @@ def add(title, script_text, source, extra=None):
                                     encoding="utf-8")
     log.info("queued %s (%d words, via %s)", slug, meta["words"], source)
     return d
+
+
+INFRA_FIXES = ROOT / "state" / "infra_fixes.json"
+
+
+def requeue_fixed(now=None):
+    """Episodes that failed on an infrastructure fault since fixed go back to the queue.
+
+    state/infra_fixes.json lists each fixed fault: the strings its error carries and
+    when the fix landed. A failed episode whose error carries all of one fault's
+    strings, and which failed before that fix, is ready-to-render again (owner
+    04.11: a fixed fault must not keep finished scripts out of the queue)."""
+    if not INFRA_FIXES.exists():
+        return []
+    fixes = json.loads(INFRA_FIXES.read_text(encoding="utf-8"))
+    now = now or datetime.now(timezone.utc)
+    back = []
+    for e in episodes():
+        if e.get("status") != "failed":
+            continue
+        err = str(e.get("error") or "")
+        when = datetime.fromisoformat(str(e.get("updated") or "1970-01-01T00:00:00+00:00").replace("Z", "+00:00"))
+        for f in fixes:
+            fixed = datetime.fromisoformat(f["fixed_at"].replace("Z", "+00:00"))
+            if fixed <= now and when < fixed and all(m in err for m in f["match"]):
+                d = QUEUE / e["slug"]
+                meta = json.loads((d / "episode.json").read_text(encoding="utf-8"))
+                meta.pop("error", None)
+                meta["requeued"] = f"{now:%Y-%m-%d}: failed on a fixed fault ({f['fix']})"
+                (d / "episode.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
+                set_status(d, "ready-to-render")
+                log_entry(f"Requeued {e['slug']}: its failure was fixed ({f['fix']}).")
+                back.append(e["slug"])
+                break
+    return back
 
 
 def set_status(episode_dir, status, **fields):
