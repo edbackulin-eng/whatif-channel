@@ -1,11 +1,17 @@
 {
   "slug": "024-what-if-earth-had-rings",
   "title": "What If Earth Had Rings?",
-  "status": "ready-to-render",
+  "status": "failed",
   "position": 24,
   "script_source": "claude",
   "created": "2026-11-01T11:39:18+00:00",
   "words": 2853,
   "sourced_claims": 58,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "thumbnail_words": [
+    "EARTH",
+    "RINGS"
+  ],
+  "error": "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python -m kaggle kernels push -p /home/runner/work/whatif-channel/whatif-channel/kaggle/build failed:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 189, in _run_module_as_main\n  File \"<frozen runpy>\", line 148, in _get_module_details\n  ",
+  "updated": "2026-11-04T09:46:41+00:00"
 }
