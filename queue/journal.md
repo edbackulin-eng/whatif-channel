@@ -102,3 +102,5 @@ Traceback (mo
 - **2026-11-04 19:44 UTC** - Requeued 022-what-if-the-seasons-reversed: its failure was fixed (7366338 kaggle==2.2.5 and six in requirements).
 - **2026-11-04 19:44 UTC** - Requeued 007-what-if-the-oceans-vanished: its failure was fixed (pipeline/sceneplan.py _text).
 - **2026-11-04 19:44 UTC** - Requeued 021-what-if-earth-were-twice-as-large: its failure was fixed (pipeline/sceneplan.py _text).
+- **2026-11-05 03:02 UTC** - Built 018-what-if-jupiter-vanished in 142 min.
+- **2026-11-05 03:03 UTC** - Uploaded 018-what-if-jupiter-vanished as C1xcaw_DX3k, public at 2026-11-06T15:00:00Z.

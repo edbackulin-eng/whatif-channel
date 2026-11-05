@@ -1,7 +1,7 @@
 {
   "slug": "018-what-if-jupiter-vanished",
   "title": "What If Jupiter Vanished?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 18,
   "script_source": "claude",
   "created": "2026-10-18T09:34:33+00:00",
@@ -13,13 +13,15 @@
   ],
   "thumbnail_person": {
     "gender": "woman",
-    "age": 51,
-    "look": "East Asian",
+    "age": 33,
+    "look": "Middle Eastern",
     "angle": "three-quarter view, turned towards the event, looking just past the camera",
     "setting": "earth"
   },
-  "rendered_minutes": 137.5,
-  "updated": "2026-11-04T19:45:00+00:00",
+  "rendered_minutes": 141.9,
+  "updated": "2026-11-05T03:03:59+00:00",
   "priority": 1,
-  "owner_upload_despite_qc": "owner 04.11: upload 018 for 06.11 15:00 UTC; its 31.10 render was held on an ATTENTION (36 of 214 scenes on a blurred plate) and its artifact has expired, so it is built again"
+  "owner_upload_despite_qc": "owner 04.11: upload 018 for 06.11 15:00 UTC; its 31.10 render was held on an ATTENTION (36 of 214 scenes on a blurred plate) and its artifact has expired, so it is built again",
+  "youtube_id": "C1xcaw_DX3k",
+  "publish_at": "2026-11-06T15:00:00Z"
 }
