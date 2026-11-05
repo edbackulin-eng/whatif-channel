@@ -104,3 +104,5 @@ Traceback (mo
 - **2026-11-04 19:44 UTC** - Requeued 021-what-if-earth-were-twice-as-large: its failure was fixed (pipeline/sceneplan.py _text).
 - **2026-11-05 03:02 UTC** - Built 018-what-if-jupiter-vanished in 142 min.
 - **2026-11-05 03:03 UTC** - Uploaded 018-what-if-jupiter-vanished as C1xcaw_DX3k, public at 2026-11-06T15:00:00Z.
+- **2026-11-05 14:31 UTC** - Built 007-what-if-the-oceans-vanished in 223 min.
+- **2026-11-05 14:33 UTC** - Uploaded 007-what-if-the-oceans-vanished as tSiz8ZDmQmk, public at 2026-11-07T15:00:00Z.

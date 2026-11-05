@@ -1,13 +1,27 @@
 {
   "slug": "007-what-if-the-oceans-vanished",
   "title": "What If the Oceans Vanished?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 7,
   "script_source": "claude",
   "created": "2026-10-15T08:50:49+00:00",
   "words": 3019,
   "sourced_claims": 47,
   "flagged_claims": 0,
-  "updated": "2026-11-04T19:44:39+00:00",
-  "requeued": "2026-11-04: failed on a fixed fault (pipeline/sceneplan.py _text)"
+  "updated": "2026-11-05T14:33:42+00:00",
+  "requeued": "2026-11-04: failed on a fixed fault (pipeline/sceneplan.py _text)",
+  "thumbnail_words": [
+    "OCEANS",
+    "GONE"
+  ],
+  "thumbnail_person": {
+    "gender": "man",
+    "age": 42,
+    "look": "South Asian",
+    "angle": "slightly low angle looking up at the face, staring up and past the camera",
+    "setting": "earth"
+  },
+  "rendered_minutes": 222.8,
+  "youtube_id": "tSiz8ZDmQmk",
+  "publish_at": "2026-11-07T15:00:00Z"
 }
