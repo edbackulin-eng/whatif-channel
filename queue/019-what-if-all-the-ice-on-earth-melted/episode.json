@@ -1,7 +1,7 @@
 {
   "slug": "019-what-if-all-the-ice-on-earth-melted",
   "title": "What If All the Ice on Earth Melted?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 19,
   "script_source": "claude",
   "created": "2026-10-25T09:32:09+00:00",
@@ -9,8 +9,18 @@
   "sourced_claims": 49,
   "flagged_claims": 0,
   "thumbnail_words": [
-    "NO ICE"
+    "ALL ICE"
   ],
-  "updated": "2026-11-04T19:44:28+00:00",
-  "requeued": "2026-11-04: failed on a fixed fault (7366338 kaggle==2.2.5 and six in requirements)"
+  "updated": "2026-11-06T13:33:04+00:00",
+  "requeued": "2026-11-04: failed on a fixed fault (7366338 kaggle==2.2.5 and six in requirements)",
+  "thumbnail_person": {
+    "gender": "man",
+    "age": 58,
+    "look": "white",
+    "angle": "slightly high angle looking down, face tilted up towards the sky",
+    "setting": "earth"
+  },
+  "rendered_minutes": 162.8,
+  "youtube_id": "C2yep2BX-z0",
+  "publish_at": "2026-11-09T15:00:00Z"
 }
