@@ -108,3 +108,5 @@ Traceback (mo
 - **2026-11-05 14:33 UTC** - Uploaded 007-what-if-the-oceans-vanished as tSiz8ZDmQmk, public at 2026-11-07T15:00:00Z.
 - **2026-11-06 13:31 UTC** - Built 019-what-if-all-the-ice-on-earth-melted in 163 min.
 - **2026-11-06 13:33 UTC** - Uploaded 019-what-if-all-the-ice-on-earth-melted as C2yep2BX-z0, public at 2026-11-09T15:00:00Z.
+- **2026-11-07 13:08 UTC** - Built 020-what-if-the-moon-had-an-atmosphere in 187 min.
+- **2026-11-07 13:10 UTC** - Uploaded 020-what-if-the-moon-had-an-atmosphere as VhKX4mkahSc, public at 2026-11-10T15:00:00Z.

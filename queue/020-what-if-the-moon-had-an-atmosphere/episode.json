@@ -1,7 +1,7 @@
 {
   "slug": "020-what-if-the-moon-had-an-atmosphere",
   "title": "What If the Moon Had an Atmosphere?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 20,
   "script_source": "claude",
   "created": "2026-10-25T09:36:00+00:00",
@@ -9,9 +9,19 @@
   "sourced_claims": 51,
   "flagged_claims": 0,
   "thumbnail_words": [
-    "MOON",
-    "ATMOS"
+    "BLUE MOON",
+    "NEW AIR"
   ],
-  "updated": "2026-11-04T19:44:28+00:00",
-  "requeued": "2026-11-04: failed on a fixed fault (7366338 kaggle==2.2.5 and six in requirements)"
+  "updated": "2026-11-07T13:10:12+00:00",
+  "requeued": "2026-11-04: failed on a fixed fault (7366338 kaggle==2.2.5 and six in requirements)",
+  "thumbnail_person": {
+    "gender": "woman",
+    "age": 24,
+    "look": "South Asian",
+    "angle": "near profile, head turned towards the event, one eye catching the light",
+    "setting": "earth"
+  },
+  "rendered_minutes": 187.4,
+  "youtube_id": "VhKX4mkahSc",
+  "publish_at": "2026-11-10T15:00:00Z"
 }
