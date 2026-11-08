@@ -1,0 +1,426 @@
+[
+  {
+    "text": "Earth's mass is about 5.97 x 10^24 kg",
+    "as_written": "about five point nine seven times ten to the twenty-fourth kilograms",
+    "source": "NASA Goddard Planetary Fact Sheet (Earth)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mean density is about 5.5 g/cm3 (5,514 kg/m3)",
+    "as_written": "average density is about five and a half grams per cubic centimetre",
+    "source": "NASA Goddard Planetary Fact Sheet (Earth)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gold's density is about 19.3 g/cm3",
+    "as_written": "a density of about nineteen point three",
+    "source": "CRC Handbook of Chemistry and Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gold is about 3.5 times as dense as Earth's average, so the same volume has about 3.5 times the mass",
+    "as_written": "three and a half times as dense",
+    "source": "Calculation: 19.3 / 5.51, using NASA Planetary Fact Sheet and CRC Handbook",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A gold Earth of equal volume would have a mass of about 2 x 10^25 kg",
+    "as_written": "about two times ten to the twenty-fifth kilograms",
+    "source": "Calculation: 5.972e24 kg x 3.5",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "If mass were kept the same, a gold ball would be about two thirds as wide",
+    "as_written": "only about two thirds as wide",
+    "source": "Calculation: (1/3.5)^(1/3) = 0.66",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Humans have mined a little over 200,000 tonnes of gold in total",
+    "as_written": "a little over two hundred thousand tonnes",
+    "source": "World Gold Council, Gold Supply and Demand statistics (above-ground stocks)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "All mined gold would form a cube about 22 m on a side",
+    "as_written": "a cube about twenty-two metres on each side",
+    "source": "Calculation: about 216,000 t / 19,300 kg per m3, about 11,200 m3, cube root about 22 m",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That volume equals roughly four and a half Olympic pools",
+    "as_written": "roughly four and a half Olympic swimming pools",
+    "source": "Calculation using the World Aquatics minimum pool volume of 2,500 m3",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The planet of gold is about a hundred quadrillion times the volume of all mined gold",
+    "as_written": "about a hundred quadrillion times larger than that cube",
+    "source": "Calculation: Earth volume 1.08e21 m3 (NASA) / about 11,200 m3",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "World gold mine production is a bit over 3,000 tonnes a year",
+    "as_written": "a bit over three thousand tonnes a year",
+    "source": "USGS Mineral Commodity Summaries 2025 (gold)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Neutron star merger GW170817 was detected on 17 August 2017, about 130 million light years away",
+    "as_written": "the seventeenth of August, 2017, about one hundred and thirty million light years away",
+    "source": "LIGO/Virgo collaboration, Abbott et al. 2017, Physical Review Letters 119, 161101",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Models of the GW170817 kilonova suggest it forged from a few to over ten Earth masses of gold, with wide uncertainty",
+    "as_written": "anywhere from a few to more than ten Earth masses of gold, with estimates varying",
+    "source": "Kasen et al. 2017, Nature 551, 80; Pian et al. 2017, Nature 551, 67",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2025 study proposed giant magnetar flares may supply roughly 1 to 10 percent of r-process elements",
+    "as_written": "perhaps one to ten percent",
+    "source": "Patel et al. 2025, Astrophysical Journal Letters (SGR 1806-20 giant flare)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gold makes up roughly a billionth of the Sun's mass, so the Sun holds thousands of times less gold than the golden Earth",
+    "as_written": "only about a billionth of the mass of the Sun",
+    "source": "Asplund et al. 2009, Annual Review of Astronomy and Astrophysics 47, 481; solar mass from NASA Sun Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Surface gravity of a same-size gold Earth would be 3.5 times Earth's",
+    "as_written": "three and a half times stronger",
+    "source": "Calculation: g scales with mass at fixed radius",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's surface gravity is about 9.8 m/s2",
+    "as_written": "about nine point eight metres per second squared",
+    "source": "NASA Goddard Planetary Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gravity on the gold Earth would be about 34 m/s2",
+    "as_written": "about thirty-four",
+    "source": "Calculation: 9.8 x 3.5",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 70 kg person would feel like about 245 kg",
+    "as_written": "like two hundred and forty-five",
+    "source": "Calculation: 70 x 3.5",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fighter pilots with g-suits tolerate up to about 9 g, briefly",
+    "as_written": "up to about nine times normal gravity, but only for seconds",
+    "source": "US Air Force / NASA aerospace physiology literature on sustained G tolerance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Burj Khalifa is 828 m tall",
+    "as_written": "eight hundred and twenty-eight metres",
+    "source": "Council on Tall Buildings and Urban Habitat",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pressure at Earth's centre is about 360 GPa",
+    "as_written": "about three hundred and sixty gigapascals",
+    "source": "Dziewonski and Anderson 1981, Preliminary Reference Earth Model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "360 GPa is about 3.5 million times sea-level air pressure",
+    "as_written": "three and a half million times the air pressure at sea level",
+    "source": "Calculation: 360e9 Pa / 101,325 Pa",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Central pressure scales with density squared, so more than ten times higher for gold at the same size",
+    "as_written": "more than ten times higher",
+    "source": "Calculation from hydrostatic scaling, P proportional to G rho^2 R^2: 3.5^2 = 12",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Surface air pressure with the same atmosphere mass would be about 3.5 times higher",
+    "as_written": "about three and a half times today's sea-level pressure",
+    "source": "Calculation: pressure = column mass x g",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "3.5 atmospheres corresponds to about 25 m of seawater depth",
+    "as_written": "diving about twenty-five metres under the sea",
+    "source": "Calculation: each 10 m of seawater adds about 1 atm; NOAA Diving Manual",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Nitrogen narcosis begins at pressures near those of 3.5 atmospheres",
+    "as_written": "it begins around the pressures you now live in",
+    "source": "NOAA Diving Manual; US Navy Diving Manual",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "The source and medical consensus state that nitrogen narcosis typically begins at partial pressures equivalent to 30 metres of depth (about 4 atmospheres), not 3.5 atmospheres.",
+    "needs_human": true
+  },
+  {
+    "text": "Earth's atmospheric scale height is about 8.5 km",
+    "as_written": "about eight and a half kilometres",
+    "source": "NASA Goddard Earth Fact Sheet / standard atmosphere references",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Scale height would be about 2.5 km at 3.5 g",
+    "as_written": "about two and a half kilometres",
+    "source": "Calculation: H = kT/mg, 8.5 / 3.5",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Commercial jets cruise at about 11 km",
+    "as_written": "a commercial jet cruising at eleven kilometres",
+    "source": "FAA / typical cruise altitude, about 36,000 ft",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's mean distance is about 384,400 km",
+    "as_written": "about three hundred and eighty-four thousand kilometres",
+    "source": "NASA Goddard Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's mean orbital speed is about 1 km/s",
+    "as_written": "about one kilometre per second",
+    "source": "NASA Goddard Moon Fact Sheet (1.022 km/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "With 3.5x Earth mass and unchanged Moon speed, perigee would be about 64,000 km",
+    "as_written": "a little over sixty-four thousand kilometres",
+    "source": "Calculation: Newtonian orbital mechanics, vis-viva and angular momentum conservation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The new orbital period would be about 6.5 days versus 27.3",
+    "as_written": "about six and a half days instead of twenty-seven",
+    "source": "Calculation: Kepler's third law; Moon sidereal period 27.3 d from NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Roche limit for these densities is under 30,000 km",
+    "as_written": "under thirty thousand kilometres",
+    "source": "Calculation: fluid Roche limit 2.44 R (rho_planet/rho_moon)^(1/3)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal force scales with the inverse cube of distance; six times closer gives 216 times",
+    "as_written": "two hundred and sixteen times stronger",
+    "source": "Calculation: 6^3 = 216",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Present lunar equilibrium tide is about half a metre",
+    "as_written": "half a metre or so",
+    "source": "Standard tidal theory, equilibrium tide approximately 0.5 m; NOAA tides educational material",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Everest is 8,849 m high",
+    "as_written": "eight thousand eight hundred and forty-nine metres",
+    "source": "Nepal and China joint survey, 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 71 percent of Earth's surface is ocean",
+    "as_written": "seventy-one percent",
+    "source": "NOAA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The deepest ocean trench is nearly 11 km deep",
+    "as_written": "nearly eleven kilometres down",
+    "source": "NOAA / Challenger Deep surveys, about 10,900 m",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "JWST's mirror segments are gold coated, about 100 nm thick, 18 segments, about 48 grams of gold total",
+    "as_written": "about one hundred nanometres thick, and the total gold on the whole mirror is only about forty-eight grams",
+    "source": "NASA Webb Telescope mirror fact pages",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's total internal heat loss is about 47 terawatts",
+    "as_written": "about forty-seven terawatts",
+    "source": "Davies and Davies 2010, Solid Earth 1, 5",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Roughly half of Earth's heat comes from radioactive decay, measured with geoneutrinos, with the split debated",
+    "as_written": "roughly half of that is thought to come from radioactive decay",
+    "source": "KamLAND and Borexino collaborations, geoneutrino measurements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gold has one stable isotope, gold-197",
+    "as_written": "only one stable isotope, gold one ninety-seven",
+    "source": "IUPAC / Nubase atomic mass evaluation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gold's thermal conductivity is about 318 W/m/K",
+    "as_written": "about three hundred and eighteen watts per metre per kelvin",
+    "source": "CRC Handbook of Chemistry and Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Typical rock conductivity is about 2 to 3 W/m/K",
+    "as_written": "two or three for typical rock",
+    "source": "Clauser and Huenges 1995, Rock Physics and Phase Relations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gold melts at 1,064 degrees Celsius at ordinary pressure",
+    "as_written": "one thousand and sixty-four degrees Celsius",
+    "source": "CRC Handbook of Chemistry and Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Orbital speed at the surface would rise from 7.9 km/s to about 15 km/s; escape speed from 11.2 to about 21 km/s",
+    "as_written": "about seven point nine kilometres per second to about fifteen, and the speed to escape from eleven point two to about twenty-one",
+    "source": "Calculation: speeds scale with the square root of mass at fixed radius; baseline from NASA Planetary Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Super-Earths are planets of one to ten Earth masses and are common around other stars; the solar system has none",
+    "as_written": "between one and ten Earth masses",
+    "source": "NASA Exoplanet Archive / NASA Exoplanet Exploration",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's orbital period does not depend on the planet's mass; the year stays about 365 days",
+    "as_written": "three hundred and sixty-five days",
+    "source": "Kepler's third law; NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Post-tidal-circularisation Moon distance would be roughly 110,000 km",
+    "as_written": "around a hundred and ten thousand kilometres",
+    "source": "Calculation: angular momentum conservation, a(1-e^2) with perigee 64,000 km and apogee 384,400 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gold dissolves only in aqua regia or cyanide solutions, not in ordinary acids or water",
+    "as_written": "you need a mixture called aqua regia, or something like cyanide",
+    "source": "CRC Handbook of Chemistry and Physics; standard inorganic chemistry",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Chemical weathering and the carbon-silicate cycle regulate Earth's climate over geological time",
+    "as_written": "carbon-silicate cycle",
+    "source": "Walker, Hays and Kasting 1981, Journal of Geophysical Research 86, 9776",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

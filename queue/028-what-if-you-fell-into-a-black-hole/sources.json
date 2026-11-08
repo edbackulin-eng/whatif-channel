@@ -1,0 +1,370 @@
+[
+  {
+    "text": "Gaia BH1 is the nearest confirmed black hole, about 1,560 light years away",
+    "as_written": "about one thousand five hundred and sixty light years from Earth",
+    "source": "El-Badry et al. 2023, Monthly Notices of the Royal Astronomical Society, using ESA Gaia mission data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Parker Solar Probe reached about 192 km/s at its closest approach to the Sun (692,000 km/h, December 2024)",
+    "as_written": "about one hundred and ninety-two kilometres per second",
+    "source": "NASA and Johns Hopkins Applied Physics Laboratory, Parker Solar Probe perihelion announcement, December 2024",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At about 192 km/s, travelling about 1,560 light years takes roughly 2.4 million years (derived: distance divided by 192/299,792 of light speed)",
+    "as_written": "roughly two and a half million years",
+    "source": "Derived from Gaia BH1 distance (El-Badry et al. 2023) and Parker Solar Probe speed (NASA/APL)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cygnus X-1 black hole has a mass of about 21 solar masses",
+    "as_written": "about twenty-one times the mass of the Sun",
+    "source": "Miller-Jones et al. 2021, Science, 'Cygnus X-1 contains a 21-solar mass black hole'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sagittarius A* has a mass of about four million solar masses",
+    "as_written": "about four million times the mass of the Sun",
+    "source": "Event Horizon Telescope Collaboration 2022, Astrophysical Journal Letters; GRAVITY Collaboration measurements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "M87* has a mass of about 6.5 billion solar masses",
+    "as_written": "about six and a half billion times the mass of the Sun",
+    "source": "Event Horizon Telescope Collaboration 2019, Astrophysical Journal Letters 875, L1",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Event Horizon Telescope published the first image of a black hole, M87*, in 2019",
+    "as_written": "photographed, by the Event Horizon Telescope in 2019",
+    "source": "Event Horizon Telescope Collaboration, April 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The event horizon of a non-spinning black hole has radius 2GM/c^2, proportional to mass",
+    "as_written": "the radius of the horizon grows in direct proportion to its mass",
+    "source": "Schwarzschild solution, Karl Schwarzschild 1916, general relativity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A black hole of one solar mass has a horizon radius of about 3 km",
+    "as_written": "a radius of about three kilometres",
+    "source": "Schwarzschild radius, 2GM/c^2 with the IAU nominal solar mass parameter",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "An Earth-mass black hole would have a horizon radius of about 9 mm",
+    "as_written": "it would be about nine millimetres",
+    "source": "Schwarzschild radius, 2GM/c^2 with Earth mass of 5.97e24 kg (about 8.87 mm)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cygnus X-1 horizon radius is about 60 km (2.95 km per solar mass times about 21)",
+    "as_written": "a radius of about sixty kilometres",
+    "source": "Schwarzschild radius calculation using the Miller-Jones et al. 2021 mass",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sagittarius A* horizon radius is about 12 million km",
+    "as_written": "a horizon of about twelve million kilometres",
+    "source": "Schwarzschild radius calculation using Event Horizon Telescope Collaboration 2022 mass",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mercury's orbit has an average radius of about 58 million km",
+    "as_written": "about fifty-eight million kilometres",
+    "source": "NASA Planetary Fact Sheet, Mercury semi-major axis 57.9 million km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "M87* horizon radius is about 19 billion km, roughly four times the Sun-Neptune distance",
+    "as_written": "about nineteen billion kilometres, roughly four times the distance from the Sun to Neptune",
+    "source": "Schwarzschild radius calculation using EHT 2019 mass; NASA Planetary Fact Sheet, Neptune 4.5 billion km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Light can orbit at 1.5 times the horizon radius for a non-spinning black hole (photon sphere)",
+    "as_written": "At one and a half times the horizon radius",
+    "source": "Schwarzschild geometry; Misner, Thorne and Wheeler, Gravitation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The innermost stable circular orbit of a non-spinning black hole is at three times the horizon radius (six GM/c^2)",
+    "as_written": "at three times the horizon radius for a hole that does not spin",
+    "source": "Schwarzschild geometry; Misner, Thorne and Wheeler, Gravitation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Accretion discs in X-ray binaries like Cygnus X-1 are heated to millions of degrees and emit X-rays",
+    "as_written": "heats it to millions of degrees, and it shines brightly in X-rays",
+    "source": "NASA/Chandra and standard accretion disc theory (Shakura and Sunyaev 1973)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cygnus X-1 draws gas from a companion star",
+    "as_written": "stripping gas from a companion star",
+    "source": "Miller-Jones et al. 2021, Science",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At the horizon of a 21 solar mass black hole, the tidal acceleration across a 2 m body is about five million times Earth gravity (derived from c^6 L / (4 (GM)^2))",
+    "as_written": "about five million times the gravity you feel standing on Earth",
+    "source": "Derived from general relativity tidal tensor for Schwarzschild geometry, Misner, Thorne and Wheeler, Gravitation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "For a stellar-mass black hole, tidal stretching reaches fatal levels thousands of km outside the horizon",
+    "as_written": "thousands of kilometres from the horizon",
+    "source": "Derived from tidal acceleration 2GM L / r^3 with Cygnus X-1 mass",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Maximum proper time from horizon to singularity is pi GM/c^3, about a third of a millisecond for 21 solar masses",
+    "as_written": "about a third of a millisecond",
+    "source": "Schwarzschild geometry; Misner, Thorne and Wheeler, Gravitation; Hamilton and Lisle 2008, American Journal of Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sagittarius A* is about 27,000 light years away",
+    "as_written": "about twenty-seven thousand light years",
+    "source": "GRAVITY Collaboration 2019 and Event Horizon Telescope Collaboration 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Event Horizon Telescope released the first image of Sagittarius A* in 2022",
+    "as_written": "In 2022 the Event Horizon Telescope released its first image",
+    "source": "Event Horizon Telescope Collaboration, 12 May 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal force at the horizon scales as the inverse square of mass",
+    "as_written": "Tidal force falls off with the square of the mass",
+    "source": "Derived from Schwarzschild tidal tensor; Misner, Thorne and Wheeler, Gravitation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At the Sagittarius A* horizon the tidal acceleration across 2 m is about one ten-thousandth of Earth gravity (derived)",
+    "as_written": "about a ten-thousandth of the gravity you feel on Earth",
+    "source": "Derived from general relativity tidal formula using EHT 2022 mass",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Equivalence principle: in free fall you feel weightless and local physics looks like empty space",
+    "as_written": "Einstein's equivalence principle says that if you are in free fall, you feel weightless",
+    "source": "Einstein 1907-1915, general relativity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Maximum proper time inside Sagittarius A* from horizon to singularity is about a minute (pi GM/c^3, roughly 62 to 67 seconds)",
+    "as_written": "the longest it can possibly be is about a minute",
+    "source": "Schwarzschild geometry; Hamilton and Lisle 2008, American Journal of Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Andrew Hamilton at the University of Colorado Boulder produced simulations of falling into a black hole",
+    "as_written": "made by the astrophysicist Andrew Hamilton at the University of Colorado Boulder",
+    "source": "Hamilton and Lisle 2008, American Journal of Physics 76, 519; JILA visualisations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A distant observer sees an infalling object freeze and redshift near the horizon",
+    "as_written": "you freeze and fade at the edge",
+    "source": "Schwarzschild geometry; Misner, Thorne and Wheeler, Gravitation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "M87* is about 55 million light years away in Messier 87",
+    "as_written": "fifty-five million light years away in the galaxy Messier 87",
+    "source": "Event Horizon Telescope Collaboration 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Maximum proper time inside M87* is about a day (pi GM/c^3, roughly 28 hours)",
+    "as_written": "about a day",
+    "source": "Schwarzschild geometry, derived from EHT 2019 mass; Hamilton and Lisle 2008",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Inside the horizon the radial coordinate becomes timelike and the singularity is inevitable",
+    "as_written": "Inside the horizon, space and time swap their roles",
+    "source": "Schwarzschild geometry; Misner, Thorne and Wheeler, Gravitation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Free fall maximises proper time inside a Schwarzschild black hole, and thrusting shortens it",
+    "as_written": "Free fall maximises your remaining life",
+    "source": "Hamilton and Lisle 2008, American Journal of Physics; geodesics maximise proper time in general relativity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Roger Penrose proved in 1965 that singularities are unavoidable once a horizon forms",
+    "as_written": "In 1965, the physicist Roger Penrose proved",
+    "source": "Penrose 1965, Physical Review Letters 14, 57",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Penrose shared the 2020 Nobel Prize in Physics for black hole work",
+    "as_written": "in 2020 that work earned him a share of the Nobel Prize in Physics",
+    "source": "Nobel Prize in Physics 2020, Nobel Foundation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Roy Kerr found the solution for spinning black holes in 1963",
+    "as_written": "worked out by Roy Kerr in 1963",
+    "source": "Kerr 1963, Physical Review Letters 11, 237",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Poisson and Israel showed in 1990 that the inner horizon region is likely unstable (mass inflation)",
+    "as_written": "in 1990, Eric Poisson and Werner Israel showed",
+    "source": "Poisson and Israel 1990, Physical Review D 41, 1796",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hawking showed black holes emit thermal radiation in 1974",
+    "as_written": "in 1974, Stephen Hawking showed",
+    "source": "Hawking 1974, Nature 248, 30",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A solar-mass black hole has a Hawking temperature of about 60 nanokelvin",
+    "as_written": "about sixty billionths of a kelvin",
+    "source": "Hawking temperature formula T = hbar c^3 / (8 pi G M k), about 6.2e-8 K",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The cosmic microwave background temperature is about 2.7 K",
+    "as_written": "about two point seven kelvin",
+    "source": "Fixsen 2009, Astrophysical Journal; COBE FIRAS and Planck mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A solar-mass black hole takes about 10^67 years to evaporate",
+    "as_written": "about ten to the power of sixty-seven years",
+    "source": "Hawking evaporation time formula; Page 1976, Physical Review D 13, 198",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The universe is about 13.8 billion years old",
+    "as_written": "about thirteen point eight billion years old",
+    "source": "Planck Collaboration 2018, Astronomy and Astrophysics 641, A6",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hawking conceded the information paradox bet in 2004",
+    "as_written": "In 2004, he conceded that he was probably wrong",
+    "source": "Hawking's presentation at the GR17 conference, Dublin, July 2004",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In 2019 calculations showed radiation can carry out information following the Page curve",
+    "as_written": "In 2019, calculations by several groups showed",
+    "source": "Penington 2019, and Almheiri, Engelhardt, Marolf and Maxfield 2019, Journal of High Energy Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Susskind and others proposed black hole complementarity in the 1990s",
+    "as_written": "In the 1990s, Leonard Susskind and others proposed",
+    "source": "Susskind, Thorlacius and Uglum 1993, Physical Review D 48, 3743",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The firewall argument was published in 2012 by Almheiri, Marolf, Polchinski and Sully",
+    "as_written": "in 2012, four physicists, Ahmed Almheiri, Donald Marolf, Joseph Polchinski and James Sully",
+    "source": "Almheiri, Marolf, Polchinski and Sully 2013, Journal of High Energy Physics, arXiv 2012",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

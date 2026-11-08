@@ -1,0 +1,250 @@
+[
+  {
+    "text": "The Moon's average distance from Earth is about 384,400 kilometres.",
+    "as_written": "about three hundred eighty-four thousand kilometres away",
+    "source": "NASA Moon Fact Sheet (NSSDCA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Light takes about 1.28 seconds to travel from the Moon to Earth, so a round trip takes about 2.56 seconds.",
+    "as_written": "about one point three seconds; At about two point five six seconds",
+    "source": "NASA Moon Fact Sheet; Lunar Laser Ranging literature (Murphy 2013, Reports on Progress in Physics)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A typical laser pointer beam diverges by about one milliradian, giving a spot roughly 384 km across at the Moon's distance. This is distance multiplied by divergence angle, a typical pointer specification and an assumption stated in the narration.",
+    "as_written": "about a milliradian, which means one metre of width for every kilometre; a spot roughly three hundred eighty-four kilometres across",
+    "source": "Standard geometric beam-divergence calculation using typical laser pointer manufacturer specifications; distance from NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's diameter is about 3,474 km.",
+    "as_written": "about three thousand four hundred seventy-four kilometres wide",
+    "source": "NASA Moon Fact Sheet (NSSDCA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The spot would cover about one ninth of the Moon's diameter.",
+    "as_written": "about one ninth of its diameter",
+    "source": "Calculation: 384 km divided by 3,474 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's apparent angular size in the sky is about half a degree.",
+    "as_written": "only about half a degree wide",
+    "source": "NASA Moon Fact Sheet; standard astronomical reference value (about 0.52 degrees mean)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The common legal limit for visible laser pointers is five milliwatts.",
+    "as_written": "limited to five milliwatts",
+    "source": "US FDA laser product regulations and IEC 60825-1 Class 3R limit",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Assuming about four billion pointers on the Moon-facing half of Earth at five milliwatts each gives 20 megawatts.",
+    "as_written": "Four billion pointers at five milliwatts each makes twenty million watts. Twenty megawatts.",
+    "source": "Calculation: 4 billion x 5 mW; world population over 8 billion per UN Department of Economic and Social Affairs, World Population Prospects 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The world population passed 8 billion in November 2022, and roughly half the planet faces the Moon at a given time.",
+    "as_written": "Roughly half the planet is always facing away from the Moon; eight billion people",
+    "source": "United Nations Department of Economic and Social Affairs, World Population Prospects 2022; basic geometry",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon reflects only about 12 percent of the sunlight that strikes it.",
+    "as_written": "reflects only about twelve percent of the light that strikes it",
+    "source": "NASA Moon Fact Sheet (geometric albedo 0.12)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sunlight at the Moon's distance delivers about 1,360 watts per square metre.",
+    "as_written": "about thirteen hundred sixty watts for every square metre",
+    "source": "Total Solar Irradiance measurements, NASA SORCE/TIM mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 384 km wide spot has an area of about 115,000 square kilometres.",
+    "as_written": "that spot of about one hundred fifteen thousand square kilometres",
+    "source": "Calculation: pi x (192 km) squared",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Twenty megawatts spread over that area gives about one ten-thousandth of a watt per square metre, about one eight-millionth of sunlight.",
+    "as_written": "about one ten-thousandth of a watt; about one eight-millionth",
+    "source": "Calculation: 20 MW divided by 1.16e11 square metres, compared with 1,361 W per square metre",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The US FAA recorded more than 13,000 laser incidents involving aircraft in 2023.",
+    "as_written": "In 2023 the United States Federal Aviation Administration recorded more than thirteen thousand laser incidents",
+    "source": "US Federal Aviation Administration, Laser Incidents annual statistics, 2023",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Earth rotates at fifteen degrees per hour.",
+    "as_written": "The Earth turns at fifteen degrees every hour",
+    "source": "Standard astronomy: 360 degrees in 24 hours",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon rises about fifty minutes later each day.",
+    "as_written": "the Moon rises about fifty minutes later each night",
+    "source": "NASA Moon observation guidance; lunar orbital mechanics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The cycle of lunar phases takes about 29.5 days.",
+    "as_written": "about twenty-nine and a half days",
+    "source": "NASA Moon Fact Sheet (synodic period 29.53 days)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Light exerts a force equal to power divided by the speed of light; 20 MW gives about 0.07 newtons, roughly the weight of about seven grams.",
+    "as_written": "about seven hundredths of a newton; roughly seven grams",
+    "source": "Radiation pressure physics, calculation 20e6 W / 3e8 m/s; speed of light defined by SI",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's mass is about 7.35 times ten to the 22nd kilograms.",
+    "as_written": "seven point three five followed by twenty-two zeros",
+    "source": "NASA Moon Fact Sheet (NSSDCA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Applying that force for a year displaces the Moon by about half a nanometre.",
+    "as_written": "less than a billionth of a metre. About half a nanometre",
+    "source": "Calculation: x = 0.5 x (F/M) x t squared for one year, F about 0.067 N, M = 7.35e22 kg",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon recedes from Earth at about 3.8 centimetres per year.",
+    "as_written": "about three point eight centimetres every year",
+    "source": "Lunar Laser Ranging data; NASA; Williams, Boggs et al. analyses",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's recession is caused by tidal interaction with Earth.",
+    "as_written": "It is caused by tides",
+    "source": "NASA / standard tidal dynamics; confirmed by Lunar Laser Ranging",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apollo 11 astronauts placed a retroreflector array of 100 corner cubes in July 1969.",
+    "as_written": "In July of 1969 ... one hundred of them",
+    "source": "NASA Apollo 11 Lunar Surface Experiments Package documentation; Lunar Laser Ranging Experiment",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apollo 14 left an array of 100 corner cubes and Apollo 15 left an array of 300.",
+    "as_written": "Apollo 14 added another array of one hundred. Apollo 15 left one with three hundred.",
+    "source": "NASA Apollo Lunar Surface Experiments; International Laser Ranging Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Soviet Union landed laser reflectors on its Lunokhod robotic rovers.",
+    "as_written": "The Soviet Union also landed reflectors on its robotic rovers",
+    "source": "International Laser Ranging Service; Soviet Lunokhod 1 and 2 missions",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lunar laser ranging measures the Earth-Moon distance to about a millimetre.",
+    "as_written": "to about a millimetre",
+    "source": "Murphy 2013, Lunar laser ranging: the millimeter challenge, Reports on Progress in Physics; APOLLO project at Apache Point Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lunar laser ranging revealed evidence of a fluid lunar core.",
+    "as_written": "evidence that the Moon has a fluid core",
+    "source": "Williams, Boggs, Yoder, Ratcliff, Dickey 2001, Journal of Geophysical Research: Planets",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lunar laser ranging has tested the equivalence principle for Earth and Moon falling toward the Sun to roughly a part in ten trillion.",
+    "as_written": "to within roughly a part in ten trillion",
+    "source": "Williams, Turyshev and Boggs 2012, Classical and Quantum Gravity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon is estimated to be about 4.5 billion years old.",
+    "as_written": "four and a half billion years",
+    "source": "NASA Moon science; lunar sample radiometric dating",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Extrapolating the present recession rate backwards is inconsistent with the Moon's age, so the rate must have varied; its history is debated.",
+    "as_written": "The numbers do not fit. So the rate must have changed over time ... Researchers disagree about the history",
+    "source": "Bills and Ray 1999 Geophysical Research Letters; Green et al. 2017 Proceedings of the Royal Society A on tidal evolution",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 5 milliwatt green 532 nanometre laser emits about 13 quadrillion photons per second.",
+    "as_written": "about thirteen quadrillion photons every second",
+    "source": "Calculation: 5e-3 W divided by photon energy hc/lambda of about 3.7e-19 J at 532 nm",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

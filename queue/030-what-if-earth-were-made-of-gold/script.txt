@@ -1,0 +1,97 @@
+You are standing on a beach at dawn, and something is wrong with the sand. It is not sand. It is yellow, smooth and heavy, and it throws the light back at your eyes. You bend down to scoop up a handful, and your knees give way. You weigh three and a half times what you did a second ago. A body that carried seventy kilograms now presses down like two hundred and forty-five.
+
+The ocean is still there. The sky is still blue. The Sun still comes up on schedule. But every grain of ground under you, from the beach down to the centre of the planet, has been swapped for gold.
+
+Welcome to a world where the old rules of wealth have been switched off and the rules of physics have been left on. In the next few minutes, the air will change. In the next few hours, something will happen to the Moon. And at the end, we will reach a problem that has nothing to do with gravity, one that makes a golden planet one of the deadliest places you could imagine. But we start with what happens in the first second.
+
+First, a plain statement. This cannot happen. Gold is not made by ordinary stars. Atoms heavier than iron mostly come from violent events, and gold is one of the rarest outcomes. The best-observed case is the collision of two neutron stars that astronomers detected on the seventeenth of August, 2017, about one hundred and thirty million light years away. Models of that blast suggest it forged anywhere from a few to more than ten Earth masses of gold, with estimates varying. So the universe can make that much gold. But it scattered it across a cloud many light years wide.
+
+Whether mergers are the only source is contested. A study published in 2025 proposed that giant flares from magnetars, which are neutron stars with extreme magnetic fields, might supply a small share, perhaps one to ten percent. Nobody has settled the budget.
+
+What we know is that our solar system never got a planet-sized helping. Gold makes up only about a billionth of the mass of the Sun. Scale that up, and the entire Sun holds a few thousand times less gold than a golden Earth would need. So a gold planet would not be rare. It would be impossible by a margin of thousands.
+
+There is one more thing to settle before we begin, because the title hides two different questions. Do you keep the same size, or the same mass? If you kept Earth's mass, a ball of gold would be only about two thirds as wide, because gold is so much denser. If you kept Earth's size, you would end up with a far heavier planet. We will choose the second, an Earth of the same size, and then watch what the physics does to that choice. Because it does not survive.
+
+Here are the numbers that drive everything. Earth has a mass of about five point nine seven times ten to the twenty-fourth kilograms. Its average density is about five and a half grams per cubic centimetre. Gold has a density of about nineteen point three. That is three and a half times as dense. Same volume, so three and a half times the mass. That is about two times ten to the twenty-fifth kilograms.
+
+To feel how absurd that is, look at all the gold humans have ever dug up. By the World Gold Council's count, it is a little over two hundred thousand tonnes. Melt it into one block, and it would be a cube about twenty-two metres on each side. That is roughly four and a half Olympic swimming pools. Our planet-sized pile is about a hundred quadrillion times larger than that cube. And humanity adds only a bit over three thousand tonnes a year.
+
+Now, the first second. Surface gravity depends on mass and radius. With the radius unchanged and the mass multiplied by three and a half, gravity is three and a half times stronger. Today it is about nine point eight metres per second squared. Under your feet it is now about thirty-four.
+
+You are not dead. Fighter pilots in modern jets, wearing special suits, can tolerate up to about nine times normal gravity, but only for seconds. You are going to live at three and a half all day, every day. Your heart must push blood uphill against a column that is three and a half times heavier. Fainting is the first problem. Stairs are the second. Standing back up from the ground is a feat of strength.
+
+And your world is about to fall apart. Every building, bridge and tree was designed for one g. Under three and a half, tall structures fail first. The tallest skyscraper, the Burj Khalifa, rises eight hundred and twenty-eight metres. Its steel and concrete were sized for a pull of one g. They are now carrying three and a half times the load. In seconds, the tallest towers begin to crumple, and the rest follow soon after.
+
+Keep that in mind, because the buildings are the smaller disaster. Wait until we get to what happens to the ground itself.
+
+In the first minute, the planet notices its own weight. A planet is a heap held together by its own gravity, and the deeper you go, the more pressure there is. At the centre of the real Earth, the pressure is about three hundred and sixty gigapascals. That is already three and a half million times the air pressure at sea level. In a gold planet of the same size, the pressure scales with the square of the density. So it would be more than ten times higher.
+
+Gold is soft. Bar of gold, soft enough to dent with a fingernail if it is pure. Under pressures like that, it does not hold its shape. It compresses. It squeezes into a denser state and the whole planet shrinks. How far, nobody can say with precision, because few laboratory experiments reach those pressures, and the equation for gold under them is uncertain. So the golden Earth does not stay Earth-sized. It settles into something smaller and denser, and the surface gravity ends up higher than three and a half.
+
+For the rest of this video I will keep to the simpler number, three and a half. Just remember that the true answer is worse.
+
+Here is something to hold on to. As the planet squeezes, it also heats. And gold has a trait that makes this a bigger deal than you would expect. It conducts heat more than a hundred times better than rock. Stay with that thought. Right now we have bigger things above our heads.
+
+Look up. In the first few minutes, the air changes. The atmosphere is a column of gas pressed down by gravity. The total amount of air is the same, but each kilogram now weighs three and a half times as much. So the pressure at the surface rises to about three and a half times today's sea-level pressure. That is the pressure you would feel diving about twenty-five metres under the sea, only in open air.
+
+Breathing is possible. The oxygen share of that air would be the same, but there would be three and a half times as many oxygen molecules in each breath. The partial pressure is still below the level at which divers start to risk oxygen poisoning. Nitrogen is another story. At these pressures, nitrogen starts to act like a mild anaesthetic. Divers call it the narcosis, and it begins around the pressures you now live in. So you can breathe, but you will be a little drunk, permanently.
+
+The air also gets shallower. The height over which air thins out, called the scale height, is about eight and a half kilometres today. It shrinks in proportion to gravity. On the golden Earth it is about two and a half kilometres. A commercial jet cruising at eleven kilometres would be flying through air that is far thinner relative to the surface than it is now. The sky is a thin skin on top of a thick, heavy, humid blanket.
+
+As the atmosphere falls and compresses, it heats. Compressed gas warms up, which is how a bicycle pump gets hot. How hot the lower atmosphere ends up, and what that does to clouds, rain and the temperature of the oceans, is genuinely uncertain. Climate models were built for the planet we have, not this one. Anyone who tells you the exact surface temperature of a golden Earth is guessing.
+
+But the weather is not the main event. Something much bigger is happening beyond the sky, and it is about to arrive in a way that you can calculate. It unfolds over the next several hours, and it begins with a mistake in the Moon's arithmetic.
+
+The Moon orbits at an average distance of about three hundred and eighty-four thousand kilometres, moving at about one kilometre per second. That speed is exactly what a pull of today's strength requires to keep the orbit circular.
+
+Now suppose the Earth's mass triples and a half in an instant. The Moon is still moving at one kilometre per second, but gravity is pulling much harder. It is moving too slowly to stay in its circle. It starts to fall inward. This is my own back-of-envelope calculation using Newton's laws and the Moon's present distance and speed, so treat it as a sketch, not a measurement.
+
+The orbit becomes a long ellipse. The Moon's farthest point stays where it is now, about three hundred and eighty-four thousand kilometres. Its closest point drops to a little over sixty-four thousand kilometres. That is about six times closer than today. A trip around takes about six and a half days instead of twenty-seven.
+
+Would the Moon be torn apart? The distance at which tides would shred it, the Roche limit, comes out under thirty thousand kilometres for these densities. So the Moon survives, passing at more than double that distance.
+
+But what it does to the ocean is another matter. The tidal pull falls off with the cube of distance. Six times closer means two hundred and sixteen times stronger. Gravity holding the water down is three and a half times stronger, which softens the blow, but only a little. By my estimate, once the water responds, the tide at closest approach would be tens of metres high, not the half metre or so we know now. Every six and a half days, the seas would surge, slosh and retreat with a force that no coastline was built for.
+
+If you are wondering what happens to a ship, a port, or a coast, the answer is that none of them are there. The coast, as a place, just stops being a good idea.
+
+The next few days are about the ground you are standing on. Think about mountains. How tall a mountain can get depends on how strong the rock is and how hard gravity pulls on it. Everest stands eight thousand eight hundred and forty-nine metres above sea level. It exists because rock is hard, light and brittle, and because plate tectonics keeps pushing it up. Gold is the opposite. It is heavy, soft and flows under stress. At three and a half g, a gold mountain would slump under its own weight long before it came near Everest. Expect a planet of low, rounded ridges.
+
+The land itself is a gold plain with oceans on it. About seventy-one percent of the surface is water already, so most of the gold is under the sea. Below the waves, the seafloor presses down at pressures that rise three and a half times as fast with depth. The deepest trench on the real Earth is nearly eleven kilometres down. On this planet, its pressure would be like a trench many times deeper.
+
+Sunlight now falls on a world with a new colour. Gold reflects red and yellow light well and absorbs blue. Bare gold is also one of the best mirrors of infrared in nature. That is why the James Webb Space Telescope has gold coating its mirrors. Each of its eighteen segments carries a layer about one hundred nanometres thick, and the total gold on the whole mirror is only about forty-eight grams. On the golden Earth, the land would reflect heat that the real land absorbs. Gold is also a poor radiator of heat. So the bare ground would be a strange thermal object, quick to reflect and slow to cool. The effect on climate would be substantial. How substantial is, again, an open question.
+
+Now life. Humans would last, but not easily. A child learning to walk at three and a half g would be like a child learning to walk with a heavy backpack strapped to them for life. Animals scale in odd ways, because strength grows with the cross-section of a limb while weight grows with its volume. Bigger creatures suffer more. The elephant would be a fantasy. The sparrow would be fine. The planet would favour small, low, sturdy bodies, and tall plants would be rare.
+
+But we have not yet reached the real problem. Let me deal first with what happens over years, deep inside.
+
+The interior of the real Earth is warmed by two things: the leftover heat from the planet's formation, and radioactive decay. Uranium, thorium and potassium, scattered through the rock, break down and release heat. Earth loses about forty-seven terawatts through its surface, and roughly half of that is thought to come from radioactive decay, a figure measured by catching neutrinos from inside the planet. The exact split is still debated.
+
+Gold has only one stable isotope, gold one ninety-seven, and it is not radioactive. A planet made purely of gold has no uranium, no thorium and no potassium to keep it warm. It has only the heat from its formation and from the squeeze of its own weight. Meanwhile, gold carries heat extremely well. Its thermal conductivity is about three hundred and eighteen watts per metre per kelvin, against two or three for typical rock. So on one side, the planet has a smaller fuel supply. On the other, it has a better way to lose heat.
+
+Does that mean the golden Earth cools quickly? Not necessarily. Even gold needs billions of years to conduct heat across a planet this big, and the interior may be hot enough to flow. Gold melts at one thousand and sixty-four degrees Celsius at ordinary pressure, but pressure raises the melting point, and nobody knows precisely how much at these depths. Whether the deep interior stays liquid, whether it churns, whether it behaves like our mantle with slow moving plates, all of that is contested.
+
+That matters for one reason in particular, the magnetic field. Earth's field comes from moving liquid metal in the outer core, a dynamo. Gold is a superb electrical conductor, so a churning molten gold core could in principle make a field. But it needs the right amount of heat flowing out and the right motion. A cooling, radioactive-free planet may or may not manage that. If the field died, the solar wind would begin to strip the atmosphere, slowly, over very long times. Mars lost most of its air that way, probably. So it is a risk, not a certainty.
+
+And now the Moon again. Over thousands to millions of years, the tides it raises would drag energy out of its orbit, and the ellipse would round off. My rough estimate, which conserves the orbit's angular momentum and ignores the planet's spin, puts the final circle at around a hundred and ten thousand kilometres. That is about a third of today's distance. A Moon that big and that near would stand in the sky more than three times wider than now. The Sun, meanwhile, would not notice any of this. A planet's orbit around its star does not depend on the planet's own mass. The year would still last three hundred and sixty-five days.
+
+Now I owe you the twist. Everything so far has been about weight, pressure and orbits. The real killer is something the golden Earth has in perfect supply. It is gold's greatest virtue. Gold is inert.
+
+Gold does not rust. It does not react with oxygen. It does not dissolve in water, or in ordinary acid. To dissolve it, you need a mixture called aqua regia, or something like cyanide. On the real Earth, nothing in the environment can do that.
+
+Think about what that means for a living world. On our Earth, rain falls through air that holds carbon dioxide. It becomes slightly acidic. It runs over rock and dissolves it, bit by bit. That chemical weathering carries calcium, magnesium, iron, potassium and phosphorus down the rivers into the sea. Those are the building blocks of life. Phosphorus is in every strand of your DNA, in your cell membranes, in your bones. Rivers deliver it. Rock supplies it.
+
+On the golden Earth, the rivers carry nothing. The rain falls on gold and runs off as clean as it fell. The ocean never gets its salts, its iron or its phosphorus replenished. Whatever dissolved minerals the premise leaves in the sea at the first second, and whatever life carries in its bodies, is all there will ever be. Living things recycle their nutrients, and some leak away into the deep, and gold offers nothing to replace them. How fast the loss would come is uncertain. But the direction is clear. The planet is a bank with no deposits.
+
+And that is not all. Weathering is also Earth's thermostat. When the planet warms, rain and weathering speed up, pull carbon dioxide out of the air, and cool things down. When it cools, weathering slows, volcanoes add carbon, and the air warms again. That loop, which scientists call the carbon-silicate cycle, has helped keep Earth habitable over billions of years. The golden Earth has no silicate to weather, and no carbon to pour from volcanoes, because gold contains neither carbon nor water to outgas. The thermostat is gone. Whatever temperature the planet drifts to, there is nothing to correct it.
+
+So here is the irony. The metal humans prize because it never tarnishes, never decays, never changes, would make the most lifeless planet you could design. Life depends on change. It runs on rust, rot, erosion and decay. A planet that cannot be eroded cannot be renewed.
+
+There is also a quieter irony about wealth. The value of gold rests on how scarce it is. We have mined about a cube of it the size of a short apartment block. If the whole planet were gold, you would have more than any civilisation could ever count, and no way to spend it. You cannot eat it. You cannot build tall with it. You cannot even reach space with it easily, because the speed needed to orbit would jump from about seven point nine kilometres per second to about fifteen, and the speed to escape from eleven point two to about twenty-one. The rockets we use now would need enormously more fuel to leave. A golden Earth is the richest prison in the universe.
+
+So what does the story look like from a distance? You see a planet three and a half times as massive as ours, a bit smaller than its mass suggests, with a gleaming, hard-edged surface and an ocean of pure water. A Moon swings in close every six and a half days and drags the sea up in towering tides. The magnetic field is shaky. The air is thick and low. And the rivers carry nothing.
+
+Astronomers actually have a name for planets between one and ten Earth masses. They call them super-Earths. They are among the most common planets found around other stars, and our solar system has none. Somewhere out there, there might be one with a surface of rock, an ocean, and a chance. This one has a surface of gold, and that may be the one thing it cannot afford.
+
+The shock is that the thing that would make it dazzling is the thing that would doom it. Not the gravity. Not the tides. The gold itself, being so perfect at staying the same.
+
+So here is a question for you. If you could swap Earth's rock for any single pure material, to see what it would do to the planet, which one would you choose? Iron, ice, diamond, glass, something stranger? And what is the first thing it would break? Tell me in the comments, and I will take the best one to the next video.

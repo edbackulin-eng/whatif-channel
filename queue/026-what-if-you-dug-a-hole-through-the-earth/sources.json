@@ -1,0 +1,618 @@
+[
+  {
+    "text": "Earth's diameter is about 12,740 km",
+    "as_written": "about twelve thousand seven hundred and forty kilometres across",
+    "source": "NASA Goddard Earth Fact Sheet (mean radius 6,371 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Kola Superdeep Borehole is in northwest Russia near the Norwegian border",
+    "as_written": "in northwest Russia, near the border with Norway",
+    "source": "Kola Superdeep Borehole project records, Kola Peninsula, Murmansk Oblast",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Drilling began in 1970",
+    "as_written": "Soviet engineers began drilling in nineteen seventy",
+    "source": "Kola Superdeep Borehole project records (Kozlovsky, Scientific American 1984)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Kola reached 12,262 m in 1989, the deepest borehole ever drilled",
+    "as_written": "twelve thousand two hundred and sixty-two metres",
+    "source": "Kola Superdeep Borehole project records; Guinness World Records",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Challenger Deep is nearly 11 km deep",
+    "as_written": "which is nearly eleven kilometres down",
+    "source": "NOAA Ocean Exploration; UNH Center for Coastal and Ocean Mapping 2010 survey (about 10,984 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mount Everest is just under 9 km tall",
+    "as_written": "at just under nine kilometres",
+    "source": "2020 joint China-Nepal survey (8,848.86 m)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Kola hole is about 23 cm wide",
+    "as_written": "about twenty-three centimetres wide",
+    "source": "Kola Superdeep Borehole project records (commonly cited 23 cm / 9 in diameter)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "12.262 km is under 0.1 percent of Earth's 12,742 km diameter",
+    "as_written": "less than one tenth of one percent of the way through the planet",
+    "source": "Arithmetic from Kola depth and NASA Earth Fact Sheet diameter (0.096 percent)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At Kola's pace of about 12.3 km in about 19 years, the full diameter would take roughly 20,000 years",
+    "as_written": "roughly twenty thousand years",
+    "source": "Arithmetic from Kola depth (12,262 m, 1970 to 1989) and Earth diameter (about 1,040 times deeper)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Expected bottom temperature was about 100 C",
+    "as_written": "around one hundred degrees Celsius at the bottom",
+    "source": "Kola Superdeep Borehole project reports (Kozlovsky, Scientific American 1984)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Measured bottom temperature was about 180 C",
+    "as_written": "about one hundred and eighty",
+    "source": "Kola Superdeep Borehole project reports (Kozlovsky, Scientific American 1984)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Rock at depth behaved plastically and walls tried to close in",
+    "as_written": "did not behave like a rigid slab, and the walls kept trying to close in on the drill",
+    "source": "Kola Superdeep Borehole project reports (Kozlovsky, Scientific American 1984)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Drilling ended in 1992",
+    "as_written": "Drilling ended in nineteen ninety-two",
+    "source": "Kola Superdeep Borehole project records",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A free-falling body drops about 4.9 m in the first second",
+    "as_written": "you fall about five metres",
+    "source": "Newtonian kinematics with standard gravity 9.80665 m/s squared (NIST)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "After one second of free fall speed is about 9.8 m/s",
+    "as_written": "nearly ten metres per second",
+    "source": "Newtonian kinematics with standard gravity (NIST)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "After 10 s of vacuum free fall speed is about 98 m/s and drop about 490 m",
+    "as_written": "close to a hundred metres per second, and you would have dropped nearly five hundred metres",
+    "source": "Newtonian kinematics with standard gravity (NIST)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Speed of sound in air is about 340 m/s, reached after about 35 s at 9.8 m/s squared",
+    "as_written": "Around thirty-five seconds in, you would pass the speed of sound in air, about three hundred and forty metres per second",
+    "source": "International Standard Atmosphere (340.3 m/s at 15 C); kinematics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Belly-down skydiver terminal velocity is about 55 m/s, about 200 km/h",
+    "as_written": "roughly fifty-five metres per second, which is about two hundred kilometres an hour",
+    "source": "United States Parachute Association (about 120 mph); NASA Glenn terminal velocity page",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Terminal velocity falls as air density rises, and air density rises with depth",
+    "as_written": "So the deeper you go, the slower the fastest possible fall becomes",
+    "source": "Drag equation (NASA Glenn); hydrostatic atmosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth rotates once in about 24 hours",
+    "as_written": "The planet turns once every twenty-four hours, near enough",
+    "source": "International Earth Rotation and Reference Systems Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Equatorial surface rotation speed is about 465 m/s",
+    "as_written": "about four hundred and sixty-five metres per second",
+    "source": "NASA Goddard Earth Fact Sheet; IERS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That is about 1,670 km/h",
+    "as_written": "roughly sixteen hundred and seventy kilometres an hour",
+    "source": "NASA Goddard Earth Fact Sheet; IERS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Coriolis eastward drift of a freely falling body, x = (1/3) omega g t cubed, reaches about 1 m in roughly 16 s, so a 2 m hole is hit in under half a minute",
+    "as_written": "you would be scraping the wall in well under half a minute",
+    "source": "Classical mechanics, Coriolis deflection of falling bodies (Goldstein, Classical Mechanics)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The effect vanishes on the rotation axis",
+    "as_written": "At the poles, right on the axis, it vanishes",
+    "source": "Classical mechanics, Coriolis deflection scales with cosine of latitude",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The North Pole is on drifting sea ice over several km of Arctic Ocean",
+    "as_written": "The North Pole sits on drifting sea ice above several kilometres of ocean",
+    "source": "NOAA; International Bathymetric Chart of the Arctic Ocean",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 35 km is fallen in about 85 s at constant gravity",
+    "as_written": "At about eighty-five seconds, you have dropped thirty-five kilometres",
+    "source": "Newtonian kinematics with standard gravity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Continental crust is about 30 to 50 km thick, oceanic crust 5 to 10 km",
+    "as_written": "Continental crust runs from about thirty to fifty kilometres thick, and under the oceans it is only five to ten",
+    "source": "USGS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moho was identified by Mohorovicic in 1909 from seismic wave behaviour",
+    "as_written": "Andrija Mohorovičić, the Croatian seismologist who found it in nineteen oh nine",
+    "source": "Standard seismology history (Mohorovicic 1909)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "After about 85 s speed is about 830 m/s",
+    "as_written": "more than eight hundred metres per second",
+    "source": "Newtonian kinematics with standard gravity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mponeng gold mine reaches nearly 4 km",
+    "as_written": "reaches nearly four kilometres down",
+    "source": "AngloGold Ashanti (Mponeng, about 3.9 to 4 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Rock at Mponeng exceeds 60 C",
+    "as_written": "more than sixty degrees Celsius",
+    "source": "AngloGold Ashanti; mining engineering literature on virgin rock temperature at Mponeng",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The mine is cooled with ice-making plants",
+    "as_written": "air cooled by plants that make ice",
+    "source": "AngloGold Ashanti; mining ventilation and cooling literature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Rock begins to glow dull red near 525 C (Draper point)",
+    "as_written": "about five hundred and twenty-five degrees Celsius",
+    "source": "Draper point, J. W. Draper 1847; standard physics references",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The mantle is nearly 3,000 km thick (about 2,890 km)",
+    "as_written": "nearly three thousand kilometres of it",
+    "source": "Preliminary Reference Earth Model (Dziewonski and Anderson 1981); USGS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The mantle is solid rock, not magma, flowing over millions of years",
+    "as_written": "It is not an ocean of magma. It is solid rock",
+    "source": "USGS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tectonic plates move a few centimetres per year",
+    "as_written": "which is a few centimetres a year",
+    "source": "USGS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lithostatic pressure rises about 27 MPa per km, about 270 atmospheres",
+    "as_written": "roughly twenty-seven million pascals of pressure, which is about two hundred and seventy times the pressure of the air around you",
+    "source": "Lithostatic pressure P = density x g x depth, with crustal density about 2.7 g/cm3 (Turcotte and Schubert, Geodynamics)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Diamond anvil cell samples are often narrower than a human hair",
+    "as_written": "the samples are often narrower than a human hair",
+    "source": "High-pressure mineral physics literature on diamond anvil cells (Mao and Bell)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In a uniform-density Earth, gravity falls linearly with depth, so half-way you weigh half",
+    "as_written": "Halfway to the centre you weigh half as much",
+    "source": "Newton's shell theorem",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's mean density is about 5.5 times water",
+    "as_written": "about five and a half times that of water",
+    "source": "NASA Goddard Earth Fact Sheet (5,514 kg/m3)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Inner core density is about 13 g/cm3",
+    "as_written": "about thirteen times denser than water",
+    "source": "Preliminary Reference Earth Model (Dziewonski and Anderson 1981)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gravity stays near 9.8 m/s squared through the mantle",
+    "as_written": "nine point eight metres per second squared through the mantle",
+    "source": "Preliminary Reference Earth Model (Dziewonski and Anderson 1981)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gravity peaks near 10.7 m/s squared at the core-mantle boundary",
+    "as_written": "about ten point seven",
+    "source": "Preliminary Reference Earth Model (Dziewonski and Anderson 1981)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Below that, gravity falls roughly linearly to zero at the centre",
+    "as_written": "roughly in a straight line, until it reaches zero at the centre",
+    "source": "Preliminary Reference Earth Model (Dziewonski and Anderson 1981)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Core-mantle boundary is at about 2,890 km depth",
+    "as_written": "about two thousand eight hundred and ninety kilometres",
+    "source": "Preliminary Reference Earth Model; USGS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Outer core is about 2,260 km thick (2,890 to 5,150 km)",
+    "as_written": "about two thousand two hundred and sixty kilometres thick",
+    "source": "Preliminary Reference Earth Model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Shear waves cannot pass through liquid, revealing the liquid outer core",
+    "as_written": "One kind of wave, the shear wave, cannot travel through liquid",
+    "source": "Standard seismology (Oldham 1906; Gutenberg 1914); USGS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Flowing outer core generates Earth's magnetic field",
+    "as_written": "flowing metal generates the magnetic field that steers your compass",
+    "source": "NASA; USGS (geodynamo)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Inner core boundary is at about 5,150 km depth",
+    "as_written": "about five thousand one hundred and fifty kilometres down",
+    "source": "Preliminary Reference Earth Model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Inge Lehmann identified the solid inner core in 1936",
+    "as_written": "In nineteen thirty-six, the Danish seismologist Inge Lehmann",
+    "source": "Lehmann 1936, 'P prime', Bureau Central Seismologique International",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Inner core radius is about 1,220 km, about 70 percent of the Moon's radius",
+    "as_written": "about twelve hundred and twenty kilometres, around seventy percent of the radius of the Moon",
+    "source": "Preliminary Reference Earth Model (1,221 km); NASA Moon Fact Sheet (1,737.4 km)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pressure at Earth's centre is about 360 GPa, about 3.5 million atmospheres",
+    "as_written": "roughly three and a half million times the pressure of the air at the surface",
+    "source": "Preliminary Reference Earth Model (about 364 GPa)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sun's surface temperature is about 5,800 K",
+    "as_written": "about five thousand eight hundred kelvin",
+    "source": "IAU 2015 nominal solar effective temperature 5,772 K; NASA Sun Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Inner core boundary temperature estimates range about 5,000 to 6,000 K and are contested",
+    "as_written": "between about five thousand and six thousand kelvin",
+    "source": "Anzellini et al., Science 2013 (about 6,230 K); Alfe et al. and earlier estimates near 5,400 K",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Uniform-Earth fall speed at the centre is sqrt(gR), about 7.9 km/s, about 28,000 km/h",
+    "as_written": "about seven point nine kilometres per second, or about twenty-eight thousand kilometres an hour",
+    "source": "Newtonian mechanics, sqrt(g R) with R = 6,371 km (NASA Earth Fact Sheet)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "With a dense core the central speed is higher than in the uniform model",
+    "as_written": "In the real Earth, with its dense core, it is higher",
+    "source": "Klotz 2015, Am. J. Phys. 83, 231; Preliminary Reference Earth Model",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Realistic-density fall time through the centre is about 38 minutes",
+    "as_written": "Thirty-eight minutes after you stepped off",
+    "source": "Klotz, 'The gravity tunnel in a non-uniform Earth', American Journal of Physics 83, 231 (2015)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Klotz published in 2015 in the American Journal of Physics",
+    "as_written": "who in twenty fifteen worked out the fall time",
+    "source": "Klotz, American Journal of Physics 83, 231 (2015)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Uniform-density fall time is about 42 minutes",
+    "as_written": "you get about forty-two minutes instead",
+    "source": "Simple harmonic motion, half of 2 pi sqrt(R/g); Cooper, Am. J. Phys. 1966",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In a uniform Earth every straight frictionless tunnel takes the same time",
+    "as_written": "the trip takes the same forty-two minutes",
+    "source": "Cooper, 'Travel time through the Earth', American Journal of Physics 34 (1966)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A surface-skimming orbit takes about 84 minutes",
+    "as_written": "which is about eighty-four minutes",
+    "source": "Orbital mechanics, 2 pi sqrt(R/g) with Earth radius 6,371 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 71 percent of Earth's surface is ocean",
+    "as_written": "About seventy-one percent of the planet's surface is ocean",
+    "source": "NOAA; USGS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Parts of Spain are antipodal to parts of New Zealand",
+    "as_written": "Parts of Spain sit directly opposite parts of New Zealand",
+    "source": "Antipode calculation from geographic coordinates (for example Wellington 41.3 S 174.8 E against 41.3 N 5.2 W in Spain)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Typical continental geothermal gradient is 25 to 30 C per km",
+    "as_written": "twenty-five to thirty degrees Celsius for every kilometre",
+    "source": "USGS; standard geophysics texts (Turcotte and Schubert, Geodynamics)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2 m diameter hole through 12,742 km has volume about 40 million cubic metres",
+    "as_written": "about forty million cubic metres",
+    "source": "Cylinder volume pi r squared L with r = 1 m, L = 12,742 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "An Olympic pool holds about 2,500 cubic metres, so 40 million is about 16,000 pools",
+    "as_written": "about sixteen thousand Olympic swimming pools",
+    "source": "World Aquatics minimum 50 m x 25 m x 2 m pool (2,500 m3); arithmetic",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's volume is about 1.08 trillion cubic km",
+    "as_written": "roughly one point oh eight trillion cubic kilometres",
+    "source": "NASA Goddard Earth Fact Sheet (1.08321 x 10^12 km3)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oceans hold about 1.3 billion cubic km of water",
+    "as_written": "about one point three billion cubic kilometres of water",
+    "source": "NOAA National Geophysical Data Center (about 1.335 billion km3)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gravitational time dilation: clocks run slower deeper in a gravitational field",
+    "as_written": "time runs slower the deeper you sit in a gravitational field",
+    "source": "Einstein's general theory of relativity; Pound and Rebka 1960",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS clocks run about 45 microseconds per day fast from weaker gravity",
+    "as_written": "about forty-five millionths of a second per day",
+    "source": "Ashby, 'Relativity in the Global Positioning System', Living Reviews in Relativity 2003",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS clocks run about 7 microseconds per day slow from speed",
+    "as_written": "about seven millionths of a second per day because of their speed",
+    "source": "Ashby, Living Reviews in Relativity 2003",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Net GPS offset is about 38 microseconds per day",
+    "as_written": "roughly thirty-eight millionths of a second a day",
+    "source": "Ashby, Living Reviews in Relativity 2003",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "JILA measured gravitational redshift across about a millimetre in 2022",
+    "as_written": "In twenty twenty-two, physicists at the JILA institute in Colorado measured the effect across a height of about a millimetre",
+    "source": "Bothwell et al., 'Resolving the gravitational redshift across a millimetre-scale atomic sample', Nature 602, 420 (2022)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Feynman remarked the centre should be a day or two younger",
+    "as_written": "a day or two younger than the surface",
+    "source": "Feynman Lectures on Gravitation, as cited by Uggerhoj, Mikkelsen and Faye (2016)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Uggerhoj, Mikkelsen and Faye published 'The young centre of the Earth' in 2016",
+    "as_written": "In twenty sixteen, three Danish physicists, Ulrik Uggerhøj, Robert Mikkelsen and Jan Faye",
+    "source": "Uggerhoj, Mikkelsen and Faye, European Journal of Physics 37, 035602 (2016)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's age is about 4.5 billion years",
+    "as_written": "about four and a half billion years",
+    "source": "USGS (about 4.54 billion years)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The core is about 2.5 years younger than the crust",
+    "as_written": "about two and a half years less than the crust",
+    "source": "Uggerhoj, Mikkelsen and Faye, European Journal of Physics 37, 035602 (2016)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

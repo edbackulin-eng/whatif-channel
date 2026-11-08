@@ -1,0 +1,81 @@
+You are standing at the lip of a hole. It is wide enough to fall through without touching the sides, and the walls are smooth, black rock. You lean over and look down. There is no bottom. There is only a circle of darkness that shrinks until it vanishes. Warm air drifts up past your face. You step off.
+
+If we are generous with the rules, in about thirty-eight minutes you will have fallen through an entire planet. You will pass through solid rock, through liquid metal, and through a point where you weigh nothing at all. But the strangest part of this trip is not the speed, and it is not the heat. It is something that happens to your watch, and I will get to it before the end.
+
+First, the honest part. This cannot be done. Nobody has dug a hole through the Earth, nobody can, and the reason is not money or patience. It is what rock does when you squeeze it hard enough. So here is the deal. We will pretend the hole exists and stays open, and then we will leave every other law of physics switched on. Gravity, air, heat, pressure and the spin of the planet all get a vote. And they do not agree with each other.
+
+We will take it in order, from seconds to years. But first you need to know how far you are really going, because the deepest hole humans have ever made barely scratches the skin.
+
+The Earth is about twelve thousand seven hundred and forty kilometres across. The deepest hole we have ever drilled is the Kola Superdeep Borehole, in northwest Russia, near the border with Norway. Soviet engineers began drilling in nineteen seventy. By nineteen eighty-nine they had reached twelve thousand two hundred and sixty-two metres. That is deeper than the ocean's deepest point, the Challenger Deep, which is nearly eleven kilometres down. It is far deeper than Mount Everest is tall, at just under nine kilometres.
+
+And yet the hole is only about twenty-three centimetres wide, and it covers less than one tenth of one percent of the way through the planet. At that pace, drilling the rest would take roughly twenty thousand years.
+
+Why did they stop? Heat. The team expected around one hundred degrees Celsius at the bottom. They measured about one hundred and eighty. By the team's own reports, the rock down there did not behave like a rigid slab, and the walls kept trying to close in on the drill. Drilling ended in nineteen ninety-two.
+
+Keep that in mind. Hot rock that will not hold still, at just twelve kilometres. You have twelve thousand more to go. So let us start the clock, because the very first surprise is not the heat. It is the air.
+
+Seconds. Second zero. You step off the edge.
+
+In the first second you fall about five metres. By the end of it you are moving at nearly ten metres per second. In an empty hole you would keep gaining that much speed every second. After ten seconds you would be doing close to a hundred metres per second, and you would have dropped nearly five hundred metres. Around thirty-five seconds in, you would pass the speed of sound in air, about three hundred and forty metres per second.
+
+But the hole is not empty. It is full of air, and air pushes back. A skydiver falling belly down tops out at roughly fifty-five metres per second, which is about two hundred kilometres an hour. That is terminal velocity, the point where drag matches your weight. And in this hole, terminal velocity does something it never does in the open sky. It shrinks. Every metre you descend, there is more atmosphere stacked above you, squeezing the air below into a denser gas. Thicker air pushes back harder. So the deeper you go, the slower the fastest possible fall becomes.
+
+There is a second problem in those first seconds, one that has nothing to do with air, and it will put you into the wall.
+
+To see it, pump the air out for a moment and think about the spin of the Earth. The planet turns once every twenty-four hours, near enough. At the equator, the ground is moving east at about four hundred and sixty-five metres per second, roughly sixteen hundred and seventy kilometres an hour. You are moving with it. As you fall, you head toward the planet's axis, where the rock beneath you moves more slowly. But you keep your eastward speed. So you drift east relative to the walls, faster and faster.
+
+For a hole a couple of metres across, dug at the equator, you would be scraping the wall in well under half a minute. Start at a higher latitude and the effect shrinks. At the poles, right on the axis, it vanishes. So a serious tunnel would have to run pole to pole. That has its own catch. The North Pole sits on drifting sea ice above several kilometres of ocean, so your tunnel would not be a hole. It would be a drain. We will come back to that.
+
+Minutes. Let us take pity on you. We pump out the air, line the walls with something that does not melt, and give you a suit that shrugs off heat. Now the fall is clean.
+
+What does it feel like? Strangely, like nothing. Free fall has no sensation of weight, because no floor is pushing back on you. And with the air gone, there is no wind and no roar. There is no sound at all, since sound needs something to travel through. You drop in perfect silence, in the dark, with only your own heartbeat for company.
+
+At about eighty-five seconds, you have dropped thirty-five kilometres, which is a typical thickness for the continental crust. Continental crust runs from about thirty to fifty kilometres thick, and under the oceans it is only five to ten. Below it lies a boundary called the Moho, named for Andrija Mohorovičić, the Croatian seismologist who found it in nineteen oh nine by watching how earthquake waves changed speed. By now you are moving at more than eight hundred metres per second.
+
+You can get a taste of the heat at the surface. The Mponeng gold mine in South Africa reaches nearly four kilometres down, and the rock there is more than sixty degrees Celsius. The miners work in air cooled by plants that make ice. Go deeper and the rock keeps climbing. Anything hotter than about five hundred and twenty-five degrees Celsius begins to glow a dull red, so somewhere down here your walls begin to light the way for you.
+
+Then comes the mantle. It is the thickest layer, nearly three thousand kilometres of it, and here is a myth worth killing. It is not an ocean of magma. It is solid rock. It flows, but slowly, over millions of years, at about the speed the tectonic plates move, which is a few centimetres a year.
+
+Which brings us to the real reason the hole cannot exist. Rock is heavy. Every kilometre of it adds roughly twenty-seven million pascals of pressure, which is about two hundred and seventy times the pressure of the air around you. Dig a hole, and the rock on every side presses toward the gap with a force no steel tube could resist. Rock that hot and that squeezed gives way like putty.
+
+How fast would the hole close? The honest answer is that it depends on the rock and the temperature, and nobody has a measured number. Laboratories can squeeze samples to the pressures of the deep Earth, but only in diamond anvil cells, and the samples are often narrower than a human hair. Nobody has tested a tunnel. We will assume yours holds, and press on.
+
+Because ahead of you is the strangest stretch of the whole fall, and it comes from a mistake in nearly every diagram you have ever seen.
+
+The usual picture goes like this. Gravity gets weaker as you descend, because only the planet beneath you pulls on you, and there is less of it. Halfway to the centre you weigh half as much, and at the centre you weigh nothing. That is true if the Earth has the same density all the way through. It does not.
+
+The Earth's average density is about five and a half times that of water, but that average hides a huge range. The crust is much lighter than that. The inner core is about thirteen times denser than water. Because so much mass is packed into the middle, gravity barely drops as you descend through the mantle. The standard seismic model of the Earth, the Preliminary Reference Earth Model, has gravity staying close to nine point eight metres per second squared through the mantle, then creeping up to about ten point seven at the bottom of it. You actually get slightly heavier as you fall. Only after that does gravity decline, roughly in a straight line, until it reaches zero at the centre.
+
+So you do not coast. You keep accelerating at nearly full strength for most of the trip. And that sets up the hottest place you will ever visit.
+
+At a depth of about two thousand eight hundred and ninety kilometres, the mantle ends and the core begins. The outer core is liquid iron and nickel, about two thousand two hundred and sixty kilometres thick. We know it is liquid because of earthquakes. One kind of wave, the shear wave, cannot travel through liquid, and it vanishes at this boundary. This is also where flowing metal generates the magnetic field that steers your compass.
+
+Then, about five thousand one hundred and fifty kilometres down, you reach the inner core. In nineteen thirty-six, the Danish seismologist Inge Lehmann deduced that it is a separate, solid ball, by studying faint waves that had bounced off something inside the planet. Its radius is about twelve hundred and twenty kilometres, around seventy percent of the radius of the Moon. It is solid not because it is cool, but because the pressure is so enormous. At the very centre, that pressure is roughly three and a half million times the pressure of the air at the surface.
+
+And the temperature? Here the science is genuinely contested. The surface of the Sun is about five thousand eight hundred kelvin. Estimates for the boundary of the inner core fall somewhere between about five thousand and six thousand kelvin, and different experiments disagree by hundreds of degrees. So whether the middle of the Earth is a little cooler or a little hotter than the surface of the Sun is a live argument.
+
+At the very centre, the pull of the planet comes from every direction at once, and it cancels. You are weightless, and you are moving faster than at any other point. In the simple uniform model, that speed is about seven point nine kilometres per second, or about twenty-eight thousand kilometres an hour. In the real Earth, with its dense core, it is higher. Then you are through, and rising. The question is whether you will come out.
+
+Hours. Thirty-eight minutes after you stepped off, you reach the far end. That figure comes from a physicist named Alexander Klotz, who in twenty fifteen worked out the fall time using a realistic model of the Earth's density, and published it in the American Journal of Physics. If you pretend the Earth has the same density throughout, you get about forty-two minutes instead. Both assume no air and no rotation, so treat them as the best case.
+
+At the far rim you arrive with almost no speed, exactly as high as you started. You hang there for an instant. If you grab the edge, you climb out into a new hemisphere. If you miss, you fall back in, and the whole journey repeats. In a vacuum with no friction, you would swing back and forth forever.
+
+Now the part almost nobody expects. In the simple uniform model, forty-two minutes is not special to a tunnel through the centre. Dig a straight tunnel between any two points on the surface, a few kilometres long or nearly the full width of the planet, and the trip takes the same forty-two minutes. A shorter tunnel is shallower, so gravity pulls you along it more gently, and the two effects exactly cancel. And forty-two minutes is half the time a satellite would need to skim the surface and circle the Earth, which is about eighty-four minutes. The same equation governs both. In the real Earth, the numbers shift somewhat. That is the dream of the gravity train, a subway that needs no fuel. It fails for the reasons we have met, which are friction, heat, and a hole that will not stay open.
+
+With the air back in, each swing would fall a little short of the last, until you hung near the centre, weightless, in dense and fearfully hot gas. Not a good ending. So let us ask what the hole itself does.
+
+Days. Start with where it comes out. About seventy-one percent of the planet's surface is ocean, so most holes dug from land exit under the sea. Parts of Spain sit directly opposite parts of New Zealand, which is one of the few matches between land and land. If the far end opens onto the sea, water pours in. Temperatures in typical continental crust climb by twenty-five to thirty degrees Celsius for every kilometre, so within a few kilometres the walls are hotter than boiling water, and the water flashes into steam. Steam expands and shoves outward. So what you most likely get is not a flooded tunnel but a roaring geyser at the entrance, fed by the ocean. How violent it would be is informed guessing, not settled science.
+
+And the rock itself? We said the hole stays open. Take that assumption away, and closure starts where the rock is hottest and most squeezed, deep down, and works its way up.
+
+Years. In a year, the Earth has hardly noticed. A two metre wide hole running the full length of the planet has a volume of about forty million cubic metres. That sounds enormous. It is about sixteen thousand Olympic swimming pools. But the Earth has a volume of roughly one point oh eight trillion cubic kilometres. The hole is a pinprick. The oceans hold about one point three billion cubic kilometres of water, so even if the entire hole filled, sea level would not change by anything we could measure. And no known mechanism would let a tunnel that thin stop the flow in the liquid outer core. The scar closes. The planet carries on.
+
+Which leaves only the thing I promised you. Your watch.
+
+Einstein's general theory of relativity says that time runs slower the deeper you sit in a gravitational field. This is not speculation. The clocks on GPS satellites run faster than clocks on the ground by about forty-five millionths of a second per day, because gravity is weaker up there. They run slower by about seven millionths of a second per day because of their speed. The net is roughly thirty-eight millionths of a second a day, and the system is built to correct for it. In twenty twenty-two, physicists at the JILA institute in Colorado measured the effect across a height of about a millimetre, using a cloud of atoms.
+
+Now apply that to the whole planet. The centre of the Earth sits at the bottom of the deepest part of the gravitational well, so its clocks should tick slower than yours. Richard Feynman once remarked that the centre should be a day or two younger than the surface. In twenty sixteen, three Danish physicists, Ulrik Uggerhøj, Robert Mikkelsen and Jan Faye, did the calculation properly, in a paper called The Young Centre of the Earth. Their answer is that over the age of the planet, about four and a half billion years, the core has aged about two and a half years less than the crust.
+
+Think about that. The middle of the Earth is literally younger than its skin. That number is an estimate. It depends on how you model the density of the planet, and nobody has put a clock down there to check. But the direction of the effect is not in doubt. Your own trip would cost you far too little time to notice. The planet, though, has been running a little behind itself for billions of years.
+
+So here is what I want to know. If you could connect any two points on Earth with a hole, where would yours start, and where would it come out? And knowing what waits at the middle, a place where you weigh nothing, moving at nearly orbital speed, in heat that rivals the surface of the Sun, would you really step off the edge? Tell me in the comments.

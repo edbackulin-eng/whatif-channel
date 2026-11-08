@@ -1,0 +1,554 @@
+[
+  {
+    "text": "NASA finds no Apophis impact risk for at least the next 100 years",
+    "as_written": "no impact risk from it for at least the next hundred years",
+    "source": "NASA/JPL Center for Near Earth Object Studies (CNEOS) and NASA statement following March 2021 radar observations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Impacts in 2029, 2036 and 2068 have been ruled out",
+    "as_written": "it will not hit us in twenty twenty-nine, or in twenty thirty-six, or in twenty sixty-eight",
+    "source": "NASA/JPL CNEOS; Goldstone and Green Bank radar observations, March 2021",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis is about 340 metres across",
+    "as_written": "about three hundred and forty metres across",
+    "source": "Brozovic et al. 2018, Icarus, radar shape model of 99942 Apophis",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Eiffel Tower is roughly 330 metres tall",
+    "as_written": "roughly as wide as the Eiffel Tower is tall",
+    "source": "Eiffel Tower operator (SETE) published height",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis mass is about 60 million tonnes",
+    "as_written": "around sixty million tonnes",
+    "source": "Brozovic et al. 2018, Icarus (about 6 x 10^10 kg)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Impact speed would be about 12 km/s",
+    "as_written": "about twelve kilometres every second",
+    "source": "Derived from JPL Small-Body Database orbit of Apophis combined with Earth escape velocity of 11.2 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "12 km/s is more than thirty times the speed of sound",
+    "as_written": "more than thirty times the speed of sound",
+    "source": "Derived: 12 km/s divided by 0.343 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Kinetic energy is about 1,200 megatons of TNT",
+    "as_written": "near twelve hundred megatons of TNT",
+    "source": "Derived from half mass times speed squared using Brozovic et al. 2018 mass; 1 megaton = 4.184 x 10^15 J",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tsar Bomba, tested 1961, yielded about 50 megatons",
+    "as_written": "the Soviet Tsar Bomba in nineteen sixty-one, was about fifty megatons",
+    "source": "Historical record of the 30 October 1961 test; widely cited yield of 50 Mt",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis energy is about 24 Tsar Bombas",
+    "as_written": "roughly twenty-four of those",
+    "source": "Derived: 1,200 Mt divided by 50 Mt",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis energy is about 80,000 Hiroshima bombs",
+    "as_written": "something like eighty thousand Hiroshima bombs",
+    "source": "Derived: 1,200 Mt divided by about 15 kt Hiroshima yield (US government estimates)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Energy is delivered in a fraction of a second",
+    "as_written": "in a fraction of a second",
+    "source": "Derived: 340 m body stopping at about 12 km/s takes under 0.1 s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis was discovered in June 2004 at Kitt Peak, Arizona",
+    "as_written": "June of two thousand four. Astronomers at Kitt Peak in Arizona",
+    "source": "Minor Planet Center discovery record (Tucker, Tholen, Bernardi, 19 June 2004)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis is named for the Egyptian serpent of chaos",
+    "as_written": "after the Egyptian serpent of chaos",
+    "source": "IAU/Minor Planet Center naming of 99942 Apophis; NASA/JPL",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In December 2004 the 2029 impact odds peaked near 1 in 37, about 2.7 percent",
+    "as_written": "climb to about one in thirty-seven",
+    "source": "NASA/JPL CNEOS Apophis history; NASA Planetary Defense statements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis reached 4 on the Torino scale, the highest rating any object has received",
+    "as_written": "the highest rating any object has ever received",
+    "source": "NASA/JPL CNEOS Torino Scale record",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Torino 4 means a close encounter with at least a 1 percent chance of a collision capable of regional devastation",
+    "as_written": "at least a one percent chance of a collision capable of regional devastation",
+    "source": "Torino Impact Hazard Scale definition (IAU/NASA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Archived March 2004 images removed the 2029 risk on 27 December 2004",
+    "as_written": "On the twenty-seventh of December, astronomers find older photographs of the same dot, taken in March of that year",
+    "source": "NASA/JPL CNEOS; precovery images from Siding Spring Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "13 April 2029 is a Friday",
+    "as_written": "is a Friday",
+    "source": "Gregorian calendar",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Closest approach is about 32,000 km from Earth's centre",
+    "as_written": "about thirty-two thousand kilometres from the centre of the Earth",
+    "source": "NASA/JPL CNEOS close-approach data for 99942 Apophis",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That is inside the geostationary ring, which is about 42,164 km from Earth's centre",
+    "as_written": "inside the ring of geostationary satellites",
+    "source": "Standard geostationary orbit radius, about 42,164 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Distance is about one twelfth of the Moon's distance",
+    "as_written": "about one twelfth of the way to the Moon",
+    "source": "Derived: mean Earth-Moon distance 384,400 km divided by about 32,000 km",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis will be visible to the naked eye from Europe, Africa and western Asia",
+    "as_written": "People across Europe, Africa and western Asia will be able to see it without a telescope",
+    "source": "NASA and ESA descriptions of the 2029 flyby",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A gravitational keyhole a few hundred metres wide would have set up a 2036 return",
+    "as_written": "a patch of space called a gravitational keyhole, only a few hundred metres wide",
+    "source": "Chesley 2005, IAU Symposium 229 (keyhole about 600 m wide); NASA/JPL",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Radar in March 2021 cleared 2068",
+    "as_written": "Radar measurements in March of twenty twenty-one then cleared twenty sixty-eight as well",
+    "source": "NASA/JPL news release, March 2021, Goldstone and Green Bank radar",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis's orbit period is just under a year before the flyby and longer than a year after",
+    "as_written": "Before the flyby, Apophis circles the Sun in a little under a year. After it, Earth's gravity will have stretched its orbit to something longer than a year",
+    "source": "NASA/JPL CNEOS orbit solution; Apophis moves from Aten-class to Apollo-class orbit",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The edge of space is conventionally 100 km",
+    "as_written": "a hundred kilometres of altitude, the line most people call the edge of space",
+    "source": "Karman line, Federation Aeronautique Internationale",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About eight seconds to cross 100 km at about 12 km/s",
+    "as_written": "about eight seconds of atmosphere ahead of it",
+    "source": "Derived: 100 km divided by about 12.6 km/s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About ten tonnes of air sit above each square metre",
+    "as_written": "about ten tonnes of air",
+    "source": "Standard atmosphere, 101,325 Pa divided by g",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Air in a column as wide as Apophis weighs about one sixtieth of the rock",
+    "as_written": "about one sixtieth as much as the rock",
+    "source": "Derived: cross-section about 91,000 square metres times about 10 t/m2, versus 6 x 10^7 t",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Chelyabinsk 2013: about 20 m object, about 500 kt, over a thousand injured",
+    "as_written": "a stone about twenty metres wide burst high above Chelyabinsk in Russia with the energy of roughly five hundred kilotons, and the blast broke enough windows to injure more than a thousand people",
+    "source": "Popova et al. 2013, Science; Russian emergency ministry casualty reports",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tunguska 1908: roughly 50-60 m object flattened about 2,000 square km of forest",
+    "as_written": "perhaps fifty or sixty metres wide flattened about two thousand square kilometres of Siberian forest",
+    "source": "Chyba, Thomas and Zahnle 1993, Nature; Boslough and Crawford 2008; Russian forest-fall surveys",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tunguska energy estimates range from about 3 to 30 megatons",
+    "as_written": "estimates running from about three to thirty megatons",
+    "source": "Boslough and Crawford 2008; Longo 2007 review of Tunguska",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Shock-heated air at hypervelocity exceeds the Sun's surface temperature",
+    "as_written": "hotter than the surface of the sun",
+    "source": "Melosh 1989, Impact Cratering: A Geologic Process",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The whole asteroid is stopped in under a tenth of a second",
+    "as_written": "under a tenth of a second for the whole asteroid to be stopped",
+    "source": "Derived: 340 m divided by about 12 km/s is about 0.03 s, longer at an oblique angle",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Peak shock pressure is millions of times atmospheric",
+    "as_written": "the pressure is millions of times that of the atmosphere",
+    "source": "Melosh 1989, Impact Cratering; planar impact approximation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Transient cavity about 4 km wide, final crater 4 to 5 km",
+    "as_written": "a temporary cavity about four kilometres wide and more than a kilometre deep",
+    "source": "Collins, Melosh and Marcus 2005, Earth Impact Effects Program scaling",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Most likely impact angle is 45 degrees",
+    "as_written": "At the most likely impact angle, forty-five degrees",
+    "source": "Gilbert 1893; Shoemaker 1962",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Meteor Crater is about 1.2 km wide, formed about 50,000 years ago by an object roughly 50 m across",
+    "as_written": "about one point two kilometres wide, and it was dug about fifty thousand years ago by an iron meteorite only around fifty metres across",
+    "source": "Melosh and Collins 2005, Nature; USGS and Meteoritical Society",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Speed of sound is about 340 m/s",
+    "as_written": "about three hundred and forty metres per second",
+    "source": "Standard value at sea level",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Blast arrives almost five minutes after the flash at 100 km",
+    "as_written": "it arrives almost five minutes after the flash",
+    "source": "Derived: 100,000 m divided by 343 m/s is about 290 s",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Seismic waves travel at several km/s",
+    "as_written": "Shaking travels through rock at several kilometres per second",
+    "source": "USGS seismic wave velocities",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Blast can break windows beyond 100 km",
+    "as_written": "shatter windows more than a hundred kilometres from the crater",
+    "source": "Collins et al. 2005 Earth Impact Effects Program; nuclear-effects overpressure scaling (rough estimate)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oceans cover about 71 percent of Earth",
+    "as_written": "About seventy-one percent of Earth's surface is ocean",
+    "source": "NOAA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average ocean depth is about 3.7 km",
+    "as_written": "The average depth is roughly three point seven kilometres",
+    "source": "NOAA ocean facts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ward and Asphaug 2000 modelled asteroid impact tsunami hazard",
+    "as_written": "Early work in the year two thousand, by Steven Ward and Erik Asphaug",
+    "source": "Ward and Asphaug 2000, Icarus 145, Asteroid impact tsunami",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Later simulations found impact waves lose energy quickly",
+    "as_written": "Later computer simulations, including work at Los Alamos National Laboratory",
+    "source": "Gisler, Weaver and Gittings 2011, Computing in Science and Engineering; Melosh, impact tsunami reviews",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 1 km is the commonly cited threshold for global effects",
+    "as_written": "an asteroid about one kilometre wide as the rough threshold for global damage",
+    "source": "NASA Planetary Defense Coordination Office; Toon et al. 1997, Reviews of Geophysics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis has about 25 times less mass than a 1 km body",
+    "as_written": "it carries about twenty-five times less mass",
+    "source": "Derived: (1000/340) cubed is about 25",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Pinatubo 1991 cooled the planet by about 0.5 C for a year or two",
+    "as_written": "cooled the planet by about half a degree Celsius for a year or two",
+    "source": "USGS and NASA Earth Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tambora 1815 was followed by the year without a summer in 1816",
+    "as_written": "the eruption of Tambora in eighteen fifteen was followed by the year without a summer",
+    "source": "Standard volcanology and climate history, e.g. Oppenheimer 2003",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Chicxulub impactor about 10 km wide, about 66 million years ago, energy tens of thousands of times Apophis",
+    "as_written": "It was around ten kilometres wide, and its energy was tens of thousands of times greater than Apophis's",
+    "source": "Schulte et al. 2010, Science; Collins et al. 2020; energy ratio derived",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Objects of this size strike about once every tens of thousands of years",
+    "as_written": "only about once every tens of thousands of years",
+    "source": "NASA Planetary Defense Coordination Office; NEO Science Definition Team 2017",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Solar power intercepted by Earth is about 1.7 x 10^17 W",
+    "as_written": "about one hundred and seventy quadrillion watts",
+    "source": "Kopp and Lean 2011 total solar irradiance; NASA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis energy equals about 28 seconds of sunlight on Earth",
+    "as_written": "you get about twenty-eight seconds",
+    "source": "Derived: about 4.8 x 10^18 J divided by 1.74 x 10^17 W",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth orbits the Sun at nearly 30 km/s",
+    "as_written": "nearly thirty kilometres every second",
+    "source": "NASA Earth Fact Sheet (29.78 km/s)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 1,800 km per minute",
+    "as_written": "about eighteen hundred kilometres each minute",
+    "source": "Derived: 29.8 km/s times 60",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Effective target with gravitational focusing is about 27,000 km wide",
+    "as_written": "our effective target is roughly twenty-seven thousand kilometres wide",
+    "source": "Derived from Earth radius 6,371 km and gravitational focusing factor of about 4.6 for 12.6 km/s impact and 11.2 km/s escape speed",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A few minutes to a quarter hour timing shift suffices to miss",
+    "as_written": "somewhere between a few minutes and a quarter of an hour early or late",
+    "source": "Derived: 27,000 km divided by 1,800 km/min is about 15 min for the full width",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A deflection of about 1 to 2 cm/s a decade ahead suffices",
+    "as_written": "a change in the asteroid's speed of about a centimetre or two per second would do it",
+    "source": "Derived from along-track drift of about 3 times delta-v times time; see NASA NEO Survey and Deflection Study",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "That is less than one part in a million of Apophis's orbital speed",
+    "as_written": "That is less than one part in a million",
+    "source": "Derived: 0.02 m/s divided by about 30,000 m/s; orbit from JPL Small-Body Database",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "DART mass about 570 kg, speed about 6 km/s, target Dimorphos about 160 m wide",
+    "as_written": "about five hundred and seventy kilograms, flew into Dimorphos, a moonlet roughly one hundred and sixty metres wide, at about six kilometres per second",
+    "source": "NASA DART mission; Daly et al. 2023, Nature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Dimorphos orbit shortened from 11 h 55 min to about 11 h 23 min, a 32 minute change",
+    "as_written": "from eleven hours and fifty-five minutes to about eleven hours and twenty-three minutes, a change of thirty-two minutes",
+    "source": "Thomas et al. 2023, Nature; NASA DART results",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Speed change was a few mm/s and ejecta enhanced the push roughly 3 to 4 times",
+    "as_written": "The speed change was only a few millimetres per second, and the debris thrown off gave an extra shove, roughly three to four times larger",
+    "source": "Cheng et al. 2023, Nature (momentum enhancement factor about 3.6)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis is about 14 times as massive as Dimorphos",
+    "as_written": "Apophis is about fourteen times more massive than Dimorphos",
+    "source": "Brozovic et al. 2018 (Apophis) and Daly et al. 2023 (Dimorphos about 4.3 x 10^9 kg); ratio derived",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About a hundred DART-class impacts would be needed",
+    "as_written": "on the order of a hundred such impacts",
+    "source": "Derived back-of-envelope momentum comparison using DART beta of about 3.6",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Apophis tumbles with a period of about 30.5 hours",
+    "as_written": "about thirty and a half hours to complete one cycle",
+    "source": "Pravec et al. 2014, Icarus (30.56 h)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Researchers disagree on whether the 2029 flyby will change the spin or trigger landslides",
+    "as_written": "some researchers expect our gravity to alter that tumble and even shake loose rock from its surface in landslides. Others expect little change",
+    "source": "Benson et al. 2023, Icarus; Yu et al. 2014 and related Apophis spin studies",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "OSIRIS-APEX arrives at Apophis soon after the 2029 flyby",
+    "as_written": "NASA's OSIRIS-APEX spacecraft is due to arrive soon after the flyby",
+    "source": "NASA OSIRIS-APEX mission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]
