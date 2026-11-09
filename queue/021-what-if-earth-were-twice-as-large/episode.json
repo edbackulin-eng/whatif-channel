@@ -1,13 +1,26 @@
 {
   "slug": "021-what-if-earth-were-twice-as-large",
   "title": "What If Earth Were Twice as Large?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 21,
   "script_source": "claude",
   "created": "2026-10-25T09:40:17+00:00",
   "words": 3504,
   "sourced_claims": 67,
   "flagged_claims": 0,
-  "updated": "2026-11-04T19:44:39+00:00",
-  "requeued": "2026-11-04: failed on a fixed fault (pipeline/sceneplan.py _text)"
+  "updated": "2026-11-09T16:29:52+00:00",
+  "requeued": "2026-11-04: failed on a fixed fault (pipeline/sceneplan.py _text)",
+  "thumbnail_words": [
+    "TWICE LARGE"
+  ],
+  "thumbnail_person": {
+    "gender": "man",
+    "age": 24,
+    "look": "East Asian",
+    "angle": "three-quarter view, turned towards the event, looking just past the camera",
+    "setting": "earth"
+  },
+  "rendered_minutes": 299.0,
+  "youtube_id": "wLdBFJ79Lzc",
+  "publish_at": "2026-11-12T15:00:00Z"
 }

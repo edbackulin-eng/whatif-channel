@@ -111,3 +111,5 @@ Traceback (mo
 - **2026-11-07 13:08 UTC** - Built 020-what-if-the-moon-had-an-atmosphere in 187 min.
 - **2026-11-07 13:10 UTC** - Uploaded 020-what-if-the-moon-had-an-atmosphere as VhKX4mkahSc, public at 2026-11-10T15:00:00Z.
 - **2026-11-08 11:55 UTC** - Wrote 5 script(s). Queue now 9 (1.8 weeks).
+- **2026-11-09 16:25 UTC** - Built 021-what-if-earth-were-twice-as-large in 299 min.
+- **2026-11-09 16:29 UTC** - Uploaded 021-what-if-earth-were-twice-as-large as wLdBFJ79Lzc, public at 2026-11-12T15:00:00Z.
