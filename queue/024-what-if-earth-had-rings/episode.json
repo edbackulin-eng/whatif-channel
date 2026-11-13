@@ -1,7 +1,7 @@
 {
   "slug": "024-what-if-earth-had-rings",
   "title": "What If Earth Had Rings?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 24,
   "script_source": "claude",
   "created": "2026-11-01T11:39:18+00:00",
@@ -12,6 +12,16 @@
     "EARTH",
     "RINGS"
   ],
-  "updated": "2026-11-04T09:46:41+00:00",
-  "requeued": "2026-11-04: failed only on the kaggle CLI (no six), fixed in 7366338"
+  "updated": "2026-11-13T13:43:57+00:00",
+  "requeued": "2026-11-04: failed only on the kaggle CLI (no six), fixed in 7366338",
+  "thumbnail_person": {
+    "gender": "woman",
+    "age": 33,
+    "look": "Latina/Latino",
+    "angle": "near profile, head turned towards the event, one eye catching the light",
+    "setting": "earth"
+  },
+  "rendered_minutes": 166.9,
+  "youtube_id": "2_jALZ7FNDQ",
+  "publish_at": "2026-11-16T15:00:00Z"
 }
