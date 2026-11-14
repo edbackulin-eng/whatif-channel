@@ -119,3 +119,5 @@ Traceback (mo
 - **2026-11-12 15:04 UTC** - Uploaded 023-what-if-a-solar-flare-hit-earth-directly as p9q_hf1idAU, public at 2026-11-14T15:00:00Z.
 - **2026-11-13 13:42 UTC** - Built 024-what-if-earth-had-rings in 167 min.
 - **2026-11-13 13:43 UTC** - Uploaded 024-what-if-earth-had-rings as 2_jALZ7FNDQ, public at 2026-11-16T15:00:00Z.
+- **2026-11-14 15:32 UTC** - Built 026-what-if-you-dug-a-hole-through-the-earth in 314 min.
+- **2026-11-14 15:34 UTC** - Uploaded 026-what-if-you-dug-a-hole-through-the-earth as u-bUfXP7EDM, public at 2026-11-17T15:00:00Z.

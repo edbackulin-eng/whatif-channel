@@ -1,11 +1,25 @@
 {
   "slug": "026-what-if-you-dug-a-hole-through-the-earth",
   "title": "What If You Dug a Hole Through the Earth?",
-  "status": "ready-to-render",
+  "status": "published",
   "position": 26,
   "script_source": "claude",
   "created": "2026-11-08T11:41:12+00:00",
   "words": 2866,
   "sourced_claims": 77,
-  "flagged_claims": 0
+  "flagged_claims": 0,
+  "thumbnail_words": [
+    "THE TUNNEL"
+  ],
+  "thumbnail_person": {
+    "gender": "woman",
+    "age": 58,
+    "look": "Latina/Latino",
+    "angle": "three-quarter view, turned towards the event, looking just past the camera",
+    "setting": "earth"
+  },
+  "rendered_minutes": 314.2,
+  "updated": "2026-11-14T15:34:14+00:00",
+  "youtube_id": "u-bUfXP7EDM",
+  "publish_at": "2026-11-17T15:00:00Z"
 }
