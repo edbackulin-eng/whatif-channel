@@ -1,0 +1,53 @@
+name: v2 3D test
+
+# A short look at the Blender templates (owner 15.11 rework): a few seconds of each, as an artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      templates:
+        description: "space separated"
+        default: "earth_day earth_night earth_moon moon_rise sun asteroid orbits ocean ocean_moon"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libsm6 libxkbcommon0
+      - run: pip install -q pillow
+      - uses: actions/cache@v4
+        with:
+          path: tools/blender
+          key: blender-4.2.3
+      - run: python -X utf8 tools/v2_assets.py blender
+      - uses: actions/cache@v4
+        with:
+          path: assets/textures
+          key: nasa-textures-v1
+      - run: python -X utf8 tools/v2_assets.py textures && ls -la assets/textures
+      - name: Render
+        env:
+          TPL: ${{ github.event.inputs.templates }}
+        run: |
+          mkdir -p out
+          for t in $TPL; do
+            start=$(date +%s)
+            tools/blender/blender -b -noaudio -P pipeline/blender/scene.py -- \
+              "{\"template\": \"$t\", \"seconds\": 2, \"seed\": 7, \"out\": \"$PWD/out/$t.mp4\", \"textures\": \"$PWD/assets/textures\", \"samples\": 16, \"w\": 1280, \"h\": 720, \"moon_closeness\": 2}" \
+              > out/$t.log 2>&1 || echo "FAILED $t"
+            echo "$t: $(( $(date +%s) - start )) s"; tail -3 out/$t.log
+            ffmpeg -v error -y -sseof -0.5 -i out/$t.mp4 -frames:v 1 out/$t.jpg || true
+          done
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: v2-3d-test
+          path: out/
+          retention-days: 7
