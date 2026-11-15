@@ -1,8 +1,8 @@
 {
   "channel_topic": "What If - science scenarios",
   "language": "en",
-  "target_duration_min": 20,
-  "videos_per_week": 5,
+  "target_duration_min": 17,
+  "videos_per_week": 2,
   "publish_time": "15:00",
   "timezone": "Europe/Kiev",
   "youtube_publish": false,
@@ -20,5 +20,8 @@
   "visual_qc_retries": 1,
   "youtube_upload": true,
   "publish_time_utc": "15:00",
-  "verify_public_after_publish": true
+  "verify_public_after_publish": true,
+  "engine": "v2",
+  "v2_ready": false,
+  "_v2_note": "owner 15.11: the new format (real video >= 50 %, Blender 3D, maps, FLUX <= 20 %, 15-20 min, thumbnails after the niche leader). Builds of the old format stop; v2_ready turns the builds back on once the trial video is done."
 }

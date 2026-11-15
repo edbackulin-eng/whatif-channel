@@ -31,7 +31,7 @@ from pipeline import queue  # noqa: E402
 REPO = os.environ.get("GITHUB_REPOSITORY", "edbackulin-eng/whatif-channel")
 OWNER = REPO.split("/")[0]
 BUILD = "build-video.yml"
-MIN_AHEAD = 2
+MIN_AHEAD = 1          # owner 15.11: one video in reserve, two a week
 RESCUE_H = 3
 HUNG_H = 6.5
 SETTLE_MIN = 12
@@ -127,6 +127,9 @@ def check_runs(mem, actions):
 
 def check_buffer(busy, actions):
     have = scheduled()
+    cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+    if cfg.get("engine") == "v2" and not cfg.get("v2_ready"):
+        return have                       # owner 15.11: the old format builds no more
     if len(have) >= MIN_AHEAD or busy or now().hour >= LAST_START_H:
         return have
     gh("workflow", "run", BUILD, "-R", REPO, parse=False)

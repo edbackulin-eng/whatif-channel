@@ -21,8 +21,8 @@ ROOT = Path(__file__).resolve().parent.parent
 QUEUE = ROOT / "queue"
 JOURNAL = ROOT / "queue" / "journal.md"
 
-# Publication days: Mon, Tue, Thu, Fri, Sat (weekday() 0=Mon).
-PUBLISH_WEEKDAYS = (0, 1, 3, 4, 5)
+# Publication days: Tue, Sat (weekday() 0=Mon) - owner 15.11: two a week, quality first.
+PUBLISH_WEEKDAYS = (1, 5)
 PER_WEEK = len(PUBLISH_WEEKDAYS)
 LOW_WATER = PER_WEEK          # fewer than a week's worth is a warning
 

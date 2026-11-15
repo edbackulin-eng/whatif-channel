@@ -36,9 +36,13 @@ jobs:
     outputs:
       go: ${{ steps.clock.outputs.go }}
     steps:
+      - uses: actions/checkout@v5
       - id: clock
         run: |
           h=$((10#$(date -u +%H)))
+          # owner 15.11: no more videos of the old format; the v2 engine builds once it is ready
+          if [ "$(python3 -c "import json;c=json.load(open('config.json'));print(c.get('engine')=='v2' and not c.get('v2_ready'))")" = "True" ]; then
+            echo "go=false" >> "$GITHUB_OUTPUT"; echo "the old format is retired; the v2 engine is not switched on yet"; exit 0; fi
           if [ "$h" -lt 18 ]; then echo "go=true" >> "$GITHUB_OUTPUT"
           else echo "go=false" >> "$GITHUB_OUTPUT"; echo "it is ${h}:xx UTC, after 18:00; the 03:17 run builds instead"; fi
 
@@ -195,7 +199,7 @@ jobs:
         if: always()
         run: |
           git pull --rebase -q origin "${{ github.ref_name }}" || true
-          python -X utf8 automation/buffer.py --min 2
+          python -X utf8 automation/buffer.py --min 1
 
       # At least two uploaded and scheduled at all times. A run that leaves fewer
       # starts the next one itself, so the stock is rebuilt without waiting for
