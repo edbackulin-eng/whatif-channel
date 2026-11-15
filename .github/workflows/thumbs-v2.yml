@@ -1,0 +1,82 @@
+name: Thumbnails v2 (trial)
+
+# Owner 15.11: the new thumbnail style (a famous city at the moment of the catastrophe, one or two
+# enormous white words, one yellow curved arrow) - three candidates for one title, judged, for the
+# owner to look at. Nothing is uploaded anywhere; the pictures are this run's artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: "The episode title"
+        required: true
+        default: "What Would Happen If the Moon Came Twice as Close?"
+  # the GPU window of What If; a run outside it stops green and the next slot tries
+  schedule:
+    - cron: "37 8,10,12,14 * * *"
+
+concurrency:
+  group: thumbnails
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-24.04
+    outputs:
+      go: ${{ steps.clock.outputs.go }}
+      title: ${{ steps.clock.outputs.title }}
+    steps:
+      - uses: actions/checkout@v5
+      - id: clock
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+          TITLE_IN: ${{ github.event.inputs.title }}
+        run: |
+          m=$((10#$(date -u +%H) * 60 + 10#$(date -u +%M)))
+          # a scheduled run works only while a trial is booked (state/thumbs_v2_trial.txt holds the title)
+          if [ "$EVENT" = "schedule" ]; then
+            [ -s state/thumbs_v2_trial.txt ] || { echo "go=false" >> "$GITHUB_OUTPUT"; echo "nothing booked"; exit 0; }
+            TITLE_IN="$(head -1 state/thumbs_v2_trial.txt)"
+            n=$(gh run list -R "${{ github.repository }}" --workflow thumbs-v2.yml --status success --json databaseId --jq length)
+            [ "$n" = "0" ] || { echo "go=false" >> "$GITHUB_OUTPUT"; echo "already made"; exit 0; }
+          fi
+          if [ "$m" -lt $((7 * 60)) ] || [ "$m" -ge $((17 * 60 + 30)) ]; then
+            echo "go=false" >> "$GITHUB_OUTPUT"; echo "outside What If's GPU window"; exit 0
+          fi
+          n=$(gh run list -R "${{ github.repository }}" --workflow build-video.yml --status in_progress --json databaseId --jq length)
+          if [ "$n" != "0" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "a build holds the GPU"; exit 0; fi
+          echo "go=true" >> "$GITHUB_OUTPUT"
+          { echo "title<<EOF"; echo "$TITLE_IN"; echo "EOF"; } >> "$GITHUB_OUTPUT"
+
+  thumbs:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Three candidates, judged
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TITLE: ${{ needs.gate.outputs.title }}
+        run: python -X utf8 tools/thumbs_v2.py --title "$TITLE"
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: thumbs-v2
+          path: output/thumbs_v2/
+          retention-days: 30
+          if-no-files-found: warn
