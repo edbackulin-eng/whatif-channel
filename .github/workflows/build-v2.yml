@@ -1,0 +1,172 @@
+name: Build a video (v2)
+
+# Owner 15.11: the new What If - global catastrophes as a timeline of consequences, real video at least
+# half the film, Blender 3D (Earth with NASA Blue/Black Marble, the Sun, the Moon, an asteroid, orbits,
+# the ocean), animated maps and cards, FLUX at most a fifth, sound effects under the scenes, thumbnails
+# after the niche's leader. Three jobs: prep (needs What If's Kaggle window for FLUX), the 3D shots in
+# parallel, then the montage, QA and the upload.
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Queue slug to build"
+        required: true
+      upload:
+        description: "Upload to YouTube on the next free slot when QA passes"
+        type: boolean
+        default: false
+
+concurrency:
+  group: video-build-v2
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: read
+
+env:
+  SLUG: ${{ github.event.inputs.slug }}
+
+jobs:
+  prep:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -r requirements.txt
+      - run: python -X utf8 automation/fetch_models.py
+      - uses: actions/cache@v4
+        with:
+          path: assets/music/*.mp3
+          key: music-${{ hashFiles('assets/music/library.json') }}
+      - run: python -X utf8 automation/fetch_music.py
+      - uses: actions/cache@v4
+        with:
+          path: assets/textures
+          key: nasa-textures-v1
+      - run: python -X utf8 tools/v2_assets.py textures
+      - name: Narration, shots, real video, cards, FLUX, thumbnails
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python -X utf8 automation/stages_v2.py prep --slug "$SLUG"
+      - uses: actions/upload-artifact@v5
+        with:
+          name: v2-prep
+          path: |
+            output/${{ github.event.inputs.slug }}/
+            state/used_footage.json
+          retention-days: 3
+          compression-level: 0
+
+  blender:
+    needs: prep
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        k: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libsm6 libxkbcommon0
+      - run: pip install -q pillow
+      - uses: actions/download-artifact@v5
+        with:
+          name: v2-prep
+          path: .
+      - uses: actions/cache@v4
+        with:
+          path: tools/blender
+          key: blender-4.2.3
+      - run: python -X utf8 tools/v2_assets.py blender
+      - uses: actions/cache@v4
+        with:
+          path: assets/textures
+          key: nasa-textures-v1
+      - run: python -X utf8 tools/v2_assets.py textures
+      - name: 3D shots, share ${{ matrix.k }} of 8
+        run: |
+          rm -f output/$SLUG/v2/clips/*.mp4
+          python -X utf8 automation/stages_v2.py blender --slug "$SLUG" --k ${{ matrix.k }} --n 8
+      - uses: actions/upload-artifact@v5
+        with:
+          name: v2-3d-${{ matrix.k }}
+          path: output/${{ github.event.inputs.slug }}/v2/clips/
+          retention-days: 3
+          if-no-files-found: ignore
+
+  assemble:
+    needs: [prep, blender]
+    if: ${{ !cancelled() && needs.prep.result == 'success' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: assets/music/*.mp3
+          key: music-${{ hashFiles('assets/music/library.json') }}
+      - run: python -X utf8 automation/fetch_music.py
+      - uses: actions/cache@v4
+        with:
+          path: assets/textures
+          key: nasa-textures-v1
+      - run: python -X utf8 tools/v2_assets.py textures
+      - uses: actions/download-artifact@v5
+        with:
+          name: v2-prep
+          path: .
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: v2-3d-*
+          merge-multiple: true
+          path: output/${{ github.event.inputs.slug }}/v2/clips/
+      - name: Montage, sound, QA, package
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python -X utf8 automation/stages_v2.py assemble --slug "$SLUG"
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: v2-package
+          path: ready/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Upload to YouTube
+        if: github.event.inputs.upload == 'true'
+        env:
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+        run: python -X utf8 automation/upload_youtube.py
+      - name: Record the outcome
+        if: always()
+        run: |
+          git config user.name  "whatif-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          git add queue/ state/used_footage.json 2>/dev/null || true
+          git commit -m "build v2: $(date -u +%Y-%m-%d) $SLUG" || exit 0
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q origin "${{ github.ref_name }}" && git push && exit 0
+            sleep $((i * 8))
+          done
+          exit 1

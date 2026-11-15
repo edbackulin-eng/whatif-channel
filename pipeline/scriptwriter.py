@@ -21,7 +21,7 @@ from core.text import word_count
 log = get_logger("scriptwriter")
 
 PROVIDERS = ("claude", "gemini", "groq")
-MIN_WORDS, MAX_WORDS = 2800, 3800
+MIN_WORDS, MAX_WORDS = 2200, 2900      # owner 15.11: 15-20 minutes at 146 words a minute
 CLAUDE_TIMEOUT_S = 900
 
 SYSTEM = """You write narration for a YouTube channel that explores scientific
@@ -38,13 +38,18 @@ Hard rules:
 - Where the science is genuinely contested, say so rather than picking the
   dramatic version.
 - No "In conclusion", no "Remember that", no "It is important to".
+- No politics, no wars, no weapons, no real countries or leaders in a conflict, no named living people.
+  The catastrophe is natural or physical; places are named only as places (a city, a coast, a mountain).
 - Write only the narration. No title, no preamble, no sign-off."""
 
 OUTLINE = """Write the full narration for a video titled "{title}".
 
-Structure:
-- A hook in the first 30 seconds that puts the viewer inside the scenario.
-- Then a timeline of consequences: seconds, minutes, hours, days, years.
+Structure (a global catastrophe told as a chronology - owner 15.11):
+- A hook in the first 30 seconds that puts the viewer inside the scenario, in a real place.
+- Then the chronology of consequences, with the time said out loud at each step: the first seconds and
+  minutes, the first hours, the first day, the first week, the first months, one year later.
+- Each step: what happens to the sky, the oceans, the weather, cities, power, food, animals - with real
+  numbers (heights, temperatures, speeds, days) a viewer can picture.
 - Real science with concrete numbers throughout.
 - A genuinely surprising turn near the end - something most viewers will not
   have seen coming.

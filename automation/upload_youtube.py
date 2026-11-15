@@ -129,7 +129,8 @@ def main():
             continue
         from pipeline import youtube
         try:
-            video_id, when = youtube.upload(pkg, publish_at=slot)
+            v2 = json.loads((pkg / "v2.json").read_text(encoding="utf-8")) if (pkg / "v2.json").exists() else {}
+            video_id, when = youtube.upload(pkg, publish_at=slot, synthetic_media=v2.get("synthetic", True))
         except Exception as err:                                 # noqa: BLE001
             failed += 1
             queue.log_entry(f"Upload FAILED for {slug}: {str(err)[:160]}")

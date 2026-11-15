@@ -18,18 +18,25 @@ from pipeline import queue, scriptwriter  # noqa: E402
 log = get_logger("write-scripts")
 
 TOPICS = ROOT / "assets" / "topics.json"
+TOPICS_V2 = ROOT / "assets" / "topics_v2.json"     # owner 15.11: global catastrophes, titles from YouTube search
 TARGET_STOCK_WEEKS = 2
 
 
 def load_topics():
     used = {e.get("title") for e in queue.episodes()}
-    topics = json.loads(TOPICS.read_text(encoding="utf-8"))
+    cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+    if cfg.get("engine") == "v2":
+        topics = [t["title"] for t in json.loads(TOPICS_V2.read_text(encoding="utf-8"))["topics"]] \
+            if TOPICS_V2.exists() else []
+    else:
+        topics = json.loads(TOPICS.read_text(encoding="utf-8"))
     return [t for t in topics if t not in used]
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--count", type=int, default=queue.PER_WEEK)
+    ap.add_argument("--title", default="", help="write this one title now (the v2 trial)")
     args = ap.parse_args()
 
     cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
@@ -44,7 +51,9 @@ def main():
         print(f"queue has {h['ready']} ready; target {target}. Nothing to do.")
         return 0
 
-    available = load_topics()
+    available = [args.title] if args.title else load_topics()
+    if args.title:
+        wanted = 1
     if not available:
         queue.log_entry("No unused topics left in assets/topics.json.")
         print("no unused topics remain")
@@ -72,6 +81,8 @@ def main():
                 log.warning("second opinion unavailable for %r: %s", title, e)
                 extra["flagged_claims"] = None
 
+        if json.loads((ROOT / "config.json").read_text(encoding="utf-8")).get("engine") == "v2":
+            extra["engine"] = "v2"
         d = queue.add(title, text, provider, extra)
         if claims:
             (d / "sources.json").write_text(

@@ -11,6 +11,10 @@ on:
     - cron: "0 5 * * 0"        # Sundays 05:00 UTC, ahead of Monday's build
   workflow_dispatch:
     inputs:
+      title:
+        description: "Write this one title now (v2 trial)"
+        required: false
+        default: ""
       count:
         description: "How many scripts to write"
         default: "5"
@@ -45,20 +49,28 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: python -X utf8 automation/refill_topics.py --min 10 --add 30
+        run: |
+          if [ "$(python3 -c "import json;print(json.load(open('config.json')).get('engine'))")" = "v2" ]; then
+            python -X utf8 automation/topics_v2.py --min 8 --add 20      # owner 15.11: global catastrophes, real searches
+          else
+            python -X utf8 automation/refill_topics.py --min 10 --add 30
+          fi
 
       - name: Write scripts
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: python -X utf8 automation/write_scripts.py --count "${{ github.event.inputs.count || '5' }}"
+          TITLE: ${{ github.event.inputs.title }}
+        run: |
+          if [ -n "$TITLE" ]; then python -X utf8 automation/write_scripts.py --title "$TITLE"
+          else python -X utf8 automation/write_scripts.py --count "${{ github.event.inputs.count || '2' }}"; fi
 
       - name: Commit the queue
         run: |
           git config user.name  "whatif-bot"
           git config user.email "noreply@users.noreply.github.com"
-          git add queue/ assets/topics.json
+          git add queue/ assets/topics.json assets/topics_v2.json 2>/dev/null || git add queue/
           if git diff --cached --quiet; then
             # Nothing new to say, but the schedule still needs a heartbeat.
             date -u +"%Y-%m-%d %H:%M UTC" > queue/.heartbeat

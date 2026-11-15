@@ -35,3 +35,8 @@ __pycache__/
 
 # The smoke test builds here.
 work/
+
+# v2 build: Blender and NASA textures are fetched by the workflow (tools/v2_assets.py)
+tools/blender/
+tools/blender*.tar.xz
+assets/textures/

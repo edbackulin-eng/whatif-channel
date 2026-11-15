@@ -289,6 +289,13 @@ def main(title, images_dir=None):
         imgs = generate([t["prompt"] for t in takes], work, f"tv2-{int(time.time())}")
     for t, p in zip(takes, imgs):
         t["image"] = str(p)
+    return finish(title, takes, work)
+
+
+def finish(title, takes, work):
+    """Locate the key detail, compose, judge; the best take of each concept is a candidate."""
+    work = Path(work)
+    work.mkdir(parents=True, exist_ok=True)
     report = []
     for t in [t for t in takes if t.get("image")]:
         try:
