@@ -1,0 +1,130 @@
+[
+  {
+    "text": "Carbon dioxide makes up about 420 parts per million of Earth's atmosphere.",
+    "as_written": "Because carbon dioxide makes up about four hundred and twenty parts per million of the atmosphere",
+    "source": "NOAA Global Monitoring Laboratory, Trends in Atmospheric Carbon Dioxide (2024)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Typical concrete contains about fifty percent oxygen by mass.",
+    "as_written": "By weight, typical cured concrete is about fifty percent oxygen.",
+    "source": "National Institute of Standards and Technology (NIST), Composition of Ordinary Concrete and Minerals",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oxygen makes up 20.95 percent of Earth's atmosphere by volume.",
+    "as_written": "Because oxygen makes up twenty point nine five percent of the atmosphere by volume",
+    "source": "NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's total atmospheric mass is approximately 5 quadrillion metric tons (5.15 x 10^18 kg).",
+    "as_written": "Earth has roughly five quadrillion metric tons of air pushing down on it.",
+    "source": "National Center for Atmospheric Research (NCAR), Trenberth et al., The Mass of the Atmosphere (2005)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Standard atmospheric pressure at sea level is 101.3 kilopascals.",
+    "as_written": "At sea level, that pressure is one hundred and one point three kilopascals.",
+    "source": "International Union of Pure and Applied Chemistry (IUPAC) Standard Temperature and Pressure",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 21 percent drop from 101.3 kPa leaves approximately 80 kPa.",
+    "as_written": "The air drops from one hundred and one kilopascals to roughly eighty kilopascals.",
+    "source": "Calculated: 101.325 kPa * (1 - 0.2095) = 80.097 kPa",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The human tympanic membrane can rupture at a sudden overpressure or differential around 35 kilopascals.",
+    "as_written": "The tympanic membrane inside your ears can rupture when exposed to a sudden differential of around thirty-five kilopascals.",
+    "source": "Centers for Disease Control and Prevention (CDC) / NIOSH, Explosions and Blast Injuries: Eardrum Rupture Thresholds",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's continental crust is 46.6 percent oxygen by mass.",
+    "as_written": "By mass, the continental crust is forty-six point six percent oxygen.",
+    "source": "U.S. Geological Survey (USGS), Abundance of Elements in the Earth's Crust",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ozone layer is concentrated between 15 and 35 kilometers above Earth's surface.",
+    "as_written": "It resides in the stratosphere between fifteen and thirty-five kilometers above the surface",
+    "source": "World Meteorological Organization (WMO), Scientific Assessment of Ozone Depletion",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ozone layer absorbs approximately 98 percent of medium-frequency UV light.",
+    "as_written": "absorbing roughly ninety-eight percent of the sun medium-frequency ultraviolet light.",
+    "source": "NASA Ozone Watch / NOAA Earth System Research Laboratories",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Water is 88.8 percent oxygen by mass.",
+    "as_written": "By mass, oxygen accounts for eighty-eight point eight percent of every water molecule.",
+    "source": "CRC Handbook of Chemistry and Physics, Molecular Weight of Water Components",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The human body is approximately 65 percent oxygen by mass.",
+    "as_written": "The human body is roughly sixty-five percent oxygen by mass.",
+    "source": "International Commission on Radiological Protection (ICRP), Report of the Task Group on Reference Man",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Hydrogen gas has a flammability limit in air between 4 percent and 75 percent by volume.",
+    "as_written": "Hydrogen can ignite in air at concentrations anywhere between four percent and seventy-five percent by volume.",
+    "source": "National Fire Protection Association (NFPA) 2, Hydrogen Technologies Code",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The minimum ignition energy of a hydrogen-air mixture is approximately 0.02 millijoules.",
+    "as_written": "The energy required to ignite a hydrogen-air mixture is minute, as little as zero point zero two millijoules",
+    "source": "NASA Glenn Research Center, Safety Standard for Hydrogen and Hydrogen Systems (NASA-STD-8719.16)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The autoignition temperature of hydrogen gas in air is 536 degrees Celsius.",
+    "as_written": "autoignition temperature of hydrogen, which is five hundred and thirty-six degrees Celsius.",
+    "source": "U.S. Department of Energy (DOE) Alternative Fuels Data Center, Hydrogen Properties",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The enthalpy of formation of liquid water from gaseous hydrogen and oxygen is -285.8 kJ/mol.",
+    "as_written": "The chemical reaction releases two hundred and eighty-six kilojoules of energy for every single mole of water formed.",
+    "source": "NIST Chemistry WebBook, Standard Enthalpy of Formation for H2O(l)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

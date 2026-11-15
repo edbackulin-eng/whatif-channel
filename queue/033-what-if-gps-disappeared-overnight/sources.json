@@ -1,0 +1,210 @@
+[
+  {
+    "text": "The GPS constellation operates 31 active satellites in medium Earth orbit.",
+    "as_written": "Thirty-one satellites, orbiting twenty thousand two hundred kilometres above you, have gone silent.",
+    "source": "US Space Force, GPS Constellation Status, Navigation Center",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "GPS orbital altitude is approximately 20,200 kilometres above Earth.",
+    "as_written": "orbiting twenty thousand two hundred kilometres above you",
+    "source": "US Space Force, Global Positioning System Standard Positioning Service Performance Standard",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The primary GPS civilian L1 carrier frequency is 1575.42 MHz and L2 carrier is 1227.60 MHz.",
+    "as_written": "primary civilian frequencies of fifteen seventy-five point four two megahertz and twelve twenty-seven point six zero megahertz",
+    "source": "Interface Specification IS-GPS-200, Navstar GPS Space Segment/Navigation User Interfaces",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "5G time-division duplexing networks require base station synchronisation within 1.5 microseconds.",
+    "as_written": "networks using time-division duplexing, require base stations to be aligned to within one point five microseconds",
+    "source": "3GPP Technical Specification 38.133, Requirements for support of radio resource management",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Phasor measurement units sample AC waveforms up to 60 times per second with time accuracy under 1 microsecond.",
+    "as_written": "measure voltage and current waveforms up to sixty times every second, and every single measurement is stamped with a GPS time tag accurate to under one microsecond",
+    "source": "IEEE Standard C37.118.1-2011, Standard for Synchrophasor Measurements for Power Systems",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "MiFID II regulations require high-frequency trading market participants to timestamp orders with maximum divergence of 100 microseconds from UTC.",
+    "as_written": "European regulations known as MiFID Two, high-frequency trading firms must timestamp every financial transaction with a maximum divergence of one hundred microseconds from Coordinated Universal Time",
+    "source": "European Securities and Markets Authority (ESMA), Regulatory Technical Standard 25 (RTS 25) under MiFID II",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "FINRA regulations require electronic order timestamps to be accurate within 50 milliseconds of UTC.",
+    "as_written": "Financial Industry Regulatory Authority demands timestamp accuracy within fifty milliseconds for electronic orders",
+    "source": "FINRA Rule 6860 (Clock Synchronization), Financial Industry Regulatory Authority",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Commercial aircraft inertial reference systems drift typically at a rate of 1 to 2 nautical miles per hour.",
+    "as_written": "typically around one to two nautical miles per hour of flight",
+    "source": "Federal Aviation Administration, Advisory Circular AC 120-47, Section 8",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Advanced oceanic procedural aircraft separation allows tracks separated by as little as 14 nautical miles with ADS-B.",
+    "as_written": "separating them by as little as fourteen nautical miles",
+    "source": "International Civil Aviation Organization (ICAO), Performance-based Longitudinal Separation (PBN) Guidelines",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Real-time kinematic GPS in port automation achieves positioning accuracy of approximately 3 centimetres.",
+    "as_written": "real-time kinematic GPS to position containers within three centimetres of their assigned slots",
+    "source": "Port Technology International, Real Time Kinematic (RTK) automated terminal positioning technical reports",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Drivers navigating without navigational assistance waste roughly 20 percent more miles in unfamiliar areas.",
+    "as_written": "drivers navigating unfamiliar areas without guidance add up to twenty percent more miles to their journeys",
+    "source": "United States Department of Transportation, Federal Highway Administration, In-Vehicle Navigation System Assessment 1996",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "FCC E911 regulations require mobile carriers to provide outdoor caller horizontal location accuracy within 50 metres.",
+    "as_written": "federal rules require carriers to provide a caller position within fifty metres for most outdoor cellular calls",
+    "source": "Federal Communications Commission, 47 CFR § 9.10, Enhanced 911 Service Requirements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A standard JDAM precision munition achieves a circular error probable of 5 metres or less with GPS.",
+    "as_written": "a JDAM has a circular error probable of five metres or less",
+    "source": "United States Air Force Fact Sheet: Joint Direct Attack Munition GBU-31/32/38",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A JDAM munition using pure inertial guidance degrades to approximately 30 metres circular error probable.",
+    "as_written": "On inertial guidance alone, its accuracy degrades rapidly with flight time to roughly thirty metres",
+    "source": "United States Air Force Fact Sheet: Joint Direct Attack Munition GBU-31/32/38",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Galileo operates 28 satellites, GLONASS operates 24 satellites, and BeiDou operates over 30 satellites.",
+    "as_written": "Europe operates Galileo with twenty-eight active satellites, Russia operates GLONASS with twenty-four, and China operates BeiDou with over thirty",
+    "source": "European GNSS Agency (GSA), Russian Information and Analysis Center for Positioning, Navigation and Timing (GLONASS IAC), and China Satellite Navigation Office",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "RTK-guided precision agriculture tractors achieve pass-to-pass accuracy of 2 centimetres.",
+    "as_written": "real-time kinematic positioning, accurate down to two centimetres",
+    "source": "John Deere Agricultural Technology Specifications for StarFire RTK Systems",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 2019 study for the National Institute of Standards and Technology estimated the loss of GPS would cost the US economy 1 billion dollars per day.",
+    "as_written": "A study from the National Institute of Standards and Technology estimated that the loss of GPS would cost the United States economy one billion dollars per day",
+    "source": "National Institute of Standards and Technology (NIST), Economic Benefits of the Global Positioning System to the U.S. Private Sector (RTI Report, 2019)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Manual driving and mechanical markers in field crop planting result in 7 to 10 percent overlap.",
+    "as_written": "overlap their rows by seven to ten percent",
+    "source": "United States Department of Agriculture (USDA), Economic Research Service, Precision Agriculture in the Digital Era, Bulletin 2023",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A compact rubidium oscillator aging at 1 part in 10 to the 11th power drifts about 1 microsecond per day, reaching around 30 microseconds in 30 days.",
+    "as_written": "rubidium standard with an aging rate of one part in ten to the eleventh power drifts by roughly one microsecond per day. After thirty days without external synchronisation, those clocks have drifted by thirty microseconds",
+    "source": "National Institute of Standards and Technology (NIST), Special Publication 1065: Handbook of Frequency Stability Analysis",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tectonic plates move relative to one another at rates of 2 to 10 centimetres per year.",
+    "as_written": "slide past one another at rates of two to ten centimetres every year",
+    "source": "United States Geological Survey (USGS), Plate Tectonics in a Nutshell",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cascadia episodic tremor and slow slip events recur approximately every 14 months.",
+    "as_written": "These slow earthquakes occur every fourteen months, lasting for weeks",
+    "source": "Geological Survey of Canada and USGS, Cascadia Episodic Tremor and Slip Research Series",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global mean sea-level rise is measured at approximately 3.7 millimetres per year.",
+    "as_written": "sea-level rise of three point seven millimetres per year",
+    "source": "World Meteorological Organization (WMO), State of the Global Climate Report 2023",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Greenland ice sheet loses approximately 270 billion metric tons of ice annually.",
+    "as_written": "sheds approximately two hundred and seventy billion metric tons of ice each year",
+    "source": "NASA GRACE and GRACE Follow-On Satellite Mission, Ice Sheet Mass Balance Data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Satellite altimetry relies on satellite orbit determination relative to Earth's centre of mass accurate to within 2 centimetres.",
+    "as_written": "satellite to know its own orbital position relative to the Earth centre of mass to within two centimetres",
+    "source": "International Association of Geodesy, Ocean Surface Topography Science Team (OSTST) Precise Orbit Determination Reports",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Enhanced Loran (eLoran) operates at low frequencies centred around 100 kilohertz.",
+    "as_written": "eLoran is a terrestrial radio navigation system operating at low frequencies, around one hundred kilohertz",
+    "source": "International Loran Association and ITU-R Recommendation M.589-3",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "eLoran provides position accuracy down to 10 metres and timing accuracy down to 20 nanoseconds.",
+    "as_written": "providing position accuracy down to ten metres and timing accuracy down to twenty nanoseconds",
+    "source": "Federal Aviation Administration and US Coast Guard, Loran-C/eLoran Technical Evaluation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

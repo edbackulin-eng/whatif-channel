@@ -1,0 +1,354 @@
+[
+  {
+    "text": "The Sun's current age is approximately 4.6 billion years.",
+    "as_written": "roughly four point six billion years old",
+    "source": "Nature / Bouvier and Wadhwa (2010), 'The age of the Solar System'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun converts roughly 600 million metric tons of hydrogen into helium every second.",
+    "as_written": "six hundred million metric tons of hydrogen into helium every second",
+    "source": "NASA Solar Physics Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun will remain on the main sequence for approximately another 5 billion years.",
+    "as_written": "another five billion years",
+    "source": "Sackmann, Boothroyd, and Kraemer (1993), 'Our Sun. III. Present and Future'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A red giant Sun expands to approximately 200 times its current radius.",
+    "as_written": "roughly two hundred times its current radius",
+    "source": "Schröder and Smith (2008), 'Distant future of the Sun and Earth revisited'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun's current effective surface temperature is 5772 Kelvin.",
+    "as_written": "five thousand seven hundred and seventy-two kelvins",
+    "source": "IAU 2015 Resolution B3 on nominal solar conversion constants",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A red giant Sun drops to an effective temperature of approximately 3000 Kelvin.",
+    "as_written": "about three thousand kelvins",
+    "source": "Schröder and Smith (2008), 'Distant future of the Sun and Earth revisited'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A red giant Sun reaches a luminosity between 2000 and 3000 times its present value.",
+    "as_written": "between two thousand and three thousand times its present brightness",
+    "source": "Sackmann, Boothroyd, and Kraemer (1993), 'Our Sun. III. Present and Future'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Photons take roughly eight minutes and twenty seconds to reach Earth from the Sun.",
+    "as_written": "first eight minutes and twenty seconds",
+    "source": "Astronomical Almanac, speed of light and 1 AU distance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The speed of light is 300,000 kilometers per second.",
+    "as_written": "three hundred thousand kilometers per second",
+    "source": "CODATA Recommended Values of the Fundamental Physical Constants",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The solar surface area increases by a factor of 40,000 when radius expands by 200.",
+    "as_written": "factor of forty thousand",
+    "source": "Geometric scaling of spherical surface area proportional to radius squared",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The current solar constant is approximately 1361 watts per square meter.",
+    "as_written": "one thousand three hundred and sixty-one watts per square meter",
+    "source": "SORCE / TIM Satellite Dataset (Kopp and Lean, 2011)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cotton auto-ignites at roughly 400 degrees Celsius.",
+    "as_written": "four hundred degrees Celsius",
+    "source": "Handbook of Fire Protection Engineering (SFPE)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Asphalt softens at 50 degrees Celsius and flows at 100 degrees Celsius.",
+    "as_written": "softens at fifty degrees Celsius and flows freely at one hundred",
+    "source": "Asphalt Institute Technical Guidelines",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's average orbital distance from Earth is 384,000 kilometers.",
+    "as_written": "three hundred and eighty-four thousand kilometers away",
+    "source": "NASA Moon Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The mass of Earth's atmosphere is roughly 5 quadrillion metric tons.",
+    "as_written": "five quadrillion metric tons",
+    "source": "National Center for Atmospheric Research (NCAR), Trenberth and Smith (2005)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lead melts at 327 degrees Celsius.",
+    "as_written": "three hundred and twenty-seven degrees Celsius",
+    "source": "CRC Handbook of Chemistry and Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Zinc melts at 419 degrees Celsius.",
+    "as_written": "four hundred and nineteen degrees",
+    "source": "CRC Handbook of Chemistry and Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The total volume of Earth's oceans is roughly 1.38 billion cubic kilometers.",
+    "as_written": "one point three eight billion cubic kilometers",
+    "source": "USGS Water Science School, Charette and Smith (2010)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The specific heat capacity of water is approximately 4184 joules per kilogram per degree Celsius.",
+    "as_written": "four thousand one hundred and eighty-four joules per kilogram per degree Celsius",
+    "source": "NIST Chemistry WebBook",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The critical point of water is 374 degrees Celsius and 218 atmospheres.",
+    "as_written": "three hundred and seventy-four degrees Celsius at two hundred and eighteen atmospheres of pressure",
+    "source": "International Association for the Properties of Water and Steam (IAPWS)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mercury orbits at an average distance of 57.9 million kilometers.",
+    "as_written": "fifty-seven point nine million kilometers",
+    "source": "NASA Mercury Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A 200x solar radius equals roughly 140 million kilometers.",
+    "as_written": "one hundred and forty million kilometers",
+    "source": "Calculated from current solar radius of 696,340 km times 200",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mercury's average orbital velocity is roughly 47 kilometers per second.",
+    "as_written": "forty-seven kilometers per second",
+    "source": "NASA Mercury Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus orbits at an average distance of 108 million kilometers.",
+    "as_written": "one hundred and eight million kilometers",
+    "source": "NASA Venus Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Venus's surface atmospheric pressure is roughly 92 times that of Earth.",
+    "as_written": "ninety-two times denser than Earth",
+    "source": "NASA Venus Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth orbits at an average distance of 149.6 million kilometers.",
+    "as_written": "one hundred and forty-nine point six million kilometers",
+    "source": "IAU Definition of the Astronomical Unit",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In standard stellar evolution models, mass loss could theoretically move Earth out to 1.7 AU.",
+    "as_written": "one point seven astronomical units",
+    "source": "Sackmann, Boothroyd, and Kraemer (1993), 'Our Sun. III. Present and Future'",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Schröder and Smith modeled solar mass loss versus tidal drag and showed Earth is likely engulfed.",
+    "as_written": "Klaus-Peter Schröder and Robert Cannon Smith calculated this balance in detail",
+    "source": "Schröder and Smith (2008), 'Distant future of the Sun and Earth revisited', MNRAS",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Mponeng gold mine reaches a depth of 4 kilometers.",
+    "as_written": "four kilometers down",
+    "source": "AngloGold Ashanti Mponeng Technical Report",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Granite melts between 900 and 1000 degrees Celsius.",
+    "as_written": "nine hundred to one thousand degrees Celsius",
+    "source": "USGS Geologic Properties of Igneous Rocks",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Basalt melts at approximately 1200 degrees Celsius.",
+    "as_written": "twelve hundred",
+    "source": "USGS Geologic Properties of Igneous Rocks",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars orbits at an average distance of 227.9 million kilometers or 1.52 AU.",
+    "as_written": "two hundred and twenty-seven point nine million kilometers from the Sun, or about one point five two astronomical units",
+    "source": "NASA Mars Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars's average surface temperature is minus 60 degrees Celsius.",
+    "as_written": "minus sixty degrees Celsius",
+    "source": "NASA Mars Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mars's surface atmospheric pressure is roughly 600 pascals.",
+    "as_written": "six hundred pascals",
+    "source": "NASA Mars Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter orbits at 5.2 AU or roughly 778 million kilometers.",
+    "as_written": "five point two astronomical units, roughly seven hundred and seventy-eight million kilometers",
+    "source": "NASA Jupiter Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Jupiter's mean atmospheric temperature at 1 bar is roughly minus 110 degrees Celsius.",
+    "as_written": "minus one hundred and ten degrees Celsius",
+    "source": "NASA Jupiter Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Europa's ice shell is estimated between 15 and 25 kilometers thick.",
+    "as_written": "fifteen to twenty-five kilometers thick",
+    "source": "NASA Europa Clipper Mission Planetary Profile",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Europa contains more water than all of Earth's oceans combined.",
+    "as_written": "more water than all of Earth's oceans combined",
+    "source": "NASA JPL Planetary Oceanography Data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn orbits at roughly 9.5 astronomical units.",
+    "as_written": "nine point five astronomical units away",
+    "source": "NASA Saturn Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Saturn's main rings span 282,000 kilometers and are 99 percent pure water ice.",
+    "as_written": "ninety-nine percent pure water ice spanning two hundred and eighty-two thousand kilometers",
+    "source": "Cassini-Huygens Mission Data / NASA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Titan's surface atmospheric pressure is 1.45 times that of Earth.",
+    "as_written": "one point four five times that of Earth",
+    "source": "NASA Cassini-Huygens Mission Profile",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Titan's average surface temperature is minus 179 degrees Celsius.",
+    "as_written": "minus one hundred and seventy-nine degrees Celsius",
+    "source": "NASA Cassini-Huygens Surface Science Results",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ralph Lorenz modeled the late-stage habitable zone shift to the outer solar system.",
+    "as_written": "Ralph Lorenz have calculated that as the inner solar system dies",
+    "source": "Lorenz, Lunine, and McKay (1997), 'Titan under a red giant sun', Geophysical Research Letters",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun's habitable zone shifts to between 9 and 20 AU during its red giant phase.",
+    "as_written": "between nine and twenty astronomical units",
+    "source": "Lorenz et al. (1997) and Ramirez and Kaltenegger (2016)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

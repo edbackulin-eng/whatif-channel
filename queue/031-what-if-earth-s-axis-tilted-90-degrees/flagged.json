@@ -1,0 +1,170 @@
+[
+  {
+    "text": "Earth has a mass of approximately 5.97 x 10^24 kilograms.",
+    "as_written": "five point nine seven times ten to the twenty-fourth kilograms",
+    "source": "NASA Planetary Fact Sheet - Earth",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Uranus has an axial tilt of approximately 97.8 degrees.",
+    "as_written": "ninety-seven point eight degrees",
+    "source": "NASA Planetary Fact Sheet - Uranus",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's current axial tilt is approximately 23.4 degrees.",
+    "as_written": "twenty-three point four degrees",
+    "source": "NASA Planetary Fact Sheet - Earth",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth completes an orbit in approximately 365.25 days.",
+    "as_written": "three hundred and sixty-five point two five days",
+    "source": "NASA Planetary Fact Sheet - Earth",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's average distance from the Sun is approximately 149.6 million kilometers.",
+    "as_written": "one hundred and forty-nine point six million kilometers",
+    "source": "NASA Planetary Fact Sheet - Earth",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Total solar irradiance at the top of Earth's atmosphere is approximately 1361 watts per square meter.",
+    "as_written": "thirteen hundred and sixty-one watts of solar energy on every square meter",
+    "source": "SORCE / TSIS-1 Mission Data, NASA / NOAA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Clear-sky outgoing longwave radiation from the surface is roughly 300 watts per square meter.",
+    "as_written": "roughly three hundred watts per square meter under clear skies",
+    "source": "Trenberth et al. (2009) Earth's Global Energy Budget, Bulletin of the American Meteorological Society",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The specific heat capacity of water is approximately 4184 joules per kilogram per degree Celsius.",
+    "as_written": "four thousand one hundred and eighty-four joules per kilogram per degree Celsius",
+    "source": "NIST Chemistry WebBook",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fresh sea ice reflects about 60 to 80 percent of incoming sunlight.",
+    "as_written": "sixty to eighty percent of incoming sunlight back into space",
+    "source": "National Snow and Ice Data Center (NSIDC)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Open ocean water absorbs more than 90 percent of incoming sunlight.",
+    "as_written": "absorbs more than ninety percent of incoming sunlight",
+    "source": "National Snow and Ice Data Center (NSIDC)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A wet-bulb temperature exceeding 35 degrees Celsius prevents metabolic heat loss and leads to fatal heatstroke in healthy humans within six hours.",
+    "as_written": "Once the wet-bulb temperature exceeds thirty-five degrees Celsius, metabolic heat cannot escape. Even healthy individuals sitting in the shade with unlimited water suffer heatstroke and organ failure within six hours",
+    "source": "Sherwood and Huber (2010), Proceedings of the National Academy of Sciences (PNAS)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "About 68 percent of Earth's landmass is located in the Northern Hemisphere.",
+    "as_written": "About sixty-eight percent of Earth's landmass is located in the Northern Hemisphere",
+    "source": "Physical Geography: A Landscape Appreciation, Hess (USGS geographical data)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Oceans cover over 80 percent of the Southern Hemisphere.",
+    "as_written": "covering over eighty percent of its surface area",
+    "source": "NOAA National Ocean Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctica's ice sheet averages over 2 kilometers in thickness.",
+    "as_written": "averages over two kilometers in thickness",
+    "source": "British Antarctic Survey (BAS)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Antarctica contains roughly 27 million cubic kilometers of ice.",
+    "as_written": "roughly twenty-seven million cubic kilometers of ice",
+    "source": "Fretwell et al. (2013) Bedmap2, The Cryosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "On current Earth, the annual mean insolation at the equator is approximately 418 watts per square meter at the top of the atmosphere.",
+    "as_written": "roughly four hundred and eighteen watts per square meter at the top of the atmosphere",
+    "source": "Hartmann (1994) Global Physical Climatology",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "On current Earth, the annual mean insolation at the poles is approximately 173 watts per square meter.",
+    "as_written": "around one hundred and seventy-three watts per square meter",
+    "source": "Hartmann (1994) Global Physical Climatology",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 90 degrees obliquity, the annual mean insolation at the poles exceeds 280 watts per square meter.",
+    "as_written": "an annual mean insolation of over two hundred and eighty watts per square meter",
+    "source": "Williams and Kasting (1997) Icarus; Ferreira et al. (2014) Icarus",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "At 90 degrees obliquity, the annual mean insolation at the equator drops to approximately 175 watts per square meter.",
+    "as_written": "annual mean insolation drops to approximately one hundred and seventy-five watts per square meter",
+    "source": "Williams and Kasting (1997) Icarus; Ferreira et al. (2014) Icarus",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric water-holding capacity increases by roughly 7 percent per 1 degree Celsius increase in temperature according to the Clausius-Clapeyron relation.",
+    "as_written": "Warm air holds roughly seven percent more water vapor for every one degree Celsius increase in temperature",
+    "source": "IPCC Sixth Assessment Report, Working Group I",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth's axial tilt currently varies between approximately 22.1 and 24.5 degrees over a 41,000-year cycle stabilized by the Moon.",
+    "as_written": "narrow range between twenty-two point one and twenty-four point five degrees over billions of years",
+    "source": "Laskar et al. (1993) Nature; NASA Earth Observatory Milankovitch cycles",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "The claim states the variation occurs over billions of years, whereas the cited Laskar et al. source and standard orbital mechanics describe a 41,000-year cycle.",
+    "needs_human": true
+  }
+]

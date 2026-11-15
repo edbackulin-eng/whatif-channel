@@ -1,0 +1,242 @@
+[
+  {
+    "text": "Without the electromagnetic force, atomic nuclei cannot bind electrons and molecules dissolve instantaneously.",
+    "as_written": "Electromagnetism holds electrons to atomic nuclei. It binds atoms into molecules. If that force vanished, every chemical bond in your body would dissolve.",
+    "source": "Standard Model of Particle Physics, CERN",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Roughly 500,000 people are airborne globally at any typical moment.",
+    "as_written": "Around the globe, roughly five hundred thousand people are in the air at any given moment, distributed across thousands of commercial flights.",
+    "source": "FlightAware / Federal Aviation Administration flight statistics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Passenger jets at cruising altitude have roughly twenty to thirty minutes of glide time from thirty-five thousand feet.",
+    "as_written": "At cruising altitude, thirty-five thousand feet up, pilots have roughly twenty to thirty minutes of glide time",
+    "source": "Federal Aviation Administration (Airplane Flying Handbook FAA-H-8083-3C)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "There are roughly one billion motor vehicles in use worldwide.",
+    "as_written": "At any typical second of the day, there are roughly one billion motor vehicles on the road worldwide.",
+    "source": "International Organization of Motor Vehicle Manufacturers (OICA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "New York City has approximately 70,000 passenger elevators.",
+    "as_written": "In New York City alone, there are roughly seventy thousand passenger elevators.",
+    "source": "New York City Department of Buildings",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Undersea fiber-optic cables span over one million kilometers worldwide.",
+    "as_written": "The internet, which spans over one million kilometers of undersea fiber-optic cables",
+    "source": "TeleGeography Submarine Cable Map",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Undersea fiber cables require optical repeaters every 50 to 80 kilometers.",
+    "as_written": "relies on optical amplifiers placed every fifty to eighty kilometers along the seabed to boost the laser light signals.",
+    "source": "SubOptic / International Telecommunication Union (ITU-T G.977)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "More than ninety percent of global money exists exclusively in digital form.",
+    "as_written": "More than ninety percent of the money in the world exists only as digital entries on bank servers, hard drives, and magnetic tapes.",
+    "source": "Bank for International Settlements / Federal Reserve economic data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "More than 40 million people worldwide with diabetes depend on insulin.",
+    "as_written": "Insulin, which regulates blood sugar for more than forty million people with Type 1 and advanced Type 2 diabetes worldwide",
+    "source": "World Health Organization (Global Report on Diabetes)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Insulin storage requires temperatures between two and eight degrees Celsius.",
+    "as_written": "must be kept refrigerated between two and eight degrees Celsius to maintain its potency.",
+    "source": "U.S. Food and Drug Administration / European Medicines Agency insulin guidelines",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Approximately 3 million people worldwide suffer from end-stage renal disease and require hemodialysis.",
+    "as_written": "Worldwide, there are approximately three million patients with end-stage renal disease who require mechanical hemodialysis",
+    "source": "The Lancet / Global Burden of Disease Study",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Without water, human survival is limited to three to five days under normal conditions.",
+    "as_written": "survival without water is limited to three to five days.",
+    "source": "National Institutes of Health / Harvard Medical School",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "There are roughly 440 commercial nuclear power reactors operating across 32 countries.",
+    "as_written": "There are roughly four hundred and forty commercial nuclear power reactors operating across thirty-two countries.",
+    "source": "International Atomic Energy Agency (IAEA) Power Reactor Information System",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Immediately after reactor scram, radioactive decay heat accounts for approximately six to seven percent of full thermal output.",
+    "as_written": "Immediately after shutdown, decay heat produces roughly six to seven percent of the reactor's full thermal power.",
+    "source": "Nuclear Regulatory Commission (NRC) / American Nuclear Society Standard ANSI/ANS-5.1",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A standard 1,000 MWe nuclear power plant produces approximately 3,000 MW of thermal power, generating roughly 200 MW of decay heat upon trip.",
+    "as_written": "For a typical one-thousand-megawatt electrical plant, which generates about three thousand megawatts of thermal energy, that means nearly two hundred megawatts of heat is still being produced immediately after shutdown.",
+    "source": "Nuclear Regulatory Commission (NRC)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Zirconium fuel cladding undergoes a rapid exothermic oxidation producing hydrogen at temperatures above 800 degrees Celsius.",
+    "as_written": "The fuel cladding, made of a zirconium alloy, reacts with high-temperature steam once it becomes exposed to air at temperatures above eight hundred degrees Celsius.",
+    "source": "International Atomic Energy Agency (IAEA) Safety Reports Series No. 23",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric nitrogen makes up approximately 78 percent of the atmosphere.",
+    "as_written": "While the Earth's atmosphere is roughly seventy-eight percent nitrogen",
+    "source": "NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Haber-Bosch process was invented in 1909.",
+    "as_written": "In nineteen zero nine, German chemists Fritz Haber and Carl Bosch invented an industrial process",
+    "source": "Nobel Prize in Chemistry historical archives (Fritz Haber 1918)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Haber-Bosch process operates at pressures over 150 atmospheres and temperatures around 450 degrees Celsius.",
+    "as_written": "under pressures exceeding one hundred and fifty atmospheres and temperatures around four hundred and fifty degrees Celsius.",
+    "source": "Royal Society of Chemistry",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Haber-Bosch process accounts for 1 to 2 percent of global energy consumption.",
+    "as_written": "Today, the Haber-Bosch process consumes roughly one to two percent of the entire world's energy supply",
+    "source": "International Energy Agency (Ammonia Technology Roadmap)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Synthetic nitrogen fertilizer supports roughly half of the global human population.",
+    "as_written": "Nearly four billion people alive right now owe their physical existence to synthetic fertilizer.",
+    "source": "Our World in Data / Nature Geoscience (Erisman et al., 2008)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In 1900, the United States had approximately 21 million horses and draft animals for a population of 76 million.",
+    "as_written": "In nineteen hundred, there were roughly twenty-one million horses and draft animals in the United States alone to support a population of seventy-six million people.",
+    "source": "United States Department of Agriculture (Census of Agriculture historical data) and US Census Bureau",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Water expands by approximately nine percent upon freezing.",
+    "as_written": "expanding by approximately nine percent in volume.",
+    "source": "U.S. Geological Survey (USGS Water Science School)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Corrosion of steel rebar creates rust that expands up to six times the volume of the original steel, creating over 5,000 psi of pressure.",
+    "as_written": "Rust occupies up to six times the volume of the original steel. This massive expansion generates internal pressures exceeding five thousand pounds per square inch",
+    "source": "American Concrete Institute (ACI 222R: Protection of Metals in Concrete Against Corrosion)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "More than a quarter of the Netherlands lies below sea level.",
+    "as_written": "In the Netherlands, more than a quarter of the land lies below sea level",
+    "source": "PBL Netherlands Environmental Assessment Agency",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The London Underground pumps out roughly 47 million liters of groundwater daily.",
+    "as_written": "In London, the Tube system pumps out roughly forty-seven million liters of groundwater every single day",
+    "source": "Transport for London (TfL)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The New York City Subway pumps out approximately 13 million gallons of groundwater daily.",
+    "as_written": "In New York, the subway system pumps out approximately thirteen million gallons of water daily.",
+    "source": "Metropolitan Transportation Authority (MTA)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Carboniferous period occurred roughly 300 to 360 million years ago.",
+    "as_written": "During the Carboniferous period, roughly three hundred to three hundred and sixty million years ago",
+    "source": "International Commission on Stratigraphy (ICS)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lignin-degrading white-rot fungi had not yet evolved during the peak Carboniferous coal deposition.",
+    "as_written": "white-rot fungi capable of breaking down the complex structural polymer called lignin, had not yet evolved.",
+    "source": "Science (Floudas et al., 2012, The Paleozoic Origin of Enzymatic Lignin Decomposition)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Edwin Drake struck commercial oil in 1859 at Titusville, Pennsylvania at a depth of 69.5 feet.",
+    "as_written": "In eighteen fifty-nine, when Edwin Drake drilled the first commercial oil well in Titusville, Pennsylvania, he struck oil at a depth of just sixty-nine and a half feet below the surface.",
+    "source": "Pennsylvania Historical and Museum Commission / Drake Well Museum",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]
