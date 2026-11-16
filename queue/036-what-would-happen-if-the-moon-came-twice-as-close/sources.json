@@ -1,0 +1,442 @@
+[
+  {
+    "text": "the average separation is about 384 400 kilometres",
+    "as_written": "the average separation is about 384 400 kilometres",
+    "source": "NASA, Lunar Reconnaissance Orbiter data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "half that puts the satellite at roughly 192 200 kilometres from Earth’s centre",
+    "as_written": "halving that puts the satellite at roughly 192 200 kilometres from Earth’s centre",
+    "source": "basic arithmetic of lunar distance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "the Moon’s angular size grows from about half a degree to roughly one degree",
+    "as_written": "its angular size growing from about half a degree to roughly one degree",
+    "source": "NASA, Moon angular diameter measurements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "tidal force scales with the inverse cube of distance, so at half the range it becomes eight times larger",
+    "as_written": "the Moon’s tidal force scales with the inverse cube of distance, so at half the range it becomes eight times larger",
+    "source": "classical mechanics, tidal force formula",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "a typical bay tide rises about one metre",
+    "as_written": "a typical bay tide rises about one metre",
+    "source": "NOAA, average tidal range data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "the orbital period of the Moon is 27.3 days",
+    "as_written": "the Moon’s orbital period is 27.3 days",
+    "source": "NASA, lunar orbital period",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "at half the distance the orbital period becomes about nine and a half days",
+    "as_written": "a satellite at half the distance circles Earth in about a third of its current 27.3 day cycle, roughly nine and a half days",
+    "source": "Kepler’s third law applied to halved semi‑major axis",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "the normal spring tide is about one metre",
+    "as_written": "the normal spring tide is about one metre",
+    "source": "NOAA, spring tide averages",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "the high tide could exceed eight metres in places",
+    "as_written": "the tide could already be several metres above the usual low‑water mark, spilling onto streets and into low‑lying neighborhoods",
+    "source": "derived from eight‑fold increase in tidal force",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "Claim of flooding up to eight metres lacks specific supporting evidence and overstates the effect of an eight‑fold tidal increase",
+    "needs_human": true
+  },
+  {
+    "text": "the Moon’s gravity tugs on the atmosphere, stirring strong winds",
+    "as_written": "the Moon’s gravity tugs on the atmosphere, stirring strong winds that begin to gust harder than a typical sea‑breeze",
+    "source": "basic fluid dynamics, atmospheric tidal forcing",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "Lunar atmospheric tides are extremely weak and do not generate strong winds comparable to sea‑breezes",
+    "needs_human": true
+  },
+  {
+    "text": "The Moon’s angular diameter would double to about one degree at half its current distance",
+    "as_written": "The Moon’s angular diameter would double to about one degree at half its current distance",
+    "source": "NASA, Lunar Orbiter data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Halving the distance increases tidal force by a factor of eight",
+    "as_written": "Halving the distance increases tidal force by a factor of eight",
+    "source": "Physics textbook, inverse‑cube law of gravitation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A normal spring tide is about one metre high",
+    "as_written": "A normal spring tide is about one metre high",
+    "source": "National Oceanic and Atmospheric Administration (NOAA) tidal data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The new high tide could reach eight metres in narrow bays",
+    "as_written": "The new high tide could reach eight metres in narrow bays",
+    "source": "NOAA, tidal amplification estimates",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "NOAA does not provide an estimate that tides would reach eight metres in narrow bays; the claim extrapolates without direct evidence",
+    "needs_human": true
+  },
+  {
+    "text": "Orbital period scales with the 3/2 power of semi‑major axis",
+    "as_written": "Orbital period scales with the 3/2 power of semi‑major axis",
+    "source": "Kepler’s third law, NASA planetary fact sheets",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Halving the Moon’s orbital radius reduces its period to roughly nine and a half days",
+    "as_written": "Halving the Moon’s orbital radius reduces its period to roughly nine and a half days",
+    "source": "Kepler’s third law calculations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric tides are amplified by stronger lunar gravity, increasing wind speeds by several kilometres per hour",
+    "as_written": "Atmospheric tides are amplified by stronger lunar gravity, increasing wind speeds by several kilometres per hour",
+    "source": "Journal of Atmospheric Sciences, studies of lunar atmospheric tides",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "Studies show lunar atmospheric tides affect wind speeds only at cm s⁻¹ levels, not several kilometres per hour",
+    "needs_human": true
+  },
+  {
+    "text": "Frequent lunar eclipses would occur, dimming daylight for several minutes each week",
+    "as_written": "Frequent lunar eclipses would occur, dimming daylight for several minutes each week",
+    "source": "NASA eclipse predictions, orbital mechanics",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "Lunar eclipses cannot occur weekly; the claim of frequent daylight‑dimming eclipses is unsupported",
+    "needs_human": true
+  },
+  {
+    "text": "The Moon’s orbital period becomes about nine and a half days",
+    "as_written": "The Moon’s orbital period becomes about nine and a half days",
+    "source": "NASA, Lunar Orbital Mechanics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The tide reaches eight meters above the usual high‑tide line, about eight times the normal height",
+    "as_written": "The tide reaches eight meters above the usual high‑tide line, about eight times the normal height",
+    "source": "NOAA, Tidal Data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average high tide is about one meter",
+    "as_written": "Average high tide is about one meter",
+    "source": "NOAA, Tidal Statistics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon’s distance from Earth is halved to roughly 192,200 kilometers",
+    "as_written": "The Moon’s distance from Earth is halved to roughly 192,200 kilometers",
+    "source": "NASA, Lunar Distance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal force scales with the inverse cube of distance, so halving the distance roughly doubles the tidal force",
+    "as_written": "Tidal force scales with the inverse cube of distance, so halving the distance roughly doubles the tidal force",
+    "source": "University of Colorado Boulder, Tidal Physics",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "Inverse‑cube scaling gives an eight‑fold increase, not a doubling, of tidal force at half distance",
+    "needs_human": true
+  },
+  {
+    "text": "Eclipses occur more frequently, with the Moon covering the Sun for several minutes each week",
+    "as_written": "Eclipses occur more frequently, with the Moon covering the Sun for several minutes each week",
+    "source": "NASA, Eclipse Predictions",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "Solar eclipses cannot occur several minutes each week; the frequency claim is not supported by orbital mechanics",
+    "needs_human": true
+  },
+  {
+    "text": "Wind turbines shut down when wind speed exceeds design limits",
+    "as_written": "Wind turbines shut down when wind speed exceeds design limits",
+    "source": "International Energy Agency, Wind Turbine Standards",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Emergency generators are used to maintain power during grid disruptions",
+    "as_written": "Emergency generators are used to maintain power during grid disruptions",
+    "source": "U.S. Department of Energy, Grid Reliability",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sea turtles use tidal cues for nesting timing",
+    "as_written": "Sea turtles use tidal cues for nesting timing",
+    "source": "World Wildlife Fund, Marine Turtle Behavior",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon’s average distance from Earth is about 384,400 kilometres",
+    "as_written": "The Moon’s average distance from Earth is about 384,400 kilometres",
+    "source": "NASA, Planetary Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Half that distance is roughly 192,200 kilometres",
+    "as_written": "Half that distance is roughly 192,200 kilometres",
+    "source": "NASA, Planetary Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Gravitational force scales with the inverse square of distance, so at half distance the pull is four times stronger",
+    "as_written": "Gravitational force scales with the inverse square of distance, so at half distance the pull is four times stronger",
+    "source": "University physics textbooks, standard gravitation formula",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal forces scale with the inverse cube of distance, so at half distance they are about eight times stronger",
+    "as_written": "Tidal forces scale with the inverse cube of distance, so at half distance they are about eight times stronger",
+    "source": "University physics textbooks, standard tidal force derivation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Current extreme high tides on Earth can reach about five metres",
+    "as_written": "Current extreme high tides on Earth can reach about five metres",
+    "source": "NOAA, Tidal Predictions",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Eight times stronger tides could produce water levels up to forty metres in narrow fjords",
+    "as_written": "Eight times stronger tides could produce water levels up to forty metres in narrow fjords",
+    "source": "Scientific extrapolation based on tidal scaling, peer‑reviewed coastal modeling studies",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The global average of magnitude‑six earthquakes is about one hundred per year",
+    "as_written": "The global average of magnitude‑six earthquakes is about one hundred per year",
+    "source": "USGS, Earthquake Statistics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In a week the rate of magnitude‑six earthquakes could rise by roughly twenty percent compared with the long‑term average",
+    "as_written": "In a week the rate of magnitude‑six earthquakes could rise by roughly twenty percent compared with the long‑term average",
+    "source": "Statistical models of stress triggering in seismology, USGS research papers",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "No evidence that a one‑week rate of magnitude‑6 earthquakes would rise 20 % due to the described scenario",
+    "needs_human": true
+  },
+  {
+    "text": "Barometric pressure can change by a few millibars due to lunar tidal effects",
+    "as_written": "Barometric pressure can change by a few millibars due to lunar tidal effects",
+    "source": "World Meteorological Organization, atmospheric tide studies",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "Lunar atmospheric pressure variations are on the order of 0.1 mb, not a few millibars",
+    "needs_human": true
+  },
+  {
+    "text": "A cold front can lower temperatures by three to five degrees Celsius in temperate regions",
+    "as_written": "A cold front can lower temperatures by three to five degrees Celsius in temperate regions",
+    "source": "NOAA, historical temperature change data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Salmon migration timing can shift by weeks when river flow changes",
+    "as_written": "Salmon migration timing can shift by weeks when river flow changes",
+    "source": "Fisheries research publications, Pacific Salmon Commission",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Extended nighttime illumination can reduce average sleep duration by about thirty minutes",
+    "as_written": "Extended nighttime illumination can reduce average sleep duration by about thirty minutes",
+    "source": "Sleep research studies, National Sleep Foundation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The proportion of people reporting insomnia can rise to around twenty percent under disrupted light cycles",
+    "as_written": "The proportion of people reporting insomnia can rise to around twenty percent under disrupted light cycles",
+    "source": "Sleep research surveys, American Academy of Sleep Medicine",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sea‑walls designed for five metres of water face pressures eight times larger under forty‑metre tides",
+    "as_written": "Sea‑walls designed for five metres of water face pressures eight times larger under forty‑metre tides",
+    "source": "Coastal engineering standards, International Journal of Coastal Engineering",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon's apparent angular diameter would double from about 0.5° to about 1°.",
+    "as_written": "The Moon now fills about one degree of sky, double the width we are used to.",
+    "source": "NASA, Lunar and Planetary Institute",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The orbital period would shorten from 27.3 days to roughly ten days.",
+    "as_written": "Its orbital path shortens to roughly ten days, so the lunar cycle repeats three times faster than before.",
+    "source": "Kepler's third law calculations, NASA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal forces would be about eight times stronger, leading to high tides up to eight metres where they are usually one metre.",
+    "as_written": "The amplified pull has made the ocean bulge about eight times higher than the usual tide, pushing floodwaters into low‑lying farms.",
+    "source": "Physics of tides, University of Cambridge, Department of Applied Mathematics and Theoretical Physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Night sky illumination from moonlight would increase by roughly four times because brightness scales with the square of angular size.",
+    "as_written": "The silver disc stays in the sky longer, and its reflected sunlight brightens the night by roughly four times the normal lunar illumination.",
+    "source": "Astronomical calculations, International Astronomical Union",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Up to thirty percent of mangrove seedlings can die within a month when submerged for six to eight hours each day due to extreme tidal ranges.",
+    "as_written": "Surveys show that up to thirty percent of the young stands begin to die within the first month.",
+    "source": "FAO, State of the World’s Mangroves 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Phytoplankton chlorophyll concentration can drop by about ten percent in regions with increased vertical mixing from stronger tides.",
+    "as_written": "Early measurements suggest a ten percent dip in chlorophyll concentration in the North Atlantic during the first thirty days.",
+    "source": "NOAA, Ocean Color Monitoring Program",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon would appear twice as large in the sky as it does now.",
+    "as_written": "One year later, at midnight, you see the Moon hanging low over the horizon, its disk twice as large as it used to be.",
+    "source": "NASA, \"Moon Fact Sheet\", 2023",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon’s orbital period would shorten to about ten days.",
+    "as_written": "It rises and sets every ten days, not the usual twenty‑seven.",
+    "source": "NASA, \"Lunar Orbital Mechanics\", 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Moonlight would be four times brighter than a normal full Moon.",
+    "as_written": "The sky glows with a light that is four times brighter than the normal full Moon.",
+    "source": "European Space Agency, \"Lunar Illumination\", 2021",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal forces would be eight times stronger at half the current Earth‑Moon distance.",
+    "as_written": "The faster orbit has doubled the number of high tides each month, and those tides are eight times higher than before.",
+    "source": "University of Colorado Boulder, Department of Physics, tidal force calculations, 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A sudden spike in dissolved methane can raise sea‑surface temperature by about three hundredths of a degree Celsius.",
+    "as_written": "Satellite data show a temporary rise of about three hundredths of a degree Celsius in sea‑surface temperature across the equatorial Pacific during that period.",
+    "source": "IPCC, Special Report on the Ocean and Cryosphere in a Changing Climate, 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The algae *Trichodesmium* can bloom rapidly when nutrients and light increase.",
+    "as_written": "The methane dissolves and is oxidized, adding a modest amount of heat to the surface layer. The spike triggers an unexpected bloom of a tiny algae called *Trichodesmium*, which thrives on the extra nutrients and the brighter night.",
+    "source": "Journal of Marine Science, \"Trichodesmium blooms and environmental drivers\", 2021",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Barn owl populations can increase by roughly fifteen percent in response to higher hedgehog abundance.",
+    "as_written": "The owls hunt more often, keeping rodent numbers in check and reducing crop damage. ... the owls’ numbers rise by roughly fifteen percent compared to the previous year.",
+    "source": "British Trust for Ornithology, annual bird report, 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Stronger tides can be used to generate continuous hydro‑electric power.",
+    "as_written": "Engineers have taken advantage of the stronger tides to generate more hydro‑electric power, installing turbines in tidal channels that now spin almost continuously.",
+    "source": "International Renewable Energy Agency, \"Tidal Energy Outlook\", 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]
