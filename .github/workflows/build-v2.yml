@@ -88,11 +88,18 @@ jobs:
         with:
           name: v2-prep
           path: .
-      - uses: actions/cache@v4
+      - id: blender_cache
+        uses: actions/cache/restore@v4
         with:
           path: tools/blender
           key: blender-4.2.3
       - run: python -X utf8 tools/v2_assets.py blender
+      # saved at once, not at the job's end: a render that fails must not cost the next run the download
+      - if: steps.blender_cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: tools/blender
+          key: blender-4.2.3
       - uses: actions/cache@v4
         with:
           path: assets/textures

@@ -20,7 +20,7 @@ from core.text import word_count
 
 log = get_logger("scriptwriter")
 
-PROVIDERS = ("claude", "gemini", "groq")
+PROVIDERS = ("claude", "parts", "gemini", "groq")
 MIN_WORDS, MAX_WORDS = 2200, 2900      # owner 15.11: 15-20 minutes at 146 words a minute
 CLAUDE_TIMEOUT_S = 900
 
@@ -111,7 +111,43 @@ def _write_with_groq(title):
         SYSTEM, 16000, 0.85, False)
 
 
+# 16.11: Claude Code's subscription access was switched off for the organisation, and one 2800-word answer
+# outran Gemini's read timeout - the chronology is written stage by stage, each a short answer
+STAGES = [
+    ("the hook and the first seconds and minutes", "Open inside the scenario in a real place, state the premise "
+     "(and that it is impossible, if it is), then the first seconds and minutes.", 380),
+    ("the first hours", "Say the time out loud. What changes in the sky, the oceans, the weather, power.", 420),
+    ("the first day", "Say the time out loud. Cities, coasts, transport, food, animals.", 420),
+    ("the first week", "Say the time out loud. The chain reactions, the numbers that matter.", 420),
+    ("the first months", "Say the time out loud. Climate, ecosystems, how life adapts.", 400),
+    ("one year later and the end", "Say the time out loud. A genuinely surprising turn most viewers will not "
+     "expect, then close with a question that invites comments.", 420),
+]
+PART = """You are writing ONE PART of the narration for a video titled "{title}" - a global catastrophe told as a
+chronology. This part: {stage}. {hint}
+About {words} words of continuous spoken prose (no headings). Real science, real checkable numbers only.
+Continue seamlessly from where the narration so far ends:
+...{before}
+
+After the part, output a line containing only ===CLAIMS=== and then a JSON array of the factual claims this part
+made, each {{"text": "...", "as_written": "...", "source": "<organisation, mission, dataset or publication>"}}."""
+
+
+def _write_in_parts(title):
+    body, claims = [], []
+    for stage, hint, words in STAGES:
+        before = " ".join(body)[-1200:] or "(this is the beginning)"
+        raw = llm.complete(PART.format(title=title, stage=stage, hint=hint, words=words, before=before),
+                           system=SYSTEM, max_tokens=3500, temperature=0.8)
+        text, part_claims = split_claims(raw)
+        body.append(clean_script(text))
+        claims += part_claims
+    out = "\n\n".join(body)
+    return out + "\n" + CLAIMS_MARKER + "\n" + json.dumps(claims)
+
+
 WRITERS = {"claude": _write_with_claude,
+           "parts": _write_in_parts,
            "gemini": _write_with_gemini,
            "groq": _write_with_groq}
 

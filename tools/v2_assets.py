@@ -30,7 +30,12 @@ SOURCES = {
     "moon.jpg": ["https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_2k.tif",
                  "commons:File:Moon map (LRO).jpg"],
 }
-BLENDER_URL = "https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz"
+BLENDER_URLS = [                                # 16.11: download.blender.org answered 403 to a runner
+    "https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz",
+    "https://mirror.clarkson.edu/blender/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz",
+    "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz",
+    "https://mirrors.ocf.berkeley.edu/blender/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz",
+]
 
 
 def _get(url, dest, timeout=300):
@@ -93,7 +98,15 @@ def blender():
         print("blender present")
         return
     tar = ROOT / "tools" / "blender.tar.xz"
-    _get(BLENDER_URL, tar, timeout=1200)
+    for url in BLENDER_URLS:
+        try:
+            _get(url, tar, timeout=1200)
+            print(f"blender from {url}")
+            break
+        except Exception as e:                                           # noqa: BLE001
+            print(f"blender: {url} failed ({e})")
+    else:
+        raise SystemExit("Blender could not be downloaded from any mirror")
     with tarfile.open(tar) as t:
         t.extractall(ROOT / "tools")
     tar.unlink()

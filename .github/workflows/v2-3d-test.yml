@@ -22,11 +22,18 @@ jobs:
           python-version: "3.11"
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libsm6 libxkbcommon0
       - run: pip install -q pillow
-      - uses: actions/cache@v4
+      - id: blender_cache
+        uses: actions/cache/restore@v4
         with:
           path: tools/blender
           key: blender-4.2.3
       - run: python -X utf8 tools/v2_assets.py blender
+      # saved at once, not at the job's end: a render that fails must not cost the next run the download
+      - if: steps.blender_cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: tools/blender
+          key: blender-4.2.3
       - uses: actions/cache@v4
         with:
           path: assets/textures
