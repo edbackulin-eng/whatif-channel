@@ -83,7 +83,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libsm6 libxkbcommon0
-      - run: pip install -q pillow
+      - run: pip install -q pillow numpy
       - uses: actions/download-artifact@v5
         with:
           name: v2-prep
