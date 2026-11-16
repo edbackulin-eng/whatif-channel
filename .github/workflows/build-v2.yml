@@ -15,6 +15,10 @@ on:
         description: "Upload to YouTube on the next free slot when QA passes"
         type: boolean
         default: false
+      prep_run:
+        description: "Reuse the prep of this earlier run (its id): only the 3D shots and the montage again"
+        required: false
+        default: ""
 
 concurrency:
   group: video-build-v2
@@ -29,6 +33,7 @@ env:
 
 jobs:
   prep:
+    if: github.event.inputs.prep_run == ''
     runs-on: ubuntu-24.04
     timeout-minutes: 330
     steps:
@@ -71,6 +76,7 @@ jobs:
 
   blender:
     needs: prep
+    if: ${{ !cancelled() && contains(fromJSON('["success","skipped"]'), needs.prep.result) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 240
     strategy:
@@ -88,6 +94,8 @@ jobs:
         with:
           name: v2-prep
           path: .
+          run-id: ${{ github.event.inputs.prep_run || github.run_id }}
+          github-token: ${{ github.token }}
       - id: blender_cache
         uses: actions/cache/restore@v4
         with:
@@ -118,7 +126,7 @@ jobs:
 
   assemble:
     needs: [prep, blender]
-    if: ${{ !cancelled() && needs.prep.result == 'success' }}
+    if: ${{ !cancelled() && contains(fromJSON('["success","skipped"]'), needs.prep.result) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 240
     steps:
@@ -143,6 +151,8 @@ jobs:
         with:
           name: v2-prep
           path: .
+          run-id: ${{ github.event.inputs.prep_run || github.run_id }}
+          github-token: ${{ github.token }}
       - uses: actions/download-artifact@v5
         with:
           pattern: v2-3d-*

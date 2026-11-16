@@ -155,8 +155,9 @@ def earth(radius=1.0, sun_dir=(-1.0, 0.4, 0.3), night_boost=1.0):
         rng = nt.nodes.new("ShaderNodeMapRange")
         rng.inputs["From Min"].default_value = -0.15
         rng.inputs["From Max"].default_value = 0.2
-        rng.inputs["To Min"].default_value = 0.0
-        rng.inputs["To Max"].default_value = 3.0 * night_boost
+        # facing the Sun (dot > 0.2): no city lights; on the night side (dot < -0.15): full (16.11: was inverted)
+        rng.inputs["To Min"].default_value = 3.0 * night_boost
+        rng.inputs["To Max"].default_value = 0.0
         nt.links.new(dot.outputs["Value"], rng.inputs["Value"])
         key = "Emission Color" if "Emission Color" in bsdf.inputs else "Emission"
         nt.links.new(n.outputs["Color"], bsdf.inputs[key])
@@ -308,7 +309,8 @@ elif T in ("earth_moon", "moon_rise"):
         camera(c0, c1, target=mid, lens=35)
     else:
         # just above the Earth's limb, looking along the horizon, the Moon big and lit above it
-        q, t = u, p                                           # radial (local "up") and along the horizon
+        # the camera above the north pole: its "up" is the world's up, so the horizon lies level (16.11)
+        q, t = (0.0, 0.0, 1.0), u                             # radial (local "up") and along the horizon
         cam = tuple(x * 1.04 for x in q)
         dn = math.radians(-8)
         aim = tuple(t[i] * math.cos(dn) + q[i] * math.sin(dn) for i in range(3))
@@ -397,12 +399,12 @@ elif T in ("ocean", "ocean_moon"):
     oc.keyframe_insert("time", frame=N)
     sm, snt = mat("sea")
     b = snt.nodes["Principled BSDF"]
-    b.inputs["Base Color"].default_value = (0.01, 0.06, 0.1, 1)
-    b.inputs["Roughness"].default_value = 0.08
+    b.inputs["Base Color"].default_value = (0.004, 0.025, 0.045, 1)
+    b.inputs["Roughness"].default_value = 0.15
     sea.data.materials.append(sm)
     sun_lamp((-0.6, 0.2, -0.25), 2.0 if T == "ocean_moon" else 4.0)
     if T == "ocean_moon":
-        size = 6.0 * float(ARGS.get("moon_closeness", 2.0))
+        size = 16.0 * float(ARGS.get("moon_closeness", 2.0))
         mo = moon(size, (0, 260, 30 + size * 0.6))
         sun_lamp((0.0, 1.0, -0.3), 1.5)                  # light travelling away from the camera: the Moon's face lit
     camera((0, -20, 4.5), (0, -8, 3.5), target=(0, 120, 12), lens=24)
