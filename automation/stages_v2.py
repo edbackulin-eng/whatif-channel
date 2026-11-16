@@ -202,7 +202,8 @@ def blender(slug, k, n):
         out = w / "clips" / f"{s['index']:04d}_3d.mp4"
         need = s["end"] - s["start"] + XF
         args = {"template": s.get("template", "earth_day"), "seconds": need, "seed": s.get("seed", s["index"]),
-                "out": str(out), "textures": str(ROOT / "assets" / "textures"), "samples": 16, "w": 1280, "h": 720,
+                "out": str(out), "textures": str(ROOT / "assets" / "textures"), "samples": 12, "w": 1280, "h": 720,
+                "fps": 15,
                 **(s.get("params") or {})}
         t0 = time.time()
         r = subprocess.run([exe, "-b", "-noaudio", "-P", str(ROOT / "pipeline" / "blender" / "scene.py"), "--",
@@ -211,7 +212,9 @@ def blender(slug, k, n):
             log.warning("3D shot %d (%s) failed: %s", s["index"], args["template"], (r.stderr or r.stdout)[-600:])
             continue
         final = w / "clips" / f"{s['index']:04d}.mp4"
-        ff("-i", out, "-vf", f"fps={FPS},scale={W}:{H}:flags=lanczos,{GRADE},format=yuv420p", "-t", f"{need:.3f}",
+        # rendered at 15 fps (16.11: Cycles on a runner's CPU), blended up to 30 - the camera moves slowly
+        ff("-i", out, "-vf", f"minterpolate=fps={FPS}:mi_mode=blend,scale={W}:{H}:flags=lanczos,{GRADE},format=yuv420p",
+           "-t", f"{need:.3f}",
            "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "17", final, label="3d upscale")
         out.unlink(missing_ok=True)
         log.info("3D shot %d (%s) in %.0f s", s["index"], args["template"], time.time() - t0)

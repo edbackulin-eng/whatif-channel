@@ -38,7 +38,21 @@ try:
     sc.cycles.denoiser = "OPENIMAGEDENOISE"
 except Exception:                                                       # noqa: BLE001
     pass
-sc.cycles.max_bounces = 4
+# 16.11: the first test took 30-37 s a frame; a space scene needs one bounce, no caustics, and the scene
+# kept in memory between frames
+sc.cycles.max_bounces = 2
+for attr, v in (("diffuse_bounces", 1), ("glossy_bounces", 1), ("transmission_bounces", 0),
+                ("transparent_max_bounces", 2), ("volume_bounces", 0), ("caustics_reflective", False),
+                ("caustics_refractive", False), ("use_adaptive_sampling", True), ("adaptive_threshold", 0.05)):
+    try:
+        setattr(sc.cycles, attr, v)
+    except Exception:                                                   # noqa: BLE001
+        pass
+try:
+    sc.cycles.denoising_prefilter = "FAST"
+except Exception:                                                       # noqa: BLE001
+    pass
+sc.render.use_persistent_data = True
 sc.render.resolution_x, sc.render.resolution_y = int(ARGS.get("w", 1280)), int(ARGS.get("h", 720))
 sc.render.fps = FPS
 N = max(2, int(round(float(ARGS["seconds"]) * FPS)))
@@ -60,18 +74,14 @@ def world_stars(strength=1.0):
     nt.nodes.clear()
     out = nt.nodes.new("ShaderNodeOutputWorld")
     bg = nt.nodes.new("ShaderNodeBackground")
-    vor = nt.nodes.new("ShaderNodeTexVoronoi")
-    vor.inputs["Scale"].default_value = 400.0
-    ramp = nt.nodes.new("ShaderNodeValToRGB")
-    ramp.color_ramp.elements[0].position = 0.0
-    ramp.color_ramp.elements[0].color = (1, 1, 1, 1)
-    ramp.color_ramp.elements[1].position = 0.035
-    ramp.color_ramp.elements[1].color = (0, 0, 0, 1)
-    coord = nt.nodes.new("ShaderNodeTexCoord")
-    nt.links.new(coord.outputs["Generated"], vor.inputs["Vector"])
-    nt.links.new(vor.outputs["Distance"], ramp.inputs["Fac"])
-    nt.links.new(ramp.outputs["Color"], bg.inputs["Color"])
-    bg.inputs["Strength"].default_value = 0.6 * strength
+    stars = tex("stars.png")                       # a ready star field (tools/v2_assets.py): a lookup, not a Voronoi
+    if stars:
+        env = nt.nodes.new("ShaderNodeTexEnvironment")
+        env.image = bpy.data.images.load(stars)
+        nt.links.new(env.outputs["Color"], bg.inputs["Color"])
+    else:
+        bg.inputs["Color"].default_value = (0, 0, 0, 1)
+    bg.inputs["Strength"].default_value = 0.8 * strength
     nt.links.new(bg.outputs["Background"], out.inputs["Surface"])
 
 
@@ -101,7 +111,9 @@ def sun_lamp(direction=(-1.0, 0.4, 0.3), strength=4.0):
     o = bpy.data.objects.new("sun", d)
     sc.collection.objects.link(o)
     v = direction
-    o.rotation_euler = (math.atan2(math.hypot(v[0], v[1]), -v[2]), 0, math.atan2(v[1], v[0]) + math.pi / 2)
+    # the lamp shines along its local -Z: tilt by theta about X, turn by phi about Z so that -Z becomes v
+    # (16.11: the old phi mirrored x and y - the Moon and the Earth were lit from behind)
+    o.rotation_euler = (math.atan2(math.hypot(v[0], v[1]), -v[2]), 0, math.atan2(-v[0], v[1]))
     return v
 
 
@@ -149,30 +161,27 @@ def earth(radius=1.0, sun_dir=(-1.0, 0.4, 0.3), night_boost=1.0):
         key = "Emission Color" if "Emission Color" in bsdf.inputs else "Emission"
         nt.links.new(n.outputs["Color"], bsdf.inputs[key])
         nt.links.new(rng.outputs["Result"], bsdf.inputs["Emission Strength"])
-    o.data.materials.append(m)
-    # the atmosphere: a thin blue rim
-    a = sphere("atmo", radius * 1.025, seg=96)
-    am, ant = mat("atmo")
-    ant.nodes.remove(ant.nodes["Principled BSDF"])
-    outn = ant.nodes["Material Output"]
-    em = ant.nodes.new("ShaderNodeEmission")
-    em.inputs["Color"].default_value = (0.25, 0.55, 1.0, 1)
-    em.inputs["Strength"].default_value = 2.5
-    tr = ant.nodes.new("ShaderNodeBsdfTransparent")
-    lw = ant.nodes.new("ShaderNodeLayerWeight")
-    lw.inputs["Blend"].default_value = 0.25
-    pw = ant.nodes.new("ShaderNodeMath")
+    # the atmosphere: a blue glow at the rim, in the planet's own shader (16.11: a transparent shell around
+    # it cost most of the 30 s a frame)
+    lw = nt.nodes.new("ShaderNodeLayerWeight")
+    lw.inputs["Blend"].default_value = 0.35
+    pw = nt.nodes.new("ShaderNodeMath")
     pw.operation = "POWER"
-    pw.inputs[1].default_value = 2.0
-    nt2 = ant.links
-    nt2.new(lw.outputs["Facing"], pw.inputs[0])
-    mix = ant.nodes.new("ShaderNodeMixShader")
-    nt2.new(pw.outputs["Value"], mix.inputs["Fac"])
-    nt2.new(tr.outputs["BSDF"], mix.inputs[1])
-    nt2.new(em.outputs["Emission"], mix.inputs[2])
-    nt2.new(mix.outputs["Shader"], outn.inputs["Surface"])
-    am.blend_method = "BLEND" if hasattr(am, "blend_method") else None
-    a.data.materials.append(am)
+    pw.inputs[1].default_value = 3.0
+    nt.links.new(lw.outputs["Facing"], pw.inputs[0])
+    rim = nt.nodes.new("ShaderNodeEmission")
+    rim.inputs["Color"].default_value = (0.3, 0.6, 1.0, 1)
+    mul = nt.nodes.new("ShaderNodeMath")
+    mul.operation = "MULTIPLY"
+    mul.inputs[1].default_value = 2.2
+    nt.links.new(pw.outputs["Value"], mul.inputs[0])
+    nt.links.new(mul.outputs["Value"], rim.inputs["Strength"])
+    add = nt.nodes.new("ShaderNodeAddShader")
+    outn = nt.nodes["Material Output"]
+    nt.links.new(bsdf.outputs["BSDF"], add.inputs[0])
+    nt.links.new(rim.outputs["Emission"], add.inputs[1])
+    nt.links.new(add.outputs["Shader"], outn.inputs["Surface"])
+    o.data.materials.append(m)
     o.rotation_euler = (math.radians(RNG.uniform(-10, 25)), 0, math.radians(RNG.uniform(0, 360)))
     spin = math.radians(RNG.uniform(8, 18)) * float(ARGS["seconds"]) / 5
     o.keyframe_insert("rotation_euler", frame=1)
@@ -270,26 +279,50 @@ az = math.radians(RNG.uniform(0, 360))
 el = math.radians(RNG.uniform(5, 25))
 if T in ("earth_day", "earth_night"):
     world_stars()
-    sd = (-1.0, 0.3, 0.2) if T == "earth_day" else (1.0, -0.2, 0.1)
+    cdir = orbit_point(1.0, az, el)
+    side = orbit_point(1.0, az + math.radians(90), 0)
+    if T == "earth_day":      # light from behind the camera, a little to the side: the day side faces us
+        sd = tuple(-0.85 * cdir[i] + 0.45 * side[i] for i in range(3))
+    else:                     # light from beyond the Earth: the night side, its city lights, a bright rim
+        sd = tuple(0.8 * cdir[i] + 0.55 * side[i] for i in range(3))
     sun_lamp(sd, 4.0 if T == "earth_day" else 2.5)
     earth(sun_dir=sd, night_boost=1.4 if T == "earth_night" else 1.0)
     r0, r1 = RNG.uniform(3.4, 4.2), RNG.uniform(2.6, 3.2)
     camera(orbit_point(r0, az, el), orbit_point(r1, az + math.radians(12), el))
 elif T in ("earth_moon", "moon_rise"):
     world_stars()
-    sd = (-1.0, 0.5, 0.2)
-    sun_lamp(sd, 4.5)
-    earth(sun_dir=sd)
     close = float(ARGS.get("moon_closeness", 1.0))            # 2 = twice as close
     d = 8.0 / close
-    ml = orbit_point(d, az + math.radians(30), math.radians(4))
-    moon(0.27 * max(1.0, close ** 0.35), ml)
+    u = (math.cos(az), math.sin(az), 0.0)                     # Earth -> Moon
+    p = (-math.sin(az), math.cos(az), 0.0)                    # sideways, where the camera stands
     if T == "earth_moon":
-        camera(orbit_point(d * 1.25, az - math.radians(15), el), orbit_point(d * 1.05, az + math.radians(5), el),
-               target=tuple(x * 0.5 for x in ml), lens=35)
-    else:                                                     # low over the limb, the Moon rising beyond
-        p = orbit_point(1.25, az + math.radians(30), math.radians(2))
-        camera(p, orbit_point(1.22, az + math.radians(31.5), math.radians(3)), target=ml, lens=28)
+        # both bodies in the frame, side by side, lit from the camera's side (16.11: the Moon hid the Earth)
+        sd = (-0.75 * p[0] + 0.35 * u[0], -0.75 * p[1] + 0.35 * u[1], -0.25)
+        sun_lamp(sd, 4.5)
+        earth(sun_dir=sd)
+        ml = tuple(x * d for x in u)
+        moon(0.27 * max(1.0, close ** 0.35), ml)
+        mid = tuple(x * 0.5 for x in ml)
+        c0 = tuple(mid[i] + p[i] * d * 1.35 + (0, 0, d * 0.22)[i] for i in range(3))
+        c1 = tuple(mid[i] + p[i] * d * 1.18 + (0, 0, d * 0.16)[i] + u[i] * d * 0.05 for i in range(3))
+        camera(c0, c1, target=mid, lens=35)
+    else:
+        # just above the Earth's limb, looking along the horizon, the Moon big and lit above it
+        q, t = u, p                                           # radial (local "up") and along the horizon
+        cam = tuple(x * 1.04 for x in q)
+        dn = math.radians(-8)
+        aim = tuple(t[i] * math.cos(dn) + q[i] * math.sin(dn) for i in range(3))
+        me = math.radians(-6)
+        mdir = tuple(t[i] * math.cos(me) + q[i] * math.sin(me) for i in range(3))
+        D = d * 0.9
+        ml = tuple(cam[i] + mdir[i] * D for i in range(3))
+        sd = tuple(0.85 * t[i] - 0.4 * q[i] for i in range(3))   # the light travels from behind the camera
+        sun_lamp(sd, 4.5)
+        earth(sun_dir=sd)
+        moon(0.27 * max(1.0, close ** 0.35), ml)
+        c1 = tuple(x * 1.046 for x in q)
+        camera(cam, tuple(c1[i] + t[i] * 0.01 for i in range(3)),
+               target=tuple(cam[i] + aim[i] * 5 for i in range(3)), lens=35)
 elif T == "sun":
     world_stars(0.5)
     emissive("sun", 1.0, (0, 0, 0), (1.0, 0.55, 0.12, 1), 25.0)
@@ -297,7 +330,9 @@ elif T == "sun":
     camera(orbit_point(5.5, az, el), orbit_point(4.5, az + math.radians(8), el), lens=45)
 elif T == "asteroid":
     world_stars()
-    sd = (-1.0, 0.2, 0.3)
+    cdir = orbit_point(1.0, az - math.radians(10), el)
+    side = orbit_point(1.0, az + math.radians(80), 0)
+    sd = tuple(-0.8 * cdir[i] + 0.5 * side[i] for i in range(3))
     sun_lamp(sd, 4.0)
     earth(sun_dir=sd)
     bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=5, radius=0.18)
@@ -369,11 +404,7 @@ elif T in ("ocean", "ocean_moon"):
     if T == "ocean_moon":
         size = 6.0 * float(ARGS.get("moon_closeness", 2.0))
         mo = moon(size, (0, 260, 30 + size * 0.6))
-        light = bpy.data.lights.new("moonlight", "SUN")
-        light.energy = 1.5
-        lo = bpy.data.objects.new("moonlight", light)
-        sc.collection.objects.link(lo)
-        lo.rotation_euler = (math.radians(70), 0, math.radians(180))
+        sun_lamp((0.0, 1.0, -0.3), 1.5)                  # light travelling away from the camera: the Moon's face lit
     camera((0, -20, 4.5), (0, -8, 3.5), target=(0, 120, 12), lens=24)
 else:
     raise SystemExit(f"unknown template {T}")
