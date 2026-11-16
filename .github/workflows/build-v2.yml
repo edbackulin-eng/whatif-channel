@@ -19,6 +19,15 @@ on:
         description: "Reuse the prep of this earlier run (its id): only the 3D shots and the montage again"
         required: false
         default: ""
+      no_flux:
+        description: "A dry run outside What If's Kaggle window: FLUX shots become 3D, no thumbnails"
+        type: boolean
+        default: false
+  # a booked trial (state/v2_trial.txt: the slug) starts early enough for FLUX to land in the GPU window
+  # (07:00-17:30 UTC); the booking is claimed (deleted and pushed) before the build, so it runs once
+  schedule:
+    - cron: "35 5 * * *"
+    - cron: "5 6 * * *"
 
 concurrency:
   group: video-build-v2
@@ -28,12 +37,34 @@ permissions:
   contents: write
   actions: read
 
-env:
-  SLUG: ${{ github.event.inputs.slug }}
-
 jobs:
+  gate:
+    runs-on: ubuntu-24.04
+    outputs:
+      go: ${{ steps.g.outputs.go }}
+      slug: ${{ steps.g.outputs.slug }}
+    steps:
+      - uses: actions/checkout@v5
+      - id: g
+        env:
+          EVENT: ${{ github.event_name }}
+          SLUG_IN: ${{ github.event.inputs.slug }}
+        run: |
+          if [ "$EVENT" = "schedule" ]; then
+            [ -s state/v2_trial.txt ] || { echo "go=false" >> "$GITHUB_OUTPUT"; echo "nothing booked"; exit 0; }
+            SLUG_IN="$(head -1 state/v2_trial.txt | tr -d '[:space:]')"
+            git config user.name "whatif-bot"; git config user.email "noreply@users.noreply.github.com"
+            git rm -q state/v2_trial.txt && git commit -qm "v2 trial claimed: $SLUG_IN" && git push -q || {
+              echo "go=false" >> "$GITHUB_OUTPUT"; echo "the claim did not push"; exit 0; }
+          fi
+          echo "go=true" >> "$GITHUB_OUTPUT"
+          echo "slug=$SLUG_IN" >> "$GITHUB_OUTPUT"
+
   prep:
-    if: github.event.inputs.prep_run == ''
+    needs: gate
+    if: needs.gate.outputs.go == 'true' && github.event.inputs.prep_run == ''
+    env:
+      SLUG: ${{ needs.gate.outputs.slug }}
     runs-on: ubuntu-24.04
     timeout-minutes: 330
     steps:
@@ -64,19 +95,22 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          V2_NO_FLUX: ${{ github.event.inputs.no_flux == 'true' && '1' || '' }}
         run: python -X utf8 automation/stages_v2.py prep --slug "$SLUG"
       - uses: actions/upload-artifact@v5
         with:
           name: v2-prep
           path: |
-            output/${{ github.event.inputs.slug }}/
+            output/${{ needs.gate.outputs.slug }}/
             state/used_footage.json
           retention-days: 3
           compression-level: 0
 
   blender:
-    needs: prep
-    if: ${{ !cancelled() && contains(fromJSON('["success","skipped"]'), needs.prep.result) }}
+    needs: [gate, prep]
+    if: ${{ !cancelled() && needs.gate.outputs.go == 'true' && contains(fromJSON('["success","skipped"]'), needs.prep.result) }}
+    env:
+      SLUG: ${{ needs.gate.outputs.slug }}
     runs-on: ubuntu-24.04
     timeout-minutes: 240
     strategy:
@@ -120,13 +154,15 @@ jobs:
       - uses: actions/upload-artifact@v5
         with:
           name: v2-3d-${{ matrix.k }}
-          path: output/${{ github.event.inputs.slug }}/v2/clips/
+          path: output/${{ needs.gate.outputs.slug }}/v2/clips/
           retention-days: 3
           if-no-files-found: ignore
 
   assemble:
-    needs: [prep, blender]
-    if: ${{ !cancelled() && contains(fromJSON('["success","skipped"]'), needs.prep.result) }}
+    needs: [gate, prep, blender]
+    if: ${{ !cancelled() && needs.gate.outputs.go == 'true' && contains(fromJSON('["success","skipped"]'), needs.prep.result) }}
+    env:
+      SLUG: ${{ needs.gate.outputs.slug }}
     runs-on: ubuntu-24.04
     timeout-minutes: 240
     steps:
@@ -157,7 +193,7 @@ jobs:
         with:
           pattern: v2-3d-*
           merge-multiple: true
-          path: output/${{ github.event.inputs.slug }}/v2/clips/
+          path: output/${{ needs.gate.outputs.slug }}/v2/clips/
       - name: Montage, sound, QA, package
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

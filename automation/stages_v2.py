@@ -14,6 +14,7 @@ falls back to a 3D Earth or a card - never to a repeat. Every shot is cut to its
 """
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -130,6 +131,7 @@ def prep(slug):
                 f = v2stock.download(pool[cid], w / "src" / f"{cid}.mp4")
                 out = w / "clips" / f"{s['index']:04d}.mp4"
                 s["cut"] = cut_video(f, need, out)
+                f.unlink(missing_ok=True)                   # used once in the film: the runner's disk stays free
                 got = cid
                 break
             except Exception as e:                                       # noqa: BLE001
@@ -164,7 +166,9 @@ def prep(slug):
     prompts = [f"{s['prompt']}, photorealistic, cinematic, natural light, no text, no people close up"
                for s in flux_shots] + [t["prompt"] for t in thumb_takes]
     images = []
-    if prompts:
+    if prompts and os.environ.get("V2_NO_FLUX"):
+        log.info("V2_NO_FLUX: no Kaggle tonight - FLUX shots become 3D, no thumbnails (a dry run)")
+    elif prompts:
         from automation import frames
         try:
             ref = frames._submit(prompts, [{"extra": i} for i in range(len(prompts))], w, f"v2-{slug[:30]}-{int(time.time())}")

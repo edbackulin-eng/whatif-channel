@@ -49,7 +49,13 @@ def _env(name):
     return None
 
 
+def _q(url):
+    """NASA ids carry spaces and apostrophes: the path quoted, the query and anything already quoted left alone."""
+    return urllib.parse.quote(url, safe=":/?=&%~#+,;@!$()*[]")
+
+
 def _get(url, headers=None, cache=True, timeout=60):
+    url = _q(url)
     CACHE.mkdir(parents=True, exist_ok=True)
     key = CACHE / ("q_" + hashlib.sha1(url.encode()).hexdigest() + ".json")
     if cache and key.exists():
@@ -146,7 +152,7 @@ def nasa(query, n=20):
 def nasa_url(item):
     files = _get(item["manifest"])
     vids = [f for f in files if f.lower().endswith(".mp4")]
-    order = ("~orig", "~large", "~medium")
+    order = ("~large", "~medium", "~orig")              # ~orig runs to 900 MB a clip; 720p+ is plenty
     vids.sort(key=lambda f: next((i for i, o in enumerate(order) if o in f), 9))
     return vids[0].replace("http://", "https://") if vids else None
 
@@ -245,7 +251,7 @@ def describe(items, cache_path):
         dest.parent.mkdir(parents=True, exist_ok=True)
         try:
             if not dest.exists():
-                with urllib.request.urlopen(urllib.request.Request(it["thumb"], headers=UA), timeout=60) as r:
+                with urllib.request.urlopen(urllib.request.Request(_q(it["thumb"]), headers=UA), timeout=60) as r:
                     dest.write_bytes(r.read())
             todo.append((it, dest))
         except Exception:                                                # noqa: BLE001
@@ -280,6 +286,7 @@ def remember(ids):
 def download(it, dest):
     """The clip to dest (NASA: the largest mp4 of its manifest)."""
     dest = Path(dest)
+    dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.exists() and dest.stat().st_size > 100_000:
         return dest
     url = it.get("url") or (nasa_url(it) if it.get("manifest") else None)
@@ -288,7 +295,7 @@ def download(it, dest):
     tmp = dest.with_suffix(".part")
     for attempt in range(4):
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=600) as r, open(tmp, "wb") as f:
+            with urllib.request.urlopen(urllib.request.Request(_q(url), headers=UA), timeout=600) as r, open(tmp, "wb") as f:
                 while chunk := r.read(1 << 20):
                     f.write(chunk)
             break
