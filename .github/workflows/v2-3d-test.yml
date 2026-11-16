@@ -40,7 +40,7 @@ jobs:
           for t in $TPL; do
             start=$(date +%s)
             tools/blender/blender -b -noaudio -P pipeline/blender/scene.py -- \
-              "{\"template\": \"$t\", \"seconds\": 2, \"seed\": 7, \"out\": \"$PWD/out/$t.mp4\", \"textures\": \"$PWD/assets/textures\", \"samples\": 16, \"w\": 1280, \"h\": 720, \"moon_closeness\": 2}" \
+              "{\"template\": \"$t\", \"seconds\": 3, \"seed\": 7, \"out\": \"$PWD/out/$t.mp4\", \"textures\": \"$PWD/assets/textures\", \"samples\": 12, \"w\": 1280, \"h\": 720, \"fps\": 15, \"moon_closeness\": 2}" \
               > out/$t.log 2>&1 || echo "FAILED $t"
             echo "$t: $(( $(date +%s) - start )) s"; tail -3 out/$t.log
             ffmpeg -v error -y -sseof -0.5 -i out/$t.mp4 -frames:v 1 out/$t.jpg || true

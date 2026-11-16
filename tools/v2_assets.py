@@ -68,6 +68,19 @@ def textures():
                 break
             except Exception as e:                                       # noqa: BLE001
                 print(f"{name}: {src[:80]} failed ({e})")
+    stars = TEX / "stars.png"                      # a star field for the 3D worlds (a lookup is fast)
+    if not stars.exists():
+        import numpy as np
+        rng = np.random.default_rng(7)
+        h, w = 2048, 4096
+        img = np.zeros((h, w), np.float32)
+        n = 9000
+        ys, xs = rng.integers(0, h, n), rng.integers(0, w, n)
+        img[ys, xs] = rng.power(6, n) * 1.0
+        from PIL import ImageFilter
+        im = Image.fromarray((np.clip(img, 0, 1) * 255).astype("uint8")).filter(ImageFilter.GaussianBlur(0.6))
+        im = Image.merge("RGB", (im, im, im.point(lambda v: min(255, int(v * 1.1)))))
+        im.save(stars)
     bm = TEX / "blue_marble.jpg"
     small = TEX / "blue_marble_5400.jpg"
     if bm.exists() and not small.exists():
