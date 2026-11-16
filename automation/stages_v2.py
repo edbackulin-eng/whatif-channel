@@ -191,6 +191,22 @@ def prep(slug):
             thumbs_v2.finish(ep["title"], [t for t in thumb_takes if t.get("image")], w / "thumbs")
     except Exception as e:                                               # noqa: BLE001
         log.warning("thumbnails: %s", e)
+    # owner 17.11: the scene of the thumbnail is in the film (YouTube's rule on misleading thumbnails) - the
+    # chosen picture (without its words) takes a FLUX shot, else the longest 3D shot of the middle of the film
+    try:
+        rep = json.loads((w / "thumbs" / "report.json").read_text(encoding="utf-8"))
+        scene = rep.get("chosen_image")
+        if scene and Path(scene).exists():
+            mid = [s for s in shots if s["type"] == "3d" and total * 0.25 < s["start"] < total * 0.75]
+            target = next((s for s in shots if s["type"] == "flux"), None) or \
+                (max(mid, key=lambda s: s["end"] - s["start"]) if mid else None)
+            if target:
+                still_clip(scene, target["end"] - target["start"] + XF, w / "clips" / f"{target['index']:04d}.mp4",
+                           move=0)
+                target.update({"type": "flux", "image": scene, "thumb_scene": True})
+                log.info("the thumbnail's scene is shot %d (%.0f s)", target["index"], target["start"])
+    except Exception as e:                                               # noqa: BLE001
+        log.warning("thumbnail scene in the film: %s", e)
     plan_p.write_text(json.dumps({"title": ep["title"], "shots": shots}, indent=1, ensure_ascii=False), encoding="utf-8")
     v2stock.remember(list(used))
     log.info("prep done: %s", {t: sum(1 for s in shots if s["type"] == t) for t in ("video", "3d", "info", "flux")})
@@ -289,8 +305,10 @@ def package(slug, ep, shots, final, shares, music_credits):
     from datetime import date
     from pipeline import qc, seo
     w = work_of(slug)
-    thumb_src = w / "thumbs" / "chosen.png"
-    thumb = w.parent / "thumbnail.png"
+    thumb_src = w / "thumbs" / "chosen.jpg"
+    if not thumb_src.exists():
+        thumb_src = w / "thumbs" / "chosen.png"
+    thumb = w.parent / ("thumbnail" + thumb_src.suffix)
     if thumb_src.exists():
         shutil.copy(thumb_src, thumb)
     report, problems = qc.check_video(final, thumbnail_path=thumb if thumb.exists() else None,
@@ -339,7 +357,7 @@ def package(slug, ep, shots, final, shares, music_credits):
                                       encoding="utf-8")
     day = ROOT / "ready" / date.today().isoformat() / slug
     day.mkdir(parents=True, exist_ok=True)
-    for name in ("video.mp4", "thumbnail.png", "metadata.txt", "subs.srt", "qc.json", "v2.json", "script.txt",
+    for name in ("video.mp4", "thumbnail.jpg", "thumbnail.png", "metadata.txt", "subs.srt", "qc.json", "v2.json", "script.txt",
                  "sources.json"):
         if (w.parent / name).exists():
             shutil.copy2(w.parent / name, day / name)
