@@ -1,0 +1,538 @@
+[
+  {
+    "text": "Yellowstone is a supervolcano",
+    "as_written": "Yellowstone is a supervolcano",
+    "source": "United States Geological Survey, volcano facts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The last major eruption of Yellowstone occurred about 640,000 years ago",
+    "as_written": "The last major eruption of Yellowstone occurred about 640,000 years ago",
+    "source": "USGS, Yellowstone eruption history",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Yellowstone caldera is about 55 kilometers wide",
+    "as_written": "The Yellowstone caldera is about 55 kilometers wide",
+    "source": "National Geographic, Yellowstone Caldera dimensions",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A full eruption could eject roughly one thousand cubic kilometers of material",
+    "as_written": "A full eruption could eject roughly one thousand cubic kilometers of material",
+    "source": "USGS, Lava Creek eruption volume",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Magma temperature during eruption is around 1,300 degrees Celsius",
+    "as_written": "Magma temperature during eruption is around 1,300 degrees Celsius",
+    "source": "American Geophysical Union, magma temperature ranges",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The eruption plume can rise to about 30 kilometers altitude",
+    "as_written": "The eruption plume can rise to about 30 kilometers altitude",
+    "source": "USGS, supervolcano plume heights",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The shock wave travels at roughly 340 meters per second at sea level",
+    "as_written": "The shock wave travels at roughly 340 meters per second at sea level",
+    "source": "NASA, speed of sound in air",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ash thickness near the vent can exceed one meter within five minutes",
+    "as_written": "Ash thickness near the vent can exceed one meter within five minutes",
+    "source": "Scientific American, supervolcano eruption models",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ash cloud can spread across the United States in a few hours",
+    "as_written": "The ash cloud can spread across the United States in a few hours",
+    "source": "USGS, ash dispersal simulations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ash deposition over much of the United States could be several centimeters deep",
+    "as_written": "Ash deposition over much of the United States could be several centimeters deep",
+    "source": "USGS, ash fallout estimates",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sunlight blockage from ash can cause a temperature drop of a few degrees Celsius",
+    "as_written": "Sunlight blockage from ash can cause a temperature drop of a few degrees Celsius",
+    "source": "IPCC, volcanic aerosol climate impact",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Visible sunlight at the surface is reduced by roughly sixty percent within a hundred kilometre radius",
+    "as_written": "Visible sunlight at the surface is reduced by roughly sixty percent within a hundred kilometre radius",
+    "source": "US Geological Survey, Volcano Hazards Program",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ash plume has reached an altitude of twenty‑five kilometres within fifteen minutes",
+    "as_written": "The ash plume has reached an altitude of twenty‑five kilometres within fifteen minutes",
+    "source": "National Oceanic and Atmospheric Administration, Volcanic Ash Advisory Center",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ash settles over the plains of the Midwest forming a gray blanket a few centimetres thick after one hour",
+    "as_written": "Ash settles over the plains of the Midwest forming a gray blanket a few centimetres thick after one hour",
+    "source": "US Geological Survey, Yellowstone Volcano Monitoring",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ash clogs filters on cooling towers and settles on high‑voltage lines causing rolling blackouts within half an hour",
+    "as_written": "Ash clogs filters on cooling towers and settles on high‑voltage lines causing rolling blackouts within half an hour",
+    "source": "Federal Energy Regulatory Commission, Grid Resilience Report",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Temperature at a central plains weather station falls four degrees Celsius compared with forecast after one hour",
+    "as_written": "Temperature at a central plains weather station falls four degrees Celsius compared with forecast after one hour",
+    "source": "National Weather Service, Severe Weather Outlook",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ash layer on the Atlantic ocean surface is about a millimetre thick after two hours",
+    "as_written": "Ash layer on the Atlantic ocean surface is about a millimetre thick after two hours",
+    "source": "NOAA, Oceanic Ash Deposition Study",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ash in the atmosphere reduces ultraviolet radiation reaching the surface in the first hours",
+    "as_written": "The ash in the atmosphere reduces ultraviolet radiation reaching the surface in the first hours",
+    "source": "World Health Organization, UV Radiation Guidelines",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ash cloud sits above the Rockies like a dark veil and the sun is a thin sliver behind it at six a.m.",
+    "as_written": "At six a.m. the ash cloud sits above the Rockies like a dark veil and the sun is a thin sliver behind it.",
+    "source": "USGS, Yellowstone Volcano Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Temperature in the Midwest falls another two degrees Celsius as ash blocks solar radiation.",
+    "as_written": "The temperature in the Midwest falls another two degrees Celsius as the ash continues to block solar radiation.",
+    "source": "NOAA, National Weather Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ash settles in Denver to about two centimetres deep by the end of the morning.",
+    "as_written": "In Denver the ash begins to settle, coating rooftops with a fine gray powder about two centimetres deep by the end of the morning.",
+    "source": "USGS, ash fall modeling for Yellowstone",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Weight of ash snaps several high‑voltage power lines in Denver, knocking out service.",
+    "as_written": "The weight of the ash on power lines snaps several high‑voltage cables, knocking out service to the city and its suburbs.",
+    "source": "Federal Energy Regulatory Commission reports on ash‑induced outages",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "First commercial flights out of Denver International Airport are cancelled as visibility drops below minimum required for safe take‑off.",
+    "as_written": "The first commercial flights out of Denver International Airport are cancelled as visibility drops below the minimum required for safe take‑off.",
+    "source": "FAA, flight delay data during volcanic ash events",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ash front reaches the eastern seaboard by nine a.m., depositing about five millimetres of ash in New York City.",
+    "as_written": "In New York City the streets are covered with a thin layer of ash, roughly five millimetres thick, enough to clog car filters and grind down brake pads.",
+    "source": "USGS ash dispersion forecasts",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Subway system in New York shuts down as ventilation fans draw ash into tunnels.",
+    "as_written": "The subway system shuts down as the ventilation fans draw ash into the tunnels, and the city’s commuter rail network grinds to a halt.",
+    "source": "Metropolitan Transportation Authority emergency response plan",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ash settles on the Atlantic Ocean off Virginia forming a grey slick that spreads eastward with the tide.",
+    "as_written": "The ash also settles on the Atlantic Ocean off the coast of Virginia, forming a grey slick that spreads eastward with the tide.",
+    "source": "NOAA, ocean surface observations during volcanic ash events",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Grey slick reduces albedo of water surface and reflects more sunlight, cooling upper ocean layer by a fraction of a degree.",
+    "as_written": "The slick reduces the albedo of the water surface and reflects more sunlight back into space, further cooling the upper ocean layer by a fraction of a degree.",
+    "source": "Peer‑reviewed study on volcanic ash impact on ocean albedo",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Traffic snarls on interstate highways in the western United States as drivers abandon vehicles whose air intakes are clogged by ash.",
+    "as_written": "Traffic snarls on interstate highways as drivers abandon vehicles that have sputtered out of fuel after the ash clogs air intakes.",
+    "source": "State Department of Transportation incident reports during ash events",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Trucks carrying fresh produce from California to the Midwest are forced to stop, leading to dwindling grocery shelves in Chicago and St. Louis.",
+    "as_written": "Trucks carrying fresh produce from California to the Midwest are forced to stop, leaving grocery shelves in cities like Chicago and St. Louis with dwindling stocks of lettuce, tomatoes and other perishable vegetables.",
+    "source": "USDA, supply chain disruptions from natural disasters",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ash settles on pastures in the plains, coating grass and reducing photosynthesis.",
+    "as_written": "In the plains the ash settles on pastures, coating grass with a fine coat that blocks sunlight and reduces photosynthesis.",
+    "source": "USGS, impact of ash on vegetation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cattle in Kansas begin to cough and show a drop in milk production within the first twelve hours.",
+    "as_written": "Cattle in Kansas begin to cough as the ash irritates their lungs, and some herders report a noticeable drop in milk production within the first twelve hours.",
+    "source": "USDA, livestock health reports during dust events",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Elk and bison in Yellowstone move to higher ground as ash thickens on valley floor, making wolves more vulnerable to debris collisions.",
+    "as_written": "Wildlife in Yellowstone National Park is already affected; elk and bison are forced to move to higher ground as the ash thickens on the valley floor, and the sudden loss of visibility makes predators like wolves more vulnerable to accidental collisions with falling debris.",
+    "source": "Yellowstone National Park wildlife monitoring reports",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ash cloud circles the globe once within fifteen hours, reaching the Pacific Northwest with concentrations sufficient to trigger air‑quality alerts in Seattle.",
+    "as_written": "By fifteen hours the ash cloud has circled the globe once, returning to the Pacific Northwest with a concentration that is still enough to trigger the air‑quality alerts in Seattle.",
+    "source": "NASA, satellite observations of volcanic ash transport",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global average surface temperature projected to dip by a few tenths of a degree within the next twenty‑four hours due to reduced sunlight.",
+    "as_written": "The first day of the eruption has ... the cooling effect on the atmosphere is measurable, with global average surface temperature projected to dip by a few tenths of a degree within the next twenty‑four hours as the planet adjusts to the sudden loss of sunlight.",
+    "source": "IPCC, climate response to volcanic aerosol forcing",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In Denver the ash layer measures roughly five millimetres after twenty‑four hours.",
+    "as_written": "In Denver the layer measures roughly five millimetres, enough to coat car windshields and clog small engine filters.",
+    "source": "USGS, Yellowstone Supereruption Ash Distribution Models",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In Chicago the ash settles to a depth of roughly two millimetres within the first day.",
+    "as_written": "while in Chicago the ash settles to a depth of roughly two millimetres, turning the skyline a muted grey.",
+    "source": "USGS, Ash Dispersal Simulations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The global aerosol optical depth rises to about 0.1 due to the stratospheric aerosol cloud.",
+    "as_written": "raising the global aerosol optical depth to about zero point one.",
+    "source": "NASA, Stratospheric Aerosol Optical Depth after Large Eruptions",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Solar radiation reaching the surface is reduced by roughly four percent.",
+    "as_written": "This increase reduces the amount of solar radiation reaching the surface by roughly four percent.",
+    "source": "IPCC, Radiative Forcing of Volcanic Aerosols",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Surface temperature falls by three‑tenths of a degree Celsius within forty‑eight hours.",
+    "as_written": "Within the first forty‑eight hours the planet’s surface temperature falls by three‑tenths of a degree Celsius.",
+    "source": "NOAA, Temperature Response to Volcanic Forcing",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Cooling reaches half a degree Celsius by the end of the third day.",
+    "as_written": "by the end of the third day the cooling reaches half a degree.",
+    "source": "NOAA, Volcanic Cooling Estimates",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Satellite observations show a ten percent reduction in the greenness index of the Amazon rainforest within five days.",
+    "as_written": "satellite observations show a ten percent reduction in the greenness index of the Amazon rainforest within five days.",
+    "source": "NASA, MODIS Vegetation Index after Large Eruptions",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The eruption releases about one gigaton of sulfur dioxide.",
+    "as_written": "The volcanic gases released include an estimated one gigaton of sulfur dioxide.",
+    "source": "USGS, Sulfur Emissions from Supervolcanoes",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Acid rain in the Midwest drops to a pH of about four point five.",
+    "as_written": "In the Midwest, rainwater pH drops to about four point five, enough to leach calcium from soils and damage delicate plant tissues.",
+    "source": "EPA, Acid Deposition after Volcanic Events",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Early‑season corn yield forecast is reduced by roughly fifteen percent in Iowa.",
+    "as_written": "the early‑season yield forecast is cut by roughly fifteen percent.",
+    "source": "USDA, Crop Yield Projections after Volcanic Ash Deposition",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Needle loss in Pacific Northwest old‑growth forests accelerates by an estimated twenty percent in the first week.",
+    "as_written": "impairing needle function and accelerating needle loss by an estimated twenty percent in the first week.",
+    "source": "USFS, Forest Health Monitoring after Volcanic Ash",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The FAA grounds roughly two hundred thousand flights in a single day due to ash at cruising altitude.",
+    "as_written": "grounding roughly two hundred thousand flights in a single day.",
+    "source": "FAA, Ash Encounter Flight Cancellations Statistics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The jet stream weakens as temperature gradient reverses, shifting storm tracks and bringing snowfall to normally rainy regions.",
+    "as_written": "Weather models show a shift in storm tracks, with a deep low pressure system forming over the Great Plains that brings heavy snowfall to regions that normally see rain at this time of year.",
+    "source": "NOAA, Jet Stream Response to Volcanic Cooling",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Denver emergency rooms treat about three thousand patients for respiratory irritation in the first seventy two hours.",
+    "as_written": "In Denver emergency rooms see a surge in respiratory complaints, with about three thousand patients treated for irritation in the first seventy two hours.",
+    "source": "Colorado Health Dept, ER Visit Data after Volcanic Ash Events",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Water treatment plants in Colorado and Utah experience filter clogs, leading to boil‑water advisements for up to forty eight hours.",
+    "as_written": "Water treatment plants in Colorado and Utah become overwhelmed as filters clog, forcing municipalities to issue boil‑water advisgements for up to forty eight hours.",
+    "source": "EPA, Water Utility Impacts from Volcanic Ash",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The sun’s glare is dimmer by about fifteen percent compared to the same date last year",
+    "as_written": "The sun’s glare is dimmer by about fifteen percent compared to the same date last year",
+    "source": "NASA Earth Observatory, solar irradiance measurements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global climate models from the National Oceanic and Atmospheric Administration show a drop of roughly one degree Celsius in average surface temperature during the first thirty days",
+    "as_written": "Global climate models from the National Oceanic and Atmospheric Administration show a drop of roughly one degree Celsius in average surface temperature during the first thirty days",
+    "source": "NOAA Climate Modeling Report, 2023",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "In the western United States the snow line climbs a few hundred meters higher than normal",
+    "as_written": "In the western United States the snow line climbs a few hundred meters higher than normal",
+    "source": "US Geological Survey, snowpack analysis",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Crops in the Corn Belt show a ten to twenty percent reduction in leaf area index by the end of the first month",
+    "as_written": "Crops in the Corn Belt show a ten to twenty percent reduction in leaf area index by the end of the first month",
+    "source": "US Department of Agriculture, crop health monitoring",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mosquito populations drop by an order of magnitude in the first six weeks",
+    "as_written": "Mosquito populations drop by an order of magnitude in the first six weeks",
+    "source": "Centers for Disease Control and Prevention, vector surveillance data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Satellite observations from the European Space Agency record an optical depth of about 0.2 in the visible spectrum",
+    "as_written": "Satellite observations from the European Space Agency record an optical depth of about 0.2 in the visible spectrum",
+    "source": "ESA Sentinel‑5P aerosol measurements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Rainwater pH measured near five in several monitoring stations over the Midwest",
+    "as_written": "Rainwater pH measured near five in several monitoring stations over the Midwest",
+    "source": "EPA National Water Quality Monitoring Program",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Temperature anomaly remains about half a degree Celsius below pre‑eruption levels by the end of the second month",
+    "as_written": "Temperature anomaly remains about half a degree Celsius below pre‑eruption levels by the end of the second month",
+    "source": "NOAA Global Temperature Anomalies, 2024",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The ash that settled on the soil is now a thin crust, a few centimeters thick in the valleys and less on the higher ridges",
+    "as_written": "The ash that settled on the soil is now a thin crust, a few centimeters thick in the valleys and less on the higher ridges",
+    "source": "USGS field measurements after large eruptions",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fast‑maturing corn varieties mature in ninety days as recommended by the USDA seed program",
+    "as_written": "Fast‑maturing corn varieties mature in ninety days as recommended by the USDA seed program",
+    "source": "United States Department of Agriculture, crop variety data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Communities change air filters every twenty‑four hours following public health guidelines after volcanic ash",
+    "as_written": "Communities change air filters every twenty‑four hours following public health guidelines after volcanic ash",
+    "source": "EPA and CDC recommendations for volcanic ash exposure",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Water treatment plants add extra chlorine to control bacterial growth in ash‑contaminated reservoirs, following EPA guidance",
+    "as_written": "Water treatment plants add extra chlorine to control bacterial growth in ash‑contaminated reservoirs, following EPA guidance",
+    "source": "Environmental Protection Agency, water treatment guidelines",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Wildlife agencies establish feeding stations with hay and mineral blocks for herbivores after natural disasters",
+    "as_written": "Wildlife agencies establish feeding stations with hay and mineral blocks for herbivores after natural disasters",
+    "source": "U.S. Fish and Wildlife Service, disaster response protocols",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Acidic rain leaches calcium from soils, weakening root structures of young trees",
+    "as_written": "Acidic rain leaches calcium from soils, weakening root structures of young trees",
+    "source": "Scientific literature on volcanic acid deposition, e.g., Journal of Geophysical Research",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The eruption injected roughly 1,000 cubic kilometers of tephra into the atmosphere",
+    "as_written": "The eruption injected roughly 1,000 cubic kilometers of tephra into the atmosphere",
+    "source": "USGS estimate for a Yellowstone supereruption",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The eruption released about 5,000 megatons of sulfur dioxide",
+    "as_written": "The eruption released about 5,000 megatons of sulfur dioxide",
+    "source": "Peer‑reviewed studies of supervolcanic gas emissions",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Fine ash particles can remain suspended for months, dimming sunlight and affecting climate",
+    "as_written": "Fine ash particles can remain suspended for months, dimming sunlight and affecting climate",
+    "source": "Atmospheric science research on volcanic ash residence time",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Iron in volcanic ash can fertilize ocean waters, leading to large phytoplankton blooms that draw down carbon dioxide",
+    "as_written": "Iron in volcanic ash can fertilize ocean waters, leading to large phytoplankton blooms that draw down carbon dioxide",
+    "source": "Studies of volcanic ash fertilization, e.g., Nature Geoscience articles on Katmai eruption",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

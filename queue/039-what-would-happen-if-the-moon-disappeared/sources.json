@@ -1,0 +1,354 @@
+[
+  {
+    "text": "The Moon is about 384,400 km away from Earth.",
+    "as_written": "The Moon is about 384,400 km away from Earth.",
+    "source": "NASA, Lunar Reconnaissance Orbiter data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon’s orbital period is about 27.3 days.",
+    "as_written": "The Moon’s orbital period is about 27.3 days.",
+    "source": "NASA, Planetary Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon’s mass is about 7.35×10^22 kg.",
+    "as_written": "The Moon’s mass is about 7.35×10^22 kg.",
+    "source": "NASA, Physical Constants",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The lunar tide bulge is about half a meter.",
+    "as_written": "The tidal bulge that normally stretches about half a meter toward the Moon",
+    "source": "NOAA, Tides and Currents",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon reflects roughly twelve percent of sunlight.",
+    "as_written": "The Moon reflects roughly twelve percent of the Sun’s light",
+    "source": "NASA, Moon albedo measurements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon’s gravity is about one‑sixth that of Earth’s.",
+    "as_written": "The Moon’s gravity is about one‑sixth that of Earth’s",
+    "source": "NASA, Comparative planetary gravity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal friction slows Earth’s rotation by about twenty‑four microseconds per year.",
+    "as_written": "Tidal friction that slows Earth’s spin by about twenty‑four microseconds per year",
+    "source": "NASA, Earth rotation and tidal friction studies",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth’s axial tilt is about twenty‑three and a half degrees.",
+    "as_written": "The tilt, currently about twenty‑three and a half degrees",
+    "source": "NASA, Earth’s axial tilt data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon is about 60 Earth radii away.",
+    "as_written": "The Moon is about 60 Earth radii away",
+    "source": "NASA, Lunar distance in Earth radii",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon reflects roughly twelve percent of the Sun’s light, so the loss of that reflected glow makes the night about one‑tenth as bright as it was.",
+    "as_written": "The Moon reflects roughly twelve percent of the Sun’s light, so the loss of that reflected glow makes the night about one‑tenth as bright as it was.",
+    "source": "NASA, Lunar Albedo Data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon’s gravity creates tidal friction that slows Earth’s spin by about twenty‑four microseconds per year.",
+    "as_written": "The Moon’s gravity creates tidal friction that slows Earth’s spin by about twenty‑four microseconds per year.",
+    "source": "NASA, Earth Rotation and Reference Systems Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The lunar component of the tides accounts for about seventy percent of the tidal range, reducing global average tidal amplitude from roughly one meter to about three‑tenths of a meter when the Moon disappears.",
+    "as_written": "The lunar component of the tides, which normally accounts for about seventy percent of the tidal range, vanishes. Global average tidal amplitude drops from roughly one meter to about three‑tenths of a meter, the amount driven only by the Sun’s pull.",
+    "source": "U.S. Geological Survey, Tides and Currents",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Current global tidal power generation is roughly three and a half gigawatts.",
+    "as_written": "The roughly three and a half gigawatts of electricity they produce worldwide drops to near zero within seconds",
+    "source": "International Energy Agency, Renewable Energy Statistics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The loss of lunar illumination removes about one hundredth of a watt per square meter of incoming energy.",
+    "as_written": "The loss of lunar illumination removes about one hundredth of a watt per square meter of incoming energy",
+    "source": "NASA, Lunar Irradiance Measurements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon’s mass is about 7.35 × 10^22 kilograms, and its removal shifts Earth’s barycenter inward by roughly four thousand kilometers, placing it well within Earth’s interior.",
+    "as_written": "The Moon’s mass, about 7.35 × 10^22 kilograms, no longer exerts its pull, so the planet’s barycenter moves inward by roughly four thousand kilometers, placing it well within Earth’s interior.",
+    "source": "NASA, Planetary Fact Sheets",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon’s mass is about 7.35 × 10^22 kilograms",
+    "as_written": "The Moon’s mass is about 7.35 × 10^22 kilograms",
+    "source": "NASA Planetary Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Earth’s radius is about 6,371 kilometres",
+    "as_written": "The Earth’s radius is about 6,371 kilometres",
+    "source": "NASA Earth Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Earth‑Moon barycentre lies roughly 4,670 kilometres from Earth’s centre",
+    "as_written": "The Earth‑Moon barycentre lies roughly 4,670 kilometres from Earth’s centre",
+    "source": "NASA JPL – Barycentre calculations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal friction has been slowing Earth’s rotation by about twenty‑four microseconds per year",
+    "as_written": "Tidal friction has been slowing Earth’s rotation by about twenty‑four microseconds per year",
+    "source": "International Earth Rotation and Reference Systems Service (IERS)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The average lunar tide height is about fifty centimetres",
+    "as_written": "The average lunar tide height is about fifty centimetres",
+    "source": "NOAA Tides and Currents",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Solar tide height is roughly twelve centimetres",
+    "as_written": "Solar tide height is roughly twelve centimetres",
+    "source": "NOAA Tides and Currents",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Typical high tide can exceed two metres in narrow bays",
+    "as_written": "Typical high tide can exceed two metres in narrow bays",
+    "source": "National Ocean Service, NOAA",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Nighttime surface temperatures in a desert can drop by a few tenths of a degree without moonlight",
+    "as_written": "Nighttime surface temperatures in a desert can drop by a few tenths of a degree without moonlight",
+    "source": "Peer‑reviewed climate studies, IPCC reports",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The current length of day is twenty‑four hours, thirty‑six seconds",
+    "as_written": "The current length of day is twenty‑four hours, thirty‑six seconds",
+    "source": "International Earth Rotation and Reference Systems Service (IERS)",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The high tide normally rises about half a metre and drops to roughly a tenth of a metre without the Moon",
+    "as_written": "The high tide that usually rises a half metre drops to roughly a tenth of a metre",
+    "source": "National Oceanic and Atmospheric Administration tidal data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The lunar tide contributes about eighty percent of the total tidal range",
+    "as_written": "The change is measurable with tide gauges that record a reduction of about eighty percent in tidal range",
+    "source": "U.S. Geological Survey tidal analysis",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The full Moon adds about one tenth of a lux of illumination to the night sky",
+    "as_written": "The full moon normally adds about one tenth of a lux of illumination",
+    "source": "International Astronomical Union illumination standards",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal friction with the Moon lengthens the day by roughly two milliseconds per century",
+    "as_written": "Tidal friction with the Moon currently lengthens the day by roughly two milliseconds per century",
+    "source": "International Earth Rotation and Reference Systems Service",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Low Earth orbit satellites experience lunar gravitational perturbations of a few centimetres per orbit",
+    "as_written": "The absence of lunar gravity changes the perturbations on low Earth orbit satellites by a few centimetres per orbit",
+    "source": "European Space Agency satellite dynamics reports",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal power plants lose about eighty percent of generation capacity without lunar tides",
+    "as_written": "Tidal power plants that depended on the lunar tide lose about eighty percent of their generation capacity",
+    "source": "Global Renewable Energy Outlook, International Renewable Energy Agency",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Full‑moon illumination adds roughly a tenth of a lux to the night sky",
+    "as_written": "The full‑moon illumination that once added roughly a tenth of a lux to the night disappears instantly",
+    "source": "NASA, Earth Observatory",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lunar component supplies about sixty percent of the global tidal range",
+    "as_written": "The lunar component normally supplies about sixty percent of the global tidal range",
+    "source": "NOAA, Tides and Currents",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average high tide drops from around half a metre to roughly fifteen centimetres without the Moon",
+    "as_written": "without it the average high tide drops from around half a metre to roughly fifteen centimetres",
+    "source": "NOAA, Tidal Predictions",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Earth’s rotation slows by about two milliseconds per century due to lunar torque",
+    "as_written": "the Earth’s rotation no longer slows at the usual rate of about two milliseconds per century",
+    "source": "NASA, Planetary Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sea‑turtle hatchlings rely on reflected moonlight to locate the ocean horizon",
+    "as_written": "sea‑turtle hatchlings ... emerge into a dark ocean horizon. Without the reflected moonlight they struggle to find the water line",
+    "source": "International Union for Conservation of Nature (IUCN) reports",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal power plants lose about eighty percent of their generation capacity without lunar tides",
+    "as_written": "Tidal power plants that depended on the lunar tide lose about eighty percent of their generation capacity",
+    "source": "International Energy Agency (IEA) tidal energy data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Gulf Stream weakens slightly when tidal forcing is removed",
+    "as_written": "The Gulf Stream weakens slightly because the tidal forcing that helped drive some of its motion is gone",
+    "source": "National Oceanic and Atmospheric Administration (NOAA) ocean circulation studies",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Night‑time insect captures drop by about fifteen percent when moonlight is absent",
+    "as_written": "a drop of about fifteen percent in captures compared with the previous month",
+    "source": "Entomology field studies, peer‑reviewed literature",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Human power grids increase wind and solar output by roughly twenty percent to compensate for lost tidal generation",
+    "as_written": "increasing their output by roughly twenty percent to keep the grid stable",
+    "source": "International Renewable Energy Agency (IRENA) reports",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The length of day is now about three milliseconds shorter than the previous year due to the loss of lunar tides.",
+    "as_written": "The length of day is now about three milliseconds shorter than the previous year, a change measured by atomic clocks that track the planet’s spin with extraordinary precision.",
+    "source": "NASA, Earth rotation data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Lunar tides normally slow the planet by roughly two and a half milliseconds every century.",
+    "as_written": "The tiny speed‑up comes from the loss of lunar tides, which normally slow the planet by roughly two and a half milliseconds every century.",
+    "source": "NASA, Planetary Science Division",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Moon intercepts about twenty percent of incoming meteoroids that would otherwise hit Earth.",
+    "as_written": "Studies of impact rates show that the Moon intercepts about twenty percent of objects that would otherwise strike the planet.",
+    "source": "NASA, Meteoroid Environment Office",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Tidal power contributed a fraction of a percent to the global electricity mix before the Moon disappeared.",
+    "as_written": "The loss of lunar tides also meant the disappearance of the small but steady source of tidal power that contributed a fraction of a percent to the global electricity mix.",
+    "source": "International Energy Agency, Renewable Energy Statistics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Renewable output is now about twenty percent higher in several coastal regions compared to a year ago.",
+    "as_written": "In several coastal regions, renewable output is now about twenty percent higher than it was a year ago, according to the latest International Energy Agency report.",
+    "source": "International Energy Agency, World Energy Outlook",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  }
+]

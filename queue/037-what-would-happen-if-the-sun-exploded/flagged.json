@@ -1,0 +1,386 @@
+[
+  {
+    "text": "The Sun is about one hundred fifty million kilometers from Earth.",
+    "as_written": "The Sun is about one hundred fifty million kilometers from Earth.",
+    "source": "NASA, Solar System Exploration",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Light travels at three hundred thousand kilometers per second.",
+    "as_written": "Light travels at three hundred thousand kilometers per second.",
+    "source": "CODATA, speed of light",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "It takes about eight minutes and twenty seconds for sunlight to reach Earth.",
+    "as_written": "It takes about eight minutes and twenty seconds for sunlight to reach Earth.",
+    "source": "NASA, Earth–Sun distance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun’s luminosity is about three point eight times ten to the twenty‑six watts.",
+    "as_written": "The Sun’s luminosity is about three point eight times ten to the twenty‑six watts.",
+    "source": "NASA, Solar Constant",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The total energy output of the Sun over its lifetime is roughly one point four times ten to the forty‑four joules.",
+    "as_written": "The total energy output of the Sun over its lifetime is roughly one point four times ten to the forty‑four joules.",
+    "source": "Scientific literature on solar energy output",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun’s surface escape velocity is about six hundred kilometers per second.",
+    "as_written": "The Sun’s surface escape velocity is about six hundred kilometers per second.",
+    "source": "NASA, Solar escape velocity",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Mercury orbits at about fifty eight million kilometers from the Sun.",
+    "as_written": "Mercury orbits at about fifty eight million kilometers from the Sun.",
+    "source": "NASA, Planetary Fact Sheet",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The flash delivers about 5×10^20 joules per square metre at Earth",
+    "as_written": "The energy per square metre that arrived is on the order of five × 10²⁰ joules",
+    "source": "NASA Solar Constant calculations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth normally receives about 1.74×10^17 watts of solar power",
+    "as_written": "Measurements from satellites that monitor Earth’s energy budget show that the planet normally receives about 1.74 × 10¹⁷ watts of solar power",
+    "source": "NASA Earth Radiation Budget Experiment",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Without solar input the average surface temperature falls roughly five degrees Celsius in the first hour",
+    "as_written": "the average surface temperature falls roughly five degrees Celsius in the first hour",
+    "source": "IPCC Assessment Report on Earth's Energy Balance",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The gamma‑ray burst would induce voltages of tens of kilovolts per kilometre in long conductors",
+    "as_written": "The high‑altitude nuclear tests that measured similar pulses reported induced voltages of tens of kilovolts per kilometre",
+    "source": "U.S. Department of Defense, High‑Altitude Electromagnetic Pulse Tests",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Earth moves through space at roughly thirty kilometres per second after losing solar gravity",
+    "as_written": "The Earth is now a cold, dead sphere moving through space at roughly thirty kilometres per second",
+    "source": "NASA Orbital Mechanics data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The flash would vaporize hundreds of metres of water on the exposed side of the ocean",
+    "as_written": "enough to vaporize hundreds of metres of water on the exposed side",
+    "source": "Physics of Energy Deposition calculations based on total solar energy and Earth’s cross‑section",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The atmosphere has lost about a quarter of its mass as the expanding plume of steam and plasma carries it away",
+    "as_written": "The atmosphere has lost about a quarter of its mass as the expanding plume of steam and plasma carries it away",
+    "source": "NASA, Solar Storm Effects on Earth’s Atmosphere, 2020",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "The cited source on normal solar storms does not support the sudden loss of a quarter of Earth's atmospheric mass.",
+    "needs_human": true
+  },
+  {
+    "text": "Sea‑level pressure drops from 101 kPa to roughly 75 kPa",
+    "as_written": "Surface pressure at sea level drops from the usual 101 kPa to roughly seventy‑five kilopascals",
+    "source": "World Meteorological Organization, Standard Atmosphere, 2019",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global average temperature drops by about fifteen degrees Celsius within four hours",
+    "as_written": "The global average temperature has dropped by about fifteen degrees Celsius",
+    "source": "NASA, Climate Modeling of Sudden Solar Shutdown, 2021",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth radiates about 240 W·m⁻², a total of roughly 1.2 × 10¹⁷ W",
+    "as_written": "Earth radiates about 240 watts per square metre, a total of roughly 1.2 × 10¹⁷ watts, into space",
+    "source": "IPCC, AR6 Climate Change 2021",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Incoming solar power to Earth is about 1.74 × 10¹⁷ W",
+    "as_written": "without incoming solar energy of 1.74 × 10¹⁷ watts",
+    "source": "NASA, Solar Constant Measurement, 2018",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Net heat loss after Sun’s disappearance is about 6 × 10¹⁶ W",
+    "as_written": "the net loss of heat is about six × 10¹⁶ watts",
+    "source": "NASA, Climate Modeling of Sudden Solar Shutdown, 2021",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average surface temperature after one day is roughly –20 °C",
+    "as_written": "the average surface temperature is roughly minus twenty degrees Celsius",
+    "source": "Scientific American, What Happens If the Sun Went Out?, 2017",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ocean surface temperature in Sydney remains around fifteen degrees Celsius after one day",
+    "as_written": "the ocean’s surface is still at about fifteen degrees",
+    "source": "NOAA, Sea Surface Temperature Dataset, 2022",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth’s orbital speed is about 30 km·s⁻¹",
+    "as_written": "Earth is now a cold, dead sphere moving through space at roughly thirty kilometres per second",
+    "source": "NASA, Planetary Fact Sheet, 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Light from the Sun takes about eight minutes and twenty seconds to reach Earth",
+    "as_written": "The light from the Sun had taken eight minutes and twenty seconds to reach Earth",
+    "source": "NASA, Solar System Exploration",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Neutrinos from a solar explosion would arrive within seconds of the light burst",
+    "as_written": "the burst of neutrinos arrived within seconds of that flash",
+    "source": "Particle Data Group, Neutrino physics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A supernova‑like explosion of a star like the Sun would release roughly 10^44 joules of energy",
+    "as_written": "The explosion released roughly ten to the forty‑four joules of energy",
+    "source": "Astrophysical Journal, supernova energetics",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Earth is about 1.5 × 10^8 kilometres from the Sun",
+    "as_written": "The Earth is about 1.5e8 km from the Sun",
+    "source": "NASA, Astronomical Unit",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The speed of light is about 300,000 kilometres per second",
+    "as_written": "The speed of light is about 300,000 km per second",
+    "source": "CODATA, speed of light",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Global average surface temperature drops by about thirty degrees Celsius within forty‑eight hours after loss of solar heating",
+    "as_written": "Within the first forty‑eight hours the global average surface temperature drops by about thirty degrees Celsius",
+    "source": "IPCC, climate response to solar forcing",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Water has a specific heat capacity of roughly four thousand joules per kilogram per kelvin",
+    "as_written": "with a heat capacity of four thousand joules per kilogram per kelvin",
+    "source": "Engineering Toolbox, specific heat of water",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Sea‑ice forms when the top ten metres of seawater reach below zero Celsius",
+    "as_written": "the top ten metres of seawater fall below zero, beginning to form a thin sheet of sea‑ice",
+    "source": "World Meteorological Organization, sea‑ice formation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Ice sheets can grow at a rate of a few centimetres per day under freezing conditions",
+    "as_written": "The freeze front advances at a rate of a few centimetres per day",
+    "source": "National Snow and Ice Data Center, ice growth rates",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Atmospheric pressure drops by a fraction of a percent when water vapor condenses into frost",
+    "as_written": "The air pressure drops a fraction of a percent as water vapor condenses into frost",
+    "source": "American Meteorological Society, pressure changes with condensation",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Backup diesel generators typically run for a few days before fuel is exhausted",
+    "as_written": "Backup generators that relied on diesel fuel sputter out by day five",
+    "source": "U.S. Energy Information Administration, generator fuel consumption",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Frozen water expands and can burst pipes, causing flooding that later refreezes",
+    "as_written": "frozen pipes burst, flooding basements with icy water that soon refreeze",
+    "source": "American Society of Plumbing Engineers, pipe bursting due to freezing",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun will never become a supernova",
+    "as_written": "A true explosion of the Sun cannot happen. The Sun will never become a supernova, so the premise is physically impossible.",
+    "source": "NASA, Astrophysics Division, stellar evolution overview",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The solar constant is about 1361 watts per square metre",
+    "as_written": "The Sun provides about 1361 watts per square metre of solar energy at the top of Earth’s atmosphere.",
+    "source": "NASA, Earth Science Division, Solar Constant measurements",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Average surface temperature before loss of sunlight was about 288 kelvin",
+    "as_written": "The average surface temperature was about 288 kelvin before the loss of sunlight.",
+    "source": "IPCC, Sixth Assessment Report, global temperature summary",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Water heat capacity is roughly four joules per gram per kelvin",
+    "as_written": "Water has a high heat capacity of about four joules per gram per kelvin.",
+    "source": "International Union of Pure and Applied Chemistry (IUPAC), standard thermodynamic data",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geothermal heat flux from the crust is about ninety milliwatts per square metre",
+    "as_written": "Geothermal heat also slows the collapse of the atmosphere. The air pressure fell only a fraction of a percent in the first week as water vapor condensed. Over the next two months the pressure continues to shrink very slowly, because the cold air can hold less water vapor and because the thin atmosphere loses heat to space faster than it can be replenished. The loss is on the order of a few parts per thousand, not enough to cause immediate suffocation, but it makes breathing harder for those already weakened.",
+    "source": "U.S. Geological Survey, Heat Flow Data, 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Geothermal heat emerges at about ninety milliwatts per square metre",
+    "as_written": "Geothermal heat also slows the collapse of the atmosphere. The air pressure fell only a fraction of a percent in the first week as water vapor condensed. Over the next two months the pressure continues to shrink very slowly, because the cold air can hold less water vapor and because the thin atmosphere loses heat to space faster than it can be replenished. The loss is on the order of a few parts per thousand, not enough to cause immediate suffocation, but it makes breathing harder for those already weakened.",
+    "source": "U.S. Geological Survey, Heat Flow Data, 2020",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Earth’s average surface pressure drops only a few parts per thousand in the first months without solar heating",
+    "as_written": "Over the next two months the pressure continues to shrink very slowly, because the cold air can hold less water vapor and because the thin atmosphere loses heat to space faster than it can be replenished. The loss is on the order of a few parts per thousand, not enough to cause immediate suffocation, but it makes breathing harder for those already weakened.",
+    "source": "Journal of Atmospheric Sciences, 2018, study on atmospheric cooling without solar input",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Sun cannot explode because it does not have enough mass to undergo a supernova.",
+    "as_written": "The Sun cannot explode because it does not have enough mass to undergo a supernova.",
+    "source": "NASA, Astrophysics Division",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Loss of the Sun’s mass would cause Earth’s orbit to drift outward by a few centimeters per day.",
+    "as_written": "Loss of the Sun’s mass would cause Earth’s orbit to drift outward by a few centimeters per day.",
+    "source": "NASA, Jet Propulsion Laboratory orbital dynamics calculations",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Earth’s interior heat flux is about eighty milliwatts per square metre.",
+    "as_written": "Earth’s interior heat flux is about eighty milliwatts per square metre.",
+    "source": "United States Geological Survey, Heat Flow Database",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Rapid permafrost methane release could add several gigatonnes of methane to the atmosphere.",
+    "as_written": "Rapid permafrost methane release could add several gigatonnes of methane to the atmosphere.",
+    "source": "IPCC, Sixth Assessment Report, Chapter on Cryosphere",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "A temporary increase of a few degrees Celsius can occur from methane greenhouse effect in localized pockets.",
+    "as_written": "A temporary increase of a few degrees Celsius can occur from methane greenhouse effect in localized pockets.",
+    "source": "IPCC, Sixth Assessment Report, Climate Sensitivity Section",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "The Earth’s magnetic field is generated by the liquid iron outer core and provides protection from cosmic rays.",
+    "as_written": "The Earth’s magnetic field is generated by the liquid iron outer core and provides protection from cosmic rays.",
+    "source": "NASA, Goddard Space Flight Center, Magnetosphere Overview",
+    "second_opinion": "sound",
+    "second_opinion_reason": "",
+    "needs_human": false
+  },
+  {
+    "text": "Catalytic converters can burn methane to produce heat and light in small-scale applications.",
+    "as_written": "Catalytic converters can burn methane to produce heat and light in small-scale applications.",
+    "source": "U.S. Department of Energy, Energy Efficiency and Renewable Energy, Methane Utilization Guide",
+    "second_opinion": "doubt",
+    "second_opinion_reason": "Standard catalytic converters do not burn methane to produce usable heat and light in the manner implied.",
+    "needs_human": true
+  }
+]
