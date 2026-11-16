@@ -36,15 +36,15 @@ from core.logger import get_logger  # noqa: E402
 log = get_logger("thumbs_v2")
 OUT = ROOT / "output" / "thumbs_v2"
 W, H = 1280, 720
-SMALL = (210, 118)
+SMALL = (320, 180)                   # owner 17.11: the preview it must read at
 FONT = ROOT / "assets" / "fonts" / "Anton-Regular.ttf"
 YELLOW = (255, 214, 0)
 VISION = ("gemini-flash-latest", "gemini-flash-lite-latest")
 SAFE_X, SAFE_Y = 0.78, 0.80          # YouTube's duration pill, bottom right
 
 STYLE = ("photorealistic cinematic film still, ultra detailed, dramatic volumetric light, epic wide angle, "
-         "saturated colours, high contrast, sharp focus, 8k, disaster movie, no text, no letters, no logos, "
-         "no people in the foreground")
+         "saturated colours, high contrast, strong contrast of cold blue and warm orange fire light, sharp focus, "
+         "8k, disaster movie, no text, no letters, no logos, no people in the foreground")
 
 PLAN = """You design YouTube thumbnails for a science channel about global catastrophes ("What Would Happen
 If ...?"). The winning style: a photorealistic cinematic shot of a FAMOUS CITY (New York, London, Tokyo, Paris,
@@ -53,9 +53,12 @@ unmistakable - plus one or two enormous words at the top and one yellow arrow on
 Episode: "{title}".
 Give 3 clearly different concepts (different city, different moment, different key detail). For each:
 "city", "prompt": an English FLUX prompt (the scene only, 40-70 words, wide shot, the event filling the upper
-half of the frame so the words have sky to sit on, no people close up, no text),
+half of the frame and the top third calm (sky) so the words have room, a strong contrast of cold and warm
+colour (blue ice or water against fire, orange light or a yellow accent; grey city against a warm glow), no people
+close up, no text). The scene must be one the film itself shows (it is used as a shot of the film),
 "detail": the one thing the arrow points at (a few English words, e.g. "the giant moon", "the wave crest"),
-"words": 1-2 words, UPPER CASE, max 14 characters in all, e.g. "WHAT IF", "TOO CLOSE", "NO SUN".
+"words": 1-3 words, UPPER CASE, max 16 characters in all, e.g. "WHAT IF?", "TOO CLOSE", "NO SUN",
+"365 DAYS OF RAIN?".
 Answer as JSON: {{"concepts": [{{"city": "...", "prompt": "...", "detail": "...", "words": "..."}}]}}"""
 
 FALLBACK = {
@@ -136,9 +139,10 @@ JUDGE = """You are the strict art director of a YouTube channel about global cat
 for the episode "{title}" against the rules of the niche's best performer:
 1. photorealistic cinematic scene of a recognisable famous city at the moment of the catastrophe;
 2. the catastrophe matches the episode and is instantly clear;
-3. 1-2 enormous words at the top, white/light grey with depth and shadow, readable;
+3. 1-3 enormous words at the top (about a third of the height), white/light grey with depth and shadow;
 4. one yellow curved arrow pointing at the key detail;
-5. saturated colours, maximum contrast; still readable as a tiny 210x118 card (the second image);
+5. saturated colours, a strong cold/warm contrast (blue ice or water against fire or a yellow accent), maximum
+   contrast; the words and the event still readable on the 320x180 preview (the second image);
 6. no people close up, no text except the headline, nothing warped or AI-looking.
 Answer as JSON: {{"score": <0-10>, "readable_small": true|false, "matches_episode": true|false,
 "defects": ["..."], "why": "<one sentence>"}}"""
@@ -152,17 +156,32 @@ def cover(im, w=W, h=H):
     return im.crop((x, y, x + w, y + h))
 
 
+def split_tone(im, amount=0.22):
+    """Cold shadows, warm highlights: the blue-against-fire contrast that reads at 320x180 (owner 17.11)."""
+    import numpy as np
+    a = np.asarray(im.convert("RGB")).astype(np.float32) / 255.0
+    lum = (0.299 * a[..., 0] + 0.587 * a[..., 1] + 0.114 * a[..., 2])[..., None]
+    cold, warm = np.array([0.10, 0.35, 0.75]), np.array([1.0, 0.62, 0.20])
+    w = np.clip((lum - 0.25) / 0.5, 0, 1)
+    tint = cold * (1 - w) + warm * w
+    out = a * (1 - amount) + (a * 0.5 + tint * lum) * amount
+    return Image.fromarray((np.clip(out, 0, 1) * 255).astype("uint8"))
+
+
 def punch(im):
+    im = split_tone(im)
     im = ImageEnhance.Color(im).enhance(1.35)
     im = ImageEnhance.Contrast(im).enhance(1.18)
     return ImageEnhance.Sharpness(im).enhance(1.4)
 
 
-def _fit(text, max_w, start=230):
+def _fit(text, max_w, max_h=H / 3, start=360):
+    """The largest Anton size whose letters fit the width and stand about a third of the height (owner 17.11)."""
     size = start
     while size > 40:
         f = ImageFont.truetype(str(FONT), size)
-        if f.getlength(text) <= max_w:
+        b = f.getbbox(text)
+        if f.getlength(text) <= max_w and (b[3] - b[1]) <= max_h:
             return f
         size -= 6
     return ImageFont.truetype(str(FONT), size)
@@ -170,7 +189,7 @@ def _fit(text, max_w, start=230):
 
 def headline(im, text, top=18):
     """White-to-light-grey letters with depth (a stepped darker extrusion) and a soft hard shadow."""
-    f = _fit(text, W * 0.86)
+    f = _fit(text, W * 0.92)
     box = f.getbbox(text)
     tw, th = box[2] - box[0], box[3] - box[1]
     x, y = (W - tw) // 2 - box[0], top - box[1]
@@ -193,7 +212,7 @@ def headline(im, text, top=18):
         v = int(255 - 55 * t)
         gd.line([(0, yy), (W, yy)], fill=(v, v, min(255, v + 6)))
     im.paste(grad, (0, 0), mask)
-    d.text((x, y), text, font=f, fill=None, stroke_width=3, stroke_fill=(40, 40, 48))
+    d.text((x, y), text, font=f, fill=(30, 30, 38), stroke_width=6, stroke_fill=(20, 20, 26))   # dark outline
     im.paste(grad, (0, 0), mask)
     return (x + box[0], y + box[1], x + box[0] + tw, y + box[1] + th)
 
@@ -201,6 +220,14 @@ def headline(im, text, top=18):
 def _bezier(p0, p1, p2, n=60):
     return [((1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * p1[0] + t ** 2 * p2[0],
              (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * p1[1] + t ** 2 * p2[1]) for t in (i / n for i in range(n + 1))]
+
+
+def _dense(pts, step=2.0):
+    out = [pts[0]]
+    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+        n = max(1, int(math.hypot(x1 - x0, y1 - y0) / step))
+        out += [(x0 + (x1 - x0) * k / n, y0 + (y1 - y0) * k / n) for k in range(1, n + 1)]
+    return out
 
 
 def arrow(im, target_box, avoid):
@@ -212,6 +239,8 @@ def arrow(im, target_box, avoid):
     length = 210
     ex = cx + side * ((x1 - x0) / 2 + 14)            # the tip just short of the detail's edge
     ey = cy + 10
+    if ey < avoid[3] + 30:                           # the detail reaches into the words: point below them
+        ey = min(max(avoid[3] + 30, y0 + 10), max(y1 - 10, avoid[3] + 30))
     sx, sy = ex + side * length * 0.85, ey + length * 0.55
     sy = min(sy, H * SAFE_Y - 30)
     sx = min(max(sx, 50), W * SAFE_X - 30)
@@ -232,9 +261,9 @@ def arrow(im, target_box, avoid):
                 (ex + math.cos(a2 - 2.5) * size, ey + math.sin(a2 - 2.5) * size)]
     body = pts[:-6]
     for width, col, hs in ((36, (0, 0, 0), 62), (24, YELLOW, 50)):
-        d.line(body, fill=col, width=width, joint="curve")
         r = width / 2
-        d.ellipse((body[0][0] - r, body[0][1] - r, body[0][0] + r, body[0][1] + r), fill=col)
+        for px_, py_ in _dense(body):                # round brush along the curve: no jagged joints
+            d.ellipse((px_ - r, py_ - r, px_ + r, py_ + r), fill=col)
         d.polygon(head(hs), fill=col)
 
 
@@ -242,8 +271,8 @@ def compose(src, words, box):
     im = punch(cover(Image.open(src).convert("RGB")))
     # a gentle darkening at the very top so the white words hold on a bright sky
     top = Image.new("L", (W, H), 0)
-    for yy in range(int(H * 0.38)):
-        ImageDraw.Draw(top).line([(0, yy), (W, yy)], fill=int(110 * (1 - yy / (H * 0.38))))
+    for yy in range(int(H * 0.45)):
+        ImageDraw.Draw(top).line([(0, yy), (W, yy)], fill=int(120 * (1 - yy / (H * 0.45))))
     im.paste((10, 14, 24), (0, 0), top)
     hb = headline(im, words)
     if box:
@@ -326,11 +355,17 @@ def finish(title, takes, work):
             best_of[t["concept"]] = t
     finals = sorted(best_of.values(), key=lambda t: -t["rank"])
     for n, t in enumerate(finals, 1):
-        Image.open(t["file"]).save(work / f"candidate_{n}.png")
+        im = Image.open(t["file"]).convert("RGB")
+        im.save(work / f"candidate_{n}.png")
+        im.resize(SMALL, Image.LANCZOS).save(work / f"candidate_{n}_320.png")
     if finals:
-        Image.open(finals[0]["file"]).save(work / "chosen.png")
+        im = Image.open(finals[0]["file"]).convert("RGB")
+        im.save(work / "chosen.png")
+        im.save(work / "chosen.jpg", quality=92, optimize=True)          # YouTube takes thumbnails up to 2 MB
     (work / "report.json").write_text(json.dumps({"title": title, "takes": report,
-                                                  "candidates": [t["file"] for t in finals]},
+                                                  "candidates": [t["file"] for t in finals],
+                                                  "chosen_image": finals[0]["image"] if finals else None,
+                                                  "chosen_detail": finals[0]["detail"] if finals else None},
                                                  indent=1, ensure_ascii=False), encoding="utf-8")
     log.info("candidates: %s", [(t["city"], round(t["rank"], 1)) for t in finals])
     return 0 if finals else 1

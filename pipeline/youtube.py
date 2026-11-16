@@ -149,7 +149,9 @@ def upload(package_dir, publish_at=None, synthetic_media=True):
     video_id = response["id"]
     log.info("uploaded: https://youtu.be/%s", video_id)
 
-    thumb = package_dir / "thumbnail.png"
+    thumb = package_dir / "thumbnail.jpg"                 # v2: a JPEG under YouTube's 2 MB
+    if not thumb.exists():
+        thumb = package_dir / "thumbnail.png"
     if thumb.exists():
         yt.thumbnails().set(videoId=video_id,
                             media_body=MediaFileUpload(str(thumb))).execute()
