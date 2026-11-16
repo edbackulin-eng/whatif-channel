@@ -22,6 +22,6 @@
   "publish_time_utc": "15:00",
   "verify_public_after_publish": true,
   "engine": "v2",
-  "v2_ready": false,
-  "_v2_note": "owner 15.11: the new format (real video >= 50 %, Blender 3D, maps, FLUX <= 20 %, 15-20 min, thumbnails after the niche leader). Builds of the old format stop; v2_ready turns the builds back on once the trial video is done."
+  "v2_ready": true,
+  "_v2_note": "owner 15.11: the new format (real video >= 50 %, Blender 3D, maps, FLUX <= 20 %, 15-20 min, thumbnails after the niche leader). Builds of the old format stop; v2_ready turns the builds back on once the trial video is done. Owner 17.11: switched on - two in reserve, Tue+Sat 17:00 Kyiv."
 }

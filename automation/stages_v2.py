@@ -345,7 +345,9 @@ def package(slug, ep, shots, final, shares, music_credits):
         if s["type"] == "video" and s.get("clip"):
             lines.append(f"- {s.get('source')}: {s.get('author') or ''} ({s.get('license')}) {s.get('page') or ''}")
     lines.append("- 3D scenes rendered in Blender with NASA textures (Blue Marble, Black Marble, LRO; public domain).")
-    if shares["flux"] > 0:
+    # owner 17.11: any AI picture in the film - the thumbnail's scene included - marks it synthetic
+    ai = any(x["type"] == "flux" or x.get("thumb_scene") for x in shots)
+    if ai:
         lines.append("- Some imagined scenes are AI-generated (FLUX.1-schnell, Apache-2.0).")
     music = "\n".join(music_credits or ["(no music)"])
     if music_credits:
@@ -353,7 +355,7 @@ def package(slug, ep, shots, final, shares, music_credits):
     desc = seo.build_description(ep.get("hook") or ep["title"], "", "\n".join(lines), music, "")
     from automation.assemble import TAGS, HASHTAGS
     seo.write_metadata(w.parent / "metadata.txt", ep["title"], desc, seo.build_tags(TAGS), HASHTAGS)
-    (w.parent / "v2.json").write_text(json.dumps({"synthetic": shares["flux"] > 0, "shares": shares}),
+    (w.parent / "v2.json").write_text(json.dumps({"synthetic": ai, "shares": shares}),
                                       encoding="utf-8")
     day = ROOT / "ready" / date.today().isoformat() / slug
     day.mkdir(parents=True, exist_ok=True)

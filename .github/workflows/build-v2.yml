@@ -56,8 +56,9 @@ jobs:
           stop() { echo "go=false" >> "$GITHUB_OUTPUT"; echo "$1"; exit 0; }
           git config user.name "whatif-bot"; git config user.email "noreply@users.noreply.github.com"
           if [ "$EVENT" = "schedule" ] && [ -s state/v2_trial.txt ]; then
-            # a booked trial: built, not uploaded
-            SLUG_IN="$(head -1 state/v2_trial.txt | tr -d '[:space:]')"; UPLOAD=false
+            # a booked trial: uploaded too once v2 is switched on (owner 17.11: "work by the schedule")
+            SLUG_IN="$(head -1 state/v2_trial.txt | tr -d '[:space:]')"
+            UPLOAD=$(python3 -c "import json;print('true' if json.load(open('config.json')).get('v2_ready') else 'false')")
             git rm -q state/v2_trial.txt && git commit -qm "v2 trial claimed: $SLUG_IN" && git push -q || stop "the claim did not push"
           elif [ "$EVENT" = "schedule" ] || [ "$SLUG_IN" = "next" ]; then
             # the automation (owner 16.11): two videos in reserve; one build at a time; the next v2 script
