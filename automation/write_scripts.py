@@ -46,6 +46,8 @@ def main():
     h = queue.health()
     target = queue.PER_WEEK * TARGET_STOCK_WEEKS
     wanted = max(0, min(args.count, target - h["ready"]))
+    if args.title:
+        wanted = 1                 # a title named by hand is written whatever the queue holds (the v2 trial)
     if wanted == 0:
         queue.log_entry(f"Queue already holds {h['ready']} episodes; nothing written.")
         print(f"queue has {h['ready']} ready; target {target}. Nothing to do.")
