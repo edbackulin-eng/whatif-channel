@@ -55,6 +55,11 @@ def episodes():
 def pending():
     """Ready episodes, a "priority" one first (the owner moved it up), then by position."""
     ready = [e for e in episodes() if e.get("status") == "ready-to-render"]
+    try:
+        if json.loads((ROOT / "config.json").read_text(encoding="utf-8")).get("engine") == "v2":
+            ready = [e for e in ready if e.get("engine") == "v2"]     # owner 15.11: the old scripts are retired
+    except (OSError, json.JSONDecodeError):
+        pass
     return sorted(ready, key=lambda e: (-int(e.get("priority") or 0), e.get("position", 9999)))
 
 

@@ -30,13 +30,15 @@ from pipeline import queue  # noqa: E402
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "edbackulin-eng/whatif-channel")
 OWNER = REPO.split("/")[0]
-BUILD = "build-video.yml"
-MIN_AHEAD = 1          # owner 15.11: one video in reserve, two a week
+CFG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+V2 = CFG.get("engine") == "v2"
+BUILD = "build-v2.yml" if V2 else "build-video.yml"
+MIN_AHEAD = 2          # owner 16.11: two videos in reserve (one was too few with five-hour builds), two a week
 RESCUE_H = 3
-HUNG_H = 6.5
+HUNG_H = 13 if V2 else 6.5        # v2 is three jobs one after another (prep, 3D, montage), up to ~12 h
 SETTLE_MIN = 12
 MAX_ATTEMPTS = 3
-LAST_START_H = 18
+LAST_START_H = 12 if V2 else 18    # v2: FLUX must land in What If's Kaggle window (07:00-17:30 UTC)
 SLOT_HOUR = 15
 # steps after which a rerun could upload a second copy
 AFTER_UPLOAD = ("Upload to YouTube", "Record the outcome", "Count what is scheduled ahead",
@@ -107,6 +109,8 @@ def check_runs(mem, actions):
     rid, attempt = latest["id"], latest.get("run_attempt", 1)
     jobs = gh("api", f"repos/{REPO}/actions/runs/{rid}/jobs?per_page=20")["jobs"]
     build = next((j for j in jobs if j["name"] == "build"), None)
+    if V2:                                # build-v2: the job that failed (prep, a 3D share or the montage)
+        build = next((j for j in jobs if j.get("conclusion") in ("failure", "cancelled", "timed_out")), None)
     if build is None:
         return False                      # the 18:00 gate stopped it: nothing failed
     bad = [s["name"] for s in build.get("steps", [])
@@ -132,7 +136,12 @@ def check_buffer(busy, actions):
         return have                       # owner 15.11: the old format builds no more
     if len(have) >= MIN_AHEAD or busy or now().hour >= LAST_START_H:
         return have
-    gh("workflow", "run", BUILD, "-R", REPO, parse=False)
+    if V2:
+        if now().hour < 5:
+            return have                   # the 05:35 cron of build-v2 starts it
+        gh("workflow", "run", BUILD, "-R", REPO, "-f", "slug=next", "-f", "upload=true", parse=False)
+    else:
+        gh("workflow", "run", BUILD, "-R", REPO, parse=False)
     actions.append(f"only {len(have)} scheduled ahead; build started")
     return have
 

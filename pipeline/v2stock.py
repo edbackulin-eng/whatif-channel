@@ -149,12 +149,35 @@ def nasa(query, n=20):
     return out
 
 
+def _height(url):
+    r = subprocess.run(["ffprobe", "-v", "error", "-rw_timeout", "30000000", "-select_streams", "v:0",
+                        "-show_entries", "stream=height", "-of", "default=nw=1:nk=1", _q(url)],
+                       capture_output=True, text=True, timeout=90)
+    try:
+        return int(r.stdout.strip().splitlines()[0])
+    except (ValueError, IndexError):
+        return 0
+
+
 def nasa_url(item):
+    """Owner 16.11: 1080p when NASA has it, 720p only when it does not. Of the versions at 1080p or more the
+    smallest wins (an ~orig can be 4K and 900 MB); without one, the tallest under it."""
     files = _get(item["manifest"])
-    vids = [f for f in files if f.lower().endswith(".mp4")]
-    order = ("~large", "~medium", "~orig")              # ~orig runs to 900 MB a clip; 720p+ is plenty
+    vids = [f.replace("http://", "https://") for f in files if f.lower().endswith(".mp4")
+            and not any(t in f for t in ("~preview", "~mobile", "~small", "~thumb"))]
+    order = ("~large", "~orig", "~medium")
     vids.sort(key=lambda f: next((i for i, o in enumerate(order) if o in f), 9))
-    return vids[0].replace("http://", "https://") if vids else None
+    sized = []
+    for f in vids[:4]:
+        try:
+            sized.append((_height(f), f))
+        except Exception:                                                # noqa: BLE001
+            continue
+    full = sorted((h, f) for h, f in sized if h >= 1080)
+    if full:
+        return full[0][1]
+    rest = sorted(((h, f) for h, f in sized if h >= 720), reverse=True)
+    return rest[0][1] if rest else None
 
 
 def commons(query, n=20):

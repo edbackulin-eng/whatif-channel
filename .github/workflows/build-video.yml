@@ -41,8 +41,8 @@ jobs:
         run: |
           h=$((10#$(date -u +%H)))
           # owner 15.11: no more videos of the old format; the v2 engine builds once it is ready
-          if [ "$(python3 -c "import json;c=json.load(open('config.json'));print(c.get('engine')=='v2' and not c.get('v2_ready'))")" = "True" ]; then
-            echo "go=false" >> "$GITHUB_OUTPUT"; echo "the old format is retired; the v2 engine is not switched on yet"; exit 0; fi
+          if [ "$(python3 -c "import json;c=json.load(open('config.json'));print(c.get('engine')=='v2')")" = "True" ]; then
+            echo "go=false" >> "$GITHUB_OUTPUT"; echo "the old format is retired; v2 builds run in build-v2.yml"; exit 0; fi
           if [ "$h" -lt 18 ]; then echo "go=true" >> "$GITHUB_OUTPUT"
           else echo "go=false" >> "$GITHUB_OUTPUT"; echo "it is ${h}:xx UTC, after 18:00; the 03:17 run builds instead"; fi
 

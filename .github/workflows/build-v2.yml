@@ -43,22 +43,37 @@ jobs:
     outputs:
       go: ${{ steps.g.outputs.go }}
       slug: ${{ steps.g.outputs.slug }}
+      upload: ${{ steps.g.outputs.upload }}
     steps:
       - uses: actions/checkout@v5
       - id: g
         env:
           EVENT: ${{ github.event_name }}
           SLUG_IN: ${{ github.event.inputs.slug }}
+          UPLOAD: ${{ github.event.inputs.upload }}
+          GH_TOKEN: ${{ github.token }}
         run: |
-          if [ "$EVENT" = "schedule" ]; then
-            [ -s state/v2_trial.txt ] || { echo "go=false" >> "$GITHUB_OUTPUT"; echo "nothing booked"; exit 0; }
-            SLUG_IN="$(head -1 state/v2_trial.txt | tr -d '[:space:]')"
-            git config user.name "whatif-bot"; git config user.email "noreply@users.noreply.github.com"
-            git rm -q state/v2_trial.txt && git commit -qm "v2 trial claimed: $SLUG_IN" && git push -q || {
-              echo "go=false" >> "$GITHUB_OUTPUT"; echo "the claim did not push"; exit 0; }
+          stop() { echo "go=false" >> "$GITHUB_OUTPUT"; echo "$1"; exit 0; }
+          git config user.name "whatif-bot"; git config user.email "noreply@users.noreply.github.com"
+          if [ "$EVENT" = "schedule" ] && [ -s state/v2_trial.txt ]; then
+            # a booked trial: built, not uploaded
+            SLUG_IN="$(head -1 state/v2_trial.txt | tr -d '[:space:]')"; UPLOAD=false
+            git rm -q state/v2_trial.txt && git commit -qm "v2 trial claimed: $SLUG_IN" && git push -q || stop "the claim did not push"
+          elif [ "$EVENT" = "schedule" ] || [ "$SLUG_IN" = "next" ]; then
+            # the automation (owner 16.11): two videos in reserve; one build at a time; the next v2 script
+            [ "$(python3 -c "import json;print(bool(json.load(open('config.json')).get('v2_ready')))")" = "True" ] || stop "v2 is not switched on yet"
+            n=$(gh run list -R "${{ github.repository }}" --workflow build-v2.yml --json status,databaseId --jq '[.[] | select(.status != "completed" and .databaseId != ${{ github.run_id }})] | length')
+            [ "$n" = "0" ] || stop "a v2 build is already running"
+            ahead=$(python3 -X utf8 -c "import sys;sys.path.insert(0,'.');from automation import buffer;print(buffer.ahead())")
+            [ "${ahead:-0}" -lt 2 ] || stop "$ahead scheduled ahead: enough"
+            SLUG_IN=$(python3 -X utf8 -c "import sys;sys.path.insert(0,'.');from pipeline import queue;e=queue.next_episode();print(e['slug'] if e else '')")
+            [ -n "$SLUG_IN" ] || stop "no v2 script ready in the queue"
+            UPLOAD=true
           fi
           echo "go=true" >> "$GITHUB_OUTPUT"
           echo "slug=$SLUG_IN" >> "$GITHUB_OUTPUT"
+          echo "upload=${UPLOAD:-false}" >> "$GITHUB_OUTPUT"
+          echo "building $SLUG_IN, upload ${UPLOAD:-false}"
 
   prep:
     needs: gate
@@ -207,7 +222,7 @@ jobs:
           retention-days: 14
           if-no-files-found: warn
       - name: Upload to YouTube
-        if: github.event.inputs.upload == 'true'
+        if: needs.gate.outputs.upload == 'true'
         env:
           YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
         run: python -X utf8 automation/upload_youtube.py
