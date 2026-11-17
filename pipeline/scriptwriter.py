@@ -21,7 +21,7 @@ from core.text import word_count
 log = get_logger("scriptwriter")
 
 PROVIDERS = ("claude", "parts", "gemini", "groq")
-MIN_WORDS, MAX_WORDS = 2200, 2900      # owner 15.11: 15-20 minutes at 146 words a minute
+MIN_WORDS, MAX_WORDS = 2150, 2700      # owner 15.11: 15-20 minutes; bm_george measured at ~142 words a minute
 CLAUDE_TIMEOUT_S = 900
 
 SYSTEM = """You write narration for a YouTube channel that explores scientific

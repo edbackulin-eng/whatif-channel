@@ -77,7 +77,7 @@ def _trim_silence(samples, threshold=0.004, keep_s=0.02):
     return samples[start:end]
 
 
-def synthesize(kokoro, text, voice, on_chunk=None):
+def synthesize(kokoro, text, voice, on_chunk=None, pace=1.0):
     """Render `text` with `voice`. Returns (samples float32, sample_rate).
 
     `text` may contain blank lines; those become longer pauses.
@@ -93,7 +93,7 @@ def synthesize(kokoro, text, voice, on_chunk=None):
                 words = word_count(chunk)
                 if not words:
                     continue
-                speed = _speed_for(index, words)
+                speed = _speed_for(index, words) * pace
                 samples, rate = kokoro.create(chunk, voice=voice, speed=speed, lang="en-us")
                 if rate != SAMPLE_RATE:
                     raise RuntimeError(f"unexpected sample rate {rate}")
