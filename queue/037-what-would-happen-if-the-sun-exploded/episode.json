@@ -1,12 +1,19 @@
 {
   "slug": "037-what-would-happen-if-the-sun-exploded",
   "title": "What Would Happen If the Sun Exploded?",
-  "status": "ready-to-render",
+  "status": "rendered",
   "position": 37,
   "script_source": "parts",
   "created": "2026-11-16T21:01:01+00:00",
   "words": 3107,
   "sourced_claims": 48,
   "flagged_claims": 2,
-  "engine": "v2"
+  "engine": "v2",
+  "shares": {
+    "video": 0.532,
+    "3d": 0.121,
+    "info": 0.346,
+    "flux": 0.0
+  },
+  "updated": "2026-11-17T08:48:28+00:00"
 }
