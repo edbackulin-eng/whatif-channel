@@ -48,6 +48,8 @@ jobs:
       go: ${{ steps.g.outputs.go }}
       slug: ${{ steps.g.outputs.slug }}
       upload: ${{ steps.g.outputs.upload }}
+      prep_run: ${{ steps.g.outputs.prep_run }}
+      flux_only: ${{ steps.g.outputs.flux_only }}
     steps:
       - uses: actions/checkout@v5
       - id: g
@@ -55,6 +57,8 @@ jobs:
           EVENT: ${{ github.event_name }}
           SLUG_IN: ${{ github.event.inputs.slug }}
           UPLOAD: ${{ github.event.inputs.upload }}
+          PREP_RUN: ${{ github.event.inputs.prep_run }}
+          FLUX_ONLY: ${{ github.event.inputs.flux_only }}
           GH_TOKEN: ${{ github.token }}
         run: |
           stop() { echo "go=false" >> "$GITHUB_OUTPUT"; echo "$1"; exit 0; }
@@ -64,6 +68,18 @@ jobs:
             SLUG_IN="$(head -1 state/v2_trial.txt | tr -d '[:space:]')"
             UPLOAD=$(python3 -c "import json;print('true' if json.load(open('config.json')).get('v2_ready') else 'false')")
             git rm -q state/v2_trial.txt && git commit -qm "v2 trial claimed: $SLUG_IN" && git push -q || stop "the claim did not push"
+          elif { [ "$EVENT" = "schedule" ] || [ "$SLUG_IN" = "next" ]; } && [ -s state/v2_rebuild.txt ]; then
+            # owner 17.11: a held film is finished from its own prep, not built again - "slug prep_run" a
+            # line, FLUX + thumbnails in the Kaggle window, then 3D, montage, QC and the upload; claimed first
+            n=$(gh run list -R "${{ github.repository }}" --workflow build-v2.yml --json status,databaseId --jq '[.[] | select(.status != "completed" and .databaseId != ${{ github.run_id }})] | length')
+            [ "$n" = "0" ] || stop "a v2 build is already running"
+            read -r SLUG_IN PREP_RUN < state/v2_rebuild.txt
+            tail -n +2 state/v2_rebuild.txt > state/v2_rebuild.tmp && mv state/v2_rebuild.tmp state/v2_rebuild.txt
+            [ -s state/v2_rebuild.txt ] || git rm -q --cached state/v2_rebuild.txt
+            [ -s state/v2_rebuild.txt ] && git add state/v2_rebuild.txt
+            git commit -qm "v2 rebuild claimed: $SLUG_IN from run $PREP_RUN" && git push -q || stop "the claim did not push"
+            FLUX_ONLY=true
+            UPLOAD=true
           elif [ "$EVENT" = "schedule" ] || [ "$SLUG_IN" = "next" ]; then
             # the automation (owner 16.11): two videos in reserve; one build at a time; the next v2 script
             [ "$(python3 -c "import json;print(bool(json.load(open('config.json')).get('v2_ready')))")" = "True" ] || stop "v2 is not switched on yet"
@@ -81,11 +97,13 @@ jobs:
           echo "go=true" >> "$GITHUB_OUTPUT"
           echo "slug=$SLUG_IN" >> "$GITHUB_OUTPUT"
           echo "upload=${UPLOAD:-false}" >> "$GITHUB_OUTPUT"
+          echo "prep_run=${PREP_RUN}" >> "$GITHUB_OUTPUT"
+          echo "flux_only=${FLUX_ONLY:-false}" >> "$GITHUB_OUTPUT"
           echo "building $SLUG_IN, upload ${UPLOAD:-false}"
 
   prep:
     needs: gate
-    if: needs.gate.outputs.go == 'true' && (github.event.inputs.prep_run == '' || github.event.inputs.flux_only == 'true')
+    if: needs.gate.outputs.go == 'true' && (needs.gate.outputs.prep_run == '' || needs.gate.outputs.flux_only == 'true')
     env:
       SLUG: ${{ needs.gate.outputs.slug }}
     runs-on: ubuntu-24.04
@@ -109,16 +127,16 @@ jobs:
           path: assets/textures
           key: nasa-textures-v1
       - run: python -X utf8 tools/v2_assets.py textures
-      - if: github.event.inputs.flux_only == 'true'
+      - if: needs.gate.outputs.flux_only == 'true'
         uses: actions/download-artifact@v5
         with:
           name: v2-prep
           path: .
-          run-id: ${{ github.event.inputs.prep_run }}
+          run-id: ${{ needs.gate.outputs.prep_run }}
           github-token: ${{ github.token }}
       - name: Narration, shots, real video, cards, FLUX, thumbnails
         env:
-          FLUX_ONLY: ${{ github.event.inputs.flux_only }}
+          FLUX_ONLY: ${{ needs.gate.outputs.flux_only }}
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
@@ -169,7 +187,7 @@ jobs:
         with:
           name: v2-prep
           path: .
-          run-id: ${{ (github.event.inputs.prep_run != '' && github.event.inputs.flux_only != 'true') && github.event.inputs.prep_run || github.run_id }}
+          run-id: ${{ (needs.gate.outputs.prep_run != '' && needs.gate.outputs.flux_only != 'true') && needs.gate.outputs.prep_run || github.run_id }}
           github-token: ${{ github.token }}
       - id: blender_cache
         uses: actions/cache/restore@v4
@@ -228,7 +246,7 @@ jobs:
         with:
           name: v2-prep
           path: .
-          run-id: ${{ (github.event.inputs.prep_run != '' && github.event.inputs.flux_only != 'true') && github.event.inputs.prep_run || github.run_id }}
+          run-id: ${{ (needs.gate.outputs.prep_run != '' && needs.gate.outputs.flux_only != 'true') && needs.gate.outputs.prep_run || github.run_id }}
           github-token: ${{ github.token }}
       - uses: actions/download-artifact@v5
         with:
