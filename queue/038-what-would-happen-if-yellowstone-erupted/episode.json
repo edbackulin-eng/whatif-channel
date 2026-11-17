@@ -1,12 +1,19 @@
 {
   "slug": "038-what-would-happen-if-yellowstone-erupted",
   "title": "What Would Happen If Yellowstone Erupted?",
-  "status": "ready-to-render",
+  "status": "rendered",
   "position": 38,
   "script_source": "parts",
   "created": "2026-11-16T21:02:52+00:00",
   "words": 2822,
   "sourced_claims": 67,
   "flagged_claims": 0,
-  "engine": "v2"
+  "engine": "v2",
+  "shares": {
+    "video": 0.541,
+    "3d": 0.1,
+    "info": 0.359,
+    "flux": 0.0
+  },
+  "updated": "2026-11-17T14:11:07+00:00"
 }

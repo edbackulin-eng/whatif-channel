@@ -126,3 +126,4 @@ Traceback (mo
 - **2026-11-16 08:16 UTC** - Wrote 1 script(s). Queue now 10 (5.0 weeks).
 - **2026-11-16 21:04 UTC** - Wrote 3 script(s). Queue now 4 (2.0 weeks).
 - **2026-11-17 08:48 UTC** - 037-what-would-happen-if-the-sun-exploded held for review, QC says FAIL: black; text; video bitrate 6.2 Mbit/s is under 8 Mbit/s; 6 black segment(s) over 0.5s
+- **2026-11-17 14:11 UTC** - 038-what-would-happen-if-yellowstone-erupted held for review, QC says FAIL: black; text; video bitrate 6.8 Mbit/s is under 8 Mbit/s; 3 black segment(s) over 0.5s
