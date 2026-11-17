@@ -1,6 +1,6 @@
 {
  "date": "2026-11-17",
- "checked_at": "2026-11-17T05:01:06Z",
+ "checked_at": "2026-11-17T09:01:37Z",
  "scheduled_ahead": [
   [
    "2026-11-17T15:00:00Z",
@@ -8,6 +8,6 @@
   ]
  ],
  "actions": [
-  "only 1 scheduled ahead; build started"
+  "reran build 44021103370 (failed at 3D shots, share 6 of 8; attempt 2)"
  ]
 }
