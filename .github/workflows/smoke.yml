@@ -43,12 +43,15 @@ jobs:
       - run: python -X utf8 automation/fetch_music.py
       - name: Smoke test
         run: python -X utf8 scripts/smoke.py
+      - name: Shared guards (owner 17.11)
+        run: pip install -q pyyaml google-api-python-client google-auth && python -X utf8 scripts/smoke_guards.py
       - name: Promote dev to main
         if: (inputs.ref || 'dev') == 'dev'
         run: |
           git config user.name "whatif-bot"
           git config user.email "noreply@users.noreply.github.com"
           git fetch -q origin main dev
+          git reset -q --hard                      # a smoke run may leave tracked files changed
           git checkout -q -B main origin/main
           git merge --no-edit origin/dev
           for i in 1 2 3 4 5; do

@@ -18,7 +18,7 @@ LUFS_TOLERANCE = 1.0
 MIN_W, MIN_H, FPS = 1920, 1080, 30
 MAX_SILENCE_S = 3.0          # longer than this mid-video means a gap in narration
 MAX_BLACK_S = 0.5
-MIN_VIDEO_BPS = 8_000_000      # YouTube's recommendation for 1080p30 uploads
+MIN_VIDEO_BPS = 6_000_000      # owner 17.11: 6 Mbit/s (YouTube re-encodes; 8 was its recommendation, not a fault)
 THUMB_W, THUMB_H = 1280, 720
 THUMB_MAX_BYTES = 2 * 1024 * 1024
 

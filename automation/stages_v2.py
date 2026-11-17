@@ -7,6 +7,9 @@
     python -X utf8 automation/stages_v2.py blender  --slug <slug> --k 0 --n 8   the k-th share of the 3D shots
     python -X utf8 automation/stages_v2.py assemble --slug <slug>    the montage, sound (music under the
                                                                       voice, effects), QA, the package
+    python -X utf8 automation/stages_v2.py flux     --slug <slug>    (on a finished prep) only FLUX and the
+                                                                      thumbnails again: the shots that fell
+                                                                      back to 3D get their pictures
 
 Everything lands in output/<slug>/v2/. A shot that could not be filled (no clip, a 3D render that failed)
 falls back to a 3D Earth or a card - never to a repeat. Every shot is cut to its own clip at 1920x1080,
@@ -74,6 +77,16 @@ def cut_video(src, need, out, at=0.1):
     return {"speed": round(speed, 2), "in": round(start, 2)}
 
 
+def is_dark(clip, min_s=0.5):
+    """True when the clip holds a black stretch QC would refuse (17.11: night-sky stock clips - a small
+    moon in a black sky - were three 'black segments' of the Moon film)."""
+    from pipeline import qc
+    try:
+        return bool(qc.find_black(clip, min_s))
+    except Exception:                                                    # noqa: BLE001
+        return False
+
+
 def still_clip(img, need, out, move=0):
     """A still (FLUX) with a slow camera move: push in, pull out or a pan, alternating."""
     n = int(round(need * FPS))
@@ -132,6 +145,10 @@ def prep(slug):
                 out = w / "clips" / f"{s['index']:04d}.mp4"
                 s["cut"] = cut_video(f, need, out)
                 f.unlink(missing_ok=True)                   # used once in the film: the runner's disk stays free
+                if is_dark(out):
+                    out.unlink(missing_ok=True)
+                    log.info("shot %d: %s is too dark (QC would call it black); the next one", s["index"], cid)
+                    continue
                 got = cid
                 break
             except Exception as e:                                       # noqa: BLE001
@@ -152,6 +169,37 @@ def prep(slug):
         if s["type"] == "info":
             v2info.render(s["info"], s["end"] - s["start"] + XF, w / "clips" / f"{s['index']:04d}.mp4")
 
+    flux_and_thumbs(ep, w, shots, total)
+    plan_p.write_text(json.dumps({"title": ep["title"], "shots": shots}, indent=1, ensure_ascii=False), encoding="utf-8")
+    v2stock.remember(list(used))
+    log.info("prep done: %s", {t: sum(1 for s in shots if s["type"] == t) for t in ("video", "3d", "info", "flux")})
+
+
+def flux_stage(slug):
+    """FLUX and the thumbnails again on a finished prep (17.11: three films were built while Kaggle refused
+    every kernel; their FLUX shots fell back to 3D and they had no thumbnails)."""
+    ep = episode_of(slug)
+    w = work_of(slug)
+    plan_p = w / "shots.json"
+    shots = json.loads(plan_p.read_text(encoding="utf-8"))["shots"]
+    total = dur(w.parent / "narration.wav") + 1.5
+    for s in shots:
+        if s.get("was") == "flux" and s["type"] == "3d" and s.get("prompt"):
+            s["type"] = "flux"
+            s.pop("was", None)
+    n = flux_and_thumbs(ep, w, shots, total)
+    plan_p.write_text(json.dumps({"title": ep["title"], "shots": shots}, indent=1, ensure_ascii=False), encoding="utf-8")
+    log.info("flux stage: %d pictures; shots %s; thumbnails %s", n,
+             {t: sum(1 for s in shots if s["type"] == t) for t in ("video", "3d", "info", "flux")},
+             (w / "thumbs" / "chosen.jpg").exists())
+    if not (w / "thumbs" / "chosen.jpg").exists():
+        raise SystemExit("no thumbnail came out of Kaggle - the film is not finished without one")
+
+
+def flux_and_thumbs(ep, w, shots, total):
+    """FLUX on Kaggle (the shots' pictures and the thumbnails', one kernel), the thumbnails composed and
+    judged, the chosen scene put into the film. Returns how many pictures came back."""
+    slug = ep["slug"]
     # ---- FLUX on Kaggle: the shots' pictures and the thumbnails', one kernel
     flux_shots = [s for s in shots if s["type"] == "flux"]
     thumb_takes = []
@@ -171,7 +219,8 @@ def prep(slug):
     elif prompts:
         from automation import frames
         try:
-            ref = frames._submit(prompts, [{"extra": i} for i in range(len(prompts))], w, f"v2-{slug[:30]}-{int(time.time())}")
+            # a short name: Kaggle refuses a title over 50 characters (17.11)
+            ref = frames._submit(prompts, [{"extra": i} for i in range(len(prompts))], w, f"v2-{slug[:3]}-{int(time.time())}")
             images = frames._fetch(ref, w / "gpu") if frames._wait(ref) else []
         except Exception as e:                                           # noqa: BLE001
             log.warning("FLUX on Kaggle: %s", e)
@@ -207,9 +256,7 @@ def prep(slug):
                 log.info("the thumbnail's scene is shot %d (%.0f s)", target["index"], target["start"])
     except Exception as e:                                               # noqa: BLE001
         log.warning("thumbnail scene in the film: %s", e)
-    plan_p.write_text(json.dumps({"title": ep["title"], "shots": shots}, indent=1, ensure_ascii=False), encoding="utf-8")
-    v2stock.remember(list(used))
-    log.info("prep done: %s", {t: sum(1 for s in shots if s["type"] == t) for t in ("video", "3d", "info", "flux")})
+    return len(images)
 
 
 # ------------------------------------------------------------------ blender
@@ -251,6 +298,13 @@ def assemble(slug):
         c = w / "clips" / f"{s['index']:04d}.mp4"
         if not c.exists():                     # a 3D render that failed: a card of the line's own words
             s["was"], s["type"] = s["type"], "info"
+            s["info"] = {"kind": "map", "label": "", "places": []}
+            v2info.render(s["info"], s["end"] - s["start"] + XF, c)
+        elif s["type"] in ("video", "3d") and is_dark(c):
+            # 17.11: a black stretch is a QC fault - a night sky with a small moon, a dark 3D side of the
+            # Earth; the shot becomes the lit Earth map card (never a black screen)
+            log.info("shot %d (%s) is dark; the Earth card instead", s["index"], s["type"])
+            s["was"], s["type"], s["dark"] = s["type"], "info", True
             s["info"] = {"kind": "map", "label": "", "places": []}
             v2info.render(s["info"], s["end"] - s["start"] + XF, c)
         clips.append(c)
@@ -374,7 +428,7 @@ def package(slug, ep, shots, final, shares, music_credits):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("stage", choices=["prep", "blender", "assemble"])
+    ap.add_argument("stage", choices=["prep", "blender", "assemble", "flux"])
     ap.add_argument("--slug", required=True)
     ap.add_argument("--k", type=int, default=0)
     ap.add_argument("--n", type=int, default=1)
@@ -383,5 +437,7 @@ if __name__ == "__main__":
         prep(a.slug)
     elif a.stage == "blender":
         blender(a.slug, a.k, a.n)
+    elif a.stage == "flux":
+        flux_stage(a.slug)
     else:
         assemble(a.slug)

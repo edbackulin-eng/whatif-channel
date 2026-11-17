@@ -23,6 +23,10 @@ on:
         description: "A dry run outside What If's Kaggle window: FLUX shots become 3D, no thumbnails"
         type: boolean
         default: false
+      flux_only:
+        description: "With prep_run: only FLUX and the thumbnails again on that prep (Kaggle window), then 3D and montage"
+        type: boolean
+        default: false
   # a booked trial (state/v2_trial.txt: the slug) starts early enough for FLUX to land in the GPU window
   # (07:00-17:30 UTC); the booking is claimed (deleted and pushed) before the build, so it runs once
   schedule:
@@ -65,6 +69,9 @@ jobs:
             [ "$(python3 -c "import json;print(bool(json.load(open('config.json')).get('v2_ready')))")" = "True" ] || stop "v2 is not switched on yet"
             n=$(gh run list -R "${{ github.repository }}" --workflow build-v2.yml --json status,databaseId --jq '[.[] | select(.status != "completed" and .databaseId != ${{ github.run_id }})] | length')
             [ "$n" = "0" ] || stop "a v2 build is already running"
+            # owner 17.11: no new episode while one is held by QC - it is fixed first
+            held=$(python3 -X utf8 -c "import sys;sys.path.insert(0,'.');from pipeline import queue;print(' '.join(e['slug'] for e in queue.episodes() if e.get('engine')=='v2' and e.get('held_by_qc') and not e.get('youtube_id')))")
+            [ -z "$held" ] || stop "held by QC, fixed first: $held"
             ahead=$(python3 -X utf8 -c "import sys;sys.path.insert(0,'.');from automation import buffer;print(buffer.ahead())")
             [ "${ahead:-0}" -lt 2 ] || stop "$ahead scheduled ahead: enough"
             SLUG_IN=$(python3 -X utf8 -c "import sys;sys.path.insert(0,'.');from pipeline import queue;e=queue.next_episode();print(e['slug'] if e else '')")
@@ -78,7 +85,7 @@ jobs:
 
   prep:
     needs: gate
-    if: needs.gate.outputs.go == 'true' && github.event.inputs.prep_run == ''
+    if: needs.gate.outputs.go == 'true' && (github.event.inputs.prep_run == '' || github.event.inputs.flux_only == 'true')
     env:
       SLUG: ${{ needs.gate.outputs.slug }}
     runs-on: ubuntu-24.04
@@ -102,8 +109,16 @@ jobs:
           path: assets/textures
           key: nasa-textures-v1
       - run: python -X utf8 tools/v2_assets.py textures
+      - if: github.event.inputs.flux_only == 'true'
+        uses: actions/download-artifact@v5
+        with:
+          name: v2-prep
+          path: .
+          run-id: ${{ github.event.inputs.prep_run }}
+          github-token: ${{ github.token }}
       - name: Narration, shots, real video, cards, FLUX, thumbnails
         env:
+          FLUX_ONLY: ${{ github.event.inputs.flux_only }}
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
@@ -112,7 +127,17 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           V2_NO_FLUX: ${{ github.event.inputs.no_flux == 'true' && '1' || '' }}
-        run: python -X utf8 automation/stages_v2.py prep --slug "$SLUG"
+        run: |
+          if [ "$FLUX_ONLY" = "true" ]; then
+            # What If's Kaggle window is 07:00-17:30 UTC (Closed Tabs has the GPU from 20:00)
+            m=$((10#$(date -u +%H) * 60 + 10#$(date -u +%M)))
+            if [ "$m" -lt 420 ]; then echo "waiting for 07:00 UTC"; sleep $(( (420 - m) * 60 )); fi
+            m=$((10#$(date -u +%H) * 60 + 10#$(date -u +%M)))
+            [ "$m" -lt 1050 ] || { echo "::error::outside What If's Kaggle window (07:00-17:30 UTC)"; exit 1; }
+            python -X utf8 automation/stages_v2.py flux --slug "$SLUG"
+          else
+            python -X utf8 automation/stages_v2.py prep --slug "$SLUG"
+          fi
       - uses: actions/upload-artifact@v5
         with:
           name: v2-prep
@@ -144,7 +169,7 @@ jobs:
         with:
           name: v2-prep
           path: .
-          run-id: ${{ github.event.inputs.prep_run || github.run_id }}
+          run-id: ${{ (github.event.inputs.prep_run != '' && github.event.inputs.flux_only != 'true') && github.event.inputs.prep_run || github.run_id }}
           github-token: ${{ github.token }}
       - id: blender_cache
         uses: actions/cache/restore@v4
@@ -203,7 +228,7 @@ jobs:
         with:
           name: v2-prep
           path: .
-          run-id: ${{ github.event.inputs.prep_run || github.run_id }}
+          run-id: ${{ (github.event.inputs.prep_run != '' && github.event.inputs.flux_only != 'true') && github.event.inputs.prep_run || github.run_id }}
           github-token: ${{ github.token }}
       - uses: actions/download-artifact@v5
         with:
@@ -226,16 +251,23 @@ jobs:
         if: needs.gate.outputs.upload == 'true'
         env:
           YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+          GH_TOKEN: ${{ github.token }}
         run: python -X utf8 automation/upload_youtube.py
       - name: Record the outcome
         if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name  "whatif-bot"
           git config user.email "noreply@users.noreply.github.com"
-          git add queue/ state/used_footage.json 2>/dev/null || true
-          git commit -m "build v2: $(date -u +%Y-%m-%d) $SLUG" || exit 0
+          # one path at a time (17.11: `git add a b || true` adds nothing when b is missing); a conflict in
+          # queue/ keeps this run's own lines (-X theirs while rebasing them), the journal is a union
+          for f in queue state/used_footage.json; do if [ -e "$f" ]; then git add "$f"; fi; done
+          git diff --cached --quiet && exit 0
+          git commit -q -m "build v2: $(date -u +%Y-%m-%d) $SLUG"
           for i in 1 2 3 4 5; do
-            git pull --rebase -q origin "${{ github.ref_name }}" && git push && exit 0
+            if git pull --rebase -X theirs -q origin "${{ github.ref_name }}"; then git push -q && exit 0; else git rebase --abort || true; fi
             sleep $((i * 8))
           done
+          python -X utf8 -c "import sys;sys.path.insert(0,'.');from core import ytguard;ytguard.notify('What If: the state of $SLUG could not be saved','${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}')" || true
           exit 1

@@ -105,16 +105,19 @@ def _parse_metadata(path):
     return out.get("title", "").strip(), out.get("description", "").strip(), tags
 
 
-def upload(package_dir, publish_at=None, synthetic_media=True):
-    """Upload the package in `package_dir`. Returns the video id."""
+def upload(package_dir, publish_at=None, synthetic_media=True, marker="", yt=None):
+    """Upload the package in `package_dir`. Returns the video id. `marker` ([ref: whatif/<slug>]) ends the
+    description: the next run finds the video by it (core/ytguard.py)."""
     from googleapiclient.http import MediaFileUpload
 
     package_dir = Path(package_dir)
     video = package_dir / "video.mp4"
     title, description, tags = _parse_metadata(package_dir / "metadata.txt")
+    if marker and marker not in description:
+        description = (description[:5000 - len(marker) - 2].rstrip() + "\n\n" + marker)
     publish_at = publish_at or next_publish_at()
 
-    yt = service()
+    yt = yt or service()
     name, cid = channel_name(yt)
     log.info("uploading to %s (%s)", name, cid)
     log.info("scheduled for %s", publish_at.strftime("%Y-%m-%d %H:%M UTC"))
@@ -152,19 +155,26 @@ def upload(package_dir, publish_at=None, synthetic_media=True):
     thumb = package_dir / "thumbnail.jpg"                 # v2: a JPEG under YouTube's 2 MB
     if not thumb.exists():
         thumb = package_dir / "thumbnail.png"
+    # 17.11: the id is returned whatever happens next - a failed thumbnail must not lose the upload
     if thumb.exists():
-        yt.thumbnails().set(videoId=video_id,
-                            media_body=MediaFileUpload(str(thumb))).execute()
-        log.info("thumbnail set")
+        try:
+            yt.thumbnails().set(videoId=video_id,
+                                media_body=MediaFileUpload(str(thumb))).execute()
+            log.info("thumbnail set")
+        except Exception as e:                                       # noqa: BLE001
+            log.error("thumbnail of %s failed: %s", video_id, str(e)[:200])
 
     subs = package_dir / "subs.srt"
     if subs.exists():
-        yt.captions().insert(
-            part="snippet",
-            body={"snippet": {"videoId": video_id, "language": "en",
-                              "name": "English", "isDraft": False}},
-            media_body=MediaFileUpload(str(subs))).execute()
-        log.info("subtitles attached")
+        try:
+            yt.captions().insert(
+                part="snippet",
+                body={"snippet": {"videoId": video_id, "language": "en",
+                                  "name": "English", "isDraft": False}},
+                media_body=MediaFileUpload(str(subs))).execute()
+            log.info("subtitles attached")
+        except Exception as e:                                       # noqa: BLE001
+            log.error("subtitles of %s failed: %s", video_id, str(e)[:200])
 
     return video_id, publish_at
 

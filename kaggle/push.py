@@ -140,9 +140,14 @@ def _wait_shared():
         print(f"shared GPU check skipped ({e})", flush=True)
 
 
+KAGGLE_TITLE_MAX = 50       # 17.11: a 51-character title made every SaveKernel answer 400 Bad Request
+
+
 def push(job, slug, title):
     _wait_shared()
     BUILD.mkdir(parents=True, exist_ok=True)
+    if len(title) > KAGGLE_TITLE_MAX:
+        title = title[:KAGGLE_TITLE_MAX].rstrip(" -")
     derived = _slugify(title)
     if derived != slug:
         log_slug = slug

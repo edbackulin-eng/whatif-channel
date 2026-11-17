@@ -15,5 +15,14 @@
     "info": 0.307,
     "flux": 0.0
   },
-  "updated": "2026-11-17T20:12:35+00:00"
+  "updated": "2026-11-17T20:12:35+00:00",
+  "held_by_qc": {
+    "verdict": "FAIL",
+    "problems": [
+      "black",
+      "text (no thumbnail: Kaggle refused the kernel)",
+      "bitrate"
+    ],
+    "at": "2026-11-17T20:13Z"
+  }
 }

@@ -91,6 +91,17 @@ def scheduled():
     return sorted(out, key=lambda e: e["publish_at"])
 
 
+QUOTA_MARKS = ("429", "RESOURCE_EXHAUSTED", "quota", "rate limit", "Too Many Requests")
+
+
+def _quota_failure(rid):
+    """True when the failed job died on a spent quota (owner 17.11: then the watchdog waits, it does not
+    rerun - a rerun only spends the next hour of the same empty quota)."""
+    r = subprocess.run(["gh", "run", "view", str(rid), "-R", REPO, "--log-failed"], capture_output=True, text=True)
+    tail = (r.stdout or "")[-20000:]
+    return any(m.lower() in tail.lower() for m in QUOTA_MARKS)
+
+
 def check_runs(mem, actions):
     """Steps 1 and 2. True when a build is running or being recovered."""
     runs = gh("api", f"repos/{REPO}/actions/workflows/{BUILD}/runs?per_page=10")["workflow_runs"]
@@ -124,6 +135,17 @@ def check_runs(mem, actions):
         return False
     if now().hour >= LAST_START_H:
         return False                      # the 03:17 cron will build instead
+    # owner 17.11: at most one rerun of a build a day, none on a spent quota or a deliberate stop
+    today = now().strftime("%Y-%m-%d")
+    done = mem.setdefault("reruns", {})
+    if done.get(str(rid)) == today:
+        return False
+    if _quota_failure(rid):
+        email(f"quota-{rid}-{today}", f"What If: build {rid} stopped on a spent quota; it waits for tomorrow",
+              f"Run: https://github.com/{REPO}/actions/runs/{rid}", mem)
+        done[str(rid)] = today
+        return False
+    done[str(rid)] = today
     gh("run", "rerun", str(rid), "-R", REPO, "--failed", parse=False)
     actions.append(f"reran build {rid} (failed at {', '.join(bad)}; attempt {attempt + 1})")
     return True
