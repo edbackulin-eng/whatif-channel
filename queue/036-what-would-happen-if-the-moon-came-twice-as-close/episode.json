@@ -1,12 +1,19 @@
 {
   "slug": "036-what-would-happen-if-the-moon-came-twice-as-close",
   "title": "What Would Happen If the Moon Came Twice as Close?",
-  "status": "ready-to-render",
+  "status": "rendered",
   "position": 36,
   "script_source": "parts",
   "created": "2026-11-16T08:16:48+00:00",
   "words": 2949,
   "sourced_claims": 55,
   "flagged_claims": 9,
-  "engine": "v2"
+  "engine": "v2",
+  "shares": {
+    "video": 0.482,
+    "3d": 0.207,
+    "info": 0.311,
+    "flux": 0.0
+  },
+  "updated": "2026-11-17T00:08:40+00:00"
 }
