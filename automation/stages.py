@@ -36,7 +36,13 @@ def narrate(work):
                      and len(l.strip()) < 60 and l.strip().endswith("."))]
     kokoro = Kokoro(str(ROOT / "assets" / "models" / "kokoro-v1.0.onnx"),
                     str(ROOT / "assets" / "models" / "voices-v1.0.bin"))
-    audio, rate = voice_mod.synthesize(kokoro, "\n".join(lines), cfg["voice"])
+    # owner: 15-20 min. bm_george reads ~142 words a minute (Moon trial: 2871 words -> 20.2 min); a longer
+    # script is read up to 12 % faster rather than run over 20 minutes
+    words = len(" ".join(lines).split())
+    pace = min(1.12, max(1.0, words / 142 / 19.4))
+    if pace > 1.0:
+        log.info("narration: %d words, read %.0f %% faster to stay under 20 min", words, (pace - 1) * 100)
+    audio, rate = voice_mod.synthesize(kokoro, "\n".join(lines), cfg["voice"], pace=pace)
     sf.write(out, voice_mod.peak_normalize(audio), rate)
     log.info("narration: %.1f min", len(audio) / rate / 60)
     return out

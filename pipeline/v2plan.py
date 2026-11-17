@@ -23,7 +23,7 @@ from core.logger import get_logger
 
 log = get_logger("v2plan")
 MIN_S, MAX_S = 3.0, 6.0
-SHARE = {"video_min": 0.50, "flux_max": 0.20}
+SHARE = {"video_min": 0.56, "flux_max": 0.18}      # planned with room: a clip or two not found must not break 50 % / 20 %
 TEMPLATES = ["earth_day", "earth_night", "earth_moon", "moon_rise", "sun", "asteroid", "orbits", "ocean",
              "ocean_moon"]
 SFX = ["rumble", "wind", "explosion", "rain", "ocean", "fire", "space", "none"]
