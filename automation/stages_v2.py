@@ -207,8 +207,8 @@ def flux_and_thumbs(ep, w, shots, total):
         from tools import thumbs_v2
         cs = thumbs_v2.concepts(ep["title"])
         for i, c in enumerate(cs):
-            for v, extra in enumerate(("", ", seen from a low angle, even more dramatic")):
-                thumb_takes.append({"concept": i, "take": v, "prompt": f"{c['prompt']}{extra}, {thumbs_v2.STYLE}", **c})
+            for v, extra in enumerate(("", ", a closer aerial view, even more dramatic")):
+                thumb_takes.append({"concept": i, "take": v, "prompt": f"{thumbs_v2.PHOTO}, {c['prompt']}{extra}, {thumbs_v2.STYLE}", **c})
     except Exception as e:                                               # noqa: BLE001
         log.warning("thumbnail concepts: %s", e)
     prompts = [f"{s['prompt']}, photorealistic, cinematic, natural light, no text, no people close up"
@@ -220,7 +220,9 @@ def flux_and_thumbs(ep, w, shots, total):
         from automation import frames
         try:
             # a short name: Kaggle refuses a title over 50 characters (17.11)
-            ref = frames._submit(prompts, [{"extra": i} for i in range(len(prompts))], w, f"v2-{slug[:3]}-{int(time.time())}")
+            from tools import thumbs_v2 as _tv
+            ref = frames._submit(prompts, [{"extra": i} for i in range(len(prompts))], w, f"v2-{slug[:3]}-{int(time.time())}",
+                                 overrides={i: _tv.THUMB_GEN for i in range(len(prompts) - len(thumb_takes), len(prompts))})
             images = frames._fetch(ref, w / "gpu") if frames._wait(ref) else []
         except Exception as e:                                           # noqa: BLE001
             log.warning("FLUX on Kaggle: %s", e)

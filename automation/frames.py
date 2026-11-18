@@ -24,7 +24,7 @@ def _slug(episode_slug, suffix):
     return base[:50].strip("-")
 
 
-def _submit(prompts, mapping, work, slug):
+def _submit(prompts, mapping, work, slug, overrides=None):
     """Push a generation kernel and return its Kaggle reference."""
     sys.path.insert(0, str(ROOT / "kaggle"))
     import push as kpush
@@ -38,6 +38,8 @@ def _submit(prompts, mapping, work, slug):
         "height": style.ASPECT["height"],
         "seed": 4400,
     }
+    if overrides:                     # {prompt index: {steps, width, height, negative_prompt, true_cfg_scale}}
+        job["overrides"] = {str(k): v for k, v in overrides.items()}
     job_path = work / f"job_{slug}.json"
     job_path.write_text(json.dumps(job, indent=2), encoding="utf-8")
     (work / f"mapping_{slug}.json").write_text(

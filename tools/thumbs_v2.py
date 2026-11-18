@@ -42,14 +42,18 @@ YELLOW = (255, 214, 0)
 VISION = ("gemini-flash-latest", "gemini-flash-lite-latest")
 SAFE_X, SAFE_Y = 0.78, 0.80          # YouTube's duration pill, bottom right
 
-# owner 18.11 (the niche's reference): BRIGHT daylight pictures full of concrete detail, not dark night scenes
-STYLE = ("photorealistic cinematic film still, bright daylight, clear bright sky, vivid saturated colours, "
-         "ultra detailed, crisp sharp focus, high dynamic range, lots of concrete detail (cars, buses, debris, "
-         "ice, water), epic wide angle, 8k, disaster movie, no text, no letters, no logos, "
-         "no people in the foreground")
+# owner 18.11 (the niche's reference, second word): a REAL PHOTOGRAPH from a drone at bright midday - never a
+# cartoon, a painting, a 3D render or a dark night; more steps, a bigger picture and a true negative prompt
+STYLE = ("real photograph, aerial drone shot, bright midday sun, photorealistic, high detail, cinematic, "
+         "clear bright sky, vivid natural colours, crisp sharp focus, lots of concrete detail (cars, buses, debris, "
+         "ice, water), no text, no letters, no logos, no people in the foreground")
+PHOTO = "real photograph, aerial drone shot, bright midday sun"     # first: the words that weigh most
+NEGATIVE = "cartoon, illustration, painting, 3d render, anime, dark, night, drawing, cgi, video game, text, watermark"
+THUMB_GEN = {"steps": 8, "width": 1536, "height": 864, "negative_prompt": NEGATIVE, "true_cfg_scale": 2.0}
 
 PLAN = """You design YouTube thumbnails for a science channel about global catastrophes ("What Would Happen
-If ...?"). The winning style: a photorealistic cinematic shot of a FAMOUS CITY (New York, London, Tokyo, Paris,
+If ...?"). The winning style: a REAL aerial drone PHOTOGRAPH at bright midday (never a cartoon, painting or 3D
+render, never dark) of a FAMOUS CITY (New York, London, Tokyo, Paris,
 Dubai, Sydney, Rio, Hong Kong ...) at the very moment of the catastrophe - the city in crisis, the event huge and
 unmistakable - plus one or two enormous words at the top and one yellow arrow on the key detail.
 Episode: "{title}".
@@ -157,8 +161,12 @@ for the episode "{title}" against the rules of the niche's best performer:
 4. one yellow curved arrow pointing at the key detail;
 5. a BRIGHT, light picture (daylight), vivid saturated colours, rich concrete detail - a dark night scene is a
    defect; the words and the event still readable on the 320x180 preview (the second image);
-6. no people close up, no text except the headline, nothing warped or AI-looking.
+6. no people close up, no text except the headline, nothing warped or AI-looking;
+7. it must look like a REAL PHOTOGRAPH (owner 18.11): a cartoon, an illustration, a painting, a drawing, a 3D
+   render / CGI / video-game look, or a dark / night picture is REJECTED whatever else it does well
+   ("photoreal": false or "dark": true).
 Answer as JSON: {{"score": <0-10>, "readable_small": true|false, "matches_episode": true|false,
+"photoreal": true|false, "dark": true|false,
 "defects": ["..."], "why": "<one sentence>"}}"""
 
 
@@ -180,6 +188,48 @@ def split_tone(im, amount=0.22):
     tint = cold * (1 - w) + warm * w
     out = a * (1 - amount) + (a * 0.5 + tint * lum) * amount
     return Image.fromarray((np.clip(out, 0, 1) * 255).astype("uint8"))
+
+
+# owner 18.11: the niche's six reference thumbnails measured at 320x180 (mean): brightness (mean luma 0-1),
+# saturation (mean HSV S 0-1), contrast (luma std), sharpness (variance of the edge filter). Ours were darker,
+# softer and far MORE saturated (0.55-0.85) - the cartoon look. Only the numbers are kept, not the pictures.
+REF = {"bright": 0.408, "sat": 0.324, "contrast": 0.222, "sharp": 4733.0}
+REJECT = {"bright": 0.85, "contrast": 0.80, "sharp": 0.75, "sat_low": 0.55, "sat_high": 1.75}
+
+
+def measure(im):
+    import numpy as np
+    t = im.convert("RGB").resize(SMALL, Image.LANCZOS)
+    a = np.asarray(t).astype("float32") / 255.0
+    lum = 0.299 * a[..., 0] + 0.587 * a[..., 1] + 0.114 * a[..., 2]
+    sat = np.asarray(t.convert("HSV")).astype("float32")[..., 1] / 255.0
+    edge = np.asarray(t.convert("L").filter(ImageFilter.FIND_EDGES)).astype("float32")
+    return {"bright": round(float(lum.mean()), 3), "sat": round(float(sat.mean()), 3),
+            "contrast": round(float(lum.std()), 3), "sharp": round(float(edge.var()), 1)}
+
+
+def below_reference(m):
+    """What makes a picture noticeably worse than the reference (owner 18.11): an empty list passes."""
+    why = [f"{k} {m[k]} < {REJECT[k]:.0%} of {REF[k]}" for k in ("bright", "contrast", "sharp")
+           if m[k] < REF[k] * REJECT[k]]
+    if m["sat"] < REF["sat"] * REJECT["sat_low"]:
+        why.append(f"sat {m['sat']} dull")
+    if m["sat"] > REF["sat"] * REJECT["sat_high"]:
+        why.append(f"sat {m['sat']} cartoon-saturated")
+    return why
+
+
+def grade(im):
+    """A light correction toward the reference's level: brightness, saturation, contrast, sharpness."""
+    m = measure(im)
+
+    def clamp(v, lo, hi):
+        return max(lo, min(hi, v))
+    im = ImageEnhance.Brightness(im).enhance(clamp(REF["bright"] / max(m["bright"], 1e-3), 1.0, 1.25))
+    im = ImageEnhance.Color(im).enhance(clamp(REF["sat"] * 1.15 / max(m["sat"], 1e-3), 0.65, 1.20))
+    im = ImageEnhance.Contrast(im).enhance(clamp(REF["contrast"] / max(m["contrast"], 1e-3), 1.0, 1.15))
+    # the reference's sharpness counts its words' edges too: a raw picture is held to about two thirds of it
+    return ImageEnhance.Sharpness(im).enhance(clamp((REF["sharp"] * 0.65 / max(m["sharp"], 1.0)) ** 0.5, 1.1, 1.7))
 
 
 def punch(im):
@@ -324,8 +374,10 @@ def lower(im, shift):
     return out
 
 
-def compose(src, words, box):
-    im = punch(cover(Image.open(src).convert("RGB")))
+def compose(src, words, box, graded=True):
+    im = cover(Image.open(src).convert("RGB"))
+    if graded:
+        im = grade(im)                                      # 18.11: toward the reference, no cartoon punch
     box = norm_box(box) if box else None
     if box:
         # 18.11: the event must not hide under the words - move the picture down when it reaches into them
@@ -382,7 +434,8 @@ def concepts(title):
 
 def generate(prompts, work, slug):
     from automation import frames
-    ref = frames._submit(prompts, [{"extra": i} for i in range(len(prompts))], work, slug)
+    ref = frames._submit(prompts, [{"extra": i} for i in range(len(prompts))], work, slug,
+                         overrides={i: THUMB_GEN for i in range(len(prompts))})
     log.info("submitted %d prompts as %s", len(prompts), ref)
     if not frames._wait(ref):
         raise SystemExit(f"kernel {ref} did not complete")
@@ -396,8 +449,8 @@ def main(title, images_dir=None):
     cs = concepts(title)
     takes = []
     for i, c in enumerate(cs):
-        for v, extra in enumerate(("", ", seen from a low angle, even more dramatic")):
-            takes.append({"concept": i, "take": v, "prompt": f"{c['prompt']}{extra}, {STYLE}", **c})
+        for v, extra in enumerate(("", ", a closer aerial view, even more dramatic")):
+            takes.append({"concept": i, "take": v, "prompt": f"{PHOTO}, {c['prompt']}{extra}, {STYLE}", **c})
     if images_dir:
         imgs = sorted(Path(images_dir).glob("*.png"))
     else:
@@ -421,6 +474,9 @@ def finish(title, takes, work):
         box = loc.get("box") if loc.get("found") and isinstance(loc.get("box"), list) and len(loc["box"]) == 4 else None
         out = work / f"take_{t['concept']}_{t['take']}.png"
         t["words"] = safe_words(t["words"], title)
+        # owner 18.11: the thumbnail as it would be, before any correction, measured against the reference
+        t["metrics"] = measure(compose(t["image"], t["words"], box, graded=False))
+        t["below_ref"] = below_reference(t["metrics"])
         img = compose(t["image"], t["words"], box)
         img.save(out)
         small = work / f"take_{t['concept']}_{t['take']}_small.png"
@@ -433,12 +489,15 @@ def finish(title, takes, work):
         t["judge"], t["file"] = j, str(out)
         t["rank"] = float(j.get("score") or 0) - (3 if bad else 0) - (1 if not box else 0) \
             + (0.5 if j.get("readable_small") else -1) + (0.5 if j.get("matches_episode") else -4)
+        # owner 18.11: below the reference in numbers, or a cartoon / painted / dark picture - out
+        t["rejected"] = list(t["below_ref"]) + (["judge: not a photograph"] if j.get("photoreal") is False else []) \
+            + (["judge: dark"] if j.get("dark") else [])
         report.append({k: t.get(k) for k in ("concept", "take", "city", "words", "detail", "locate", "judge", "rank",
-                                             "file")})
+                                             "metrics", "rejected", "file")})
         log.info("take %d.%d %s: %.1f (%s)", t["concept"], t["take"], t["city"], t["rank"], j.get("why"))
     best_of = {}
     for t in takes:
-        if t.get("file") and t["rank"] > best_of.get(t["concept"], {"rank": -99})["rank"]:
+        if t.get("file") and not t.get("rejected") and t["rank"] > best_of.get(t["concept"], {"rank": -99})["rank"]:
             best_of[t["concept"]] = t
     finals = sorted(best_of.values(), key=lambda t: -t["rank"])
     for n, t in enumerate(finals, 1):

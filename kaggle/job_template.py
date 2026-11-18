@@ -224,14 +224,21 @@ if JOB.get("image_prompts"):
         for i, prompt in enumerate(JOB["image_prompts"]):
             full = f"{prompt}, {style}" if style else prompt
             t1 = time.time()
-            image = pipe(
-                full,
-                num_inference_steps=JOB.get("steps", 4),   # schnell is a 4-step model
-                guidance_scale=0.0,                        # schnell ignores CFG
-                width=JOB.get("width", 1360),
-                height=JOB.get("height", 768),
-                generator=torch.Generator("cpu").manual_seed(JOB.get("seed", 0) + i),
-            ).images[0]
+            # owner 18.11: thumbnails get more steps, a bigger size and a real negative prompt (true CFG)
+            ov = (JOB.get("overrides") or {}).get(str(i)) or {}
+            kw = dict(num_inference_steps=ov.get("steps", JOB.get("steps", 4)),   # schnell is a 4-step model
+                      guidance_scale=0.0,                                      # schnell ignores distilled CFG
+                      width=ov.get("width", JOB.get("width", 1360)),
+                      height=ov.get("height", JOB.get("height", 768)),
+                      generator=torch.Generator("cpu").manual_seed(JOB.get("seed", 0) + i))
+            if ov.get("negative_prompt"):
+                kw.update(negative_prompt=ov["negative_prompt"], true_cfg_scale=ov.get("true_cfg_scale", 2.0))
+            try:
+                image = pipe(full, **kw).images[0]
+            except TypeError as e:                 # an older diffusers without true CFG: no negative
+                print("  no true CFG here:", e)
+                kw.pop("negative_prompt", None); kw.pop("true_cfg_scale", None)
+                image = pipe(full, **kw).images[0]
             dt = time.time() - t1
             times.append(dt)
             name = f"{i:03d}.png"

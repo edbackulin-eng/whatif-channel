@@ -82,12 +82,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           TITLE: ${{ needs.gate.outputs.title }}
         run: python -X utf8 tools/thumbs_v2.py --title "$TITLE"
-      - name: On the private video, when the judge passed it (booked runs)
-        if: needs.gate.outputs.booked == 'true'
-        env:
-          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
-          TITLE: ${{ needs.gate.outputs.title }}
-        run: python -X utf8 tools/set_thumb_v2.py --title "$TITLE"
+      # owner 18.11: a thumbnail goes on a video only after the owner's "ok" - tools/set_thumb_v2.py by hand
       - uses: actions/upload-artifact@v5
         if: always()
         with:
