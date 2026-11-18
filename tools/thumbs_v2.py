@@ -283,8 +283,59 @@ def arrow(im, target_box, avoid):
         d.polygon(head(hs), fill=col)
 
 
+GENERIC = {"WHAT", "IF", "NO", "TOO", "THE", "A", "OF"}
+
+
+def safe_words(words, title):
+    """Only words the episode says (a stem of a title word) or the generic ones; else WHAT IF? (owner 18.11:
+    the model kept writing DOUBLE MOON for a Moon twice as close)."""
+    stems = [w[:4] for w in re.findall(r"[A-Z0-9]+", title.upper()) if len(w) > 2]
+    for tok in re.findall(r"[A-Z0-9]+", (words or "").upper()):
+        if tok not in GENERIC and not any(tok[:4] == st for st in stems):
+            log.info("words %r say what the episode does not (%s): WHAT IF?", words, tok)
+            return "WHAT IF?"
+    return words or "WHAT IF?"
+
+
+def norm_box(b):
+    """Fractions 0-1, x0 < x1, y0 < y1; a box in the vision model's 0-1000 scale is scaled down."""
+    try:
+        b = [float(v) for v in b]
+    except (TypeError, ValueError):
+        return None
+    if max(b) > 1.5:
+        b = [v / 1000 for v in b]
+    x0, y0, x1, y1 = (min(max(v, 0.0), 1.0) for v in b)
+    x0, x1 = sorted((x0, x1))
+    y0, y1 = sorted((y0, y1))
+    return [x0, y0, x1, y1] if x1 - x0 > 0.01 and y1 - y0 > 0.01 else None
+
+
+def lower(im, shift):
+    """The picture moved down by `shift` px, the top filled with its own sky stretched and blurred."""
+    out = Image.new("RGB", (W, H))
+    out.paste(im.crop((0, 0, W, H - shift)), (0, shift))
+    sky = im.crop((0, 0, W, max(8, H // 12))).resize((W, shift + 40), Image.BICUBIC).filter(ImageFilter.GaussianBlur(18))
+    out.paste(sky.crop((0, 0, W, shift)), (0, 0))
+    seam = Image.new("L", (W, 40), 0)
+    for yy in range(40):
+        ImageDraw.Draw(seam).line([(0, yy), (W, yy)], fill=int(255 * (1 - yy / 40)))
+    out.paste(sky.crop((0, shift, W, shift + 40)), (0, shift), seam)
+    return out
+
+
 def compose(src, words, box):
     im = punch(cover(Image.open(src).convert("RGB")))
+    box = norm_box(box) if box else None
+    if box:
+        # 18.11: the event must not hide under the words - move the picture down when it reaches into them
+        f = _fit(words, W * (0.62 if len(words) <= 8 else 0.86))
+        bb = f.getbbox(words)
+        words_bottom = 18 + (bb[3] - bb[1]) + 24
+        if box[1] * H < words_bottom and (box[1] + box[3]) / 2 < 0.5:
+            shift = int(min(words_bottom - box[1] * H, H * 0.3))
+            im = lower(im, shift)
+            box = [box[0], box[1] + shift / H, box[2], min(1.0, box[3] + shift / H)]
     # a gentle darkening at the very top so the white words hold on a bright sky
     top = Image.new("L", (W, H), 0)
     for yy in range(int(H * 0.45)):
@@ -350,6 +401,7 @@ def finish(title, takes, work):
         t["locate"] = loc
         box = loc.get("box") if loc.get("found") and isinstance(loc.get("box"), list) and len(loc["box"]) == 4 else None
         out = work / f"take_{t['concept']}_{t['take']}.png"
+        t["words"] = safe_words(t["words"], title)
         img = compose(t["image"], t["words"], box)
         img.save(out)
         small = work / f"take_{t['concept']}_{t['take']}_small.png"
