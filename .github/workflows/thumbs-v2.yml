@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
   actions: read
 
 jobs:
@@ -28,6 +28,7 @@ jobs:
     outputs:
       go: ${{ steps.clock.outputs.go }}
       title: ${{ steps.clock.outputs.title }}
+      booked: ${{ steps.clock.outputs.booked }}
     steps:
       - uses: actions/checkout@v5
       - id: clock
@@ -38,11 +39,19 @@ jobs:
         run: |
           m=$((10#$(date -u +%H) * 60 + 10#$(date -u +%M)))
           # a scheduled run works only while a trial is booked (state/thumbs_v2_trial.txt holds the title)
+          # owner 18.11: one booked title a run (state/thumbs_v2_trial.txt, a title a line), claimed before the GPU
           if [ "$EVENT" = "schedule" ]; then
             [ -s state/thumbs_v2_trial.txt ] || { echo "go=false" >> "$GITHUB_OUTPUT"; echo "nothing booked"; exit 0; }
-            TITLE_IN="$(head -1 state/thumbs_v2_trial.txt)"
-            n=$(gh run list -R "${{ github.repository }}" --workflow thumbs-v2.yml --status success --json databaseId --jq length)
-            [ "$n" = "0" ] || { echo "go=false" >> "$GITHUB_OUTPUT"; echo "already made"; exit 0; }
+            if [ "$m" -lt $((7 * 60)) ] || [ "$m" -ge $((16 * 60 + 30)) ]; then
+              echo "go=false" >> "$GITHUB_OUTPUT"; echo "outside What If's GPU window"; exit 0
+            fi
+            TITLE_IN="$(head -1 state/thumbs_v2_trial.txt | tr -d '\r')"
+            git config user.name "whatif-bot"; git config user.email "noreply@users.noreply.github.com"
+            tail -n +2 state/thumbs_v2_trial.txt > state/t.tmp && mv state/t.tmp state/thumbs_v2_trial.txt
+            git add state/thumbs_v2_trial.txt && git commit -qm "thumbnails claimed: $TITLE_IN"
+            ok=""; for i in 1 2 3 4; do git push -q && { ok=1; break; }; git pull -q --rebase -X theirs; sleep $((i * 5)); done
+            [ -n "$ok" ] || { echo "go=false" >> "$GITHUB_OUTPUT"; echo "the claim did not push"; exit 0; }
+            echo "booked=true" >> "$GITHUB_OUTPUT"
           fi
           if [ "$m" -lt $((7 * 60)) ] || [ "$m" -ge $((17 * 60 + 30)) ]; then
             echo "go=false" >> "$GITHUB_OUTPUT"; echo "outside What If's GPU window"; exit 0
@@ -73,6 +82,12 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           TITLE: ${{ needs.gate.outputs.title }}
         run: python -X utf8 tools/thumbs_v2.py --title "$TITLE"
+      - name: On the private video, when the judge passed it (booked runs)
+        if: needs.gate.outputs.booked == 'true'
+        env:
+          YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+          TITLE: ${{ needs.gate.outputs.title }}
+        run: python -X utf8 tools/set_thumb_v2.py --title "$TITLE"
       - uses: actions/upload-artifact@v5
         if: always()
         with:
