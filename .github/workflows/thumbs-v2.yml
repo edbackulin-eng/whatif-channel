@@ -45,7 +45,7 @@ jobs:
             if [ "$m" -lt $((7 * 60)) ] || [ "$m" -ge $((16 * 60 + 30)) ]; then
               echo "go=false" >> "$GITHUB_OUTPUT"; echo "outside What If's GPU window"; exit 0
             fi
-            TITLE_IN="$(head -1 state/thumbs_v2_trial.txt)"
+            TITLE_IN="$(head -1 state/thumbs_v2_trial.txt | tr -d '\r')"
             git config user.name "whatif-bot"; git config user.email "noreply@users.noreply.github.com"
             tail -n +2 state/thumbs_v2_trial.txt > state/t.tmp && mv state/t.tmp state/thumbs_v2_trial.txt
             git add state/thumbs_v2_trial.txt && git commit -qm "thumbnails claimed: $TITLE_IN"
