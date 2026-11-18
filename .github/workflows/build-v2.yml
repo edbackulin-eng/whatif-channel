@@ -62,12 +62,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           stop() { echo "go=false" >> "$GITHUB_OUTPUT"; echo "$1"; exit 0; }
+          # 18.11: a claim raced the previous build's state commit and was rejected - pull and try again
+          push() { for i in 1 2 3 4; do git push -q && return 0; git pull -q --rebase -X theirs || return 1; sleep $((i * 5)); done; return 1; }
           git config user.name "whatif-bot"; git config user.email "noreply@users.noreply.github.com"
           if [ "$EVENT" = "schedule" ] && [ -s state/v2_trial.txt ]; then
             # a booked trial: uploaded too once v2 is switched on (owner 17.11: "work by the schedule")
             SLUG_IN="$(head -1 state/v2_trial.txt | tr -d '[:space:]')"
             UPLOAD=$(python3 -c "import json;print('true' if json.load(open('config.json')).get('v2_ready') else 'false')")
-            git rm -q state/v2_trial.txt && git commit -qm "v2 trial claimed: $SLUG_IN" && git push -q || stop "the claim did not push"
+            git rm -q state/v2_trial.txt && git commit -qm "v2 trial claimed: $SLUG_IN" && push || stop "the claim did not push"
           elif { [ "$EVENT" = "schedule" ] || [ "$SLUG_IN" = "next" ]; } && [ -s state/v2_rebuild.txt ]; then
             # owner 17.11: a held film is finished from its own prep, not built again - "slug prep_run" a
             # line, FLUX + thumbnails in the Kaggle window, then 3D, montage, QC and the upload; claimed first
@@ -77,7 +79,7 @@ jobs:
             tail -n +2 state/v2_rebuild.txt > state/v2_rebuild.tmp && mv state/v2_rebuild.tmp state/v2_rebuild.txt
             [ -s state/v2_rebuild.txt ] || git rm -q --cached state/v2_rebuild.txt
             [ -s state/v2_rebuild.txt ] && git add state/v2_rebuild.txt
-            git commit -qm "v2 rebuild claimed: $SLUG_IN from run $PREP_RUN" && git push -q || stop "the claim did not push"
+            git commit -qm "v2 rebuild claimed: $SLUG_IN from run $PREP_RUN" && push || stop "the claim did not push"
             FLUX_ONLY=true
             UPLOAD=true
           elif [ "$EVENT" = "schedule" ] || [ "$SLUG_IN" = "next" ]; then
