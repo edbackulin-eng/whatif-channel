@@ -53,6 +53,11 @@ If ...?"). The winning style: a photorealistic cinematic shot of a FAMOUS CITY (
 Dubai, Sydney, Rio, Hong Kong ...) at the very moment of the catastrophe - the city in crisis, the event huge and
 unmistakable - plus one or two enormous words at the top and one yellow arrow on the key detail.
 Episode: "{title}".
+THE LOGIC (owner 18.11): the picture shows the VISIBLE CONSEQUENCE of the premise on the city, so a viewer
+understands the episode without reading - a year of rain -> the city drowned in brown flood water; no sun -> the
+whole city frozen in ice, taxis and buses under snow; the Earth stops spinning -> a storm wind tearing the street
+apart; an asteroid in the ocean -> a giant wave over the skyline; the Moon twice as close -> a huge Moon and the sea
+flooding the streets. First decide what the premise DOES to a city, then draw that.
 Give 3 clearly different concepts (different city, different moment, different key detail). For each:
 "city", "prompt": an English FLUX prompt (the scene only, 40-70 words, wide shot; the top third of the frame is
 calm empty BRIGHT sky for the words (owner 18.11: daylight or bright golden hour, never a dark night
@@ -145,11 +150,13 @@ Answer as JSON: {{"found": true|false, "box": [x0, y0, x1, y1],   // fractions 0
 JUDGE = """You are the strict art director of a YouTube channel about global catastrophes. Judge this thumbnail
 for the episode "{title}" against the rules of the niche's best performer:
 1. photorealistic cinematic scene of a recognisable famous city at the moment of the catastrophe;
-2. the catastrophe matches the episode and is instantly clear;
-3. 1-3 enormous words at the top (about a third of the height), white/light grey with depth and shadow;
+2. the picture shows the visible CONSEQUENCE of the episode's premise on the city, so the topic is understood
+   without reading (a year of rain -> a drowned city; no sun -> a city in ice); a scene that does not follow from
+   the premise means matches_episode false;
+3. 1-3 big condensed words at the top (about a quarter of the height), white/light grey with depth and shadow;
 4. one yellow curved arrow pointing at the key detail;
-5. saturated colours, a strong cold/warm contrast (blue ice or water against fire or a yellow accent), maximum
-   contrast; the words and the event still readable on the 320x180 preview (the second image);
+5. a BRIGHT, light picture (daylight), vivid saturated colours, rich concrete detail - a dark night scene is a
+   defect; the words and the event still readable on the 320x180 preview (the second image);
 6. no people close up, no text except the headline, nothing warped or AI-looking.
 Answer as JSON: {{"score": <0-10>, "readable_small": true|false, "matches_episode": true|false,
 "defects": ["..."], "why": "<one sentence>"}}"""
