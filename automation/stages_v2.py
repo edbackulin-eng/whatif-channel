@@ -273,8 +273,13 @@ def blender(slug, k, n):
                 "fps": 15,
                 **(s.get("params") or {})}
         t0 = time.time()
-        r = subprocess.run([exe, "-b", "-noaudio", "-P", str(ROOT / "pipeline" / "blender" / "scene.py"), "--",
-                            json.dumps(args)], capture_output=True, text=True, timeout=1800)
+        try:
+            r = subprocess.run([exe, "-b", "-noaudio", "-P", str(ROOT / "pipeline" / "blender" / "scene.py"), "--",
+                                json.dumps(args)], capture_output=True, text=True, timeout=1800)
+        except subprocess.TimeoutExpired:      # 18.11: one slow shot failed the whole run; assemble covers it with a card
+            log.warning("3D shot %d (%s) took over 30 min; skipped", s["index"], args["template"])
+            out.unlink(missing_ok=True)
+            continue
         if r.returncode or not out.exists():
             log.warning("3D shot %d (%s) failed: %s", s["index"], args["template"], (r.stderr or r.stdout)[-600:])
             continue
