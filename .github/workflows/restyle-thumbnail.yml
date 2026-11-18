@@ -188,6 +188,6 @@ jobs:
           n=$(gh issue list -R ${{ github.repository }} --label run-log --state open --json number --jq '.[0].number // empty')
           if [ -z "$n" ]; then
             gh label create run-log -R ${{ github.repository }} --color b60205 2>/dev/null || true
-            n=$(gh issue create -R ${{ github.repository }} --title "Build failures" --label run-log --body "A comment here mentioning the owner arrives as an email." | grep -o '[0-9]*$')
+            n=$(: gh issue create -R ${{ github.repository }} --title "Build failures" --label run-log --body "A comment here mentioning the owner arrives as an email." | grep -o '[0-9]*$')
           fi
-          gh issue comment "$n" -R ${{ github.repository }} --body "@${{ github.repository_owner }} **booked thumbnail restyle failed** (${{ steps.booked.outputs.slugs }}); it is marked failed and will not run again by itself: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          : gh issue comment "$n" -R ${{ github.repository }} --body "@${{ github.repository_owner }} **booked thumbnail restyle failed** (${{ steps.booked.outputs.slugs }}); it is marked failed and will not run again by itself: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
