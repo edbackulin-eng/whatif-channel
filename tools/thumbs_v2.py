@@ -52,13 +52,15 @@ Dubai, Sydney, Rio, Hong Kong ...) at the very moment of the catastrophe - the c
 unmistakable - plus one or two enormous words at the top and one yellow arrow on the key detail.
 Episode: "{title}".
 Give 3 clearly different concepts (different city, different moment, different key detail). For each:
-"city", "prompt": an English FLUX prompt (the scene only, 40-70 words, wide shot, the event filling the upper
-half of the frame and the top third calm (sky) so the words have room, a strong contrast of cold and warm
+"city", "prompt": an English FLUX prompt (the scene only, 40-70 words, wide shot; the top third of the frame is
+calm empty sky for the words, and the event itself is HUGE and fully visible in the middle of the frame, between a
+third and four fifths of the height, never behind the words (18.11: a giant moon hidden under the headline lost
+every take), a strong contrast of cold and warm
 colour (blue ice or water against fire, orange light or a yellow accent; grey city against a warm glow), no people
 close up, no text). The scene must be one the film itself shows (it is used as a shot of the film),
 "detail": the one thing the arrow points at (a few English words, e.g. "the giant moon", "the wave crest"),
-"words": 1-3 words, UPPER CASE, max 16 characters in all, e.g. "WHAT IF?", "TOO CLOSE", "NO SUN",
-"365 DAYS OF RAIN?".
+"words": 1-3 words, UPPER CASE, max 16 characters in all, naming THIS episode's event (styles seen on other
+episodes: "TOO CLOSE", "NO SUN", "365 DAYS OF RAIN?" - never one that belongs to another event).
 Answer as JSON: {{"concepts": [{{"city": "...", "prompt": "...", "detail": "...", "words": "..."}}]}}"""
 
 FALLBACK = {
@@ -345,7 +347,7 @@ def finish(title, takes, work):
         bad = loc.get("people_close") or loc.get("text_in_image") or loc.get("warped")
         t["judge"], t["file"] = j, str(out)
         t["rank"] = float(j.get("score") or 0) - (3 if bad else 0) - (1 if not box else 0) \
-            + (0.5 if j.get("readable_small") else -1) + (0.5 if j.get("matches_episode") else -2)
+            + (0.5 if j.get("readable_small") else -1) + (0.5 if j.get("matches_episode") else -4)
         report.append({k: t.get(k) for k in ("concept", "take", "city", "words", "detail", "locate", "judge", "rank",
                                              "file")})
         log.info("take %d.%d %s: %.1f (%s)", t["concept"], t["take"], t["city"], t["rank"], j.get("why"))

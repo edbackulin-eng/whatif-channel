@@ -201,7 +201,7 @@ def flux_and_thumbs(ep, w, shots, total):
     judged, the chosen scene put into the film. Returns how many pictures came back."""
     slug = ep["slug"]
     # ---- FLUX on Kaggle: the shots' pictures and the thumbnails', one kernel
-    flux_shots = [s for s in shots if s["type"] == "flux"]
+    flux_shots = [s for s in shots if s["type"] == "flux" and s.get("prompt")]
     thumb_takes = []
     try:
         from tools import thumbs_v2
