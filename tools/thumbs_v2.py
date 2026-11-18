@@ -348,17 +348,36 @@ def compose(src, words, box):
 
 
 # ------------------------------------------------------------------ the run
+def _generic(title):
+    """The built-in plan for any title (18.11: it used to be the Moon's for every episode - the Sun got moons):
+    the visible consequence of the premise on three famous cities, in daylight, WHAT IF?."""
+    premise = re.sub(r"(?i)^what would happen if\s*", "", title).rstrip("?").strip() or title
+    scenes = [("New York", "Manhattan seen from across the river"), ("London", "central London along the Thames"),
+              ("Tokyo", "a wide Tokyo avenue")]
+    return [{"city": c, "words": "WHAT IF?", "detail": "the catastrophe",
+             "prompt": f"{view} in bright daylight, wide shot, the city at the very moment of this catastrophe: "
+                       f"{premise} - its visible consequence for the city shown huge and unmistakable in the middle "
+                       "of the frame, lots of concrete detail (cars, buses, debris), the top third calm bright sky"}
+            for c, view in scenes]
+
+
 def concepts(title):
-    try:
-        from core import llm
-        ans = llm.complete_json(PLAN.format(title=title), max_tokens=1500, temperature=0.8)
-        cs = [c for c in (ans.get("concepts") or []) if isinstance(c, dict) and c.get("prompt")][:3]
-        if len(cs) == 3:
-            return cs
-    except Exception as e:                                               # noqa: BLE001
-        log.warning("concepts: %s; the built-in plan", e)
-    key = "moon" if "moon" in title.lower() else "moon"
-    return FALLBACK[key]
+    from core import llm
+    prompt = PLAN.format(title=title)
+    for how in ("json", "text"):                 # 18.11: Groq refused its own JSON mode; plain text parsed here
+        try:
+            if how == "json":
+                ans = llm.complete_json(prompt, max_tokens=2500, temperature=0.8)
+            else:
+                ans = llm.extract_json(llm.complete(prompt + " Reply with the JSON only.", max_tokens=2500,
+                                                    temperature=0.6))
+            cs = [c for c in (ans.get("concepts") or []) if isinstance(c, dict) and c.get("prompt")][:3]
+            if len(cs) == 3:
+                return cs
+        except Exception as e:                                           # noqa: BLE001
+            log.warning("concepts (%s): %s", how, str(e)[:200])
+    log.warning("concepts: the built-in plan from the title")
+    return FALLBACK["moon"] if "moon" in title.lower() else _generic(title)
 
 
 def generate(prompts, work, slug):
