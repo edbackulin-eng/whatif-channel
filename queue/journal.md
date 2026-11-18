@@ -129,3 +129,4 @@ Traceback (mo
 - **2026-11-17 14:11 UTC** - 038-what-would-happen-if-yellowstone-erupted held for review, QC says FAIL: black; text; video bitrate 6.8 Mbit/s is under 8 Mbit/s; 3 black segment(s) over 0.5s
 - **2026-11-17 20:13 UTC** - 036-what-would-happen-if-the-moon-came-twice-as-close held for review, QC says FAIL: black; text; video bitrate 6.7 Mbit/s is under 8 Mbit/s; 3 black segment(s) over 0.5s
 - **2026-11-18 09:57 UTC** - Uploaded 036-what-would-happen-if-the-moon-came-twice-as-close as O1J00xJlV_U, public at 2026-11-21T15:00:00Z.
+- **2026-11-18 13:03 UTC** - Uploaded 037-what-would-happen-if-the-sun-exploded as UQ8nwTvG2kc, public at 2026-11-24T15:00:00Z.
