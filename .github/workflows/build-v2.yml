@@ -174,6 +174,7 @@ jobs:
     timeout-minutes: 240
     strategy:
       fail-fast: false
+      max-parallel: 6   # account limit: 20 jobs at once for all channels (channels-monitor docs/render-schedule.md)
       matrix:
         k: [0, 1, 2, 3, 4, 5, 6, 7]
     steps:
