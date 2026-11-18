@@ -42,9 +42,11 @@ YELLOW = (255, 214, 0)
 VISION = ("gemini-flash-latest", "gemini-flash-lite-latest")
 SAFE_X, SAFE_Y = 0.78, 0.80          # YouTube's duration pill, bottom right
 
-STYLE = ("photorealistic cinematic film still, ultra detailed, dramatic volumetric light, epic wide angle, "
-         "saturated colours, high contrast, strong contrast of cold blue and warm orange fire light, sharp focus, "
-         "8k, disaster movie, no text, no letters, no logos, no people in the foreground")
+# owner 18.11 (the niche's reference): BRIGHT daylight pictures full of concrete detail, not dark night scenes
+STYLE = ("photorealistic cinematic film still, bright daylight, clear bright sky, vivid saturated colours, "
+         "ultra detailed, crisp sharp focus, high dynamic range, lots of concrete detail (cars, buses, debris, "
+         "ice, water), epic wide angle, 8k, disaster movie, no text, no letters, no logos, "
+         "no people in the foreground")
 
 PLAN = """You design YouTube thumbnails for a science channel about global catastrophes ("What Would Happen
 If ...?"). The winning style: a photorealistic cinematic shot of a FAMOUS CITY (New York, London, Tokyo, Paris,
@@ -53,14 +55,17 @@ unmistakable - plus one or two enormous words at the top and one yellow arrow on
 Episode: "{title}".
 Give 3 clearly different concepts (different city, different moment, different key detail). For each:
 "city", "prompt": an English FLUX prompt (the scene only, 40-70 words, wide shot; the top third of the frame is
-calm empty sky for the words, and the event itself is HUGE and fully visible in the middle of the frame, between a
+calm empty BRIGHT sky for the words (owner 18.11: daylight or bright golden hour, never a dark night
+scene - the reference thumbnails are light, vivid and full of concrete detail: frozen taxis and buses, a wave over
+Manhattan, a tornado throwing a bus), and the event itself is HUGE and fully visible in the middle of the frame, between a
 third and four fifths of the height, never behind the words (18.11: a giant moon hidden under the headline lost
 every take), a strong contrast of cold and warm
 colour (blue ice or water against fire, orange light or a yellow accent; grey city against a warm glow), no people
 close up, no text). The scene must be one the film itself shows (it is used as a shot of the film),
 "detail": the one thing the arrow points at (a few English words, e.g. "the giant moon", "the wave crest"),
 "words": 1-3 words, UPPER CASE, max 16 characters in all, naming THIS episode's event (styles seen on other
-episodes: "TOO CLOSE", "NO SUN", "365 DAYS OF RAIN?" - never one that belongs to another event).
+episodes: "WHAT IF", "NO SUN", "365 DAYS OF RAIN?" - never one that belongs to another event, never one that
+says something the episode does not (18.11: "DOUBLE MOON" for a Moon twice as close); "WHAT IF" is always right).
 Answer as JSON: {{"concepts": [{{"city": "...", "prompt": "...", "detail": "...", "words": "..."}}]}}"""
 
 FALLBACK = {
@@ -71,7 +76,7 @@ FALLBACK = {
                    "size hanging low between the skyscrapers filling the upper sky, enormous tidal surge flooding "
                    "the waterfront and streets, waves crashing over piers, glowing city lights, storm clouds lit "
                    "by moonlight"},
-        {"city": "London", "words": "TOO CLOSE",
+        {"city": "London", "words": "WHAT IF?",
          "detail": "the giant moon",
          "prompt": "London at night, the River Thames bursting its banks, Big Ben and the Houses of Parliament "
                    "half under churning water, a colossal cratered Moon looming enormous above the city filling "
@@ -171,13 +176,14 @@ def split_tone(im, amount=0.22):
 
 
 def punch(im):
-    im = split_tone(im)
-    im = ImageEnhance.Color(im).enhance(1.35)
+    im = split_tone(im, 0.10)
+    im = ImageEnhance.Brightness(im).enhance(1.08)
+    im = ImageEnhance.Color(im).enhance(1.30)
     im = ImageEnhance.Contrast(im).enhance(1.18)
     return ImageEnhance.Sharpness(im).enhance(1.4)
 
 
-def _fit(text, max_w, max_h=H / 3, start=360):
+def _fit(text, max_w, max_h=H * 0.24, start=300):
     """The largest Anton size whose letters fit the width and stand about a third of the height (owner 17.11)."""
     size = start
     while size > 40:
@@ -191,7 +197,8 @@ def _fit(text, max_w, max_h=H / 3, start=360):
 
 def headline(im, text, top=18):
     """White-to-light-grey letters with depth (a stepped darker extrusion) and a soft hard shadow."""
-    f = _fit(text, W * 0.92)
+    # owner 18.11 reference: the words stand about a quarter of the height and leave the picture room
+    f = _fit(text, W * (0.62 if len(text) <= 8 else 0.86))
     box = f.getbbox(text)
     tw, th = box[2] - box[0], box[3] - box[1]
     x, y = (W - tw) // 2 - box[0], top - box[1]
@@ -274,7 +281,7 @@ def compose(src, words, box):
     # a gentle darkening at the very top so the white words hold on a bright sky
     top = Image.new("L", (W, H), 0)
     for yy in range(int(H * 0.45)):
-        ImageDraw.Draw(top).line([(0, yy), (W, yy)], fill=int(120 * (1 - yy / (H * 0.45))))
+        ImageDraw.Draw(top).line([(0, yy), (W, yy)], fill=int(45 * (1 - yy / (H * 0.45))))   # 18.11: barely - the reference is light
     im.paste((10, 14, 24), (0, 0), top)
     hb = headline(im, words)
     if box:
