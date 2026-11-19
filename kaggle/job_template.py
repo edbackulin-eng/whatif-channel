@@ -142,8 +142,12 @@ if JOB.get("tts_sentences"):
         report["errors"].append(f"tts: {type(e).__name__}: {e}")
         print("TTS FAILED:", e)
 
+# owner 19.11: thumbnails come from RealVisXL (a photographic SDXL model), not FLUX - prompts whose
+# override says engine "realvis" are skipped by FLUX and made in the section after it
+RV = {int(k) for k, v in (JOB.get("overrides") or {}).items() if (v or {}).get("engine") == "realvis"}
+
 # ------------------------------------------------------------- FLUX.1-schnell
-if JOB.get("image_prompts"):
+if JOB.get("image_prompts") and len(RV) < len(JOB["image_prompts"]):
     try:
         # Three things have to line up here, and Kaggle's base image gets each
         # one wrong in a different way:
@@ -222,6 +226,8 @@ if JOB.get("image_prompts"):
         style = JOB.get("style", "")
         times = []
         for i, prompt in enumerate(JOB["image_prompts"]):
+            if i in RV:
+                continue
             full = f"{prompt}, {style}" if style else prompt
             t1 = time.time()
             # owner 18.11: thumbnails get more steps, a bigger size and a real negative prompt (true CFG)
@@ -255,6 +261,62 @@ if JOB.get("image_prompts"):
     except Exception as e:
         report["errors"].append(f"flux: {type(e).__name__}: {e}")
         print("FLUX FAILED:", e)
+    finally:
+        for _n in ("pipe", "transformer", "text_encoder_2"):
+            globals().pop(_n, None)
+        gc.collect()
+        torch.cuda.empty_cache()
+
+# ------------------------------------------------------------- RealVisXL V5 (thumbnails)
+# SG161222/RealVisXL_V5.0: SDXL fine-tuned on photographs, CreativeML Open RAIL++-M (commercial use
+# allowed). A real negative prompt, DPM++ Karras, about 30 steps; fp16 on the GPU without offload.
+if RV and JOB.get("image_prompts"):
+    try:
+        mark("realvis: pip install")
+        os.system("pip install -q -U diffusers transformers accelerate safetensors huggingface_hub")
+        for mod in [m for m in list(sys.modules) if m.startswith("diffusers")]:
+            del sys.modules[mod]
+        from diffusers import StableDiffusionXLPipeline, DPMSolverMultistepScheduler
+        mark("realvis: load weights")
+        t0 = time.time()
+        RV_REPO = "SG161222/RealVisXL_V5.0"
+        try:
+            rv = StableDiffusionXLPipeline.from_pretrained(RV_REPO, torch_dtype=torch.float16, variant="fp16",
+                                                           use_safetensors=True)
+        except Exception as e:                     # no fp16 variant files: the full ones, cast on load
+            print("realvis: no fp16 variant (", e, ") - loading the default weights")
+            rv = StableDiffusionXLPipeline.from_pretrained(RV_REPO, torch_dtype=torch.float16, use_safetensors=True)
+        rv.scheduler = DPMSolverMultistepScheduler.from_config(rv.scheduler.config, use_karras_sigmas=True,
+                                                               algorithm_type="sde-dpmsolver++")
+        rv = rv.to("cuda")
+        rv.enable_vae_tiling()
+        rv_load = time.time() - t0
+        report["realvis_load_s"] = round(rv_load, 1)
+        print(f"realvis loaded in {rv_load:.1f}s")
+        mark("realvis: generate")
+        img_dir = OUT / "images"; img_dir.mkdir(exist_ok=True)
+        rv_times = []
+        for i, prompt in enumerate(JOB["image_prompts"]):
+            if i not in RV:
+                continue
+            ov = JOB["overrides"][str(i)]
+            t1 = time.time()
+            image = rv(prompt, negative_prompt=ov.get("negative_prompt"),
+                       num_inference_steps=ov.get("steps", 30), guidance_scale=ov.get("guidance", 5.0),
+                       width=ov.get("width", 1344), height=ov.get("height", 768),
+                       generator=torch.Generator("cuda").manual_seed(JOB.get("seed", 0) + i)).images[0]
+            dt = time.time() - t1
+            rv_times.append(dt)
+            name = f"{i:03d}.png"
+            image.save(img_dir / name)
+            report["images"].append({"file": name, "prompt": prompt, "seconds": round(dt, 1), "engine": "realvis"})
+            print(f"  realvis [{i}] {name} in {dt:.1f}s", flush=True)
+        if rv_times:
+            report["realvis_timing"] = {"mean_s": round(sum(rv_times) / len(rv_times), 1), "count": len(rv_times)}
+            print("REALVIS:", report["realvis_timing"])
+    except Exception as e:
+        report["errors"].append(f"realvis: {type(e).__name__}: {e}")
+        print("REALVIS FAILED:", e)
 
 _watchdog.cancel()          # the work is done; do not shoot it while it saves
 (OUT / "report.json").write_text(json.dumps(report, indent=2))

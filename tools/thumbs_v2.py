@@ -50,7 +50,10 @@ STYLE = ("real photograph, aerial drone shot, bright midday sun, photorealistic,
 PHOTO = "real photograph, aerial drone shot, bright midday sun"     # first: the words that weigh most
 NEGATIVE = ("cartoon, illustration, painting, 3d render, anime, dark, night, drawing, cgi, video game, text, "
             "watermark, arrow, sign, symbol")   # 19.11: FLUX drew its own yellow arrow beside ours
-THUMB_GEN = {"steps": 8, "width": 1536, "height": 864, "negative_prompt": NEGATIVE, "true_cfg_scale": 2.0}
+# owner 19.11: FLUX.1-schnell gave bright but CGI-looking takes (the judge refused all six) - thumbnails are
+# made by RealVisXL V5 (photographic SDXL, a real negative prompt) in the same Kaggle kernel
+THUMB_GEN = {"engine": "realvis", "steps": 30, "guidance": 5.0, "width": 1344, "height": 768,
+             "negative_prompt": NEGATIVE + ", lowres, blurry, plastic, oversaturated, deformed buildings"}
 
 PLAN = """You design YouTube thumbnails for a science channel about global catastrophes ("What Would Happen
 If ...?"). The winning style: a REAL aerial drone PHOTOGRAPH at bright midday (never a cartoon, painting or 3D
