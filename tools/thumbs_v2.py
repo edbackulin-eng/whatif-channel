@@ -48,7 +48,8 @@ STYLE = ("real photograph, aerial drone shot, bright midday sun, photorealistic,
          "clear bright sky, vivid natural colours, crisp sharp focus, lots of concrete detail (cars, buses, debris, "
          "ice, water), no text, no letters, no logos, no people in the foreground")
 PHOTO = "real photograph, aerial drone shot, bright midday sun"     # first: the words that weigh most
-NEGATIVE = "cartoon, illustration, painting, 3d render, anime, dark, night, drawing, cgi, video game, text, watermark"
+NEGATIVE = ("cartoon, illustration, painting, 3d render, anime, dark, night, drawing, cgi, video game, text, "
+            "watermark, arrow, sign, symbol")   # 19.11: FLUX drew its own yellow arrow beside ours
 THUMB_GEN = {"steps": 8, "width": 1536, "height": 864, "negative_prompt": NEGATIVE, "true_cfg_scale": 2.0}
 
 PLAN = """You design YouTube thumbnails for a science channel about global catastrophes ("What Would Happen
@@ -72,6 +73,7 @@ every take), a strong contrast of cold and warm
 colour (blue ice or water against fire, orange light or a yellow accent; grey city against a warm glow), no people
 close up, no text). The scene must be one the film itself shows (it is used as a shot of the film),
 "detail": the one thing the arrow points at (a few English words, e.g. "the giant moon", "the wave crest"),
+(the "prompt" never mentions an arrow, words or text - those are drawn in code afterwards),
 "words": 1-3 words, UPPER CASE, max 16 characters in all, naming THIS episode's event (styles seen on other
 episodes: "WHAT IF", "NO SUN", "365 DAYS OF RAIN?" - never one that belongs to another event, never one that
 says something the episode does not (18.11: "DOUBLE MOON" for a Moon twice as close); "WHAT IF" is always right).
